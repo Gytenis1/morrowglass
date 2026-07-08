@@ -1,4 +1,6 @@
 import { buildTeaser } from './lib/astrology';
+import { getLang, LANGS, setLang, t } from './lib/i18n';
+import type { Lang } from './lib/i18n';
 import { fetchPaymentsMode, fetchProducts } from './lib/products';
 import { generateReferralCode, getReferralFromUrl } from './lib/referral';
 import { persistFaceConsent, persistReading, revokeFaceConsent } from './data';
@@ -9,9 +11,38 @@ import { renderSelfie } from './screens/selfie';
 import { createInitialState } from './types';
 import type { AppState, BirthData } from './types';
 
-export function initApp(root: HTMLElement): void {
+export function initApp(container: HTMLElement): void {
   const state: AppState = createInitialState();
   state.referredBy = getReferralFromUrl();
+
+  container.innerHTML = '<div id="lang-bar" class="lang-bar"></div><div id="screen-root"></div>';
+  const langBar = container.querySelector('#lang-bar') as HTMLElement;
+  const root = container.querySelector('#screen-root') as HTMLElement;
+
+  function renderLangBar(): void {
+    langBar.innerHTML = `
+      <label class="lang-select-wrap">
+        <span class="sr-only">Language</span>
+        <select id="lang-select" class="lang-select" aria-label="Language">
+          ${LANGS.map((l) => `<option value="${l.code}" ${l.code === getLang() ? 'selected' : ''}>${l.flag} ${l.label}</option>`).join('')}
+        </select>
+      </label>
+    `;
+    langBar.querySelector('#lang-select')?.addEventListener('change', (event) => {
+      const value = (event.target as HTMLSelectElement).value as Lang;
+      setLang(value);
+      renderLangBar();
+      renderFooter();
+      render();
+    });
+  }
+
+  function renderFooter(): void {
+    const footer = document.querySelector('#app-footer');
+    if (footer instanceof HTMLElement) {
+      footer.innerHTML = `<p class="disclaimer footer-disclaimer">${t('disclaimer')}</p>`;
+    }
+  }
 
   function render(): void {
     switch (state.step) {
@@ -119,5 +150,7 @@ export function initApp(root: HTMLElement): void {
     if (state.step === 'results') render();
   }
 
+  renderLangBar();
+  renderFooter();
   render();
 }

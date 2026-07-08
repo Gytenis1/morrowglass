@@ -1,5 +1,5 @@
-import { FACE_CONSENT_COPY, FACE_STEP_INTRO } from '../content';
 import { generateFaceTraits } from '../lib/face';
+import { t } from '../lib/i18n';
 import type { BirthData } from '../types';
 
 export interface SelfieResult {
@@ -15,33 +15,33 @@ export function renderSelfie(
 ): void {
   root.innerHTML = `
     <section class="screen selfie-screen">
-      <button class="btn-link back-btn" id="back-btn" type="button">&larr; Back</button>
-      <h2>Add a face read? <span class="tag-optional">Optional</span></h2>
-      <p class="section-sub">${FACE_STEP_INTRO}</p>
+      <button class="btn-link back-btn" id="back-btn" type="button">${t('back')}</button>
+      <h2>${t('selfie_title')} <span class="tag-optional">${t('optional_tag')}</span></h2>
+      <p class="section-sub">${t('face_intro')}</p>
 
       <div class="consent-box">
         <label class="checkbox-row">
           <input type="checkbox" id="face-consent-checkbox" />
-          <span>${FACE_CONSENT_COPY}</span>
+          <span>${t('face_consent')}</span>
         </label>
       </div>
 
       <div class="selfie-capture">
         <input type="file" accept="image/*" capture="user" id="selfie-input" hidden />
-        <button class="btn btn-secondary" id="selfie-btn" type="button" disabled>Take or choose a selfie</button>
+        <button class="btn btn-secondary" id="selfie-btn" type="button" disabled>${t('take_selfie')}</button>
         <canvas id="selfie-canvas" width="240" height="240" class="selfie-canvas" hidden></canvas>
         <p class="selfie-status" id="selfie-status" aria-live="polite"></p>
       </div>
 
       <div class="selfie-result" id="selfie-result" hidden>
-        <h3>Playful face traits</h3>
+        <h3>${t('face_traits_title')}</h3>
         <ul id="face-trait-list"></ul>
-        <button class="btn-link" id="revoke-btn" type="button">Revoke consent &amp; delete my face data</button>
+        <button class="btn-link" id="revoke-btn" type="button">${t('revoke_btn')}</button>
       </div>
 
       <div class="selfie-actions">
-        <button class="btn-link" id="skip-btn" type="button">Skip this step</button>
-        <button class="btn btn-primary btn-large" id="continue-btn" type="button">See my reading</button>
+        <button class="btn-link" id="skip-btn" type="button">${t('skip')}</button>
+        <button class="btn btn-primary btn-large" id="continue-btn" type="button">${t('see_reading')}</button>
       </div>
     </section>
   `;
@@ -76,7 +76,7 @@ export function renderSelfie(
       if (!file) return;
       if (!(consentCheckbox instanceof HTMLInputElement) || !consentCheckbox.checked) return;
 
-      if (statusEl instanceof HTMLElement) statusEl.textContent = 'Scanning in your browser…';
+      if (statusEl instanceof HTMLElement) statusEl.textContent = t('scanning');
 
       const objectUrl = URL.createObjectURL(file);
       const img = new Image();
@@ -103,7 +103,7 @@ export function renderSelfie(
           consented = true;
 
           if (statusEl instanceof HTMLElement) {
-            statusEl.textContent = 'Photo analyzed and deleted immediately — nothing was uploaded.';
+            statusEl.textContent = t('analyzed');
           }
           if (traitList instanceof HTMLElement) {
             traitList.innerHTML = traits.map((t) => `<li>${t}</li>`).join('');
@@ -122,7 +122,7 @@ export function renderSelfie(
       if (resultBox instanceof HTMLElement) resultBox.hidden = true;
       if (traitList instanceof HTMLElement) traitList.innerHTML = '';
       if (statusEl instanceof HTMLElement) {
-        statusEl.textContent = 'Consent revoked. Your face data has been deleted.';
+        statusEl.textContent = t('revoked');
       }
       if (consentCheckbox instanceof HTMLInputElement) consentCheckbox.checked = false;
       if (selfieBtn instanceof HTMLButtonElement) selfieBtn.disabled = true;

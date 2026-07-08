@@ -1,6 +1,5 @@
-import { ENTERTAINMENT_DISCLAIMER, SHARE_INCENTIVE_COPY } from '../content';
-import { formatPrice } from '../lib/products';
 import { buildReferralUrl } from '../lib/referral';
+import { buildLocalizedSections, signName, t } from '../lib/i18n';
 import { copyLink, renderShareCardCanvas, shareCardImage, socialIntentUrl } from '../lib/share';
 import type { AppState } from '../types';
 
@@ -15,72 +14,96 @@ export function renderResults(root: HTMLElement, state: AppState, callbacks: Res
 
   const referralCode = state.referralCode ?? '';
   const referralUrl = buildReferralUrl(referralCode);
-  const shareText = `I just got my cosmic personality read on Morrowglass — I'm a ${teaser.sunSign} sun / ${teaser.moonSign} moon / ${teaser.risingSign} rising, "${teaser.archetype}". Get yours:`;
+  const sunLoc = signName(teaser.sunSign);
+  const moonLoc = signName(teaser.moonSign);
+  const risingLoc = signName(teaser.risingSign);
+  const shareText = t('share_text')
+    .replaceAll('{sun}', sunLoc)
+    .replaceAll('{moon}', moonLoc)
+    .replaceAll('{rising}', risingLoc)
+    .replaceAll('{archetype}', teaser.archetype);
 
-  const testModePill = state.paymentsMode === 'test' ? '<span class="pill pill-test">Test mode</span>' : '';
+  const birth = state.birth;
+  const seed = `${birth?.date ?? ''}|${birth?.time ?? ''}|${(birth?.place ?? '').trim().toLowerCase()}`;
+  const sections = buildLocalizedSections(teaser.sunSign, teaser.moonSign, teaser.risingSign, seed);
+
+  const testModePill = state.paymentsMode === 'test' ? `<span class="pill pill-test">${t('test_mode')}</span>` : '';
 
   const faceCard = state.faceConsent.consented && state.faceTraits.length > 0
     ? `
       <div class="card face-card">
-        <h3>Your playful face read</h3>
-        <ul>${state.faceTraits.map((t) => `<li>${t}</li>`).join('')}</ul>
-        <button class="btn-link" id="revoke-face-btn" type="button">Revoke consent &amp; delete my face data</button>
+        <h3>${t('face_read_title')}</h3>
+        <ul>${state.faceTraits.map((tr) => `<li>${tr}</li>`).join('')}</ul>
+        <button class="btn-link" id="revoke-face-btn" type="button">${t('revoke_btn')}</button>
       </div>
     `
     : '';
 
-  const productsMarkup = state.productsLoaded
-    ? renderProducts(state)
-    : '<p class="loading-note">Loading offers…</p>';
-
   root.innerHTML = `
     <section class="screen results-screen">
       <header class="results-header">
-        <p class="eyebrow">Your reading ${testModePill}</p>
-        <h2>${teaser.sunSign} Sun · ${teaser.moonSign} Moon · ${teaser.risingSign} Rising</h2>
+        <p class="eyebrow">${t('your_reading')} ${testModePill}</p>
+        <h2>${sunLoc} ${t('sun')} · ${moonLoc} ${t('moon')} · ${risingLoc} ${t('rising')}</h2>
         <p class="archetype">${teaser.archetype}</p>
       </header>
 
       <div class="card-grid">
-        ${teaser.insights.map((insight) => `<div class="card insight-card"><p>${insight}</p></div>`).join('')}
-        <div class="card hidden-card">
-          <div class="blur-layer">
-            <p>${teaser.hiddenTrait}</p>
-          </div>
-          <div class="hidden-overlay">
-            <span class="lock-icon" aria-hidden="true">🔒</span>
-            <p>Hidden Trait — unlock with any reading below</p>
-          </div>
+        <div class="card hidden-card unlocked">
+          <h3>${t('hidden_trait_title')}</h3>
+          <p>${sections.hidden}</p>
         </div>
+      </div>
+
+      <div class="card section-card">
+        <h3>${t('meaning_title')}</h3>
+        <p>${sections.meaning}</p>
+      </div>
+
+      <div class="card section-card">
+        <h3>${t('actions_title')}</h3>
+        <ol class="action-list">
+          ${sections.actions.map((a) => `<li>${a}</li>`).join('')}
+        </ol>
+      </div>
+
+      <div class="card section-card pep-card">
+        <h3>${t('pep_title')}</h3>
+        <p>${sections.pep}</p>
+      </div>
+
+      <div class="card section-card humor-card">
+        ${sections.humor.map((h) => `<p class="humor-line">😄 ${h}</p>`).join('')}
+      </div>
+
+      <div class="card section-card final-card">
+        <h3>${t('final_title')}</h3>
+        <p>${sections.final}</p>
       </div>
 
       ${faceCard}
 
-      <p class="disclaimer results-disclaimer">${ENTERTAINMENT_DISCLAIMER}</p>
+      <p class="disclaimer results-disclaimer">${t('disclaimer')}</p>
 
-      <section class="paywall-section">
-        <h3>Unlock your full cosmic profile</h3>
-        ${productsMarkup}
-      </section>
+      <p class="premium-soon">${t('premium_soon')}</p>
 
       <section class="share-section">
-        <h3>Share your reading</h3>
-        <p class="share-incentive">${SHARE_INCENTIVE_COPY}</p>
+        <h3>${t('share_title')}</h3>
+        <p class="share-incentive">${t('share_incentive')}</p>
         <canvas id="share-canvas" class="share-canvas-preview" width="1080" height="1350" hidden></canvas>
         <div class="share-actions">
-          <button class="btn btn-primary" id="share-native-btn" type="button">Share / download my card</button>
+          <button class="btn btn-primary" id="share-native-btn" type="button">${t('share_card_btn')}</button>
         </div>
         <div class="share-socials">
-          <button class="btn btn-social" id="share-x-btn" type="button">Share on X</button>
-          <button class="btn btn-social" id="share-facebook-btn" type="button">Share on Facebook</button>
-          <button class="btn btn-social" id="share-instagram-btn" type="button">Share on Instagram</button>
-          <button class="btn btn-social" id="share-tiktok-btn" type="button">Share on TikTok</button>
+          <button class="btn btn-social" id="share-x-btn" type="button">X</button>
+          <button class="btn btn-social" id="share-facebook-btn" type="button">Facebook</button>
+          <button class="btn btn-social" id="share-instagram-btn" type="button">Instagram</button>
+          <button class="btn btn-social" id="share-tiktok-btn" type="button">TikTok</button>
         </div>
-        <p class="referral-line">Your referral link: <code>${referralUrl}</code></p>
+        <p class="referral-line">${t('referral_line')} <code>${referralUrl}</code></p>
         <p class="share-status" id="share-status" aria-live="polite"></p>
       </section>
 
-      <button class="btn-link restart-btn" id="restart-btn" type="button">Start a new reading</button>
+      <button class="btn-link restart-btn" id="restart-btn" type="button">${t('restart')}</button>
     </section>
   `;
 
@@ -94,18 +117,18 @@ export function renderResults(root: HTMLElement, state: AppState, callbacks: Res
 
   root.querySelector('#share-native-btn')?.addEventListener('click', async () => {
     const canvas = renderShareCardCanvas({
-      sunSign: teaser.sunSign,
-      moonSign: teaser.moonSign,
-      risingSign: teaser.risingSign,
+      sunSign: sunLoc,
+      moonSign: moonLoc,
+      risingSign: risingLoc,
       archetype: teaser.archetype,
       referralCode,
       url: referralUrl,
     });
-    setStatus('Preparing your share card…');
+    setStatus(t('preparing'));
     const outcome = await shareCardImage(canvas, 'morrowglass-reading.png', shareText);
-    if (outcome === 'shared') setStatus('Shared!');
-    else if (outcome === 'downloaded') setStatus('Image downloaded — share it anywhere you like.');
-    else setStatus('Could not generate the image. Please try again.');
+    if (outcome === 'shared') setStatus(t('shared'));
+    else if (outcome === 'downloaded') setStatus(t('downloaded'));
+    else setStatus(t('share_err'));
   });
 
   root.querySelector('#share-x-btn')?.addEventListener('click', () => {
@@ -116,37 +139,10 @@ export function renderResults(root: HTMLElement, state: AppState, callbacks: Res
   });
   root.querySelector('#share-instagram-btn')?.addEventListener('click', async () => {
     const ok = await copyLink(referralUrl);
-    setStatus(ok ? 'Link copied! Paste it in your Instagram bio or story.' : referralUrl);
+    setStatus(ok ? t('copied_ig') : referralUrl);
   });
   root.querySelector('#share-tiktok-btn')?.addEventListener('click', async () => {
     const ok = await copyLink(referralUrl);
-    setStatus(ok ? 'Link copied! Paste it in your TikTok bio or video caption.' : referralUrl);
+    setStatus(ok ? t('copied_tt') : referralUrl);
   });
-}
-
-function renderProducts(state: AppState): string {
-  if (state.products.length === 0) {
-    return '<p class="offers-placeholder">Offers launching shortly — check back soon.</p>';
-  }
-
-  return `
-    <div class="offer-grid">
-      ${state.products
-        .map((product) => {
-          const price = formatPrice(product.amount_cents, product.currency);
-          const suffix = product.product_type === 'subscription' ? '/mo' : '';
-          return `
-            <div class="offer-card">
-              <h4>${product.name}</h4>
-              <p class="offer-desc">${product.description}</p>
-              <p class="offer-price">${price}${suffix}</p>
-              <a class="btn btn-primary" href="${product.payment_link_url}" target="_blank" rel="noopener noreferrer">
-                ${product.product_type === 'subscription' ? 'Subscribe' : 'Unlock now'}
-              </a>
-            </div>
-          `;
-        })
-        .join('')}
-    </div>
-  `;
 }
