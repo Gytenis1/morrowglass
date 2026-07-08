@@ -1,13 +1,14 @@
 import './styles.css';
-import { pb } from './pocketbase';
-
-function render(root: HTMLElement) {
-  root.textContent = 'Morrowglass';
-}
+import { initApp } from './app';
+import { ENTERTAINMENT_DISCLAIMER } from './content';
 
 const root = document.querySelector('#app');
-if (root instanceof HTMLElement) {
-  render(root);
+const footer = document.querySelector('#app-footer');
+
+if (footer instanceof HTMLElement) {
+  footer.innerHTML = `<p class="disclaimer footer-disclaimer">${ENTERTAINMENT_DISCLAIMER}</p>`;
 }
 
-void pb;
+if (root instanceof HTMLElement) {
+  initApp(root);
+}
