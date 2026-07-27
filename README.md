@@ -93,6 +93,29 @@ Po pridėjimo, taisymo ar pašalinimo būtinas ir naujas frontend build/deploy, 
 
 Gamintojo profilio forma sukuria įrašą valdomoje `correction_requests` peržiūros eilėje. Forma nesiunčia žinutės gamintojui ir nesuteikia pateikėjui administracinės prieigos. Operatorius turi peržiūrėti prašymą, patikrinti pateiktą viešą šaltinį, pataisyti versijuotą JSON ir tik tada vykdyti aukščiau aprašytą importo bei frontend build procesą.
 
+## Pirkėjų projektų užklausos
+
+Vieša projekto forma sukuria įrašą privačioje `buyer_requests` operatoriaus eilėje. Anoniminiam lankytojui leidžiama tik sukurti įrašą; viešas sąrašas, atskiro įrašo peržiūra, keitimas ir trynimas yra uždaryti. Kontaktiniai ir anti-abuse laukai pašalinami iš viešo sukūrimo atsakymo, o serverio kabliai normalizuoja būseną į `new`, atmeta užpildytą `honeypot` ir patikrina, kad trumpajame sąraše būtų ne daugiau kaip 12 realių katalogo ASCII `slug` reikšmių.
+
+| Laukas | Reikšmė |
+| --- | --- |
+| `project_type` | Viena leidžiama nestandartinių baldų projekto rūšis. |
+| `city_region` | Pirkėjo nurodytas miestas arba regionas. |
+| `budget_band` | Viena leidžiama planuojamo biudžeto riba. |
+| `timeline` | Vienas leidžiamas pageidaujamas laikotarpis. |
+| `project_brief` | Trumpas projekto aprašas; saugomas operatoriaus peržiūrai, bet visas tekstas nesiunčiamas į dashboard pranešimą. |
+| `contact_name`, `contact_email` | Privatūs pirkėjo kontaktai. |
+| `shortlisted_manufacturer_slugs` | Pasirenkamas egzistuojančių katalogo gamintojų `slug` masyvas. |
+| `status` | Serverio fiksuojama pradinė būsena `new`. |
+| `honeypot` | Paprastas neviešas anti-abuse laukas; užpildytas pateikimas atmetamas. |
+| `created` | Automatinis pateikimo laikas, naudojamas operatoriaus eilės rikiavimui. |
+
+Po sėkmingo išsaugojimo patvirtinimas siunčiamas tik užklausą pateikusiam pirkėjui. Dashboard gauna tik glaustą projekto suvestinę be viso laisvo teksto aprašo ir be kontaktinių duomenų. El. pašto ar dashboard pranešimo klaida registruojama žurnale, bet jau išsaugotos užklausos neatšaukia.
+
+Pirkėjo užklausa **nėra automatiškai persiunčiama gamintojams ar kitoms trečiosioms šalims**. Ji taip pat nėra gamintojo tapatybės, veiklos, pajėgumo, tinkamumo ar patikimumo patikra ir negarantuoja atsakymo ar pasiūlymo.
+
+`buyer_requests` schema įvedama nauja idempotentine migracija. Backend redeploy metu migracija saugiai sukuria trūkstamą kolekciją arba suvienodina dalinai sukurtą schemą, laukus, taisykles ir eilės indeksą; pakartotinis paleidimas po nutrūkusio bandymo neturi kurti dublikatų. Jau sėkmingai pritaikytos migracijos PocketBase antrą kartą nevykdo, todėl būsimiems schemos pakeitimams būtinas naujas vėlesnio laiko migracijos failas. Pakeitus `pb_migrations/` arba `pb_hooks/`, reikia vieno backend redeploy ir po jo patikrinti gyvą schemą bei realų anoniminio pateikimo kelią; vien frontend deploy šių pakeitimų nepritaiko.
+
 ## Frontend build ir statinis SEO
 
 Įdiekite tik lockfile nurodytas priklausomybes ir paleiskite build:
