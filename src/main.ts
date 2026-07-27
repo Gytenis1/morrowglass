@@ -4,9 +4,10 @@ import { pb } from './pocketbase';
 
 type Manufacturer = RecordModel & {
   slug: string;
-  legal_name: string;
+  legal_name: string | null;
   trading_name: string;
   source_identity: string;
+  legal_entity_known: boolean;
   description_lt: string;
   location: string;
   city: string;
@@ -15,6 +16,11 @@ type Manufacturer = RecordModel & {
   category_codes: string[];
   category_labels: string[];
   website: string;
+  public_contact_url: string;
+  source_urls: string[];
+  source_artifact_url: string;
+  source_collection_date: string;
+  verification_status: string;
 };
 
 type BrowseState = {
@@ -29,16 +35,59 @@ type FilterOption = {
   label: string;
 };
 
+type GuideArticle = {
+  slug: string;
+  title: string;
+  summary: string;
+  readingLabel: string;
+};
+
 const PAGE_SIZE = 50;
 const collator = new Intl.Collator('lt', { sensitivity: 'base' });
 const root = document.querySelector<HTMLElement>('#app');
+const guideArticles: GuideArticle[] = [
+  {
+    slug: 'trumpasis-sarasas',
+    title: 'Kaip sudaryti pagrįstą trumpąjį sąrašą',
+    summary: 'Atrankos seka, patikrinami kriterijai ir klausimai prieš priimant pasiūlymą.',
+    readingLabel: 'Atranka ir patikra',
+  },
+  {
+    slug: 'uzklausa-ir-pasiulymas',
+    title: 'Kaip parengti užklausą ir palyginti pasiūlymus',
+    summary: 'Ką aprašyti, kad gamintojai vertintų tą pačią apimtį, ir kas dažniausiai keičia kainą.',
+    readingLabel: 'Užklausa ir apimtis',
+  },
+  {
+    slug: 'terminai',
+    title: 'Kaip prašyti realistiško darbų grafiko',
+    summary: 'Terminą lemiantys kintamieji, etapai ir klausimai, padedantys valdyti neapibrėžtumą.',
+    readingLabel: 'Terminai ir eiga',
+  },
+];
 
 let manufacturers: Manufacturer[] = [];
 let browseState = readBrowseState();
 let isLoading = false;
+let directoryLoaded = false;
 
 function normalize(value: string): string {
   return value.trim().toLocaleLowerCase('lt-LT');
+}
+
+function textOrUnknown(value: string | null | undefined, unknown = 'Viešuose šaltiniuose nenurodyta.'): string {
+  const normalizedValue = value?.trim();
+  return normalizedValue || unknown;
+}
+
+function asStringArray(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.filter((item): item is string => typeof item === 'string' && item.trim().length > 0);
+}
+
+function setMetaDescription(content: string): void {
+  const meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+  if (meta) meta.content = content;
 }
 
 function readBrowseState(): BrowseState {
@@ -65,6 +114,14 @@ function syncBrowseState(mode: 'push' | 'replace'): void {
   window.history[mode === 'push' ? 'pushState' : 'replaceState']({}, '', nextUrl);
 }
 
+function isGuidePath(pathname = window.location.pathname): boolean {
+  return pathname === '/gidas' || pathname.startsWith('/gidas/');
+}
+
+function isDirectoryPath(pathname = window.location.pathname): boolean {
+  return pathname === '/' || pathname.startsWith('/gamintojas/');
+}
+
 async function fetchAllManufacturers(): Promise<Manufacturer[]> {
   const records: Manufacturer[] = [];
   let page = 1;
@@ -86,8 +143,8 @@ async function fetchAllManufacturers(): Promise<Manufacturer[]> {
 function getCategoryOptions(records: Manufacturer[]): FilterOption[] {
   const categories = new Map<string, string>();
   records.forEach((record) => {
-    record.category_codes.forEach((code, index) => {
-      const label = record.category_labels[index];
+    asStringArray(record.category_codes).forEach((code, index) => {
+      const label = asStringArray(record.category_labels)[index];
       if (code && label) categories.set(code, label);
     });
   });
@@ -142,15 +199,15 @@ function getFilteredManufacturers(records: Manufacturer[]): Manufacturer[] {
       !query ||
       [
         record.trading_name,
-        record.legal_name,
+        record.legal_name ?? '',
         record.source_identity,
         record.description_lt,
-        ...record.category_labels,
-        ...record.category_codes,
+        ...asStringArray(record.category_labels),
+        ...asStringArray(record.category_codes),
       ].some((value) => normalize(value ?? '').includes(query));
 
     const matchesCategory =
-      !browseState.category || record.category_codes.includes(browseState.category);
+      !browseState.category || asStringArray(record.category_codes).includes(browseState.category);
     const matchesCity = !browseState.city || record.city === browseState.city;
     const matchesRegion = !browseState.region || record.region === browseState.region;
 
@@ -168,7 +225,7 @@ function formatManufacturerCount(count: number): string {
 }
 
 function distinctLegalName(record: Manufacturer): string {
-  const legal = record.legal_name.trim();
+  const legal = record.legal_name?.trim() ?? '';
   if (!legal) return '';
 
   const simplify = (value: string) =>
@@ -188,6 +245,31 @@ function distinctLegalName(record: Manufacturer): string {
     return '';
   }
   return legal;
+}
+
+function renderHeader(active: 'directory' | 'guide'): string {
+  return `
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" data-internal-link="true" aria-label="Baldai pagal užsakymą Lietuvoje – pradžia">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span>
+        </a>
+        <nav aria-label="Pagrindinė navigacija">
+          <a href="/" data-internal-link="true"${active === 'directory' ? ' aria-current="page"' : ''}>Gamintojų katalogas</a>
+          <a href="/gidas" data-internal-link="true"${active === 'guide' ? ' aria-current="page"' : ''}>Pirkėjo gidas</a>
+        </nav>
+      </div>
+    </header>
+  `;
+}
+
+function renderFooter(): string {
+  return `
+    <footer>
+      <p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p>
+    </footer>
+  `;
 }
 
 function createSelect(
@@ -237,7 +319,7 @@ function createManufacturerCard(record: Manufacturer): HTMLElement {
   headingGroup.className = 'card-heading';
 
   const heading = document.createElement('h2');
-  heading.textContent = record.trading_name;
+  heading.textContent = textOrUnknown(record.trading_name, 'Pavadinimas nenurodytas');
 
   const legalName = distinctLegalName(record);
   if (legalName) {
@@ -252,22 +334,23 @@ function createManufacturerCard(record: Manufacturer): HTMLElement {
   const location = document.createElement('p');
   location.className = 'location-line';
   const city = document.createElement('strong');
-  city.textContent = record.city;
+  city.textContent = textOrUnknown(record.city, 'Miestas nenurodytas');
   const separator = document.createElement('span');
   separator.setAttribute('aria-hidden', 'true');
   separator.textContent = ' · ';
   const region = document.createElement('span');
-  region.textContent = `Regiono grupė: ${record.region_label}`;
+  region.textContent = `Regiono grupė: ${textOrUnknown(record.region_label, 'nenurodyta')}`;
   location.append(city, separator, region);
 
   const description = document.createElement('p');
-  description.className = record.description_lt.trim() ? 'description' : 'description description--fallback';
-  description.textContent = record.description_lt.trim() || 'Trumpas aprašymas šaltiniuose nepateiktas.';
+  description.className = record.description_lt?.trim() ? 'description' : 'description description--fallback';
+  description.textContent = textOrUnknown(record.description_lt, 'Trumpas aprašymas šaltiniuose nepateiktas.');
 
   const categories = document.createElement('ul');
   categories.className = 'category-list';
   categories.setAttribute('aria-label', 'Gaminamų baldų kategorijos');
-  record.category_labels.forEach((label) => {
+  const categoryLabels = asStringArray(record.category_labels);
+  (categoryLabels.length ? categoryLabels : ['Kategorijos šaltiniuose nenurodytos']).forEach((label) => {
     const item = document.createElement('li');
     item.textContent = label;
     categories.append(item);
@@ -275,7 +358,7 @@ function createManufacturerCard(record: Manufacturer): HTMLElement {
 
   const link = document.createElement('a');
   link.className = 'profile-link';
-  link.href = `/gamintojas/${encodeURIComponent(record.slug)}`;
+  link.href = `/gamintojas/${encodeURIComponent(record.slug)}${window.location.search}`;
   link.dataset.internalLink = 'true';
   link.textContent = 'Peržiūrėti katalogo įrašą';
   const arrow = document.createElement('span');
@@ -290,24 +373,14 @@ function createManufacturerCard(record: Manufacturer): HTMLElement {
 function renderShell(): void {
   if (!root) return;
   root.innerHTML = `
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="/" data-internal-link="true" aria-label="Baldai pagal užsakymą Lietuvoje – pradžia">
-          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span>
-        </a>
-        <nav aria-label="Pagrindinė navigacija">
-          <a href="#gamintojai">Gamintojų katalogas</a>
-          <a href="#apie-kataloga">Apie katalogą</a>
-        </nav>
-      </div>
-    </header>
+    ${renderHeader('directory')}
     <main>
       <section class="intro" aria-labelledby="page-title">
         <div class="intro-copy">
           <p class="kicker">Viešas paieškos katalogas</p>
           <h1 id="page-title">Raskite baldų gamintojus pagal poreikį ir vietą</h1>
           <p class="lead">Ieškokite Lietuvos nestandartinių baldų gamintojų kandidatų pagal kategoriją, miestą ir šaltiniuose nurodytą regiono grupę.</p>
+          <a class="intro-guide-link" href="/gidas" data-internal-link="true">Kaip atrinkti ir palyginti gamintojus →</a>
         </div>
         <aside class="directory-note" id="apie-kataloga" aria-labelledby="directory-note-title">
           <h2 id="directory-note-title">Ką svarbu žinoti</h2>
@@ -318,9 +391,7 @@ function renderShell(): void {
         <div id="browse-content"></div>
       </section>
     </main>
-    <footer>
-      <p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai.</p>
-    </footer>
+    ${renderFooter()}
   `;
 }
 
@@ -338,16 +409,23 @@ function renderLoading(): void {
   `;
 }
 
-function renderError(): void {
-  const container = document.querySelector<HTMLElement>('#browse-content');
-  if (!container) return;
-  container.innerHTML = `
-    <div class="message-state message-state--error" role="alert">
-      <p class="state-label">Duomenų gauti nepavyko</p>
-      <h2 id="browse-title">Katalogas šiuo metu nepasiekiamas</h2>
-      <p>Patikrinkite interneto ryšį ir bandykite dar kartą.</p>
-      <button class="primary-button" id="retry-button" type="button">Bandyti dar kartą</button>
-    </div>
+function renderDirectoryError(): void {
+  if (!root) return;
+  document.title = 'Katalogas nepasiekiamas | Baldai pagal užsakymą Lietuvoje';
+  root.innerHTML = `
+    ${renderHeader('directory')}
+    <main class="profile-main">
+      <section class="message-state message-state--error" role="alert">
+        <p class="state-label">Duomenų gauti nepavyko</p>
+        <h1>Katalogas šiuo metu nepasiekiamas</h1>
+        <p>Patikrinkite interneto ryšį ir bandykite dar kartą. Pirkėjo gidas veikia nepriklausomai nuo katalogo duomenų.</p>
+        <div class="state-actions">
+          <button class="primary-button" id="retry-button" type="button">Bandyti dar kartą</button>
+          <a href="/gidas" data-internal-link="true">Atverti pirkėjo gidą</a>
+        </div>
+      </section>
+    </main>
+    ${renderFooter()}
   `;
   document.querySelector<HTMLButtonElement>('#retry-button')?.addEventListener('click', () => void loadDirectory());
 }
@@ -516,19 +594,237 @@ function renderResults(): void {
   results.append(list);
 }
 
+function createFactRow(term: string, detail: string): HTMLDivElement {
+  const wrapper = document.createElement('div');
+  const dt = document.createElement('dt');
+  dt.textContent = term;
+  const dd = document.createElement('dd');
+  dd.textContent = detail;
+  wrapper.append(dt, dd);
+  return wrapper;
+}
+
+function createUrlFactRow(term: string, value: string | null | undefined): HTMLDivElement {
+  const wrapper = document.createElement('div');
+  const dt = document.createElement('dt');
+  dt.textContent = term;
+  const dd = document.createElement('dd');
+  const url = value?.trim();
+  if (url) {
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = url;
+    dd.append(link);
+  } else {
+    dd.textContent = 'Viešuose šaltiniuose nenurodyta.';
+    dd.className = 'unknown-value';
+  }
+  wrapper.append(dt, dd);
+  return wrapper;
+}
+
+function createSourceSection(record: Manufacturer): HTMLElement {
+  const section = document.createElement('section');
+  section.className = 'provenance-section';
+  section.setAttribute('aria-labelledby', 'provenance-title');
+
+  const heading = document.createElement('h2');
+  heading.id = 'provenance-title';
+  heading.textContent = 'Šaltiniai ir duomenų kilmė';
+
+  const copy = document.createElement('p');
+  copy.textContent = 'Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju ir negarantuoja jų tikslumo, aktualumo, kokybės ar paslaugų prieinamumo.';
+
+  const sourceUrls = Array.from(
+    new Set([...asStringArray(record.source_urls), textOrUnknown(record.source_artifact_url, '')].filter(Boolean)),
+  );
+  const list = document.createElement('ul');
+  list.className = 'source-list';
+
+  if (sourceUrls.length) {
+    sourceUrls.forEach((url, index) => {
+      const item = document.createElement('li');
+      const label = document.createElement('span');
+      label.textContent = index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`;
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = url;
+      item.append(label, link);
+      list.append(item);
+    });
+  } else {
+    const item = document.createElement('li');
+    item.className = 'unknown-value';
+    item.textContent = 'Šaltinio nuoroda viešame įraše nenurodyta.';
+    list.append(item);
+  }
+
+  const date = document.createElement('p');
+  date.className = 'collection-date';
+  date.textContent = 'Šaltinių surinkimo data: ';
+  if (record.source_collection_date?.trim()) {
+    const time = document.createElement('time');
+    time.dateTime = record.source_collection_date;
+    time.textContent = record.source_collection_date;
+    date.append(time);
+  } else {
+    const unknown = document.createElement('span');
+    unknown.className = 'unknown-value';
+    unknown.textContent = 'nenurodyta';
+    date.append(unknown);
+  }
+
+  section.append(heading, copy, list, date);
+  return section;
+}
+
+function createCorrectionSection(record: Manufacturer): HTMLElement {
+  const section = document.createElement('section');
+  section.className = 'correction-section';
+  section.setAttribute('aria-labelledby', 'correction-title');
+  section.innerHTML = `
+    <div class="section-heading">
+      <p class="kicker">Įrašo peržiūra</p>
+      <h2 id="correction-title">Pataisyti, atstovauti ar pranešti</h2>
+      <p>Ši forma siunčia žinutę tik katalogo peržiūros eilei. Ji nesusisiekia su gamintoju ir nesiunčia užklausos dėl baldų.</p>
+    </div>
+  `;
+
+  const form = document.createElement('form');
+  form.className = 'correction-form';
+  form.noValidate = false;
+
+  const recordContext = document.createElement('p');
+  recordContext.className = 'form-record-context';
+  recordContext.textContent = `Įrašas: ${textOrUnknown(record.trading_name, 'Pavadinimas nenurodytas')}`;
+
+  const slugInput = document.createElement('input');
+  slugInput.type = 'hidden';
+  slugInput.name = 'manufacturer_slug';
+  slugInput.value = record.slug;
+
+  const displayNameInput = document.createElement('input');
+  displayNameInput.type = 'hidden';
+  displayNameInput.name = 'manufacturer_display_name';
+  displayNameInput.value = record.trading_name;
+
+  const kindField = document.createElement('div');
+  kindField.className = 'form-field';
+  const kindLabel = document.createElement('label');
+  kindLabel.htmlFor = 'request-kind';
+  kindLabel.textContent = 'Prašymo rūšis';
+  const kindSelectWrap = document.createElement('div');
+  kindSelectWrap.className = 'select-wrap';
+  const kindSelect = document.createElement('select');
+  kindSelect.id = 'request-kind';
+  kindSelect.name = 'request_kind';
+  kindSelect.required = true;
+  [
+    ['correction', 'Pataisyti duomenis arba pranešti apie problemą'],
+    ['claim', 'Patvirtinti, kad atstovauju šiam įrašui'],
+  ].forEach(([value, label]) => {
+    const option = document.createElement('option');
+    option.value = value;
+    option.textContent = label;
+    kindSelect.append(option);
+  });
+  kindSelectWrap.append(kindSelect);
+  kindField.append(kindLabel, kindSelectWrap);
+
+  const reportField = document.createElement('div');
+  reportField.className = 'form-field form-field--wide';
+  const reportLabel = document.createElement('label');
+  reportLabel.htmlFor = 'report-text';
+  reportLabel.textContent = 'Ką reikia peržiūrėti?';
+  const reportHint = document.createElement('p');
+  reportHint.className = 'field-hint';
+  reportHint.id = 'report-hint';
+  reportHint.textContent = 'Nurodykite konkretų lauką, teisingą informaciją ir, jei turite, viešą patvirtinantį šaltinį.';
+  const report = document.createElement('textarea');
+  report.id = 'report-text';
+  report.name = 'report_text';
+  report.rows = 6;
+  report.maxLength = 5000;
+  report.required = true;
+  report.setAttribute('aria-describedby', 'report-hint');
+  reportField.append(reportLabel, reportHint, report);
+
+  const emailField = document.createElement('div');
+  emailField.className = 'form-field form-field--wide';
+  const emailLabel = document.createElement('label');
+  emailLabel.htmlFor = 'request-email';
+  emailLabel.textContent = 'El. paštas atsakymui (nebūtina)';
+  const email = document.createElement('input');
+  email.id = 'request-email';
+  email.name = 'contact_email';
+  email.type = 'email';
+  email.inputMode = 'email';
+  email.autocomplete = 'email';
+  email.maxLength = 254;
+  email.placeholder = 'vardas@pavyzdys.lt';
+  emailField.append(emailLabel, email);
+
+  const actions = document.createElement('div');
+  actions.className = 'form-actions';
+  const submit = document.createElement('button');
+  submit.className = 'primary-button';
+  submit.type = 'submit';
+  submit.textContent = 'Siųsti peržiūrai';
+  const status = document.createElement('p');
+  status.className = 'form-status';
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  actions.append(submit, status);
+
+  form.append(recordContext, slugInput, displayNameInput, kindField, reportField, emailField, actions);
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    submit.disabled = true;
+    submit.setAttribute('aria-busy', 'true');
+    submit.textContent = 'Siunčiama…';
+    status.className = 'form-status';
+    status.textContent = 'Prašymas siunčiamas į katalogo peržiūros eilę.';
+
+    try {
+      await pb.collection('correction_requests').create({
+        manufacturer_slug: record.slug,
+        manufacturer_display_name: record.trading_name,
+        request_kind: kindSelect.value,
+        report_text: report.value.trim(),
+        contact_email: email.value.trim(),
+      });
+      report.value = '';
+      email.value = '';
+      status.className = 'form-status form-status--success';
+      status.textContent = 'Prašymas gautas. Katalogo komanda jį peržiūrės; gamintojui niekas neišsiųsta.';
+    } catch (error) {
+      console.error('Nepavyko pateikti katalogo pataisos prašymo.', error);
+      status.className = 'form-status form-status--error';
+      status.textContent = 'Prašymo išsiųsti nepavyko. Patikrinkite ryšį ir bandykite dar kartą vėliau.';
+    } finally {
+      submit.disabled = false;
+      submit.removeAttribute('aria-busy');
+      submit.textContent = 'Siųsti peržiūrai';
+    }
+  });
+
+  section.append(form);
+  return section;
+}
+
 function renderProfile(record: Manufacturer | undefined): void {
   if (!root) return;
   root.innerHTML = `
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="/" data-internal-link="true" aria-label="Baldai pagal užsakymą Lietuvoje – pradžia">
-          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span>
-        </a>
-      </div>
-    </header>
+    ${renderHeader('directory')}
     <main class="profile-main" id="profile-main"></main>
-    <footer><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai.</p></footer>
+    ${renderFooter()}
   `;
 
   const main = document.querySelector<HTMLElement>('#profile-main');
@@ -541,73 +837,365 @@ function renderProfile(record: Manufacturer | undefined): void {
   back.textContent = '← Grįžti į gamintojų katalogą';
 
   if (!record) {
+    document.title = 'Gamintojas nerastas | Baldai pagal užsakymą Lietuvoje';
+    setMetaDescription('Gamintojo įrašas šiame viešų šaltinių kataloge nerastas.');
     const state = document.createElement('section');
-    state.className = 'message-state profile-state';
+    state.className = 'message-state profile-state not-found-state';
     state.innerHTML = `
       <p class="state-label">Įrašas nerastas</p>
       <h1>Tokio gamintojo kataloge nėra</h1>
-      <p>Patikrinkite nuorodą arba grįžkite į katalogą ir pasirinkite kitą įrašą.</p>
+      <p>Nuorodoje gali būti klaida arba įrašas galėjo pasikeisti. Grįžkite į katalogą ir ieškokite pagal pavadinimą, miestą ar kategoriją.</p>
+      <div class="state-actions">
+        <a class="primary-button" href="/" data-internal-link="true">Ieškoti kataloge</a>
+        <a href="/gidas" data-internal-link="true">Skaityti pirkėjo gidą</a>
+      </div>
     `;
     main.append(back, state);
     return;
   }
 
-  document.title = `${record.trading_name} | Baldai pagal užsakymą Lietuvoje`;
+  const displayName = textOrUnknown(record.trading_name, 'Gamintojo pavadinimas nenurodytas');
+  document.title = `${displayName} | Gamintojo įrašas`;
+  setMetaDescription(`${displayName}: viešais šaltiniais paremtas, nepatvirtintas gamintojo kandidato įrašas su vieta, kategorijomis ir šaltinių nuorodomis.`);
 
-  const section = document.createElement('section');
-  section.className = 'profile-sheet';
+  const article = document.createElement('article');
+  article.className = 'profile-sheet';
 
-  const kicker = document.createElement('p');
-  kicker.className = 'kicker';
-  kicker.textContent = 'Nepatvirtintas katalogo įrašas';
-
+  const hero = document.createElement('header');
+  hero.className = 'profile-hero';
+  const headingGroup = document.createElement('div');
+  headingGroup.className = 'profile-heading-group';
+  const status = document.createElement('p');
+  status.className = 'record-status';
+  status.textContent = 'Nepatvirtintas viešų šaltinių įrašas';
   const heading = document.createElement('h1');
-  heading.textContent = record.trading_name;
+  heading.textContent = displayName;
+  const identity = document.createElement('p');
+  identity.className = 'profile-identity';
+  identity.textContent = textOrUnknown(record.source_identity, 'Šaltinyje pateikta tapatybė nenurodyta.');
+  headingGroup.append(status, heading, identity);
 
-  const legalName = distinctLegalName(record);
-  const legal = document.createElement('p');
-  legal.className = 'profile-legal';
-  legal.textContent = legalName ? `Juridinis pavadinimas: ${legalName}` : '';
-  legal.hidden = !legalName;
+  const guideLink = document.createElement('a');
+  guideLink.className = 'profile-guide-link';
+  guideLink.href = '/gidas';
+  guideLink.dataset.internalLink = 'true';
+  guideLink.textContent = 'Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →';
+  hero.append(headingGroup, guideLink);
 
-  const note = document.createElement('p');
+  const note = document.createElement('div');
   note.className = 'profile-note';
-  note.textContent = 'Šiame puslapyje rodoma tik viešuose katalogo šaltiniuose esanti santrauka. Prieš susisiekdami informaciją patikrinkite savarankiškai.';
+  note.innerHTML = `
+    <strong>Duomenys nėra garantija.</strong>
+    <span>Šis įrašas padeda pradėti savarankišką paiešką. Jis nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span>
+  `;
+
+  const details = document.createElement('section');
+  details.className = 'profile-details';
+  details.setAttribute('aria-labelledby', 'profile-details-title');
+  const detailsHeading = document.createElement('div');
+  detailsHeading.className = 'section-heading';
+  detailsHeading.innerHTML = `
+    <p class="kicker">Viešame įraše pateikta informacija</p>
+    <h2 id="profile-details-title">Tapatybė, vieta ir veiklos kryptys</h2>
+  `;
 
   const facts = document.createElement('dl');
   facts.className = 'profile-facts';
-  const factRows: Array<[string, string]> = [
-    ['Miestas', record.city],
-    ['Šaltinio regiono grupė', record.region_label],
-    ['Kategorijos', record.category_labels.join(', ')],
-    ['Aprašymas', record.description_lt.trim() || 'Trumpas aprašymas šaltiniuose nepateiktas.'],
-  ];
-  factRows.forEach(([term, detail]) => {
-    const wrapper = document.createElement('div');
-    const dt = document.createElement('dt');
-    dt.textContent = term;
-    const dd = document.createElement('dd');
-    dd.textContent = detail;
-    wrapper.append(dt, dd);
-    facts.append(wrapper);
-  });
+  facts.append(
+    createFactRow('Viešas / prekinis pavadinimas', displayName),
+    createFactRow('Juridinis pavadinimas', textOrUnknown(record.legal_name, 'Viešame šaltinyje juridinis pavadinimas nenurodytas.')),
+    createFactRow('Šaltinyje pateikta tapatybė', textOrUnknown(record.source_identity)),
+    createFactRow('Vietovė šaltinyje', textOrUnknown(record.location)),
+    createFactRow('Miestas ar vietovė', textOrUnknown(record.city)),
+    createFactRow('Šaltinio regiono grupė', textOrUnknown(record.region_label)),
+    createFactRow('Kategorijos', asStringArray(record.category_labels).join(', ') || 'Kategorijos viešuose šaltiniuose nenurodytos.'),
+    createFactRow('Aprašymas', textOrUnknown(record.description_lt, 'Trumpas aprašymas šaltiniuose nepateiktas.')),
+    createUrlFactRow('Svetainė', record.website),
+    createUrlFactRow('Viešai nurodytas kontaktinis adresas', record.public_contact_url),
+  );
+  details.append(detailsHeading, facts);
 
-  section.append(kicker, heading, legal, note, facts);
+  article.append(hero, note, details, createSourceSection(record), createCorrectionSection(record));
+  main.append(back, article);
+}
 
-  if (record.website) {
-    const website = document.createElement('a');
-    website.className = 'primary-button profile-website';
-    website.href = record.website;
-    website.target = '_blank';
-    website.rel = 'noopener noreferrer';
-    website.textContent = 'Atverti gamintojo svetainę';
-    section.append(website);
+function renderGuideHub(): void {
+  if (!root) return;
+  document.title = 'Pirkėjo gidas | Baldai pagal užsakymą Lietuvoje';
+  setMetaDescription('Praktinis lietuviškas gidas: kaip atrinkti baldų gamintojus, parengti užklausą, palyginti pasiūlymų apimtį ir susitarti dėl realistiško grafiko.');
+  root.innerHTML = `
+    ${renderHeader('guide')}
+    <main>
+      <section class="guide-intro" aria-labelledby="guide-title">
+        <div>
+          <p class="kicker">Pirkėjo gidas</p>
+          <h1 id="guide-title">Sprendimą grįskite palyginama informacija, ne vien pažadu</h1>
+        </div>
+        <p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda susiaurinti pasirinkimą, pateikti vienodą užklausą ir aiškiai aptarti apimtį, kainą bei laiką.</p>
+      </section>
+      <section class="guide-hub" aria-labelledby="guide-articles-title">
+        <div class="guide-hub-heading">
+          <h2 id="guide-articles-title">Trys žingsniai nuo sąrašo iki palyginamo pasiūlymo</h2>
+          <p>Vieša informacija apie gamintojus yra fragmentiška, o katalogo įrašai nepatvirtinti. Todėl kiekviename žingsnyje atskirkite tai, ką radote, nuo to, ką pats gamintojas patvirtino jūsų projektui.</p>
+        </div>
+        <ol class="guide-route-list">
+          ${guideArticles.map((article, index) => `
+            <li>
+              <span class="route-number" aria-hidden="true">${index + 1}</span>
+              <div>
+                <p>${article.readingLabel}</p>
+                <h3><a href="/gidas/${article.slug}" data-internal-link="true">${article.title}</a></h3>
+                <p>${article.summary}</p>
+              </div>
+              <span class="route-arrow" aria-hidden="true">→</span>
+            </li>
+          `).join('')}
+        </ol>
+      </section>
+      <section class="guide-principles" aria-labelledby="principles-title">
+        <div>
+          <h2 id="principles-title">Trumpa atrankos seka</h2>
+          <p>Ši seka nesuteikia kokybės garantijos, bet palieka aiškų pagrindą, kodėl kandidatas pateko į jūsų sąrašą.</p>
+        </div>
+        <ol>
+          <li><strong>Apibrėžkite poreikį.</strong><span>Patalpa, matmenys, funkcija, norimos medžiagos, montavimo vieta ir sprendimo ribos.</span></li>
+          <li><strong>Rinkite kandidatus.</strong><span>Naudokite katalogą kaip pradžios tašką, o ne patvirtintą rekomendacijų sąrašą.</span></li>
+          <li><strong>Patikrinkite tapatybę ir apimtį.</strong><span>Sutikrinkite juridinį pavadinimą, viešą kontaktą ir ar gamintojas imasi tokio projekto.</span></li>
+          <li><strong>Siųskite vienodą užklausą.</strong><span>Skirtingai aprašyti projektai sukuria nepalyginamus atsakymus.</span></li>
+          <li><strong>Lyginkite visą apimtį.</strong><span>Kaina, medžiagos, furnitūra, matavimas, pristatymas, montavimas, terminų prielaidos ir išimtys.</span></li>
+        </ol>
+      </section>
+      <section class="uncertainty-note" aria-labelledby="uncertainty-title">
+        <h2 id="uncertainty-title">Ko šis gidas nežada</h2>
+        <p>Nėra vienos universalios kainos, fiksuoto termino ar visiems projektams tinkamo gamintojo. Galutinis pasiūlymas priklauso nuo konkrečios apimties ir tuo metu patvirtintų sąlygų.</p>
+      </section>
+    </main>
+    ${renderFooter()}
+  `;
+}
+
+function renderGuideArticleShell(article: GuideArticle, content: string): void {
+  if (!root) return;
+  document.title = `${article.title} | Pirkėjo gidas`;
+  setMetaDescription(article.summary);
+  root.innerHTML = `
+    ${renderHeader('guide')}
+    <main class="article-main">
+      <a class="back-link" href="/gidas" data-internal-link="true">← Grįžti į pirkėjo gidą</a>
+      <article class="guide-article">
+        <header class="article-header">
+          <p class="kicker">${article.readingLabel}</p>
+          <h1>${article.title}</h1>
+          <p>${article.summary}</p>
+        </header>
+        <div class="guide-copy">${content}</div>
+        <nav class="article-next" aria-label="Kiti gido straipsniai">
+          <a href="/gidas" data-internal-link="true">Visas pirkėjo gidas</a>
+          <a href="/" data-internal-link="true">Atverti gamintojų katalogą →</a>
+        </nav>
+      </article>
+    </main>
+    ${renderFooter()}
+  `;
+}
+
+function renderShortlistGuide(): void {
+  const article = guideArticles[0];
+  renderGuideArticleShell(article, `
+    <section>
+      <h2>Pradėkite nuo atrankos pagrindo</h2>
+      <p>Pagrįstas trumpasis sąrašas nėra populiarumo lentelė. Tai kandidatų rinkinys, kuriame prie kiekvieno pasirinkimo galite parodyti, kokį jūsų poreikį jis galėtų atitikti ir ką dar būtina patikrinti.</p>
+      <div class="checklist-block">
+        <h3>Prieš ieškodami užrašykite</h3>
+        <ul>
+          <li>kokiai patalpai ir funkcijai reikia baldų;</li>
+          <li>apytikslius matmenis, vietos nuotraukas ir žinomus apribojimus;</li>
+          <li>kurios medžiagos ar sprendimai pageidaujami, o kurie netinka;</li>
+          <li>ar reikia matavimo, projektavimo, pristatymo ir montavimo;</li>
+          <li>iki kada sprendimas reikalingas ir kuri data yra lanksti.</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>Kiekvienam kandidatui taikykite tuos pačius kriterijus</h2>
+      <p>Katalogo kategorija ar aprašymas yra viešo šaltinio signalas, ne patvirtinimas. Žymėkite atskirai: „rasta šaltinyje“, „patvirtino gamintojas“ ir „dar neaišku“.</p>
+      <div class="comparison-table-wrap" tabindex="0" aria-label="Kandidato patikros lentelė, galima slinkti horizontaliai">
+        <table>
+          <thead><tr><th>Kriterijus</th><th>Ką užfiksuoti</th><th>Ko nepriimti kaip garantijos</th></tr></thead>
+          <tbody>
+            <tr><td>Tapatybė</td><td>Viešas pavadinimas, juridinis pavadinimas, naudotas kontaktinis adresas</td><td>Vien pavadinimo sutapimo</td></tr>
+            <tr><td>Atitiktis projektui</td><td>Ar gamintojas patvirtino, kad imasi tokio tipo ir apimties darbo</td><td>Bendros kategorijos žymos</td></tr>
+            <tr><td>Įrodymai</td><td>Vieši panašios apimties darbų pavyzdžiai ir jų kontekstas</td><td>Neaiškios kilmės nuotraukų</td></tr>
+            <tr><td>Procesas</td><td>Kas matuoja, projektuoja, tvirtina brėžinius, pristato ir montuoja</td><td>Žodžio „pilnas“ be išvardytos apimties</td></tr>
+            <tr><td>Neapibrėžtumas</td><td>Kokios sąlygos dar gali pakeisti kainą ar grafiką</td><td>Datos ar sumos be prielaidų</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h2>Klausimai prieš priimant pasiūlymą</h2>
+      <ul class="question-list">
+        <li>Kas tiksliai įtraukta į pasiūlymą, o kas neįtraukta?</li>
+        <li>Kokios medžiagos, furnitūra, paviršiai ir jų variantai įvardyti raštu?</li>
+        <li>Kas atsako už galutinius matmenis ir kada jie tvirtinami?</li>
+        <li>Ar gausite brėžinius ar vizualizacijas patvirtinimui prieš gamybą?</li>
+        <li>Kokie etapai, mokėjimo momentai ir priėmimo kriterijai?</li>
+        <li>Kaip registruojami pakeitimai ir kaip jie gali paveikti kainą bei terminą?</li>
+        <li>Kas vyksta nustačius trūkumą pristatymo ar montavimo metu?</li>
+      </ul>
+      <p class="inline-warning"><strong>Neužpildykite spragų patys.</strong> Jei pasiūlyme nėra medžiagos, darbų etapo ar datos prielaidos, pažymėkite tai kaip neaiškumą ir paprašykite papildyti raštu.</p>
+    </section>
+  `);
+}
+
+function renderRequestGuide(): void {
+  const article = guideArticles[1];
+  renderGuideArticleShell(article, `
+    <section>
+      <h2>Vienoda užklausa sukuria palyginamus atsakymus</h2>
+      <p>Gamintojui reikia ne ilgo pasakojimo, o aiškios projekto santraukos ir priedų. Jei skirtingiems kandidatams siunčiate skirtingą informaciją, jų kainų ir terminų negalėsite sąžiningai lyginti.</p>
+      <div class="checklist-block">
+        <h3>Į užklausą įtraukite</h3>
+        <ul>
+          <li>patalpą, baldų paskirtį ir montavimo adresą ar vietovę;</li>
+          <li>matmenis su aiškia pastaba, ar jie preliminarūs;</li>
+          <li>nuotraukas, planą, angų, komunikacijų ir kitų kliūčių vietas;</li>
+          <li>norimas medžiagas, spalvas, furnitūros funkcijas ir prioritetus;</li>
+          <li>ar reikia matavimo, projektavimo, pristatymo, užnešimo, montavimo ir senų baldų išvežimo;</li>
+          <li>pageidaujamą laikotarpį ir datą, iki kurios reikia gauti pasiūlymą;</li>
+          <li>prašymą aiškiai išvardyti prielaidas, išimtis ir galimus papildomus darbus.</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>Kainą lyginkite tik kartu su apimtimi</h2>
+      <p>Universalių kainų juostų nėra: projektai skiriasi matmenimis, medžiagomis, furnitūra, konstrukcija, apdaila, logistika ir montavimo sąlygomis. Mažesnė suma gali reikšti kitokią komplektaciją, o ne geresnę kainą už tą patį darbą.</p>
+      <h3>Dažniausi kainos veiksniai</h3>
+      <ul>
+        <li>baldų kiekis, matmenys ir nestandartinių mazgų sudėtingumas;</li>
+        <li>plokštės, medžio masyvas, metalas, stiklas, akmuo ar kiti paviršiai;</li>
+        <li>furnitūros klasė ir funkcijos;</li>
+        <li>dažymas, frezavimas, faneravimas ir kiti apdailos darbai;</li>
+        <li>matavimo, projektavimo ir pakeitimų apimtis;</li>
+        <li>pristatymo atstumas, užnešimo sąlygos ir montavimo sudėtingumas;</li>
+        <li>objekto parengtis ir darbų derinimas su kitais rangovais.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pasiūlymų palyginimo kontrolinis sąrašas</h2>
+      <div class="comparison-table-wrap" tabindex="0" aria-label="Pasiūlymų palyginimo lentelė, galima slinkti horizontaliai">
+        <table>
+          <thead><tr><th>Sritis</th><th>Patikrinkite</th></tr></thead>
+          <tbody>
+            <tr><td>Gaminiai</td><td>Kiekiai, matmenys, konstrukcija, vidaus įranga ir nurodyti priedai</td></tr>
+            <tr><td>Medžiagos</td><td>Tikslūs pavadinimai ar aiškiai aprašyti lygiaverčiai variantai</td></tr>
+            <tr><td>Paslaugos</td><td>Matavimas, projektavimas, pristatymas, užnešimas, montavimas</td></tr>
+            <tr><td>Kaina</td><td>Mokesčiai, pristatymas, montavimas, galimi papildomi darbai ir pasiūlymo galiojimas</td></tr>
+            <tr><td>Grafikas</td><td>Etapai, prielaidos, priklausomybės ir data, nuo kurios terminas skaičiuojamas</td></tr>
+            <tr><td>Priėmimas</td><td>Kas ir kada patikrinama, kaip fiksuojami neatitikimai</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="inline-warning"><strong>Prašykite patikslintos versijos.</strong> Žodinis paaiškinimas padeda suprasti, bet galutiniam palyginimui naudokite vieną rašytinę pasiūlymo versiją su visais pakeitimais.</p>
+    </section>
+  `);
+}
+
+function renderScheduleGuide(): void {
+  const article = guideArticles[2];
+  renderGuideArticleShell(article, `
+    <section>
+      <h2>Vienas skaičius neparodo, nuo ko priklauso terminas</h2>
+      <p>Realistiškas grafikas susideda iš etapų ir aiškių prielaidų. Viešas katalogo įrašas nieko nepasako apie dabartinę gamintojo apkrovą ar medžiagų prieinamumą, todėl šiuos dalykus reikia patvirtinti konkrečiam projektui.</p>
+      <h3>Terminą gali keisti</h3>
+      <ul>
+        <li>objekto parengtis galutiniam matavimui;</li>
+        <li>brėžinių, medžiagų ir spalvų derinimo trukmė;</li>
+        <li>pasirinktų medžiagų ir furnitūros prieinamumas;</li>
+        <li>gamybos eilė pasiūlymo patvirtinimo metu;</li>
+        <li>subrangovų darbai, paviršių apdaila ar nestandartiniai komponentai;</li>
+        <li>pristatymo, užnešimo ir montavimo sąlygos;</li>
+        <li>užsakovo ar kitų rangovų inicijuoti pakeitimai.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Prašykite grafiko etapais</h2>
+      <div class="checklist-block">
+        <h3>Ką turi atsakyti realistiškas grafikas</h3>
+        <ul>
+          <li>kada atliekamas galutinis matavimas ir ko tam reikia objekte;</li>
+          <li>iki kada pateikiami ir patvirtinami brėžiniai bei medžiagos;</li>
+          <li>nuo kokio įvykio prasideda gamybos laiko skaičiavimas;</li>
+          <li>kada numatomas pristatymo ir montavimo langas;</li>
+          <li>kurios datos yra preliminarios, o kurios patvirtintos;</li>
+          <li>kokios priklausomybės gali sustabdyti ar perkelti etapą;</li>
+          <li>kaip pakeitimai perskaičiuoja kainą ir grafiką.</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>Klausimai, kurie sumažina neapibrėžtumą</h2>
+      <ul class="question-list">
+        <li>Ar siūloma data paremta dabartine gamybos eile, ar tai tik preliminarus vertinimas?</li>
+        <li>Ar visos pasiūlyme nurodytos medžiagos ir furnitūra šiuo metu prieinamos?</li>
+        <li>Kuriuos sprendimus turime patvirtinti, kad grafikas galėtų prasidėti?</li>
+        <li>Kiek laiko numatyta mūsų pastaboms ir pataisymams?</li>
+        <li>Kas turi būti baigta objekte iki matavimo, pristatymo ir montavimo?</li>
+        <li>Kada gausime atnaujintą grafiką, jei pasikeis medžiaga, apimtis ar objekto parengtis?</li>
+      </ul>
+      <p class="inline-warning"><strong>Derinkite intervalą ir patvirtinimo momentą.</strong> Ankstyvoje stadijoje tiksli diena gali būti nepagrįsta. Svarbiau žinoti, kada ir kokiomis sąlygomis preliminarus laikotarpis taps patvirtintu grafiku.</p>
+    </section>
+  `);
+}
+
+function renderGuideNotFound(): void {
+  if (!root) return;
+  document.title = 'Gido straipsnis nerastas | Pirkėjo gidas';
+  setMetaDescription('Prašomas pirkėjo gido straipsnis nerastas.');
+  root.innerHTML = `
+    ${renderHeader('guide')}
+    <main class="article-main">
+      <a class="back-link" href="/gidas" data-internal-link="true">← Grįžti į pirkėjo gidą</a>
+      <section class="message-state profile-state">
+        <p class="state-label">Straipsnis nerastas</p>
+        <h1>Tokio gido puslapio nėra</h1>
+        <p>Grįžkite į gido pradžią ir pasirinkite vieną iš praktinių temų.</p>
+        <a class="primary-button" href="/gidas" data-internal-link="true">Atverti pirkėjo gidą</a>
+      </section>
+    </main>
+    ${renderFooter()}
+  `;
+}
+
+function renderGuideRoute(): void {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  if (path === '/gidas') {
+    renderGuideHub();
+    return;
   }
 
-  main.append(back, section);
+  const articleSlug = decodeURIComponent(path.split('/').filter(Boolean)[1] ?? '');
+  if (articleSlug === 'trumpasis-sarasas') {
+    renderShortlistGuide();
+    return;
+  }
+  if (articleSlug === 'uzklausa-ir-pasiulymas') {
+    renderRequestGuide();
+    return;
+  }
+  if (articleSlug === 'terminai') {
+    renderScheduleGuide();
+    return;
+  }
+  renderGuideNotFound();
 }
 
 function route(): void {
+  if (isGuidePath()) {
+    renderGuideRoute();
+    return;
+  }
+
   if (window.location.pathname.startsWith('/gamintojas/')) {
     const slug = decodeURIComponent(window.location.pathname.split('/').filter(Boolean)[1] ?? '');
     renderProfile(manufacturers.find((record) => record.slug === slug));
@@ -615,6 +1203,7 @@ function route(): void {
   }
 
   document.title = 'Baldai pagal užsakymą Lietuvoje | Gamintojų katalogas';
+  setMetaDescription('Viešais šaltiniais paremtas nepatvirtintų Lietuvos nestandartinių baldų gamintojų kandidatų katalogas su paieška pagal kategoriją ir vietą.');
   renderShell();
   renderBrowse();
 }
@@ -622,19 +1211,49 @@ function route(): void {
 async function loadDirectory(): Promise<void> {
   if (isLoading) return;
   isLoading = true;
-  renderShell();
-  renderLoading();
+
+  if (window.location.pathname === '/') {
+    renderShell();
+    renderLoading();
+  } else if (window.location.pathname.startsWith('/gamintojas/')) {
+    if (root) {
+      root.innerHTML = `
+        ${renderHeader('directory')}
+        <main class="profile-main">
+          <div class="loading-state" role="status" aria-live="polite">
+            <span class="loading-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+            <div><h1>Kraunamas gamintojo įrašas</h1><p>Gaunami viešo šaltinio duomenys…</p></div>
+          </div>
+        </main>
+        ${renderFooter()}
+      `;
+    }
+  }
 
   try {
     manufacturers = await fetchAllManufacturers();
+    directoryLoaded = true;
     browseState = readBrowseState();
-    route();
+    if (isDirectoryPath()) route();
   } catch (error) {
     console.error('Nepavyko gauti gamintojų katalogo.', error);
-    renderError();
+    renderDirectoryError();
   } finally {
     isLoading = false;
   }
+}
+
+function navigateToCurrentRoute(): void {
+  browseState = readBrowseState();
+  if (isGuidePath()) {
+    route();
+    return;
+  }
+  if (directoryLoaded) {
+    route();
+    return;
+  }
+  void loadDirectory();
 }
 
 document.addEventListener('click', (event) => {
@@ -649,14 +1268,14 @@ document.addEventListener('click', (event) => {
   if (url.origin !== window.location.origin) return;
   event.preventDefault();
   window.history.pushState({}, '', `${url.pathname}${url.search}${url.hash}`);
-  browseState = readBrowseState();
-  route();
+  navigateToCurrentRoute();
   window.scrollTo({ top: 0, behavior: 'auto' });
 });
 
-window.addEventListener('popstate', () => {
-  browseState = readBrowseState();
-  route();
-});
+window.addEventListener('popstate', navigateToCurrentRoute);
 
-void loadDirectory();
+if (isGuidePath()) {
+  route();
+} else {
+  void loadDirectory();
+}
