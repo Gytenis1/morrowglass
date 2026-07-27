@@ -30,6 +30,7 @@ const categoryLabels = new Map([
   ["U", "Minkšti baldai pagal užsakymą"],
   ["SW", "Medžio darbai ir medžio masyvo baldai"],
   ["MM", "Metalo ir mišrių medžiagų baldai"],
+  ["O", "Kiti nestandartiniai baldai"],
 ]);
 const categoryCodes = new Set(categoryLabels.keys());
 const regions = new Set(["vilnius-east-south", "kaunas-north", "klaipeda-panevezys-west-central"]);

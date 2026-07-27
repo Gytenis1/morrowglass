@@ -39,22 +39,22 @@ Pradinio rinkinio šaltinių surinkimo data yra `2026-07-27`, o patikros būsena
 | `description_lt` | Trumpas lietuviškas aprašymas, jei pagrįstas šaltiniu. |
 | `location`, `city` | Šaltinyje nurodyta bazės vietovė; tai nėra paslaugų teritorija. |
 | `region`, `region_label` | Šaltinio regiono grupė ir jos pavadinimas. |
-| `category_codes`, `category_labels` | Tik viešame šaltinyje aiškiai pagrįstos kategorijų žymos ir lietuviški pavadinimai; abu masyvai gali būti tušti. |
+| `category_codes`, `category_labels` | Viešo šaltinio duomenimis pagrįstos kategorijų žymos ir lietuviški pavadinimai; abu masyvai yra netuštūs. `O` naudojamas, kai patvirtinta nestandartinių baldų veikla, bet nepakanka duomenų siauresnei kategorijai. |
 | `website`, `public_contact_url` | Tik šaltinyje esantys vieši URL. |
 | `scope_evidence`, `confidence_evidence`, `evidence_source_type` | Šaltinio apimties ir įrodymo kontekstas. |
 | `source_urls`, `source_artifact_url`, `source_collection_date` | Kilmės nuorodos ir data. |
 | `verification_status` | `nepatvirtinta`. |
 
-Kategorijų kodai: `K` – Virtuvės baldai; `W` – Spintos ir įmontuojami baldai; `BB` – Miegamojo ir vonios baldai; `OC` – Biuro ir komerciniai baldai; `HR` – HoReCa ir prekybos baldai; `U` – Minkšti baldai pagal užsakymą; `SW` – Medžio darbai ir medžio masyvo baldai; `MM` – Metalo ir mišrių medžiagų baldai.
+Kategorijų kodai: `K` – Virtuvės baldai; `W` – Spintos ir įmontuojami baldai; `BB` – Miegamojo ir vonios baldai; `OC` – Biuro ir komerciniai baldai; `HR` – HoReCa ir prekybos baldai; `U` – Minkšti baldai pagal užsakymą; `SW` – Medžio darbai ir medžio masyvo baldai; `MM` – Metalo ir mišrių medžiagų baldai; `O` – Kiti nestandartiniai baldai.
 
 ## Įrašo pridėjimas arba taisymas
 
 1. Redaguokite `data/manufacturers.json`.
 2. Naujam įrašui parinkite nekintantį ASCII `slug` (`mazosios-raides-ir-bruksneliai`). Taisant esamą įrašą nekeiskite slug be būtinos priežasties, nes jis yra viešo profilio URL.
 3. Išsaugokite originalų `source_identity`, viešus `source_urls`, `source_artifact_url`, tikrą `source_collection_date` ir neapibrėžtumą. Svetainę ar kontaktinį URL pildykite tik tada, kai jis yra viešame šaltinyje.
-4. Kategorijų kodų ir pavadinimų poras laikykite ta pačia tvarka ir naudokite tik aukščiau aprašytą taksonomiją. Žymą dėkite tik kai viešas šaltinis tiesiogiai įvardija atitinkamą gaminį, medžiagą ar paskirtį. Bendras teiginys apie nestandartinių baldų gamybą nepagrindžia konkrečios kategorijos, todėl tokiu atveju abu kategorijų masyvai teisėtai paliekami tušti.
+4. Kategorijų kodų ir pavadinimų poras laikykite ta pačia tvarka ir naudokite tik aukščiau aprašytą taksonomiją. Žymą dėkite tik kai viešas šaltinis tiesiogiai įvardija atitinkamą gaminį, medžiagą ar paskirtį. Jei šaltinis patvirtina nestandartinių baldų gamybą, bet nepateikia pakankamai detalių siauresnei kategorijai, naudokite vienintelę porą `O` / `Kiti nestandartiniai baldai` ir aiškiai nurodykite šią ribą įrodymų laukuose.
 5. `scope_evidence` įrašykite trumpą šaltinio teiginį ar citatą ir tiesiogiai nurodykite bent vieną to įrašo `source_urls` URL.
-6. Paleiskite vietinę validaciją (ji taip pat pateikia aprašymų aprėptį, kategorizuotų ir sąmoningai nekategorizuotų įrašų skaičių bei pasiskirstymą pagal kodą):
+6. Paleiskite vietinę validaciją (ji taip pat pateikia aprašymų aprėptį, pilną kategorijų aprėptį ir pasiskirstymą pagal kodą):
 
    ```sh
    node scripts/import-manufacturers.mjs --validate

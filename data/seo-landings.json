@@ -55,6 +55,13 @@
       "title": "Metalo ir mišrių medžiagų baldai pagal užsakymą",
       "intro": "Puslapyje pateikiami viešuose šaltiniuose su metalo arba mišrių medžiagų baldais susieti Lietuvos gamintojų kandidatai.",
       "buyer_note": "Užklausoje aprašykite konstrukciją, medžiagų derinius, paviršių apdailą, apkrovas ir montavimo sąlygas. Viešas įrašas nėra techninių galimybių ar dabartinio užimtumo patvirtinimas."
+    },
+    {
+      "code": "O",
+      "slug": "kiti-nestandartiniai-baldai",
+      "title": "Kiti nestandartiniai baldai pagal užsakymą",
+      "intro": "Šiame puslapyje pateikiami Lietuvos gamintojų kandidatai, kurių vieši šaltiniai patvirtina nestandartinių ar pagal individualų užsakymą gaminamų baldų veiklą, tačiau nepakanka informacijos juos priskirti siauresnei produktų kategorijai.",
+      "buyer_note": "Prieš kreipdamiesi paprašykite patvirtinti, kokius gaminius, medžiagas, paslaugų apimtį ir terminus kandidatas gali pasiūlyti. Ši bendroji kategorija nepatvirtina konkrečių produktų, medžiagų, pajėgumo ar tinkamumo jūsų projektui."
     }
   ],
   "cityThreshold": 5

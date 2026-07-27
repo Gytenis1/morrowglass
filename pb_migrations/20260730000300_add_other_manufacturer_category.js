@@ -13,22 +13,20 @@ migrate((app) => {
     MM: "Metalo ir mišrių medžiagų baldai",
     O: "Kiti nestandartiniai baldai",
   }
-  const validCodes = new Set(Object.keys(categoryLabels))
+  const validCodes = Object.keys(categoryLabels)
 
   if (!Array.isArray(seed) || seed.length !== 121) {
     throw new Error("data/manufacturers.json must contain exactly 121 manufacturer records")
   }
 
   const slugs = new Set()
+  const otherFallbackRecords = []
   for (const record of seed) {
     if (!record.slug || slugs.has(record.slug)) {
       throw new Error("Every manufacturer must have a unique nonempty slug")
     }
-    if (!Array.isArray(record.category_codes) || record.category_codes.length === 0) {
-      throw new Error("Manufacturer " + record.slug + " must have at least one category code")
-    }
-    if (new Set(record.category_codes).size !== record.category_codes.length || record.category_codes.some((code) => !validCodes.has(code))) {
-      throw new Error("Manufacturer " + record.slug + " has invalid category codes")
+    if (!Array.isArray(record.category_codes) || record.category_codes.length === 0 || new Set(record.category_codes).size !== record.category_codes.length || record.category_codes.some((code) => !validCodes.includes(code))) {
+      throw new Error("Manufacturer " + record.slug + " has invalid or empty category codes")
     }
     if (!Array.isArray(record.category_labels) || record.category_labels.length !== record.category_codes.length || record.category_codes.some((code, index) => record.category_labels[index] !== categoryLabels[code])) {
       throw new Error("Manufacturer " + record.slug + " must have labels matching category codes")
@@ -36,31 +34,44 @@ migrate((app) => {
     if (typeof record.scope_evidence !== "string" || typeof record.confidence_evidence !== "string" || !record.confidence_evidence.trim() || !Array.isArray(record.source_urls) || !record.source_urls.some((url) => record.scope_evidence.includes(url))) {
       throw new Error("Manufacturer " + record.slug + " category evidence must cite a source URL in scope evidence and retain confidence evidence")
     }
+    if (record.category_codes.length === 1 && record.category_codes[0] === "O") {
+      if (!record.confidence_evidence.includes("O kaip bendroji („kiti“) atsarginė kategorija") || !record.scope_evidence.includes("O priskirta kaip bendroji („kiti“) atsarginė kategorija")) {
+        throw new Error("Manufacturer " + record.slug + " must retain the O fallback evidence wording")
+      }
+      otherFallbackRecords.push(record)
+    }
     slugs.add(record.slug)
   }
-  if (slugs.size !== 121) {
-    throw new Error("data/manufacturers.json must contain 121 unique manufacturer slugs")
+  if (slugs.size !== 121 || otherFallbackRecords.length !== 30) {
+    throw new Error("data/manufacturers.json must contain 121 unique slugs and exactly 30 O fallback records")
   }
+
+  const collection = app.findCollectionByNameOrId("manufacturers")
+  const categoryCodes = collection.fields.getByName("category_codes")
+  if (!categoryCodes || categoryCodes.type() !== "select") {
+    throw new Error("manufacturers.category_codes must be a select field")
+  }
+  categoryCodes.values = validCodes
+  categoryCodes.maxSelect = validCodes.length
+  app.save(collection)
 
   const sqlValue = (value) => {
     const text = Array.isArray(value) ? JSON.stringify(value) : String(value)
     return "'" + text.replaceAll("'", "''") + "'"
   }
-  const caseFor = (field) => seed
+  const caseFor = (field) => otherFallbackRecords
     .map((record) => "WHEN " + sqlValue(record.slug) + " THEN " + sqlValue(record[field]))
     .join(" ")
-  const slugList = seed.map((record) => sqlValue(record.slug)).join(",")
+  const slugList = otherFallbackRecords.map((record) => sqlValue(record.slug)).join(",")
 
-  // This single, bounded update is restart-safe: repeating it sets the same four values
-  // for the versioned slugs and cannot alter any other manufacturer columns or records.
+  // One bounded, restart-safe update changes only the reclassified records' category and evidence fields.
   const sql = "UPDATE `manufacturers` SET " +
     "`category_codes` = CASE `slug` " + caseFor("category_codes") + " ELSE `category_codes` END, " +
     "`category_labels` = CASE `slug` " + caseFor("category_labels") + " ELSE `category_labels` END, " +
     "`scope_evidence` = CASE `slug` " + caseFor("scope_evidence") + " ELSE `scope_evidence` END, " +
     "`confidence_evidence` = CASE `slug` " + caseFor("confidence_evidence") + " ELSE `confidence_evidence` END " +
     "WHERE `slug` IN (" + slugList + ")"
-
   app.db().newQuery(sql).execute()
 }, (app) => {
-  // Deliberately non-destructive: a rollback does not erase persistent catalogue data.
+  // Deliberately non-destructive: rolling back must not erase persistent catalogue data.
 })
