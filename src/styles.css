@@ -1548,7 +1548,8 @@
   }
 
   .guide-intro h1 {
-    max-width: 23ch;
+    max-width: 28ch;
+    font-size: clamp(2.35rem, 3.8vw, 2.75rem);
   }
 
   .guide-intro > p {
@@ -1592,7 +1593,7 @@
 
   .guide-route-list li {
     display: grid;
-    grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 1rem;
     padding-block: 1.5rem;
@@ -1604,12 +1605,9 @@
     background: oklch(0.975 0.01 158);
   }
 
-  .route-number {
-    color: var(--pine);
-    font-family: var(--display);
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
+  .guide-hub--secondary {
+    padding-top: clamp(2.5rem, 6vw, 5rem);
+    border-top: 1px solid var(--line);
   }
 
   .guide-route-list li > div {
@@ -1729,7 +1727,8 @@
   }
 
   .article-header h1 {
-    max-width: 20ch;
+    max-width: 27ch;
+    font-size: clamp(2.15rem, 4.3vw, 3rem);
   }
 
   .article-header > p:last-child {
@@ -1778,6 +1777,94 @@
 
   .guide-copy li::marker {
     color: var(--moss);
+  }
+
+  .guide-copy a {
+    color: var(--pine-strong);
+    font-weight: 760;
+  }
+
+  .source-block {
+    border-block: 1px solid var(--line);
+  }
+
+  .source-block article {
+    display: grid;
+    gap: 0.9rem;
+    padding-block: 1.35rem;
+  }
+
+  .source-block article + article {
+    border-top: 1px solid var(--line);
+  }
+
+  .source-citation {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .stage-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    list-style: none;
+    counter-reset: project-stage;
+    border-top: 1px solid var(--line);
+  }
+
+  .stage-list li {
+    counter-increment: project-stage;
+    display: grid;
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 1rem;
+    padding-block: 1.2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .stage-list li::before {
+    content: counter(project-stage);
+    color: var(--pine);
+    font-family: var(--display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stage-list li > div {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .stage-list h3 {
+    margin-top: 0;
+  }
+
+  .article-faq {
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .article-faq dl {
+    display: grid;
+    border-top: 1px solid var(--line);
+  }
+
+  .article-faq dl > div {
+    display: grid;
+    gap: 0.55rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .article-faq dt {
+    font-weight: 820;
+  }
+
+  .article-faq dd {
+    color: var(--ink-soft);
   }
 
   .checklist-block {
@@ -2097,7 +2184,7 @@
     }
 
     .guide-route-list li {
-      grid-template-columns: 2rem minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) auto;
     }
 
     .route-arrow {

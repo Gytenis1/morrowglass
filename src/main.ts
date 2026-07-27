@@ -51,6 +51,7 @@ type GuideArticle = {
   title: string;
   summary: string;
   readingLabel: string;
+  featured?: boolean;
 };
 
 type HeaderSection = 'directory' | 'guide' | 'request';
@@ -95,6 +96,34 @@ const guideArticles: GuideArticle[] = [
     title: 'Kaip prašyti realistiško darbų grafiko',
     summary: 'Terminą lemiantys kintamieji, etapai ir klausimai, padedantys valdyti neapibrėžtumą.',
     readingLabel: 'Terminai ir eiga',
+  },
+  {
+    slug: 'kaip-pasirinkti-baldu-gamintoja',
+    title: 'Kaip pasirinkti ir palyginti baldų gamintoją',
+    summary: 'Ką paklausti, kokius įspėjamuosius ženklus pastebėti ir kaip atsargiai skaityti nepatvirtintus katalogo įrašus.',
+    readingLabel: 'Atranka ir patikra',
+    featured: true,
+  },
+  {
+    slug: 'virtuves-baldu-kainos',
+    title: 'Virtuvės baldų kainos: ribos ir kainą keičiantys sprendimai',
+    summary: 'Dvi aiškiai atskirtos viešų šaltinių nuorodos, jų datos ir praktinis sąrašas, kas keičia individualaus projekto kainą.',
+    readingLabel: 'Kaina ir apimtis',
+    featured: true,
+  },
+  {
+    slug: 'virtuves-ir-imontuojamu-baldu-projekto-eiga',
+    title: 'Virtuvės ir įmontuojamų baldų projekto eiga',
+    summary: 'Tipinė etapų seka nuo matavimo iki montavimo ir kontrolinis sąrašas sprendimams, kurie veikia grafiką.',
+    readingLabel: 'Projekto eiga',
+    featured: true,
+  },
+  {
+    slug: 'medziagos-sutartis-avansas-garantija',
+    title: 'Medžiagos, sutartis, avansas ir garantija: ką aptarti',
+    summary: 'Atsargus kontrolinis sąrašas Lietuvos pirkėjui prieš patvirtinant medžiagas, mokėjimą ir garantinio aptarnavimo tvarką.',
+    readingLabel: 'Dokumentai ir atsakomybės',
+    featured: true,
   },
 ];
 
@@ -1535,7 +1564,7 @@ function renderGuideHub(): void {
   ];
   setPageMetadata({
     title: 'Pirkėjo gidas | Baldai pagal užsakymą Lietuvoje',
-    description: 'Praktinis lietuviškas gidas: kaip atrinkti baldų gamintojus, parengti užklausą, palyginti pasiūlymų apimtį ir susitarti dėl realistiško grafiko.',
+    description: 'Lietuviški pirkėjo gidai apie baldų gamintojo pasirinkimą, realistiškas kainų nuorodas, projekto etapus, medžiagas, sutartį, avansą ir garantiją.',
     path: '/gidas',
     structuredData: [
       breadcrumbStructuredData([
@@ -1545,6 +1574,20 @@ function renderGuideHub(): void {
       faqStructuredData(guideFaq),
     ],
   });
+  const renderGuideLinks = (articles: GuideArticle[]) => `
+    <ul class="guide-route-list">
+      ${articles.map((article) => `
+        <li>
+          <div>
+            <p>${article.readingLabel}</p>
+            <h3><a href="/gidas/${article.slug}/">${article.title}</a></h3>
+            <p>${article.summary}</p>
+          </div>
+          <span class="route-arrow" aria-hidden="true">→</span>
+        </li>
+      `).join('')}
+    </ul>
+  `;
   root.innerHTML = `
     ${renderHeader('guide')}
     <main>
@@ -1553,26 +1596,21 @@ function renderGuideHub(): void {
           <p class="kicker">Pirkėjo gidas</p>
           <h1 id="guide-title">Sprendimą grįskite palyginama informacija, ne vien pažadu</h1>
         </div>
-        <p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda susiaurinti pasirinkimą, pateikti vienodą užklausą ir aiškiai aptarti apimtį, kainą bei laiką.</p>
+        <p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda patikrinti atranką, suprasti kainos ribas, valdyti projekto etapus ir aiškiai aptarti dokumentus.</p>
       </section>
-      <section class="guide-hub" aria-labelledby="guide-articles-title">
+      <section class="guide-hub" aria-labelledby="featured-guides-title">
         <div class="guide-hub-heading">
-          <h2 id="guide-articles-title">Trys žingsniai nuo sąrašo iki palyginamo pasiūlymo</h2>
-          <p>Vieša informacija apie gamintojus yra fragmentiška, o katalogo įrašai nepatvirtinti. Todėl kiekviename žingsnyje atskirkite tai, ką radote, nuo to, ką pats gamintojas patvirtino jūsų projektui.</p>
+          <h2 id="featured-guides-title">Keturi išsamūs gidai svarbiausiems sprendimams</h2>
+          <p>Pradėkite nuo klausimo, kurį turite dabar: kandidato patikra, kaina, projekto eiga arba susitarimo detalės.</p>
         </div>
-        <ol class="guide-route-list">
-          ${guideArticles.map((article, index) => `
-            <li>
-              <span class="route-number" aria-hidden="true">${index + 1}</span>
-              <div>
-                <p>${article.readingLabel}</p>
-                <h3><a href="/gidas/${article.slug}" data-internal-link="true">${article.title}</a></h3>
-                <p>${article.summary}</p>
-              </div>
-              <span class="route-arrow" aria-hidden="true">→</span>
-            </li>
-          `).join('')}
-        </ol>
+        ${renderGuideLinks(guideArticles.filter((article) => article.featured))}
+      </section>
+      <section class="guide-hub guide-hub--secondary" aria-labelledby="concise-guides-title">
+        <div class="guide-hub-heading">
+          <h2 id="concise-guides-title">Trumpi praktiniai straipsniai</h2>
+          <p>Anksčiau publikuoti gidai lieka pasiekiami tais pačiais adresais.</p>
+        </div>
+        ${renderGuideLinks(guideArticles.filter((article) => !article.featured))}
       </section>
       <section class="guide-principles" aria-labelledby="principles-title">
         <div>
@@ -1812,6 +1850,12 @@ function renderGuideRoute(): void {
   }
 
   const articleSlug = decodeURIComponent(path.split('/').filter(Boolean)[1] ?? '');
+  const article = guideArticles.find((item) => item.slug === articleSlug);
+  if (article?.featured) {
+    if (root?.querySelector('.guide-article')) return;
+    window.location.replace(`${path}/`);
+    return;
+  }
   if (articleSlug === 'trumpasis-sarasas') {
     renderShortlistGuide();
     return;

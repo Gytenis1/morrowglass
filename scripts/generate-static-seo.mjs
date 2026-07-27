@@ -17,9 +17,82 @@ const [manufacturers, landingConfig, baseHtml] = await Promise.all([
 
 const guideArticles = [
   {
+    slug: 'kaip-pasirinkti-baldu-gamintoja',
+    title: 'Kaip pasirinkti ir palyginti baldų gamintoją',
+    summary: 'Ką paklausti, kokius įspėjamuosius ženklus pastebėti ir kaip atsargiai skaityti nepatvirtintus katalogo įrašus.',
+    metaDescription: 'Praktinis gidas, kaip palyginti nestandartinių baldų gamintojus: klausimai kandidatams, įspėjamieji ženklai ir katalogo viešų šaltinių įrašų ribos.',
+    hubLabel: 'Atranka ir patikra',
+    featured: true,
+    content: `<section><h2>Katalogo įrašas yra kandidatas, ne rekomendacija</h2><p>Katalogas sujungia viešuose šaltiniuose rastą informaciją, tačiau įrašai nėra patvirtinti su gamintojais. Pavadinimas, vieta, veiklos kryptis ar svetainės nuoroda nepatvirtina tapatybės, darbų kokybės, užimtumo, kainos ar tinkamumo jūsų projektui.</p><p>Įrašą naudokite kaip paieškos pradžią: atverkite nurodytus šaltinius, patikrinkite, kas teikia pasiūlymą ir kam būtų mokama, o aktualią projekto informaciją gaukite tiesiogiai bei raštu.</p></section>
+<section><h2>Ką paklausti prieš įtraukiant į trumpąjį sąrašą</h2><div class="checklist-block"><h3>Klausimai tam pačiam palyginimui</h3><ul><li>Ar šiuo metu priimate tokio tipo, dydžio ir vietos projektus?</li><li>Koks tikslus pasiūlymą teikiančio asmens ar įmonės pavadinimas ir rekvizitai?</li><li>Ar galite parodyti panašios paskirties darbų pavyzdžių ir paaiškinti, kas juose buvo jūsų apimtis?</li><li>Kas atliks matavimą, projektavimą, gamybą, pristatymą ir montavimą?</li><li>Kokios medžiagos ir furnitūra siūlomos: gamintojas, kolekcija, kodas, spalva ir esminės savybės?</li><li>Kas aiškiai įtraukta į kainą, o kas bus skaičiuojama atskirai?</li><li>Nuo kokio įvykio skaičiuojamas grafikas ir kas nutinka pakeitus sprendinius?</li><li>Kokie dokumentai bus pateikti prieš avansą ir kaip fiksuojamas darbų priėmimas?</li></ul></div></section>
+<section><h2>Įspėjamieji ženklai: kada sustoti ir tikslinti</h2><p>Vienas požymis savaime neįrodo problemos, tačiau jis yra priežastis neskubėti ir paprašyti aiškaus atsakymo.</p><ul><li>Vengiama pateikti rašytinę apimtį, medžiagų specifikaciją ar galutinę pasiūlymo versiją.</li><li>Pasiūlyme, sutartyje, sąskaitoje ir mokėjimo gavėjo duomenyse nesutampa pavadinimai, o skirtumas nepaaiškinamas.</li><li>Prašoma skubiai mokėti avansą dar nepatvirtinus brėžinių, apimties, kainos ir šalių duomenų.</li><li>Rodomi darbų vaizdai, bet nepaaiškinama, ar kandidatas juos iš tiesų projektavo, gamino ar tik montavo.</li><li>Žadama tiksli kaina ar data nematant patalpos, neturint matmenų ir neaptarus medžiagų.</li><li>Neįvardijama, kaip bus tvirtinami pakeitimai, papildomi darbai ir jų kaina.</li></ul><p class="inline-warning"><strong>Praktinė taisyklė:</strong> neaiškumą spręskite prieš mokėjimą, ne montavimo dieną. Jei atsakymo negalite užrašyti vienu sakiniu, pasiūlymai dar nėra palyginami.</p></section>
+<section><h2>Palyginkite ne pažadus, o tą pačią apimtį</h2><div class="comparison-table-wrap" tabindex="0" role="region" aria-label="Baldų gamintojų pasiūlymų palyginimo lentelė"><table><thead><tr><th>Kriterijus</th><th>Ką užfiksuoti</th><th>Ko nepalikti numanoma</th></tr></thead><tbody><tr><td>Tapatybė</td><td>Pasiūlymą teikiantis ir mokėjimą gaunantis asmuo ar įmonė</td><td>Kad prekinis pavadinimas automatiškai sutampa su sutarties šalimi</td></tr><tr><td>Gaminys</td><td>Brėžiniai, matmenys, komplektacija ir funkcijos</td><td>Kad visi kandidatai suprato vienodą projektą</td></tr><tr><td>Medžiagos</td><td>Plokščių, fasadų, stalviršio ir furnitūros identifikacija</td><td>Kad bendrinis žodis reiškia vienodą kokybę ar kainą</td></tr><tr><td>Paslaugos</td><td>Matavimas, projektavimas, pristatymas, užnešimas, montavimas</td><td>Kad mažesnė suma apima tuos pačius darbus</td></tr><tr><td>Grafikas</td><td>Etapai, datos prielaidos ir jūsų sprendimų terminai</td><td>Kad preliminari data jau yra galutinis įsipareigojimas</td></tr></tbody></table></div></section>
+<section><h2>Tęskite nuo realaus projekto</h2><p>Peržiūrėkite <a href="/baldai-pagal-uzsakyma/virtuves-baldai">virtuvės baldų kandidatų kategoriją</a> arba, pavyzdžiui, <a href="/baldai-pagal-uzsakyma/vilnius">Vilniaus miesto kandidatų puslapį</a>. Pasirinktiems kandidatams parenkite vienodą aprašą <a href="/gauti-pasiulymus">projekto užklausos formoje</a>.</p></section>`,
+    faq: [
+      { question: 'Ar katalogo įrašas reiškia, kad gamintojas patikrintas?', answer: 'Ne. Įrašai yra iš viešų šaltinių surinkti, su gamintojais nepatvirtinti kandidatai. Tapatybę, aktualią veiklą, pasiūlymą ir tinkamumą projektui reikia tikrinti savarankiškai.' },
+      { question: 'Kiek pasiūlymų verta lyginti?', answer: 'Svarbiau ne kandidatų skaičius, o vienoda užklausa ir pakankamai aiškūs atsakymai. Lyginkite tik tas pasiūlymų versijas, kuriose apimtis, medžiagos, paslaugos ir išimtys aprašytos palyginamai.' },
+      { question: 'Ar darbų nuotraukos patvirtina kokybę?', answer: 'Vien nuotraukos nepatvirtina autorystės, medžiagų, konstrukcijos ar ilgalaikio rezultato. Paklauskite, kokia buvo kandidato darbų apimtis, ir paprašykite aktualių panašaus projekto pavyzdžių.' },
+    ],
+  },
+  {
+    slug: 'virtuves-baldu-kainos',
+    title: 'Virtuvės baldų kainos: ribos ir kainą keičiantys sprendimai',
+    summary: 'Dvi aiškiai atskirtos viešų šaltinių nuorodos, jų datos ir praktinis sąrašas, kas keičia individualaus projekto kainą.',
+    metaDescription: 'Viešų šaltinių virtuvės baldų kainų nuorodos su datomis ir paaiškinimu: ką reiškia €/m, kas keičia kainą ir ko gali nebūti pirminiame pasiūlyme.',
+    hubLabel: 'Kaina ir apimtis',
+    featured: true,
+    content: `<section><h2>Kainos orientyras nėra jūsų projekto sąmata</h2><p>Individualių baldų kainą lemia ne vien ilgis. Tą patį išorinį matmenį gali sudaryti skirtingas spintelių kiekis, furnitūra, fasadai, stalviršis, apšvietimas, buitinės technikos integracija ir montavimo sąlygos. Todėl viešas rinkos rodiklis tinka tik kontekstui, o sprendimui reikia konkrečios apimties pasiūlymo.</p><p class="inline-warning"><strong>Svarbu:</strong> toliau pateiktų šaltinių nejungiame į vidurkį, nelyginame kaip vienalaikių kainoraščių ir nedauginame iš numanomo virtuvės ilgio. €/m nėra viso projekto kaina.</p></section>
+<section><h2>Datuoti viešų šaltinių orientyrai</h2><div class="source-block"><article><h3>Dinaminė platformos nuoroda</h3><p><strong>300–800 €/m, vidurkis 548 €/m</strong> už virtuvės baldų gamybą pagal užsakymą. <span class="source-citation">Šaltinis: <a href="https://paslaugos.lt/virtuves-baldai-gamyba" rel="noopener noreferrer">Paslaugos.lt, „Virtuvės baldai gamyba“</a>; puslapio žyma „Kainos 2026 m.“; peržiūrėta 2026-07-27.</span></p><p>Tai dinaminė paslaugų platformos nuoroda, kuri gali keistis. Joje pateiktas €/m rodiklis nėra konkretaus tiekėjo pasiūlymas ir nėra visos virtuvės projekto kaina.</p></article><article><h3>Istorinis 2022 m. kontekstas</h3><p><strong>800–1000 €/m</strong> nurodyta kaip tuometinė virtuvės baldų rinkos kaina. <span class="source-citation">Šaltinis: <a href="https://www.15min.lt/verslas/naujiena/kvadratinis-metras/paslaugos-lt-kaip-virtuves-baldu-gamyba-paversti-atsiperkancia-investicija-971-1635694" rel="noopener noreferrer">15min / Paslaugos.lt</a>; publikuota 2022-02-01; peržiūrėta 2026-07-27.</span></p><p>Tai istorinis 2022 m. kontekstas ir reklaminis, užsakovo kontroliuojamas turinys, o ne dabartinė rinkos citata ar jūsų projektui galiojantis pasiūlymas.</p></article></div></section>
+<section><h2>Kas praktiškai keičia projekto kainą</h2><ul><li><strong>Korpuso ir fasadų medžiagos:</strong> plokščių rūšis, dekoras, dažymas, faneruotė, masyvas, briaunos ir nestandartinės detalės.</li><li><strong>Furnitūra ir vidaus įranga:</strong> lankstai, stalčiai, pakėlimo mechanizmai, kampų sprendimai, krepšiai ir jų kiekis.</li><li><strong>Stalviršis ir sienelė:</strong> medžiaga, storis, sujungimai, išpjovos, matavimas ir atskiras montavimas.</li><li><strong>Geometrija:</strong> aukštos spintos, salos, kampai, nišos, nelygios sienos, uždengimai ir priderinimas prie komunikacijų.</li><li><strong>Integruojama įranga:</strong> buitinės technikos modeliai, apšvietimas, elektros bei santechnikos taškai ir jų suderinimas.</li><li><strong>Paslaugų apimtis:</strong> matavimas, projektavimas, vizualizacijos, pristatymas, užnešimas, montavimas ir šiukšlių išvežimas.</li><li><strong>Logistika ir objektas:</strong> miestas, aukštas, privažiavimas, lifto galimybės, darbų laikas ir objekto parengtis.</li></ul></section>
+<section><h2>Ko gali nebūti pirminiame pasiūlyme</h2><p>Nespręskite iš bendros sumos. Paprašykite prie pasiūlymo pažymėti „įtraukta“, „neįtraukta“ arba „bus tikslinama“ bent šioms pozicijoms:</p><div class="checklist-block"><ul><li>galutinis matavimas ir projekto korekcijos po jo;</li><li>stalviršis, sienelė, jų šablonavimas, išpjovos ir montavimas;</li><li>plautuvė, maišytuvas, buitinė technika ir apšvietimas;</li><li>santechnikos, elektros, vėdinimo ar apdailos darbai;</li><li>senų baldų išardymas ir išvežimas;</li><li>pristatymas, užnešimas, parkavimas, kelionė už miesto ribų;</li><li>montavimas, tvirtinimo medžiagos, silikonas ir baigiamieji sureguliavimai.</li></ul></div></section>
+<section><h2>Kaip gauti palyginamą kainą</h2><p>Pridėkite patalpos matmenis, nuotraukas, pageidaujamą komplektaciją, medžiagų prioritetus, buitinės technikos modelius ir paslaugų ribas. Kandidatų galite ieškoti <a href="/baldai-pagal-uzsakyma/virtuves-baldai">virtuvės baldų kategorijoje</a> arba <a href="/baldai-pagal-uzsakyma/kaunas">Kauno miesto puslapyje</a>, o vienodą projekto santrauką pateikti <a href="/gauti-pasiulymus">projekto užklausos formoje</a>.</p></section>`,
+    faq: [
+      { question: 'Ar galima €/m rodiklį padauginti iš virtuvės ilgio?', answer: 'Ne. Šaltinių €/m rodiklis nėra viso projekto kaina ir neapibrėžia vienodos komplektacijos. Skirtingi spintelių tipai, medžiagos, furnitūra, stalviršis, paslaugos ir montavimo sąlygos gali iš esmės pakeisti pasiūlymą.' },
+      { question: 'Kodėl pateikti šaltiniai nesujungiami į vieną vidurkį?', answer: 'Jie yra skirtingo laiko ir pobūdžio: vienas yra dinaminė platformos nuoroda, kitas – istorinis reklaminis 2022 m. turinys. Jų sujungimas sudarytų klaidinantį tikslumo įspūdį.' },
+      { question: 'Ką paprašyti įrašyti į kainos pasiūlymą?', answer: 'Paprašykite išvardyti gaminius, medžiagas, furnitūrą, stalviršį, matavimą, projektavimą, pristatymą, užnešimą, montavimą, papildomus darbus, išimtis ir sąlygas, kurioms pasikeitus kaina būtų perskaičiuota.' },
+    ],
+  },
+  {
+    slug: 'virtuves-ir-imontuojamu-baldu-projekto-eiga',
+    title: 'Virtuvės ir įmontuojamų baldų projekto eiga',
+    summary: 'Tipinė etapų seka nuo matavimo iki montavimo ir kontrolinis sąrašas sprendimams, kurie veikia grafiką.',
+    metaDescription: 'Virtuvės ar įmontuojamų baldų projekto kontrolinis sąrašas: tipinė eiga nuo matavimo ir brėžinių iki gamybos, pristatymo bei montavimo.',
+    hubLabel: 'Projekto eiga',
+    featured: true,
+    content: `<section><h2>Tipinė seka, o ne fiksuotas kalendorius</h2><p>Skirtingi gamintojai etapus gali jungti ar vadinti kitaip. Svarbu, kad prieš gamybą būtų aišku, kas išmatuota, kas patvirtinta, kas dar sprendžiama ir nuo kurio įvykio skaičiuojamos sutartos datos.</p><p class="inline-warning"><strong>Fiksuotos trukmės nėra:</strong> datos priklauso nuo galutinio matavimo, jūsų sprendimų ir patvirtinimų, medžiagų prieinamumo, gamybos pajėgumo bei objekto parengties.</p></section>
+<section><h2>Etapai nuo matavimo iki montavimo</h2><ol class="stage-list"><li><div><h3>Pirminis matavimas ir objekto informacija</h3><p>Užfiksuojami pagrindiniai matmenys, sienos, kampai, grindys, komunikacijos, privažiavimas ir žinomi apribojimai. Pažymėkite, ar patalpa dar keisis.</p></div></li><li><div><h3>Poreikio ir komplektacijos aprašas</h3><p>Sutarkite funkcijas, laikymo poreikį, buitinę techniką, medžiagų kryptį, vidaus įrangą ir paslaugas, kurias turi apimti pasiūlymas.</p></div></li><li><div><h3>Planavimo variantas ir pirminis pasiūlymas</h3><p>Patikrinkite, kokiomis prielaidomis remiasi išdėstymas bei kaina ir kurios pozicijos dar preliminarios.</p></div></li><li><div><h3>Galutinis matavimas parengtame objekte</h3><p>Prieš gamybą patvirtinama faktinė geometrija. Iš anksto sutarkite, kada sienos, grindys, lubos ir komunikacijos laikomos pakankamai parengtos galutiniam matavimui.</p></div></li><li><div><h3>Brėžinių, medžiagų ir įrangos patvirtinimas</h3><p>Patvirtinkite matmenis, fasadų dalijimą, atidarymus, spalvas, kodus, furnitūrą, stalviršį, rankenėles, apšvietimą ir technikos modelius.</p></div></li><li><div><h3>Galutinė apimtis, kaina ir mokėjimo etapai</h3><p>Vienoje dokumentų versijoje turi sutapti brėžiniai, specifikacija, įtraukti darbai, išimtys, pakeitimų tvarka ir mokėjimo sąlygos.</p></div></li><li><div><h3>Gamyba ir sprendinių kontrolė</h3><p>Išsiaiškinkite, kas laikoma gamybos pradžia, kaip pranešama apie medžiagų ar sprendinių pasikeitimus ir kam reikia jūsų patvirtinimo.</p></div></li><li><div><h3>Pristatymo ir objekto parengties patikra</h3><p>Prieš atvežimą patvirtinkite datą, patekimą, užnešimą, laisvą darbo zoną, veikiančias komunikacijas ir kitų meistrų darbų suderinimą.</p></div></li><li><div><h3>Montavimas, patikra ir perdavimas</h3><p>Patikrinkite komplektaciją, reguliavimą, paviršius, tarpelius ir veikimą. Neužbaigtus ar taisytinus punktus užrašykite kartu su tolimesniais veiksmais.</p></div></li></ol></section>
+<section><h2>Sprendimai, kuriuos verta turėti prieš galutinį patvirtinimą</h2><div class="checklist-block"><ul><li>tikslūs įmontuojamos buitinės technikos modeliai ir montavimo schemos;</li><li>vandens, nuotekų, elektros, dujų ir vėdinimo taškų vietos;</li><li>grindų, sienų, lubų ir apdailos baigtumo būsena;</li><li>fasadų, korpusų, stalviršio, rankenėlių ir furnitūros kodai;</li><li>durų bei stalčių atidarymo trajektorijos, praėjimai ir gretimi elementai;</li><li>kas montuoja stalviršį, techniką, santechniką, apšvietimą ir apdailos detales;</li><li>kas turi būti objekte montavimo dieną ir kas priima darbus.</li></ul></div></section>
+<section><h2>Grafiką valdykite pagal prielaidas</h2><p>Vietoje vienos datos paprašykite etapų: kada reikalingi jūsų sprendimai, kada galimas galutinis matavimas, kada patvirtinama gamyba, koks pristatymo langas ir kada derinamas montavimas. Jei patalpa ar komplektacija pasikeičia, paprašykite atnaujintos grafiko versijos.</p></section>
+<section><h2>Raskite kandidatą ir paruoškite tą patį aprašą</h2><p>Pradėti galite nuo <a href="/baldai-pagal-uzsakyma/spintos-ir-imontuojami-baldai">spintų ir įmontuojamų baldų kategorijos</a> arba <a href="/baldai-pagal-uzsakyma/klaipeda">Klaipėdos miesto puslapio</a>. Projekto etapams svarbią informaciją surinkite <a href="/gauti-pasiulymus">projekto užklausos formoje</a>.</p></section>`,
+    faq: [
+      { question: 'Kada verta atlikti galutinį matavimą?', answer: 'Kai gamintojas gali patikimai įvertinti galutinę patalpos geometriją ir sutartas komunikacijas. Iš anksto suderinkite, kokie apdailos darbai turi būti užbaigti ir kas nutiks, jei po matavimo objektas pasikeis.' },
+      { question: 'Nuo kada skaičiuojamas gamybos terminas?', answer: 'Tai turi būti aiškiai sutarta pasiūlyme ar sutartyje. Pradžios įvykis gali būti siejamas su galutiniu matavimu, brėžinių ir medžiagų patvirtinimu, mokėjimu ar kitomis sąlygomis, todėl jo nereikėtų numanyti.' },
+      { question: 'Kas turi būti paruošta montavimo dieną?', answer: 'Patvirtinkite laisvą darbo zoną, patekimą ir užnešimą, grindų bei sienų būklę, komunikacijų vietas, elektros prieigą, kitų meistrų darbų suderinimą ir asmenį, kuris galės priimti sprendimus.' },
+    ],
+  },
+  {
+    slug: 'medziagos-sutartis-avansas-garantija',
+    title: 'Medžiagos, sutartis, avansas ir garantija: ką aptarti',
+    summary: 'Atsargus kontrolinis sąrašas Lietuvos pirkėjui prieš patvirtinant medžiagas, mokėjimą ir garantinio aptarnavimo tvarką.',
+    metaDescription: 'Praktiniai klausimai apie baldų medžiagų specifikaciją, sutartį, avansą ir garantiją Lietuvoje – be teisinių pažadų ar numanomų sąlygų.',
+    hubLabel: 'Dokumentai ir atsakomybės',
+    featured: true,
+    content: `<section><h2>Specifikacija turi leisti atpažinti pasirinktą medžiagą</h2><p>Bendriniai žodžiai, tokie kaip „kokybiška plokštė“ ar „gera furnitūra“, neleidžia patikrinti, ar pasiūlymai vienodi. Paprašykite identifikatorių, pagal kuriuos sprendinį būtų galima atsekti pasiūlyme, brėžiniuose ir priėmimo metu.</p><div class="checklist-block"><ul><li>gamintojas, kolekcija, dekoras ar spalva ir produkto kodas;</li><li>storis, paviršiaus tipas, briaunos ir matomos bei vidinės pusės;</li><li>fasadų, korpusų, nugarėlių, stalviršio ir sienelės medžiagos atskirai;</li><li>lankstų, stalčių, pakėlimo mechanizmų ir vidaus įrangos modeliai ar klasė;</li><li>patvirtintas pavyzdys ir kas nutinka, jei pasirinkta medžiaga tampa neprieinama;</li><li>priežiūros reikalavimai, kuriuos svarbu žinoti prieš pasirenkant.</li></ul></div></section>
+<section><h2>Ką praktiškai sutikrinti sutartyje ir jos prieduose</h2><p>Šis sąrašas nėra teisinė konsultacija. Jo paskirtis – padėti pastebėti trūkstamą projekto informaciją prieš pasirašant ar mokant.</p><ul><li>Kas tiksliai yra sutarties šalys ir ar jų duomenys sutampa su pasiūlymu, sąskaita bei mokėjimo gavėju?</li><li>Kuris brėžinių, specifikacijos ir pasiūlymo variantas yra galutinis, kaip pažymėta jo data ar versija?</li><li>Kokie gaminiai ir darbai įtraukti, o kas aiškiai neįtraukta?</li><li>Ar kaina nurodyta su taikomais mokesčiais ir kada ji gali būti perskaičiuota?</li><li>Nuo kokio įvykio skaičiuojami etapai ir kokių jūsų sprendimų reikia iki konkrečių datų?</li><li>Kaip raštu tvirtinami pakeitimai, papildomi darbai ir jų poveikis kainai bei grafikui?</li><li>Kaip vyks pristatymas, montavimas, darbų patikra, trūkumų užrašymas ir perdavimas?</li><li>Kokia sutarta komunikacijos bei dokumentų saugojimo tvarka?</li></ul></section>
+<section><h2>Prieš mokant avansą</h2><div class="checklist-block"><ul><li>patikrinkite, kam tiksliai mokate ir kokiu dokumentu mokėjimas pagrįstas;</li><li>paprašykite nurodyti avanso paskirtį ir su kokiu projekto etapu jis siejamas;</li><li>išsiaiškinkite likusių mokėjimų etapus ir kokį rezultatą patikrinsite prieš kiekvieną mokėjimą;</li><li>raštu aptarkite, kas nutinka projektui sustojus, pasikeitus apimčiai ar medžiagoms;</li><li>išsaugokite pasirašytą versiją, sąskaitas, mokėjimo patvirtinimus, brėžinius ir susirašinėjimą.</li></ul></div><p>Nenumanykite, kad visiems projektams taikoma vienoda avanso, grąžinimo ar atšaukimo tvarka. Vertinkite konkrečius dokumentus ir, jei sąlyga neaiški ar reikšminga, prieš mokėdami kreipkitės į kompetentingą teisininką ar oficialų vartotojų teisių informacijos šaltinį.</p></section>
+<section><h2>Klausimai apie garantiją ir aptarnavimą</h2><ul><li>Kokia raštu nurodyta garantijos trukmė ir nuo kokio įvykio ji skaičiuojama?</li><li>Kurioms gaminio dalims, furnitūrai ir darbams taikomos skirtingos sąlygos?</li><li>Kokios naudojimo, priežiūros ar aplinkos sąlygos nurodytos kaip svarbios?</li><li>Kur ir kokia forma pranešti apie problemą, kokius vaizdus ar dokumentus pridėti?</li><li>Kas organizuoja apžiūrą, dalių užsakymą, atvykimą ir pakartotinį reguliavimą?</li><li>Kaip užrašomi montavimo metu pastebėti trūkumai ir sutarti jų taisymo veiksmai?</li></ul><p class="inline-warning"><strong>Atsargi riba:</strong> gidas nežada konkretaus teisinio rezultato ir nepakeičia aktualių teisės aktų, sutarties ar individualios konsultacijos. Ginčo atveju remkitės dokumentais ir oficialia Lietuvos vartotojų teisių informacija.</p></section>
+<section><h2>Dokumentus susiekite su konkrečiu projektu</h2><p>Kandidatų galite ieškoti <a href="/baldai-pagal-uzsakyma/miegamojo-ir-vonios-baldai">miegamojo ir vonios baldų kategorijoje</a> arba <a href="/baldai-pagal-uzsakyma/siauliai">Šiaulių miesto puslapyje</a>. Projekto informaciją pradėkite struktūruoti <a href="/gauti-pasiulymus">projekto užklausos formoje</a>, o galutines sąlygas patvirtinkite tiesiogiai su pasirinktu kandidatu.</p></section>`,
+    faq: [
+      { question: 'Ar pakanka pasiūlyme įrašyti tik medžiagos rūšį?', answer: 'Dažnai ne. Palyginimui naudinga turėti gamintoją, kolekciją, dekorą ar spalvą, kodą, storį, paviršių ir informaciją, kur konkreti medžiaga naudojama.' },
+      { question: 'Ką patikrinti prieš mokant avansą?', answer: 'Sutikrinkite sutarties šalį ir mokėjimo gavėją, galutinę projekto versiją, avanso paskirtį, mokėjimo etapus, pakeitimų tvarką ir dokumentą, kuriuo mokėjimas pagrįstas.' },
+      { question: 'Ar šiame gide aprašytos garantijos sąlygos taikomos visiems?', answer: 'Ne. Gidas pateikia klausimus, o ne vienodas teisines sąlygas ar pažadus. Reikia skaityti konkrečią sutartį, garantijos dokumentus ir aktualią oficialią informaciją.' },
+    ],
+  },
+  {
     slug: 'trumpasis-sarasas',
     title: 'Kaip sudaryti pagrįstą trumpąjį sąrašą',
     summary: 'Atrankos seka, patikrinami kriterijai ir klausimai prieš priimant pasiūlymą.',
+    hubLabel: 'Trumpasis sąrašas',
     sections: [
       ['Pradėkite nuo savo projekto ribų', 'Užrašykite patalpą, matmenis, funkciją, norimas medžiagas, montavimo vietą ir sprendimus, kurių dar nepriėmėte. Taip kandidatus lyginsite pagal tą patį poreikį.'],
       ['Atskirkite viešą signalą nuo patvirtinto fakto', 'Katalogo įrašas yra pradžios taškas. Patikrinkite tapatybę, viešą kontaktą, ar kandidatas imasi tokio projekto, ir paprašykite aktualių darbų pavyzdžių.'],
@@ -30,6 +103,7 @@ const guideArticles = [
     slug: 'uzklausa-ir-pasiulymas',
     title: 'Kaip parengti užklausą ir palyginti pasiūlymus',
     summary: 'Ką aprašyti, kad gamintojai vertintų tą pačią apimtį, ir kas dažniausiai keičia kainą.',
+    hubLabel: 'Užklausa ir pasiūlymas',
     sections: [
       ['Vienoda užklausa sukuria palyginamus atsakymus', 'Visiems kandidatams siųskite tą pačią projekto santrauką, matmenis, nuotraukas, medžiagų prioritetus ir pageidaujamą paslaugų apimtį.'],
       ['Kainą lyginkite tik kartu su apimtimi', 'Mažesnė suma gali reikšti kitokias medžiagas, furnitūrą ar neįtrauktą pristatymą ir montavimą. Paprašykite aiškiai išvardyti prielaidas ir išimtis.'],
@@ -40,6 +114,7 @@ const guideArticles = [
     slug: 'terminai',
     title: 'Kaip prašyti realistiško darbų grafiko',
     summary: 'Terminą lemiantys kintamieji, etapai ir klausimai, padedantys valdyti neapibrėžtumą.',
+    hubLabel: 'Grafiko prielaidos',
     sections: [
       ['Vienas skaičius neparodo termino prielaidų', 'Grafiką gali keisti objekto parengtis, matavimas, sprendimų derinimas, medžiagų prieinamumas, gamybos eilė, logistika ir projekto pakeitimai.'],
       ['Prašykite grafiko etapais', 'Atskirai aptarkite galutinį matavimą, brėžinių ir medžiagų tvirtinimą, gamybos pradžią, pristatymo langą ir montavimą.'],
@@ -121,6 +196,20 @@ function faqSchema(items) {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: items.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
+  };
+}
+
+function articleSchema(article, path) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.metaDescription ?? article.summary,
+    inLanguage: 'lt-LT',
+    mainEntityOfPage: canonicalUrl(path),
+    dateModified: sourceDate,
+    author: { '@id': `${SITE_URL}/#organization` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
   };
 }
 
@@ -309,13 +398,24 @@ const guideFaq = [
   { question: 'Ar galima lyginti tik galutinę pasiūlymo kainą?', answer: 'Ne. Kainą reikia lyginti kartu su medžiagomis, furnitūra, matavimu, projektavimu, pristatymu, montavimu, terminais ir aiškiai nurodytomis išimtimis.' },
   { question: 'Kaip patikrinti siūlomą gamybos terminą?', answer: 'Paprašykite grafiko etapais ir raštu patvirtinkite, nuo kokio įvykio terminas skaičiuojamas, kokios jo prielaidos ir kas nutinka pasikeitus apimčiai.' },
 ];
-const guideHubBody = `${header('guide')}<main><section class="guide-intro"><div><p class="kicker">Pirkėjo gidas</p><h1>Sprendimą grįskite palyginama informacija, ne vien pažadu</h1></div><p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda susiaurinti pasirinkimą, pateikti vienodą užklausą ir aiškiai aptarti apimtį, kainą bei laiką.</p></section><section class="guide-hub"><div class="guide-hub-heading"><h2>Trys žingsniai nuo sąrašo iki palyginamo pasiūlymo</h2></div><ol class="guide-route-list">${guideArticles.map((article, index) => `<li><span class="route-number">${index + 1}</span><div><h3><a href="/gidas/${article.slug}">${escapeHtml(article.title)}</a></h3><p>${escapeHtml(article.summary)}</p></div></li>`).join('')}</ol></section>${faqHtml(guideFaq)}</main>${footer()}`;
-await writeRoute('/gidas', injectPage({ title: 'Pirkėjo gidas | Baldai pagal užsakymą Lietuvoje', description: 'Praktinis lietuviškas gidas: kaip atrinkti baldų gamintojus, parengti užklausą, palyginti pasiūlymų apimtį ir susitarti dėl realistiško grafiko.', path: '/gidas', body: guideHubBody, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Pirkėjo gidas', path: '/gidas' }]), faqSchema(guideFaq)] }));
+const featuredGuides = guideArticles.filter((article) => article.featured);
+const conciseGuides = guideArticles.filter((article) => !article.featured);
+const guideRouteList = (articles) => `<ul class="guide-route-list">${articles.map((article) => `<li><div><p>${escapeHtml(article.hubLabel)}</p><h3><a href="/gidas/${article.slug}/">${escapeHtml(article.title)}</a></h3><p>${escapeHtml(article.summary)}</p></div><span class="route-arrow" aria-hidden="true">→</span></li>`).join('')}</ul>`;
+const guideHubBody = `${header('guide')}<main><section class="guide-intro"><div><p class="kicker">Pirkėjo gidas</p><h1>Sprendimą grįskite palyginama informacija, ne vien pažadu</h1></div><p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda patikrinti atranką, suprasti kainos ribas, valdyti projekto etapus ir aiškiai aptarti dokumentus.</p></section><section class="guide-hub"><div class="guide-hub-heading"><h2>Keturi išsamūs gidai svarbiausiems sprendimams</h2><p>Pradėkite nuo klausimo, kurį turite dabar: kandidato patikra, kaina, projekto eiga arba susitarimo detalės.</p></div>${guideRouteList(featuredGuides)}</section><section class="guide-hub guide-hub--secondary"><div class="guide-hub-heading"><h2>Trumpi praktiniai straipsniai</h2><p>Anksčiau publikuoti gidai lieka pasiekiami tais pačiais adresais.</p></div>${guideRouteList(conciseGuides)}</section>${faqHtml(guideFaq)}</main>${footer()}`;
+await writeRoute('/gidas', injectPage({ title: 'Pirkėjo gidas | Baldai pagal užsakymą Lietuvoje', description: 'Lietuviški pirkėjo gidai apie baldų gamintojo pasirinkimą, realistiškas kainų nuorodas, projekto etapus, medžiagas, sutartį, avansą ir garantiją.', path: '/gidas', body: guideHubBody, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Pirkėjo gidas', path: '/gidas' }]), faqSchema(guideFaq)] }));
+
+function renderArticleFaq(items) {
+  if (!items?.length) return '';
+  return `<section class="article-faq" aria-labelledby="article-faq-title"><h2 id="article-faq-title">Dažniausi klausimai</h2><dl>${items.map((item) => `<div><dt>${escapeHtml(item.question)}</dt><dd>${escapeHtml(item.answer)}</dd></div>`).join('')}</dl></section>`;
+}
 
 for (const article of guideArticles) {
   const path = `/gidas/${article.slug}`;
-  const body = `${header('guide')}<main class="article-main"><a class="back-link" href="/gidas">← Grįžti į pirkėjo gidą</a><article class="guide-article"><header class="article-header"><p class="kicker">Pirkėjo gidas</p><h1>${escapeHtml(article.title)}</h1><p>${escapeHtml(article.summary)}</p></header><div class="guide-copy">${article.sections.map(([heading, copy]) => `<section><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(copy)}</p></section>`).join('')}</div></article></main>${footer()}`;
-  await writeRoute(path, injectPage({ title: `${article.title} | Pirkėjo gidas`, description: article.summary, path, type: 'article', body, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Pirkėjo gidas', path: '/gidas' }, { name: article.title, path }])] }));
+  const guideContent = article.content ?? article.sections.map(([heading, copy]) => `<section><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(copy)}</p></section>`).join('');
+  const body = `${header('guide')}<main class="article-main"><a class="back-link" href="/gidas">← Grįžti į pirkėjo gidą</a><article class="guide-article"><header class="article-header"><p class="kicker">Pirkėjo gidas</p><h1>${escapeHtml(article.title)}</h1><p>${escapeHtml(article.summary)}</p></header><div class="guide-copy">${guideContent}${renderArticleFaq(article.faq)}</div><nav class="article-next" aria-label="Toliau"><a href="/gidas">Visi pirkėjo gidai</a><a href="/gauti-pasiulymus">Parengti projekto užklausą →</a></nav></article></main>${footer()}`;
+  const structuredData = [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Pirkėjo gidas', path: '/gidas' }, { name: article.title, path }]), articleSchema(article, path)];
+  if (article.faq?.length) structuredData.push(faqSchema(article.faq));
+  await writeRoute(path, injectPage({ title: `${article.title} | Pirkėjo gidas`, description: article.metaDescription ?? article.summary, path, type: 'article', body, structuredData }));
 }
 
 const sitemapPaths = [
