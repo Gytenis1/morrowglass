@@ -1,8 +1,13 @@
 import './styles.css';
-import { initApp } from './app';
+import { pb } from './pocketbase';
+
+function render(root: HTMLElement) {
+  root.textContent = 'Baldai pagal užsakymą Lietuvoje';
+}
 
 const root = document.querySelector('#app');
-
 if (root instanceof HTMLElement) {
-  initApp(root);
+  render(root);
 }
+
+void pb;
