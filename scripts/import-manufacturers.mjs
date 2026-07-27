@@ -16,7 +16,7 @@ the local source file and does not require credentials or make network requests.
 
 const sourceUrl = new URL("../data/manufacturers.json", import.meta.url);
 const requiredFields = [
-  "slug", "trading_name", "source_identity", "location", "city", "region", "region_label",
+  "slug", "trading_name", "source_identity", "description_lt", "location", "city", "region", "region_label",
   "category_codes", "category_labels", "audience", "portfolio_status", "confidence",
   "confidence_evidence", "scope_evidence", "evidence_source_type", "source_urls",
   "source_artifact_url", "source_collection_date", "verification_status",
@@ -50,8 +50,13 @@ function validate(records) {
     if (slugs.has(record.slug)) throw new Error(`Duplicate slug: ${record.slug}`);
     slugs.add(record.slug);
     if (!regions.has(record.region)) throw new Error(`Invalid region for ${record.slug}: ${record.region}`);
-    if (!Array.isArray(record.category_codes) || !record.category_codes.length || record.category_codes.some((code) => !categoryCodes.has(code))) {
+    // An empty category set is intentional when public evidence only says "custom furniture"
+    // without naming a taxonomy product, material, or use. Guessing is not validation.
+    if (!Array.isArray(record.category_codes) || record.category_codes.some((code) => !categoryCodes.has(code))) {
       throw new Error(`Invalid category_codes for ${record.slug}`);
+    }
+    if (new Set(record.category_codes).size !== record.category_codes.length) {
+      throw new Error(`Duplicate category_codes for ${record.slug}`);
     }
     if (!Array.isArray(record.category_labels) || record.category_labels.length !== record.category_codes.length) {
       throw new Error(`category_labels mismatch for ${record.slug}`);
@@ -61,7 +66,11 @@ function validate(records) {
         throw new Error(`Unexpected label for category ${code} on ${record.slug}`);
       }
     });
+    if (typeof record.description_lt !== "string" || !record.description_lt.trim()) throw new Error(`Missing description_lt for ${record.slug}`);
     if (!Array.isArray(record.source_urls) || !record.source_urls.length) throw new Error(`Missing source_urls for ${record.slug}`);
+    if (!record.source_urls.some((url) => record.scope_evidence.includes(url))) {
+      throw new Error(`scope_evidence must cite a source_urls URL for ${record.slug}`);
+    }
     if (!/^\d{4}-\d{2}-\d{2}$/.test(record.source_collection_date)) throw new Error(`Invalid source date for ${record.slug}`);
     if (record.verification_status !== "nepatvirtinta") throw new Error(`Unexpected verification status for ${record.slug}`);
   }
@@ -86,8 +95,15 @@ if (process.argv.includes("--help") || process.argv.includes("-h")) {
 }
 
 const records = validate(JSON.parse(await readFile(sourceUrl, "utf8")));
+const populatedDescriptions = records.filter((record) => record.description_lt.trim()).length;
+const categorizedRecords = records.filter((record) => record.category_codes.length > 0).length;
+const categoryDistribution = [...categoryLabels.keys()]
+  .map((code) => `${code}:${records.filter((record) => record.category_codes.includes(code)).length}`)
+  .join(", ");
+const coverage = `Descriptions ${populatedDescriptions}/${records.length}; categories ${categorizedRecords}/${records.length} evidenced, ${records.length - categorizedRecords} intentionally empty; distribution ${categoryDistribution}.`;
 if (process.argv.includes("--validate")) {
   console.log(`Validated ${records.length} manufacturer records with ${new Set(records.map((record) => record.slug)).size} unique slugs.`);
+  console.log(coverage);
   process.exit(0);
 }
 
@@ -151,3 +167,4 @@ if (process.argv.includes("--prune")) {
 }
 
 console.log(`Imported ${records.length} manufacturers: ${created} created, ${updated} updated, ${deleted} deleted.`);
+console.log(coverage);

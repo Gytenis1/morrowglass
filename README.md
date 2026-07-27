@@ -39,7 +39,7 @@ Pradinio rinkinio šaltinių surinkimo data yra `2026-07-27`, o patikros būsena
 | `description_lt` | Trumpas lietuviškas aprašymas, jei pagrįstas šaltiniu. |
 | `location`, `city` | Šaltinyje nurodyta bazės vietovė; tai nėra paslaugų teritorija. |
 | `region`, `region_label` | Šaltinio regiono grupė ir jos pavadinimas. |
-| `category_codes`, `category_labels` | Autoritetingos kategorijų žymos ir lietuviški pavadinimai. |
+| `category_codes`, `category_labels` | Tik viešame šaltinyje aiškiai pagrįstos kategorijų žymos ir lietuviški pavadinimai; abu masyvai gali būti tušti. |
 | `website`, `public_contact_url` | Tik šaltinyje esantys vieši URL. |
 | `scope_evidence`, `confidence_evidence`, `evidence_source_type` | Šaltinio apimties ir įrodymo kontekstas. |
 | `source_urls`, `source_artifact_url`, `source_collection_date` | Kilmės nuorodos ir data. |
@@ -52,15 +52,16 @@ Kategorijų kodai: `K` – Virtuvės baldai; `W` – Spintos ir įmontuojami bal
 1. Redaguokite `data/manufacturers.json`.
 2. Naujam įrašui parinkite nekintantį ASCII `slug` (`mazosios-raides-ir-bruksneliai`). Taisant esamą įrašą nekeiskite slug be būtinos priežasties, nes jis yra viešo profilio URL.
 3. Išsaugokite originalų `source_identity`, viešus `source_urls`, `source_artifact_url`, tikrą `source_collection_date` ir neapibrėžtumą. Svetainę ar kontaktinį URL pildykite tik tada, kai jis yra viešame šaltinyje.
-4. Kategorijų kodų ir pavadinimų poras laikykite ta pačia tvarka ir naudokite tik aukščiau aprašytą taksonomiją.
-5. Paleiskite validaciją:
+4. Kategorijų kodų ir pavadinimų poras laikykite ta pačia tvarka ir naudokite tik aukščiau aprašytą taksonomiją. Žymą dėkite tik kai viešas šaltinis tiesiogiai įvardija atitinkamą gaminį, medžiagą ar paskirtį. Bendras teiginys apie nestandartinių baldų gamybą nepagrindžia konkrečios kategorijos, todėl tokiu atveju abu kategorijų masyvai teisėtai paliekami tušti.
+5. `scope_evidence` įrašykite trumpą šaltinio teiginį ar citatą ir tiesiogiai nurodykite bent vieną to įrašo `source_urls` URL.
+6. Paleiskite vietinę validaciją (ji taip pat pateikia aprašymų aprėptį, kategorizuotų ir sąmoningai nekategorizuotų įrašų skaičių bei pasiskirstymą pagal kodą):
 
    ```sh
    node scripts/import-manufacturers.mjs --validate
    ```
 
-6. Peržiūrėkite diff, paleiskite frontend build ir tik tada commitinkite.
-7. Atnaujinkite veikiančią backend kolekciją idempotentiniu importu:
+7. Peržiūrėkite diff, paleiskite `npm ci` bei `npm run build` ir tik tada commitinkite.
+8. Jei commit pridėjo naują migraciją, pirmiausia vieną kartą perleiskite backend su nauju atvaizdu ir patikrinkite, kad migracija pritaikyta. Tada atnaujinkite veikiančią kolekciją tuo pačiu autentifikuotu idempotentiniu importu:
 
    ```sh
    PB_URL="https://backend.example" \
@@ -69,7 +70,7 @@ Kategorijų kodai: `K` – Virtuvės baldai; `W` – Spintos ir įmontuojami bal
    node scripts/import-manufacturers.mjs
    ```
 
-Importuotojas ieško pagal unikalų `slug`, sukuria trūkstamus ir atnaujina esamus įrašus. Pakartotinis paleidimas nedubliuoja duomenų. `--validate` neatlieka tinklo užklausų.
+Importuotojas ieško pagal unikalų `slug`, sukuria trūkstamus ir atnaujina esamus įrašus. Pakartotinis paleidimas nedubliuoja duomenų, todėl po migracijos ar nutrūkusio operatoriaus paleidimo saugu vykdyti tą pačią komandą dar kartą. `--validate` neatlieka tinklo užklausų. Administratoriaus reikšmes perduokite tik proceso aplinkoje arba patikimoje paslapčių saugykloje; jų nerašykite į komandų failus, `.env` failus ar repo.
 
 ## Įrašo pašalinimas
 
