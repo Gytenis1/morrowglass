@@ -115,6 +115,14 @@ export function siteStructuredData(): Record<string, unknown>[] {
       url: SITE_URL,
       inLanguage: 'lt-LT',
       publisher: { '@id': `${SITE_URL}/#organization` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
     },
   ];
 }
@@ -171,6 +179,22 @@ export function faqStructuredData(items: { question: string; answer: string }[])
   };
 }
 
+export function itemListStructuredData(
+  records: Pick<SeoManufacturer, 'slug' | 'trading_name'>[],
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    numberOfItems: records.length,
+    itemListElement: records.map((record, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: canonicalUrl(`/gamintojas/${record.slug}`),
+      name: record.trading_name,
+    })),
+  };
+}
+
 export function setPageMetadata(metadata: PageMetadata): void {
   const pageUrl = canonicalUrl(metadata.path);
   document.title = metadata.title;
@@ -192,6 +216,14 @@ export function setPageMetadata(metadata: PageMetadata): void {
     return link;
   }) as HTMLLinkElement;
   canonical.href = pageUrl;
+
+  const alternate = ensureMeta('link[rel="alternate"][hreflang="lt"]', () => {
+    const link = document.createElement('link');
+    link.rel = 'alternate';
+    link.hreflang = 'lt';
+    return link;
+  }) as HTMLLinkElement;
+  alternate.href = pageUrl;
 
   document.head.querySelectorAll('script[data-seo-structured-data]').forEach((script) => script.remove());
   [...siteStructuredData(), ...(metadata.structuredData ?? [])].forEach((data) => {

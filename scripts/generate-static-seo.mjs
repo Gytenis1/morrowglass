@@ -179,7 +179,23 @@ function formatCount(count) {
 function siteStructuredData() {
   return [
     { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: SITE_URL },
-    { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE_URL}/#website`, name: SITE_NAME, url: SITE_URL, inLanguage: 'lt-LT', publisher: { '@id': `${SITE_URL}/#organization` } },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      inLanguage: 'lt-LT',
+      publisher: { '@id': `${SITE_URL}/#organization` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
   ];
 }
 
@@ -240,6 +256,7 @@ function injectPage({ title, description, path, body, type = 'website', robots =
   const head = `
     <meta name="robots" content="${robots}" />
     <link rel="canonical" href="${canonical}" />
+    <link rel="alternate" hreflang="lt" href="${canonical}" />
     <meta property="og:locale" content="lt_LT" />
     <meta property="og:site_name" content="${escapeHtml(SITE_NAME)}" />
     <meta property="og:type" content="${type}" />
@@ -482,7 +499,7 @@ const sitemapPaths = [
   ...landingConfig.categories.map((category) => `/baldai-pagal-uzsakyma/${category.slug}`),
   ...eligibleCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
 ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc>${path.startsWith('/gamintojas/') || path.startsWith('/baldai-pagal-uzsakyma/') ? `<lastmod>${sourceDate}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(sourceDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 

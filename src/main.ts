@@ -7,6 +7,7 @@ import {
   breadcrumbStructuredData,
   faqStructuredData,
   getEligibleCities,
+  itemListStructuredData,
   manufacturerStructuredData,
   setPageMetadata,
   slugifyLithuanian,
@@ -1098,6 +1099,7 @@ function renderLandingPage(slug: string): void {
         { name: title, path },
       ]),
       faqStructuredData(faq),
+      itemListStructuredData(records),
     ],
   });
 
