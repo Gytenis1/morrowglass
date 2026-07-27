@@ -1637,6 +1637,229 @@
     font-weight: 680;
   }
 
+  .owner-valuation {
+    display: grid;
+    gap: 2rem;
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+    border-block: 1px solid var(--line);
+  }
+
+  .owner-valuation-heading {
+    max-width: 68ch;
+  }
+
+  .owner-valuation-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+    align-items: start;
+    gap: clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .valuation-input-panel {
+    min-width: 0;
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .valuation-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .valuation-status {
+    min-height: 1.5em;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    font-weight: 680;
+  }
+
+  .valuation-status--error {
+    color: var(--critical);
+  }
+
+  .valuation-status--complete {
+    color: oklch(0.34 0.09 145);
+  }
+
+  .valuation-method {
+    border-block: 1px solid var(--line);
+  }
+
+  .valuation-method summary {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    color: var(--pine-strong);
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .valuation-method summary:hover {
+    color: var(--ink);
+  }
+
+  .valuation-method > div {
+    display: grid;
+    gap: 0.9rem;
+    padding-bottom: 1.2rem;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+  }
+
+  .valuation-method ul,
+  .valuation-explanation ul {
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.55rem;
+    list-style: square;
+  }
+
+  .valuation-method li::marker {
+    color: var(--moss);
+  }
+
+  .valuation-result-shell {
+    min-width: 0;
+  }
+
+  .valuation-placeholder,
+  .valuation-result {
+    min-height: 20rem;
+    padding: clamp(1.3rem, 4vw, 2.2rem);
+    border-radius: 12px;
+  }
+
+  .valuation-placeholder {
+    display: grid;
+    align-content: center;
+    gap: 0.8rem;
+    color: var(--ink-soft);
+    background: oklch(0.955 0.018 158);
+    border: 1px solid var(--line);
+  }
+
+  .valuation-placeholder h3 {
+    color: var(--ink);
+  }
+
+  .valuation-placeholder[hidden],
+  .valuation-result[hidden] {
+    display: none;
+  }
+
+  .valuation-result {
+    display: grid;
+    align-content: start;
+    gap: 1.35rem;
+    color: var(--surface);
+    background: var(--pine-strong);
+  }
+
+  .valuation-result-label {
+    color: oklch(0.92 0.035 158);
+    font-size: 0.84rem;
+    font-weight: 800;
+  }
+
+  .valuation-ev-range {
+    display: block;
+    color: var(--surface);
+    font-family: var(--display);
+    font-size: clamp(1.65rem, 4vw, 2.45rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    overflow-wrap: anywhere;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .valuation-result-facts {
+    display: grid;
+    border-top: 1px solid oklch(0.9 0.02 158 / 0.35);
+  }
+
+  .valuation-result-facts > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.7rem;
+    border-bottom: 1px solid oklch(0.9 0.02 158 / 0.35);
+  }
+
+  .valuation-result-facts dt {
+    color: oklch(0.92 0.035 158);
+    font-size: 0.82rem;
+  }
+
+  .valuation-result-facts dd {
+    text-align: right;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .valuation-explanation {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .valuation-explanation h3 {
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .valuation-explanation li {
+    color: oklch(0.94 0.014 158);
+    font-size: 0.88rem;
+  }
+
+  .valuation-explanation li::marker {
+    color: oklch(0.82 0.12 137);
+  }
+
+  .valuation-enquiry-link {
+    justify-self: start;
+    color: var(--pine-strong);
+    background: var(--surface);
+    border-color: var(--surface);
+  }
+
+  .valuation-enquiry-link:hover {
+    color: var(--surface);
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .valuation-evidence {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    font-size: 0.92rem;
+  }
+
+  .valuation-evidence > p {
+    padding: 1.15rem;
+    border-radius: 10px;
+  }
+
+  .valuation-evidence > p:first-child {
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+
+  .valuation-evidence a {
+    color: var(--pine-strong);
+    font-weight: 800;
+  }
+
+  .valuation-disclaimer {
+    color: var(--warning-ink);
+    background: var(--warning-bg);
+  }
+
   .owner-process {
     padding-block: clamp(2.5rem, 6vw, 5rem);
     border-block: 1px solid var(--line);
@@ -2203,9 +2426,14 @@
     .owner-hero,
     .owner-profile,
     .owner-process,
-    .owner-enquiry-layout {
+    .owner-enquiry-layout,
+    .owner-valuation-layout {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+
+    .valuation-evidence {
+      grid-template-columns: 1fr;
     }
 
     .request-guidance,
@@ -2384,7 +2612,8 @@
 
     .correction-form,
     .buyer-request-form,
-    .owner-enquiry-form {
+    .owner-enquiry-form,
+    .valuation-fields {
       grid-template-columns: 1fr;
     }
 
@@ -2427,6 +2656,20 @@
 
     .guide-copy {
       padding-inline: 1.1rem;
+    }
+
+    .valuation-result-facts > div {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .valuation-result-facts dd {
+      text-align: left;
+    }
+
+    .valuation-enquiry-link {
+      width: 100%;
     }
   }
 

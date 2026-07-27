@@ -63,6 +63,20 @@ type ProfileLandingLink = {
   label: string;
 };
 
+type ValuationResult = {
+  revenue: number;
+  ebitda: number;
+  ownerInvolvement: string;
+  customerConcentration: string;
+  orderBacklog: string;
+  evLow: number;
+  evHigh: number;
+  multipleLow: number;
+  multipleHigh: number;
+  adjustment: number;
+  explanations: string[];
+};
+
 const PAGE_SIZE = 50;
 const PROJECT_BRIEF_MIN_LENGTH = 40;
 const PROJECT_BRIEF_MAX_LENGTH = 3000;
@@ -81,6 +95,9 @@ const ownerRevenueBandOptions = ['Iki 1 mln. €', '1–3 mln. €', '3–10 mln
 const ownerEbitdaBandOptions = ['Iki 300 tūkst. €', '300–750 tūkst. €', '750 tūkst.–1,5 mln. €', '1,5–2,5 mln. €', 'Daugiau nei 2,5 mln. €', 'Nenoriu nurodyti'];
 const ownerSituationOptions = ['Paveldėjimo ar įpėdinystės planavimas', 'Savininko pasitraukimas iš kasdienės veiklos', 'Dalinio ar visiško pardavimo svarstymas', 'Kita tęstinumo situacija'];
 const ownerTimelineOptions = ['Per artimiausius 6 mėn.', 'Per 6–18 mėn.', 'Vėliau nei po 18 mėn.', 'Noriu pradėti be konkretaus termino'];
+const valuationOwnerInvolvementOptions = ['Kasdienis operacinis vaidmuo', 'Dalinė operacinė veikla', 'Nedalyvauja kasdienėje veikloje'];
+const valuationCustomerConcentrationOptions = ['Nė vienas klientas nesudaro daugiau nei 20 % pajamų', 'Didžiausias klientas sudaro 20–40 % pajamų', 'Didžiausias klientas sudaro daugiau nei 40 % pajamų'];
+const valuationOrderBacklogOptions = ['Mažiau nei 3 mėn.', '3–6 mėn.', 'Daugiau nei 6 mėn.'];
 const collator = new Intl.Collator('lt', { sensitivity: 'base' });
 const root = document.querySelector<HTMLElement>('#app');
 const guideArticles: GuideArticle[] = [
@@ -1462,6 +1479,77 @@ function renderOwnerPage(): void {
         </dl>
       </section>
 
+      <section class="owner-valuation" aria-labelledby="valuation-title">
+        <header class="owner-section-heading owner-valuation-heading">
+          <p class="kicker">Orientacinis scenarijus</p>
+          <h2 id="valuation-title">Įmonės vertės intervalo indikatorius</h2>
+          <p>Įveskite metines pajamas, normalizuotą EBITDA ir tris veiklos aplinkybes. Skaičiavimas atliekamas tik jūsų naršyklėje ir automatiškai atnaujinamas pakeitus bet kurį lauką.</p>
+        </header>
+        <div class="owner-valuation-layout">
+          <div class="valuation-input-panel" aria-describedby="valuation-method-summary">
+            <div class="valuation-fields">
+              <div class="form-field">
+                <label for="valuation-revenue">Metinės pajamos, €</label>
+                <input id="valuation-revenue" type="number" inputmode="numeric" min="1000" max="1000000000000" step="1000" placeholder="Pvz., 3 000 000" required>
+              </div>
+              <div class="form-field">
+                <label for="valuation-ebitda">Normalizuota metinė EBITDA, €</label>
+                <input id="valuation-ebitda" type="number" inputmode="numeric" min="1000" max="1000000000000" step="1000" placeholder="Pvz., 500 000" required>
+              </div>
+              <div class="form-field form-field--wide">
+                <label for="valuation-owner-involvement">Savininko darbas kasdienėje veikloje</label>
+                <div class="select-wrap"><select id="valuation-owner-involvement" required>${selectOptions(valuationOwnerInvolvementOptions, 'Pasirinkite savininko vaidmenį')}</select></div>
+              </div>
+              <div class="form-field form-field--wide">
+                <label for="valuation-customer-concentration">Klientų koncentracija</label>
+                <div class="select-wrap"><select id="valuation-customer-concentration" required>${selectOptions(valuationCustomerConcentrationOptions, 'Pasirinkite didžiausio kliento dalį')}</select></div>
+              </div>
+              <div class="form-field form-field--wide">
+                <label for="valuation-order-backlog">Patvirtintų užsakymų rezervas</label>
+                <div class="select-wrap"><select id="valuation-order-backlog" required>${selectOptions(valuationOrderBacklogOptions, 'Pasirinkite, keliems mėnesiams pakanka užsakymų')}</select></div>
+              </div>
+            </div>
+            <p class="valuation-status" id="valuation-status" role="status" aria-live="polite">Užpildykite visus penkis laukus — rezultatas pasirodys automatiškai.</p>
+            <details class="valuation-method">
+              <summary>Kaip tiksliai skaičiuojamas intervalas</summary>
+              <div id="valuation-method-summary">
+                <p>Pradinis scenarijus yra 2,00–4,00× normalizuotos EBITDA. Kiekvienas iš trijų situacijos veiksnių abi ribas pakeičia vienodai: −0,25×, 0 arba +0,25×. Galutinis daugiklis ribojamas iki 1,00–5,00×.</p>
+                <ul>
+                  <li><strong>Savininko vaidmuo:</strong> kasdienis −0,25×; dalinis 0; savininkas kasdien nedalyvauja +0,25×.</li>
+                  <li><strong>Klientų koncentracija:</strong> nė vienas klientas neviršija 20 % +0,25×; didžiausias sudaro 20–40 % 0; viršija 40 % −0,25×.</li>
+                  <li><strong>Užsakymų rezervas:</strong> mažiau nei 3 mėn. −0,25×; 3–6 mėn. 0; daugiau nei 6 mėn. +0,25×.</li>
+                </ul>
+                <p>Rodoma įmonės vertė (EV) visada lygi jūsų įvestai EBITDA, padaugintai iš rodomos apatinės arba viršutinės daugiklio ribos.</p>
+              </div>
+            </details>
+          </div>
+          <div class="valuation-result-shell">
+            <div class="valuation-placeholder" id="valuation-placeholder">
+              <h3>Rezultatas pasirodys čia</h3>
+              <p>Rodysime orientacinį įmonės vertės intervalą, pritaikytus daugiklius ir kiekvieno pasirinkto veiksnio įtaką.</p>
+            </div>
+            <div class="valuation-result" id="valuation-result" hidden aria-labelledby="valuation-result-title">
+              <p class="valuation-result-label" id="valuation-result-title">Orientacinė įmonės vertė (enterprise value)</p>
+              <output class="valuation-ev-range" id="valuation-ev-range"></output>
+              <dl class="valuation-result-facts">
+                <div><dt>Naudotas daugiklis</dt><dd id="valuation-multiple-range"></dd></div>
+                <div><dt>Pradinis scenarijus</dt><dd>2,00–4,00× EBITDA</dd></div>
+                <div><dt>Bendra korekcija</dt><dd id="valuation-adjustment"></dd></div>
+              </dl>
+              <div class="valuation-explanation">
+                <h3>Kas pakeitė intervalą</h3>
+                <ul id="valuation-factor-list"></ul>
+              </div>
+              <a class="primary-button valuation-enquiry-link" href="#owner-form-title">Tęsti konfidencialią užklausą</a>
+            </div>
+          </div>
+        </div>
+        <div class="valuation-evidence">
+          <p><strong>Tyrimo ribos.</strong> <a href="https://prod-agent-artifact-engine-production.up.railway.app/render/17738284-ba9a-430f-9574-5a390750fa7d" rel="noopener noreferrer">Ankstesnio viešo Baltijos tyrimo medžiaga</a> nenustato aiškaus, vien Baltijos mažoms ir vidutinėms įmonėms, kurių EBITDA mažesnė nei 5 mln. €, taikomo daugiklio. Todėl 2–4× bazė čia yra konservatyvus įsigijimo scenarijus, o ne stebėta rinkos taisyklė ar tyrimo patvirtintas rinkos daugiklis.</p>
+          <p class="valuation-disclaimer"><strong>Svarbu:</strong> šis skaičiavimas skirtas tik edukaciniam ir orientaciniam naudojimui. Tai nėra pasiūlymas pirkti ar parduoti, įsipareigojimas, profesionalus verslo vertinimas, finansinė, teisinė ar mokesčių konsultacija. Faktinė vertė gali iš esmės skirtis atlikus išsamų patikrinimą ir įvertinus skolą, grynuosius pinigus, apyvartinį kapitalą bei kitas aplinkybes.</p>
+        </div>
+      </section>
+
       <section class="owner-process" aria-labelledby="owner-process-title">
         <div class="owner-section-heading">
           <h2 id="owner-process-title">Kaip prasideda pirmas pokalbis</h2>
@@ -1527,6 +1615,15 @@ function renderOwnerPage(): void {
               <label for="owner-contact-phone">Telefono numeris (nebūtina)</label>
               <input id="owner-contact-phone" name="contact_phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40">
             </div>
+            <input type="hidden" name="valuation_revenue_eur" data-valuation-field disabled>
+            <input type="hidden" name="valuation_ebitda_eur" data-valuation-field disabled>
+            <input type="hidden" name="valuation_owner_involvement" data-valuation-field disabled>
+            <input type="hidden" name="valuation_customer_concentration" data-valuation-field disabled>
+            <input type="hidden" name="valuation_order_backlog" data-valuation-field disabled>
+            <input type="hidden" name="valuation_ev_low_eur" data-valuation-field disabled>
+            <input type="hidden" name="valuation_ev_high_eur" data-valuation-field disabled>
+            <input type="hidden" name="valuation_multiple_low" data-valuation-field disabled>
+            <input type="hidden" name="valuation_multiple_high" data-valuation-field disabled>
             <div class="honeypot-field" aria-hidden="true">
               <label for="owner-website">Interneto svetainė</label>
               <input id="owner-website" name="honeypot" type="text" autocomplete="off" tabindex="-1" maxlength="200">
@@ -1552,7 +1649,137 @@ function renderOwnerPage(): void {
   const message = document.querySelector<HTMLTextAreaElement>('#owner-message');
   const status = document.querySelector<HTMLElement>('#owner-enquiry-status');
   const submit = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
-  if (!form || !message || !status || !submit) return;
+  const valuationRevenue = document.querySelector<HTMLInputElement>('#valuation-revenue');
+  const valuationEbitda = document.querySelector<HTMLInputElement>('#valuation-ebitda');
+  const valuationOwnerInvolvement = document.querySelector<HTMLSelectElement>('#valuation-owner-involvement');
+  const valuationCustomerConcentration = document.querySelector<HTMLSelectElement>('#valuation-customer-concentration');
+  const valuationOrderBacklog = document.querySelector<HTMLSelectElement>('#valuation-order-backlog');
+  const valuationStatus = document.querySelector<HTMLElement>('#valuation-status');
+  const valuationPlaceholder = document.querySelector<HTMLElement>('#valuation-placeholder');
+  const valuationResult = document.querySelector<HTMLElement>('#valuation-result');
+  const valuationEvRange = document.querySelector<HTMLOutputElement>('#valuation-ev-range');
+  const valuationMultipleRange = document.querySelector<HTMLElement>('#valuation-multiple-range');
+  const valuationAdjustment = document.querySelector<HTMLElement>('#valuation-adjustment');
+  const valuationFactorList = document.querySelector<HTMLUListElement>('#valuation-factor-list');
+  if (!form || !message || !status || !submit || !valuationRevenue || !valuationEbitda || !valuationOwnerInvolvement || !valuationCustomerConcentration || !valuationOrderBacklog || !valuationStatus || !valuationPlaceholder || !valuationResult || !valuationEvRange || !valuationMultipleRange || !valuationAdjustment || !valuationFactorList) return;
+
+  let currentValuation: ValuationResult | null = null;
+  const currencyFormatter = new Intl.NumberFormat('lt-LT', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  });
+  const multipleFormatter = new Intl.NumberFormat('lt-LT', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
+  const syncValuationHiddenFields = (valuation: ValuationResult | null): void => {
+    const hiddenValues: Record<string, string> = valuation ? {
+      valuation_revenue_eur: String(valuation.revenue),
+      valuation_ebitda_eur: String(valuation.ebitda),
+      valuation_owner_involvement: valuation.ownerInvolvement,
+      valuation_customer_concentration: valuation.customerConcentration,
+      valuation_order_backlog: valuation.orderBacklog,
+      valuation_ev_low_eur: String(valuation.evLow),
+      valuation_ev_high_eur: String(valuation.evHigh),
+      valuation_multiple_low: String(valuation.multipleLow),
+      valuation_multiple_high: String(valuation.multipleHigh),
+    } : {};
+
+    form.querySelectorAll<HTMLInputElement>('input[data-valuation-field]').forEach((field) => {
+      field.disabled = !valuation;
+      field.value = valuation ? hiddenValues[field.name] ?? '' : '';
+    });
+  };
+
+  const clearValuation = (messageText: string, isError = false): void => {
+    currentValuation = null;
+    syncValuationHiddenFields(null);
+    valuationResult.hidden = true;
+    valuationPlaceholder.hidden = false;
+    valuationStatus.className = isError ? 'valuation-status valuation-status--error' : 'valuation-status';
+    valuationStatus.textContent = messageText;
+  };
+
+  const factorImpact = (kind: 'owner' | 'customers' | 'backlog', value: string): [number, string] => {
+    if (kind === 'owner') {
+      if (value === 'Kasdienis operacinis vaidmuo') return [-0.25, 'Kasdienis savininko operacinis vaidmuo mažina abi ribas 0,25×, nes veiklos perdavimas labiau priklauso nuo savininko.'];
+      if (value === 'Nedalyvauja kasdienėje veikloje') return [0.25, 'Savininko nedalyvavimas kasdienėje veikloje didina abi ribas 0,25×, nes veikla mažiau priklauso nuo jo kasdienio darbo.'];
+      return [0, 'Dalinis savininko dalyvavimas daugiklio nekeičia.'];
+    }
+    if (kind === 'customers') {
+      if (value === 'Nė vienas klientas nesudaro daugiau nei 20 % pajamų') return [0.25, 'Maža klientų koncentracija didina abi ribas 0,25×, nes pajamos mažiau priklauso nuo vieno kliento.'];
+      if (value === 'Didžiausias klientas sudaro daugiau nei 40 % pajamų') return [-0.25, 'Didžiausio kliento dalis virš 40 % mažina abi ribas 0,25× dėl didesnės pajamų koncentracijos rizikos.'];
+      return [0, '20–40 % didžiausio kliento dalis daugiklio nekeičia.'];
+    }
+    if (value === 'Mažiau nei 3 mėn.') return [-0.25, 'Mažesnis nei 3 mėn. užsakymų rezervas mažina abi ribas 0,25× dėl riboto artimiausių pajamų matomumo.'];
+    if (value === 'Daugiau nei 6 mėn.') return [0.25, 'Didesnis nei 6 mėn. užsakymų rezervas didina abi ribas 0,25× dėl geresnio artimiausių pajamų matomumo.'];
+    return [0, '3–6 mėn. užsakymų rezervas daugiklio nekeičia.'];
+  };
+
+  const updateValuation = (): void => {
+    valuationEbitda.setCustomValidity('');
+    const revenue = Number(valuationRevenue.value);
+    const ebitda = Number(valuationEbitda.value);
+    const selectionsComplete = Boolean(valuationOwnerInvolvement.value && valuationCustomerConcentration.value && valuationOrderBacklog.value);
+    const amountsComplete = valuationRevenue.value !== '' && valuationEbitda.value !== '';
+
+    if (!amountsComplete || !selectionsComplete) {
+      clearValuation('Užpildykite visus penkis laukus — rezultatas pasirodys automatiškai.');
+      return;
+    }
+    if (!valuationRevenue.validity.valid || !valuationEbitda.validity.valid || revenue < 1000 || ebitda < 1000) {
+      clearValuation('Įveskite teigiamas sumas pilnais tūkstančiais eurų, neviršijančias 1 trln. €.', true);
+      return;
+    }
+    if (ebitda > revenue) {
+      valuationEbitda.setCustomValidity('Normalizuota EBITDA negali būti didesnė už metines pajamas.');
+      clearValuation('Normalizuota EBITDA negali būti didesnė už metines pajamas. Patikrinkite abi sumas.', true);
+      return;
+    }
+
+    const ownerImpact = factorImpact('owner', valuationOwnerInvolvement.value);
+    const customerImpact = factorImpact('customers', valuationCustomerConcentration.value);
+    const backlogImpact = factorImpact('backlog', valuationOrderBacklog.value);
+    const adjustment = ownerImpact[0] + customerImpact[0] + backlogImpact[0];
+    const multipleLow = Math.min(5, Math.max(1, 2 + adjustment));
+    const multipleHigh = Math.min(5, Math.max(1, 4 + adjustment));
+    const nextValuation: ValuationResult = {
+      revenue,
+      ebitda,
+      ownerInvolvement: valuationOwnerInvolvement.value,
+      customerConcentration: valuationCustomerConcentration.value,
+      orderBacklog: valuationOrderBacklog.value,
+      evLow: ebitda * multipleLow,
+      evHigh: ebitda * multipleHigh,
+      multipleLow,
+      multipleHigh,
+      adjustment,
+      explanations: [ownerImpact[1], customerImpact[1], backlogImpact[1]],
+    };
+
+    currentValuation = nextValuation;
+    syncValuationHiddenFields(nextValuation);
+    valuationEvRange.textContent = `${currencyFormatter.format(nextValuation.evLow)} – ${currencyFormatter.format(nextValuation.evHigh)}`;
+    valuationMultipleRange.textContent = `${multipleFormatter.format(multipleLow)}–${multipleFormatter.format(multipleHigh)}× EBITDA`;
+    valuationAdjustment.textContent = `${adjustment > 0 ? '+' : adjustment < 0 ? '−' : ''}${multipleFormatter.format(Math.abs(adjustment))}×`;
+    valuationFactorList.replaceChildren(...nextValuation.explanations.map((explanation) => {
+      const item = document.createElement('li');
+      item.textContent = explanation;
+      return item;
+    }));
+    valuationPlaceholder.hidden = true;
+    valuationResult.hidden = false;
+    valuationStatus.className = 'valuation-status valuation-status--complete';
+    valuationStatus.textContent = `Rezultatas atnaujintas: orientacinė įmonės vertė ${currencyFormatter.format(nextValuation.evLow)} – ${currencyFormatter.format(nextValuation.evHigh)}.`;
+  };
+
+  [valuationRevenue, valuationEbitda, valuationOwnerInvolvement, valuationCustomerConcentration, valuationOrderBacklog].forEach((field) => {
+    field.addEventListener('input', updateValuation);
+    field.addEventListener('change', updateValuation);
+  });
+  updateValuation();
 
   const validateMessage = () => {
     const length = message.value.trim().length;
@@ -1582,6 +1809,17 @@ function renderOwnerPage(): void {
     try {
       const contactPhone = String(fields.get('contact_phone') ?? '').trim();
       const honeypot = String(fields.get('honeypot') ?? '').trim();
+      const valuationPayload = currentValuation ? {
+        valuation_revenue_eur: Number(fields.get('valuation_revenue_eur')),
+        valuation_ebitda_eur: Number(fields.get('valuation_ebitda_eur')),
+        valuation_owner_involvement: String(fields.get('valuation_owner_involvement')),
+        valuation_customer_concentration: String(fields.get('valuation_customer_concentration')),
+        valuation_order_backlog: String(fields.get('valuation_order_backlog')),
+        valuation_ev_low_eur: Number(fields.get('valuation_ev_low_eur')),
+        valuation_ev_high_eur: Number(fields.get('valuation_ev_high_eur')),
+        valuation_multiple_low: Number(fields.get('valuation_multiple_low')),
+        valuation_multiple_high: Number(fields.get('valuation_multiple_high')),
+      } : {};
       await pb.collection('owner_enquiries').create({
         company_name: String(fields.get('company_name') ?? '').trim(),
         city: String(fields.get('city') ?? '').trim(),
@@ -1594,10 +1832,12 @@ function renderOwnerPage(): void {
         contact_name: String(fields.get('contact_name') ?? '').trim(),
         contact_email: String(fields.get('contact_email') ?? '').trim(),
         ...(contactPhone ? { contact_phone: contactPhone } : {}),
+        ...valuationPayload,
         status: 'new',
         ...(honeypot ? { honeypot } : {}),
       });
       form.reset();
+      syncValuationHiddenFields(currentValuation);
       message.setCustomValidity('');
       status.className = 'form-status form-status--success';
       status.textContent = 'Užklausa gauta konfidencialiai peržiūrai. Ji nebuvo persiųsta kataloge esančioms įmonėms.';
