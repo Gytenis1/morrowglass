@@ -13,7 +13,7 @@ source file and does not require credentials or make network requests.`;
 
 const sourceUrl = new URL("../data/manufacturers.json", import.meta.url);
 const requiredFields = [
-  "slug", "trading_name", "source_identity", "location", "region", "region_label",
+  "slug", "trading_name", "source_identity", "location", "city", "region", "region_label",
   "category_codes", "category_labels", "audience", "portfolio_status", "confidence",
   "confidence_evidence", "scope_evidence", "evidence_source_type", "source_urls",
   "source_artifact_url", "source_collection_date", "verification_status",

@@ -22,6 +22,7 @@ The `manufacturers` collection contains PocketBase's system `id` field plus:
 | `legal_entity_known` | boolean | Whether a legal entity/form is identified in the source. |
 | `description_lt` | text, optional | Short Lithuanian description; blank where no separately rendered description was added. |
 | `location` | text | City or production-base text from the seed artifact. |
+| `city` | text | Named city/locality from the source location, preserving locality and district qualifiers. |
 | `region` | single-select | `vilnius-east-south`, `kaunas-north`, or `klaipeda-panevezys-west-central`. |
 | `region_label` | text | Lithuanian display label for the source grouping. |
 | `category_codes` | multi-select | Seed tags `K`, `W`, `BB`, `OC`, `HR`, `U`, `SW`, and `MM`. |
@@ -55,7 +56,7 @@ curl "$PB_URL/api/collections/manufacturers/records?page=1&perPage=30"
 
 [`pb_migrations/1785155000_create_manufacturers.js`](pb_migrations/1785155000_create_manufacturers.js) safely creates or extends the collection, restores the intended rules and compatible field settings, and creates the unique slug index only when absent. It loads `/pb/data/manufacturers.json`, which is copied by `Dockerfile.supernaut-pocketbase`.
 
-The migration validates the exact 121-row count and uses one SQLite multi-row `INSERT ... ON CONFLICT(slug) DO NOTHING` statement. It does not perform per-record boot-time saves. A retry or a partially populated collection fills missing slugs without duplicating existing records. The down migration intentionally does not delete persistent production data.
+The initial migration validates the exact 121-row count and uses one SQLite multi-row `INSERT ... ON CONFLICT(slug) DO NOTHING` statement. It does not perform per-record boot-time saves. A retry or a partially populated collection fills missing slugs without duplicating existing records. The later city migration adds the required `city` field when needed and bulk-populates existing rows from the same versioned dataset without changing access rules or other record data. Down migrations intentionally do not delete persistent production data.
 
 ## Correct and import data
 
