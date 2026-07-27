@@ -31,6 +31,15 @@ export type SeoManufacturer = {
 
 export const CATEGORY_LANDINGS = landingConfig.categories as CategoryLanding[];
 
+function canonicalPath(path: string): string {
+  if (path === '/') return path;
+  return `${path.replace(/\/+$/, '')}/`;
+}
+
+function canonicalUrl(path: string): string {
+  return `${SITE_URL}${canonicalPath(path)}`;
+}
+
 export type PageMetadata = {
   title: string;
   description: string;
@@ -118,7 +127,7 @@ export function breadcrumbStructuredData(items: { name: string; path: string }[]
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `${SITE_URL}${item.path}`,
+      item: canonicalUrl(item.path),
     })),
   };
 }
@@ -129,12 +138,13 @@ export function manufacturerStructuredData(record: SeoManufacturer): Record<stri
   const hasLocalBusinessFacts = Boolean(
     record.legal_entity_known && record.city?.trim() && (record.website?.trim() || record.public_contact_url?.trim()),
   );
+  const profileUrl = canonicalUrl(`/gamintojas/${record.slug}`);
   const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': hasLocalBusinessFacts ? 'LocalBusiness' : 'Organization',
-    '@id': `${SITE_URL}/gamintojas/${record.slug}#entity`,
+    '@id': `${profileUrl}#entity`,
     name,
-    url: `${SITE_URL}/gamintojas/${record.slug}`,
+    url: profileUrl,
   };
   if (record.legal_name?.trim()) data.legalName = record.legal_name.trim();
   if (description) data.description = description;
@@ -162,6 +172,7 @@ export function faqStructuredData(items: { question: string; answer: string }[])
 }
 
 export function setPageMetadata(metadata: PageMetadata): void {
+  const pageUrl = canonicalUrl(metadata.path);
   document.title = metadata.title;
   setNamedMeta('description', metadata.description);
   setNamedMeta('robots', metadata.robots ?? 'index, follow');
@@ -170,7 +181,7 @@ export function setPageMetadata(metadata: PageMetadata): void {
   setPropertyMeta('og:type', metadata.type ?? 'website');
   setPropertyMeta('og:title', metadata.title);
   setPropertyMeta('og:description', metadata.description);
-  setPropertyMeta('og:url', `${SITE_URL}${metadata.path}`);
+  setPropertyMeta('og:url', pageUrl);
   setNamedMeta('twitter:card', 'summary');
   setNamedMeta('twitter:title', metadata.title);
   setNamedMeta('twitter:description', metadata.description);
@@ -180,7 +191,7 @@ export function setPageMetadata(metadata: PageMetadata): void {
     link.rel = 'canonical';
     return link;
   }) as HTMLLinkElement;
-  canonical.href = `${SITE_URL}${metadata.path}`;
+  canonical.href = pageUrl;
 
   document.head.querySelectorAll('script[data-seo-structured-data]').forEach((script) => script.remove());
   [...siteStructuredData(), ...(metadata.structuredData ?? [])].forEach((data) => {

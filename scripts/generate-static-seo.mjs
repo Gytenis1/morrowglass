@@ -65,6 +65,15 @@ function safeJson(data) {
   return JSON.stringify(data).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
 }
 
+function canonicalPath(path) {
+  if (path === '/') return path;
+  return `${path.replace(/\/+$/, '')}/`;
+}
+
+function canonicalUrl(path) {
+  return `${SITE_URL}${canonicalPath(path)}`;
+}
+
 function publicUrl(value) {
   if (!value) return '';
   try {
@@ -103,7 +112,7 @@ function breadcrumb(items) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: `${SITE_URL}${item.path}` })),
+    itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: canonicalUrl(item.path) })),
   };
 }
 
@@ -118,12 +127,13 @@ function faqSchema(items) {
 function manufacturerSchema(record) {
   const description = record.description_lt?.trim() || record.scope_evidence?.trim();
   const hasLocalBusinessFacts = Boolean(record.legal_entity_known && record.city?.trim() && (record.website?.trim() || record.public_contact_url?.trim()));
+  const profileUrl = canonicalUrl(`/gamintojas/${record.slug}`);
   const data = {
     '@context': 'https://schema.org',
     '@type': hasLocalBusinessFacts ? 'LocalBusiness' : 'Organization',
-    '@id': `${SITE_URL}/gamintojas/${record.slug}#entity`,
+    '@id': `${profileUrl}#entity`,
     name: record.trading_name,
-    url: `${SITE_URL}/gamintojas/${record.slug}`,
+    url: profileUrl,
   };
   if (record.legal_name?.trim()) data.legalName = record.legal_name.trim();
   if (description) data.description = description;
@@ -133,7 +143,7 @@ function manufacturerSchema(record) {
 }
 
 function injectPage({ title, description, path, body, type = 'website', robots = 'index, follow', structuredData = [] }) {
-  const canonical = `${SITE_URL}${path}`;
+  const canonical = canonicalUrl(path);
   let html = baseHtml
     .replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(title)}</title>`)
     .replace(/<meta\s+name="description"\s+content="[\s\S]*?"\s*\/>/i, `<meta name="description" content="${escapeHtml(description)}" />`)
@@ -248,7 +258,7 @@ async function writeLanding({ slug, title, intro, buyerNote, records, related, f
     ? `${title}: ${records.length} viešais šaltiniais paremti nepatvirtinti Lietuvos gamintojų kandidatai, miestai ir atrankos gairės.`
     : `${title.replace('Baldų gamintojų kandidatai: ', '')}: ${records.length} viešuose šaltiniuose šiame mieste registruoti baldų gamintojų kandidatai. Sąrašas nėra paslaugų teritorijos ar kokybės garantija.`;
   const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">${kind === 'category' ? 'Baldų kategorija' : 'Šaltinyje nurodytas miestas'}</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section><section class="landing-related"><div class="section-heading"><h2>${kind === 'category' ? 'Susiję miestų puslapiai' : 'Šaltiniuose nurodytos veiklos kryptys'}</h2></div><ul class="landing-related-links">${related.map((item) => `<li><a href="/baldai-pagal-uzsakyma/${item.slug}">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}</ul></section><section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Prieš priimdami sprendimą patikrinkite tapatybę, pasiūlymo apimtį, kainą ir terminus.</p></div><div class="manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
-  const itemList = { '@context': 'https://schema.org', '@type': 'ItemList', numberOfItems: records.length, itemListElement: records.map((record, index) => ({ '@type': 'ListItem', position: index + 1, url: `${SITE_URL}/gamintojas/${record.slug}`, name: record.trading_name })) };
+  const itemList = { '@context': 'https://schema.org', '@type': 'ItemList', numberOfItems: records.length, itemListElement: records.map((record, index) => ({ '@type': 'ListItem', position: index + 1, url: canonicalUrl(`/gamintojas/${record.slug}`), name: record.trading_name })) };
   await writeRoute(path, injectPage({ title: `${title} | Gamintojų katalogas`, description, path, body, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }]), faqSchema(faq), itemList] }));
 }
 
@@ -286,7 +296,7 @@ const sitemapPaths = [
   ...landingConfig.categories.map((category) => `/baldai-pagal-uzsakyma/${category.slug}`),
   ...eligibleCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
 ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(`${SITE_URL}${path}`)}</loc>${path.startsWith('/gamintojas/') || path.startsWith('/baldai-pagal-uzsakyma/') ? `<lastmod>${sourceDate}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc>${path.startsWith('/gamintojas/') || path.startsWith('/baldai-pagal-uzsakyma/') ? `<lastmod>${sourceDate}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
