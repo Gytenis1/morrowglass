@@ -4213,5 +4213,2533 @@
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
     "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "rejben",
+    "legal_name": "UAB Rejben",
+    "trading_name": "Rejben",
+    "source_identity": "UAB Rejben — Rejben",
+    "legal_entity_known": true,
+    "description_lt": "Rejben viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Rejben pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mano-baldita",
+    "legal_name": "MB Mano baldita",
+    "trading_name": "Mano baldita",
+    "source_identity": "MB Mano baldita — Mano baldita",
+    "legal_entity_known": true,
+    "description_lt": "Mano baldita viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše MB Mano baldita pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "rinkos-banga",
+    "legal_name": "UAB Rinkos banga",
+    "trading_name": "Rinkos banga",
+    "source_identity": "UAB Rinkos banga — Rinkos banga",
+    "legal_entity_known": true,
+    "description_lt": "Rinkos banga viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Rinkos banga pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "farbina",
+    "legal_name": "UAB Farbina",
+    "trading_name": "Farbina",
+    "source_identity": "UAB Farbina — Farbina",
+    "legal_entity_known": true,
+    "description_lt": "Farbina viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Farbina pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ralko",
+    "legal_name": "UAB Ralko",
+    "trading_name": "Ralko",
+    "source_identity": "UAB Ralko — Ralko",
+    "legal_entity_known": true,
+    "description_lt": "Ralko viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Ralko pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "medzio-spalvos",
+    "legal_name": "MB Medžio spalvos",
+    "trading_name": "Medžio spalvos",
+    "source_identity": "MB Medžio spalvos — Medžio spalvos",
+    "legal_entity_known": true,
+    "description_lt": "Medžio spalvos viešame Info.lt Riešė baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Riešė",
+    "city": "Riešė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Riešė baldų gamybos sąraše MB Medžio spalvos pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Riešė sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-vizija",
+    "legal_name": "MB Baldų vizija",
+    "trading_name": "Baldų vizija",
+    "source_identity": "MB Baldų vizija — Baldų vizija",
+    "legal_entity_known": true,
+    "description_lt": "Baldų vizija viešame Info.lt Riešė baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Riešė",
+    "city": "Riešė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Riešė baldų gamybos sąraše MB Baldų vizija pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Riešė sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "auseda",
+    "legal_name": "MB Auseda",
+    "trading_name": "Auseda",
+    "source_identity": "MB Auseda — Auseda",
+    "legal_entity_known": true,
+    "description_lt": "Auseda viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše MB Auseda pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "janer",
+    "legal_name": "MB Janer",
+    "trading_name": "Janer",
+    "source_identity": "MB Janer — Janer",
+    "legal_entity_known": true,
+    "description_lt": "Janer viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše MB Janer pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kybo",
+    "legal_name": "MB Kybo",
+    "trading_name": "Kybo",
+    "source_identity": "MB Kybo — Kybo",
+    "legal_entity_known": true,
+    "description_lt": "Kybo viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše MB Kybo pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldaila",
+    "legal_name": "MB Baldaila",
+    "trading_name": "Baldaila",
+    "source_identity": "MB Baldaila — Baldaila",
+    "legal_entity_known": true,
+    "description_lt": "Baldaila viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše MB Baldaila pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "drimstoga",
+    "legal_name": "UAB Drimstoga",
+    "trading_name": "Drimstoga",
+    "source_identity": "UAB Drimstoga — Drimstoga",
+    "legal_entity_known": true,
+    "description_lt": "Drimstoga viešame Info.lt Nemenčinė baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Nemenčinė",
+    "city": "Nemenčinė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Nemenčinė baldų gamybos sąraše UAB Drimstoga pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Nemenčinė sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "suduvos-baldai",
+    "legal_name": "UAB Sūduvos baldai",
+    "trading_name": "Sūduvos baldai",
+    "source_identity": "UAB Sūduvos baldai — Sūduvos baldai",
+    "legal_entity_known": true,
+    "description_lt": "Sūduvos baldai viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Sūduvos baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sedes-regia",
+    "legal_name": "UAB Sedes Regia",
+    "trading_name": "Sedes Regia",
+    "source_identity": "UAB Sedes Regia — Sedes Regia",
+    "legal_entity_known": true,
+    "description_lt": "Sedes Regia viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Sedes Regia pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dalisima",
+    "legal_name": "UAB Dalisima",
+    "trading_name": "Dalisima",
+    "source_identity": "UAB Dalisima — Dalisima",
+    "legal_entity_known": true,
+    "description_lt": "Dalisima viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Dalisima pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "interjero-ateleje",
+    "legal_name": "UAB Interjero ateljė",
+    "trading_name": "Interjero ateljė",
+    "source_identity": "UAB Interjero ateljė — Interjero ateljė",
+    "legal_entity_known": true,
+    "description_lt": "Interjero ateljė viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Interjero ateljė pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "balticum-baldai",
+    "legal_name": "UAB Balticum baldai",
+    "trading_name": "Balticum baldai",
+    "source_identity": "UAB Balticum baldai — Balticum baldai",
+    "legal_entity_known": true,
+    "description_lt": "Balticum baldai viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Balticum baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "emira",
+    "legal_name": "UAB Emira",
+    "trading_name": "Emira",
+    "source_identity": "UAB Emira — Emira",
+    "legal_entity_known": true,
+    "description_lt": "Emira viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Emira pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "asdona",
+    "legal_name": "UAB Asdona",
+    "trading_name": "Asdona",
+    "source_identity": "UAB Asdona — Asdona",
+    "legal_entity_known": true,
+    "description_lt": "Asdona viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Asdona pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tavo-baldai",
+    "legal_name": "UAB Tavo baldai",
+    "trading_name": "Tavo baldai",
+    "source_identity": "UAB Tavo baldai — Tavo baldai",
+    "legal_entity_known": true,
+    "description_lt": "Tavo baldai viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Tavo baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "privee",
+    "legal_name": "UAB Privee",
+    "trading_name": "Privee",
+    "source_identity": "UAB Privee — Privee",
+    "legal_entity_known": true,
+    "description_lt": "Privee viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Privee pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "nimava",
+    "legal_name": "UAB Nimava",
+    "trading_name": "Nimava",
+    "source_identity": "UAB Nimava — Nimava",
+    "legal_entity_known": true,
+    "description_lt": "Nimava viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Nimava pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "justura",
+    "legal_name": "UAB Justura",
+    "trading_name": "Justura",
+    "source_identity": "UAB Justura — Justura",
+    "legal_entity_known": true,
+    "description_lt": "Justura viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Justura pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "archiformus",
+    "legal_name": "UAB Archiformus",
+    "trading_name": "Archiformus",
+    "source_identity": "UAB Archiformus — Archiformus",
+    "legal_entity_known": true,
+    "description_lt": "Archiformus viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše UAB Archiformus pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "miltra",
+    "legal_name": "MB Miltra",
+    "trading_name": "Miltra",
+    "source_identity": "MB Miltra — Miltra",
+    "legal_entity_known": true,
+    "description_lt": "Miltra viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše MB Miltra pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "politechnologiju-centras",
+    "legal_name": "VšĮ Politechnologijų centras",
+    "trading_name": "Politechnologijų centras",
+    "source_identity": "VšĮ Politechnologijų centras — Politechnologijų centras",
+    "legal_entity_known": true,
+    "description_lt": "Politechnologijų centras viešame Info.lt Skaidiškės baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Skaidiškės",
+    "city": "Skaidiškės",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Skaidiškės baldų gamybos sąraše VšĮ Politechnologijų centras pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Skaidiškės sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "eight-interjerai",
+    "legal_name": "MB 8 interjerai",
+    "trading_name": "8 interjerai",
+    "source_identity": "MB 8 interjerai — 8 interjerai",
+    "legal_entity_known": true,
+    "description_lt": "8 interjerai viešame Info.lt Vilnius baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Vilnius",
+    "city": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Vilnius baldų gamybos sąraše MB 8 interjerai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "scope_evidence": "Viešame Info.lt Vilnius sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ebasibaldai",
+    "legal_name": "UAB Ebasibaldai",
+    "trading_name": "Ebasibaldai",
+    "source_identity": "UAB Ebasibaldai — Ebasibaldai",
+    "legal_entity_known": true,
+    "description_lt": "Ebasibaldai viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Ebasibaldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sdline",
+    "legal_name": "MB SDLine",
+    "trading_name": "SDLine",
+    "source_identity": "MB SDLine — SDLine",
+    "legal_entity_known": true,
+    "description_lt": "SDLine viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše MB SDLine pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "pupulis",
+    "legal_name": "UAB Pupulis",
+    "trading_name": "Pupulis",
+    "source_identity": "UAB Pupulis — Pupulis",
+    "legal_entity_known": true,
+    "description_lt": "Pupulis viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Pupulis pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "uostamiescio-baldai",
+    "legal_name": "MB Uostamiesčio baldai",
+    "trading_name": "Uostamiesčio baldai",
+    "source_identity": "MB Uostamiesčio baldai — Uostamiesčio baldai",
+    "legal_entity_known": true,
+    "description_lt": "Uostamiesčio baldai viešame Info.lt Radailiai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Radailiai",
+    "city": "Radailiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Klaip%C4%97da",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Klaip%C4%97da",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Radailiai baldų gamybos sąraše MB Uostamiesčio baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Klaip%C4%97da",
+    "scope_evidence": "Viešame Info.lt Radailiai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Klaip%C4%97da",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Klaip%C4%97da"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Klaip%C4%97da",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "girkasas",
+    "legal_name": "UAB Girkasas",
+    "trading_name": "Girkasas",
+    "source_identity": "UAB Girkasas — Girkasas",
+    "legal_entity_known": true,
+    "description_lt": "Girkasas viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Girkasas pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dailsa",
+    "legal_name": "UAB Dailsa",
+    "trading_name": "Dailsa",
+    "source_identity": "UAB Dailsa — Dailsa",
+    "legal_entity_known": true,
+    "description_lt": "Dailsa viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Dailsa pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tegrana",
+    "legal_name": "UAB Tegrana",
+    "trading_name": "Tegrana",
+    "source_identity": "UAB Tegrana — Tegrana",
+    "legal_entity_known": true,
+    "description_lt": "Tegrana viešame Info.lt Noreikiškės baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Noreikiškės",
+    "city": "Noreikiškės",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Noreikiškės baldų gamybos sąraše UAB Tegrana pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Noreikiškės sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldai-sau",
+    "legal_name": "UAB Baldai sau",
+    "trading_name": "Baldai sau",
+    "source_identity": "UAB Baldai sau — Baldai sau",
+    "legal_entity_known": true,
+    "description_lt": "Baldai sau viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Baldai sau pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "girios-medis",
+    "legal_name": "UAB Girios medis",
+    "trading_name": "Girios medis",
+    "source_identity": "UAB Girios medis — Girios medis",
+    "legal_entity_known": true,
+    "description_lt": "Girios medis viešame Info.lt Pypliai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Pypliai",
+    "city": "Pypliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Pypliai baldų gamybos sąraše UAB Girios medis pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Pypliai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "uosedma",
+    "legal_name": "UAB Uosedma",
+    "trading_name": "Uosedma",
+    "source_identity": "UAB Uosedma — Uosedma",
+    "legal_entity_known": true,
+    "description_lt": "Uosedma viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Uosedma pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "minshape",
+    "legal_name": "M. Jakučionio IVV Minshape",
+    "trading_name": "Minshape",
+    "source_identity": "M. Jakučionio IVV Minshape — Minshape",
+    "legal_entity_known": true,
+    "description_lt": "Minshape viešame Info.lt Lapės baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Lapės",
+    "city": "Lapės",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Lapės baldų gamybos sąraše M. Jakučionio IVV Minshape pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Lapės sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "a2a-lt",
+    "legal_name": "UAB A2A LT",
+    "trading_name": "A2A LT",
+    "source_identity": "UAB A2A LT — A2A LT",
+    "legal_entity_known": true,
+    "description_lt": "A2A LT viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB A2A LT pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "juodas-taskas",
+    "legal_name": "UAB Juodas taškas",
+    "trading_name": "Juodas taškas",
+    "source_identity": "UAB Juodas taškas — Juodas taškas",
+    "legal_entity_known": true,
+    "description_lt": "Juodas taškas viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Juodas taškas pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "nexa-lt",
+    "legal_name": "UAB Nexa LT",
+    "trading_name": "Nexa LT",
+    "source_identity": "UAB Nexa LT — Nexa LT",
+    "legal_entity_known": true,
+    "description_lt": "Nexa LT viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Nexa LT pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "eineros-baldai",
+    "legal_name": "MB Eineros baldai",
+    "trading_name": "Eineros baldai",
+    "source_identity": "MB Eineros baldai — Eineros baldai",
+    "legal_entity_known": true,
+    "description_lt": "Eineros baldai viešame Info.lt Karmėlava baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Karmėlava",
+    "city": "Karmėlava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Karmėlava baldų gamybos sąraše MB Eineros baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Karmėlava sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "elniaragis",
+    "legal_name": "IĮ Elniaragis",
+    "trading_name": "Elniaragis",
+    "source_identity": "IĮ Elniaragis — Elniaragis",
+    "legal_entity_known": true,
+    "description_lt": "Elniaragis viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše IĮ Elniaragis pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ovalus-kampai",
+    "legal_name": "MB Ovalūs kampai",
+    "trading_name": "Ovalūs kampai",
+    "source_identity": "MB Ovalūs kampai — Ovalūs kampai",
+    "legal_entity_known": true,
+    "description_lt": "Ovalūs kampai viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše MB Ovalūs kampai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "toto-baldai",
+    "legal_name": "MB Toto baldai",
+    "trading_name": "Toto baldai",
+    "source_identity": "MB Toto baldai — Toto baldai",
+    "legal_entity_known": true,
+    "description_lt": "Toto baldai viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše MB Toto baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-kalnas",
+    "legal_name": "MB Baldų kalnas",
+    "trading_name": "Baldų kalnas",
+    "source_identity": "MB Baldų kalnas — Baldų kalnas",
+    "legal_entity_known": true,
+    "description_lt": "Baldų kalnas viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše MB Baldų kalnas pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "resize-design",
+    "legal_name": "UAB Resize Design",
+    "trading_name": "Resize Design",
+    "source_identity": "UAB Resize Design — Resize Design",
+    "legal_entity_known": true,
+    "description_lt": "Resize Design viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Resize Design pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldrama",
+    "legal_name": "MB Baldrama",
+    "trading_name": "Baldrama",
+    "source_identity": "MB Baldrama — Baldrama",
+    "legal_entity_known": true,
+    "description_lt": "Baldrama viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše MB Baldrama pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sapelli",
+    "legal_name": "UAB Sapelli",
+    "trading_name": "Sapelli",
+    "source_identity": "UAB Sapelli — Sapelli",
+    "legal_entity_known": true,
+    "description_lt": "Sapelli viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Sapelli pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "madamedi",
+    "legal_name": "MB Madamedi",
+    "trading_name": "Madamedi",
+    "source_identity": "MB Madamedi — Madamedi",
+    "legal_entity_known": true,
+    "description_lt": "Madamedi viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše MB Madamedi pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "deivio-baldai",
+    "legal_name": "MB Deivio baldai",
+    "trading_name": "Deivio baldai",
+    "source_identity": "MB Deivio baldai — Deivio baldai",
+    "legal_entity_known": true,
+    "description_lt": "Deivio baldai viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše MB Deivio baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "esme-furniture",
+    "legal_name": "UAB Esme furniture",
+    "trading_name": "Esme furniture",
+    "source_identity": "UAB Esme furniture — Esme furniture",
+    "legal_entity_known": true,
+    "description_lt": "Esme furniture viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše UAB Esme furniture pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "solid-furniture",
+    "legal_name": "MB Solid Furniture",
+    "trading_name": "Solid Furniture",
+    "source_identity": "MB Solid Furniture — Solid Furniture",
+    "legal_entity_known": true,
+    "description_lt": "Solid Furniture viešame Info.lt Narsiečiai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Narsiečiai",
+    "city": "Narsiečiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Narsiečiai baldų gamybos sąraše MB Solid Furniture pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Narsiečiai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "decus-furniture",
+    "legal_name": "MB Decus furniture",
+    "trading_name": "Decus furniture",
+    "source_identity": "MB Decus furniture — Decus furniture",
+    "legal_entity_known": true,
+    "description_lt": "Decus furniture viešame Info.lt Domeikava baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Domeikava",
+    "city": "Domeikava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Domeikava baldų gamybos sąraše MB Decus furniture pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Domeikava sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-tema",
+    "legal_name": "MB Baldų tema",
+    "trading_name": "Baldų tema",
+    "source_identity": "MB Baldų tema — Baldų tema",
+    "legal_entity_known": true,
+    "description_lt": "Baldų tema viešame Info.lt Kaunas baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kaunas baldų gamybos sąraše MB Baldų tema pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "scope_evidence": "Viešame Info.lt Kaunas sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "aretida",
+    "legal_name": "UAB Aretida",
+    "trading_name": "Aretida",
+    "source_identity": "UAB Aretida — Aretida",
+    "legal_entity_known": true,
+    "description_lt": "Aretida viešame Info.lt Šiauliai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Šiauliai baldų gamybos sąraše UAB Aretida pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Šiauliai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "domo-verslas",
+    "legal_name": "UAB Domo verslas",
+    "trading_name": "Domo verslas",
+    "source_identity": "UAB Domo verslas — Domo verslas",
+    "legal_entity_known": true,
+    "description_lt": "Domo verslas viešame Info.lt Šiauliai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Šiauliai baldų gamybos sąraše UAB Domo verslas pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Šiauliai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldingas",
+    "legal_name": "UAB Baldingas",
+    "trading_name": "Baldingas",
+    "source_identity": "UAB Baldingas — Baldingas",
+    "legal_entity_known": true,
+    "description_lt": "Baldingas viešame Info.lt Pakapė baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Pakapė",
+    "city": "Pakapė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Pakapė baldų gamybos sąraše UAB Baldingas pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Pakapė sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "nv-cnc-projektai",
+    "legal_name": "UAB NV CNC Projektai",
+    "trading_name": "NV CNC Projektai",
+    "source_identity": "UAB NV CNC Projektai — NV CNC Projektai",
+    "legal_entity_known": true,
+    "description_lt": "NV CNC Projektai viešame Info.lt Šiauliai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Šiauliai baldų gamybos sąraše UAB NV CNC Projektai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Šiauliai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "solidus-furniture",
+    "legal_name": "UAB Solidus furniture",
+    "trading_name": "Solidus furniture",
+    "source_identity": "UAB Solidus furniture — Solidus furniture",
+    "legal_entity_known": true,
+    "description_lt": "Solidus furniture viešame Info.lt Ginkūnai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Ginkūnai",
+    "city": "Ginkūnai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Ginkūnai baldų gamybos sąraše UAB Solidus furniture pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Ginkūnai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldai-saldziam-miegui",
+    "legal_name": "UAB Baldai saldžiam miegui",
+    "trading_name": "Baldai saldžiam miegui",
+    "source_identity": "UAB Baldai saldžiam miegui — Baldai saldžiam miegui",
+    "legal_entity_known": true,
+    "description_lt": "Baldai saldžiam miegui viešame Info.lt Šiauliai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Šiauliai baldų gamybos sąraše UAB Baldai saldžiam miegui pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Šiauliai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "remigijaus-baldai",
+    "legal_name": "Remigijaus baldai",
+    "trading_name": "Remigijaus baldai",
+    "source_identity": "Remigijaus baldai — Remigijaus baldai",
+    "legal_entity_known": true,
+    "description_lt": "Remigijaus baldai viešame Info.lt Šiauliai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Šiauliai baldų gamybos sąraše Remigijaus baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Šiauliai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldini",
+    "legal_name": "MB Baldini",
+    "trading_name": "Baldini",
+    "source_identity": "MB Baldini — Baldini",
+    "legal_entity_known": true,
+    "description_lt": "Baldini viešame Info.lt Šiauliai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Šiauliai baldų gamybos sąraše MB Baldini pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Šiauliai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "minkstas-ir-minkstesnis",
+    "legal_name": "MB Minkštas ir minkštesnis",
+    "trading_name": "Minkštas ir minkštesnis",
+    "source_identity": "MB Minkštas ir minkštesnis — Minkštas ir minkštesnis",
+    "legal_entity_known": true,
+    "description_lt": "Minkštas ir minkštesnis viešame Info.lt Voveriškiai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Voveriškiai",
+    "city": "Voveriškiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Voveriškiai baldų gamybos sąraše MB Minkštas ir minkštesnis pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Voveriškiai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "almyros-baldai",
+    "legal_name": "A. Pakarnio įmonė Almyros baldai",
+    "trading_name": "Almyros baldai",
+    "source_identity": "A. Pakarnio įmonė Almyros baldai — Almyros baldai",
+    "legal_entity_known": true,
+    "description_lt": "Almyros baldai viešame Info.lt Šiauliai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Šiauliai baldų gamybos sąraše A. Pakarnio įmonė Almyros baldai pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Šiauliai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldinta",
+    "legal_name": "MB Baldinta",
+    "trading_name": "Baldinta",
+    "source_identity": "MB Baldinta — Baldinta",
+    "legal_entity_known": true,
+    "description_lt": "Baldinta viešame Info.lt Raudėnai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Raudėnai",
+    "city": "Raudėnai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Raudėnai baldų gamybos sąraše MB Baldinta pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "scope_evidence": "Viešame Info.lt Raudėnai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "aukstaitijos-baldu-fabrikas",
+    "legal_name": "UAB Aukštaitijos baldų fabrikas",
+    "trading_name": "Aukštaitijos baldų fabrikas",
+    "source_identity": "UAB Aukštaitijos baldų fabrikas — Aukštaitijos baldų fabrikas",
+    "legal_entity_known": true,
+    "description_lt": "Aukštaitijos baldų fabrikas viešame Info.lt Panevėžys baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Panevėžys baldų gamybos sąraše UAB Aukštaitijos baldų fabrikas pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Panevėžys sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "diansa",
+    "legal_name": "UAB Diansa",
+    "trading_name": "Diansa",
+    "source_identity": "UAB Diansa — Diansa",
+    "legal_entity_known": true,
+    "description_lt": "Diansa viešame Info.lt Katinai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Katinai",
+    "city": "Katinai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Katinai baldų gamybos sąraše UAB Diansa pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Katinai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dominari",
+    "legal_name": "UAB Dominari",
+    "trading_name": "Dominari",
+    "source_identity": "UAB Dominari — Dominari",
+    "legal_entity_known": true,
+    "description_lt": "Dominari viešame Info.lt Šilagalys baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Šilagalys",
+    "city": "Šilagalys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Šilagalys baldų gamybos sąraše UAB Dominari pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Šilagalys sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dominati",
+    "legal_name": "UAB Dominati",
+    "trading_name": "Dominati",
+    "source_identity": "UAB Dominati — Dominati",
+    "legal_entity_known": true,
+    "description_lt": "Dominati viešame Info.lt Panevėžys baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Panevėžys baldų gamybos sąraše UAB Dominati pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Panevėžys sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "nordo-home",
+    "legal_name": "MB Nordo home",
+    "trading_name": "Nordo home",
+    "source_identity": "MB Nordo home — Nordo home",
+    "legal_entity_known": true,
+    "description_lt": "Nordo home viešame Info.lt Berniūnai baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Berniūnai",
+    "city": "Berniūnai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Berniūnai baldų gamybos sąraše MB Nordo home pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Berniūnai sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldaiidea",
+    "legal_name": "MB Baldaiidea",
+    "trading_name": "Baldaiidea",
+    "source_identity": "MB Baldaiidea — Baldaiidea",
+    "legal_entity_known": true,
+    "description_lt": "Baldaiidea viešame Info.lt Panevėžys baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Panevėžys baldų gamybos sąraše MB Baldaiidea pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Panevėžys sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "jamuraj",
+    "legal_name": "MB Jamuraj",
+    "trading_name": "Jamuraj",
+    "source_identity": "MB Jamuraj — Jamuraj",
+    "legal_entity_known": true,
+    "description_lt": "Jamuraj viešame Info.lt Piniava baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Piniava",
+    "city": "Piniava",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Piniava baldų gamybos sąraše MB Jamuraj pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Piniava sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kaip-pas-teti",
+    "legal_name": "MB Kaip pas tėtį",
+    "trading_name": "Kaip pas tėtį",
+    "source_identity": "MB Kaip pas tėtį — Kaip pas tėtį",
+    "legal_entity_known": true,
+    "description_lt": "Kaip pas tėtį viešame Info.lt Ramygala baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Ramygala",
+    "city": "Ramygala",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Ramygala baldų gamybos sąraše MB Kaip pas tėtį pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Ramygala sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "gmdg",
+    "legal_name": "V. Grinienės IĮ Gmdg",
+    "trading_name": "Gmdg",
+    "source_identity": "V. Grinienės IĮ Gmdg — Gmdg",
+    "legal_entity_known": true,
+    "description_lt": "Gmdg viešame Info.lt Panevėžys baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Panevėžys baldų gamybos sąraše V. Grinienės IĮ Gmdg pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Panevėžys sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ironix",
+    "legal_name": "MB Ironix",
+    "trading_name": "Ironix",
+    "source_identity": "MB Ironix — Ironix",
+    "legal_entity_known": true,
+    "description_lt": "Ironix viešame Info.lt Kerava baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Kerava",
+    "city": "Kerava",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Kerava baldų gamybos sąraše MB Ironix pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Kerava sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "nemuno-sistemos",
+    "legal_name": "MB Nemuno sistemos",
+    "trading_name": "Nemuno sistemos",
+    "source_identity": "MB Nemuno sistemos — Nemuno sistemos",
+    "legal_entity_known": true,
+    "description_lt": "Nemuno sistemos viešame Info.lt Panevėžys baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Panevėžys baldų gamybos sąraše MB Nemuno sistemos pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Panevėžys sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "stone-studio",
+    "legal_name": "UAB Stone studio",
+    "trading_name": "Stone studio",
+    "source_identity": "UAB Stone studio — Stone studio",
+    "legal_entity_known": true,
+    "description_lt": "Stone studio viešame Info.lt Panevėžys baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Panevėžys baldų gamybos sąraše UAB Stone studio pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "scope_evidence": "Viešame Info.lt Panevėžys sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "s-monta",
+    "legal_name": "MB S-monta",
+    "trading_name": "S-monta",
+    "source_identity": "MB S-monta — S-monta",
+    "legal_entity_known": true,
+    "description_lt": "S-monta viešame Info.lt Alytus baldų gamybos sąraše nurodyta kaip baldų gamybos įmonė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "O"
+    ],
+    "category_labels": [
+      "Kiti nestandartiniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Alytus",
+    "public_contact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Alytus",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešame Info.lt Alytus baldų gamybos sąraše MB S-monta pateikta baldų gamybos rubrikoje. Tai patvirtina įmonės įtraukimą į katalogą, tačiau individualus patikrinimas dar nebaigtas. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Alytus",
+    "scope_evidence": "Viešame Info.lt Alytus sąraše įmonė nurodyta „Baldų gamyba“ rubrikoje. Šaltinis konkrečios katalogo subkategorijos neišskiria, todėl O priskirta kaip bendroji („kiti“) atsarginė kategorija. Šaltinis: https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Alytus",
+    "evidence_source_type": "Info.lt miesto sąrašas",
+    "source_urls": [
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Alytus"
+    ],
+    "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Alytus",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
   }
 ]

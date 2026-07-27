@@ -3,8 +3,8 @@
 migrate((app) => {
   const seed = require(__hooks + "/../data/manufacturers.json")
 
-  if (!Array.isArray(seed) || seed.length !== 121) {
-    throw new Error("data/manufacturers.json must contain exactly 121 records")
+  if (!Array.isArray(seed) || seed.length < 121) {
+    throw new Error("data/manufacturers.json must retain at least the original 121 records")
   }
 
   const slugs = new Set()

@@ -1,11 +1,15 @@
 /// <reference path="../pb_data/types.d.ts" />
 
 migrate((app) => {
-  const seed = require(__hooks + "/../data/manufacturers.json")
+  const allSeed = require(__hooks + "/../data/manufacturers.json")
 
-  if (!Array.isArray(seed) || seed.length !== 121) {
-    throw new Error("data/manufacturers.json must contain exactly 121 records")
+  if (!Array.isArray(allSeed) || allSeed.length < 121) {
+    throw new Error("data/manufacturers.json must retain at least the original 121 records")
   }
+
+  // This historic migration owns only its original seed. Later catalogue additions
+  // are inserted by their own later migrations and must not be backfilled here.
+  const seed = allSeed.slice(0, 121)
 
   let collection
   try {

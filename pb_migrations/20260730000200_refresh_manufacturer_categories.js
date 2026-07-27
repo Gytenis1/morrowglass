@@ -15,8 +15,8 @@ migrate((app) => {
   }
   const validCodes = new Set(Object.keys(categoryLabels))
 
-  if (!Array.isArray(seed) || seed.length !== 121) {
-    throw new Error("data/manufacturers.json must contain exactly 121 manufacturer records")
+  if (!Array.isArray(seed) || seed.length < 121) {
+    throw new Error("data/manufacturers.json must retain at least the original 121 manufacturer records")
   }
 
   const slugs = new Set()
@@ -38,8 +38,8 @@ migrate((app) => {
     }
     slugs.add(record.slug)
   }
-  if (slugs.size !== 121) {
-    throw new Error("data/manufacturers.json must contain 121 unique manufacturer slugs")
+  if (slugs.size !== seed.length) {
+    throw new Error("data/manufacturers.json must contain only unique manufacturer slugs")
   }
 
   const sqlValue = (value) => {

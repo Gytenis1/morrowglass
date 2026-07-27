@@ -15,13 +15,16 @@ migrate((app) => {
   }
   const validCodes = Object.keys(categoryLabels)
 
-  if (!Array.isArray(seed) || seed.length !== 121) {
-    throw new Error("data/manufacturers.json must contain exactly 121 manufacturer records")
+  if (!Array.isArray(seed) || seed.length < 121) {
+    throw new Error("data/manufacturers.json must retain at least the original 121 manufacturer records")
   }
 
+  // Preserve this migration's historic, 121-record O fallback set. Newer records
+  // are validated and inserted by their own migrations.
+  const baselineSeed = seed.slice(0, 121)
   const slugs = new Set()
   const otherFallbackRecords = []
-  for (const record of seed) {
+  for (const record of baselineSeed) {
     if (!record.slug || slugs.has(record.slug)) {
       throw new Error("Every manufacturer must have a unique nonempty slug")
     }
@@ -42,8 +45,8 @@ migrate((app) => {
     }
     slugs.add(record.slug)
   }
-  if (slugs.size !== 121 || otherFallbackRecords.length !== 30) {
-    throw new Error("data/manufacturers.json must contain 121 unique slugs and exactly 30 O fallback records")
+  if (slugs.size !== baselineSeed.length || otherFallbackRecords.length !== 30) {
+    throw new Error("The original manufacturer seed must retain unique slugs and its 30 O fallback records")
   }
 
   const collection = app.findCollectionByNameOrId("manufacturers")

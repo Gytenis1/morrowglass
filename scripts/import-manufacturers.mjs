@@ -34,13 +34,24 @@ const categoryLabels = new Map([
 ]);
 const categoryCodes = new Set(categoryLabels.keys());
 const regions = new Set(["vilnius-east-south", "kaunas-north", "klaipeda-panevezys-west-central"]);
+const originalRecordCount = 121;
+const minimumExpandedRecordCount = 200;
+
+function normalizeName(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
+}
 
 function validate(records) {
-  if (!Array.isArray(records) || records.length === 0) {
-    throw new Error(`Expected a non-empty manufacturer array; found ${Array.isArray(records) ? records.length : "non-array JSON"}`);
+  if (!Array.isArray(records) || records.length < minimumExpandedRecordCount) {
+    throw new Error(`Expected at least ${minimumExpandedRecordCount} manufacturer records; found ${Array.isArray(records) ? records.length : "non-array JSON"}`);
   }
 
   const slugs = new Set();
+  const normalizedNames = new Map();
   for (const [index, record] of records.entries()) {
     for (const field of requiredFields) {
       if (record[field] === undefined || record[field] === null || record[field] === "") {
@@ -50,6 +61,15 @@ function validate(records) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.slug)) throw new Error(`Invalid slug: ${record.slug}`);
     if (slugs.has(record.slug)) throw new Error(`Duplicate slug: ${record.slug}`);
     slugs.add(record.slug);
+    const normalizedName = normalizeName(record.trading_name);
+    if (!normalizedName) throw new Error(`Invalid trading_name for ${record.slug}`);
+    const priorNameIndex = normalizedNames.get(normalizedName);
+    // The historic 121-entry seed contains one pre-existing normalized-name pair.
+    // New directory records may not duplicate that seed or one another by name.
+    if (priorNameIndex !== undefined && (index >= originalRecordCount || priorNameIndex >= originalRecordCount)) {
+      throw new Error(`Duplicate normalized trading_name: ${record.trading_name}`);
+    }
+    normalizedNames.set(normalizedName, index);
     if (!regions.has(record.region)) throw new Error(`Invalid region for ${record.slug}: ${record.region}`);
     // Catalogue coverage is complete: every record must have an evidence-backed existing taxonomy code.
     if (!Array.isArray(record.category_codes) || record.category_codes.length === 0 || record.category_codes.some((code) => !categoryCodes.has(code))) {
