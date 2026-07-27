@@ -3,6 +3,7 @@ import './styles.css';
 import { pb } from './pocketbase';
 import {
   CATEGORY_LANDINGS,
+  SITE_URL,
   breadcrumbStructuredData,
   faqStructuredData,
   getEligibleCities,
@@ -54,7 +55,7 @@ type GuideArticle = {
   featured?: boolean;
 };
 
-type HeaderSection = 'directory' | 'guide' | 'request';
+type HeaderSection = 'directory' | 'guide' | 'request' | 'owner';
 
 type ProfileLandingLink = {
   kind: 'Miestas' | 'Kategorija';
@@ -76,6 +77,10 @@ const projectTypeOptions = [
 ];
 const budgetBandOptions = ['Iki 3 000 €', '3 000–6 000 €', '6 000–10 000 €', '10 000–20 000 €', 'Daugiau nei 20 000 €', 'Biudžetas dar nenustatytas'];
 const timelineOptions = ['Per 1–3 mėnesius', 'Per 3–6 mėnesius', 'Vėliau nei po 6 mėnesių', 'Terminas lankstus', 'Dar nežinau'];
+const ownerRevenueBandOptions = ['Iki 1 mln. €', '1–3 mln. €', '3–10 mln. €', 'Daugiau nei 10 mln. €', 'Nenoriu nurodyti'];
+const ownerEbitdaBandOptions = ['Iki 300 tūkst. €', '300–750 tūkst. €', '750 tūkst.–1,5 mln. €', '1,5–2,5 mln. €', 'Daugiau nei 2,5 mln. €', 'Nenoriu nurodyti'];
+const ownerSituationOptions = ['Paveldėjimo ar įpėdinystės planavimas', 'Savininko pasitraukimas iš kasdienės veiklos', 'Dalinio ar visiško pardavimo svarstymas', 'Kita tęstinumo situacija'];
+const ownerTimelineOptions = ['Per artimiausius 6 mėn.', 'Per 6–18 mėn.', 'Vėliau nei po 18 mėn.', 'Noriu pradėti be konkretaus termino'];
 const collator = new Intl.Collator('lt', { sensitivity: 'base' });
 const root = document.querySelector<HTMLElement>('#app');
 const guideArticles: GuideArticle[] = [
@@ -189,6 +194,10 @@ function isLandingPath(pathname = window.location.pathname): boolean {
 
 function isRequestPath(pathname = window.location.pathname): boolean {
   return pathname.replace(/\/+$/, '') === '/gauti-pasiulymus';
+}
+
+function isOwnerPath(pathname = window.location.pathname): boolean {
+  return pathname.replace(/\/+$/, '') === '/savininkams';
 }
 
 async function fetchAllManufacturers(): Promise<Manufacturer[]> {
@@ -342,6 +351,7 @@ function renderFooter(): string {
         <nav aria-label="Poraštės navigacija">
           <a href="/gauti-pasiulymus" data-internal-link="true">Pateikti projekto užklausą</a>
           <a href="/gidas" data-internal-link="true">Pirkėjo gidas</a>
+          <a href="/savininkams" data-internal-link="true">Verslo savininkams ir tęstinumui</a>
         </nav>
       </div>
     </footer>
@@ -1392,6 +1402,220 @@ function renderRequestPage(): void {
   });
 }
 
+function renderOwnerPage(): void {
+  if (!root) return;
+
+  const ownerPath = '/savininkams';
+  const ownerDescription = 'Konfidencialus tiesioginis pokalbis su Lithuanian ETA apie brandaus savininko valdomo verslo tęstinumą, perėmimą ar pardavimo svarstymą Baltijos šalyse.';
+  setPageMetadata({
+    title: 'Verslo tęstinumas ir privatus pardavimo pokalbis | Lithuanian ETA',
+    description: ownerDescription,
+    path: ownerPath,
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        '@id': `${SITE_URL}/savininkams/#contact-page`,
+        url: `${SITE_URL}/savininkams/`,
+        name: 'Privatus pokalbis verslo savininkams',
+        description: ownerDescription,
+        inLanguage: 'lt-LT',
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+      },
+      breadcrumbStructuredData([
+        { name: 'Gamintojų katalogas', path: '/' },
+        { name: 'Verslo savininkams', path: ownerPath },
+      ]),
+    ],
+  });
+
+  const selectOptions = (items: string[], placeholder: string) => `
+    <option value="">${escapeHtml(placeholder)}</option>
+    ${items.map((item) => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}
+  `;
+
+  root.innerHTML = `
+    ${renderHeader('owner')}
+    <main class="owner-main">
+      <section class="owner-hero" aria-labelledby="owner-title">
+        <div class="owner-hero-copy">
+          <p class="kicker">Lithuanian ETA · privatus tiesioginis pirkėjas</p>
+          <h1 id="owner-title">Kai svarbu ne tik parduoti, bet ir tęsti verslą</h1>
+          <p class="lead">Lithuanian ETA siekia įsigyti ir toliau auginti brandų, savininko sukurtą verslą. Tai tiesioginis pirkėjas, o ne brokeris, tarpininkas ar įmonių skelbimų svetainė.</p>
+        </div>
+        <aside class="owner-position" aria-labelledby="owner-position-title">
+          <h2 id="owner-position-title">Pokalbis be katalogo tarpininkavimo</h2>
+          <p>Ši savininkams skirta kryptis yra atskira nuo viešo baldų gamintojų katalogo. Pateikta informacija nėra siunčiama kataloge esančioms įmonėms.</p>
+        </aside>
+      </section>
+
+      <section class="owner-profile" aria-labelledby="owner-profile-title">
+        <div class="owner-section-heading">
+          <p class="kicker">Pradinis profilis</p>
+          <h2 id="owner-profile-title">Kokį verslą prasminga aptarti</h2>
+          <p>Tai orientyras pirmajam pokalbiui, ne pasiūlymas, vertinimas ar pažadas sudaryti sandorį.</p>
+        </div>
+        <dl class="owner-profile-facts">
+          <div><dt>Veiklos mastas</dt><dd>Paprastai maždaug 300 tūkst.–2,5 mln. € EBITDA.</dd></div>
+          <div><dt>Geografija</dt><dd>Lietuva, Latvija arba Estija.</dd></div>
+          <div><dt>Situacija</dt><dd>Įpėdinystė, veiklos tęstinumas, savininko atsitraukimas arba dalinio ar visiško pardavimo svarstymas.</dd></div>
+        </dl>
+      </section>
+
+      <section class="owner-process" aria-labelledby="owner-process-title">
+        <div class="owner-section-heading">
+          <h2 id="owner-process-title">Kaip prasideda pirmas pokalbis</h2>
+          <p>Pakanka trumpos informacijos, kad būtų galima įvertinti, ar verta kalbėtis toliau.</p>
+        </div>
+        <ol>
+          <li><strong>Pateikite trumpą konfidencialią žinutę.</strong><span>Nurodykite verslo pobūdį, vietą, apytiksles finansines ribas ir savo situaciją.</span></li>
+          <li><strong>Lithuanian ETA ją peržiūri.</strong><span>Informacija vertinama tik galimo tiesioginio pokalbio kontekste.</span></li>
+          <li><strong>Jei profilis tinkamas, galima sutarti privatų pokalbį.</strong><span>Formos pateikimas savaime nėra pasiūlymas, vertinimas ar tarpininkavimo susitarimas.</span></li>
+        </ol>
+      </section>
+
+      <div class="owner-enquiry-layout">
+        <section class="owner-form-section" aria-labelledby="owner-form-title">
+          <div class="owner-section-heading">
+            <p class="kicker">Konfidenciali užklausa</p>
+            <h2 id="owner-form-title">Trumpai papasakokite apie situaciją</h2>
+            <p>Žvaigždute pažymėti laukai yra privalomi. Pradiniame etape nepateikite komercinių paslapčių, asmens kodų ar kitų ypač jautrių duomenų.</p>
+          </div>
+          <form class="owner-enquiry-form" id="owner-enquiry-form">
+            <div class="form-field">
+              <label for="owner-company-name">Įmonės pavadinimas *</label>
+              <input id="owner-company-name" name="company_name" type="text" autocomplete="organization" minlength="2" maxlength="160" required>
+            </div>
+            <div class="form-field">
+              <label for="owner-city">Miestas arba vietovė *</label>
+              <input id="owner-city" name="city" type="text" autocomplete="address-level2" minlength="2" maxlength="160" required>
+            </div>
+            <div class="form-field form-field--wide">
+              <label for="owner-sector">Veiklos sektorius *</label>
+              <input id="owner-sector" name="sector" type="text" minlength="2" maxlength="160" required placeholder="Pvz., gamyba, verslo paslaugos ar logistika">
+            </div>
+            <div class="form-field">
+              <label for="owner-revenue-band">Metinės pajamos *</label>
+              <div class="select-wrap"><select id="owner-revenue-band" name="revenue_band" required>${selectOptions(ownerRevenueBandOptions, 'Pasirinkite pajamų ribas')}</select></div>
+            </div>
+            <div class="form-field">
+              <label for="owner-ebitda-band">EBITDA *</label>
+              <div class="select-wrap"><select id="owner-ebitda-band" name="ebitda_band" required>${selectOptions(ownerEbitdaBandOptions, 'Pasirinkite EBITDA ribas')}</select></div>
+            </div>
+            <div class="form-field form-field--wide">
+              <label for="owner-situation">Savininko arba tęstinumo situacija *</label>
+              <div class="select-wrap"><select id="owner-situation" name="ownership_succession_situation" required>${selectOptions(ownerSituationOptions, 'Pasirinkite artimiausią situaciją')}</select></div>
+            </div>
+            <div class="form-field form-field--wide">
+              <label for="owner-timeline">Svarstomas laikas *</label>
+              <div class="select-wrap"><select id="owner-timeline" name="timeline" required>${selectOptions(ownerTimelineOptions, 'Pasirinkite laikotarpį')}</select></div>
+            </div>
+            <div class="form-field form-field--wide">
+              <label for="owner-message">Trumpa konfidenciali žinutė *</label>
+              <p class="field-hint" id="owner-message-hint">Bent 40 ženklų. Galite aprašyti verslo istoriją, savo vaidmenį ir ko tikitės iš pirmo pokalbio.</p>
+              <textarea id="owner-message" name="message" rows="8" minlength="40" maxlength="3000" required aria-describedby="owner-message-hint"></textarea>
+            </div>
+            <div class="form-field">
+              <label for="owner-contact-name">Jūsų vardas *</label>
+              <input id="owner-contact-name" name="contact_name" type="text" autocomplete="name" minlength="2" maxlength="120" required>
+            </div>
+            <div class="form-field">
+              <label for="owner-contact-email">El. paštas *</label>
+              <input id="owner-contact-email" name="contact_email" type="email" inputmode="email" autocomplete="email" maxlength="254" required placeholder="vardas@imone.lt">
+            </div>
+            <div class="form-field form-field--wide">
+              <label for="owner-contact-phone">Telefono numeris (nebūtina)</label>
+              <input id="owner-contact-phone" name="contact_phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40">
+            </div>
+            <div class="honeypot-field" aria-hidden="true">
+              <label for="owner-website">Interneto svetainė</label>
+              <input id="owner-website" name="honeypot" type="text" autocomplete="off" tabindex="-1" maxlength="200">
+            </div>
+            <div class="owner-submit form-field--wide">
+              <button class="primary-button" type="submit">Pateikti konfidencialiai peržiūrai</button>
+              <p class="form-status" id="owner-enquiry-status" role="status" aria-live="polite" tabindex="-1"></p>
+            </div>
+          </form>
+        </section>
+
+        <aside class="owner-confidentiality" aria-labelledby="owner-confidentiality-title">
+          <h2 id="owner-confidentiality-title">Ką reiškia pateikimas</h2>
+          <p>Žinutė gaunama konfidencialiai Lithuanian ETA peržiūrai ir nėra persiunčiama kataloge esančioms įmonėms.</p>
+          <p>Formos pateikimas nėra pasiūlymas, verslo vertinimas ar brokerio bei tarpininkavimo susitarimas.</p>
+        </aside>
+      </div>
+    </main>
+    ${renderFooter()}
+  `;
+
+  const form = document.querySelector<HTMLFormElement>('#owner-enquiry-form');
+  const message = document.querySelector<HTMLTextAreaElement>('#owner-message');
+  const status = document.querySelector<HTMLElement>('#owner-enquiry-status');
+  const submit = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+  if (!form || !message || !status || !submit) return;
+
+  const validateMessage = () => {
+    const length = message.value.trim().length;
+    message.setCustomValidity(length > 0 && length < 40 ? 'Aprašykite situaciją bent 40 ženklų.' : '');
+  };
+  message.addEventListener('input', () => message.setCustomValidity(''));
+  message.addEventListener('blur', validateMessage);
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input:not([type="email"]), textarea').forEach((field) => {
+      field.value = field.value.trim();
+    });
+    const email = document.querySelector<HTMLInputElement>('#owner-contact-email');
+    if (email) email.value = email.value.trim();
+    validateMessage();
+    if (!form.reportValidity()) return;
+
+    const fields = new FormData(form);
+    submit.disabled = true;
+    submit.setAttribute('aria-busy', 'true');
+    submit.textContent = 'Pateikiama…';
+    status.className = 'form-status';
+    status.setAttribute('role', 'status');
+    status.textContent = 'Užklausa pateikiama konfidencialiai peržiūrai.';
+
+    try {
+      const contactPhone = String(fields.get('contact_phone') ?? '').trim();
+      const honeypot = String(fields.get('honeypot') ?? '').trim();
+      await pb.collection('owner_enquiries').create({
+        company_name: String(fields.get('company_name') ?? '').trim(),
+        city: String(fields.get('city') ?? '').trim(),
+        sector: String(fields.get('sector') ?? '').trim(),
+        revenue_band: String(fields.get('revenue_band') ?? ''),
+        ebitda_band: String(fields.get('ebitda_band') ?? ''),
+        ownership_succession_situation: String(fields.get('ownership_succession_situation') ?? ''),
+        timeline: String(fields.get('timeline') ?? ''),
+        message: String(fields.get('message') ?? '').trim(),
+        contact_name: String(fields.get('contact_name') ?? '').trim(),
+        contact_email: String(fields.get('contact_email') ?? '').trim(),
+        ...(contactPhone ? { contact_phone: contactPhone } : {}),
+        status: 'new',
+        ...(honeypot ? { honeypot } : {}),
+      });
+      form.reset();
+      message.setCustomValidity('');
+      status.className = 'form-status form-status--success';
+      status.textContent = 'Užklausa gauta konfidencialiai peržiūrai. Ji nebuvo persiųsta kataloge esančioms įmonėms.';
+      status.focus();
+    } catch (error) {
+      console.error('Nepavyko pateikti savininko užklausos.', error);
+      status.className = 'form-status form-status--error';
+      status.setAttribute('role', 'alert');
+      status.textContent = 'Užklausos pateikti nepavyko. Patikrinkite laukus ir interneto ryšį, tada bandykite dar kartą.';
+      status.focus();
+    } finally {
+      submit.disabled = false;
+      submit.removeAttribute('aria-busy');
+      submit.textContent = 'Pateikti konfidencialiai peržiūrai';
+    }
+  });
+}
+
 function renderNotFound(title: string, description: string): void {
   if (!root) return;
   setPageMetadata({
@@ -1502,7 +1726,12 @@ function renderProfile(record: Manufacturer | undefined): void {
   guideLink.href = '/gidas';
   guideLink.dataset.internalLink = 'true';
   guideLink.textContent = 'Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →';
-  profileActions.append(requestLink, guideLink);
+  const ownerLink = document.createElement('a');
+  ownerLink.className = 'profile-owner-link';
+  ownerLink.href = '/savininkams';
+  ownerLink.dataset.internalLink = 'true';
+  ownerLink.textContent = 'Svarstote savo verslo tęstinumą? Privatus pokalbis savininkams →';
+  profileActions.append(requestLink, guideLink, ownerLink);
   hero.append(headingGroup, profileActions);
 
   const note = document.createElement('div');
@@ -1882,6 +2111,11 @@ function setHomeMetadata(): void {
 }
 
 function route(): void {
+  if (isOwnerPath()) {
+    renderOwnerPage();
+    return;
+  }
+
   if (isGuidePath()) {
     renderGuideRoute();
     return;
@@ -1966,7 +2200,7 @@ async function loadDirectory(): Promise<void> {
 
 function navigateToCurrentRoute(): void {
   browseState = readBrowseState();
-  if (isGuidePath()) {
+  if (isGuidePath() || isOwnerPath()) {
     route();
     return;
   }
@@ -1995,7 +2229,7 @@ document.addEventListener('click', (event) => {
 
 window.addEventListener('popstate', navigateToCurrentRoute);
 
-if (isGuidePath()) {
+if (isGuidePath() || isOwnerPath()) {
   route();
 } else {
   void loadDirectory();

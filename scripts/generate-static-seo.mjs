@@ -258,7 +258,7 @@ function header(active = 'directory') {
 }
 
 function footer() {
-  return '<footer><div class="footer-inner"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><nav aria-label="Poraštės navigacija"><a href="/gauti-pasiulymus">Pateikti projekto užklausą</a><a href="/gidas">Pirkėjo gidas</a></nav></div></footer>';
+  return '<footer><div class="footer-inner"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><nav aria-label="Poraštės navigacija"><a href="/gauti-pasiulymus">Pateikti projekto užklausą</a><a href="/gidas">Pirkėjo gidas</a><a href="/savininkams">Verslo savininkams ir tęstinumui</a></nav></div></footer>';
 }
 
 function manufacturerCard(record) {
@@ -326,6 +326,43 @@ await writeRoute(requestPath, injectPage({
   structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Projekto užklausa', path: requestPath }])],
 }));
 
+const ownerPath = '/savininkams';
+const ownerDescription = 'Konfidencialus tiesioginis pokalbis su Lithuanian ETA apie brandaus savininko valdomo verslo tęstinumą, perėmimą ar pardavimo svarstymą Baltijos šalyse.';
+const ownerRevenueBands = ['Iki 1 mln. €', '1–3 mln. €', '3–10 mln. €', 'Daugiau nei 10 mln. €', 'Nenoriu nurodyti'];
+const ownerEbitdaBands = ['Iki 300 tūkst. €', '300–750 tūkst. €', '750 tūkst.–1,5 mln. €', '1,5–2,5 mln. €', 'Daugiau nei 2,5 mln. €', 'Nenoriu nurodyti'];
+const ownerSituations = ['Paveldėjimo ar įpėdinystės planavimas', 'Savininko pasitraukimas iš kasdienės veiklos', 'Dalinio ar visiško pardavimo svarstymas', 'Kita tęstinumo situacija'];
+const ownerTimelines = ['Per artimiausius 6 mėn.', 'Per 6–18 mėn.', 'Vėliau nei po 18 mėn.', 'Noriu pradėti be konkretaus termino'];
+const ownerOptions = (items, placeholder) => `<option value="">${escapeHtml(placeholder)}</option>${items.map((item) => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}`;
+const ownerBody = `${header('owner')}<main class="owner-main">
+<section class="owner-hero" aria-labelledby="owner-title"><div class="owner-hero-copy"><p class="kicker">Lithuanian ETA · privatus tiesioginis pirkėjas</p><h1 id="owner-title">Kai svarbu ne tik parduoti, bet ir tęsti verslą</h1><p class="lead">Lithuanian ETA siekia įsigyti ir toliau auginti brandų, savininko sukurtą verslą. Tai tiesioginis pirkėjas, o ne brokeris, tarpininkas ar įmonių skelbimų svetainė.</p></div><aside class="owner-position" aria-labelledby="owner-position-title"><h2 id="owner-position-title">Pokalbis be katalogo tarpininkavimo</h2><p>Ši savininkams skirta kryptis yra atskira nuo viešo baldų gamintojų katalogo. Pateikta informacija nėra siunčiama kataloge esančioms įmonėms.</p></aside></section>
+<section class="owner-profile" aria-labelledby="owner-profile-title"><div class="owner-section-heading"><p class="kicker">Pradinis profilis</p><h2 id="owner-profile-title">Kokį verslą prasminga aptarti</h2><p>Tai orientyras pirmajam pokalbiui, ne pasiūlymas, vertinimas ar pažadas sudaryti sandorį.</p></div><dl class="owner-profile-facts"><div><dt>Veiklos mastas</dt><dd>Paprastai maždaug 300 tūkst.–2,5 mln. € EBITDA.</dd></div><div><dt>Geografija</dt><dd>Lietuva, Latvija arba Estija.</dd></div><div><dt>Situacija</dt><dd>Įpėdinystė, veiklos tęstinumas, savininko atsitraukimas arba dalinio ar visiško pardavimo svarstymas.</dd></div></dl></section>
+<section class="owner-process" aria-labelledby="owner-process-title"><div class="owner-section-heading"><h2 id="owner-process-title">Kaip prasideda pirmas pokalbis</h2><p>Pakanka trumpos informacijos, kad būtų galima įvertinti, ar verta kalbėtis toliau.</p></div><ol><li><strong>Pateikite trumpą konfidencialią žinutę.</strong><span>Nurodykite verslo pobūdį, vietą, apytiksles finansines ribas ir savo situaciją.</span></li><li><strong>Lithuanian ETA ją peržiūri.</strong><span>Informacija vertinama tik galimo tiesioginio pokalbio kontekste.</span></li><li><strong>Jei profilis tinkamas, galima sutarti privatų pokalbį.</strong><span>Formos pateikimas savaime nėra pasiūlymas, vertinimas ar tarpininkavimo susitarimas.</span></li></ol></section>
+<div class="owner-enquiry-layout"><section class="owner-form-section" aria-labelledby="owner-form-title"><div class="owner-section-heading"><p class="kicker">Konfidenciali užklausa</p><h2 id="owner-form-title">Trumpai papasakokite apie situaciją</h2><p>Žvaigždute pažymėti laukai yra privalomi. Pradiniame etape nepateikite komercinių paslapčių, asmens kodų ar kitų ypač jautrių duomenų.</p></div><form class="owner-enquiry-form" id="owner-enquiry-form">
+<div class="form-field"><label for="owner-company-name">Įmonės pavadinimas *</label><input id="owner-company-name" name="company_name" type="text" autocomplete="organization" minlength="2" maxlength="160" required></div>
+<div class="form-field"><label for="owner-city">Miestas arba vietovė *</label><input id="owner-city" name="city" type="text" autocomplete="address-level2" minlength="2" maxlength="160" required></div>
+<div class="form-field form-field--wide"><label for="owner-sector">Veiklos sektorius *</label><input id="owner-sector" name="sector" type="text" minlength="2" maxlength="160" required placeholder="Pvz., gamyba, verslo paslaugos ar logistika"></div>
+<div class="form-field"><label for="owner-revenue-band">Metinės pajamos *</label><div class="select-wrap"><select id="owner-revenue-band" name="revenue_band" required>${ownerOptions(ownerRevenueBands, 'Pasirinkite pajamų ribas')}</select></div></div>
+<div class="form-field"><label for="owner-ebitda-band">EBITDA *</label><div class="select-wrap"><select id="owner-ebitda-band" name="ebitda_band" required>${ownerOptions(ownerEbitdaBands, 'Pasirinkite EBITDA ribas')}</select></div></div>
+<div class="form-field form-field--wide"><label for="owner-situation">Savininko arba tęstinumo situacija *</label><div class="select-wrap"><select id="owner-situation" name="ownership_succession_situation" required>${ownerOptions(ownerSituations, 'Pasirinkite artimiausią situaciją')}</select></div></div>
+<div class="form-field form-field--wide"><label for="owner-timeline">Svarstomas laikas *</label><div class="select-wrap"><select id="owner-timeline" name="timeline" required>${ownerOptions(ownerTimelines, 'Pasirinkite laikotarpį')}</select></div></div>
+<div class="form-field form-field--wide"><label for="owner-message">Trumpa konfidenciali žinutė *</label><p class="field-hint" id="owner-message-hint">Bent 40 ženklų. Galite aprašyti verslo istoriją, savo vaidmenį ir ko tikitės iš pirmo pokalbio.</p><textarea id="owner-message" name="message" rows="8" minlength="40" maxlength="3000" required aria-describedby="owner-message-hint"></textarea></div>
+<div class="form-field"><label for="owner-contact-name">Jūsų vardas *</label><input id="owner-contact-name" name="contact_name" type="text" autocomplete="name" minlength="2" maxlength="120" required></div>
+<div class="form-field"><label for="owner-contact-email">El. paštas *</label><input id="owner-contact-email" name="contact_email" type="email" inputmode="email" autocomplete="email" maxlength="254" required placeholder="vardas@imone.lt"></div>
+<div class="form-field form-field--wide"><label for="owner-contact-phone">Telefono numeris (nebūtina)</label><input id="owner-contact-phone" name="contact_phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40"></div>
+<div class="honeypot-field" aria-hidden="true"><label for="owner-website">Interneto svetainė</label><input id="owner-website" name="honeypot" type="text" autocomplete="off" tabindex="-1" maxlength="200"></div>
+<div class="owner-submit form-field--wide"><button class="primary-button" type="submit">Pateikti konfidencialiai peržiūrai</button><p class="form-status" id="owner-enquiry-status" role="status" aria-live="polite" tabindex="-1"></p></div>
+</form></section><aside class="owner-confidentiality" aria-labelledby="owner-confidentiality-title"><h2 id="owner-confidentiality-title">Ką reiškia pateikimas</h2><p>Žinutė gaunama konfidencialiai Lithuanian ETA peržiūrai ir nėra persiunčiama kataloge esančioms įmonėms.</p><p>Formos pateikimas nėra pasiūlymas, verslo vertinimas ar brokerio bei tarpininkavimo susitarimas.</p></aside></div></main>${footer()}`;
+await writeRoute(ownerPath, injectPage({
+  title: 'Verslo tęstinumas ir privatus pardavimo pokalbis | Lithuanian ETA',
+  description: ownerDescription,
+  path: ownerPath,
+  body: ownerBody,
+  structuredData: [
+    { '@context': 'https://schema.org', '@type': 'ContactPage', '@id': `${SITE_URL}/savininkams/#contact-page`, url: `${SITE_URL}/savininkams/`, name: 'Privatus pokalbis verslo savininkams', description: ownerDescription, inLanguage: 'lt-LT', isPartOf: { '@id': `${SITE_URL}/#website` } },
+    breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Verslo savininkams', path: ownerPath }]),
+  ],
+}));
+
 for (const record of manufacturers) {
   const path = `/gamintojas/${record.slug}`;
   const sources = [...new Set([...(record.source_urls ?? []), record.source_artifact_url].map(publicUrl).filter(Boolean))];
@@ -344,7 +381,7 @@ for (const record of manufacturers) {
     ['Svetainė', publicUrl(record.website)],
     ['Viešai nurodytas kontaktinis adresas', publicUrl(record.public_contact_url)],
   ].filter(([, value]) => value);
-  const body = `${header()}<main class="profile-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="profile-sheet"><header class="profile-hero"><div class="profile-heading-group"><p class="record-status">Nepatvirtintas viešų šaltinių įrašas</p><h1>${escapeHtml(record.trading_name)}</h1><p class="profile-identity">${escapeHtml(record.source_identity)}</p></div><div class="profile-actions"><a class="primary-button" href="/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}">Įtraukti į projekto užklausą</a><a class="profile-guide-link" href="/gidas">Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →</a></div></header><div class="profile-note"><strong>Duomenys nėra garantija.</strong><span>Šis įrašas nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span></div><section class="profile-details"><div class="section-heading"><h2>Tapatybė, vieta ir veiklos kryptys</h2></div><dl class="profile-facts">${facts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${linkFacts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd><a href="${escapeHtml(value)}" rel="noopener noreferrer">${escapeHtml(value)}</a></dd></div>`).join('')}</dl></section>${profileLandingSection(record)}<section class="provenance-section"><h2>Šaltiniai ir duomenų kilmė</h2><p>Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju.</p><ul class="source-list">${sources.map((source, index) => `<li><span>${index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`}</span><a href="${escapeHtml(source)}" rel="noopener noreferrer">${escapeHtml(source)}</a></li>`).join('')}</ul><p class="collection-date">Šaltinių surinkimo data: <time datetime="${record.source_collection_date}">${record.source_collection_date}</time></p></section></article></main>${footer()}`;
+  const body = `${header()}<main class="profile-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="profile-sheet"><header class="profile-hero"><div class="profile-heading-group"><p class="record-status">Nepatvirtintas viešų šaltinių įrašas</p><h1>${escapeHtml(record.trading_name)}</h1><p class="profile-identity">${escapeHtml(record.source_identity)}</p></div><div class="profile-actions"><a class="primary-button" href="/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}">Įtraukti į projekto užklausą</a><a class="profile-guide-link" href="/gidas">Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →</a><a class="profile-owner-link" href="/savininkams">Svarstote savo verslo tęstinumą? Privatus pokalbis savininkams →</a></div></header><div class="profile-note"><strong>Duomenys nėra garantija.</strong><span>Šis įrašas nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span></div><section class="profile-details"><div class="section-heading"><h2>Tapatybė, vieta ir veiklos kryptys</h2></div><dl class="profile-facts">${facts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${linkFacts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd><a href="${escapeHtml(value)}" rel="noopener noreferrer">${escapeHtml(value)}</a></dd></div>`).join('')}</dl></section>${profileLandingSection(record)}<section class="provenance-section"><h2>Šaltiniai ir duomenų kilmė</h2><p>Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju.</p><ul class="source-list">${sources.map((source, index) => `<li><span>${index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`}</span><a href="${escapeHtml(source)}" rel="noopener noreferrer">${escapeHtml(source)}</a></li>`).join('')}</ul><p class="collection-date">Šaltinių surinkimo data: <time datetime="${record.source_collection_date}">${record.source_collection_date}</time></p></section></article></main>${footer()}`;
   await writeRoute(path, injectPage({
     title: `${record.trading_name} | Baldų gamintojo įrašas`,
     description: `${record.trading_name}: viešais šaltiniais paremtas, nepatvirtintas gamintojo kandidato įrašas su vieta, kategorijomis ir šaltinių nuorodomis.`,
@@ -421,6 +458,7 @@ for (const article of guideArticles) {
 const sitemapPaths = [
   '/',
   '/gauti-pasiulymus',
+  '/savininkams',
   '/gidas',
   ...guideArticles.map((article) => `/gidas/${article.slug}`),
   ...manufacturers.map((record) => `/gamintojas/${record.slug}`),
@@ -431,4 +469,4 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://w
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${eligibleCities.length} city routes, 1 buyer request route, ${guideArticles.length + 1} guide routes, sitemap.xml and robots.txt.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${eligibleCities.length} city routes, 1 buyer request route, 1 owner route, ${guideArticles.length + 1} guide routes, sitemap.xml and robots.txt.`);

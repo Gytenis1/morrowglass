@@ -1528,6 +1528,218 @@
     border-radius: 12px;
   }
 
+  .profile-owner-link {
+    max-width: 32ch;
+    color: var(--ink-soft);
+    font-size: 0.84rem;
+    font-weight: 750;
+  }
+
+  .owner-main {
+    width: min(calc(100% - 2rem), var(--content-width));
+    min-height: calc(100vh - 148px);
+    margin-inline: auto;
+    padding-block: clamp(1.5rem, 5vw, 4.5rem) clamp(3.5rem, 8vw, 7rem);
+    display: grid;
+    gap: clamp(3.5rem, 8vw, 7rem);
+  }
+
+  .owner-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.65fr);
+    align-items: end;
+    gap: clamp(2.5rem, 7vw, 7rem);
+    padding: clamp(1.6rem, 5vw, 4.5rem);
+    color: var(--surface);
+    background: var(--pine);
+    border-radius: 12px;
+  }
+
+  .owner-hero-copy {
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .owner-hero .kicker {
+    color: oklch(0.87 0.115 137);
+  }
+
+  .owner-hero h1 {
+    max-width: 24ch;
+    font-size: clamp(2.35rem, 4.1vw, 3.25rem);
+  }
+
+  .owner-position {
+    display: grid;
+    gap: 0.85rem;
+    padding-block: 1.25rem;
+    border-block: 1px solid oklch(0.89 0.025 158 / 0.45);
+  }
+
+  .owner-position h2 {
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .owner-position p {
+    color: oklch(0.94 0.014 158);
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .owner-profile,
+  .owner-process {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.48fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 7vw, 7rem);
+  }
+
+  .owner-section-heading {
+    display: grid;
+    align-content: start;
+    gap: 0.85rem;
+  }
+
+  .owner-section-heading .kicker {
+    color: var(--pine);
+  }
+
+  .owner-section-heading > p:not(.kicker) {
+    max-width: 62ch;
+    color: var(--ink-soft);
+  }
+
+  .owner-profile-facts {
+    display: grid;
+  }
+
+  .owner-profile-facts > div {
+    display: grid;
+    grid-template-columns: minmax(140px, 0.3fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding-block: 1.2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .owner-profile-facts > div:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .owner-profile-facts dt {
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .owner-profile-facts dd {
+    font-weight: 680;
+  }
+
+  .owner-process {
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+    border-block: 1px solid var(--line);
+  }
+
+  .owner-process ol {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+    list-style: none;
+    counter-reset: owner-step;
+  }
+
+  .owner-process li {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.35rem 1rem;
+    padding-block: 1.1rem;
+    border-top: 1px solid var(--line);
+    counter-increment: owner-step;
+  }
+
+  .owner-process li:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .owner-process li::before {
+    content: counter(owner-step);
+    grid-row: 1 / span 2;
+    color: var(--pine);
+    font-family: var(--display);
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .owner-process li span {
+    color: var(--ink-soft);
+  }
+
+  .owner-enquiry-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.36fr);
+    align-items: start;
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+
+  .owner-form-section {
+    min-width: 0;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .owner-enquiry-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    padding: clamp(1.25rem, 4vw, 2.4rem);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .owner-enquiry-form textarea {
+    min-height: 11rem;
+  }
+
+  .owner-submit {
+    display: grid;
+    justify-items: start;
+    gap: 0.8rem;
+    padding-top: 0.4rem;
+  }
+
+  .owner-submit .form-status {
+    max-width: 65ch;
+    min-height: 1.4em;
+  }
+
+  .owner-confidentiality {
+    position: sticky;
+    top: 1.5rem;
+    display: grid;
+    gap: 0.9rem;
+    padding: 1.25rem;
+    color: var(--ink);
+    background: oklch(0.955 0.022 158);
+    border-radius: 10px;
+  }
+
+  .owner-confidentiality h2 {
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .owner-confidentiality p {
+    font-size: 0.92rem;
+  }
+
   .guide-intro {
     padding: clamp(3rem, 8vw, 6.5rem) max(1rem, calc((100vw - var(--content-width)) / 2));
     display: grid;
@@ -1987,12 +2199,17 @@
     .landing-hero,
     .landing-related,
     .request-intro,
-    .request-layout {
+    .request-layout,
+    .owner-hero,
+    .owner-profile,
+    .owner-process,
+    .owner-enquiry-layout {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
 
-    .request-guidance {
+    .request-guidance,
+    .owner-confidentiality {
       position: static;
     }
   }
@@ -2055,7 +2272,8 @@
       max-width: 38ch;
     }
 
-    .profile-guide-link {
+    .profile-guide-link,
+    .profile-owner-link {
       max-width: 38ch;
     }
 
@@ -2089,6 +2307,7 @@
     .browse-section,
     .profile-main,
     .request-main,
+    .owner-main,
     .guide-hub,
     .guide-principles,
     .uncertainty-note,
@@ -2148,7 +2367,8 @@
     .profile-landing-links li,
     .source-list li,
     .profile-note,
-    .landing-faq dl > div {
+    .landing-faq dl > div,
+    .owner-profile-facts > div {
       grid-template-columns: 1fr;
       gap: 0.35rem;
     }
@@ -2163,12 +2383,14 @@
     }
 
     .correction-form,
-    .buyer-request-form {
+    .buyer-request-form,
+    .owner-enquiry-form {
       grid-template-columns: 1fr;
     }
 
     .correction-form > *,
-    .buyer-request-form > * {
+    .buyer-request-form > *,
+    .owner-enquiry-form > * {
       grid-column: 1;
     }
 
