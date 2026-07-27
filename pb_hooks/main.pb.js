@@ -277,6 +277,9 @@ onRecordEnrich((event) => {
       "valuation_order_backlog",
       "valuation_ev_low_eur",
       "valuation_ev_high_eur",
+      "valuation_multiple_low",
+      "valuation_multiple_high",
+      // Legacy field names remain confidential but are not part of the request contract.
       "valuation_ebitda_multiple_low",
       "valuation_ebitda_multiple_high",
       "honeypot"
@@ -326,16 +329,16 @@ onRecordCreateRequest((event) => {
     "valuation_order_backlog",
     "valuation_ev_low_eur",
     "valuation_ev_high_eur",
-    "valuation_ebitda_multiple_low",
-    "valuation_ebitda_multiple_high",
+    "valuation_multiple_low",
+    "valuation_multiple_high",
   ];
   const valuationNumberFields = [
     "valuation_revenue_eur",
     "valuation_ebitda_eur",
     "valuation_ev_low_eur",
     "valuation_ev_high_eur",
-    "valuation_ebitda_multiple_low",
-    "valuation_ebitda_multiple_high",
+    "valuation_multiple_low",
+    "valuation_multiple_high",
   ];
   const valuationSelectFields = [
     "valuation_owner_involvement",
@@ -420,11 +423,11 @@ onRecordCreateRequest((event) => {
     ]);
     const evLowEur = readCurrency("valuation_ev_low_eur", true, maxEvEur);
     const evHighEur = readCurrency("valuation_ev_high_eur", true, maxEvEur);
-    const multipleLow = readMultiple("valuation_ebitda_multiple_low");
-    const multipleHigh = readMultiple("valuation_ebitda_multiple_high");
+    const multipleLow = readMultiple("valuation_multiple_low");
+    const multipleHigh = readMultiple("valuation_multiple_high");
 
     if (multipleLow > multipleHigh) {
-      fail("valuation_ebitda_multiple_low", "unordered_valuation_multiples", "Apatinis EBITDA daugiklis negali būti didesnis už viršutinį.");
+      fail("valuation_multiple_low", "unordered_valuation_multiples", "Apatinis EBITDA daugiklis negali būti didesnis už viršutinį.");
     }
     if (evLowEur > evHighEur) {
       fail("valuation_ev_low_eur", "unordered_valuation_range", "Apatinė įmonės vertė negali būti didesnė už viršutinę.");
@@ -538,8 +541,8 @@ onRecordAfterCreateSuccess((event) => {
       const valuationRevenueEur = Number(record.get("valuation_revenue_eur"));
       const valuationEvLowEur = Number(record.get("valuation_ev_low_eur"));
       const valuationEvHighEur = Number(record.get("valuation_ev_high_eur"));
-      const valuationMultipleLow = Number(record.get("valuation_ebitda_multiple_low"));
-      const valuationMultipleHigh = Number(record.get("valuation_ebitda_multiple_high"));
+      const valuationMultipleLow = Number(record.get("valuation_multiple_low"));
+      const valuationMultipleHigh = Number(record.get("valuation_multiple_high"));
       const ownerInvolvement = record.getString("valuation_owner_involvement");
       const customerConcentration = record.getString("valuation_customer_concentration");
       const orderBacklog = record.getString("valuation_order_backlog");
