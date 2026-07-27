@@ -270,6 +270,15 @@ onRecordEnrich((event) => {
       "contact_name",
       "contact_email",
       "contact_phone",
+      "valuation_revenue_eur",
+      "valuation_ebitda_eur",
+      "valuation_owner_involvement",
+      "valuation_customer_concentration",
+      "valuation_order_backlog",
+      "valuation_ev_low_eur",
+      "valuation_ev_high_eur",
+      "valuation_ebitda_multiple_low",
+      "valuation_ebitda_multiple_high",
       "honeypot"
     );
   }
@@ -307,6 +316,131 @@ onRecordCreateRequest((event) => {
   }
   event.record.set("contact_email", contactEmail);
   event.record.set("contact_phone", event.record.getString("contact_phone").trim().replace(/\s+/g, " "));
+
+  const body = event.requestInfo().body || {};
+  const valuationFields = [
+    "valuation_revenue_eur",
+    "valuation_ebitda_eur",
+    "valuation_owner_involvement",
+    "valuation_customer_concentration",
+    "valuation_order_backlog",
+    "valuation_ev_low_eur",
+    "valuation_ev_high_eur",
+    "valuation_ebitda_multiple_low",
+    "valuation_ebitda_multiple_high",
+  ];
+  const valuationNumberFields = [
+    "valuation_revenue_eur",
+    "valuation_ebitda_eur",
+    "valuation_ev_low_eur",
+    "valuation_ev_high_eur",
+    "valuation_ebitda_multiple_low",
+    "valuation_ebitda_multiple_high",
+  ];
+  const valuationSelectFields = [
+    "valuation_owner_involvement",
+    "valuation_customer_concentration",
+    "valuation_order_backlog",
+  ];
+  const isAbsent = (value) => value === undefined || value === null || (typeof value === "string" && value.trim() === "");
+  const submittedValuationFields = valuationFields.filter((name) => !isAbsent(body[name]));
+
+  if (submittedValuationFields.length === 0) {
+    // Keep the legacy owner form fully optional, including when it submits blank fields.
+    for (const name of valuationNumberFields) {
+      event.record.set(name, null);
+    }
+    for (const name of valuationSelectFields) {
+      event.record.set(name, "");
+    }
+  } else {
+    if (submittedValuationFields.length !== valuationFields.length) {
+      fail("valuation_revenue_eur", "incomplete_valuation_context", "Nurodykite visą vertės orientyro informaciją arba jos nepildykite.");
+    }
+
+    const maxCurrencyEur = 1000000000000;
+    const maxEvEur = 20000000000000;
+    const readCurrency = (name, mustBePositive, maximum) => {
+      const value = body[name];
+      if (typeof value !== "number" || !Number.isFinite(value)) {
+        fail(name, "invalid_valuation_number", "Nurodykite galiojantį skaičių eurais.");
+      }
+      if (value < 0) {
+        fail(name, "negative_valuation_number", "Suma eurais negali būti neigiama.");
+      }
+      if (mustBePositive && value <= 0) {
+        const message = name === "valuation_ebitda_eur"
+          ? "EBITDA turi būti didesnė už nulį."
+          : "Įmonės vertė turi būti didesnė už nulį.";
+        fail(name, "nonpositive_valuation_number", message);
+      }
+      if (value > maximum) {
+        fail(name, "valuation_number_too_large", "Suma eurais yra per didelė.");
+      }
+      event.record.set(name, value);
+      return value;
+    };
+    const readMultiple = (name) => {
+      const value = body[name];
+      if (typeof value !== "number" || !Number.isFinite(value) || value < 1 || value > 20) {
+        fail(name, "invalid_valuation_multiple", "EBITDA daugiklis turi būti nuo 1 iki 20.");
+      }
+      event.record.set(name, value);
+      return value;
+    };
+    const readChoice = (name, values) => {
+      const value = body[name];
+      if (typeof value !== "string") {
+        fail(name, "invalid_valuation_choice", "Pasirinkite tinkamą vertės orientyro variantą.");
+      }
+      const normalized = value.trim();
+      if (!values.includes(normalized)) {
+        fail(name, "invalid_valuation_choice", "Pasirinkite tinkamą vertės orientyro variantą.");
+      }
+      event.record.set(name, normalized);
+      return normalized;
+    };
+
+    readCurrency("valuation_revenue_eur", false, maxCurrencyEur);
+    const ebitdaEur = readCurrency("valuation_ebitda_eur", true, maxCurrencyEur);
+    readChoice("valuation_owner_involvement", [
+      "Kasdienis operacinis vaidmuo",
+      "Dalinė operacinė veikla",
+      "Nedalyvauja kasdienėje veikloje",
+    ]);
+    readChoice("valuation_customer_concentration", [
+      "Nė vienas klientas nesudaro daugiau nei 20 % pajamų",
+      "Didžiausias klientas sudaro 20–40 % pajamų",
+      "Didžiausias klientas sudaro daugiau nei 40 % pajamų",
+    ]);
+    readChoice("valuation_order_backlog", [
+      "Mažiau nei 3 mėn.",
+      "3–6 mėn.",
+      "Daugiau nei 6 mėn.",
+    ]);
+    const evLowEur = readCurrency("valuation_ev_low_eur", true, maxEvEur);
+    const evHighEur = readCurrency("valuation_ev_high_eur", true, maxEvEur);
+    const multipleLow = readMultiple("valuation_ebitda_multiple_low");
+    const multipleHigh = readMultiple("valuation_ebitda_multiple_high");
+
+    if (multipleLow > multipleHigh) {
+      fail("valuation_ebitda_multiple_low", "unordered_valuation_multiples", "Apatinis EBITDA daugiklis negali būti didesnis už viršutinį.");
+    }
+    if (evLowEur > evHighEur) {
+      fail("valuation_ev_low_eur", "unordered_valuation_range", "Apatinė įmonės vertė negali būti didesnė už viršutinę.");
+    }
+
+    // The indicator stores EUR values rounded to whole euros. Do not trust a
+    // client-side range unless it matches the submitted EBITDA and multiples.
+    const roundingToleranceEur = 1;
+    if (Math.abs(evLowEur - ebitdaEur * multipleLow) > roundingToleranceEur) {
+      fail("valuation_ev_low_eur", "inconsistent_valuation_range", "Apskaičiuota apatinė įmonės vertė neatitinka EBITDA ir daugiklio.");
+    }
+    if (Math.abs(evHighEur - ebitdaEur * multipleHigh) > roundingToleranceEur) {
+      fail("valuation_ev_high_eur", "inconsistent_valuation_range", "Apskaičiuota viršutinė įmonės vertė neatitinka EBITDA ir daugiklio.");
+    }
+  }
+
   event.record.set("status", "new");
   event.record.set("honeypot", "");
 
@@ -390,7 +524,7 @@ onRecordAfterCreateSuccess((event) => {
   }
 
   try {
-    const summary = [
+    const summaryLines = [
       "Įmonė: " + companyName,
       "Miestas: " + city,
       "Sektorius: " + sector,
@@ -398,7 +532,43 @@ onRecordAfterCreateSuccess((event) => {
       "EBITDA riba: " + ebitdaBand,
       "Situacija: " + ownershipSuccessionSituation,
       "Laikotarpis: " + timeline,
-    ].join("\n");
+    ];
+    const valuationEbitdaEur = Number(record.get("valuation_ebitda_eur"));
+    if (Number.isFinite(valuationEbitdaEur) && valuationEbitdaEur > 0) {
+      const valuationRevenueEur = Number(record.get("valuation_revenue_eur"));
+      const valuationEvLowEur = Number(record.get("valuation_ev_low_eur"));
+      const valuationEvHighEur = Number(record.get("valuation_ev_high_eur"));
+      const valuationMultipleLow = Number(record.get("valuation_ebitda_multiple_low"));
+      const valuationMultipleHigh = Number(record.get("valuation_ebitda_multiple_high"));
+      const ownerInvolvement = record.getString("valuation_owner_involvement");
+      const customerConcentration = record.getString("valuation_customer_concentration");
+      const orderBacklog = record.getString("valuation_order_backlog");
+      const formatEur = (value) => Math.round(value) + " €";
+
+      if (
+        Number.isFinite(valuationRevenueEur) &&
+        Number.isFinite(valuationEvLowEur) &&
+        Number.isFinite(valuationEvHighEur) &&
+        Number.isFinite(valuationMultipleLow) &&
+        Number.isFinite(valuationMultipleHigh) &&
+        ownerInvolvement &&
+        customerConcentration &&
+        orderBacklog
+      ) {
+        summaryLines.push(
+          "Vertinimo kontekstas: pajamos " + formatEur(valuationRevenueEur) +
+          "; EBITDA " + formatEur(valuationEbitdaEur) +
+          "; savininko vaidmuo: " + ownerInvolvement +
+          "; klientų koncentracija: " + customerConcentration +
+          "; užsakymų portfelis: " + orderBacklog
+        );
+        summaryLines.push(
+          "Vertės intervalas: " + formatEur(valuationEvLowEur) + "–" + formatEur(valuationEvHighEur) +
+          " (" + valuationMultipleLow + "–" + valuationMultipleHigh + "× EBITDA)"
+        );
+      }
+    }
+    const summary = summaryLines.join("\n");
     const response = $http.send({
       method: "POST",
       url: eventsUrl,
