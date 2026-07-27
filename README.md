@@ -116,6 +116,31 @@ Pirkėjo užklausa **nėra automatiškai persiunčiama gamintojams ar kitoms tre
 
 `buyer_requests` schema įvedama nauja idempotentine migracija. Backend redeploy metu migracija saugiai sukuria trūkstamą kolekciją arba suvienodina dalinai sukurtą schemą, laukus, taisykles ir eilės indeksą; pakartotinis paleidimas po nutrūkusio bandymo neturi kurti dublikatų. Jau sėkmingai pritaikytos migracijos PocketBase antrą kartą nevykdo, todėl būsimiems schemos pakeitimams būtinas naujas vėlesnio laiko migracijos failas. Pakeitus `pb_migrations/` arba `pb_hooks/`, reikia vieno backend redeploy ir po jo patikrinti gyvą schemą bei realų anoniminio pateikimo kelią; vien frontend deploy šių pakeitimų nepritaiko.
 
+## Savininkų konfidencialios užklausos
+
+`owner_enquiries` yra privati eilė įmonių savininkams, svarstantiems įpėdinystę, veiklos tęstinumą ar pardavimą ir norintiems pradėti tiesioginę privačią diskusiją su pirkėju. Anoniminis lankytojas gali tik sukurti užklausą. Viešas sąrašas, atskiro įrašo peržiūra, keitimas ir trynimas yra uždaryti; ne superuseriui net sukūrimo atsakyme negrąžinami įmonės, finansiniai, situacijos, laisvo teksto, kontaktiniai ar `honeypot` duomenys.
+
+| Laukas | Reikšmė |
+| --- | --- |
+| `company_name` | Nurodytas įmonės pavadinimas. |
+| `city` | Nurodytas miestas. |
+| `sector` | Nurodytas veiklos sektorius. |
+| `revenue_band` | Viena pasirenkama pajamų riba. |
+| `ebitda_band` | Viena pasirenkama EBITDA riba. |
+| `ownership_succession_situation` | Viena pasirenkama nuosavybės, įpėdinystės ar tęstinumo situacija. |
+| `timeline` | Vienas pasirenkamas pageidaujamas laikotarpis. |
+| `message` | Savininko laisvo teksto žinutė operatoriaus peržiūrai. |
+| `contact_name`, `contact_email`, `contact_phone` | Privatūs pateikėjo kontaktai; telefonas neprivalomas. |
+| `status` | Serverio nustatoma pradinė būsena `new`; naršyklės pateikimas jos nekontroliuoja. |
+| `honeypot` | Neviešas anti-abuse laukas; užpildyta reikšmė pateikimą atmeta. |
+| `created` | Automatinis pateikimo laikas operatoriaus eilės rikiavimui. |
+
+Serveris apkarpo tekstines reikšmes, mažosiomis raidėmis normalizuoja el. paštą, normalizuoja neprivalomą telefoną ir atmeta per ilgą el. pašto adresą. Užklausos kontaktai, žinutė ir finansiniai duomenys lieka privačioje eilėje. Užklausa **niekada nėra persiunčiama kataloge nurodytam gamintojui, kataloge surastam savininkui ar kitam adresatui**.
+
+Sėkmingai išsaugojus, patvirtinimas siunčiamas tik pateikėjo `contact_email`. Jame nurodoma, kad užklausa gauta Lietuvos ETA, skirta tiesioginei privačiai diskusijai su pirkėju, nebus persiųsta katalogo įmonei ir nėra pasiūlymas ar vertinimas. Dashboard gauna įvykį tik su nekontaktine suvestine (įmonė, miestas, sektorius, pajamų ir EBITDA ribos, situacija bei laikotarpis), be el. pašto, telefono ar žinutės teksto. El. pašto ar dashboard pranešimo klaida registruojama žurnale ir jau išsaugotos užklausos neatšaukia.
+
+`owner_enquiries` schema įvedama idempotentine migracija: ji saugiai sukuria trūkstamą kolekciją arba suvienodina po dalinio paleidimo likusius laukus, taisykles ir būsenos eilės indeksą, išlaikydama esamų laukų identifikatorius. Rollback yra nedestruktyvus ir pateiktų užklausų netrina.
+
 ## Frontend build ir statinis SEO
 
 Įdiekite tik lockfile nurodytas priklausomybes ir paleiskite build:

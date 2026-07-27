@@ -255,3 +255,171 @@ onRecordAfterCreateSuccess((event) => {
     );
   }
 }, "buyer_requests");
+
+onRecordEnrich((event) => {
+  if (!event.requestInfo.auth || !event.requestInfo.auth.isSuperuser()) {
+    event.record.hide(
+      "company_name",
+      "city",
+      "sector",
+      "revenue_band",
+      "ebitda_band",
+      "ownership_succession_situation",
+      "timeline",
+      "message",
+      "contact_name",
+      "contact_email",
+      "contact_phone",
+      "honeypot"
+    );
+  }
+  event.next();
+}, "owner_enquiries");
+
+onRecordCreateRequest((event) => {
+  const fail = (field, code, message) => {
+    const data = {};
+    data[field] = new ValidationError(code, message);
+    throw new BadRequestError("Patikrinkite pateiktus duomenis.", data);
+  };
+
+  const honeypot = event.record.getString("honeypot").trim();
+  if (honeypot) {
+    fail("honeypot", "invalid_honeypot", "Pateikimas atmestas.");
+  }
+
+  const trimField = (name) => {
+    event.record.set(name, event.record.getString(name).trim());
+  };
+  trimField("company_name");
+  trimField("city");
+  trimField("sector");
+  trimField("revenue_band");
+  trimField("ebitda_band");
+  trimField("ownership_succession_situation");
+  trimField("timeline");
+  trimField("message");
+  trimField("contact_name");
+
+  const contactEmail = event.record.getString("contact_email").trim().toLowerCase();
+  if (contactEmail.length > 254) {
+    fail("contact_email", "email_too_long", "El. pašto adresas per ilgas.");
+  }
+  event.record.set("contact_email", contactEmail);
+  event.record.set("contact_phone", event.record.getString("contact_phone").trim().replace(/\s+/g, " "));
+  event.record.set("status", "new");
+  event.record.set("honeypot", "");
+
+  event.next();
+}, "owner_enquiries");
+
+onRecordAfterCreateSuccess((event) => {
+  event.next();
+
+  const record = event.record;
+  const contactEmail = record.getString("contact_email");
+  const companyName = record.getString("company_name");
+  const city = record.getString("city");
+  const sector = record.getString("sector");
+  const revenueBand = record.getString("revenue_band");
+  const ebitdaBand = record.getString("ebitda_band");
+  const ownershipSuccessionSituation = record.getString("ownership_succession_situation");
+  const timeline = record.getString("timeline");
+
+  const agentMailKey = $os.getenv("AGENTMAIL_API_KEY");
+  const agentMailInbox = $os.getenv("AGENTMAIL_INBOX_ID");
+  if (!agentMailKey || !agentMailInbox) {
+    event.app.logger().error(
+      "Owner enquiry confirmation email skipped because AgentMail environment is unavailable",
+      "recordId",
+      record.id
+    );
+  } else {
+    try {
+      const plainText = [
+        "Jūsų konfidenciali savininko užklausa gauta.",
+        "",
+        "Ją gavo Lietuvos ETA, kad galėtume pradėti tiesioginę privačią diskusiją su pirkėju.",
+        "Užklausa nebus persiųsta jokiai kataloge nurodytai įmonei.",
+        "Pateikimas nėra pasiūlymas ar vertinimas.",
+      ].join("\n");
+      const html = [
+        "<p>Jūsų konfidenciali savininko užklausa gauta.</p>",
+        "<p>Ją gavo Lietuvos ETA, kad galėtume pradėti tiesioginę privačią diskusiją su pirkėju.</p>",
+        "<p>Užklausa nebus persiųsta jokiai kataloge nurodytai įmonei.</p>",
+        "<p>Pateikimas nėra pasiūlymas ar vertinimas.</p>",
+      ].join("");
+      const response = $http.send({
+        method: "POST",
+        url: "https://api.agentmail.to/v0/inboxes/" + encodeURIComponent(agentMailInbox) + "/messages/send",
+        headers: {
+          "Authorization": "Bearer " + agentMailKey,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: [contactEmail],
+          subject: "Jūsų konfidenciali savininko užklausa gauta",
+          text: plainText,
+          html: html,
+          labels: ["app"],
+        }),
+        timeout: 15,
+      });
+      if (response.statusCode < 200 || response.statusCode >= 300) {
+        throw new Error("AgentMail returned HTTP " + response.statusCode);
+      }
+    } catch (err) {
+      event.app.logger().error(
+        "Owner enquiry confirmation email failed",
+        "recordId",
+        record.id,
+        "error",
+        String(err)
+      );
+    }
+  }
+
+  const eventsUrl = $os.getenv("SUPERNAUT_EVENTS_URL");
+  if (!eventsUrl) {
+    event.app.logger().error(
+      "Owner enquiry dashboard notification skipped because SUPERNAUT_EVENTS_URL is unavailable",
+      "recordId",
+      record.id
+    );
+    return;
+  }
+
+  try {
+    const summary = [
+      "Įmonė: " + companyName,
+      "Miestas: " + city,
+      "Sektorius: " + sector,
+      "Pajamų riba: " + revenueBand,
+      "EBITDA riba: " + ebitdaBand,
+      "Situacija: " + ownershipSuccessionSituation,
+      "Laikotarpis: " + timeline,
+    ].join("\n");
+    const response = $http.send({
+      method: "POST",
+      url: eventsUrl,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event: "owner_enquiry_created",
+        subject: "Nauja konfidenciali savininko užklausa",
+        text: summary,
+      }),
+      timeout: 15,
+    });
+    if (response.statusCode < 200 || response.statusCode >= 300) {
+      throw new Error("SUPERNAUT_EVENTS_URL returned HTTP " + response.statusCode);
+    }
+  } catch (err) {
+    event.app.logger().error(
+      "Owner enquiry dashboard notification failed",
+      "recordId",
+      record.id,
+      "error",
+      String(err)
+    );
+  }
+}, "owner_enquiries");
