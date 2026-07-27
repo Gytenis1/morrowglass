@@ -997,6 +997,7 @@
   }
 
   .profile-details,
+  .profile-landings,
   .provenance-section,
   .correction-section {
     display: grid;
@@ -1005,6 +1006,7 @@
   }
 
   .profile-details,
+  .profile-landings,
   .provenance-section {
     border-bottom: 1px solid var(--line);
   }
@@ -1031,6 +1033,54 @@
   .source-list a {
     color: var(--pine-strong);
     overflow-wrap: anywhere;
+  }
+
+  .profile-landings nav {
+    width: 100%;
+    display: block;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  .profile-landing-links {
+    border-top: 1px solid var(--line);
+  }
+
+  .profile-landing-links li {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(150px, 0.28fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .profile-landing-links li:last-child {
+    border-bottom: 0;
+  }
+
+  .profile-landing-kind {
+    padding-block: 0.8rem;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .profile-landing-links a {
+    min-width: 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.65rem;
+    color: var(--pine-strong);
+    font-weight: 800;
+    overflow-wrap: anywhere;
+  }
+
+  .profile-landing-links a span {
+    flex: 0 0 auto;
   }
 
   .unknown-value {
@@ -1689,11 +1739,21 @@
     }
 
     .profile-facts > div,
+    .profile-landing-links li,
     .source-list li,
     .profile-note,
     .landing-faq dl > div {
       grid-template-columns: 1fr;
       gap: 0.35rem;
+    }
+
+    .profile-landing-kind {
+      padding-bottom: 0;
+    }
+
+    .profile-landing-links a {
+      padding-top: 0.25rem;
+      padding-bottom: 0.8rem;
     }
 
     .correction-form {

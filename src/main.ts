@@ -53,6 +53,12 @@ type GuideArticle = {
   readingLabel: string;
 };
 
+type ProfileLandingLink = {
+  kind: 'Miestas' | 'Kategorija';
+  slug: string;
+  label: string;
+};
+
 const PAGE_SIZE = 50;
 const collator = new Intl.Collator('lt', { sensitivity: 'base' });
 const root = document.querySelector<HTMLElement>('#app');
@@ -285,6 +291,57 @@ function renderFooter(): string {
       <p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p>
     </footer>
   `;
+}
+
+function getProfileLandingLinks(record: Manufacturer): ProfileLandingLink[] {
+  const links: ProfileLandingLink[] = [];
+  const city = record.city?.trim();
+  const eligibleCity = city
+    ? getEligibleCities(manufacturers).find((entry) => entry.city === city)
+    : undefined;
+
+  if (eligibleCity) {
+    links.push({
+      kind: 'Miestas',
+      slug: eligibleCity.slug,
+      label: `Baldų gamintojų kandidatai: ${eligibleCity.city}`,
+    });
+  }
+
+  const categoryCodes = new Set(asStringArray(record.category_codes));
+  CATEGORY_LANDINGS.forEach((category) => {
+    if (categoryCodes.has(category.code)) {
+      links.push({ kind: 'Kategorija', slug: category.slug, label: category.title });
+    }
+  });
+
+  return links;
+}
+
+function createProfileLandingSection(record: Manufacturer): HTMLElement | null {
+  const links = getProfileLandingLinks(record);
+  if (!links.length) return null;
+
+  const section = document.createElement('section');
+  section.className = 'profile-landings';
+  section.setAttribute('aria-labelledby', 'profile-landings-title');
+  section.innerHTML = `
+    <div class="section-heading">
+      <h2 id="profile-landings-title">Toliau naršykite pagal šį įrašą</h2>
+      <p>Kategorijų nuorodos atitinka šiame įraše užfiksuotas šaltinių žymas. Miesto puslapis rodomas tik tada, kai kataloge jam yra pakankamai įrašų.</p>
+    </div>
+    <nav aria-label="Susiję katalogo puslapiai">
+      <ul class="profile-landing-links">
+        ${links.map((link) => `
+          <li>
+            <span class="profile-landing-kind">${link.kind}</span>
+            <a href="/baldai-pagal-uzsakyma/${link.slug}" data-internal-link="true">${escapeHtml(link.label)} <span aria-hidden="true">→</span></a>
+          </li>
+        `).join('')}
+      </ul>
+    </nav>
+  `;
+  return section;
 }
 
 function renderLandingDirectory(): string {
@@ -1158,7 +1215,10 @@ function renderProfile(record: Manufacturer | undefined): void {
   );
   details.append(detailsHeading, facts);
 
-  article.append(hero, note, details, createSourceSection(record), createCorrectionSection(record));
+  const profileLandings = createProfileLandingSection(record);
+  article.append(hero, note, details);
+  if (profileLandings) article.append(profileLandings);
+  article.append(createSourceSection(record), createCorrectionSection(record));
   main.append(back, article);
 }
 
