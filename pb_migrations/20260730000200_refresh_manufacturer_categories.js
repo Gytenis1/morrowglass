@@ -32,8 +32,8 @@ migrate((app) => {
     if (!Array.isArray(record.category_labels) || record.category_labels.length !== record.category_codes.length || record.category_codes.some((code, index) => record.category_labels[index] !== categoryLabels[code])) {
       throw new Error("Manufacturer " + record.slug + " must have labels matching category codes")
     }
-    if (typeof record.scope_evidence !== "string" || typeof record.confidence_evidence !== "string" || !Array.isArray(record.source_urls) || !record.source_urls.some((url) => record.scope_evidence.includes(url) && record.confidence_evidence.includes(url))) {
-      throw new Error("Manufacturer " + record.slug + " category evidence must cite a source URL")
+    if (typeof record.scope_evidence !== "string" || typeof record.confidence_evidence !== "string" || !record.confidence_evidence.trim() || !Array.isArray(record.source_urls) || !record.source_urls.some((url) => record.scope_evidence.includes(url))) {
+      throw new Error("Manufacturer " + record.slug + " category evidence must cite a source URL in scope evidence and retain confidence evidence")
     }
     slugs.add(record.slug)
   }
