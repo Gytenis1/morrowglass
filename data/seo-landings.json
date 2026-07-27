@@ -1,0 +1,61 @@
+{
+  "categories": [
+    {
+      "code": "K",
+      "slug": "virtuves-baldai",
+      "title": "Virtuvės baldai pagal užsakymą",
+      "intro": "Ieškantiems virtuvės baldų pagal užsakymą čia pateikiami viešuose šaltiniuose su šia kategorija susieti Lietuvos gamintojų kandidatai.",
+      "buyer_note": "Prieš kreipdamiesi palyginkite, ar kandidatas patvirtina jūsų projekto medžiagas, furnitūrą, matavimo, pristatymo ir montavimo apimtį. Kategorijos žyma nėra kokybės, užimtumo ar tinkamumo garantija."
+    },
+    {
+      "code": "W",
+      "slug": "spintos-ir-imontuojami-baldai",
+      "title": "Spintos ir įmontuojami baldai pagal užsakymą",
+      "intro": "Šiame puslapyje surinkti viešuose šaltiniuose su spintomis ir įmontuojamais baldais susieti Lietuvos gamintojų kandidatai.",
+      "buyer_note": "Užklausoje nurodykite angų matmenis, vidaus įrangą, durų tipą, medžiagas ir montavimo sąlygas. Katalogo kategorija tik padeda pradėti atranką ir nepatvirtina dabartinės gamintojo pasiūlos."
+    },
+    {
+      "code": "BB",
+      "slug": "miegamojo-ir-vonios-baldai",
+      "title": "Miegamojo ir vonios baldai pagal užsakymą",
+      "intro": "Čia pateikiami viešuose šaltiniuose su miegamojo arba vonios baldais susieti Lietuvos gamintojų kandidatai.",
+      "buyer_note": "Patikslinkite, kokiai patalpai skirtas projektas, kokios drėgmės sąlygos, medžiagos, furnitūra ir montavimo darbai įtraukiami. Įrašai yra nepatvirtinti ir nėra rekomendacijos."
+    },
+    {
+      "code": "OC",
+      "slug": "biuro-ir-komerciniai-baldai",
+      "title": "Biuro ir komerciniai baldai pagal užsakymą",
+      "intro": "Puslapyje pateikiami viešuose šaltiniuose su biuro ar komerciniais baldais susieti Lietuvos gamintojų kandidatai.",
+      "buyer_note": "Aprašykite patalpų paskirtį, naudotojų skaičių, medžiagų ir atsparumo reikalavimus, pristatymo etapus bei montavimo ribas. Viešas įrašas nepatvirtina pajėgumo ar tinkamumo konkrečiam objektui."
+    },
+    {
+      "code": "HR",
+      "slug": "horeca-ir-prekybos-baldai",
+      "title": "HoReCa ir prekybos baldai pagal užsakymą",
+      "intro": "Čia pateikiami viešuose šaltiniuose su HoReCa arba prekybos baldais susieti Lietuvos gamintojų kandidatai.",
+      "buyer_note": "Prieš atranką įvardykite objekto paskirtį, naudojimo intensyvumą, medžiagų reikalavimus, darbų etapus ir terminų prielaidas. Kategorija nėra patvirtinimas, kad kandidatas šiuo metu priima tokį užsakymą."
+    },
+    {
+      "code": "U",
+      "slug": "minksti-baldai",
+      "title": "Minkšti baldai pagal užsakymą",
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su minkštais baldais pagal užsakymą susieti Lietuvos gamintojų kandidatai.",
+      "buyer_note": "Užklausoje palyginkite konstrukciją, užpildus, audinius, matmenis, pristatymą ir garantines sąlygas. Viešo šaltinio kategorija nepatvirtina konkretaus modelio, kainos ar termino."
+    },
+    {
+      "code": "SW",
+      "slug": "medzio-darbai-ir-masyvo-baldai",
+      "title": "Medžio darbai ir medžio masyvo baldai",
+      "intro": "Čia pateikiami viešuose šaltiniuose su medžio darbais arba medžio masyvo baldais susieti Lietuvos gamintojų kandidatai.",
+      "buyer_note": "Patikslinkite medienos rūšį, drėgnumą, konstrukciją, apdailą, priežiūrą ir montavimo apimtį. Katalogas nevertina meistrystės ir negarantuoja, kad kandidatas imsis konkretaus projekto."
+    },
+    {
+      "code": "MM",
+      "slug": "metalo-ir-misriu-medziagu-baldai",
+      "title": "Metalo ir mišrių medžiagų baldai pagal užsakymą",
+      "intro": "Puslapyje pateikiami viešuose šaltiniuose su metalo arba mišrių medžiagų baldais susieti Lietuvos gamintojų kandidatai.",
+      "buyer_note": "Užklausoje aprašykite konstrukciją, medžiagų derinius, paviršių apdailą, apkrovas ir montavimo sąlygas. Viešas įrašas nėra techninių galimybių ar dabartinio užimtumo patvirtinimas."
+    }
+  ],
+  "cityThreshold": 5
+}

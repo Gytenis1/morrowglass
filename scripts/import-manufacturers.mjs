@@ -4,12 +4,15 @@ import { readFile } from "node:fs/promises";
 const HELP = `Usage:
   PB_URL=https://api.example PB_ADMIN_EMAIL=admin@example.com \\
     PB_ADMIN_PASSWORD='...' node scripts/import-manufacturers.mjs
+  PB_URL=https://api.example PB_ADMIN_EMAIL=admin@example.com \\
+    PB_ADMIN_PASSWORD='...' node scripts/import-manufacturers.mjs --prune
   node scripts/import-manufacturers.mjs --validate
   node scripts/import-manufacturers.mjs --help
 
 The normal command authenticates as a PocketBase superuser, then creates or updates
-all data/manufacturers.json records by unique slug. --validate only checks the local
-source file and does not require credentials or make network requests.`;
+all data/manufacturers.json records by unique slug. --prune also deletes backend
+records whose slugs are no longer in the versioned file. --validate only checks
+the local source file and does not require credentials or make network requests.`;
 
 const sourceUrl = new URL("../data/manufacturers.json", import.meta.url);
 const requiredFields = [
@@ -18,12 +21,22 @@ const requiredFields = [
   "confidence_evidence", "scope_evidence", "evidence_source_type", "source_urls",
   "source_artifact_url", "source_collection_date", "verification_status",
 ];
-const categoryCodes = new Set(["K", "W", "BB", "OC", "HR", "U", "SW", "MM"]);
+const categoryLabels = new Map([
+  ["K", "Virtuvės baldai"],
+  ["W", "Spintos ir įmontuojami baldai"],
+  ["BB", "Miegamojo ir vonios baldai"],
+  ["OC", "Biuro ir komerciniai baldai"],
+  ["HR", "HoReCa ir prekybos baldai"],
+  ["U", "Minkšti baldai pagal užsakymą"],
+  ["SW", "Medžio darbai ir medžio masyvo baldai"],
+  ["MM", "Metalo ir mišrių medžiagų baldai"],
+]);
+const categoryCodes = new Set(categoryLabels.keys());
 const regions = new Set(["vilnius-east-south", "kaunas-north", "klaipeda-panevezys-west-central"]);
 
 function validate(records) {
-  if (!Array.isArray(records) || records.length !== 121) {
-    throw new Error(`Expected exactly 121 manufacturer records; found ${Array.isArray(records) ? records.length : "non-array JSON"}`);
+  if (!Array.isArray(records) || records.length === 0) {
+    throw new Error(`Expected a non-empty manufacturer array; found ${Array.isArray(records) ? records.length : "non-array JSON"}`);
   }
 
   const slugs = new Set();
@@ -43,8 +56,13 @@ function validate(records) {
     if (!Array.isArray(record.category_labels) || record.category_labels.length !== record.category_codes.length) {
       throw new Error(`category_labels mismatch for ${record.slug}`);
     }
+    record.category_codes.forEach((code, categoryIndex) => {
+      if (record.category_labels[categoryIndex] !== categoryLabels.get(code)) {
+        throw new Error(`Unexpected label for category ${code} on ${record.slug}`);
+      }
+    });
     if (!Array.isArray(record.source_urls) || !record.source_urls.length) throw new Error(`Missing source_urls for ${record.slug}`);
-    if (record.source_collection_date !== "2026-07-27") throw new Error(`Unexpected source date for ${record.slug}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(record.source_collection_date)) throw new Error(`Invalid source date for ${record.slug}`);
     if (record.verification_status !== "nepatvirtinta") throw new Error(`Unexpected verification status for ${record.slug}`);
   }
   return records;
@@ -89,6 +107,7 @@ const auth = await request(authUrl, {
 const headers = { authorization: auth.token, "content-type": "application/json" };
 let created = 0;
 let updated = 0;
+let deleted = 0;
 
 for (const record of records) {
   const listUrl = new URL("api/collections/manufacturers/records", baseUrl);
@@ -108,4 +127,27 @@ for (const record of records) {
   }
 }
 
-console.log(`Imported ${records.length} manufacturers: ${created} created, ${updated} updated.`);
+if (process.argv.includes("--prune")) {
+  const sourceSlugs = new Set(records.map((record) => record.slug));
+  let page = 1;
+  let totalPages = 1;
+  const staleRecords = [];
+  do {
+    const listUrl = new URL("api/collections/manufacturers/records", baseUrl);
+    listUrl.searchParams.set("page", String(page));
+    listUrl.searchParams.set("perPage", "200");
+    listUrl.searchParams.set("fields", "id,slug");
+    const result = await request(listUrl, { headers });
+    staleRecords.push(...result.items.filter((item) => !sourceSlugs.has(item.slug)));
+    totalPages = result.totalPages;
+    page++;
+  } while (page <= totalPages);
+
+  for (const stale of staleRecords) {
+    const deleteUrl = new URL(`api/collections/manufacturers/records/${stale.id}`, baseUrl);
+    await request(deleteUrl, { method: "DELETE", headers });
+    deleted++;
+  }
+}
+
+console.log(`Imported ${records.length} manufacturers: ${created} created, ${updated} updated, ${deleted} deleted.`);
