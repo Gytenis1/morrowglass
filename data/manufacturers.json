@@ -1,0 +1,4506 @@
+[
+  {
+    "slug": "baldu-arsenalas",
+    "legal_name": "UAB Baldų arsenalas",
+    "trading_name": "Baldų Arsenalas",
+    "source_identity": "UAB Baldų arsenalas — Baldų Arsenalas",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.balduarsenalas.lt/",
+    "public_contact_url": "https://www.balduarsenalas.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: “pagrindinė veikla – įvairių nestandartinių baldų gamyba”; Own site/M/P/H",
+    "scope_evidence": "Site: “pagrindinė veikla – įvairių nestandartinių baldų gamyba”",
+    "evidence_source_type": "Own site",
+    "source_urls": [
+      "https://www.balduarsenalas.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dgt-baldai",
+    "legal_name": "UAB DGT Baldai",
+    "trading_name": "DGT Baldai",
+    "source_identity": "UAB DGT Baldai — DGT Baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.dgtbaldai.lt/",
+    "public_contact_url": "https://www.dgtbaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: “projektuoja, gamina ir parduoda” multiple custom categories; Own site/M/P/H",
+    "scope_evidence": "Site: “projektuoja, gamina ir parduoda” multiple custom categories",
+    "evidence_source_type": "Own site",
+    "source_urls": [
+      "https://www.dgtbaldai.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sostines-baldai",
+    "legal_name": "UAB Sostinės baldai",
+    "trading_name": "Sostinės baldai",
+    "source_identity": "UAB Sostinės baldai — Sostinės baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://sostinesbaldai.lt/",
+    "public_contact_url": "https://sostinesbaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Directory: “projektavimo darbais ... baigiant montavimo darbais”; Own site + directory/M/P/H",
+    "scope_evidence": "Directory: “projektavimo darbais ... baigiant montavimo darbais”",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://sostinesbaldai.lt/",
+      "https://www.info.lt/imones/Sostin%C4%97s-baldai-Ekspozicinis-salonas-UAB/2208855"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "busto-baldai",
+    "legal_name": "UAB Būsto baldai",
+    "trading_name": "Būsto baldai",
+    "source_identity": "UAB Būsto baldai — Būsto baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: “nestandartinių korpusinių baldų gamyba pagal užsakymą”; Business directory/H/n/p/M",
+    "scope_evidence": "Directory: “nestandartinių korpusinių baldų gamyba pagal užsakymą”",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/paieskos-frazes/Baldai+pagal+u%C5%BEsakym%C4%85/vilnius/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-nestandartas",
+    "legal_name": "UAB Baldų nestandartas",
+    "trading_name": "Baldų nestandartas",
+    "source_identity": "UAB Baldų nestandartas — Baldų nestandartas",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://nestandartas.lt/",
+    "public_contact_url": "https://nestandartas.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site lists one Vilnius workshop/company contact; Own site + directory/M/P/H",
+    "scope_evidence": "Site lists one Vilnius workshop/company contact",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://nestandartas.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ar-bald",
+    "legal_name": "UAB Ar Bald",
+    "trading_name": "Ar Bald",
+    "source_identity": "UAB Ar Bald — Ar Bald",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://arbald.lt/",
+    "public_contact_url": "https://arbald.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site/directories: custom design and manufacture; company testimonial calls it UAB; Own site + directory/M/P/H",
+    "scope_evidence": "Site/directories: custom design and manufacture; company testimonial calls it UAB",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://arbald.lt/",
+      "https://arbald.lt/en/home-2/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "evaldo-baldai",
+    "legal_name": "UAB Evaldo baldai",
+    "trading_name": "Evaldo baldai",
+    "source_identity": "UAB Evaldo baldai — Evaldo baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: non-standard furniture made to individual orders or designers’ interior projects; Business directory/M/P/M",
+    "scope_evidence": "Directory: non-standard furniture made to individual orders or designers’ interior projects",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.info.lt/imones/Evaldo-baldai-UAB/2335694"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "viruna",
+    "legal_name": "UAB Virūna",
+    "trading_name": "Viruna",
+    "source_identity": "UAB Virūna — Viruna",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://viruna.lt/pages/about",
+    "public_contact_url": "https://viruna.lt/pages/about",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Directory: company founded in 1994 to solve non-standard furniture situations; Own site + directory/M/P/H",
+    "scope_evidence": "Directory: company founded in 1994 to solve non-standard furniture situations",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://viruna.lt/pages/about",
+      "https://www.1551.lt/viruna-uab-119617/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "fitsout",
+    "legal_name": "UAB Fitsout",
+    "trading_name": "FITSOUT",
+    "source_identity": "UAB Fitsout — FITSOUT",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "W",
+      "OC",
+      "HR",
+      "SW",
+      "MM"
+    ],
+    "category_labels": [
+      "Spintos ir įmontuojami baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Medžio darbai ir medžio masyvo baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://fitsout.com/",
+    "public_contact_url": "https://fitsout.com/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Directory: team has “more than 15 years experience” in tailored fit-out; Own site + directory/B/P/H",
+    "scope_evidence": "Directory: team has “more than 15 years experience” in tailored fit-out",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://fitsout.com/",
+      "https://rekvizitai.vz.lt/en/company/fitsout/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "enven",
+    "legal_name": "UAB Inovaciniai virtuozai",
+    "trading_name": "ENVEN",
+    "source_identity": "UAB Inovaciniai virtuozai — ENVEN",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "W",
+      "OC",
+      "HR",
+      "SW",
+      "MM"
+    ],
+    "category_labels": [
+      "Spintos ir įmontuojami baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Medžio darbai ir medžio masyvo baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://enven.lt/",
+    "public_contact_url": "https://enven.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Source: founded in 2014 by designers, architects and professional manufacturers; Own site + directory/M/P/H",
+    "scope_evidence": "Source: founded in 2014 by designers, architects and professional manufacturers",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://enven.lt/",
+      "https://rekvizitai.vz.lt/en/company/inovaciniai_virtuozai/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "solid-supply",
+    "legal_name": "UAB Solid Supply",
+    "trading_name": "Solid Supply",
+    "source_identity": "UAB Solid Supply — Solid Supply",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "OC",
+      "HR",
+      "U",
+      "MM"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Minkšti baldai pagal užsakymą",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://www.solidsupply.com/",
+    "public_contact_url": "https://www.solidsupply.com/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: “team of experienced professionals” and numerous retail/hotel/restaurant projects; Own site + directory/B/P/H",
+    "scope_evidence": "Site: “team of experienced professionals” and numerous retail/hotel/restaurant projects",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://www.solidsupply.com/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kigi-lt",
+    "legal_name": "UAB KIGI LT",
+    "trading_name": "KIGI LT",
+    "source_identity": "UAB KIGI LT — KIGI LT",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: established 2014; custom-furniture manufacture and installation; Business directory/M/n/p/M",
+    "scope_evidence": "Directory: established 2014; custom-furniture manufacture and installation",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/paieskos-frazes/AS-Baldai/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "saltum",
+    "legal_name": "UAB Saltum",
+    "trading_name": "Saltum",
+    "source_identity": "UAB Saltum — Saltum",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Ąžuolinės k., Vilniaus r.",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "W",
+      "BB",
+      "OC",
+      "U"
+    ],
+    "category_labels": [
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Public listing identifies a company making non-standard furniture; Directory + marketplace/M/n/p/M",
+    "scope_evidence": "Public listing identifies a company making non-standard furniture",
+    "evidence_source_type": "Directory + marketplace",
+    "source_urls": [
+      "https://www.1551.lt/saltum-uab-193942/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ukas",
+    "legal_name": "UAB Ūko baldai",
+    "trading_name": "Ūkas",
+    "source_identity": "UAB Ūko baldai — Ūkas",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR",
+      "U"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
+    "audience": "abiem",
+    "website": "https://www.ukas.lt/en/",
+    "public_contact_url": "https://www.ukas.lt/en/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: makes custom non-standard furniture for homes, offices, hotels, restaurants and other public uses; Own site + directories/M/P/H",
+    "scope_evidence": "Site: makes custom non-standard furniture for homes, offices, hotels, restaurants and other public uses",
+    "evidence_source_type": "Own site + directories",
+    "source_urls": [
+      "https://www.ukas.lt/en/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "protingi-baldai",
+    "legal_name": "UAB Protingi baldai",
+    "trading_name": "Protingi baldai",
+    "source_identity": "UAB Protingi baldai — Protingi baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "One registered company; custom-order product range in directory; Business directories/H/P/M",
+    "scope_evidence": "One registered company; custom-order product range in directory",
+    "evidence_source_type": "Business directories",
+    "source_urls": [
+      "https://geltoni.lt/imones/protingi-baldai-uab/19598"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-profesionalai",
+    "legal_name": "UAB Baldų profesionalai",
+    "trading_name": "Baldų profesionalai",
+    "source_identity": "UAB Baldų profesionalai — Baldų profesionalai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory lists solid-wood, custom, children’s and kitchen furniture manufacture; Business directory/H/n/p/M",
+    "scope_evidence": "Directory lists solid-wood, custom, children’s and kitchen furniture manufacture",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/baldu-profesionalai-uab-159565/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "l-a-r-a",
+    "legal_name": "UAB Lino baldai",
+    "trading_name": "L.A.R.A.",
+    "source_identity": "UAB Lino baldai — L.A.R.A.",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory lists kitchen, bathroom, bedroom, office and custom furniture manufacture; Business directory/M/n/p/M",
+    "scope_evidence": "Directory lists kitchen, bathroom, bedroom, office and custom furniture manufacture",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/lino-baldai-uab-158961/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "albruva",
+    "legal_name": "UAB Albruva",
+    "trading_name": "Albruva",
+    "source_identity": "UAB Albruva — Albruva",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: more than 20 years making custom furniture, including solid-wood pieces; Public marketplace profile/M/P/M",
+    "scope_evidence": "Directory: more than 20 years making custom furniture, including solid-wood pieces",
+    "evidence_source_type": "Public marketplace profile",
+    "source_urls": [
+      "https://www.1551.lt/albruva-uab-mediniai-baldai-mediniu-baldu-gamyba-vilniuje-101510/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baltic-master",
+    "legal_name": "UAB Baltic Master",
+    "trading_name": "Baltic Master",
+    "source_identity": "UAB Baltic Master — Baltic Master",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "OC",
+      "HR",
+      "MM"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://www.balticmaster.lt/",
+    "public_contact_url": "https://www.balticmaster.lt/",
+    "portfolio_status": "nežinoma",
+    "confidence": "aukštas",
+    "confidence_evidence": "Directory says it has its own production and designs/produces stainless and shelf furniture; Own site + directory/B/n/p/H",
+    "scope_evidence": "Directory says it has its own production and designs/produces stainless and shelf furniture",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://www.balticmaster.lt/",
+      "https://rekvizitai.vz.lt/en/companies/restaurant_equipment/vilnius/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tvilis",
+    "legal_name": "UAB TVILIS",
+    "trading_name": "TVILIS",
+    "source_identity": "UAB TVILIS — TVILIS",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Profile: designs and makes kitchens, wardrobes and office furniture; Public marketplace profile/M/n/p/M",
+    "scope_evidence": "Profile: designs and makes kitchens, wardrobes and office furniture",
+    "evidence_source_type": "Public marketplace profile",
+    "source_urls": [
+      "https://paslaugos.lt/baldziai/nestandartiniu-baldu-gamyba/vilniuje"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "jumika",
+    "legal_name": "UAB Jumika",
+    "trading_name": "Jumika",
+    "source_identity": "UAB Jumika — Jumika",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: company provides non-standard and standard furniture manufacture; Business directory/M/n/p/M",
+    "scope_evidence": "Directory: company provides non-standard and standard furniture manufacture",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.info.lt/paieska/baldai+pagal+individual%C5%B3+u%C5%BEsakym%C4%85/Vilnius"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ergolain",
+    "legal_name": "UAB Ergolain projektai",
+    "trading_name": "Ergolain",
+    "source_identity": "UAB Ergolain projektai — Ergolain",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "OC",
+      "HR",
+      "U",
+      "MM"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Minkšti baldai pagal užsakymą",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://www.ergolain.lt/en/about-us/",
+    "public_contact_url": "https://www.ergolain.lt/en/about-us/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: manages business projects through custom-furniture production and implementation; Own site/B/P/H",
+    "scope_evidence": "Site: manages business projects through custom-furniture production and implementation",
+    "evidence_source_type": "Own site",
+    "source_urls": [
+      "https://www.ergolain.lt/en/about-us/",
+      "https://www.ergolain.lt/en/services/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-mada",
+    "legal_name": "UAB Baldų mada",
+    "trading_name": "Baldų Mada",
+    "source_identity": "UAB Baldų mada — Baldų Mada",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://baldumada.lt/",
+    "public_contact_url": "https://baldumada.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Public Sodra proxy: 1 employee; Own site + directory/M/P/H",
+    "scope_evidence": "Public Sodra proxy: 1 employee",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://baldumada.lt/",
+      "https://rekvizitai.vz.lt/en/company/baldu_mada/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "piritas",
+    "legal_name": "MB Piritas",
+    "trading_name": "Piritas",
+    "source_identity": "MB Piritas — Piritas",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "OC",
+      "HR",
+      "MM"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://www.piritas.lt/en/",
+    "public_contact_url": "https://www.piritas.lt/en/",
+    "portfolio_status": "nežinoma",
+    "confidence": "aukštas",
+    "confidence_evidence": "One-owner company, founded 2015; Own site + directories/B/n/p/H",
+    "scope_evidence": "One-owner company, founded 2015",
+    "evidence_source_type": "Own site + directories",
+    "source_urls": [
+      "https://www.piritas.lt/en/",
+      "https://rekvizitai.vz.lt/en/company/piritas/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "vafer",
+    "legal_name": "UAB Vafer",
+    "trading_name": "Vafer",
+    "source_identity": "UAB Vafer — Vafer",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "HR",
+      "MM"
+    ],
+    "category_labels": [
+      "HoReCa ir prekybos baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://vafer.lt/",
+    "public_contact_url": "https://vafer.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: designs and makes restaurant/café furniture, conveyors and steel structures; Own site/B/P/H",
+    "scope_evidence": "Site: designs and makes restaurant/café furniture, conveyors and steel structures",
+    "evidence_source_type": "Own site",
+    "source_urls": [
+      "https://vafer.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-rubai",
+    "legal_name": "UAB Muse LT",
+    "trading_name": "Baldų Rūbai",
+    "source_identity": "UAB Muse LT — Baldų Rūbai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "U",
+      "HR"
+    ],
+    "category_labels": [
+      "Minkšti baldai pagal užsakymą",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.baldurubai.lt/en/services/custom-made-furniture/",
+    "public_contact_url": "https://www.baldurubai.lt/en/services/custom-made-furniture/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: over 10 years’ upholstered-furniture work, including made-to-measure production and business clients; Own site + directory/M/P/H",
+    "scope_evidence": "Site: over 10 years’ upholstered-furniture work, including made-to-measure production and business clients",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://www.baldurubai.lt/en/services/custom-made-furniture/",
+      "https://www.baldurubai.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldai-uoga",
+    "legal_name": null,
+    "trading_name": "Baldai Uoga",
+    "source_identity": "Legal name n/p — Baldai Uoga",
+    "legal_entity_known": false,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "http://www.baldaiuoga.lt/",
+    "public_contact_url": "http://www.baldaiuoga.lt/",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Site lists custom manufacture plus in-house MDF painting, cutting and edge laminating; Own site/M/n/p/M",
+    "scope_evidence": "Site lists custom manufacture plus in-house MDF painting, cutting and edge laminating",
+    "evidence_source_type": "Own site",
+    "source_urls": [
+      "http://www.baldaiuoga.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldai-j-g",
+    "legal_name": null,
+    "trading_name": "Baldai J&G",
+    "source_identity": "Legal name n/p — Baldai J&G",
+    "legal_entity_known": false,
+    "description_lt": "",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/",
+    "public_contact_url": "https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Site says manufacture in Vilnius to individual orders; Own site/M/P/M",
+    "scope_evidence": "Site says manufacture in Vilnius to individual orders",
+    "evidence_source_type": "Own site",
+    "source_urls": [
+      "https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sole-lt",
+    "legal_name": "UAB Sole LT",
+    "trading_name": "Sole LT",
+    "source_identity": "UAB Sole LT — Sole LT",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Lentvaris, Trakų r.",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "OC",
+      "HR",
+      "MM"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: long-running maker of one-off metal furniture to individual orders; Business directory/B/n/p/M",
+    "scope_evidence": "Directory: long-running maker of one-off metal furniture to individual orders",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.info.lt/paieska/baldu+gamyba/Trakai"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "alytaus-baldai",
+    "legal_name": "UAB Alytaus baldai",
+    "trading_name": "Alytaus baldai",
+    "source_identity": "UAB Alytaus baldai — Alytaus baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "W",
+      "OC",
+      "HR",
+      "MM"
+    ],
+    "category_labels": [
+      "Spintos ir įmontuojami baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://alytausbaldai.lt/",
+    "public_contact_url": "https://alytausbaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: operating since 2010 as a custom metal-products and hard cabinet-furniture manufacturer; Own site/M/P/H",
+    "scope_evidence": "Site: operating since 2010 as a custom metal-products and hard cabinet-furniture manufacturer",
+    "evidence_source_type": "Own site",
+    "source_urls": [
+      "https://alytausbaldai.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "surgede",
+    "legal_name": "UAB Surgėdė",
+    "trading_name": "Surgėdė",
+    "source_identity": "UAB Surgėdė — Surgėdė",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory lists made-to-order kitchen, bedroom, living-room and other custom furniture; Business directory/H/n/p/M",
+    "scope_evidence": "Directory lists made-to-order kitchen, bedroom, living-room and other custom furniture",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/surgede-uab-nestandartiniai-virtuves-miegamojo-svetaines-baldai-gamyba-pagal-uzsakymus-alytus-pietu-lietuva-244871/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "emlitos-baldai",
+    "legal_name": "UAB Emlitos baldai",
+    "trading_name": "Emlitos baldai",
+    "source_identity": "UAB Emlitos baldai — Emlitos baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: “nestandartinių baldų gamyba” at Alytus address; Business directory/M/n/p/M",
+    "scope_evidence": "Directory: “nestandartinių baldų gamyba” at Alytus address",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/emlitos-baldai-uab-253406/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "alsot-alsotana",
+    "legal_name": "UAB Alsotana",
+    "trading_name": "Alsot / Alsotana",
+    "source_identity": "UAB Alsotana — Alsot / Alsotana",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.alsot.lt/en/about-us",
+    "public_contact_url": "https://www.alsot.lt/en/about-us",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: “More than 17 years of experience” and one of Lithuania’s largest non-standard cabinet-furniture makers; Own site + directories/M/P/H",
+    "scope_evidence": "Site: “More than 17 years of experience” and one of Lithuania’s largest non-standard cabinet-furniture makers",
+    "evidence_source_type": "Own site + directories",
+    "source_urls": [
+      "https://www.alsot.lt/en/about-us"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mwood",
+    "legal_name": "UAB MWood",
+    "trading_name": "MWood",
+    "source_identity": "UAB MWood — MWood",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "BB",
+      "U",
+      "SW"
+    ],
+    "category_labels": [
+      "Miegamojo ir vonios baldai",
+      "Minkšti baldai pagal užsakymą",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory describes a company making distinctive furniture, custom beds and solid-wood furniture; Business directories/H/n/p/M",
+    "scope_evidence": "Directory describes a company making distinctive furniture, custom beds and solid-wood furniture",
+    "evidence_source_type": "Business directories",
+    "source_urls": [
+      "https://www.info.lt/imones/MWood-UAB/2269900"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "uosis",
+    "legal_name": "UAB Uosis",
+    "trading_name": "Uosis",
+    "source_identity": "UAB Uosis — Uosis",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Source: founded in 1991; makes custom furniture to individual orders; Business directory/M/n/p/M",
+    "scope_evidence": "Source: founded in 1991; makes custom furniture to individual orders",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/uosis-uab-68804/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "balzena",
+    "legal_name": "IĮ Balzena",
+    "trading_name": "Balzena",
+    "source_identity": "IĮ Balzena — Balzena",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "One public company listing identifies it as a Utena non-standard furniture maker; Business directory/M/n/p/M",
+    "scope_evidence": "One public company listing identifies it as a Utena non-standard furniture maker",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/balzena-ii-75641/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "triobalda",
+    "legal_name": null,
+    "trading_name": "Triobalda",
+    "source_identity": "Legal name n/p — Triobalda",
+    "legal_entity_known": false,
+    "description_lt": "",
+    "location": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://triobalda.lt/",
+    "public_contact_url": "https://triobalda.lt/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Site identifies furniture manufacture in Utena and non-standard work; Own site/M/P/M",
+    "scope_evidence": "Site identifies furniture manufacture in Utena and non-standard work",
+    "evidence_source_type": "Own site",
+    "source_urls": [
+      "https://triobalda.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "xbaldai",
+    "legal_name": "UAB Molėtų baldai",
+    "trading_name": "XBALDAI",
+    "source_identity": "UAB Molėtų baldai — XBALDAI",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Molėtai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: “daugiau nei 25 metus” in non-standard furniture manufacture; Business directory/M/n/p/M",
+    "scope_evidence": "Directory: “daugiau nei 25 metus” in non-standard furniture manufacture",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.info.lt/imones/Mol%C4%97t%C5%B3-baldai-UAB/2412285"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "x-baldai",
+    "legal_name": "D. Bražionio IVV",
+    "trading_name": "X Baldai",
+    "source_identity": "D. Bražionio IVV — X Baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Anykščių r.",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: more than 25 years; designs, makes and restores wooden furniture, doors and stairs; Business directory/M/n/p/M",
+    "scope_evidence": "Directory: more than 25 years; designs, makes and restores wooden furniture, doors and stairs",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/medienos-gaminiai/anyksciai/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldgama",
+    "legal_name": "UAB Baldgama",
+    "trading_name": "Baldgama",
+    "source_identity": "UAB Baldgama — Baldgama",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.baldgama.lt/",
+    "public_contact_url": "https://www.baldgama.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: Marijampolė custom manufacturer designing/making a broad range to individual orders; Own site + directory/M/P/H",
+    "scope_evidence": "Site: Marijampolė custom manufacturer designing/making a broad range to individual orders",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://www.baldgama.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "jogusta",
+    "legal_name": "UAB Jogusta",
+    "trading_name": "Jogusta",
+    "source_identity": "UAB Jogusta — Jogusta",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "BB",
+      "OC",
+      "HR",
+      "U"
+    ],
+    "category_labels": [
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: designs, makes and restores one-off hard/upholstered furniture from client drawing/photo; Business directory/M/n/p/M",
+    "scope_evidence": "Directory: designs, makes and restores one-off hard/upholstered furniture from client drawing/photo",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/jogusta-uab-160707/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "furnera",
+    "legal_name": "UAB Furnera",
+    "trading_name": "Furnera",
+    "source_identity": "UAB Furnera — Furnera",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://furnera.lt/",
+    "public_contact_url": "https://furnera.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: makes kitchens, bedrooms, halls, wardrobes and office furniture to individual order; Own site + directory/M/P/H",
+    "scope_evidence": "Site: makes kitchens, bedrooms, halls, wardrobes and office furniture to individual order",
+    "evidence_source_type": "Own site + directory",
+    "source_urls": [
+      "https://furnera.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "barsis",
+    "legal_name": "UAB Barsis",
+    "trading_name": "Barsis",
+    "source_identity": "UAB Barsis — Barsis",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Trakiškių k., Marijampolės sav.",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "W",
+      "BB",
+      "OC",
+      "SW"
+    ],
+    "category_labels": [
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Source: “Daugiau nei 30 metų” making interior doors and furniture to individual orders; Business directory/M/n/p/M",
+    "scope_evidence": "Source: “Daugiau nei 30 metų” making interior doors and furniture to individual orders",
+    "evidence_source_type": "Business directory",
+    "source_urls": [
+      "https://www.1551.lt/barsis-uab-106611/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "rimbalda",
+    "legal_name": "UAB Rimbalda",
+    "trading_name": "Rimbalda",
+    "source_identity": "UAB Rimbalda — Rimbalda",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Baraginės k., Marijampolės sav.",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://rimbalda.lt/baldu-gamyba/",
+    "public_contact_url": "https://rimbalda.lt/baldu-gamyba/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: majority made to order; company salons opened in 2013; Own site + directories/M/P/H",
+    "scope_evidence": "Site: majority made to order; company salons opened in 2013",
+    "evidence_source_type": "Own site + directories",
+    "source_urls": [
+      "https://rimbalda.lt/baldu-gamyba/",
+      "https://rimbalda.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "diforma",
+    "legal_name": "UAB Diforma",
+    "trading_name": "Diforma",
+    "source_identity": "UAB Diforma — Diforma",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kumpiai, Kaunas d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://diforma.lt/lt/baldu-gamyba",
+    "public_contact_url": "https://diforma.lt/lt/baldu-gamyba",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "42 employees — Geltoni; site/M/P/H",
+    "scope_evidence": "42 employees — Geltoni",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://diforma.lt/lt/baldu-gamyba",
+      "https://geltoni.lt/imones/diforma-uab/19119"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "daimira",
+    "legal_name": "UAB Daimira",
+    "trading_name": "Daimira",
+    "source_identity": "UAB Daimira — Daimira",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://www.daimira.lt/",
+    "public_contact_url": "https://www.daimira.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "8 employees — Rekvizitai/Sodra; site/H/P/H",
+    "scope_evidence": "8 employees — Rekvizitai/Sodra",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://www.daimira.lt/",
+      "https://rekvizitai.vz.lt/en/company/daimira/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldziai",
+    "legal_name": "UAB Baldžiai",
+    "trading_name": "Baldžiai",
+    "source_identity": "UAB Baldžiai — Baldžiai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://baldziai.lt/",
+    "public_contact_url": "https://baldziai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "25 employees — Rekvizitai/Sodra; site+FB/M/P/H",
+    "scope_evidence": "25 employees — Rekvizitai/Sodra",
+    "evidence_source_type": "site+FB",
+    "source_urls": [
+      "https://baldziai.lt/",
+      "https://rekvizitai.vz.lt/en/company/baldziai/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "jusu-baldai",
+    "legal_name": "UAB Obras",
+    "trading_name": "Jūsų baldai",
+    "source_identity": "UAB Obras — Jūsų baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://jusubaldai.lt/",
+    "public_contact_url": "https://jusubaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "9 employees — Geltoni; site/M/P/H",
+    "scope_evidence": "9 employees — Geltoni",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://jusubaldai.lt/",
+      "https://geltoni.lt/imones/obras-uab/18169"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "olideja",
+    "legal_name": "UAB Olidėja",
+    "trading_name": "Olidėja",
+    "source_identity": "UAB Olidėja — Olidėja",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://olideja.lt/",
+    "public_contact_url": "https://olideja.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "10 employees — Geltoni; site/M/P/H",
+    "scope_evidence": "10 employees — Geltoni",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://olideja.lt/",
+      "https://geltoni.lt/imones/olideja-uab/19190"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "skliautai",
+    "legal_name": "UAB Skliautai",
+    "trading_name": "Skliautai",
+    "source_identity": "UAB Skliautai — Skliautai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://skliautai.com/",
+    "public_contact_url": "https://skliautai.com/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Directory: non-standard furniture maker with a broad production range; site/M/P/H",
+    "scope_evidence": "Directory: non-standard furniture maker with a broad production range",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://skliautai.com/",
+      "http://www.baldai.com/imoniu-katalogas/uab-skliautai"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldai4u",
+    "legal_name": "UAB Baldai4u",
+    "trading_name": "Baldai4u",
+    "source_identity": "UAB Baldai4u — Baldai4u",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://baldai4u.lt/mes/apie-mus/",
+    "public_contact_url": "https://baldai4u.lt/mes/apie-mus/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "13 employees — Rekvizitai/Sodra; site/M/P/H",
+    "scope_evidence": "13 employees — Rekvizitai/Sodra",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://baldai4u.lt/mes/apie-mus/",
+      "https://rekvizitai.vz.lt/en/company/uab_baldai4u/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "eigida",
+    "legal_name": "UAB Eigida",
+    "trading_name": "Eigida",
+    "source_identity": "UAB Eigida — Eigida",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "OC",
+      "MM"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Biuro ir komerciniai baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://eigida.lt/",
+    "public_contact_url": "https://eigida.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "33 employees — Rekvizitai/Sodra; site/B/P/H",
+    "scope_evidence": "33 employees — Rekvizitai/Sodra",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://eigida.lt/",
+      "https://rekvizitai.vz.lt/en/company/eigida/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "furnitus",
+    "legal_name": "UAB Furnitus",
+    "trading_name": "Furnitus",
+    "source_identity": "UAB Furnitus — Furnitus",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Domeikava/Karmėlava, Kaunas d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.furnitus.lt/",
+    "public_contact_url": "https://www.furnitus.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: “įvairios paskirties nestandartiniai baldai”; site/M/P/H",
+    "scope_evidence": "proxy: “įvairios paskirties nestandartiniai baldai”",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://www.furnitus.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tg-baldai",
+    "legal_name": "UAB TG baldai",
+    "trading_name": "TG Baldai",
+    "source_identity": "UAB TG baldai — TG Baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://tgbaldai.lt/",
+    "public_contact_url": "https://tgbaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "26 employees — Rekvizitai/Sodra; site/M/P/H",
+    "scope_evidence": "26 employees — Rekvizitai/Sodra",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://tgbaldai.lt/",
+      "https://rekvizitai.vz.lt/en/company/tg_baldai/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "currus",
+    "legal_name": "UAB Currus",
+    "trading_name": "Currus",
+    "source_identity": "UAB Currus — Currus",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Ramučiai/Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "MM"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://currus.lt/",
+    "public_contact_url": "https://currus.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "11–20 employees — 1551; site/H/P/H",
+    "scope_evidence": "11–20 employees — 1551",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://currus.lt/",
+      "https://www.1551.lt/currus-uab-121420/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "balduva",
+    "legal_name": "UAB Balduva",
+    "trading_name": "Balduva",
+    "source_identity": "UAB Balduva — Balduva",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://kietibaldai.lt/en/",
+    "public_contact_url": "https://kietibaldai.lt/en/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "8 employees — Geltoni; site/M/P/H",
+    "scope_evidence": "8 employees — Geltoni",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://kietibaldai.lt/en/",
+      "https://geltoni.lt/imones/balduva-uab/19106"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "rolando-baldai",
+    "legal_name": "MB Jorova",
+    "trading_name": "Rolando baldai",
+    "source_identity": "MB Jorova — Rolando baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Neveronys, Kaunas d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://www.rolandobaldai.lt/",
+    "public_contact_url": "https://www.rolandobaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: “individual living-room furniture made to order”; site/H/P/H",
+    "scope_evidence": "proxy: “individual living-room furniture made to order”",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://www.rolandobaldai.lt/",
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "top-sofa",
+    "legal_name": "UAB Balticsofa",
+    "trading_name": "TOP Sofa",
+    "source_identity": "UAB Balticsofa — TOP Sofa",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "HR",
+      "U"
+    ],
+    "category_labels": [
+      "HoReCa ir prekybos baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
+    "audience": "abiem",
+    "website": "https://topsofa.lt/en/main-2/",
+    "public_contact_url": "https://topsofa.lt/en/main-2/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: made-to-order for businesses and individuals; site/M/P/H",
+    "scope_evidence": "proxy: made-to-order for businesses and individuals",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://topsofa.lt/en/main-2/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-noras",
+    "legal_name": "UAB Baldų noras",
+    "trading_name": "Baldų noras",
+    "source_identity": "UAB Baldų noras — Baldų noras",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.baldunoras.lt/",
+    "public_contact_url": "https://www.baldunoras.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "5 employees — Info.lt/Sodra; site/M/P/H",
+    "scope_evidence": "5 employees — Info.lt/Sodra",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://www.baldunoras.lt/",
+      "https://www.info.lt/imones/Bald%C5%B3-noras-UAB/2396097"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "arta",
+    "legal_name": "A. Burgailos įmonė „Arta“",
+    "trading_name": "ARTA",
+    "source_identity": "A. Burgailos įmonė „Arta“ — ARTA",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kairiai/Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://arta.lt/",
+    "public_contact_url": "https://arta.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: operating since 1991; qualified long-tenure staff; site/M/P/H",
+    "scope_evidence": "proxy: operating since 1991; qualified long-tenure staff",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://arta.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tomer-s",
+    "legal_name": "Tomers, baldų meistrai",
+    "trading_name": "Tomer's",
+    "source_identity": "Tomers, baldų meistrai — Tomer's",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Gruzdžiai, Šiauliai d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.tomers.lt/en",
+    "public_contact_url": "https://www.tomers.lt/en",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: “professional furniture manufacturers”; site+FB/M/P/H",
+    "scope_evidence": "proxy: “professional furniture manufacturers”",
+    "evidence_source_type": "site+FB",
+    "source_urls": [
+      "https://www.tomers.lt/en",
+      "https://www.tomers.lt/en/about-us"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ergosta",
+    "legal_name": "UAB Ergosta",
+    "trading_name": "Ergosta",
+    "source_identity": "UAB Ergosta — Ergosta",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Sutkūnai, Šiauliai d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "OC",
+      "SW",
+      "MM"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "Medžio darbai ir medžio masyvo baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://ergosta.lt/",
+    "public_contact_url": "https://ergosta.lt/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "2 employees — Statyba.lt/Sodra; site/B/P/M",
+    "scope_evidence": "2 employees — Statyba.lt/Sodra",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://ergosta.lt/",
+      "https://www.statyba.lt/imones/Ergosta-UAB/2378691"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "todrus",
+    "legal_name": "MB Todrus",
+    "trading_name": "Todrus",
+    "source_identity": "MB Todrus — Todrus",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://rekvizitai.vz.lt/en/company/todrus/",
+    "public_contact_url": "https://rekvizitai.vz.lt/en/company/todrus/",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "proxy: listed for custom and wood-furniture production; directory/H/n/p/M",
+    "scope_evidence": "proxy: listed for custom and wood-furniture production",
+    "evidence_source_type": "directory",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/todrus/",
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "stonkai",
+    "legal_name": "UAB Stonkai",
+    "trading_name": "Stonkai",
+    "source_identity": "UAB Stonkai — Stonkai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://rekvizitai.vz.lt/en/company/stonkai/",
+    "public_contact_url": "https://rekvizitai.vz.lt/en/company/stonkai/",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "proxy: “professional…modern production process”; directory/M/n/p/M",
+    "scope_evidence": "proxy: “professional…modern production process”",
+    "evidence_source_type": "directory",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/stonkai/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-profai",
+    "legal_name": "UAB Delvisa",
+    "trading_name": "Baldų profai",
+    "source_identity": "UAB Delvisa — Baldų profai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vileikiai, Šiauliai d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://www.facebook.com/balduprofai/",
+    "public_contact_url": "https://www.facebook.com/balduprofai/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Site: professional furniture manufacture since 2008; individual kitchens and bedrooms; FB+directory/H/P/M",
+    "scope_evidence": "Site: professional furniture manufacture since 2008; individual kitchens and bedrooms",
+    "evidence_source_type": "FB+directory",
+    "source_urls": [
+      "https://www.facebook.com/balduprofai/",
+      "https://balduprofai.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "solo-baldai",
+    "legal_name": "UAB SOLO baldai",
+    "trading_name": "SOLO baldai",
+    "source_identity": "UAB SOLO baldai — SOLO baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "http://solobaldai.lt/",
+    "public_contact_url": "http://solobaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Profile: growing company engaged in non-standard furniture manufacture; site/M/P/H",
+    "scope_evidence": "Profile: growing company engaged in non-standard furniture manufacture",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "http://solobaldai.lt/",
+      "https://paslaugos24.lt/teikejas/1965"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "venta",
+    "legal_name": "UAB Venta LT",
+    "trading_name": "VENTA",
+    "source_identity": "UAB Venta LT — VENTA",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "OC",
+      "HR",
+      "SW"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "verslas",
+    "website": "http://www.venta.lt/",
+    "public_contact_url": "http://www.venta.lt/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "95 employees — Rekvizitai/Sodra; site+IG/B/P/M",
+    "scope_evidence": "95 employees — Rekvizitai/Sodra",
+    "evidence_source_type": "site+IG",
+    "source_urls": [
+      "http://www.venta.lt/",
+      "https://rekvizitai.vz.lt/en/company/venta_lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "raibaldera",
+    "legal_name": "UAB Raibaldera",
+    "trading_name": "Raibaldera",
+    "source_identity": "UAB Raibaldera — Raibaldera",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://rekvizitai.vz.lt/en/company/raibaldera/",
+    "public_contact_url": "https://rekvizitai.vz.lt/en/company/raibaldera/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "proxy: “work experience >20 years”; directory/marketplace/M/P/M",
+    "scope_evidence": "proxy: “work experience >20 years”",
+    "evidence_source_type": "directory/marketplace",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/raibaldera/",
+      "https://paslaugos.lt/baldu-gamyba/siauliuose"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ag-baldai",
+    "legal_name": "UAB AG Baldai",
+    "trading_name": "AG Baldai",
+    "source_identity": "UAB AG Baldai — AG Baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Degaičiai, Telšiai d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.agbaldai.lt/",
+    "public_contact_url": "https://www.agbaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "7 employees — Scoris; site/M/P/H",
+    "scope_evidence": "7 employees — Scoris",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://www.agbaldai.lt/",
+      "https://scoris.lt/imone/301736549"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tvirtas-baldas",
+    "legal_name": "UAB Tvirtas baldas",
+    "trading_name": "Tvirtas baldas",
+    "source_identity": "UAB Tvirtas baldas — Tvirtas baldas",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
+    "public_contact_url": "https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "3 employees — Scoris; directory/M/P/H",
+    "scope_evidence": "3 employees — Scoris",
+    "evidence_source_type": "directory",
+    "source_urls": [
+      "https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
+      "https://scoris.lt/imone/305282439"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "aurimo-baldai",
+    "legal_name": null,
+    "trading_name": "Aurimo baldai",
+    "source_identity": "Aurimo baldai",
+    "legal_entity_known": false,
+    "description_lt": "",
+    "location": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "proxy: “patyrusių meistrų komanda”; site/H/P/M",
+    "scope_evidence": "proxy: “patyrusių meistrų komanda”",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://www.info.lt/imones/Aurimo-baldai/2413959"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "zemaituko-dirbtuves",
+    "legal_name": "MB Žemaituko dirbtuvės",
+    "trading_name": "Žemaituko dirbtuvės",
+    "source_identity": "MB Žemaituko dirbtuvės — Žemaituko dirbtuvės",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Nevarėnai, Telšiai d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://scoris.lt/imone/304500493",
+    "public_contact_url": "https://scoris.lt/imone/304500493",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "micro category — Scoris; directory/H/n/p/M",
+    "scope_evidence": "micro category — Scoris",
+    "evidence_source_type": "directory",
+    "source_urls": [
+      "https://scoris.lt/imone/304500493"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "meistrine",
+    "legal_name": "UAB Meistrinė",
+    "trading_name": "Meistrinė",
+    "source_identity": "UAB Meistrinė — Meistrinė",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "SW",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Medžio darbai ir medžio masyvo baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "http://www.meistrine.lt/",
+    "public_contact_url": "http://www.meistrine.lt/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory classifies the Telšiai company under furniture production; site+directory/M/P/M",
+    "scope_evidence": "Directory classifies the Telšiai company under furniture production",
+    "evidence_source_type": "site+directory",
+    "source_urls": [
+      "http://www.meistrine.lt/",
+      "https://www.info.lt/imones/Meistrin%C4%97-UAB/2422131"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "urtnojus",
+    "legal_name": "UAB Urtnojus",
+    "trading_name": "Urtnojus",
+    "source_identity": "UAB Urtnojus — Urtnojus",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "SW",
+      "BB"
+    ],
+    "category_labels": [
+      "Medžio darbai ir medžio masyvo baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://rekvizitai.vz.lt/en/company/urtnojus/",
+    "public_contact_url": "https://rekvizitai.vz.lt/en/company/urtnojus/",
+    "portfolio_status": "nežinoma",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: individual wood furniture/doors/stairs; directory/H/n/p/H",
+    "scope_evidence": "proxy: individual wood furniture/doors/stairs",
+    "evidence_source_type": "directory",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/urtnojus/",
+      "https://www.info.lt/rubrika/Durys/100225955/Tel%C5%A1iai"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "skaidma",
+    "legal_name": "UAB Skaidma",
+    "trading_name": "Skaidma",
+    "source_identity": "UAB Skaidma — Skaidma",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Mažeikiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "http://www.skaidma.lt/baldai.html",
+    "public_contact_url": "http://www.skaidma.lt/baldai.html",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "3 employees — Rekvizitai/Sodra; site/H/P/H",
+    "scope_evidence": "3 employees — Rekvizitai/Sodra",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "http://www.skaidma.lt/baldai.html",
+      "https://rekvizitai.vz.lt/en/company/ii_skaidma/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ambient-boutique",
+    "legal_name": "UAB Ambientus",
+    "trading_name": "Ambient Boutique",
+    "source_identity": "UAB Ambientus — Ambient Boutique",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Mažeikiai production",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://ambientboutique.lt/",
+    "public_contact_url": "https://ambientboutique.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "3 employees — Tax.lt; site/M/P/H",
+    "scope_evidence": "3 employees — Tax.lt",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://ambientboutique.lt/",
+      "https://tax.lt/imones/114060-ambientus-uab"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "taumona",
+    "legal_name": "UAB Taumona",
+    "trading_name": "Taumona",
+    "source_identity": "UAB Taumona — Taumona",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Mažeikiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.taumona.com/en/",
+    "public_contact_url": "https://www.taumona.com/en/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: 28+ years’ manufacturing experience; site+LinkedIn/M/P/H",
+    "scope_evidence": "proxy: 28+ years’ manufacturing experience",
+    "evidence_source_type": "site+LinkedIn",
+    "source_urls": [
+      "https://www.taumona.com/en/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "lyra-group-softnord-scandic",
+    "legal_name": "UAB Lyra group",
+    "trading_name": "Lyra Group / Softnord / Scandic",
+    "source_identity": "UAB Lyra group — Lyra Group / Softnord / Scandic",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Mažeikiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "U",
+      "BB"
+    ],
+    "category_labels": [
+      "Minkšti baldai pagal užsakymą",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://lyragroup.eu/about-us/",
+    "public_contact_url": "https://lyragroup.eu/about-us/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "proxy: factory “grown and modernised” in Mažeikiai; site+LinkedIn/B/P/M",
+    "scope_evidence": "proxy: factory “grown and modernised” in Mažeikiai",
+    "evidence_source_type": "site+LinkedIn",
+    "source_urls": [
+      "https://lyragroup.eu/about-us/",
+      "https://lyragroup.eu/about-us"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "barva-furniture",
+    "legal_name": "MB Barva projects",
+    "trading_name": "Barva Furniture",
+    "source_identity": "MB Barva projects — Barva Furniture",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Mažeikiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://barvafurniture.lt/en/home/",
+    "public_contact_url": "https://barvafurniture.lt/en/home/",
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "proxy: serves companies in Lithuania and abroad; site+FB/M/P/M",
+    "scope_evidence": "proxy: serves companies in Lithuania and abroad",
+    "evidence_source_type": "site+FB",
+    "source_urls": [
+      "https://barvafurniture.lt/en/home/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tiko-baldai",
+    "legal_name": "UAB Tiko baldai",
+    "trading_name": "Tiko baldai",
+    "source_identity": "UAB Tiko baldai — Tiko baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Tauragė d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "17 employees — Rekvizitai/Sodra; site/M/P/H",
+    "scope_evidence": "17 employees — Rekvizitai/Sodra",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kristalga/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "alantas",
+    "legal_name": "UAB Alantas",
+    "trading_name": "Alantas",
+    "source_identity": "UAB Alantas — Alantas",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.1551.lt/alantas-uab-92066/",
+    "public_contact_url": "https://www.1551.lt/alantas-uab-92066/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "61 employees — Scoris; directory/M/P/H",
+    "scope_evidence": "61 employees — Scoris",
+    "evidence_source_type": "directory",
+    "source_urls": [
+      "https://www.1551.lt/alantas-uab-92066/",
+      "https://scoris.lt/imone/179466996"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "linkrusta",
+    "legal_name": "UAB Linkrusta",
+    "trading_name": "Linkrusta",
+    "source_identity": "UAB Linkrusta — Linkrusta",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Raseiniai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.linkrusta.lt/",
+    "public_contact_url": "https://www.linkrusta.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: manufacturing activity since 2011; site/M/P/H",
+    "scope_evidence": "proxy: manufacturing activity since 2011",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://www.linkrusta.lt/",
+      "https://www.1551.lt/linkrusta-uab-nestandartiniu-baldu-projektavimas-gamyba-prekyba-raseiniai-taurage-kaunas-klaipeda-silale-visa-lietuva-elektronine-parduotuve-https-www-linkrusta-lt-208060/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "agmena",
+    "legal_name": "UAB Agmena",
+    "trading_name": "Agmena",
+    "source_identity": "UAB Agmena — Agmena",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Čičinai, Jonava d.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.agmena.lt/",
+    "public_contact_url": "https://www.agmena.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "proxy: “daugiametę patirtį” creating custom furniture; site/M/P/H",
+    "scope_evidence": "proxy: “daugiametę patirtį” creating custom furniture",
+    "evidence_source_type": "site",
+    "source_urls": [
+      "https://www.agmena.lt/",
+      "http://www.baldai.com/imoniu-katalogas/uab-agmena"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "wbk",
+    "legal_name": "UAB WBK",
+    "trading_name": "WBK",
+    "source_identity": "UAB WBK — WBK",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Jonava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "K",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "verslas",
+    "website": "https://rekvizitai.vz.lt/en/company/wilbergs/",
+    "public_contact_url": "https://rekvizitai.vz.lt/en/company/wilbergs/",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "proxy: public listing says kitchen and bathroom production; directory/B/n/p/M",
+    "scope_evidence": "proxy: public listing says kitchen and bathroom production",
+    "evidence_source_type": "directory",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/wilbergs/",
+      "https://rekvizitai.vz.lt/miesto-imones/jonava/Jonalaukio+g./"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "alrasina",
+    "legal_name": "UAB Alrasina",
+    "trading_name": "Alrasina",
+    "source_identity": "UAB Alrasina — Alrasina",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kopūstai/Kretingalė, Klaipėda r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.alrasina.lt/",
+    "public_contact_url": "https://www.alrasina.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: 15 years in the furniture industry; Site/M/P/H",
+    "scope_evidence": "Site: 15 years in the furniture industry",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.alrasina.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "a-residens",
+    "legal_name": "UAB A residens",
+    "trading_name": "A Residens",
+    "source_identity": "UAB A residens — A Residens",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Dovilai, Klaipėda r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.aresidens.com/en",
+    "public_contact_url": "https://www.aresidens.com/en",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: “realize any interior design project”; Site/M/P/H",
+    "scope_evidence": "scope: “realize any interior design project”",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.aresidens.com/en"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "azuolo-gama",
+    "legal_name": "MB Ąžuolo gama",
+    "trading_name": "Ąžuolo gama",
+    "source_identity": "MB Ąžuolo gama — Ąžuolo gama",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://azuologama.lt/",
+    "public_contact_url": "https://azuologama.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: “projektavime, gamyboje ir montavime”; Site/M/P/H",
+    "scope_evidence": "scope: “projektavime, gamyboje ir montavime”",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://azuologama.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kaiva",
+    "legal_name": "UAB Kaiva",
+    "trading_name": "Kaiva",
+    "source_identity": "UAB Kaiva — Kaiva",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.kaiva.lt/",
+    "public_contact_url": "https://www.kaiva.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "11–20 employees (public 1551 range); Site + directory/M/P/H",
+    "scope_evidence": "11–20 employees (public 1551 range)",
+    "evidence_source_type": "Site + directory",
+    "source_urls": [
+      "https://www.kaiva.lt/",
+      "https://www.1551.lt/kaiva-uab-24621/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "estuba",
+    "legal_name": "UAB Estubos baldai",
+    "trading_name": "Estuba",
+    "source_identity": "UAB Estubos baldai — Estuba",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR",
+      "U",
+      "MM"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Minkšti baldai pagal užsakymą",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.estuba.lt/",
+    "public_contact_url": "https://www.estuba.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: “project team and craftsmen”; Site/M/P/H",
+    "scope_evidence": "scope: “project team and craftsmen”",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.estuba.lt/",
+      "https://www.estuba.lt/about-us"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldlita",
+    "legal_name": "UAB Baldlita LT",
+    "trading_name": "Baldlita",
+    "source_identity": "UAB Baldlita LT — Baldlita",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Klaipėda / western LT",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.baldlita.lt/",
+    "public_contact_url": "https://www.baldlita.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: “specializuojasi nestandartinių baldų gamyboje”; Site/M/P/H",
+    "scope_evidence": "scope: “specializuojasi nestandartinių baldų gamyboje”",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.baldlita.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mbi",
+    "legal_name": "UAB Minkštų baldų idėja",
+    "trading_name": "MBI",
+    "source_identity": "UAB Minkštų baldų idėja — MBI",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Trušeliai, Klaipėda r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "U",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Minkšti baldai pagal užsakymą",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: made from supplied sketch/photo/drawing; Directory/M/n/p/H",
+    "scope_evidence": "scope: made from supplied sketch/photo/drawing",
+    "evidence_source_type": "Directory",
+    "source_urls": [
+      "https://www.1551.lt/mbi-minkstu-baldu-ideja-uab-nestandartiniu-minkstu-baldu-gamyba-klaipeda-klaipedos-rajonas-215565/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "getanas",
+    "legal_name": "UAB Getanas",
+    "trading_name": "Getanas",
+    "source_identity": "UAB Getanas — Getanas",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory classifies the Klaipėda company under furniture production; Service profile/H/P/M",
+    "scope_evidence": "Directory classifies the Klaipėda company under furniture production",
+    "evidence_source_type": "Service profile",
+    "source_urls": [
+      "https://www.info.lt/imones/Getanas-UAB/2441655"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "stilingi-baldai",
+    "legal_name": "UAB Stilingi baldai",
+    "trading_name": "Stilingi baldai",
+    "source_identity": "UAB Stilingi baldai — Stilingi baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Dovilai, Klaipėda r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "U",
+      "BB"
+    ],
+    "category_labels": [
+      "Minkšti baldai pagal užsakymą",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "scope: upholstered design to individual order; Directory/H/n/p/M",
+    "scope_evidence": "scope: upholstered design to individual order",
+    "evidence_source_type": "Directory",
+    "source_urls": [
+      "https://www.info.lt/imones/Stilingi-baldai-UAB/2427817"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "exus-furniture",
+    "legal_name": "MB Exus furniture",
+    "trading_name": "Exus Furniture",
+    "source_identity": "MB Exus furniture — Exus Furniture",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: custom-furniture design and manufacture for kitchens, bedrooms and wardrobes; Directory/social/H/n/p/M",
+    "scope_evidence": "Directory: custom-furniture design and manufacture for kitchens, bedrooms and wardrobes",
+    "evidence_source_type": "Directory/social",
+    "source_urls": [
+      "https://www.info.lt/imones/Exus-furniture-MB/2513706"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "deluxe-baldai",
+    "legal_name": "UAB Deluxe baldai",
+    "trading_name": "Deluxe Baldai",
+    "source_identity": "UAB Deluxe baldai — Deluxe Baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "U",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Minkšti baldai pagal užsakymą",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: non-standard line for client-selected dimensions/design; Directory/M/P/H",
+    "scope_evidence": "scope: non-standard line for client-selected dimensions/design",
+    "evidence_source_type": "Directory",
+    "source_urls": [
+      "http://www.baldai.com/imoniu-katalogas/deluxe-baldai"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "aruno-baldai",
+    "legal_name": "MB Arūno baldai Kretingoje",
+    "trading_name": "Arūno baldai",
+    "source_identity": "MB Arūno baldai Kretingoje — Arūno baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Rubuliai, Kretinga r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://www.arunobaldaikretingoje.lt/en/",
+    "public_contact_url": "https://www.arunobaldaikretingoje.lt/en/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Directory: carcass furniture made to individual orders; Site/H/P/H",
+    "scope_evidence": "Directory: carcass furniture made to individual orders",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.arunobaldaikretingoje.lt/en/",
+      "https://www.1551.lt/aruno-baldai-kretingoje-mb-nestandartiniai-korpusiniai-baldai-kretinga-klaipeda-vakaru-lietuva-278211/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "r2-baldai",
+    "legal_name": "UAB R2 baldai",
+    "trading_name": "R2 Baldai",
+    "source_identity": "UAB R2 baldai — R2 Baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Palanga",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://r2baldai.lt/",
+    "public_contact_url": "https://r2baldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "4 employees (Sodra, public profile); Site/H/P/H",
+    "scope_evidence": "4 employees (Sodra, public profile)",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://r2baldai.lt/",
+      "https://rekvizitai.vz.lt/en/company/r2_baldai/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "virtuvinis-lt",
+    "legal_name": "UAB Alkena",
+    "trading_name": "Virtuvinis.lt",
+    "source_identity": "UAB Alkena — Virtuvinis.lt",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Priekulė/Klaipėda r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "MM"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://www.virtuvinis.lt/",
+    "public_contact_url": "https://www.virtuvinis.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: “visi virtuvės baldai gaminami pagal individualius užsakymus”; Site/H/P/H",
+    "scope_evidence": "scope: “visi virtuvės baldai gaminami pagal individualius užsakymus”",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.virtuvinis.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "medeinus",
+    "legal_name": "UAB Medeinus",
+    "trading_name": "Medeinus",
+    "source_identity": "UAB Medeinus — Medeinus",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://www.medeinus.lt/baldu-gamyba-klaipedoje",
+    "public_contact_url": "https://www.medeinus.lt/baldu-gamyba-klaipedoje",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: “įvairių nestandartinių baldų gamybą”; Site/H/P/H",
+    "scope_evidence": "scope: “įvairių nestandartinių baldų gamybą”",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.medeinus.lt/baldu-gamyba-klaipedoje"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldita",
+    "legal_name": "MB Mano baldita",
+    "trading_name": "Baldita",
+    "source_identity": "MB Mano baldita — Baldita",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://baldita.lt/apie-mus/",
+    "public_contact_url": "https://baldita.lt/apie-mus/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: production base in Panevėžys; orders across Lithuania; Site/M/P/H",
+    "scope_evidence": "scope: production base in Panevėžys; orders across Lithuania",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://baldita.lt/apie-mus/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "abf",
+    "legal_name": "UAB Aukštaitijos baldų fabrikas",
+    "trading_name": "ABF",
+    "source_identity": "UAB Aukštaitijos baldų fabrikas — ABF",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://www.abf.lt/",
+    "public_contact_url": "https://www.abf.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Directory: furniture and non-standard furniture manufacture, including sliding-door wardrobe design/production; Site + directory/H/P/H",
+    "scope_evidence": "Directory: furniture and non-standard furniture manufacture, including sliding-door wardrobe design/production",
+    "evidence_source_type": "Site + directory",
+    "source_urls": [
+      "https://www.abf.lt/",
+      "https://www.info.lt/imones/Auk%C5%A1taitijos-bald%C5%B3-fabrikas-UAB/2332953"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "bengita",
+    "legal_name": "UAB Bengita",
+    "trading_name": "Bengita",
+    "source_identity": "UAB Bengita — Bengita",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.bengita.lt/apie-mus/",
+    "public_contact_url": "https://www.bengita.lt/apie-mus/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: private, company and public-institution clients; Site/shop/M/P/H",
+    "scope_evidence": "scope: private, company and public-institution clients",
+    "evidence_source_type": "Site/shop",
+    "source_urls": [
+      "https://www.bengita.lt/apie-mus/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-tvirtove",
+    "legal_name": "MB Baldų tvirtovė",
+    "trading_name": "Baldų tvirtovė",
+    "source_identity": "MB Baldų tvirtovė — Baldų tvirtovė",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Directory: 1 employee (insured person); activity includes furniture manufacture; Directory/H/n/p/M",
+    "scope_evidence": "Directory: 1 employee (insured person); activity includes furniture manufacture",
+    "evidence_source_type": "Directory",
+    "source_urls": [
+      "https://www.info.lt/imones/Bald%C5%B3-tvirtov%C4%97-MB/2454979"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-linija",
+    "legal_name": "UAB Baldų linija",
+    "trading_name": "Baldų linija",
+    "source_identity": "UAB Baldų linija — Baldų linija",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.baldulinija.lt/en/",
+    "public_contact_url": "https://www.baldulinija.lt/en/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: manufacturing solid furniture since 1997; Site/M/P/H",
+    "scope_evidence": "scope: manufacturing solid furniture since 1997",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.baldulinija.lt/en/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "if-concept",
+    "legal_name": "UAB IF Concept",
+    "trading_name": "IF Concept",
+    "source_identity": "UAB IF Concept — IF Concept",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Sutkūnai, Panevėžys r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://ifconcept.lt/en/apie-mus/",
+    "public_contact_url": "https://ifconcept.lt/en/apie-mus/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: design–manufacture–pack–prepare for transport; Site/M/P/H",
+    "scope_evidence": "scope: design–manufacture–pack–prepare for transport",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://ifconcept.lt/en/apie-mus/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kasparo-baldai",
+    "legal_name": "UAB Kasparo baldai",
+    "trading_name": "Kasparo baldai",
+    "source_identity": "UAB Kasparo baldai — Kasparo baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://www.kasparobaldai.lt/language/en/furniture-production/kitchen-furniture/",
+    "public_contact_url": "https://www.kasparobaldai.lt/language/en/furniture-production/kitchen-furniture/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: carcass furniture to individual orders; Site + directory/H/P/H",
+    "scope_evidence": "scope: carcass furniture to individual orders",
+    "evidence_source_type": "Site + directory",
+    "source_urls": [
+      "https://www.kasparobaldai.lt/language/en/furniture-production/kitchen-furniture/",
+      "https://geltoni.lt/imones/kasparo-baldai-uab/19300"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "egvita",
+    "legal_name": "UAB Egvita",
+    "trading_name": "Egvita",
+    "source_identity": "UAB Egvita — Egvita",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "U"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
+    "audience": "abiem",
+    "website": "https://egvita.lt/",
+    "public_contact_url": "https://egvita.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Site: non-standard upholstered and carcass furniture production in Panevėžys; Site/M/P/H",
+    "scope_evidence": "Site: non-standard upholstered and carcass furniture production in Panevėžys",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://egvita.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "liepas",
+    "legal_name": "MB Liepas",
+    "trading_name": "Liepas",
+    "source_identity": "MB Liepas — Liepas",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Juodkaimiai/Kėdainiai r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: hard furniture to individual orders; Directory/H/n/p/H",
+    "scope_evidence": "scope: hard furniture to individual orders",
+    "evidence_source_type": "Directory",
+    "source_urls": [
+      "https://www.1551.lt/liepas-mb-kietuju-baldu-gamyba-227837/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "diara-baldu-studija",
+    "legal_name": "UAB Diara LT",
+    "trading_name": "Diara baldų studija",
+    "source_identity": "UAB Diara LT — Diara baldų studija",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kėdainiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: design, manufacture and installation of non-standard furniture; Directory + social/H/P/H",
+    "scope_evidence": "scope: design, manufacture and installation of non-standard furniture",
+    "evidence_source_type": "Directory + social",
+    "source_urls": [
+      "https://www.1551.lt/diara-lt-uab-137348/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "gusto-baldai",
+    "legal_name": "UAB Gusto baldai",
+    "trading_name": "Gusto Baldai",
+    "source_identity": "UAB Gusto baldai — Gusto Baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Medekšiai/Kėdainiai r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://gustobaldai.lt/paslaugos/",
+    "public_contact_url": "https://gustobaldai.lt/paslaugos/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: “Individuali gaminių gamyba”; Site/H/P/H",
+    "scope_evidence": "scope: “Individuali gaminių gamyba”",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://gustobaldai.lt/paslaugos/",
+      "https://gustobaldai.lt/baldai-kedainiuose/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "gordena",
+    "legal_name": "Gordena, individuali veikla",
+    "trading_name": "Gordena",
+    "source_identity": "Gordena, individuali veikla — Gordena",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Vilainiai/Kėdainiai r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "U"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
+    "audience": "buitiniai",
+    "website": "https://gordena.lt/apie-mus-naujas/",
+    "public_contact_url": "https://gordena.lt/apie-mus-naujas/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: ordered furniture delivered/installed in 6–8 weeks; Site/H/P/H",
+    "scope_evidence": "scope: ordered furniture delivered/installed in 6–8 weeks",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://gordena.lt/apie-mus-naujas/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "unikalus-baldai",
+    "legal_name": "UAB Kėdainių statyba",
+    "trading_name": "Unikalūs Baldai",
+    "source_identity": "UAB Kėdainių statyba — Unikalūs Baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kėdainiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR",
+      "MM"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://unikalusbaldai.lt/",
+    "public_contact_url": "https://unikalusbaldai.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "Archived own site: design-to-production-and-installation service, with products tailored to individual needs; Site/M/P/H",
+    "scope_evidence": "Archived own site: design-to-production-and-installation service, with products tailored to individual needs",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://unikalusbaldai.lt/",
+      "https://web.archive.org/web/20251011130956id_/https://unikalusbaldai.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "peledos-baldai",
+    "legal_name": "UAB Pelėdos baldai",
+    "trading_name": "Pelėdos baldai",
+    "source_identity": "UAB Pelėdos baldai — Pelėdos baldai",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Kėdainiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "http://peledosbaldai.lt/en/",
+    "public_contact_url": "http://peledosbaldai.lt/en/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: carcass furniture made to order; Site + directory/H/P/H",
+    "scope_evidence": "scope: carcass furniture made to order",
+    "evidence_source_type": "Site + directory",
+    "source_urls": [
+      "http://peledosbaldai.lt/en/",
+      "https://geltoni.lt/imones/peledos-baldai-uab/205665"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "interjero-ideja",
+    "legal_name": "UAB Interjero idėja",
+    "trading_name": "Interjero idėja",
+    "source_identity": "UAB Interjero idėja — Interjero idėja",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Mokolai/Marijampolė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://interjeroideja.lt/",
+    "public_contact_url": "https://interjeroideja.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: all carcass furniture design/visualisation; Site + social/H/P/H",
+    "scope_evidence": "scope: all carcass furniture design/visualisation",
+    "evidence_source_type": "Site + social",
+    "source_urls": [
+      "https://interjeroideja.lt/",
+      "https://rekvizitai.vz.lt/en/company/interjero_ideja/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-prizme",
+    "legal_name": "MB Baldų prizmė",
+    "trading_name": "Baldų prizmė",
+    "source_identity": "MB Baldų prizmė — Baldų prizmė",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Bebrininkai, Vilkaviškis r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "scope: design/manufacture to individual needs; Directory/M/n/p/M",
+    "scope_evidence": "scope: design/manufacture to individual needs",
+    "evidence_source_type": "Directory",
+    "source_urls": [
+      "https://www.1551.lt/baldu-gamyba/nestandartiniu-baldu-gamyba/vilkaviskis/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "furnmaster",
+    "legal_name": "UAB FurnMaster",
+    "trading_name": "FurnMaster",
+    "source_identity": "UAB FurnMaster — FurnMaster",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Marijampolė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "U",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Minkšti baldai pagal užsakymą",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Site: 17,500 m² development/production facility in Marijampolė with 235 employees; Social + directory/M/P/M",
+    "scope_evidence": "Site: 17,500 m² development/production facility in Marijampolė with 235 employees",
+    "evidence_source_type": "Social + directory",
+    "source_urls": [
+      "https://www.furnmaster.com/global-presence/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldmaris",
+    "legal_name": null,
+    "trading_name": "Baldmaris",
+    "source_identity": "Baldmaris (legal form n/p) — Baldmaris",
+    "legal_entity_known": false,
+    "description_lt": "",
+    "location": "Tauragė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://baldmaris.lt/",
+    "public_contact_url": "https://baldmaris.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: design, manufacture, installation and consulting specialists; Site + social/M/P/H",
+    "scope_evidence": "scope: design, manufacture, installation and consulting specialists",
+    "evidence_source_type": "Site + social",
+    "source_urls": [
+      "https://baldmaris.lt/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "aurimo-korpusiniu-baldu-gamyba",
+    "legal_name": "Aurimo korpusinių baldų gamyba (individual activity)",
+    "trading_name": "Aurimo korpusinių baldų gamyba",
+    "source_identity": "Aurimo korpusinių baldų gamyba (individual activity) — Aurimo korpusinių baldų gamyba",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Norkaičiai, Tauragė r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
+    "audience": "abiem",
+    "website": "https://www.cabinetfurniture.lt/en",
+    "public_contact_url": "https://www.cabinetfurniture.lt/en",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: high-quality furniture made to order; Site/M/P/H",
+    "scope_evidence": "scope: high-quality furniture made to order",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://www.cabinetfurniture.lt/en"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "uosvita",
+    "legal_name": "MB Uosvita",
+    "trading_name": "Uosvita",
+    "source_identity": "MB Uosvita — Uosvita",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Jurbarkas",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "SW",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Medžio darbai ir medžio masyvo baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: one-off solid-wood pieces; client or maker’s timber; Directory/M/P/H",
+    "scope_evidence": "scope: one-off solid-wood pieces; client or maker’s timber",
+    "evidence_source_type": "Directory",
+    "source_urls": [
+      "https://www.manreikia.lt/imone/uosvita-mb"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "laukbaldis",
+    "legal_name": "UAB Laukbaldis",
+    "trading_name": "Laukbaldis",
+    "source_identity": "UAB Laukbaldis — Laukbaldis",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Dapkiškiai, Tauragė r.",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "SW"
+    ],
+    "category_labels": [
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
+    "audience": "buitiniai",
+    "website": "https://laukbaldis.lt/",
+    "public_contact_url": "https://laukbaldis.lt/",
+    "portfolio_status": "yra",
+    "confidence": "aukštas",
+    "confidence_evidence": "scope: manufacturing since 1996; Site/H/P/H",
+    "scope_evidence": "scope: manufacturing since 1996",
+    "evidence_source_type": "Site",
+    "source_urls": [
+      "https://laukbaldis.lt/",
+      "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Taurag%C4%97"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tvirte",
+    "legal_name": "UAB Tvirtė",
+    "trading_name": "Tvirtė",
+    "source_identity": "UAB Tvirtė — Tvirtė",
+    "legal_entity_known": true,
+    "description_lt": "",
+    "location": "Tauragė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "SW",
+      "MM",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Medžio darbai ir medžio masyvo baldai",
+      "Metalo ir mišrių medžiagų baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
+    "audience": "abiem",
+    "website": null,
+    "public_contact_url": null,
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Site: handmade furniture created for the customer; Directory/M/n/p/M",
+    "scope_evidence": "Site: handmade furniture created for the customer",
+    "evidence_source_type": "Directory",
+    "source_urls": [
+      "https://www.tvirte.com/"
+    ],
+    "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
+    "source_collection_date": "2026-07-27",
+    "verification_status": "nepatvirtinta"
+  }
+]
