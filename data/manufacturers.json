@@ -10,15 +10,25 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.balduarsenalas.lt/",
     "public_contact_url": "https://www.balduarsenalas.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site: “pagrindinė veikla – įvairių nestandartinių baldų gamyba”; Own site/M/P/H",
-    "scope_evidence": "Site: “pagrindinė veikla – įvairių nestandartinių baldų gamyba” Šaltinis: https://www.balduarsenalas.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.balduarsenalas.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.balduarsenalas.lt/",
     "evidence_source_type": "Own site",
     "source_urls": [
       "https://www.balduarsenalas.lt/"
@@ -38,15 +48,23 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.dgtbaldai.lt/",
     "public_contact_url": "https://www.dgtbaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site: “projektuoja, gamina ir parduoda” multiple custom categories; Own site/M/P/H",
-    "scope_evidence": "Site: “projektuoja, gamina ir parduoda” multiple custom categories Šaltinis: https://www.dgtbaldai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.dgtbaldai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.dgtbaldai.lt/",
     "evidence_source_type": "Own site",
     "source_urls": [
       "https://www.dgtbaldai.lt/"
@@ -66,15 +84,25 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "abiem",
     "website": "https://sostinesbaldai.lt/",
     "public_contact_url": "https://sostinesbaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Directory: “projektavimo darbais ... baigiant montavimo darbais”; Own site + directory/M/P/H",
-    "scope_evidence": "Directory: “projektavimo darbais ... baigiant montavimo darbais” Šaltinis: https://sostinesbaldai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://sostinesbaldai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://sostinesbaldai.lt/",
     "evidence_source_type": "Own site + directory",
     "source_urls": [
       "https://sostinesbaldai.lt/",
@@ -95,15 +123,19 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "buitiniai",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory: “nestandartinių korpusinių baldų gamyba pagal užsakymą”; Business directory/H/n/p/M",
-    "scope_evidence": "Directory: “nestandartinių korpusinių baldų gamyba pagal užsakymą” Šaltinis: https://rekvizitai.vz.lt/paieskos-frazes/Baldai+pagal+u%C5%BEsakym%C4%85/vilnius/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://rekvizitai.vz.lt/paieskos-frazes/Baldai+pagal+u%C5%BEsakym%C4%85/vilnius/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://rekvizitai.vz.lt/paieskos-frazes/Baldai+pagal+u%C5%BEsakym%C4%85/vilnius/",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://rekvizitai.vz.lt/paieskos-frazes/Baldai+pagal+u%C5%BEsakym%C4%85/vilnius/"
@@ -123,15 +155,23 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "abiem",
     "website": "https://nestandartas.lt/",
     "public_contact_url": "https://nestandartas.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site lists one Vilnius workshop/company contact; Own site + directory/M/P/H",
-    "scope_evidence": "Site lists one Vilnius workshop/company contact Šaltinis: https://nestandartas.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://nestandartas.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://nestandartas.lt/",
     "evidence_source_type": "Own site + directory",
     "source_urls": [
       "https://nestandartas.lt/"
@@ -151,15 +191,27 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
     "audience": "abiem",
     "website": "https://arbald.lt/",
     "public_contact_url": "https://arbald.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site/directories: custom design and manufacture; company testimonial calls it UAB; Own site + directory/M/P/H",
-    "scope_evidence": "Site/directories: custom design and manufacture; company testimonial calls it UAB Šaltinis: https://arbald.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://arbald.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; medžio darbai ar medžio masyvo baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://arbald.lt/",
     "evidence_source_type": "Own site + directory",
     "source_urls": [
       "https://arbald.lt/",
@@ -180,15 +232,19 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory: non-standard furniture made to individual orders or designers’ interior projects; Business directory/M/P/M",
-    "scope_evidence": "Directory: non-standard furniture made to individual orders or designers’ interior projects Šaltinis: https://www.info.lt/imones/Evaldo-baldai-UAB/2335694",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.info.lt/imones/Evaldo-baldai-UAB/2335694",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.info.lt/imones/Evaldo-baldai-UAB/2335694",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://www.info.lt/imones/Evaldo-baldai-UAB/2335694"
@@ -208,15 +264,19 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://viruna.lt/pages/about",
     "public_contact_url": "https://viruna.lt/pages/about",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Directory: company founded in 1994 to solve non-standard furniture situations; Own site + directory/M/P/H",
-    "scope_evidence": "Directory: company founded in 1994 to solve non-standard furniture situations Šaltinis: https://viruna.lt/pages/about",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://viruna.lt/pages/about",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://viruna.lt/pages/about",
     "evidence_source_type": "Own site + directory",
     "source_urls": [
       "https://viruna.lt/pages/about",
@@ -237,15 +297,19 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "HR"
+    ],
+    "category_labels": [
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "verslas",
     "website": "https://fitsout.com/",
     "public_contact_url": "https://fitsout.com/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Directory: team has “more than 15 years experience” in tailored fit-out; Own site + directory/B/P/H",
-    "scope_evidence": "Directory: team has “more than 15 years experience” in tailored fit-out Šaltinis: https://fitsout.com/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://fitsout.com/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://fitsout.com/",
     "evidence_source_type": "Own site + directory",
     "source_urls": [
       "https://fitsout.com/",
@@ -266,15 +330,21 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "abiem",
     "website": "https://enven.lt/",
     "public_contact_url": "https://enven.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Source: founded in 2014 by designers, architects and professional manufacturers; Own site + directory/M/P/H",
-    "scope_evidence": "Source: founded in 2014 by designers, architects and professional manufacturers Šaltinis: https://enven.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://enven.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://enven.lt/",
     "evidence_source_type": "Own site + directory",
     "source_urls": [
       "https://enven.lt/",
@@ -327,15 +397,19 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory: established 2014; custom-furniture manufacture and installation; Business directory/M/n/p/M",
-    "scope_evidence": "Directory: established 2014; custom-furniture manufacture and installation Šaltinis: https://rekvizitai.vz.lt/paieskos-frazes/AS-Baldai/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://rekvizitai.vz.lt/paieskos-frazes/AS-Baldai/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://rekvizitai.vz.lt/paieskos-frazes/AS-Baldai/",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://rekvizitai.vz.lt/paieskos-frazes/AS-Baldai/"
@@ -355,15 +429,19 @@
     "city": "Ąžuolinės k., Vilniaus r.",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Public listing identifies a company making non-standard furniture; Directory + marketplace/M/n/p/M",
-    "scope_evidence": "Public listing identifies a company making non-standard furniture Šaltinis: https://www.1551.lt/saltum-uab-193942/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/saltum-uab-193942/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/saltum-uab-193942/",
     "evidence_source_type": "Directory + marketplace",
     "source_urls": [
       "https://www.1551.lt/saltum-uab-193942/"
@@ -417,15 +495,23 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "buitiniai",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "One registered company; custom-order product range in directory; Business directories/H/P/M",
-    "scope_evidence": "One registered company; custom-order product range in directory Šaltinis: https://geltoni.lt/imones/protingi-baldai-uab/19598",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://geltoni.lt/imones/protingi-baldai-uab/19598",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://geltoni.lt/imones/protingi-baldai-uab/19598",
     "evidence_source_type": "Business directories",
     "source_urls": [
       "https://geltoni.lt/imones/protingi-baldai-uab/19598"
@@ -616,15 +702,19 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory: company provides non-standard and standard furniture manufacture; Business directory/M/n/p/M",
-    "scope_evidence": "Directory: company provides non-standard and standard furniture manufacture Šaltinis: https://www.info.lt/paieska/baldai+pagal+individual%C5%B3+u%C5%BEsakym%C4%85/Vilnius",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.info.lt/paieska/baldai+pagal+individual%C5%B3+u%C5%BEsakym%C4%85/Vilnius",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.info.lt/paieska/baldai+pagal+individual%C5%B3+u%C5%BEsakym%C4%85/Vilnius",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://www.info.lt/paieska/baldai+pagal+individual%C5%B3+u%C5%BEsakym%C4%85/Vilnius"
@@ -677,15 +767,23 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://baldumada.lt/",
     "public_contact_url": "https://baldumada.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Public Sodra proxy: 1 employee; Own site + directory/M/P/H",
-    "scope_evidence": "Public Sodra proxy: 1 employee Šaltinis: https://baldumada.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://baldumada.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://baldumada.lt/",
     "evidence_source_type": "Own site + directory",
     "source_urls": [
       "https://baldumada.lt/",
@@ -706,15 +804,19 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "verslas",
     "website": "https://www.piritas.lt/en/",
     "public_contact_url": "https://www.piritas.lt/en/",
     "portfolio_status": "nežinoma",
     "confidence": "aukštas",
-    "confidence_evidence": "One-owner company, founded 2015; Own site + directories/B/n/p/H",
-    "scope_evidence": "One-owner company, founded 2015 Šaltinis: https://www.piritas.lt/en/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.piritas.lt/en/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.piritas.lt/en/",
     "evidence_source_type": "Own site + directories",
     "source_urls": [
       "https://www.piritas.lt/en/",
@@ -800,15 +902,23 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "abiem",
     "website": "http://www.baldaiuoga.lt/",
     "public_contact_url": "http://www.baldaiuoga.lt/",
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Site lists custom manufacture plus in-house MDF painting, cutting and edge laminating; Own site/M/n/p/M",
-    "scope_evidence": "Site lists custom manufacture plus in-house MDF painting, cutting and edge laminating Šaltinis: http://www.baldaiuoga.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: http://www.baldaiuoga.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: http://www.baldaiuoga.lt/",
     "evidence_source_type": "Own site",
     "source_urls": [
       "http://www.baldaiuoga.lt/"
@@ -828,15 +938,23 @@
     "city": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/",
     "public_contact_url": "https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/",
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "Site says manufacture in Vilnius to individual orders; Own site/M/P/M",
-    "scope_evidence": "Site says manufacture in Vilnius to individual orders Šaltinis: https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/",
     "evidence_source_type": "Own site",
     "source_urls": [
       "https://www.baldaijng.lt/nestandartiniu-baldu-gamyba-vilniuje/"
@@ -888,15 +1006,23 @@
     "city": "Alytus",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "OC",
+      "MM"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Biuro ir komerciniai baldai",
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://alytausbaldai.lt/",
     "public_contact_url": "https://alytausbaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site: operating since 2010 as a custom metal-products and hard cabinet-furniture manufacturer; Own site/M/P/H",
-    "scope_evidence": "Site: operating since 2010 as a custom metal-products and hard cabinet-furniture manufacturer Šaltinis: https://alytausbaldai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://alytausbaldai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; biuro ar komercinių patalpų baldai; metaliniai ar mišrių medžiagų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://alytausbaldai.lt/",
     "evidence_source_type": "Own site",
     "source_urls": [
       "https://alytausbaldai.lt/"
@@ -950,15 +1076,25 @@
     "city": "Alytus",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory: “nestandartinių baldų gamyba” at Alytus address; Business directory/M/n/p/M",
-    "scope_evidence": "Directory: “nestandartinių baldų gamyba” at Alytus address Šaltinis: https://www.1551.lt/emlitos-baldai-uab-253406/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.1551.lt/emlitos-baldai-uab-253406/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.1551.lt/emlitos-baldai-uab-253406/",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://www.1551.lt/emlitos-baldai-uab-253406/"
@@ -978,15 +1114,21 @@
     "city": "Alytus",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.alsot.lt/en/about-us",
     "public_contact_url": "https://www.alsot.lt/en/about-us",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site: “More than 17 years of experience” and one of Lithuania’s largest non-standard cabinet-furniture makers; Own site + directories/M/P/H",
-    "scope_evidence": "Site: “More than 17 years of experience” and one of Lithuania’s largest non-standard cabinet-furniture makers Šaltinis: https://www.alsot.lt/en/about-us",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.alsot.lt/en/about-us",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.alsot.lt/en/about-us",
     "evidence_source_type": "Own site + directories",
     "source_urls": [
       "https://www.alsot.lt/en/about-us"
@@ -1040,15 +1182,19 @@
     "city": "Utena",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Source: founded in 1991; makes custom furniture to individual orders; Business directory/M/n/p/M",
-    "scope_evidence": "Source: founded in 1991; makes custom furniture to individual orders Šaltinis: https://www.1551.lt/uosis-uab-68804/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/uosis-uab-68804/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/uosis-uab-68804/",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://www.1551.lt/uosis-uab-68804/"
@@ -1068,15 +1214,19 @@
     "city": "Utena",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "One public company listing identifies it as a Utena non-standard furniture maker; Business directory/M/n/p/M",
-    "scope_evidence": "One public company listing identifies it as a Utena non-standard furniture maker Šaltinis: https://www.1551.lt/balzena-ii-75641/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/balzena-ii-75641/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/balzena-ii-75641/",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://www.1551.lt/balzena-ii-75641/"
@@ -1096,15 +1246,23 @@
     "city": "Utena",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "abiem",
     "website": "https://triobalda.lt/",
     "public_contact_url": "https://triobalda.lt/",
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "Site identifies furniture manufacture in Utena and non-standard work; Own site/M/P/M",
-    "scope_evidence": "Site identifies furniture manufacture in Utena and non-standard work Šaltinis: https://triobalda.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://triobalda.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://triobalda.lt/",
     "evidence_source_type": "Own site",
     "source_urls": [
       "https://triobalda.lt/"
@@ -1124,15 +1282,19 @@
     "city": "Molėtai",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory: “daugiau nei 25 metus” in non-standard furniture manufacture; Business directory/M/n/p/M",
-    "scope_evidence": "Directory: “daugiau nei 25 metus” in non-standard furniture manufacture Šaltinis: https://www.info.lt/imones/Mol%C4%97t%C5%B3-baldai-UAB/2412285",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.info.lt/imones/Mol%C4%97t%C5%B3-baldai-UAB/2412285",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.info.lt/imones/Mol%C4%97t%C5%B3-baldai-UAB/2412285",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://www.info.lt/imones/Mol%C4%97t%C5%B3-baldai-UAB/2412285"
@@ -1184,15 +1346,27 @@
     "city": "Marijampolė",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.baldgama.lt/",
     "public_contact_url": "https://www.baldgama.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site: Marijampolė custom manufacturer designing/making a broad range to individual orders; Own site + directory/M/P/H",
-    "scope_evidence": "Site: Marijampolė custom manufacturer designing/making a broad range to individual orders Šaltinis: https://www.baldgama.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.baldgama.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.baldgama.lt/",
     "evidence_source_type": "Own site + directory",
     "source_urls": [
       "https://www.baldgama.lt/"
@@ -1282,15 +1456,21 @@
     "city": "Trakiškių k., Marijampolės sav.",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Source: “Daugiau nei 30 metų” making interior doors and furniture to individual orders; Business directory/M/n/p/M",
-    "scope_evidence": "Source: “Daugiau nei 30 metų” making interior doors and furniture to individual orders Šaltinis: https://www.1551.lt/barsis-uab-106611/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.1551.lt/barsis-uab-106611/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; medžio darbai ar medžio masyvo baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.1551.lt/barsis-uab-106611/",
     "evidence_source_type": "Business directory",
     "source_urls": [
       "https://www.1551.lt/barsis-uab-106611/"
@@ -1310,15 +1490,25 @@
     "city": "Baraginės k., Marijampolės sav.",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://rimbalda.lt/baldu-gamyba/",
     "public_contact_url": "https://rimbalda.lt/baldu-gamyba/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site: majority made to order; company salons opened in 2013; Own site + directories/M/P/H",
-    "scope_evidence": "Site: majority made to order; company salons opened in 2013 Šaltinis: https://rimbalda.lt/baldu-gamyba/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://rimbalda.lt/baldu-gamyba/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://rimbalda.lt/baldu-gamyba/",
     "evidence_source_type": "Own site + directories",
     "source_urls": [
       "https://rimbalda.lt/baldu-gamyba/",
@@ -1339,15 +1529,25 @@
     "city": "Kumpiai, Kaunas d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://diforma.lt/lt/baldu-gamyba",
     "public_contact_url": "https://diforma.lt/lt/baldu-gamyba",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "42 employees — Geltoni; site/M/P/H",
-    "scope_evidence": "42 employees — Geltoni Šaltinis: https://diforma.lt/lt/baldu-gamyba",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://diforma.lt/lt/baldu-gamyba",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://diforma.lt/lt/baldu-gamyba",
     "evidence_source_type": "site",
     "source_urls": [
       "https://diforma.lt/lt/baldu-gamyba",
@@ -1368,15 +1568,23 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://www.daimira.lt/",
     "public_contact_url": "https://www.daimira.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "8 employees — Rekvizitai/Sodra; site/H/P/H",
-    "scope_evidence": "8 employees — Rekvizitai/Sodra Šaltinis: https://www.daimira.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.daimira.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.daimira.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://www.daimira.lt/",
@@ -1397,15 +1605,27 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "abiem",
     "website": "https://baldziai.lt/",
     "public_contact_url": "https://baldziai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "25 employees — Rekvizitai/Sodra; site+FB/M/P/H",
-    "scope_evidence": "25 employees — Rekvizitai/Sodra Šaltinis: https://baldziai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://baldziai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://baldziai.lt/",
     "evidence_source_type": "site+FB",
     "source_urls": [
       "https://baldziai.lt/",
@@ -1426,15 +1646,25 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://jusubaldai.lt/",
     "public_contact_url": "https://jusubaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "9 employees — Geltoni; site/M/P/H",
-    "scope_evidence": "9 employees — Geltoni Šaltinis: https://jusubaldai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://jusubaldai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://jusubaldai.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://jusubaldai.lt/",
@@ -1455,15 +1685,25 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://olideja.lt/",
     "public_contact_url": "https://olideja.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "10 employees — Geltoni; site/M/P/H",
-    "scope_evidence": "10 employees — Geltoni Šaltinis: https://olideja.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://olideja.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://olideja.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://olideja.lt/",
@@ -1484,15 +1724,19 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://skliautai.com/",
     "public_contact_url": "https://skliautai.com/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Directory: non-standard furniture maker with a broad production range; site/M/P/H",
-    "scope_evidence": "Directory: non-standard furniture maker with a broad production range Šaltinis: https://skliautai.com/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://skliautai.com/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://skliautai.com/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://skliautai.com/",
@@ -1513,15 +1757,25 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://baldai4u.lt/mes/apie-mus/",
     "public_contact_url": "https://baldai4u.lt/mes/apie-mus/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "13 employees — Rekvizitai/Sodra; site/M/P/H",
-    "scope_evidence": "13 employees — Rekvizitai/Sodra Šaltinis: https://baldai4u.lt/mes/apie-mus/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://baldai4u.lt/mes/apie-mus/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://baldai4u.lt/mes/apie-mus/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://baldai4u.lt/mes/apie-mus/",
@@ -1542,15 +1796,19 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "OC"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "verslas",
     "website": "https://eigida.lt/",
     "public_contact_url": "https://eigida.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "33 employees — Rekvizitai/Sodra; site/B/P/H",
-    "scope_evidence": "33 employees — Rekvizitai/Sodra Šaltinis: https://eigida.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://eigida.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://eigida.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://eigida.lt/",
@@ -1571,15 +1829,25 @@
     "city": "Domeikava/Karmėlava, Kaunas d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.furnitus.lt/",
     "public_contact_url": "https://www.furnitus.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "proxy: “įvairios paskirties nestandartiniai baldai”; site/M/P/H",
-    "scope_evidence": "proxy: “įvairios paskirties nestandartiniai baldai” Šaltinis: https://www.furnitus.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.furnitus.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.furnitus.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://www.furnitus.lt/"
@@ -1599,15 +1867,19 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K"
+    ],
+    "category_labels": [
+      "Virtuvės baldai"
+    ],
     "audience": "abiem",
     "website": "https://tgbaldai.lt/",
     "public_contact_url": "https://tgbaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "26 employees — Rekvizitai/Sodra; site/M/P/H",
-    "scope_evidence": "26 employees — Rekvizitai/Sodra Šaltinis: https://tgbaldai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://tgbaldai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://tgbaldai.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://tgbaldai.lt/",
@@ -1628,15 +1900,27 @@
     "city": "Ramučiai/Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://currus.lt/",
     "public_contact_url": "https://currus.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "11–20 employees — 1551; site/H/P/H",
-    "scope_evidence": "11–20 employees — 1551 Šaltinis: https://currus.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://currus.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://currus.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://currus.lt/",
@@ -1657,15 +1941,19 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://kietibaldai.lt/en/",
     "public_contact_url": "https://kietibaldai.lt/en/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "8 employees — Geltoni; site/M/P/H",
-    "scope_evidence": "8 employees — Geltoni Šaltinis: https://kietibaldai.lt/en/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://kietibaldai.lt/en/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://kietibaldai.lt/en/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://kietibaldai.lt/en/",
@@ -1686,15 +1974,27 @@
     "city": "Neveronys, Kaunas d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://www.rolandobaldai.lt/",
     "public_contact_url": "https://www.rolandobaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "proxy: “individual living-room furniture made to order”; site/H/P/H",
-    "scope_evidence": "proxy: “individual living-room furniture made to order” Šaltinis: https://www.rolandobaldai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.rolandobaldai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; medžio darbai ar medžio masyvo baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.rolandobaldai.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://www.rolandobaldai.lt/",
@@ -1715,15 +2015,23 @@
     "city": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "OC",
+      "HR",
+      "U"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
     "audience": "abiem",
     "website": "https://topsofa.lt/en/main-2/",
     "public_contact_url": "https://topsofa.lt/en/main-2/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "proxy: made-to-order for businesses and individuals; site/M/P/H",
-    "scope_evidence": "proxy: made-to-order for businesses and individuals Šaltinis: https://topsofa.lt/en/main-2/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://topsofa.lt/en/main-2/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; minkšti baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://topsofa.lt/en/main-2/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://topsofa.lt/en/main-2/"
@@ -1743,15 +2051,25 @@
     "city": "Šiauliai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.baldunoras.lt/",
     "public_contact_url": "https://www.baldunoras.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "5 employees — Info.lt/Sodra; site/M/P/H",
-    "scope_evidence": "5 employees — Info.lt/Sodra Šaltinis: https://www.baldunoras.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.baldunoras.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.baldunoras.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://www.baldunoras.lt/",
@@ -1772,15 +2090,23 @@
     "city": "Kairiai/Šiauliai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://arta.lt/",
     "public_contact_url": "https://arta.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "proxy: operating since 1991; qualified long-tenure staff; site/M/P/H",
-    "scope_evidence": "proxy: operating since 1991; qualified long-tenure staff Šaltinis: https://arta.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://arta.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://arta.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://arta.lt/"
@@ -1800,15 +2126,19 @@
     "city": "Gruzdžiai, Šiauliai d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.tomers.lt/en",
     "public_contact_url": "https://www.tomers.lt/en",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "proxy: “professional furniture manufacturers”; site+FB/M/P/H",
-    "scope_evidence": "proxy: “professional furniture manufacturers” Šaltinis: https://www.tomers.lt/en",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.tomers.lt/en",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.tomers.lt/en",
     "evidence_source_type": "site+FB",
     "source_urls": [
       "https://www.tomers.lt/en",
@@ -1829,15 +2159,19 @@
     "city": "Sutkūnai, Šiauliai d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "OC"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "verslas",
     "website": "https://ergosta.lt/",
     "public_contact_url": "https://ergosta.lt/",
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "2 employees — Statyba.lt/Sodra; site/B/P/M",
-    "scope_evidence": "2 employees — Statyba.lt/Sodra Šaltinis: https://ergosta.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://ergosta.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://ergosta.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://ergosta.lt/",
@@ -1891,15 +2225,29 @@
     "city": "Šiauliai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
     "audience": "abiem",
     "website": "https://rekvizitai.vz.lt/en/company/stonkai/",
     "public_contact_url": "https://rekvizitai.vz.lt/en/company/stonkai/",
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "proxy: “professional…modern production process”; directory/M/n/p/M",
-    "scope_evidence": "proxy: “professional…modern production process” Šaltinis: https://rekvizitai.vz.lt/en/company/stonkai/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://rekvizitai.vz.lt/en/company/stonkai/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; medžio darbai ar medžio masyvo baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://rekvizitai.vz.lt/en/company/stonkai/",
     "evidence_source_type": "directory",
     "source_urls": [
       "https://rekvizitai.vz.lt/en/company/stonkai/"
@@ -1954,15 +2302,19 @@
     "city": "Šiauliai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "http://solobaldai.lt/",
     "public_contact_url": "http://solobaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Profile: growing company engaged in non-standard furniture manufacture; site/M/P/H",
-    "scope_evidence": "Profile: growing company engaged in non-standard furniture manufacture Šaltinis: http://solobaldai.lt/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: http://solobaldai.lt/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: http://solobaldai.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "http://solobaldai.lt/",
@@ -1983,15 +2335,19 @@
     "city": "Šiauliai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "verslas",
     "website": "http://www.venta.lt/",
     "public_contact_url": "http://www.venta.lt/",
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "95 employees — Rekvizitai/Sodra; site+IG/B/P/M",
-    "scope_evidence": "95 employees — Rekvizitai/Sodra Šaltinis: http://www.venta.lt/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: http://www.venta.lt/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: http://www.venta.lt/",
     "evidence_source_type": "site+IG",
     "source_urls": [
       "http://www.venta.lt/",
@@ -2012,15 +2368,19 @@
     "city": "Šiauliai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://rekvizitai.vz.lt/en/company/raibaldera/",
     "public_contact_url": "https://rekvizitai.vz.lt/en/company/raibaldera/",
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "proxy: “work experience >20 years”; directory/marketplace/M/P/M",
-    "scope_evidence": "proxy: “work experience >20 years” Šaltinis: https://rekvizitai.vz.lt/en/company/raibaldera/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://rekvizitai.vz.lt/en/company/raibaldera/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://rekvizitai.vz.lt/en/company/raibaldera/",
     "evidence_source_type": "directory/marketplace",
     "source_urls": [
       "https://rekvizitai.vz.lt/en/company/raibaldera/",
@@ -2041,15 +2401,21 @@
     "city": "Degaičiai, Telšiai d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "W",
+      "OC"
+    ],
+    "category_labels": [
+      "Spintos ir įmontuojami baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.agbaldai.lt/",
     "public_contact_url": "https://www.agbaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "7 employees — Scoris; site/M/P/H",
-    "scope_evidence": "7 employees — Scoris Šaltinis: https://www.agbaldai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.agbaldai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: spintos, drabužinės ar įmontuojami sprendimai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.agbaldai.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://www.agbaldai.lt/",
@@ -2070,15 +2436,23 @@
     "city": "Telšiai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
     "public_contact_url": "https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "3 employees — Scoris; directory/M/P/H",
-    "scope_evidence": "3 employees — Scoris Šaltinis: https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
     "evidence_source_type": "directory",
     "source_urls": [
       "https://www.1551.lt/tvirtas-baldas-uab-nestandartiniai-baldai-pagal-uzsakymus-baldu-projektavimas-baldu-gamyba-telsiai-visa-lietuva-253455/",
@@ -2099,15 +2473,25 @@
     "city": "Telšiai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "buitiniai",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "proxy: “patyrusių meistrų komanda”; site/H/P/M",
-    "scope_evidence": "proxy: “patyrusių meistrų komanda” Šaltinis: https://www.info.lt/imones/Aurimo-baldai/2413959",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.info.lt/imones/Aurimo-baldai/2413959",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.info.lt/imones/Aurimo-baldai/2413959",
     "evidence_source_type": "site",
     "source_urls": [
       "https://www.info.lt/imones/Aurimo-baldai/2413959"
@@ -2127,15 +2511,19 @@
     "city": "Nevarėnai, Telšiai d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://scoris.lt/imone/304500493",
     "public_contact_url": "https://scoris.lt/imone/304500493",
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "micro category — Scoris; directory/H/n/p/M",
-    "scope_evidence": "micro category — Scoris Šaltinis: https://scoris.lt/imone/304500493",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://scoris.lt/imone/304500493",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://scoris.lt/imone/304500493",
     "evidence_source_type": "directory",
     "source_urls": [
       "https://scoris.lt/imone/304500493"
@@ -2155,15 +2543,19 @@
     "city": "Telšiai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "http://www.meistrine.lt/",
     "public_contact_url": "http://www.meistrine.lt/",
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory classifies the Telšiai company under furniture production; site+directory/M/P/M",
-    "scope_evidence": "Directory classifies the Telšiai company under furniture production Šaltinis: http://www.meistrine.lt/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: http://www.meistrine.lt/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: http://www.meistrine.lt/",
     "evidence_source_type": "site+directory",
     "source_urls": [
       "http://www.meistrine.lt/",
@@ -2217,15 +2609,19 @@
     "city": "Mažeikiai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K"
+    ],
+    "category_labels": [
+      "Virtuvės baldai"
+    ],
     "audience": "buitiniai",
     "website": "http://www.skaidma.lt/baldai.html",
     "public_contact_url": "http://www.skaidma.lt/baldai.html",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "3 employees — Rekvizitai/Sodra; site/H/P/H",
-    "scope_evidence": "3 employees — Rekvizitai/Sodra Šaltinis: http://www.skaidma.lt/baldai.html",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: http://www.skaidma.lt/baldai.html",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: http://www.skaidma.lt/baldai.html",
     "evidence_source_type": "site",
     "source_urls": [
       "http://www.skaidma.lt/baldai.html",
@@ -2246,15 +2642,21 @@
     "city": "Mažeikiai production",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "abiem",
     "website": "https://ambientboutique.lt/",
     "public_contact_url": "https://ambientboutique.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "3 employees — Tax.lt; site/M/P/H",
-    "scope_evidence": "3 employees — Tax.lt Šaltinis: https://ambientboutique.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://ambientboutique.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://ambientboutique.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://ambientboutique.lt/",
@@ -2275,15 +2677,25 @@
     "city": "Mažeikiai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.taumona.com/en/",
     "public_contact_url": "https://www.taumona.com/en/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "proxy: 28+ years’ manufacturing experience; site+LinkedIn/M/P/H",
-    "scope_evidence": "proxy: 28+ years’ manufacturing experience Šaltinis: https://www.taumona.com/en/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.taumona.com/en/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.taumona.com/en/",
     "evidence_source_type": "site+LinkedIn",
     "source_urls": [
       "https://www.taumona.com/en/"
@@ -2303,15 +2715,19 @@
     "city": "Mažeikiai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "U"
+    ],
+    "category_labels": [
+      "Minkšti baldai pagal užsakymą"
+    ],
     "audience": "verslas",
     "website": "https://lyragroup.eu/about-us/",
     "public_contact_url": "https://lyragroup.eu/about-us/",
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "proxy: factory “grown and modernised” in Mažeikiai; site+LinkedIn/B/P/M",
-    "scope_evidence": "proxy: factory “grown and modernised” in Mažeikiai Šaltinis: https://lyragroup.eu/about-us/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://lyragroup.eu/about-us/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: minkšti baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://lyragroup.eu/about-us/",
     "evidence_source_type": "site+LinkedIn",
     "source_urls": [
       "https://lyragroup.eu/about-us/",
@@ -2332,15 +2748,25 @@
     "city": "Mažeikiai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://barvafurniture.lt/en/home/",
     "public_contact_url": "https://barvafurniture.lt/en/home/",
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "proxy: serves companies in Lithuania and abroad; site+FB/M/P/M",
-    "scope_evidence": "proxy: serves companies in Lithuania and abroad Šaltinis: https://barvafurniture.lt/en/home/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://barvafurniture.lt/en/home/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://barvafurniture.lt/en/home/",
     "evidence_source_type": "site+FB",
     "source_urls": [
       "https://barvafurniture.lt/en/home/"
@@ -2360,15 +2786,19 @@
     "city": "Tauragė d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "17 employees — Rekvizitai/Sodra; site/M/P/H",
-    "scope_evidence": "17 employees — Rekvizitai/Sodra Šaltinis: https://rekvizitai.vz.lt/en/company/kristalga/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://rekvizitai.vz.lt/en/company/kristalga/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://rekvizitai.vz.lt/en/company/kristalga/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://rekvizitai.vz.lt/en/company/kristalga/"
@@ -2388,15 +2818,27 @@
     "city": "Tauragė",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "HR"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "HoReCa ir prekybos baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.1551.lt/alantas-uab-92066/",
     "public_contact_url": "https://www.1551.lt/alantas-uab-92066/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "61 employees — Scoris; directory/M/P/H",
-    "scope_evidence": "61 employees — Scoris Šaltinis: https://www.1551.lt/alantas-uab-92066/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.1551.lt/alantas-uab-92066/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.1551.lt/alantas-uab-92066/",
     "evidence_source_type": "directory",
     "source_urls": [
       "https://www.1551.lt/alantas-uab-92066/",
@@ -2417,15 +2859,27 @@
     "city": "Raseiniai",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC",
+      "U"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
     "audience": "abiem",
     "website": "https://www.linkrusta.lt/",
     "public_contact_url": "https://www.linkrusta.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "proxy: manufacturing activity since 2011; site/M/P/H",
-    "scope_evidence": "proxy: manufacturing activity since 2011 Šaltinis: https://www.linkrusta.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.linkrusta.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; minkšti baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.linkrusta.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://www.linkrusta.lt/",
@@ -2446,15 +2900,25 @@
     "city": "Čičinai, Jonava d.",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.agmena.lt/",
     "public_contact_url": "https://www.agmena.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "proxy: “daugiametę patirtį” creating custom furniture; site/M/P/H",
-    "scope_evidence": "proxy: “daugiametę patirtį” creating custom furniture Šaltinis: https://www.agmena.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.agmena.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.agmena.lt/",
     "evidence_source_type": "site",
     "source_urls": [
       "https://www.agmena.lt/",
@@ -2510,15 +2974,25 @@
     "city": "Kopūstai/Kretingalė, Klaipėda r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "BB",
+      "OC",
+      "SW"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai",
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.alrasina.lt/",
     "public_contact_url": "https://www.alrasina.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Site: 15 years in the furniture industry; Site/M/P/H",
-    "scope_evidence": "Site: 15 years in the furniture industry Šaltinis: https://www.alrasina.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.alrasina.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; medžio darbai ar medžio masyvo baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.alrasina.lt/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://www.alrasina.lt/"
@@ -2538,15 +3012,23 @@
     "city": "Dovilai, Klaipėda r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.aresidens.com/en",
     "public_contact_url": "https://www.aresidens.com/en",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: “realize any interior design project”; Site/M/P/H",
-    "scope_evidence": "scope: “realize any interior design project” Šaltinis: https://www.aresidens.com/en",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.aresidens.com/en",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.aresidens.com/en",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://www.aresidens.com/en"
@@ -2566,15 +3048,23 @@
     "city": "Klaipėda",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "abiem",
     "website": "https://azuologama.lt/",
     "public_contact_url": "https://azuologama.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: “projektavime, gamyboje ir montavime”; Site/M/P/H",
-    "scope_evidence": "scope: “projektavime, gamyboje ir montavime” Šaltinis: https://azuologama.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://azuologama.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://azuologama.lt/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://azuologama.lt/"
@@ -2594,15 +3084,19 @@
     "city": "Klaipėda",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "SW"
+    ],
+    "category_labels": [
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.kaiva.lt/",
     "public_contact_url": "https://www.kaiva.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "11–20 employees (public 1551 range); Site + directory/M/P/H",
-    "scope_evidence": "11–20 employees (public 1551 range) Šaltinis: https://www.kaiva.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.kaiva.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: medžio darbai ar medžio masyvo baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.kaiva.lt/",
     "evidence_source_type": "Site + directory",
     "source_urls": [
       "https://www.kaiva.lt/",
@@ -2623,15 +3117,19 @@
     "city": "Klaipėda",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.estuba.lt/",
     "public_contact_url": "https://www.estuba.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: “project team and craftsmen”; Site/M/P/H",
-    "scope_evidence": "scope: “project team and craftsmen” Šaltinis: https://www.estuba.lt/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.estuba.lt/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.estuba.lt/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://www.estuba.lt/",
@@ -2652,15 +3150,23 @@
     "city": "Klaipėda / western LT",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.baldlita.lt/",
     "public_contact_url": "https://www.baldlita.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: “specializuojasi nestandartinių baldų gamyboje”; Site/M/P/H",
-    "scope_evidence": "scope: “specializuojasi nestandartinių baldų gamyboje” Šaltinis: https://www.baldlita.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.baldlita.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.baldlita.lt/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://www.baldlita.lt/"
@@ -2712,15 +3218,25 @@
     "city": "Klaipėda",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "buitiniai",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory classifies the Klaipėda company under furniture production; Service profile/H/P/M",
-    "scope_evidence": "Directory classifies the Klaipėda company under furniture production Šaltinis: https://www.info.lt/imones/Getanas-UAB/2441655",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.info.lt/imones/Getanas-UAB/2441655",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.info.lt/imones/Getanas-UAB/2441655",
     "evidence_source_type": "Service profile",
     "source_urls": [
       "https://www.info.lt/imones/Getanas-UAB/2441655"
@@ -2808,15 +3324,23 @@
     "city": "Klaipėda",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "BB",
+      "HR",
+      "U"
+    ],
+    "category_labels": [
+      "Miegamojo ir vonios baldai",
+      "HoReCa ir prekybos baldai",
+      "Minkšti baldai pagal užsakymą"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: non-standard line for client-selected dimensions/design; Directory/M/P/H",
-    "scope_evidence": "scope: non-standard line for client-selected dimensions/design Šaltinis: http://www.baldai.com/imoniu-katalogas/deluxe-baldai",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: http://www.baldai.com/imoniu-katalogas/deluxe-baldai",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: miegamojo ar vonios baldai; HoReCa, restoranų, viešbučių ar prekybos baldai; minkšti baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: http://www.baldai.com/imoniu-katalogas/deluxe-baldai",
     "evidence_source_type": "Directory",
     "source_urls": [
       "http://www.baldai.com/imoniu-katalogas/deluxe-baldai"
@@ -2836,15 +3360,19 @@
     "city": "Rubuliai, Kretinga r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://www.arunobaldaikretingoje.lt/en/",
     "public_contact_url": "https://www.arunobaldaikretingoje.lt/en/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Directory: carcass furniture made to individual orders; Site/H/P/H",
-    "scope_evidence": "Directory: carcass furniture made to individual orders Šaltinis: https://www.arunobaldaikretingoje.lt/en/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.arunobaldaikretingoje.lt/en/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.arunobaldaikretingoje.lt/en/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://www.arunobaldaikretingoje.lt/en/",
@@ -2865,15 +3393,25 @@
     "city": "Palanga",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://r2baldai.lt/",
     "public_contact_url": "https://r2baldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "4 employees (Sodra, public profile); Site/H/P/H",
-    "scope_evidence": "4 employees (Sodra, public profile) Šaltinis: https://r2baldai.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://r2baldai.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://r2baldai.lt/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://r2baldai.lt/",
@@ -2926,15 +3464,25 @@
     "city": "Klaipėda",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://www.medeinus.lt/baldu-gamyba-klaipedoje",
     "public_contact_url": "https://www.medeinus.lt/baldu-gamyba-klaipedoje",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: “įvairių nestandartinių baldų gamybą”; Site/H/P/H",
-    "scope_evidence": "scope: “įvairių nestandartinių baldų gamybą” Šaltinis: https://www.medeinus.lt/baldu-gamyba-klaipedoje",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.medeinus.lt/baldu-gamyba-klaipedoje",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.medeinus.lt/baldu-gamyba-klaipedoje",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://www.medeinus.lt/baldu-gamyba-klaipedoje"
@@ -2954,15 +3502,21 @@
     "city": "Panevėžys",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai"
+    ],
     "audience": "abiem",
     "website": "https://baldita.lt/apie-mus/",
     "public_contact_url": "https://baldita.lt/apie-mus/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: production base in Panevėžys; orders across Lithuania; Site/M/P/H",
-    "scope_evidence": "scope: production base in Panevėžys; orders across Lithuania Šaltinis: https://baldita.lt/apie-mus/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://baldita.lt/apie-mus/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://baldita.lt/apie-mus/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://baldita.lt/apie-mus/"
@@ -3015,15 +3569,19 @@
     "city": "Panevėžys",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.bengita.lt/apie-mus/",
     "public_contact_url": "https://www.bengita.lt/apie-mus/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: private, company and public-institution clients; Site/shop/M/P/H",
-    "scope_evidence": "scope: private, company and public-institution clients Šaltinis: https://www.bengita.lt/apie-mus/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.bengita.lt/apie-mus/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.bengita.lt/apie-mus/",
     "evidence_source_type": "Site/shop",
     "source_urls": [
       "https://www.bengita.lt/apie-mus/"
@@ -3043,15 +3601,19 @@
     "city": "Panevėžys",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "buitiniai",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Directory: 1 employee (insured person); activity includes furniture manufacture; Directory/H/n/p/M",
-    "scope_evidence": "Directory: 1 employee (insured person); activity includes furniture manufacture Šaltinis: https://www.info.lt/imones/Bald%C5%B3-tvirtov%C4%97-MB/2454979",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.info.lt/imones/Bald%C5%B3-tvirtov%C4%97-MB/2454979",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.info.lt/imones/Bald%C5%B3-tvirtov%C4%97-MB/2454979",
     "evidence_source_type": "Directory",
     "source_urls": [
       "https://www.info.lt/imones/Bald%C5%B3-tvirtov%C4%97-MB/2454979"
@@ -3071,15 +3633,19 @@
     "city": "Panevėžys",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "SW"
+    ],
+    "category_labels": [
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.baldulinija.lt/en/",
     "public_contact_url": "https://www.baldulinija.lt/en/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: manufacturing solid furniture since 1997; Site/M/P/H",
-    "scope_evidence": "scope: manufacturing solid furniture since 1997 Šaltinis: https://www.baldulinija.lt/en/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.baldulinija.lt/en/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: medžio darbai ar medžio masyvo baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.baldulinija.lt/en/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://www.baldulinija.lt/en/"
@@ -3099,15 +3665,19 @@
     "city": "Sutkūnai, Panevėžys r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "OC"
+    ],
+    "category_labels": [
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://ifconcept.lt/en/apie-mus/",
     "public_contact_url": "https://ifconcept.lt/en/apie-mus/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: design–manufacture–pack–prepare for transport; Site/M/P/H",
-    "scope_evidence": "scope: design–manufacture–pack–prepare for transport Šaltinis: https://ifconcept.lt/en/apie-mus/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://ifconcept.lt/en/apie-mus/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://ifconcept.lt/en/apie-mus/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://ifconcept.lt/en/apie-mus/"
@@ -3192,15 +3762,19 @@
     "city": "Juodkaimiai/Kėdainiai r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K"
+    ],
+    "category_labels": [
+      "Virtuvės baldai"
+    ],
     "audience": "buitiniai",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: hard furniture to individual orders; Directory/H/n/p/H",
-    "scope_evidence": "scope: hard furniture to individual orders Šaltinis: https://www.1551.lt/liepas-mb-kietuju-baldu-gamyba-227837/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.1551.lt/liepas-mb-kietuju-baldu-gamyba-227837/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.1551.lt/liepas-mb-kietuju-baldu-gamyba-227837/",
     "evidence_source_type": "Directory",
     "source_urls": [
       "https://www.1551.lt/liepas-mb-kietuju-baldu-gamyba-227837/"
@@ -3220,15 +3794,19 @@
     "city": "Kėdainiai",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "buitiniai",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: design, manufacture and installation of non-standard furniture; Directory + social/H/P/H",
-    "scope_evidence": "scope: design, manufacture and installation of non-standard furniture Šaltinis: https://www.1551.lt/diara-lt-uab-137348/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/diara-lt-uab-137348/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/diara-lt-uab-137348/",
     "evidence_source_type": "Directory + social",
     "source_urls": [
       "https://www.1551.lt/diara-lt-uab-137348/"
@@ -3248,15 +3826,19 @@
     "city": "Medekšiai/Kėdainiai r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K"
+    ],
+    "category_labels": [
+      "Virtuvės baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://gustobaldai.lt/paslaugos/",
     "public_contact_url": "https://gustobaldai.lt/paslaugos/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: “Individuali gaminių gamyba”; Site/H/P/H",
-    "scope_evidence": "scope: “Individuali gaminių gamyba” Šaltinis: https://gustobaldai.lt/paslaugos/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://gustobaldai.lt/paslaugos/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://gustobaldai.lt/paslaugos/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://gustobaldai.lt/paslaugos/",
@@ -3277,15 +3859,19 @@
     "city": "Vilainiai/Kėdainiai r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://gordena.lt/apie-mus-naujas/",
     "public_contact_url": "https://gordena.lt/apie-mus-naujas/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: ordered furniture delivered/installed in 6–8 weeks; Site/H/P/H",
-    "scope_evidence": "scope: ordered furniture delivered/installed in 6–8 weeks Šaltinis: https://gordena.lt/apie-mus-naujas/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://gordena.lt/apie-mus-naujas/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://gordena.lt/apie-mus-naujas/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://gordena.lt/apie-mus-naujas/"
@@ -3305,15 +3891,19 @@
     "city": "Kėdainiai",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://unikalusbaldai.lt/",
     "public_contact_url": "https://unikalusbaldai.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "Archived own site: design-to-production-and-installation service, with products tailored to individual needs; Site/M/P/H",
-    "scope_evidence": "Archived own site: design-to-production-and-installation service, with products tailored to individual needs Šaltinis: https://unikalusbaldai.lt/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://unikalusbaldai.lt/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://unikalusbaldai.lt/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://unikalusbaldai.lt/",
@@ -3334,15 +3924,21 @@
     "city": "Kėdainiai",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai"
+    ],
     "audience": "buitiniai",
     "website": "http://peledosbaldai.lt/en/",
     "public_contact_url": "http://peledosbaldai.lt/en/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: carcass furniture made to order; Site + directory/H/P/H",
-    "scope_evidence": "scope: carcass furniture made to order Šaltinis: http://peledosbaldai.lt/en/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: http://peledosbaldai.lt/en/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; pagal tai priskirtos katalogo kategorijos. Šaltinis: http://peledosbaldai.lt/en/",
     "evidence_source_type": "Site + directory",
     "source_urls": [
       "http://peledosbaldai.lt/en/",
@@ -3363,15 +3959,21 @@
     "city": "Mokolai/Marijampolė",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://interjeroideja.lt/",
     "public_contact_url": "https://interjeroideja.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: all carcass furniture design/visualisation; Site + social/H/P/H",
-    "scope_evidence": "scope: all carcass furniture design/visualisation Šaltinis: https://interjeroideja.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://interjeroideja.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://interjeroideja.lt/",
     "evidence_source_type": "Site + social",
     "source_urls": [
       "https://interjeroideja.lt/",
@@ -3392,15 +3994,19 @@
     "city": "Bebrininkai, Vilkaviškis r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "scope: design/manufacture to individual needs; Directory/M/n/p/M",
-    "scope_evidence": "scope: design/manufacture to individual needs Šaltinis: https://www.1551.lt/baldu-gamyba/nestandartiniu-baldu-gamyba/vilkaviskis/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/baldu-gamyba/nestandartiniu-baldu-gamyba/vilkaviskis/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.1551.lt/baldu-gamyba/nestandartiniu-baldu-gamyba/vilkaviskis/",
     "evidence_source_type": "Directory",
     "source_urls": [
       "https://www.1551.lt/baldu-gamyba/nestandartiniu-baldu-gamyba/vilkaviskis/"
@@ -3420,15 +4026,19 @@
     "city": "Marijampolė",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "vidutinis",
-    "confidence_evidence": "Site: 17,500 m² development/production facility in Marijampolė with 235 employees; Social + directory/M/P/M",
-    "scope_evidence": "Site: 17,500 m² development/production facility in Marijampolė with 235 employees Šaltinis: https://www.furnmaster.com/global-presence/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.furnmaster.com/global-presence/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.furnmaster.com/global-presence/",
     "evidence_source_type": "Social + directory",
     "source_urls": [
       "https://www.furnmaster.com/global-presence/"
@@ -3448,15 +4058,19 @@
     "city": "Tauragė",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": "https://baldmaris.lt/",
     "public_contact_url": "https://baldmaris.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: design, manufacture, installation and consulting specialists; Site + social/M/P/H",
-    "scope_evidence": "scope: design, manufacture, installation and consulting specialists Šaltinis: https://baldmaris.lt/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://baldmaris.lt/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://baldmaris.lt/",
     "evidence_source_type": "Site + social",
     "source_urls": [
       "https://baldmaris.lt/"
@@ -3476,15 +4090,25 @@
     "city": "Norkaičiai, Tauragė r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "K",
+      "W",
+      "BB",
+      "OC"
+    ],
+    "category_labels": [
+      "Virtuvės baldai",
+      "Spintos ir įmontuojami baldai",
+      "Miegamojo ir vonios baldai",
+      "Biuro ir komerciniai baldai"
+    ],
     "audience": "abiem",
     "website": "https://www.cabinetfurniture.lt/en",
     "public_contact_url": "https://www.cabinetfurniture.lt/en",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: high-quality furniture made to order; Site/M/P/H",
-    "scope_evidence": "scope: high-quality furniture made to order Šaltinis: https://www.cabinetfurniture.lt/en",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://www.cabinetfurniture.lt/en",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: virtuvės baldai; spintos, drabužinės ar įmontuojami sprendimai; miegamojo ar vonios baldai; biuro ar komercinių patalpų baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://www.cabinetfurniture.lt/en",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://www.cabinetfurniture.lt/en"
@@ -3536,15 +4160,19 @@
     "city": "Dapkiškiai, Tauragė r.",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "SW"
+    ],
+    "category_labels": [
+      "Medžio darbai ir medžio masyvo baldai"
+    ],
     "audience": "buitiniai",
     "website": "https://laukbaldis.lt/",
     "public_contact_url": "https://laukbaldis.lt/",
     "portfolio_status": "yra",
     "confidence": "aukštas",
-    "confidence_evidence": "scope: manufacturing since 1996; Site/H/P/H",
-    "scope_evidence": "scope: manufacturing since 1996 Šaltinis: https://laukbaldis.lt/",
+    "confidence_evidence": "Tiesioginė viešo šaltinio gaminių ar paslaugų informacija patvirtina priskirtas kategorijas. Šaltinis: https://laukbaldis.lt/",
+    "scope_evidence": "Viešame šaltinyje nurodomi šios įmonės gaminiai ar paslaugos: medžio darbai ar medžio masyvo baldai; pagal tai priskirtos katalogo kategorijos. Šaltinis: https://laukbaldis.lt/",
     "evidence_source_type": "Site",
     "source_urls": [
       "https://laukbaldis.lt/",
@@ -3565,15 +4193,19 @@
     "city": "Tauragė",
     "region": "klaipeda-panevezys-west-central",
     "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-    "category_codes": [],
-    "category_labels": [],
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Metalo ir mišrių medžiagų baldai"
+    ],
     "audience": "abiem",
     "website": null,
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
-    "confidence_evidence": "Site: handmade furniture created for the customer; Directory/M/n/p/M",
-    "scope_evidence": "Site: handmade furniture created for the customer Šaltinis: https://www.tvirte.com/",
+    "confidence_evidence": "Ribota vieša veiklos informacija; konkreti produktų kategorija nenurodyta, todėl priskirta MM kaip paskutinė alternatyva. Šaltinis: https://www.tvirte.com/",
+    "scope_evidence": "Viešas šaltinis patvirtina baldų gamybos ar individualių baldų veiklą, tačiau jame nėra pakankamai konkrečių produktų ar medžiagų duomenų tikslesnei taksonomijos kategorijai; MM priskirta kaip paskutinė alternatyva. Šaltinis: https://www.tvirte.com/",
     "evidence_source_type": "Directory",
     "source_urls": [
       "https://www.tvirte.com/"

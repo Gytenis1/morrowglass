@@ -50,10 +50,9 @@ function validate(records) {
     if (slugs.has(record.slug)) throw new Error(`Duplicate slug: ${record.slug}`);
     slugs.add(record.slug);
     if (!regions.has(record.region)) throw new Error(`Invalid region for ${record.slug}: ${record.region}`);
-    // An empty category set is intentional when public evidence only says "custom furniture"
-    // without naming a taxonomy product, material, or use. Guessing is not validation.
-    if (!Array.isArray(record.category_codes) || record.category_codes.some((code) => !categoryCodes.has(code))) {
-      throw new Error(`Invalid category_codes for ${record.slug}`);
+    // Catalogue coverage is complete: every record must have an evidence-backed existing taxonomy code.
+    if (!Array.isArray(record.category_codes) || record.category_codes.length === 0 || record.category_codes.some((code) => !categoryCodes.has(code))) {
+      throw new Error(`Invalid or empty category_codes for ${record.slug}`);
     }
     if (new Set(record.category_codes).size !== record.category_codes.length) {
       throw new Error(`Duplicate category_codes for ${record.slug}`);
@@ -100,7 +99,7 @@ const categorizedRecords = records.filter((record) => record.category_codes.leng
 const categoryDistribution = [...categoryLabels.keys()]
   .map((code) => `${code}:${records.filter((record) => record.category_codes.includes(code)).length}`)
   .join(", ");
-const coverage = `Descriptions ${populatedDescriptions}/${records.length}; categories ${categorizedRecords}/${records.length} evidenced, ${records.length - categorizedRecords} intentionally empty; distribution ${categoryDistribution}.`;
+const coverage = `Descriptions ${populatedDescriptions}/${records.length}; category coverage ${categorizedRecords}/${records.length} evidenced (full coverage); distribution ${categoryDistribution}.`;
 if (process.argv.includes("--validate")) {
   console.log(`Validated ${records.length} manufacturer records with ${new Set(records.map((record) => record.slug)).size} unique slugs.`);
   console.log(coverage);
