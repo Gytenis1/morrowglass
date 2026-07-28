@@ -30,6 +30,13 @@ type Manufacturer = RecordModel & {
   category_labels: string[];
   website: string;
   public_contact_url: string;
+  company_code: string | null;
+  public_phone: string | null;
+  street_address: string | null;
+  postcode: string | null;
+  founded_year: number | null;
+  employee_count_band: string | null;
+  public_details_source_urls: string[];
   source_urls: string[];
   source_artifact_url: string;
   source_collection_date: string;
@@ -819,6 +826,52 @@ function createUrlFactRow(term: string, value: string | null | undefined): HTMLD
   return wrapper;
 }
 
+function createTelephoneFactRow(term: string, value: string): HTMLDivElement {
+  const wrapper = document.createElement('div');
+  const dt = document.createElement('dt');
+  dt.textContent = term;
+  const dd = document.createElement('dd');
+  const link = document.createElement('a');
+  link.href = `tel:${value.replace(/[^+\d]/g, '').replace(/(?!^)\+/g, '')}`;
+  link.textContent = value;
+  dd.append(link);
+  wrapper.append(dt, dd);
+  return wrapper;
+}
+
+function createPublicDetailsSection(record: Manufacturer): HTMLElement | null {
+  const rows: HTMLDivElement[] = [];
+  const companyCode = record.company_code?.trim();
+  const publicPhone = record.public_phone?.trim();
+  const streetAddress = record.street_address?.trim();
+  const postcode = record.postcode?.trim();
+  const employeeCountBand = record.employee_count_band?.trim();
+
+  if (companyCode) rows.push(createFactRow('Įmonės kodas', companyCode));
+  if (streetAddress) rows.push(createFactRow('Registracijos adresas', streetAddress));
+  if (postcode) rows.push(createFactRow('Pašto kodas', postcode));
+  if (Number.isInteger(record.founded_year)) rows.push(createFactRow('Įkurta', String(record.founded_year)));
+  if (employeeCountBand) rows.push(createFactRow('Darbuotojų skaičiaus grupė', employeeCountBand));
+  if (publicPhone) rows.push(createTelephoneFactRow('Viešas telefono numeris', publicPhone));
+  if (!rows.length) return null;
+
+  const section = document.createElement('section');
+  section.className = 'profile-details profile-public-details';
+  section.setAttribute('aria-labelledby', 'profile-public-details-title');
+  section.innerHTML = `
+    <div class="section-heading">
+      <p class="kicker">Viešuose šaltiniuose patikrinti faktai</p>
+      <h2 id="profile-public-details-title">Vieši įmonės duomenys</h2>
+      <p>Rodomi tik tie įmonės duomenys, kuriems katalogo rinkinyje yra nurodytas viešas šaltinis.</p>
+    </div>
+  `;
+  const facts = document.createElement('dl');
+  facts.className = 'profile-facts';
+  facts.append(...rows);
+  section.append(facts);
+  return section;
+}
+
 function createSourceSection(record: Manufacturer): HTMLElement {
   const section = document.createElement('section');
   section.className = 'provenance-section';
@@ -832,7 +885,11 @@ function createSourceSection(record: Manufacturer): HTMLElement {
   copy.textContent = 'Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju ir negarantuoja jų tikslumo, aktualumo, kokybės ar paslaugų prieinamumo.';
 
   const sourceUrls = Array.from(
-    new Set([...asStringArray(record.source_urls), textOrUnknown(record.source_artifact_url, '')].filter(Boolean)),
+    new Set([
+      ...asStringArray(record.source_urls),
+      textOrUnknown(record.source_artifact_url, ''),
+      ...asStringArray(record.public_details_source_urls),
+    ].filter(Boolean)),
   );
   const list = document.createElement('ul');
   list.className = 'source-list';
@@ -2010,8 +2067,10 @@ function renderProfile(record: Manufacturer | undefined): void {
   );
   details.append(detailsHeading, facts);
 
+  const publicDetails = createPublicDetailsSection(record);
   const profileLandings = createProfileLandingSection(record);
   article.append(hero, note, details);
+  if (publicDetails) article.append(publicDetails);
   if (profileLandings) article.append(profileLandings);
   article.append(createSourceSection(record), createCorrectionSection(record));
   main.append(back, article);

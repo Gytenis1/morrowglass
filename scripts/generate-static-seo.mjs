@@ -243,7 +243,23 @@ function manufacturerSchema(record) {
   if (record.legal_name?.trim()) data.legalName = record.legal_name.trim();
   if (description) data.description = description;
   if (publicUrl(record.website)) data.sameAs = [publicUrl(record.website)];
-  if (record.city?.trim()) data.address = { '@type': 'PostalAddress', addressLocality: record.city.trim(), addressCountry: 'LT' };
+  if (record.public_phone?.trim()) data.telephone = record.public_phone.trim();
+  const address = { '@type': 'PostalAddress' };
+  if (record.street_address?.trim()) address.streetAddress = record.street_address.trim();
+  if (record.city?.trim()) address.addressLocality = record.city.trim();
+  if (record.postcode?.trim()) address.postalCode = record.postcode.trim();
+  if (address.streetAddress || address.addressLocality || address.postalCode) {
+    address.addressCountry = 'LT';
+    data.address = address;
+  }
+  if (Number.isInteger(record.founded_year)) data.foundingDate = String(record.founded_year);
+  if (record.company_code?.trim()) {
+    data.identifier = {
+      '@type': 'PropertyValue',
+      propertyID: 'Lithuanian company code',
+      value: record.company_code.trim(),
+    };
+  }
   return data;
 }
 
@@ -399,7 +415,7 @@ await writeRoute(ownerPath, injectPage({
 
 for (const record of manufacturers) {
   const path = `/gamintojas/${record.slug}`;
-  const sources = [...new Set([...(record.source_urls ?? []), record.source_artifact_url].map(publicUrl).filter(Boolean))];
+  const sources = [...new Set([...(record.source_urls ?? []), record.source_artifact_url, ...(record.public_details_source_urls ?? [])].map(publicUrl).filter(Boolean))];
   const facts = [
     ['Viešas / prekinis pavadinimas', record.trading_name],
     ['Juridinis pavadinimas', record.legal_name || 'Viešame šaltinyje juridinis pavadinimas nenurodytas.'],
@@ -415,7 +431,19 @@ for (const record of manufacturers) {
     ['Svetainė', publicUrl(record.website)],
     ['Viešai nurodytas kontaktinis adresas', publicUrl(record.public_contact_url)],
   ].filter(([, value]) => value);
-  const body = `${header()}<main class="profile-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="profile-sheet"><header class="profile-hero"><div class="profile-heading-group"><p class="record-status">Nepatvirtintas viešų šaltinių įrašas</p><h1>${escapeHtml(record.trading_name)}</h1><p class="profile-identity">${escapeHtml(record.source_identity)}</p></div><div class="profile-actions"><a class="primary-button" href="/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}">Įtraukti į projekto užklausą</a><a class="profile-guide-link" href="/gidas">Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →</a><a class="profile-owner-link" href="/savininkams">Svarstote savo verslo tęstinumą? Privatus pokalbis savininkams →</a></div></header><div class="profile-note"><strong>Duomenys nėra garantija.</strong><span>Šis įrašas nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span></div><section class="profile-details"><div class="section-heading"><h2>Tapatybė, vieta ir veiklos kryptys</h2></div><dl class="profile-facts">${facts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${linkFacts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd><a href="${escapeHtml(value)}" rel="noopener noreferrer">${escapeHtml(value)}</a></dd></div>`).join('')}</dl></section>${profileLandingSection(record)}<section class="provenance-section"><h2>Šaltiniai ir duomenų kilmė</h2><p>Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju.</p><ul class="source-list">${sources.map((source, index) => `<li><span>${index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`}</span><a href="${escapeHtml(source)}" rel="noopener noreferrer">${escapeHtml(source)}</a></li>`).join('')}</ul><p class="collection-date">Šaltinių surinkimo data: <time datetime="${record.source_collection_date}">${record.source_collection_date}</time></p></section></article></main>${footer()}`;
+  const publicFacts = [
+    ['Įmonės kodas', record.company_code?.trim()],
+    ['Registracijos adresas', record.street_address?.trim()],
+    ['Pašto kodas', record.postcode?.trim()],
+    ['Įkurta', Number.isInteger(record.founded_year) ? String(record.founded_year) : ''],
+    ['Darbuotojų skaičiaus grupė', record.employee_count_band?.trim()],
+  ].filter(([, value]) => value);
+  const publicPhone = record.public_phone?.trim();
+  const telephoneHref = publicPhone ? `tel:${publicPhone.replace(/[^+\d]/g, '').replace(/(?!^)\+/g, '')}` : '';
+  const publicDetails = publicFacts.length || publicPhone
+    ? `<section class="profile-details profile-public-details" aria-labelledby="profile-public-details-title"><div class="section-heading"><p class="kicker">Viešuose šaltiniuose patikrinti faktai</p><h2 id="profile-public-details-title">Vieši įmonės duomenys</h2><p>Rodomi tik tie įmonės duomenys, kuriems katalogo rinkinyje yra nurodytas viešas šaltinis.</p></div><dl class="profile-facts">${publicFacts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${publicPhone ? `<div><dt>Viešas telefono numeris</dt><dd><a href="${escapeHtml(telephoneHref)}">${escapeHtml(publicPhone)}</a></dd></div>` : ''}</dl></section>`
+    : '';
+  const body = `${header()}<main class="profile-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="profile-sheet"><header class="profile-hero"><div class="profile-heading-group"><p class="record-status">Nepatvirtintas viešų šaltinių įrašas</p><h1>${escapeHtml(record.trading_name)}</h1><p class="profile-identity">${escapeHtml(record.source_identity)}</p></div><div class="profile-actions"><a class="primary-button" href="/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}">Įtraukti į projekto užklausą</a><a class="profile-guide-link" href="/gidas">Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →</a><a class="profile-owner-link" href="/savininkams">Svarstote savo verslo tęstinumą? Privatus pokalbis savininkams →</a></div></header><div class="profile-note"><strong>Duomenys nėra garantija.</strong><span>Šis įrašas nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span></div><section class="profile-details"><div class="section-heading"><h2>Tapatybė, vieta ir veiklos kryptys</h2></div><dl class="profile-facts">${facts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${linkFacts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd><a href="${escapeHtml(value)}" rel="noopener noreferrer">${escapeHtml(value)}</a></dd></div>`).join('')}</dl></section>${publicDetails}${profileLandingSection(record)}<section class="provenance-section"><h2>Šaltiniai ir duomenų kilmė</h2><p>Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju.</p><ul class="source-list">${sources.map((source, index) => `<li><span>${index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`}</span><a href="${escapeHtml(source)}" rel="noopener noreferrer">${escapeHtml(source)}</a></li>`).join('')}</ul><p class="collection-date">Šaltinių surinkimo data: <time datetime="${record.source_collection_date}">${record.source_collection_date}</time></p></section></article></main>${footer()}`;
   await writeRoute(path, injectPage({
     title: `${record.trading_name} | Baldų gamintojo įrašas`,
     description: `${record.trading_name}: viešais šaltiniais paremtas, nepatvirtintas gamintojo kandidato įrašas su vieta, kategorijomis ir šaltinių nuorodomis.`,

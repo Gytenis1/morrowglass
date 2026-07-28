@@ -26,6 +26,13 @@ export type SeoManufacturer = {
   category_labels?: string[];
   website?: string;
   public_contact_url?: string;
+  company_code?: string | null;
+  public_phone?: string | null;
+  street_address?: string | null;
+  postcode?: string | null;
+  founded_year?: number | null;
+  employee_count_band?: string | null;
+  public_details_source_urls?: string[];
   source_collection_date?: string;
 };
 
@@ -157,11 +164,21 @@ export function manufacturerStructuredData(record: SeoManufacturer): Record<stri
   if (record.legal_name?.trim()) data.legalName = record.legal_name.trim();
   if (description) data.description = description;
   if (record.website?.trim()) data.sameAs = [record.website.trim()];
-  if (record.city?.trim()) {
-    data.address = {
-      '@type': 'PostalAddress',
-      addressLocality: record.city.trim(),
-      addressCountry: 'LT',
+  if (record.public_phone?.trim()) data.telephone = record.public_phone.trim();
+  const address: Record<string, string> = { '@type': 'PostalAddress' };
+  if (record.street_address?.trim()) address.streetAddress = record.street_address.trim();
+  if (record.city?.trim()) address.addressLocality = record.city.trim();
+  if (record.postcode?.trim()) address.postalCode = record.postcode.trim();
+  if (address.streetAddress || address.addressLocality || address.postalCode) {
+    address.addressCountry = 'LT';
+    data.address = address;
+  }
+  if (Number.isInteger(record.founded_year)) data.foundingDate = String(record.founded_year);
+  if (record.company_code?.trim()) {
+    data.identifier = {
+      '@type': 'PropertyValue',
+      propertyID: 'Lithuanian company code',
+      value: record.company_code.trim(),
     };
   }
   return data;
