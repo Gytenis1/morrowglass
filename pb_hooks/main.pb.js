@@ -644,3 +644,64 @@ onRecordAfterCreateSuccess((event) => {
     );
   }
 }, "owner_enquiries");
+
+onRecordEnrich((event) => {
+  if (!event.requestInfo.auth || !event.requestInfo.auth.isSuperuser()) {
+    event.record.hide("contact_email", "honeypot");
+  }
+  event.next();
+}, "manufacturer_reviews");
+
+onRecordCreateRequest((event) => {
+  const fail = (field, code, message) => {
+    const data = {};
+    data[field] = new ValidationError(code, message);
+    throw new BadRequestError("Patikrinkite pateiktus duomenis.", data);
+  };
+
+  const honeypot = event.record.getString("honeypot").trim();
+  if (honeypot) {
+    fail("honeypot", "invalid_honeypot", "Pateikimas atmestas.");
+  }
+
+  const trimText = (name, min, max, required) => {
+    const value = event.record.getString(name).trim();
+    if ((required && !value) || value.length < min || value.length > max) {
+      fail(name, "invalid_length", "Patikrinkite pateikto teksto ilgį.");
+    }
+    event.record.set(name, value);
+  };
+
+  trimText("display_name", 1, 80, true);
+  trimText("review_text", 10, 2000, true);
+  trimText("project_type", 0, 120, false);
+
+  const contactEmail = event.record.getString("contact_email").trim().toLowerCase();
+  if (!contactEmail || contactEmail.length > 254) {
+    fail("contact_email", "invalid_email", "Nurodykite galiojantį el. pašto adresą.");
+  }
+  event.record.set("contact_email", contactEmail);
+
+  const rating = event.record.get("rating");
+  if (typeof rating !== "number" || !Number.isInteger(rating) || rating < 1 || rating > 5) {
+    fail("rating", "invalid_rating", "Įvertinimas turi būti sveikasis skaičius nuo 1 iki 5.");
+  }
+  event.record.set("rating", rating);
+
+  const manufacturerId = event.record.getString("manufacturer").trim();
+  if (!manufacturerId) {
+    fail("manufacturer", "missing_manufacturer", "Pasirinkite kataloge esantį gamintoją.");
+  }
+  try {
+    event.app.findRecordById("manufacturers", manufacturerId);
+  } catch (_) {
+    fail("manufacturer", "unknown_manufacturer", "Pasirinktas gamintojas kataloge nerastas.");
+  }
+  event.record.set("manufacturer", manufacturerId);
+
+  // Never trust a status or trap value supplied by the public client.
+  event.record.set("status", "pending");
+  event.record.set("honeypot", "");
+
+  event.next();
+}, "manufacturer_reviews");
