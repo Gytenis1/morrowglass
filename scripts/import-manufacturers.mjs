@@ -20,6 +20,8 @@ const requiredFields = [
   "category_codes", "category_labels", "audience", "portfolio_status", "confidence",
   "confidence_evidence", "scope_evidence", "evidence_source_type", "source_urls",
   "source_artifact_url", "source_collection_date", "verification_status",
+  "company_code", "public_details_source_urls", "financial_source_url",
+  "revenue_availability", "financial_verification_status", "verified_at",
 ];
 const categoryLabels = new Map([
   ["K", "Virtuvės baldai"],
@@ -93,7 +95,21 @@ function validate(records) {
     }
     if (!/^\d{4}-\d{2}-\d{2}$/.test(record.source_collection_date)) throw new Error(`Invalid source date for ${record.slug}`);
     if (record.verification_status !== "nepatvirtinta") throw new Error(`Unexpected verification status for ${record.slug}`);
+    if (!/^\d{7,12}$/.test(record.company_code)) throw new Error(`Invalid public company identifier for ${record.slug}`);
+    if (!Array.isArray(record.public_details_source_urls) || record.public_details_source_urls.length === 0 || record.public_details_source_urls.some((url) => typeof url !== "string" || !/^https:\/\//.test(url))) {
+      throw new Error(`Missing public registry provenance for ${record.slug}`);
+    }
+    if (typeof record.financial_source_url !== "string" || !/^https:\/\//.test(record.financial_source_url)) throw new Error(`Missing financial source URL for ${record.slug}`);
+    if (record.revenue_availability !== "paskelbta" && record.revenue_availability !== "nepaskelbta") throw new Error(`Invalid revenue availability for ${record.slug}`);
+    if (record.financial_verification_status !== "patikrinta") throw new Error(`Unverified financial record for ${record.slug}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(record.verified_at)) throw new Error(`Invalid verified_at for ${record.slug}`);
+    if (record.revenue_availability === "paskelbta") {
+      if (!Number.isFinite(record.revenue_eur_latest) || !Number.isInteger(record.revenue_year)) throw new Error(`Published revenue requires value and year for ${record.slug}`);
+    } else if (record.revenue_eur_latest !== null || record.revenue_year !== null) {
+      throw new Error(`Unpublished revenue must not populate number fields for ${record.slug}`);
+    }
   }
+  if (new Set(records.map((record) => record.verified_at)).size !== 1) throw new Error("Financial verification date must be uniform across the enrichment run");
   return records;
 }
 

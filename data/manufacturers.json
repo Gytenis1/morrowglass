@@ -44,7 +44,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_arsenalas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_arsenalas/",
+    "revenue_eur_latest": 629269,
+    "revenue_year": 2021,
+    "owner_manager_name": "Elsio Korkiško",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "dgt-baldai",
@@ -89,7 +97,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/dgt_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/dgt_baldai/",
+    "revenue_eur_latest": 354811,
+    "revenue_year": 2025,
+    "owner_manager_name": "Dalius Lašinskas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "sostines-baldai",
@@ -137,7 +153,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/sostines_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sostines_baldai/",
+    "revenue_eur_latest": 286695,
+    "revenue_year": 2025,
+    "owner_manager_name": "Inesa Abromaitė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "busto-baldai",
@@ -177,7 +201,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/busto_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/busto_baldai/",
+    "revenue_eur_latest": 151454,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vaida Grigaitienė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-nestandartas",
@@ -221,7 +253,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_nestandartas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_nestandartas/",
+    "revenue_eur_latest": 300520,
+    "revenue_year": 2025,
+    "owner_manager_name": "Natalija Maculevič, direktorė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ar-bald",
@@ -271,7 +311,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ar_bald/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ar_bald/",
+    "revenue_eur_latest": 18195,
+    "revenue_year": 2025,
+    "owner_manager_name": "Arminas Skardžius, generalinis direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "evaldo-baldai",
@@ -311,7 +359,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/evaldo_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/evaldo_baldai/",
+    "revenue_eur_latest": 750638,
+    "revenue_year": 2024,
+    "owner_manager_name": "Evaldas Putna, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "viruna",
@@ -353,7 +409,15 @@
     "employee_count_band": "50-249",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/viruna/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/viruna/",
+    "revenue_eur_latest": 3902558,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vytautas Paulauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "fitsout",
@@ -395,7 +459,15 @@
     "employee_count_band": "250+",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/fitsout/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/fitsout/",
+    "revenue_eur_latest": 40334480,
+    "revenue_year": 2025,
+    "owner_manager_name": "Jonas Stragis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "enven",
@@ -439,7 +511,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/inovaciniai_virtuozai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/inovaciniai_virtuozai/",
+    "revenue_eur_latest": 526603,
+    "revenue_year": 2025,
+    "owner_manager_name": "Pavel Madekša, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "solid-supply",
@@ -480,7 +560,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_solid_supply/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_solid_supply/",
+    "revenue_eur_latest": 9741503,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vaida Likauskė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "kigi-lt",
@@ -520,7 +608,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/sedile/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sedile/",
+    "revenue_eur_latest": 9509,
+    "revenue_year": 2025,
+    "owner_manager_name": "Ignas Saldys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "saltum",
@@ -561,7 +657,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/saltum/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/saltum/",
+    "revenue_eur_latest": 100396,
+    "revenue_year": 2025,
+    "owner_manager_name": "UAB Saltum",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ukas",
@@ -595,7 +699,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "302335947",
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uko_baldai_uab/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Kęstutis Kuoras",
+    "owner_signal": "vadovas viešai nurodytas",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uko_baldai_uab/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "protingi-baldai",
@@ -640,7 +756,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_protingi_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_protingi_baldai/",
+    "revenue_eur_latest": 1215559,
+    "revenue_year": 2025,
+    "owner_manager_name": "Robert Volodko, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-profesionalai",
@@ -682,7 +806,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_profesionalai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_profesionalai/",
+    "revenue_eur_latest": 708010,
+    "revenue_year": 2025,
+    "owner_manager_name": "Pavel Sliževski, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "l-a-r-a",
@@ -727,7 +859,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/lino_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/lino_baldai/",
+    "revenue_eur_latest": 1150192,
+    "revenue_year": 2025,
+    "owner_manager_name": "Linas Abukauskas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "albruva",
@@ -768,7 +908,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/albruva/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/albruva/",
+    "revenue_eur_latest": 179383,
+    "revenue_year": 2024,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baltic-master",
@@ -810,7 +958,15 @@
     "employee_count_band": "50-249",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baltic_master/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baltic_master/",
+    "revenue_eur_latest": 17276331,
+    "revenue_year": 2024,
+    "owner_manager_name": "Stanislav Andžejevski",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "tvilis",
@@ -854,7 +1010,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/tvilis/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tvilis/",
+    "revenue_eur_latest": 505454,
+    "revenue_year": 2025,
+    "owner_manager_name": "Virginijus Jacevičius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "jumika",
@@ -894,7 +1058,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/jumika/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/jumika/",
+    "revenue_eur_latest": 141596,
+    "revenue_year": 2025,
+    "owner_manager_name": "Julijan Miloš, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ergolain",
@@ -936,7 +1108,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ergolain/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ergolain/",
+    "revenue_eur_latest": 161659,
+    "revenue_year": 2025,
+    "owner_manager_name": "Romualdas Bėkšta",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-mada",
@@ -982,7 +1162,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_mada/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_mada/",
+    "revenue_eur_latest": 72182,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vladimir Mackevič",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "piritas",
@@ -1024,7 +1212,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/piritas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/piritas/",
+    "revenue_eur_latest": 1176106,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gediminas Krištopaitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "vafer",
@@ -1065,7 +1261,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/vafer/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/vafer/",
+    "revenue_eur_latest": 190871,
+    "revenue_year": 2025,
+    "owner_manager_name": "Rolandas Janovičius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-rubai",
@@ -1107,7 +1311,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/muse_lt/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/muse_lt/",
+    "revenue_eur_latest": 330389,
+    "revenue_year": 2025,
+    "owner_manager_name": "Asta Urbanaviciene",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldai-uoga",
@@ -1143,7 +1355,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "302301724",
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_ramzo/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_ramzo/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldai-j-g",
@@ -1179,7 +1403,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "304248359",
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/jono_ir_giedriaus_baldai/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/jono_ir_giedriaus_baldai/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "sole-lt",
@@ -1220,7 +1456,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/sole_lt/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sole_lt/",
+    "revenue_eur_latest": 208457,
+    "revenue_year": 2022,
+    "owner_manager_name": "Piotras Svežakovas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "alytaus-baldai",
@@ -1265,7 +1509,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/alytaus_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/alytaus_baldai/",
+    "revenue_eur_latest": 1165883,
+    "revenue_year": 2025,
+    "owner_manager_name": "Mindaugas Bagdonas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "surgede",
@@ -1308,7 +1560,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uzdaroji_akcine_bendrove_surgede/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uzdaroji_akcine_bendrove_surgede/",
+    "revenue_eur_latest": 3430455,
+    "revenue_year": 2025,
+    "owner_manager_name": "Alma Blažaitienė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "emlitos-baldai",
@@ -1355,7 +1615,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/emlitos_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/emlitos_baldai/",
+    "revenue_eur_latest": 77068,
+    "revenue_year": 2025,
+    "owner_manager_name": "Virginijus Uleckas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "alsot-alsotana",
@@ -1398,7 +1666,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/alsotana/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/alsotana/",
+    "revenue_eur_latest": 2528911,
+    "revenue_year": 2025,
+    "owner_manager_name": "Kęstutis Baranauskas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "mwood",
@@ -1441,7 +1717,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/mwood/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/mwood/",
+    "revenue_eur_latest": 261696,
+    "revenue_year": 2025,
+    "owner_manager_name": "Mantas Plauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "uosis",
@@ -1482,7 +1766,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uosis/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uosis/",
+    "revenue_eur_latest": 1198179,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vytautas Kubaitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "balzena",
@@ -1523,7 +1815,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/balzena/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/balzena/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Zenonas Šakalys",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "triobalda",
@@ -1568,7 +1868,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/triobalda/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/triobalda/",
+    "revenue_eur_latest": 103215,
+    "revenue_year": 2025,
+    "owner_manager_name": "Giedrius Krugiškis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "xbaldai",
@@ -1609,7 +1917,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/moletu_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/moletu_baldai/",
+    "revenue_eur_latest": 112772,
+    "revenue_year": 2022,
+    "owner_manager_name": "Tomas Petrauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "x-baldai",
@@ -1641,7 +1957,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "100016141710",
+    "financial_source_url": "https://www.xbaldai.lt/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Darius Bražionis",
+    "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
+    "public_details_source_urls": [
+      "https://www.xbaldai.lt/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldgama",
@@ -1689,7 +2017,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldgama/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldgama/",
+    "revenue_eur_latest": 631405,
+    "revenue_year": 2025,
+    "owner_manager_name": "Evaldas Burba, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "jogusta",
@@ -1728,7 +2064,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/jogusta/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/jogusta/",
+    "revenue_eur_latest": 150397,
+    "revenue_year": 2025,
+    "owner_manager_name": "Donatas Poderis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "furnera",
@@ -1775,7 +2119,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/furnera/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/furnera/",
+    "revenue_eur_latest": 331552,
+    "revenue_year": 2025,
+    "owner_manager_name": "Audrius Kazakevičius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "barsis",
@@ -1818,7 +2170,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/barsis/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/barsis/",
+    "revenue_eur_latest": 532149,
+    "revenue_year": 2025,
+    "owner_manager_name": "Laimutis Liutkevičius, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "rimbalda",
@@ -1866,7 +2226,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/rimbalda/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/rimbalda/",
+    "revenue_eur_latest": 709495,
+    "revenue_year": 2025,
+    "owner_manager_name": "Rimantas Valasevičius, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "diforma",
@@ -1914,7 +2282,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/diforma/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/diforma/",
+    "revenue_eur_latest": 6770096,
+    "revenue_year": 2025,
+    "owner_manager_name": "Džeraldas Dromantas, generalinis direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "daimira",
@@ -1960,7 +2336,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/daimira/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/daimira/",
+    "revenue_eur_latest": 491851,
+    "revenue_year": 2025,
+    "owner_manager_name": "Robertas Miklovis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldziai",
@@ -2009,7 +2393,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldziai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldziai/",
+    "revenue_eur_latest": 1188837,
+    "revenue_year": 2025,
+    "owner_manager_name": "Robertas Kavaliūnas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "jusu-baldai",
@@ -2056,7 +2448,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/obras/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/obras/",
+    "revenue_eur_latest": 582034,
+    "revenue_year": 2025,
+    "owner_manager_name": "Evaldas Želvys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "olideja",
@@ -2104,7 +2504,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_olideja/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_olideja/",
+    "revenue_eur_latest": 495931,
+    "revenue_year": 2025,
+    "owner_manager_name": "Evaldas Jakubauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "skliautai",
@@ -2146,7 +2554,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/skliautai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/skliautai/",
+    "revenue_eur_latest": 444793,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldai4u",
@@ -2194,7 +2610,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_baldai4u/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_baldai4u/",
+    "revenue_eur_latest": 784637,
+    "revenue_year": 2025,
+    "owner_manager_name": "Dainius Velička",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "eigida",
@@ -2236,7 +2660,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/eigida/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/eigida/",
+    "revenue_eur_latest": 2791837,
+    "revenue_year": 2025,
+    "owner_manager_name": "Modestas Skierus",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "furnitus",
@@ -2283,7 +2715,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/virtuves_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/virtuves_baldai/",
+    "revenue_eur_latest": 857572,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vaidas Linkevičius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "tg-baldai",
@@ -2325,7 +2765,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/tg_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tg_baldai/",
+    "revenue_eur_latest": 3237512,
+    "revenue_year": 2025,
+    "owner_manager_name": "Tomas Dubinskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "currus",
@@ -2375,7 +2823,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/currus/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/currus/",
+    "revenue_eur_latest": 1468951,
+    "revenue_year": 2024,
+    "owner_manager_name": "Kęstutis Lukauskis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "balduva",
@@ -2416,7 +2872,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/balduva/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/balduva/",
+    "revenue_eur_latest": 670637,
+    "revenue_year": 2025,
+    "owner_manager_name": "Marius Jesiškis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "rolando-baldai",
@@ -2466,7 +2930,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/jorova/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/jorova/",
+    "revenue_eur_latest": 258297,
+    "revenue_year": 2024,
+    "owner_manager_name": "Rolandas Mačiulaitis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "top-sofa",
@@ -2511,7 +2983,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/top_sofa/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/top_sofa/",
+    "revenue_eur_latest": 1002310,
+    "revenue_year": 2025,
+    "owner_manager_name": "Valdas Matakas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-noras",
@@ -2559,7 +3039,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_noras/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_noras/",
+    "revenue_eur_latest": 394291,
+    "revenue_year": 2025,
+    "owner_manager_name": "Mantas Petryla, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "arta",
@@ -2595,7 +3083,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "144333114",
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "A. Burgaila",
+    "owner_signal": "vadovas viešai nurodytas",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "tomer-s",
@@ -2628,7 +3128,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "100013055819",
+    "financial_source_url": "https://www.tomers.lt/en",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Tomas Barauskas",
+    "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
+    "public_details_source_urls": [
+      "https://www.tomers.lt/en"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ergosta",
@@ -2669,7 +3181,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ergosta/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ergosta/",
+    "revenue_eur_latest": 296430,
+    "revenue_year": 2025,
+    "owner_manager_name": "Tomas Norvaišas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "todrus",
@@ -2711,7 +3231,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/todrus/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/todrus/",
+    "revenue_eur_latest": 42988,
+    "revenue_year": 2025,
+    "owner_manager_name": "Tomas Juknevičius, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "stonkai",
@@ -2762,7 +3290,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/stonkai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/stonkai/",
+    "revenue_eur_latest": 927858,
+    "revenue_year": 2025,
+    "owner_manager_name": "Saulius Stonkus, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-profai",
@@ -2805,7 +3341,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/delvisa/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/delvisa/",
+    "revenue_eur_latest": 882220,
+    "revenue_year": 2025,
+    "owner_manager_name": "Nerijus Švambarys",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "solo-baldai",
@@ -2847,7 +3391,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ii_solo_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ii_solo_baldai/",
+    "revenue_eur_latest": 221176,
+    "revenue_year": 2025,
+    "owner_manager_name": "Mindaugas Petrauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "venta",
@@ -2888,7 +3440,15 @@
     "employee_count_band": "50-249",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/venta_lt/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/venta_lt/",
+    "revenue_eur_latest": 4516253,
+    "revenue_year": 2025,
+    "owner_manager_name": "Rima Striūgienė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "raibaldera",
@@ -2930,7 +3490,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/raibaldera/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/raibaldera/",
+    "revenue_eur_latest": 38469,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ag-baldai",
@@ -2973,7 +3541,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_ag_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_ag_baldai/",
+    "revenue_eur_latest": 413166,
+    "revenue_year": 2025,
+    "owner_manager_name": "Artūras Gudas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "tvirtas-baldas",
@@ -3019,7 +3595,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/tvirtas_baldas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tvirtas_baldas/",
+    "revenue_eur_latest": 274534,
+    "revenue_year": 2025,
+    "owner_manager_name": "Rūta Žlibinienė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "aurimo-baldai",
@@ -3057,7 +3641,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "2413959",
+    "financial_source_url": "https://aurimobaldai.lt/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": null,
+    "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
+    "public_details_source_urls": [
+      "https://aurimobaldai.lt/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "zemaituko-dirbtuves",
@@ -3097,7 +3693,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/zemaituko_dirbtuves/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/zemaituko_dirbtuves/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Kęstutis Vėlavičius, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "meistrine",
@@ -3138,7 +3742,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/meistrine/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/meistrine/",
+    "revenue_eur_latest": 226348,
+    "revenue_year": 2025,
+    "owner_manager_name": "Paulius Sprindys",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "urtnojus",
@@ -3179,7 +3791,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/urtnojus/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/urtnojus/",
+    "revenue_eur_latest": 126766,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gintaras Mitkus",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "skaidma",
@@ -3221,7 +3841,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ii_skaidma/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ii_skaidma/",
+    "revenue_eur_latest": 169770,
+    "revenue_year": 2025,
+    "owner_manager_name": "Skaidra Milvydienė, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ambient-boutique",
@@ -3265,7 +3893,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ambientus/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ambientus/",
+    "revenue_eur_latest": 72514,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "taumona",
@@ -3312,7 +3948,15 @@
     "employee_count_band": "50-249",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/taumona/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/taumona/",
+    "revenue_eur_latest": 8046582,
+    "revenue_year": 2025,
+    "owner_manager_name": "Edgaras Kateiva",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "lyra-group-softnord-scandic",
@@ -3353,7 +3997,15 @@
     "employee_count_band": "250+",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/lyra_group/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/lyra_group/",
+    "revenue_eur_latest": 27491111,
+    "revenue_year": 2025,
+    "owner_manager_name": "Giedrius Štelmokas, generalinis direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "barva-furniture",
@@ -3400,7 +4052,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/barva_projects/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/barva_projects/",
+    "revenue_eur_latest": 14748,
+    "revenue_year": 2025,
+    "owner_manager_name": "Valentinas Pavlovas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "tiko-baldai",
@@ -3440,7 +4100,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/kristalga/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kristalga/",
+    "revenue_eur_latest": 1089752,
+    "revenue_year": 2025,
+    "owner_manager_name": "Algis Stonys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "alantas",
@@ -3490,7 +4158,15 @@
     "employee_count_band": "50-249",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/alantas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/alantas/",
+    "revenue_eur_latest": 3172568,
+    "revenue_year": 2025,
+    "owner_manager_name": "Juozas Kniukšta, generalinis direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "linkrusta",
@@ -3539,7 +4215,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/linkrusta/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/linkrusta/",
+    "revenue_eur_latest": 62770,
+    "revenue_year": 2025,
+    "owner_manager_name": "Linas Bakšaitis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "agmena",
@@ -3587,7 +4271,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/agmena/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/agmena/",
+    "revenue_eur_latest": 235375,
+    "revenue_year": 2025,
+    "owner_manager_name": "Saulius Skorupskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "wbk",
@@ -3631,7 +4323,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/wilbergs/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/wilbergs/",
+    "revenue_eur_latest": 100151,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gediminas Vasiliauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "alrasina",
@@ -3678,7 +4378,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/alrasina/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/alrasina/",
+    "revenue_eur_latest": 551402,
+    "revenue_year": 2025,
+    "owner_manager_name": "Albertas Stankus, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "a-residens",
@@ -3722,7 +4430,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/boliodesign_lt/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/boliodesign_lt/",
+    "revenue_eur_latest": 600989,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "azuolo-gama",
@@ -3767,7 +4483,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/azuolo_gama/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/azuolo_gama/",
+    "revenue_eur_latest": 101167,
+    "revenue_year": 2025,
+    "owner_manager_name": "Viktoras Aukštaitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "kaiva",
@@ -3808,7 +4532,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/kaiva/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kaiva/",
+    "revenue_eur_latest": 379709,
+    "revenue_year": 2025,
+    "owner_manager_name": "Mark Borik",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "estuba",
@@ -3849,7 +4581,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/estubos_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/estubos_baldai/",
+    "revenue_eur_latest": 1346949,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gabrielė Strazdaitė, direktorė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldlita",
@@ -3894,7 +4634,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldlita/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldlita/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "mbi",
@@ -3935,7 +4683,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/minkstu_baldu_ideja/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/minkstu_baldu_ideja/",
+    "revenue_eur_latest": 626660,
+    "revenue_year": 2025,
+    "owner_manager_name": "Robertas Jucys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "getanas",
@@ -3982,7 +4738,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/getanas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/getanas/",
+    "revenue_eur_latest": 96695,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gerimantas Česlauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "stilingi-baldai",
@@ -4023,7 +4787,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/stilingi_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/stilingi_baldai/",
+    "revenue_eur_latest": 161378,
+    "revenue_year": 2025,
+    "owner_manager_name": "Rolandas Janusaitis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "exus-furniture",
@@ -4068,7 +4840,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/exus_furniture/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/exus_furniture/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Edgaras Jasiukėnas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "deluxe-baldai",
@@ -4112,7 +4892,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/deluxe_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/deluxe_baldai/",
+    "revenue_eur_latest": 558715,
+    "revenue_year": 2025,
+    "owner_manager_name": "Emanuelis Rūtelionis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "aruno-baldai",
@@ -4154,7 +4942,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/aruno_baldai_kretingoje/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/aruno_baldai_kretingoje/",
+    "revenue_eur_latest": 58748,
+    "revenue_year": 2025,
+    "owner_manager_name": "Arūnas Zabitis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "r2-baldai",
@@ -4202,7 +4998,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/r2_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/r2_baldai/",
+    "revenue_eur_latest": 242092,
+    "revenue_year": 2025,
+    "owner_manager_name": "Ričardas Šlimas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "virtuvinis-lt",
@@ -4243,7 +5047,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/alkena/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/alkena/",
+    "revenue_eur_latest": 982064,
+    "revenue_year": 2025,
+    "owner_manager_name": "Marius Gabrėnas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "medeinus",
@@ -4289,7 +5101,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/medeinus/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/medeinus/",
+    "revenue_eur_latest": 621012,
+    "revenue_year": 2025,
+    "owner_manager_name": "Donatas Uselis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldita",
@@ -4332,7 +5152,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/mano_baldita/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/mano_baldita/",
+    "revenue_eur_latest": 329998,
+    "revenue_year": 2025,
+    "owner_manager_name": "Ėrikas Tomaševičius, valdytojas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "abf",
@@ -4374,7 +5202,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_aukstaitijos_baldu_fabrikas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_aukstaitijos_baldu_fabrikas/",
+    "revenue_eur_latest": 228507,
+    "revenue_year": 2025,
+    "owner_manager_name": "Egidijus Janušauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "bengita",
@@ -4414,7 +5250,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_bengita/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_bengita/",
+    "revenue_eur_latest": 1810026,
+    "revenue_year": 2025,
+    "owner_manager_name": "Aurimas Balčiūnas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-tvirtove",
@@ -4455,7 +5299,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_tvirtove/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_tvirtove/",
+    "revenue_eur_latest": 245435,
+    "revenue_year": 2022,
+    "owner_manager_name": "Karolis Dovydėnas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-linija",
@@ -4496,7 +5348,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_linija/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_linija/",
+    "revenue_eur_latest": 479900,
+    "revenue_year": 2025,
+    "owner_manager_name": "Aloyzas Poška, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "if-concept",
@@ -4537,7 +5397,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/audrelina/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/audrelina/",
+    "revenue_eur_latest": 2641077,
+    "revenue_year": 2025,
+    "owner_manager_name": "Audrius Zigmantavičius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "kasparo-baldai",
@@ -4579,7 +5447,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/kasparo_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kasparo_baldai/",
+    "revenue_eur_latest": 256028,
+    "revenue_year": 2025,
+    "owner_manager_name": "Lauras Breskus, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "egvita",
@@ -4619,7 +5495,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/egvita/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/egvita/",
+    "revenue_eur_latest": 179569,
+    "revenue_year": 2025,
+    "owner_manager_name": "Eugenija Rimkevičiūtė, direktorė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "liepas",
@@ -4660,7 +5544,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/liepas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/liepas/",
+    "revenue_eur_latest": 813243,
+    "revenue_year": 2025,
+    "owner_manager_name": "Saulius Užubalis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "diara-baldu-studija",
@@ -4701,7 +5593,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/giedriaus_kalcinsko_individuali_baldu_projektavimo_ir_gamybos_imone_diara/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/giedriaus_kalcinsko_individuali_baldu_projektavimo_ir_gamybos_imone_diara/",
+    "revenue_eur_latest": 465179,
+    "revenue_year": 2025,
+    "owner_manager_name": "Giedrius Kalčinskas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "gusto-baldai",
@@ -4743,7 +5643,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/gusto_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/gusto_baldai/",
+    "revenue_eur_latest": 679114,
+    "revenue_year": 2025,
+    "owner_manager_name": "Paulius Gustas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "gordena",
@@ -4784,7 +5692,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/gordena/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/gordena/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Kęstutis Simanavičius, vadovas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "unikalus-baldai",
@@ -4825,7 +5741,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_autocodas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_autocodas/",
+    "revenue_eur_latest": 36225,
+    "revenue_year": 2025,
+    "owner_manager_name": "Darius Dailyda, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "peledos-baldai",
@@ -4869,7 +5793,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/peledos_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/peledos_baldai/",
+    "revenue_eur_latest": 981140,
+    "revenue_year": 2025,
+    "owner_manager_name": "Arūnas Vaitkevičius, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "interjero-ideja",
@@ -4912,7 +5844,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/interjero_ideja/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/interjero_ideja/",
+    "revenue_eur_latest": 115064,
+    "revenue_year": 2025,
+    "owner_manager_name": "Laimius Uleckas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-prizme",
@@ -4953,7 +5893,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_prizme/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_prizme/",
+    "revenue_eur_latest": 117014,
+    "revenue_year": 2025,
+    "owner_manager_name": "Tadas Pieža, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "furnmaster",
@@ -4994,7 +5942,15 @@
     "employee_count_band": "50-249",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/furnmaster/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/furnmaster/",
+    "revenue_eur_latest": 23980277,
+    "revenue_year": 2024,
+    "owner_manager_name": "Evaldas Sadauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldmaris",
@@ -5026,7 +5982,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "000977017",
+    "financial_source_url": "https://baldmaris.lt/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Marius Budginas",
+    "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
+    "public_details_source_urls": [
+      "https://baldmaris.lt/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "aurimo-korpusiniu-baldu-gamyba",
@@ -5064,7 +6032,19 @@
     ],
     "source_artifact_url": "https://prod-agent-artifact-engine-production.up.railway.app/render/6041adaa-cd73-4543-b001-1817e66e7987?share=jiqg4Ia8QAXblbyOi9dRsUxXABDzp_d8",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "001081836",
+    "financial_source_url": "https://www.cabinetfurniture.lt/en",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": null,
+    "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
+    "public_details_source_urls": [
+      "https://www.cabinetfurniture.lt/en"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "uosvita",
@@ -5105,7 +6085,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uosvita_mb/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uosvita_mb/",
+    "revenue_eur_latest": 20920,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vytautas Noreika, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "laukbaldis",
@@ -5146,7 +6134,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/laukbaldis/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/laukbaldis/",
+    "revenue_eur_latest": 286952,
+    "revenue_year": 2025,
+    "owner_manager_name": "Raimondas Jarmoška, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "tvirte",
@@ -5186,7 +6182,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/tvirte/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tvirte/",
+    "revenue_eur_latest": 11595,
+    "revenue_year": 2025,
+    "owner_manager_name": "Raimondas Šedys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "rejben",
@@ -5227,7 +6231,15 @@
     "employee_count_band": "50-249",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/rejben/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/rejben/",
+    "revenue_eur_latest": 5627349,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "mano-baldita",
@@ -5268,7 +6280,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/mano_baldita/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/mano_baldita/",
+    "revenue_eur_latest": 329998,
+    "revenue_year": 2025,
+    "owner_manager_name": "Ėrikas Tomaševičius, valdytojas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "rinkos-banga",
@@ -5308,7 +6328,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/rinkos_banga/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/rinkos_banga/",
+    "revenue_eur_latest": 132555,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gediminas Kolesnikovas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "farbina",
@@ -5348,7 +6376,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/farbina/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/farbina/",
+    "revenue_eur_latest": 3976,
+    "revenue_year": 2024,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ralko",
@@ -5389,7 +6425,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ralko/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ralko/",
+    "revenue_eur_latest": 2186400,
+    "revenue_year": 2025,
+    "owner_manager_name": "Artūras Čenkus",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "medzio-spalvos",
@@ -5430,7 +6474,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/medzio_spalvos/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/medzio_spalvos/",
+    "revenue_eur_latest": 225537,
+    "revenue_year": 2025,
+    "owner_manager_name": "Kęstutis Grabauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-vizija",
@@ -5471,7 +6523,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_vizija/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_vizija/",
+    "revenue_eur_latest": 101260,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gabriel Ragauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "auseda",
@@ -5511,7 +6571,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/auseda/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/auseda/",
+    "revenue_eur_latest": 54302,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "janer",
@@ -5552,7 +6620,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/janer_mb/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/janer_mb/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Jan Kučko, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "kybo",
@@ -5592,7 +6668,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/kybo/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kybo/",
+    "revenue_eur_latest": 17404,
+    "revenue_year": 2025,
+    "owner_manager_name": "Raimonda Kvaraciejūtė, valdytojas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldaila",
@@ -5624,7 +6708,19 @@
     ],
     "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "305726050",
+    "financial_source_url": "https://www.baldaila.lt/kontaktai/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Anatolijus Larionovas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "public_details_source_urls": [
+      "https://www.baldaila.lt/kontaktai/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "drimstoga",
@@ -5664,7 +6760,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_drimstoga/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_drimstoga/",
+    "revenue_eur_latest": 665299,
+    "revenue_year": 2025,
+    "owner_manager_name": "Dmitrij Lepiochin, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "suduvos-baldai",
@@ -5696,7 +6800,19 @@
     ],
     "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "151204721",
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/morita/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Vygantas Subačius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/morita/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "sedes-regia",
@@ -5737,7 +6853,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/sedes_regia/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sedes_regia/",
+    "revenue_eur_latest": 332123,
+    "revenue_year": 2025,
+    "owner_manager_name": "Aurimas Kundelis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "dalisima",
@@ -5778,7 +6902,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/dalisima/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/dalisima/",
+    "revenue_eur_latest": 846606,
+    "revenue_year": 2025,
+    "owner_manager_name": "Roman Lišajev",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "interjero-ateleje",
@@ -5819,7 +6951,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/interjero_atelje/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/interjero_atelje/",
+    "revenue_eur_latest": 33276,
+    "revenue_year": 2025,
+    "owner_manager_name": "Igoris Martišonokas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "balticum-baldai",
@@ -5860,7 +7000,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/balticum_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/balticum_baldai/",
+    "revenue_eur_latest": 213893,
+    "revenue_year": 2025,
+    "owner_manager_name": "Jevgenij Antipenkov, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "emira",
@@ -5901,7 +7049,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/emira_ekspozicija/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/emira_ekspozicija/",
+    "revenue_eur_latest": 532819,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vladislav Tiaškevič, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "asdona",
@@ -5942,7 +7098,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/asdona/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/asdona/",
+    "revenue_eur_latest": 182269,
+    "revenue_year": 2024,
+    "owner_manager_name": "Andrius Kerbedis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "tavo-baldai",
@@ -5982,7 +7146,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_tavo_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_tavo_baldai/",
+    "revenue_eur_latest": 368929,
+    "revenue_year": 2025,
+    "owner_manager_name": "Virginija Talkačiauskaitė-Lavrinovič, direktorė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "privee",
@@ -6023,7 +7195,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/interio_vilnius_uab/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/interio_vilnius_uab/",
+    "revenue_eur_latest": 512723,
+    "revenue_year": 2025,
+    "owner_manager_name": "Ignas Rėksnys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "nimava",
@@ -6064,7 +7244,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/nimava/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/nimava/",
+    "revenue_eur_latest": 530285,
+    "revenue_year": 2025,
+    "owner_manager_name": "Nikolaj Jančiauskas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "justura",
@@ -6105,7 +7293,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_justura/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_justura/",
+    "revenue_eur_latest": 978574,
+    "revenue_year": 2025,
+    "owner_manager_name": "Aurimas Senvaitis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "archiformus",
@@ -6146,7 +7342,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/archiformus/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/archiformus/",
+    "revenue_eur_latest": 1436712,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "miltra",
@@ -6187,7 +7391,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/miltra/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/miltra/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Milda Morkūnaitė, direktorė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "politechnologiju-centras",
@@ -6228,7 +7440,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/politechnologiju_centras/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/politechnologiju_centras/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Saulius Daukša",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "eight-interjerai",
@@ -6269,7 +7489,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/8_interjerai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/8_interjerai/",
+    "revenue_eur_latest": 66456,
+    "revenue_year": 2025,
+    "owner_manager_name": "Mangirdas Žinys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ebasibaldai",
@@ -6310,7 +7538,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ebasibaldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ebasibaldai/",
+    "revenue_eur_latest": 65517,
+    "revenue_year": 2025,
+    "owner_manager_name": "Evaldas Basys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "sdline",
@@ -6351,7 +7587,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/sdline/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sdline/",
+    "revenue_eur_latest": 14865,
+    "revenue_year": 2025,
+    "owner_manager_name": "Deividas Sarapinas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "pupulis",
@@ -6392,7 +7636,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/pupulis/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/pupulis/",
+    "revenue_eur_latest": 261397,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gintautas Ivanauskas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "uostamiescio-baldai",
@@ -6433,7 +7685,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uostamiescio_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uostamiescio_baldai/",
+    "revenue_eur_latest": 18925,
+    "revenue_year": 2024,
+    "owner_manager_name": "Sima Milvydienė, direktorė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "girkasas",
@@ -6474,7 +7734,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/girkasas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/girkasas/",
+    "revenue_eur_latest": 96052,
+    "revenue_year": 2025,
+    "owner_manager_name": "Kazimieras Sasnauskas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "dailsa",
@@ -6514,7 +7782,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_dailsa/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_dailsa/",
+    "revenue_eur_latest": 156456,
+    "revenue_year": 2025,
+    "owner_manager_name": "Saulius Kiaunė, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "tegrana",
@@ -6555,7 +7831,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/tegrana/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tegrana/",
+    "revenue_eur_latest": 21702,
+    "revenue_year": 2025,
+    "owner_manager_name": "Gintaras Kasnauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldai-sau",
@@ -6596,7 +7880,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/vl_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/vl_baldai/",
+    "revenue_eur_latest": 393411,
+    "revenue_year": 2025,
+    "owner_manager_name": "Valdas Laurinaitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "girios-medis",
@@ -6637,7 +7929,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/girios_medis/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/girios_medis/",
+    "revenue_eur_latest": 639120,
+    "revenue_year": 2025,
+    "owner_manager_name": "Bronius Adomėnas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "uosedma",
@@ -6677,7 +7977,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uosedma/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uosedma/",
+    "revenue_eur_latest": 90105,
+    "revenue_year": 2025,
+    "owner_manager_name": "Edmundas Tauperis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "minshape",
@@ -6709,7 +8017,19 @@
     ],
     "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "2396383",
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/mindaugo_jakucionio_individuali_veikla/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Mindaugas Jakučionis",
+    "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mindaugo_jakucionio_individuali_veikla/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "a2a-lt",
@@ -6749,7 +8069,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/a2a_lt/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/a2a_lt/",
+    "revenue_eur_latest": 457887,
+    "revenue_year": 2025,
+    "owner_manager_name": "Arūnas Kanapienis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "juodas-taskas",
@@ -6790,7 +8118,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/juodas_taskas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/juodas_taskas/",
+    "revenue_eur_latest": 968271,
+    "revenue_year": 2025,
+    "owner_manager_name": "Žygimantas Navikas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "nexa-lt",
@@ -6831,7 +8167,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/nexa_lt/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/nexa_lt/",
+    "revenue_eur_latest": 95952,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "eineros-baldai",
@@ -6871,7 +8215,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/eineros_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/eineros_baldai/",
+    "revenue_eur_latest": 1038662,
+    "revenue_year": 2025,
+    "owner_manager_name": "Nerijus Eizaitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "elniaragis",
@@ -6911,7 +8263,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/elniaragis/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/elniaragis/",
+    "revenue_eur_latest": 299780,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ovalus-kampai",
@@ -6952,7 +8312,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ovalus_kampai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ovalus_kampai/",
+    "revenue_eur_latest": 33748,
+    "revenue_year": 2025,
+    "owner_manager_name": "Raimondas Savickas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "toto-baldai",
@@ -6993,7 +8361,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/toto_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/toto_baldai/",
+    "revenue_eur_latest": 43844,
+    "revenue_year": 2025,
+    "owner_manager_name": "Artūras Totoraitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-kalnas",
@@ -7025,7 +8401,19 @@
     ],
     "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "305621836",
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_kalnas/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_kalnas/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "resize-design",
@@ -7065,7 +8453,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/resize_design/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/resize_design/",
+    "revenue_eur_latest": 1531129,
+    "revenue_year": 2025,
+    "owner_manager_name": "Tomas Beržaninas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldrama",
@@ -7106,7 +8502,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldrama/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldrama/",
+    "revenue_eur_latest": 85286,
+    "revenue_year": 2025,
+    "owner_manager_name": "Ramūnas Giedraitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "sapelli",
@@ -7144,8 +8548,17 @@
     "postcode": "LT-54487",
     "employee_count_band": "0",
     "public_details_source_urls": [
-      "https://rekvizitai.vz.lt/en/company/sapelli/"
-    ]
+      "https://rekvizitai.vz.lt/en/company/sapelli_uab/"
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sapelli_uab/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Darius Stundys",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28",
+    "company_code": "305755098"
   },
   {
     "slug": "madamedi",
@@ -7185,7 +8598,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/madamedi/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/madamedi/",
+    "revenue_eur_latest": 2732,
+    "revenue_year": 2025,
+    "owner_manager_name": "Paulius Abraitis, vadovas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "deivio-baldai",
@@ -7226,7 +8647,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/deivio_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/deivio_baldai/",
+    "revenue_eur_latest": 154120,
+    "revenue_year": 2025,
+    "owner_manager_name": "Deividas Balčiūnas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "esme-furniture",
@@ -7267,7 +8696,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/esme_furniture/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/esme_furniture/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Rokas Masaitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "solid-furniture",
@@ -7308,7 +8745,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/solid_furniture/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/solid_furniture/",
+    "revenue_eur_latest": 28686,
+    "revenue_year": 2024,
+    "owner_manager_name": "Audrius Zigmantavičius, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "decus-furniture",
@@ -7349,7 +8794,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/decus_furniture/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/decus_furniture/",
+    "revenue_eur_latest": 68987,
+    "revenue_year": 2025,
+    "owner_manager_name": "Marius Elijošius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldu-tema",
@@ -7390,7 +8843,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldu_tema/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_tema/",
+    "revenue_eur_latest": 36955,
+    "revenue_year": 2025,
+    "owner_manager_name": "Justas Sendžikas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "aretida",
@@ -7431,7 +8892,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/aretida/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/aretida/",
+    "revenue_eur_latest": 958158,
+    "revenue_year": 2025,
+    "owner_manager_name": "Artūras Rastaitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "domo-verslas",
@@ -7472,7 +8941,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_domo_verslas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_domo_verslas/",
+    "revenue_eur_latest": 4373642,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldingas",
@@ -7513,7 +8990,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldingas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldingas/",
+    "revenue_eur_latest": 300231,
+    "revenue_year": 2025,
+    "owner_manager_name": "Jaunius Riškus",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "nv-cnc-projektai",
@@ -7553,7 +9038,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/nv_cnc_projektai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/nv_cnc_projektai/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Nerijus Švambarys, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "solidus-furniture",
@@ -7593,7 +9086,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/solidus_furniture/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/solidus_furniture/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Ignas Daukša, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldai-saldziam-miegui",
@@ -7633,7 +9134,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldai_saldziam_miegui/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldai_saldziam_miegui/",
+    "revenue_eur_latest": 137434,
+    "revenue_year": 2025,
+    "owner_manager_name": "Saulius Gudukas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "remigijaus-baldai",
@@ -7665,7 +9174,19 @@
     ],
     "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "2444496",
+    "financial_source_url": "https://www.remigijaus-baldai.lt/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": null,
+    "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
+    "public_details_source_urls": [
+      "https://www.remigijaus-baldai.lt/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldini",
@@ -7705,7 +9226,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldini/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldini/",
+    "revenue_eur_latest": 12520,
+    "revenue_year": 2024,
+    "owner_manager_name": "Mantas Grigalaitis, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "minkstas-ir-minkstesnis",
@@ -7746,7 +9275,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/minkstas_ir_minkstesnis/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/minkstas_ir_minkstesnis/",
+    "revenue_eur_latest": 58333,
+    "revenue_year": 2024,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "almyros-baldai",
@@ -7778,7 +9315,19 @@
     ],
     "source_artifact_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
     "source_collection_date": "2026-07-27",
-    "verification_status": "nepatvirtinta"
+    "verification_status": "nepatvirtinta",
+    "company_code": "145073477",
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/a_pakarnio_ii/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Alvydas Pakarnis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/a_pakarnio_ii/"
+    ],
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldinta",
@@ -7818,7 +9367,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldinta/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldinta/",
+    "revenue_eur_latest": 142237,
+    "revenue_year": 2024,
+    "owner_manager_name": "Audrius Špakauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "aukstaitijos-baldu-fabrikas",
@@ -7859,7 +9416,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_aukstaitijos_baldu_fabrikas/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_aukstaitijos_baldu_fabrikas/",
+    "revenue_eur_latest": 228507,
+    "revenue_year": 2025,
+    "owner_manager_name": "Egidijus Janušauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "diansa",
@@ -7900,7 +9465,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/diansa/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/diansa/",
+    "revenue_eur_latest": 1077730,
+    "revenue_year": 2025,
+    "owner_manager_name": "Dovydas Andriuškevičius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "dominari",
@@ -7941,7 +9514,15 @@
     "employee_count_band": "250+",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/dominari/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/dominari/",
+    "revenue_eur_latest": 98935302,
+    "revenue_year": 2024,
+    "owner_manager_name": "Saulius Maleckas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "dominati",
@@ -7981,7 +9562,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baltic_metalglass/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baltic_metalglass/",
+    "revenue_eur_latest": 1707412,
+    "revenue_year": 2025,
+    "owner_manager_name": "Vaidotas Vaitonis",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "nordo-home",
@@ -8021,7 +9610,15 @@
     "employee_count_band": "10-49",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ed_baldai/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ed_baldai/",
+    "revenue_eur_latest": 720586,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "baldaiidea",
@@ -8061,7 +9658,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/baldaiidea/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldaiidea/",
+    "revenue_eur_latest": 93564,
+    "revenue_year": 2025,
+    "owner_manager_name": null,
+    "owner_signal": "nepaskelbta",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "jamuraj",
@@ -8102,7 +9707,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/jamuraj/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/jamuraj/",
+    "revenue_eur_latest": 113835,
+    "revenue_year": 2025,
+    "owner_manager_name": "Mindaugas Pukas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "kaip-pas-teti",
@@ -8143,7 +9756,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/kaip_pas_teti/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kaip_pas_teti/",
+    "revenue_eur_latest": 22651,
+    "revenue_year": 2024,
+    "owner_manager_name": "Andrius Dambrauskas, direktorius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "gmdg",
@@ -8184,7 +9805,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/",
+    "revenue_eur_latest": null,
+    "revenue_year": null,
+    "owner_manager_name": "Vaclava Grinienė, savininkas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "nepaskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "ironix",
@@ -8225,7 +9854,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/ironix/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ironix/",
+    "revenue_eur_latest": 3168,
+    "revenue_year": 2025,
+    "owner_manager_name": "Tomas Kalina, vadovas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "nemuno-sistemos",
@@ -8266,7 +9903,15 @@
     "employee_count_band": "0",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/nemuno_sistemos/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/nemuno_sistemos/",
+    "revenue_eur_latest": 7578,
+    "revenue_year": 2025,
+    "owner_manager_name": "Adomas Nemanis, vadovas",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "stone-studio",
@@ -8307,7 +9952,15 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/stone_studio/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/stone_studio/",
+    "revenue_eur_latest": 447078,
+    "revenue_year": 2025,
+    "owner_manager_name": "Simona Pukinskaitė, direktorė",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   },
   {
     "slug": "s-monta",
@@ -8348,6 +10001,14 @@
     "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/s_monta/"
-    ]
+    ],
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/s_monta/",
+    "revenue_eur_latest": 74376,
+    "revenue_year": 2025,
+    "owner_manager_name": "Svajūnas Sinkevičius",
+    "owner_signal": "vadovas viešai nurodytas",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-07-28"
   }
 ]
