@@ -41,6 +41,8 @@ type Manufacturer = RecordModel & {
   source_artifact_url: string;
   source_collection_date: string;
   verification_status: string;
+  financial_verification_status: string | null;
+  verified_at: string | null;
 };
 
 type BrowseState = {
@@ -48,6 +50,9 @@ type BrowseState = {
   category: string;
   city: string;
   region: string;
+  employeeBand: string;
+  foundedPeriod: string;
+  registryCheckedOnly: boolean;
 };
 
 type FilterOption = {
@@ -87,6 +92,19 @@ type ValuationResult = {
 };
 
 const PAGE_SIZE = 50;
+const EMPLOYEE_BAND_OPTIONS: FilterOption[] = [
+  { value: '0', label: '0 darbuotojų' },
+  { value: '1-9', label: '1–9 darbuotojai' },
+  { value: '10-49', label: '10–49 darbuotojai' },
+  { value: '50-249', label: '50–249 darbuotojai' },
+  { value: '250+', label: '250 ir daugiau darbuotojų' },
+];
+const FOUNDED_PERIOD_OPTIONS: FilterOption[] = [
+  { value: 'iki-1999', label: 'Iki 1999 m.' },
+  { value: '2000-2009', label: '2000–2009 m.' },
+  { value: '2010-2019', label: '2010–2019 m.' },
+  { value: 'nuo-2020', label: '2020 m. ir vėliau' },
+];
 const PROJECT_BRIEF_MIN_LENGTH = 40;
 const PROJECT_BRIEF_MAX_LENGTH = 3000;
 const projectTypeOptions = [
@@ -229,6 +247,26 @@ function textOrUnknown(value: string | null | undefined, unknown = 'Viešuose š
   return normalizedValue || unknown;
 }
 
+function getRegistryCheckedDate(value: string | null | undefined): { iso: string; label: string } | null {
+  const iso = value?.trim() ?? '';
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!match) return null;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return null;
+  return {
+    iso,
+    label: new Intl.DateTimeFormat('lt-LT', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC',
+    }).format(date),
+  };
+}
+
 function asStringArray(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
   return value.filter((item): item is string => typeof item === 'string' && item.trim().length > 0);
@@ -241,6 +279,9 @@ function readBrowseState(): BrowseState {
     category: params.get('kategorija') ?? '',
     city: params.get('miestas') ?? '',
     region: params.get('regionas') ?? '',
+    employeeBand: params.get('dydis') ?? '',
+    foundedPeriod: params.get('ikurta') ?? '',
+    registryCheckedOnly: params.get('registras') === 'patikrinta',
   };
 }
 
@@ -250,6 +291,9 @@ function syncBrowseState(mode: 'push' | 'replace'): void {
   if (browseState.category) params.set('kategorija', browseState.category);
   if (browseState.city) params.set('miestas', browseState.city);
   if (browseState.region) params.set('regionas', browseState.region);
+  if (browseState.employeeBand) params.set('dydis', browseState.employeeBand);
+  if (browseState.foundedPeriod) params.set('ikurta', browseState.foundedPeriod);
+  if (browseState.registryCheckedOnly) params.set('registras', 'patikrinta');
 
   const query = params.toString();
   const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}`;
@@ -320,30 +364,53 @@ function getOptions(records: Manufacturer[], valueKey: 'city' | 'region', labelK
 }
 
 function validateBrowseState(
-  categories: FilterOption[],
-  cities: FilterOption[],
-  regions: FilterOption[],
+  categories: FilterOption[] = [],
+  cities: FilterOption[] = [],
+  regions: FilterOption[] = [],
+  includeDirectoryFilters = true,
 ): void {
   const hasValue = (options: FilterOption[], value: string) => options.some((option) => option.value === value);
   let changed = false;
 
-  if (browseState.category && !hasValue(categories, browseState.category)) {
+  if (includeDirectoryFilters && browseState.category && !hasValue(categories, browseState.category)) {
     browseState.category = '';
     changed = true;
   }
-  if (browseState.city && !hasValue(cities, browseState.city)) {
+  if (includeDirectoryFilters && browseState.city && !hasValue(cities, browseState.city)) {
     browseState.city = '';
     changed = true;
   }
-  if (browseState.region && !hasValue(regions, browseState.region)) {
+  if (includeDirectoryFilters && browseState.region && !hasValue(regions, browseState.region)) {
     browseState.region = '';
+    changed = true;
+  }
+  if (browseState.employeeBand && !hasValue(EMPLOYEE_BAND_OPTIONS, browseState.employeeBand)) {
+    browseState.employeeBand = '';
+    changed = true;
+  }
+  if (browseState.foundedPeriod && !hasValue(FOUNDED_PERIOD_OPTIONS, browseState.foundedPeriod)) {
+    browseState.foundedPeriod = '';
     changed = true;
   }
 
   if (changed) syncBrowseState('replace');
 }
 
-function getFilteredManufacturers(records: Manufacturer[]): Manufacturer[] {
+function recordMatchesFoundedPeriod(year: number | null | undefined, period: string): boolean {
+  if (!period) return true;
+  if (!Number.isInteger(year)) return false;
+  if (period === 'iki-1999') return Number(year) <= 1999;
+  if (period === '2000-2009') return Number(year) >= 2000 && Number(year) <= 2009;
+  if (period === '2010-2019') return Number(year) >= 2010 && Number(year) <= 2019;
+  if (period === 'nuo-2020') return Number(year) >= 2020;
+  return false;
+}
+
+function isRegistryChecked(record: Manufacturer): boolean {
+  return normalize(record.financial_verification_status ?? '') === 'patikrinta';
+}
+
+function getFilteredManufacturers(records: Manufacturer[], includeDirectoryFilters = true): Manufacturer[] {
   const query = normalize(browseState.query);
 
   return records.filter((record) => {
@@ -359,12 +426,31 @@ function getFilteredManufacturers(records: Manufacturer[]): Manufacturer[] {
       ].some((value) => normalize(value ?? '').includes(query));
 
     const matchesCategory =
-      !browseState.category || asStringArray(record.category_codes).includes(browseState.category);
-    const matchesCity = !browseState.city || record.city === browseState.city;
-    const matchesRegion = !browseState.region || record.region === browseState.region;
+      !includeDirectoryFilters || !browseState.category || asStringArray(record.category_codes).includes(browseState.category);
+    const matchesCity = !includeDirectoryFilters || !browseState.city || record.city === browseState.city;
+    const matchesRegion = !includeDirectoryFilters || !browseState.region || record.region === browseState.region;
+    const matchesEmployeeBand = !browseState.employeeBand || record.employee_count_band?.trim() === browseState.employeeBand;
+    const matchesFoundedPeriod = recordMatchesFoundedPeriod(record.founded_year, browseState.foundedPeriod);
+    const matchesRegistryStatus = !browseState.registryCheckedOnly || isRegistryChecked(record);
 
-    return matchesQuery && matchesCategory && matchesCity && matchesRegion;
+    return matchesQuery && matchesCategory && matchesCity && matchesRegion && matchesEmployeeBand && matchesFoundedPeriod && matchesRegistryStatus;
   });
+}
+
+function hasAdvancedFilters(): boolean {
+  return Boolean(browseState.employeeBand || browseState.foundedPeriod || browseState.registryCheckedOnly);
+}
+
+function resetBrowseState(): void {
+  browseState = {
+    query: '',
+    category: '',
+    city: '',
+    region: '',
+    employeeBand: '',
+    foundedPeriod: '',
+    registryCheckedOnly: false,
+  };
 }
 
 function formatManufacturerCount(count: number): string {
@@ -560,6 +646,78 @@ function createSelect(
   return field;
 }
 
+function createRegistryToggle(id: string): HTMLDivElement {
+  const field = document.createElement('div');
+  field.className = 'filter-toggle';
+  const input = document.createElement('input');
+  input.id = id;
+  input.name = id;
+  input.type = 'checkbox';
+  input.checked = browseState.registryCheckedOnly;
+  const label = document.createElement('label');
+  label.htmlFor = id;
+  const title = document.createElement('strong');
+  title.textContent = 'Tik patikrinti registro duomenys';
+  const hint = document.createElement('span');
+  hint.textContent = 'Tai duomenų būsenos žyma, ne kokybės ar prieinamumo garantija.';
+  label.append(title, hint);
+  field.append(input, label);
+  return field;
+}
+
+function createAdvancedFilterFields(prefix: string): {
+  fields: HTMLDivElement;
+  employeeBandSelect: HTMLSelectElement;
+  foundedPeriodSelect: HTMLSelectElement;
+  registryToggle: HTMLInputElement;
+} {
+  const fields = document.createElement('div');
+  fields.className = 'filter-grid filter-grid--advanced';
+  const employeeField = createSelect(
+    `${prefix}-size-filter`,
+    'Įmonės dydis',
+    'Visi darbuotojų skaičiai',
+    EMPLOYEE_BAND_OPTIONS,
+    browseState.employeeBand,
+  );
+  const foundedField = createSelect(
+    `${prefix}-founded-filter`,
+    'Įkūrimo laikotarpis',
+    'Visi įkūrimo metai',
+    FOUNDED_PERIOD_OPTIONS,
+    browseState.foundedPeriod,
+  );
+  const registryField = createRegistryToggle(`${prefix}-registry-filter`);
+  fields.append(employeeField, foundedField, registryField);
+  return {
+    fields,
+    employeeBandSelect: employeeField.querySelector('select') as HTMLSelectElement,
+    foundedPeriodSelect: foundedField.querySelector('select') as HTMLSelectElement,
+    registryToggle: registryField.querySelector('input') as HTMLInputElement,
+  };
+}
+
+function createRegistryCardStatus(record: Manufacturer): HTMLElement | null {
+  if (!isRegistryChecked(record)) return null;
+  const status = document.createElement('p');
+  status.className = 'registry-card-status';
+  const marker = document.createElement('span');
+  marker.className = 'registry-check-mark';
+  marker.setAttribute('aria-hidden', 'true');
+  const label = document.createElement('strong');
+  label.textContent = 'Registro duomenys patikrinti';
+  status.append(marker, label);
+  const checkedDate = getRegistryCheckedDate(record.verified_at);
+  if (checkedDate) {
+    const separator = document.createTextNode(' · ');
+    const time = document.createElement('time');
+    time.dateTime = checkedDate.iso;
+    time.textContent = checkedDate.label;
+    status.append(separator, time);
+  }
+  return status;
+}
+
 function createManufacturerCard(record: Manufacturer): HTMLElement {
   const article = document.createElement('article');
   article.className = 'manufacturer-card';
@@ -615,7 +773,10 @@ function createManufacturerCard(record: Manufacturer): HTMLElement {
   arrow.textContent = ' →';
   link.append(arrow);
 
-  article.append(headingGroup, location, description, categories, link);
+  article.append(headingGroup);
+  const registryStatus = createRegistryCardStatus(record);
+  if (registryStatus) article.append(registryStatus);
+  article.append(location, description, categories, link);
   return article;
 }
 
@@ -628,7 +789,7 @@ function renderShell(): void {
         <div class="intro-copy">
           <p class="kicker">Viešas paieškos katalogas</p>
           <h1 id="page-title">Raskite baldų gamintojus pagal poreikį ir vietą</h1>
-          <p class="lead">Ieškokite Lietuvos nestandartinių baldų gamintojų kandidatų pagal kategoriją, miestą ir šaltiniuose nurodytą regiono grupę.</p>
+          <p class="lead">Ieškokite Lietuvos nestandartinių baldų gamintojų kandidatų pagal kategoriją, vietą, įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p>
           <div class="intro-actions">
             <a class="primary-button primary-button--light" href="/gauti-pasiulymus" data-internal-link="true">Pateikti projekto užklausą</a>
             <a class="intro-guide-link" href="/gidas" data-internal-link="true">Kaip atrinkti ir palyginti gamintojus →</a>
@@ -709,7 +870,7 @@ function renderBrowse(): void {
       <p class="kicker">Paieška ir filtrai</p>
       <h2 id="browse-title">Gamintojų katalogas</h2>
     </div>
-    <p>Filtrai taikomi kartu: rodomi tik visus pasirinktus kriterijus atitinkantys įrašai.</p>
+    <p>Filtrai taikomi kartu. Registro patikros žyma nurodo tik viešų duomenų būseną, o ne gamintojo kokybę ar prieinamumą.</p>
   `;
 
   const form = document.createElement('form');
@@ -732,13 +893,14 @@ function renderBrowse(): void {
   searchField.append(searchLabel, searchInput);
 
   const fields = document.createElement('div');
-  fields.className = 'filter-grid';
+  fields.className = 'filter-grid filter-grid--primary';
   fields.append(
     searchField,
     createSelect('category-filter', 'Baldų kategorija', 'Visos kategorijos', categoryOptions, browseState.category),
     createSelect('city-filter', 'Miestas', 'Visi miestai', cityOptions, browseState.city),
     createSelect('region-filter', 'Šaltinio regiono grupė', 'Visos regiono grupės', regionOptions, browseState.region),
   );
+  const advancedControls = createAdvancedFilterFields('directory');
 
   const filterActions = document.createElement('div');
   filterActions.className = 'filter-actions';
@@ -751,7 +913,7 @@ function renderBrowse(): void {
   clearButton.textContent = 'Išvalyti paiešką ir filtrus';
   filterActions.append(activeHint, clearButton);
 
-  form.append(fields, filterActions);
+  form.append(fields, advancedControls.fields, filterActions);
   controls.append(controlsHeading, form);
 
   const results = document.createElement('div');
@@ -781,8 +943,23 @@ function renderBrowse(): void {
     syncBrowseState('push');
     renderResults();
   });
+  advancedControls.employeeBandSelect.addEventListener('change', () => {
+    browseState.employeeBand = advancedControls.employeeBandSelect.value;
+    syncBrowseState('push');
+    renderResults();
+  });
+  advancedControls.foundedPeriodSelect.addEventListener('change', () => {
+    browseState.foundedPeriod = advancedControls.foundedPeriodSelect.value;
+    syncBrowseState('push');
+    renderResults();
+  });
+  advancedControls.registryToggle.addEventListener('change', () => {
+    browseState.registryCheckedOnly = advancedControls.registryToggle.checked;
+    syncBrowseState('push');
+    renderResults();
+  });
   clearButton.addEventListener('click', () => {
-    browseState = { query: '', category: '', city: '', region: '' };
+    resetBrowseState();
     syncBrowseState('push');
     renderBrowse();
     document.querySelector<HTMLInputElement>('#directory-search')?.focus();
@@ -798,7 +975,7 @@ function renderResults(): void {
   if (window.location.pathname === '/') setHomeMetadata();
   const filtered = getFilteredManufacturers(manufacturers);
   const hasFilters = Boolean(
-    browseState.query || browseState.category || browseState.city || browseState.region,
+    browseState.query || browseState.category || browseState.city || browseState.region || hasAdvancedFilters(),
   );
 
   results.replaceChildren();
@@ -838,7 +1015,7 @@ function renderResults(): void {
     button.type = 'button';
     button.textContent = 'Išvalyti visus kriterijus';
     button.addEventListener('click', () => {
-      browseState = { query: '', category: '', city: '', region: '' };
+      resetBrowseState();
       syncBrowseState('push');
       renderBrowse();
     });
@@ -927,6 +1104,35 @@ function createPublicDetailsSection(record: Manufacturer): HTMLElement | null {
   facts.className = 'profile-facts';
   facts.append(...rows);
   section.append(facts);
+  return section;
+}
+
+function createRegistryVerificationSection(record: Manufacturer): HTMLElement | null {
+  if (!isRegistryChecked(record)) return null;
+  const section = document.createElement('section');
+  section.className = 'profile-registry-status';
+  section.setAttribute('aria-labelledby', 'profile-registry-status-title');
+  const marker = document.createElement('span');
+  marker.className = 'registry-check-mark registry-check-mark--large';
+  marker.setAttribute('aria-hidden', 'true');
+  const copy = document.createElement('div');
+  const heading = document.createElement('h2');
+  heading.id = 'profile-registry-status-title';
+  heading.textContent = 'Registro duomenys patikrinti';
+  const checkedDate = getRegistryCheckedDate(record.verified_at);
+  const detail = document.createElement('p');
+  if (checkedDate) {
+    detail.append('Paskutinė registro duomenų patikra: ');
+    const time = document.createElement('time');
+    time.dateTime = checkedDate.iso;
+    time.textContent = checkedDate.label;
+    detail.append(time, '. ');
+  } else {
+    detail.append('Paskutinės patikros data viešame įraše nenurodyta. ');
+  }
+  detail.append('Ši žyma nurodo tik registro duomenų peržiūros būseną; ji nepatvirtina darbų kokybės, užimtumo ar paslaugų prieinamumo.');
+  copy.append(heading, detail);
+  section.append(marker, copy);
   return section;
 }
 
@@ -1175,6 +1381,114 @@ function renderFaq(items: { question: string; answer: string }[]): string {
   `;
 }
 
+function initializeLandingFilters(records: Manufacturer[], updateMetadata: () => void): void {
+  const controlsHost = document.querySelector<HTMLElement>('#landing-filter-controls');
+  const list = document.querySelector<HTMLElement>('#landing-manufacturer-list');
+  if (!controlsHost || !list) return;
+
+  validateBrowseState([], [], [], false);
+  controlsHost.replaceChildren();
+
+  const form = document.createElement('form');
+  form.className = 'filter-form landing-filter-form';
+  form.setAttribute('role', 'search');
+  form.addEventListener('submit', (event) => event.preventDefault());
+
+  const searchField = document.createElement('div');
+  searchField.className = 'filter-field filter-field--search';
+  const searchLabel = document.createElement('label');
+  searchLabel.htmlFor = 'landing-search';
+  searchLabel.textContent = 'Ieškoti šiame sąraše';
+  const searchInput = document.createElement('input');
+  searchInput.id = 'landing-search';
+  searchInput.name = 'paieska';
+  searchInput.type = 'search';
+  searchInput.autocomplete = 'off';
+  searchInput.placeholder = 'Pavadinimas, aprašymas ar kategorija';
+  searchInput.value = browseState.query;
+  searchField.append(searchLabel, searchInput);
+
+  const advancedControls = createAdvancedFilterFields('landing');
+  const fields = document.createElement('div');
+  fields.className = 'filter-grid filter-grid--landing';
+  fields.append(searchField, ...Array.from(advancedControls.fields.children));
+
+  const actions = document.createElement('div');
+  actions.className = 'filter-actions';
+  const resultCount = document.createElement('p');
+  resultCount.className = 'landing-filter-count';
+  resultCount.setAttribute('role', 'status');
+  resultCount.setAttribute('aria-live', 'polite');
+  const clearButton = document.createElement('button');
+  clearButton.className = 'text-button';
+  clearButton.type = 'button';
+  clearButton.textContent = 'Išvalyti šio sąrašo filtrus';
+  actions.append(resultCount, clearButton);
+  form.append(fields, actions);
+  controlsHost.append(form);
+
+  const clearFilters = (): void => {
+    resetBrowseState();
+    syncBrowseState('push');
+    searchInput.value = '';
+    advancedControls.employeeBandSelect.value = '';
+    advancedControls.foundedPeriodSelect.value = '';
+    advancedControls.registryToggle.checked = false;
+    renderCards();
+    searchInput.focus();
+  };
+
+  const renderCards = (): void => {
+    updateMetadata();
+    const filtered = getFilteredManufacturers(records, false);
+    const hasFilters = Boolean(browseState.query || hasAdvancedFilters());
+    resultCount.textContent = hasFilters
+      ? `Rodoma įrašų: ${filtered.length}. Iš viso šiame sąraše: ${records.length}.`
+      : `Šiame sąraše – ${formatManufacturerCount(records.length)}.`;
+    list.replaceChildren();
+    if (!filtered.length) {
+      const empty = document.createElement('div');
+      empty.className = 'message-state landing-empty-state';
+      const heading = document.createElement('h3');
+      heading.textContent = 'Pagal šiuos kriterijus įrašų nerasta';
+      const copy = document.createElement('p');
+      copy.textContent = 'Pasirinkite platesnį įmonės dydį ar įkūrimo laikotarpį, pakeiskite paiešką arba išvalykite filtrus.';
+      const button = document.createElement('button');
+      button.className = 'primary-button';
+      button.type = 'button';
+      button.textContent = 'Išvalyti šio sąrašo filtrus';
+      button.addEventListener('click', clearFilters);
+      empty.append(heading, copy, button);
+      list.append(empty);
+      return;
+    }
+    filtered.forEach((record) => list.append(createManufacturerCard(record)));
+  };
+
+  searchInput.addEventListener('input', () => {
+    browseState.query = searchInput.value.trimStart();
+    syncBrowseState('replace');
+    renderCards();
+  });
+  advancedControls.employeeBandSelect.addEventListener('change', () => {
+    browseState.employeeBand = advancedControls.employeeBandSelect.value;
+    syncBrowseState('push');
+    renderCards();
+  });
+  advancedControls.foundedPeriodSelect.addEventListener('change', () => {
+    browseState.foundedPeriod = advancedControls.foundedPeriodSelect.value;
+    syncBrowseState('push');
+    renderCards();
+  });
+  advancedControls.registryToggle.addEventListener('change', () => {
+    browseState.registryCheckedOnly = advancedControls.registryToggle.checked;
+    syncBrowseState('push');
+    renderCards();
+  });
+  clearButton.addEventListener('click', clearFilters);
+  renderCards();
+}
+
 function renderLandingPage(slug: string): void {
   if (!root) return;
   const category = CATEGORY_LANDINGS.find((entry) => entry.slug === slug);
@@ -1201,22 +1515,23 @@ function renderLandingPage(slug: string): void {
   const description = category
     ? `${category.title}: ${records.length} viešais šaltiniais paremti nepatvirtinti Lietuvos gamintojų kandidatai, miestai ir atrankos gairės.`
     : `${cityLanding?.city}: ${records.length} viešuose šaltiniuose šiame mieste registruoti baldų gamintojų kandidatai. Sąrašas nėra paslaugų teritorijos ar kokybės garantija.`;
-  const hasQuery = Boolean(window.location.search);
-
-  setPageMetadata({
-    title: `${title} | Gamintojų katalogas`,
-    description,
-    path,
-    robots: hasQuery ? 'noindex, follow' : 'index, follow',
-    structuredData: [
-      breadcrumbStructuredData([
-        { name: 'Gamintojų katalogas', path: '/' },
-        { name: title, path },
-      ]),
-      faqStructuredData(faq),
-      itemListStructuredData(records),
-    ],
-  });
+  const updateMetadata = (): void => {
+    setPageMetadata({
+      title: `${title} | Gamintojų katalogas`,
+      description,
+      path,
+      robots: window.location.search ? 'noindex, follow' : 'index, follow',
+      structuredData: [
+        breadcrumbStructuredData([
+          { name: 'Gamintojų katalogas', path: '/' },
+          { name: title, path },
+        ]),
+        faqStructuredData(faq),
+        itemListStructuredData(records),
+      ],
+    });
+  };
+  updateMetadata();
 
   const relatedCities = category
     ? eligibleCities
@@ -1258,8 +1573,9 @@ function renderLandingPage(slug: string): void {
       <section class="landing-results" aria-labelledby="landing-results-title">
         <div class="section-heading">
           <h2 id="landing-results-title">Kandidatai iš versijuoto šaltinių rinkinio</h2>
-          <p>Įrašai pateikiami abėcėlės tvarka. Prieš priimdami sprendimą patikrinkite tapatybę, pasiūlymo apimtį, kainą ir terminus.</p>
+          <p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p>
         </div>
+        <div class="landing-filter-controls" id="landing-filter-controls"></div>
         <div class="manufacturer-list" id="landing-manufacturer-list"></div>
       </section>
       ${renderFaq(faq)}
@@ -1274,8 +1590,7 @@ function renderLandingPage(slug: string): void {
     ${renderFooter()}
   `;
 
-  const list = document.querySelector<HTMLElement>('#landing-manufacturer-list');
-  records.forEach((record) => list?.append(createManufacturerCard(record)));
+  initializeLandingFilters(records, updateMetadata);
 }
 
 function renderRequestPage(): void {
@@ -2131,9 +2446,12 @@ function renderProfile(record: Manufacturer | undefined): void {
   );
   details.append(detailsHeading, facts);
 
+  const registryVerification = createRegistryVerificationSection(record);
   const publicDetails = createPublicDetailsSection(record);
   const profileLandings = createProfileLandingSection(record);
-  article.append(hero, note, details);
+  article.append(hero);
+  if (registryVerification) article.append(registryVerification);
+  article.append(note, details);
   if (publicDetails) article.append(publicDetails);
   if (profileLandings) article.append(profileLandings);
   article.append(createSourceSection(record), createCorrectionSection(record));

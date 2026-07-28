@@ -56,6 +56,8 @@
     --line: oklch(0.86 0.018 158);
     --warning-bg: oklch(0.94 0.04 78);
     --warning-ink: oklch(0.35 0.065 66);
+    --registry-bg: oklch(0.94 0.035 225);
+    --registry-ink: oklch(0.34 0.085 225);
     --critical: oklch(0.49 0.17 27);
     --critical-bg: oklch(0.965 0.025 27);
     --focus: oklch(0.61 0.15 247);
@@ -396,8 +398,19 @@
 
   .filter-grid {
     display: grid;
-    grid-template-columns: minmax(230px, 1.35fr) repeat(3, minmax(170px, 1fr));
     gap: 0.85rem;
+  }
+
+  .filter-grid--primary {
+    grid-template-columns: minmax(230px, 1.35fr) repeat(3, minmax(170px, 1fr));
+  }
+
+  .filter-grid--advanced {
+    grid-template-columns: repeat(2, minmax(180px, 1fr)) minmax(290px, 1.35fr);
+  }
+
+  .filter-grid--landing {
+    grid-template-columns: minmax(230px, 1.2fr) repeat(2, minmax(170px, 1fr)) minmax(290px, 1.35fr);
   }
 
   .filter-field {
@@ -465,6 +478,59 @@
   .filter-field select:focus {
     border-color: var(--focus);
     box-shadow: 0 0 0 3px oklch(0.61 0.15 247 / 0.18);
+  }
+
+  .filter-toggle {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.62rem 0.78rem;
+    background: var(--surface);
+    border: 1px solid oklch(0.72 0.025 158);
+    border-radius: 9px;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  }
+
+  .filter-toggle:hover,
+  .filter-toggle:has(input:checked) {
+    border-color: var(--pine);
+    background: oklch(0.975 0.012 158);
+  }
+
+  .filter-toggle:has(input:focus-visible) {
+    border-color: var(--focus);
+    box-shadow: 0 0 0 3px oklch(0.61 0.15 247 / 0.18);
+  }
+
+  .filter-toggle input {
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+    flex: 0 0 auto;
+    margin: 0;
+    accent-color: var(--pine-strong);
+    cursor: pointer;
+  }
+
+  .filter-toggle label {
+    min-width: 0;
+    min-height: 44px;
+    display: grid;
+    align-content: center;
+    gap: 0.12rem;
+    cursor: pointer;
+  }
+
+  .filter-toggle strong {
+    font-size: 0.83rem;
+    line-height: 1.3;
+  }
+
+  .filter-toggle span {
+    color: var(--ink-soft);
+    font-size: 0.74rem;
+    line-height: 1.35;
   }
 
   .filter-actions {
@@ -561,6 +627,45 @@
   .legal-name {
     color: var(--ink-soft);
     font-size: 0.87rem;
+  }
+
+  .registry-card-status {
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.2rem 0.38rem;
+    padding: 0.38rem 0.58rem;
+    color: var(--registry-ink);
+    background: var(--registry-bg);
+    border-radius: 6px;
+    font-size: 0.76rem;
+    line-height: 1.35;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .registry-card-status strong {
+    font-weight: 820;
+  }
+
+  .registry-check-mark {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    color: var(--surface);
+    background: var(--registry-ink);
+    border-radius: 50%;
+  }
+
+  .registry-check-mark::after {
+    content: "";
+    width: 7px;
+    height: 4px;
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-1px) rotate(-45deg);
   }
 
   .location-line {
@@ -837,6 +942,24 @@
     border-top: 1px solid var(--line);
   }
 
+  .landing-filter-controls {
+    padding: clamp(1rem, 3vw, 1.45rem);
+    background: oklch(0.975 0.01 158);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .landing-filter-count {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .landing-empty-state {
+    width: 100%;
+    max-width: none;
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+
   .landing-faq dl {
     display: grid;
     border-top: 1px solid var(--line);
@@ -1024,6 +1147,46 @@
     color: var(--pine-strong);
     font-size: 0.9rem;
     font-weight: 800;
+  }
+
+  .profile-registry-status {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0.9rem;
+    padding: 1.15rem clamp(1.5rem, 5vw, 3.5rem);
+    color: var(--registry-ink);
+    background: var(--registry-bg);
+    border-bottom: 1px solid oklch(0.82 0.04 225);
+  }
+
+  .profile-registry-status > div {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .profile-registry-status h2 {
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .profile-registry-status p {
+    max-width: 72ch;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .registry-check-mark--large {
+    width: 24px;
+    height: 24px;
+    margin-top: 0.05rem;
+  }
+
+  .registry-check-mark--large::after {
+    width: 9px;
+    height: 5px;
   }
 
   .profile-note {
