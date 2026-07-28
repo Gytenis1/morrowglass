@@ -14,6 +14,11 @@ const [manufacturers, landingConfig, baseHtml] = await Promise.all([
   readFile(join(rootDir, 'data/seo-landings.json'), 'utf8').then(JSON.parse),
   readFile(join(publicDir, 'index.html'), 'utf8'),
 ]);
+const logoAssetUrl = baseHtml.match(/<link rel="icon" type="image\/svg\+xml" href="([^"]+)" \/>/)?.[1];
+
+if (!logoAssetUrl) {
+  throw new Error('Could not resolve the built Baldininkai logo asset URL.');
+}
 
 const guideArticles = [
   {
@@ -434,7 +439,7 @@ ${[...siteStructuredData(), ...structuredData].map((data) => `    <script type="
 }
 
 function header(active = 'directory') {
-  return `<header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="Baldai pagal užsakymą Lietuvoje – pradžia"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span></a><nav aria-label="Pagrindinė navigacija"><a href="/"${active === 'directory' ? ' aria-current="page"' : ''}>Katalogas</a><a href="/gauti-pasiulymus"${active === 'request' ? ' aria-current="page"' : ''}>Projekto užklausa</a><a href="/gidas"${active === 'guide' ? ' aria-current="page"' : ''}>Pirkėjo gidas</a></nav></div></header>`;
+  return `<header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="Baldai pagal užsakymą Lietuvoje – pradžia"><span class="brand-mark" aria-hidden="true"><img src="${logoAssetUrl}" alt="" width="44" height="44" /></span><span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span></a><nav aria-label="Pagrindinė navigacija"><a href="/"${active === 'directory' ? ' aria-current="page"' : ''}>Katalogas</a><a href="/gauti-pasiulymus"${active === 'request' ? ' aria-current="page"' : ''}>Projekto užklausa</a><a href="/gidas"${active === 'guide' ? ' aria-current="page"' : ''}>Pirkėjo gidas</a></nav></div></header>`;
 }
 
 function footer() {

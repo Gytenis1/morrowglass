@@ -1,5 +1,6 @@
 import type { RecordModel } from 'pocketbase';
 import './styles.css';
+import baldininkaiLogoUrl from './assets/baldininkai-logo.svg';
 import { pb } from './pocketbase';
 import {
   CATEGORY_LANDINGS,
@@ -534,7 +535,9 @@ function renderHeader(active: HeaderSection): string {
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" data-internal-link="true" aria-label="Baldai pagal užsakymą Lietuvoje – pradžia">
-          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="${baldininkaiLogoUrl}" alt="" width="44" height="44" />
+          </span>
           <span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span>
         </a>
         <nav aria-label="Pagrindinė navigacija">
