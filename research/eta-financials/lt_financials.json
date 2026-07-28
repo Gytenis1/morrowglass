@@ -1,0 +1,1177 @@
+[
+  {
+    "legal_name": "UAB Taumona",
+    "country": "LT",
+    "company_code": "167206670",
+    "city": "Mažeikiai",
+    "sector": "Virtuvės baldai; Spintos ir įmontuojami baldai; Miegamojo ir vonios baldai; Biuro ir komerciniai baldai",
+    "employees_latest": 109,
+    "employees_trend": "117 (2021-07-28) to 109 (2026-07-22); -6.8%",
+    "turnover_by_year": {
+      "2021": 5482976,
+      "2022": 5954214,
+      "2023": 5776219,
+      "2024": 6988559,
+      "2025": 8046582
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": -333715,
+      "2022": 151098,
+      "2023": 45877,
+      "2024": 77763,
+      "2025": 727
+    },
+    "net_profit_by_year": {
+      "2021": -333715,
+      "2022": 151098,
+      "2023": 45877,
+      "2024": 77763,
+      "2025": 16279
+    },
+    "estimated_payroll_cost_eur": 3222718,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 109 insured employees × €2,421.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 724192,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/taumona/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/taumona/",
+      "https://rekvizitai.vz.lt/en/company/taumona/turnover/",
+      "https://rekvizitai.vz.lt/en/company/taumona/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Diforma",
+    "country": "LT",
+    "company_code": "159848262",
+    "city": "Kumpiai, Kaunas d.",
+    "sector": "Virtuvės baldai; Spintos ir įmontuojami baldai; Miegamojo ir vonios baldai; Biuro ir komerciniai baldai",
+    "employees_latest": 43,
+    "employees_trend": "43 (2021-09-02) to 43 (2026-07-02); +0.0%",
+    "turnover_by_year": {
+      "2021": 6377967,
+      "2022": 6730636,
+      "2023": 6593870,
+      "2024": 6531590,
+      "2025": 6770096
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 368393,
+      "2022": 148019,
+      "2023": -43804,
+      "2024": 281487,
+      "2025": 230426
+    },
+    "net_profit_by_year": {
+      "2021": 353599,
+      "2022": 135102,
+      "2023": -38041,
+      "2024": 226912,
+      "2025": 156143
+    },
+    "estimated_payroll_cost_eur": 1530763,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 43 insured employees × €2,915.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 609309,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/diforma/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/diforma/",
+      "https://rekvizitai.vz.lt/en/company/diforma/turnover/",
+      "https://rekvizitai.vz.lt/en/company/diforma/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB FurnMaster",
+    "country": "LT",
+    "company_code": "302900446",
+    "city": "Marijampolė",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 216,
+    "employees_trend": "247 (2021-07-28) to 216 (2026-07-19); -12.6%",
+    "turnover_by_year": {
+      "2020": 15248437,
+      "2021": 28944657,
+      "2022": 20604552,
+      "2023": 21677700,
+      "2024": 23980277
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2020": 758143,
+      "2021": 1904740,
+      "2022": 903440,
+      "2023": 2101277,
+      "2024": 2771440
+    },
+    "net_profit_by_year": {
+      "2020": 674914,
+      "2021": 1630510,
+      "2022": 754303,
+      "2023": 1783526,
+      "2024": 2321848
+    },
+    "estimated_payroll_cost_eur": 5241464,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 216 insured employees × €1,987.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 2158225,
+    "ebitda_proxy_year": 2024,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/furnmaster/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/furnmaster/",
+      "https://rekvizitai.vz.lt/en/company/furnmaster/turnover/",
+      "https://rekvizitai.vz.lt/en/company/furnmaster/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Lyra group",
+    "country": "LT",
+    "company_code": "166635955",
+    "city": "Mažeikiai",
+    "sector": "Minkšti baldai pagal užsakymą",
+    "employees_latest": 428,
+    "employees_trend": "489 (2021-08-04) to 428 (2026-07-28); -12.5%",
+    "turnover_by_year": {
+      "2021": 28013031,
+      "2022": 24831048,
+      "2023": 24227729,
+      "2024": 26221062,
+      "2025": 27491111
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 1528080,
+      "2022": 1406985,
+      "2023": 1778150,
+      "2024": 2442468,
+      "2025": 928098
+    },
+    "net_profit_by_year": {
+      "2021": 1425062,
+      "2022": 1318162,
+      "2023": 1652718,
+      "2024": 2299539,
+      "2025": 910274
+    },
+    "estimated_payroll_cost_eur": 10443361,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 428 insured employees × €1,998.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 2474200,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/lyra_group/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/lyra_group/",
+      "https://rekvizitai.vz.lt/en/company/lyra_group/turnover/",
+      "https://rekvizitai.vz.lt/en/company/lyra_group/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Baltic Master",
+    "country": "LT",
+    "company_code": "121944712",
+    "city": "Vilnius",
+    "sector": "Metalo ir mišrių medžiagų baldai",
+    "employees_latest": 126,
+    "employees_trend": "172 (2021-07-28) to 126 (2026-07-14); -26.7%",
+    "turnover_by_year": {
+      "2020": 28000681,
+      "2021": 28195560,
+      "2022": 21310570,
+      "2023": 17251637,
+      "2024": 17276331
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2020": 499409,
+      "2021": 154725,
+      "2022": 579285,
+      "2023": 665339,
+      "2024": 531779
+    },
+    "net_profit_by_year": {
+      "2020": 417402,
+      "2021": 122469,
+      "2022": 482316,
+      "2023": 548613,
+      "2024": 444805
+    },
+    "estimated_payroll_cost_eur": 4143887,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 126 insured employees × €2,693.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 1554870,
+    "ebitda_proxy_year": 2024,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/baltic_master/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baltic_master/",
+      "https://rekvizitai.vz.lt/en/company/baltic_master/turnover/",
+      "https://rekvizitai.vz.lt/en/company/baltic_master/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Solid Supply",
+    "country": "LT",
+    "company_code": "302250870",
+    "city": "Vilnius",
+    "sector": "HoReCa ir prekybos baldai",
+    "employees_latest": 40,
+    "employees_trend": "42 (2021-08-11) to 40 (2026-06-21); -4.8%",
+    "turnover_by_year": {
+      "2021": 6408893,
+      "2022": 6522024,
+      "2023": 8036681,
+      "2024": 10065794,
+      "2025": 9741503
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": -744687,
+      "2022": 383184,
+      "2023": 387988,
+      "2024": 489882,
+      "2025": 143304
+    },
+    "net_profit_by_year": {
+      "2021": -744687,
+      "2022": 364491,
+      "2023": 363168,
+      "2024": 458651,
+      "2025": 133112
+    },
+    "estimated_payroll_cost_eur": 3017928,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 40 insured employees × €6,178.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 876735,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/uab_solid_supply/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_solid_supply/",
+      "https://rekvizitai.vz.lt/en/company/uab_solid_supply/turnover/",
+      "https://rekvizitai.vz.lt/en/company/uab_solid_supply/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB TG baldai",
+    "country": "LT",
+    "company_code": "302839107",
+    "city": "Kaunas",
+    "sector": "Virtuvės baldai",
+    "employees_latest": 27,
+    "employees_trend": "30 (2021-10-19) to 27 (2026-07-24); -10.0%",
+    "turnover_by_year": {
+      "2021": 3019961,
+      "2022": 3522755,
+      "2023": 3922052,
+      "2024": 3309644,
+      "2025": 3237512
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 22221,
+      "2022": 31536,
+      "2023": 51290,
+      "2024": 79713,
+      "2025": 81067
+    },
+    "net_profit_by_year": {
+      "2021": 21316,
+      "2022": 27603,
+      "2023": 43575,
+      "2024": 67773,
+      "2025": 68103
+    },
+    "estimated_payroll_cost_eur": 743552,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 27 insured employees × €2,255.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 291376,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/tg_baldai/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/tg_baldai/",
+      "https://rekvizitai.vz.lt/en/company/tg_baldai/turnover/",
+      "https://rekvizitai.vz.lt/en/company/tg_baldai/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Alantas",
+    "country": "LT",
+    "company_code": "179466996",
+    "city": "Tauragė",
+    "sector": "Virtuvės baldai; Spintos ir įmontuojami baldai; Miegamojo ir vonios baldai; Biuro ir komerciniai baldai; HoReCa ir prekybos baldai",
+    "employees_latest": 62,
+    "employees_trend": "73 (2021-08-24) to 62 (2026-07-18); -15.1%",
+    "turnover_by_year": {
+      "2021": 3124886,
+      "2022": 3196861,
+      "2023": 2714010,
+      "2024": 2945107,
+      "2025": 3172568
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 26450,
+      "2022": 13575,
+      "2023": 45991,
+      "2024": -164158,
+      "2025": -24298
+    },
+    "net_profit_by_year": {
+      "2021": 25262,
+      "2022": 12412,
+      "2023": 43930,
+      "2024": -164158,
+      "2025": -24298
+    },
+    "estimated_payroll_cost_eur": 1583997,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 62 insured employees × €2,092.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 285531,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/alantas/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/alantas/",
+      "https://rekvizitai.vz.lt/en/company/alantas/turnover/",
+      "https://rekvizitai.vz.lt/en/company/alantas/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB IF Concept",
+    "country": "LT",
+    "company_code": "148504872",
+    "city": "Sutkūnai, Panevėžys r.",
+    "sector": "Biuro ir komerciniai baldai",
+    "employees_latest": 36,
+    "employees_trend": "26 (2021-08-11) to 36 (2026-07-08); +38.5%",
+    "turnover_by_year": {
+      "2021": 2031969,
+      "2022": 2278130,
+      "2023": 2502681,
+      "2024": 2482357,
+      "2025": 2641077
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 183361,
+      "2022": 178973,
+      "2023": 334617,
+      "2024": 207111,
+      "2025": 278233
+    },
+    "net_profit_by_year": {
+      "2021": 155690,
+      "2022": 151810,
+      "2023": 284244,
+      "2024": 175592,
+      "2025": 233191
+    },
+    "estimated_payroll_cost_eur": 661668,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 36 insured employees × €1,505.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 237697,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/audrelina/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/audrelina/",
+      "https://rekvizitai.vz.lt/en/company/audrelina/turnover/",
+      "https://rekvizitai.vz.lt/en/company/audrelina/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Eigida",
+    "country": "LT",
+    "company_code": "300655610",
+    "city": "Kaunas",
+    "sector": "Biuro ir komerciniai baldai",
+    "employees_latest": 33,
+    "employees_trend": "33 (2021-07-28) to 33 (2026-07-15); +0.0%",
+    "turnover_by_year": {
+      "2021": 1684009,
+      "2022": 2433543,
+      "2023": 2897365,
+      "2024": 2627169,
+      "2025": 2791837
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 27845,
+      "2022": 116742,
+      "2023": 274040,
+      "2024": 188690,
+      "2025": 19005
+    },
+    "net_profit_by_year": {
+      "2021": 26520,
+      "2022": 116742,
+      "2023": 261642,
+      "2024": 181323,
+      "2025": 17227
+    },
+    "estimated_payroll_cost_eur": 1004299,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 33 insured employees × €2,492.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 251265,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/eigida/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/eigida/",
+      "https://rekvizitai.vz.lt/en/company/eigida/turnover/",
+      "https://rekvizitai.vz.lt/en/company/eigida/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Alsotana",
+    "country": "LT",
+    "company_code": "150163314",
+    "city": "Alytus",
+    "sector": "Biuro ir komerciniai baldai; HoReCa ir prekybos baldai",
+    "employees_latest": 27,
+    "employees_trend": "44 (2021-08-12) to 27 (2026-05-05); -38.6%",
+    "turnover_by_year": {
+      "2021": 3577498,
+      "2022": 3421355,
+      "2023": 2715691,
+      "2024": 4108811,
+      "2025": 2528911
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 2772,
+      "2022": 5777,
+      "2023": 76492,
+      "2024": 39042,
+      "2025": 21531
+    },
+    "net_profit_by_year": {
+      "2021": 1359,
+      "2022": 3163,
+      "2023": 61540,
+      "2024": 24832,
+      "2025": 16595
+    },
+    "estimated_payroll_cost_eur": 631442,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 27 insured employees × €1,915.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 227602,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/alsotana/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/alsotana/",
+      "https://rekvizitai.vz.lt/en/company/alsotana/turnover/",
+      "https://rekvizitai.vz.lt/en/company/alsotana/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Venta LT",
+    "country": "LT",
+    "company_code": "302249074",
+    "city": "Šiauliai",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 95,
+    "employees_trend": "112 (2021-08-03) to 95 (2026-04-26); -15.2%",
+    "turnover_by_year": {
+      "2021": 4909472,
+      "2022": 5720622,
+      "2023": 4632833,
+      "2024": 4575488,
+      "2025": 4516253
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 193668,
+      "2022": 210004,
+      "2023": 117831,
+      "2024": 113420,
+      "2025": 27689
+    },
+    "net_profit_by_year": {
+      "2021": 163285,
+      "2022": 179297,
+      "2023": 99911,
+      "2024": 96353,
+      "2025": 22948
+    },
+    "estimated_payroll_cost_eur": 2242624,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 95 insured employees × €1,933.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 406463,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/venta_lt/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/venta_lt/",
+      "https://rekvizitai.vz.lt/en/company/venta_lt/turnover/",
+      "https://rekvizitai.vz.lt/en/company/venta_lt/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Domo verslas",
+    "country": "LT",
+    "company_code": "302427986",
+    "city": "Šiauliai",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 36,
+    "employees_trend": "23 (2021-08-03) to 36 (2026-07-03); +56.5%",
+    "turnover_by_year": {
+      "2021": 2001159,
+      "2022": 2357765,
+      "2023": 2803862,
+      "2024": 2534197,
+      "2025": 4373642
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 245483,
+      "2022": 196856,
+      "2023": 245035,
+      "2024": 168238,
+      "2025": 332668
+    },
+    "net_profit_by_year": {
+      "2021": 208752,
+      "2022": 166439,
+      "2023": 208421,
+      "2024": 144414,
+      "2025": 286595
+    },
+    "estimated_payroll_cost_eur": 785208,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 36 insured employees × €1,786.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 393628,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/uab_domo_verslas/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_domo_verslas/",
+      "https://rekvizitai.vz.lt/en/company/uab_domo_verslas/turnover/",
+      "https://rekvizitai.vz.lt/en/company/uab_domo_verslas/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Virūna",
+    "country": "LT",
+    "company_code": "134208094",
+    "city": "Vilnius",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 60,
+    "employees_trend": "58 (2021-08-05) to 60 (2026-07-09); +3.4%",
+    "turnover_by_year": {
+      "2021": 2732121,
+      "2022": 3146016,
+      "2023": 3705513,
+      "2024": 3653125,
+      "2025": 3902558
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 16727,
+      "2022": 11007,
+      "2023": 129275,
+      "2024": 298748,
+      "2025": 49626
+    },
+    "net_profit_by_year": {
+      "2021": 12864,
+      "2022": 8876,
+      "2023": 107384,
+      "2024": 269830,
+      "2025": 46479
+    },
+    "estimated_payroll_cost_eur": 1811343,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 60 insured employees × €2,472.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 351230,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/viruna/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/viruna/",
+      "https://rekvizitai.vz.lt/en/company/viruna/turnover/",
+      "https://rekvizitai.vz.lt/en/company/viruna/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Surgėdė",
+    "country": "LT",
+    "company_code": "149887466",
+    "city": "Alytus",
+    "sector": "Virtuvės baldai; Miegamojo ir vonios baldai",
+    "employees_latest": 36,
+    "employees_trend": "32 (2021-08-05) to 36 (2026-07-28); +12.5%",
+    "turnover_by_year": {
+      "2021": 1368366,
+      "2022": 1849402,
+      "2023": 1765326,
+      "2024": 2186546,
+      "2025": 3430455
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 64313,
+      "2022": 157536,
+      "2023": 88373,
+      "2024": 246648,
+      "2025": 686661
+    },
+    "net_profit_by_year": {
+      "2021": 54518,
+      "2022": 134552,
+      "2023": 87658,
+      "2024": 214359,
+      "2025": 609170
+    },
+    "estimated_payroll_cost_eur": 1099995,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 36 insured employees × €2,502.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 308741,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/uzdaroji_akcine_bendrove_surgede/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uzdaroji_akcine_bendrove_surgede/",
+      "https://rekvizitai.vz.lt/en/company/uzdaroji_akcine_bendrove_surgede/turnover/",
+      "https://rekvizitai.vz.lt/en/company/uzdaroji_akcine_bendrove_surgede/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Rejben",
+    "country": "LT",
+    "company_code": "125962387",
+    "city": "Vilnius",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 73,
+    "employees_trend": "78 (2021-07-28) to 73 (2026-07-22); -6.4%",
+    "turnover_by_year": {
+      "2021": 5126132,
+      "2022": 5724445,
+      "2023": 5039113,
+      "2024": 5482712,
+      "2025": 5627349
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 277000,
+      "2022": 278130,
+      "2023": 126841,
+      "2024": 70967,
+      "2025": 85486
+    },
+    "net_profit_by_year": {
+      "2021": 277000,
+      "2022": 236216,
+      "2023": 103547,
+      "2024": 70967,
+      "2025": 85486
+    },
+    "estimated_payroll_cost_eur": 1280201,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 73 insured employees × €1,436.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 506461,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/rejben/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/rejben/",
+      "https://rekvizitai.vz.lt/en/company/rejben/turnover/",
+      "https://rekvizitai.vz.lt/en/company/rejben/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Ralko",
+    "country": "LT",
+    "company_code": "300110503",
+    "city": "Vilnius",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 12,
+    "employees_trend": "14 (2023-05-04) to 12 (2026-07-02); -14.3%",
+    "turnover_by_year": {
+      "2021": 1357257,
+      "2022": 1531731,
+      "2023": 1827542,
+      "2024": 1911513,
+      "2025": 2186400
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 154785,
+      "2022": 136465,
+      "2023": 144786,
+      "2024": 133049,
+      "2025": 247638
+    },
+    "net_profit_by_year": {
+      "2021": 131237,
+      "2022": 115304,
+      "2023": 122017,
+      "2024": 112412,
+      "2025": 216390
+    },
+    "estimated_payroll_cost_eur": 297934,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 12 insured employees × €2,033.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 196776,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/ralko/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ralko/",
+      "https://rekvizitai.vz.lt/en/company/ralko/turnover/",
+      "https://rekvizitai.vz.lt/en/company/ralko/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Bengita",
+    "country": "LT",
+    "company_code": "302536455",
+    "city": "Panevėžys",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 18,
+    "employees_trend": "16 (2023-04-13) to 18 (2026-05-15); +12.5%",
+    "turnover_by_year": {
+      "2021": 1050127,
+      "2022": 1238775,
+      "2023": 1370475,
+      "2024": 1440421,
+      "2025": 1810026
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 29423,
+      "2022": 72929,
+      "2023": 29025,
+      "2024": 20448,
+      "2025": 147794
+    },
+    "net_profit_by_year": {
+      "2021": 24971,
+      "2022": 61718,
+      "2023": 24446,
+      "2024": 17163,
+      "2025": 122682
+    },
+    "estimated_payroll_cost_eur": 355894,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 18 insured employees × €1,619.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 162902,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/uab_bengita/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_bengita/",
+      "https://rekvizitai.vz.lt/en/company/uab_bengita/turnover/",
+      "https://rekvizitai.vz.lt/en/company/uab_bengita/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Dominati",
+    "country": "LT",
+    "company_code": "302097549",
+    "city": "Panevėžys",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 3,
+    "employees_trend": "19 (2021-08-01) to 3 (2026-06-13); -84.2%",
+    "turnover_by_year": {
+      "2021": 423370,
+      "2022": 434511,
+      "2023": 684829,
+      "2024": 521195,
+      "2025": 1707412
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 1036,
+      "2022": 2223,
+      "2023": 27398,
+      "2024": 26092,
+      "2025": 143618
+    },
+    "net_profit_by_year": {
+      "2021": 869,
+      "2022": 1890,
+      "2023": 27398,
+      "2024": 26092,
+      "2025": 143618
+    },
+    "estimated_payroll_cost_eur": 41876,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 3 insured employees × €1,143.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 153667,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/baltic_metalglass/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baltic_metalglass/",
+      "https://rekvizitai.vz.lt/en/company/baltic_metalglass/turnover/",
+      "https://rekvizitai.vz.lt/en/company/baltic_metalglass/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Resize Design",
+    "country": "LT",
+    "company_code": "305529957",
+    "city": "Kaunas",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 5,
+    "employees_trend": "5 (2021-10-19) to 5 (2026-01-07); +0.0%",
+    "turnover_by_year": {
+      "2021": 882372,
+      "2022": 1482635,
+      "2023": 1168929,
+      "2024": 1011142,
+      "2025": 1531129
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": -25828,
+      "2022": 31666,
+      "2023": 19183,
+      "2024": 4594,
+      "2025": 112317
+    },
+    "net_profit_by_year": {
+      "2021": -25828,
+      "2022": 26639,
+      "2023": 15976,
+      "2024": 3905,
+      "2025": 94181
+    },
+    "estimated_payroll_cost_eur": 220617,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 5 insured employees × €3,613.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 137802,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/resize_design/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/resize_design/",
+      "https://rekvizitai.vz.lt/en/company/resize_design/turnover/",
+      "https://rekvizitai.vz.lt/en/company/resize_design/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Currus",
+    "country": "LT",
+    "company_code": "135249464",
+    "city": "Ramučiai/Kaunas",
+    "sector": "Virtuvės baldai; Spintos ir įmontuojami baldai; Miegamojo ir vonios baldai; Biuro ir komerciniai baldai; HoReCa ir prekybos baldai",
+    "employees_latest": 12,
+    "employees_trend": "12 (2021-11-04) to 12 (2026-02-20); +0.0%",
+    "turnover_by_year": {
+      "2020": 868879,
+      "2021": 1012542,
+      "2022": 1357292,
+      "2023": 1446970,
+      "2024": 1468951
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2020": 36762,
+      "2021": 26057,
+      "2022": 86456,
+      "2023": 132348,
+      "2024": 128823
+    },
+    "net_profit_by_year": {
+      "2020": 30692,
+      "2021": 20258,
+      "2022": 72540,
+      "2023": 109927,
+      "2024": 108654
+    },
+    "estimated_payroll_cost_eur": 211177,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 12 insured employees × €1,441.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 132206,
+    "ebitda_proxy_year": 2024,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/currus/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/currus/",
+      "https://rekvizitai.vz.lt/en/company/currus/turnover/",
+      "https://rekvizitai.vz.lt/en/company/currus/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Archiformus",
+    "country": "LT",
+    "company_code": "303419469",
+    "city": "Vilnius",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 2,
+    "employees_trend": "2 (2016-02-02) to 2 (2025-08-17); +0.0%",
+    "turnover_by_year": {
+      "2021": 810258,
+      "2022": 963682,
+      "2023": 1434184,
+      "2024": 1628877,
+      "2025": 1436712
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 71455,
+      "2022": 221084,
+      "2023": 222584,
+      "2024": 250542,
+      "2025": 248956
+    },
+    "net_profit_by_year": {
+      "2021": 60385,
+      "2022": 187677,
+      "2023": 189049,
+      "2024": 212887,
+      "2025": 208843
+    },
+    "estimated_payroll_cost_eur": null,
+    "estimated_payroll_cost_formula": "Not estimated: free page did not expose both current insured-employee count and average gross salary.",
+    "ebitda_proxy_eur": 129304,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/archiformus/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/archiformus/",
+      "https://rekvizitai.vz.lt/en/company/archiformus/turnover/",
+      "https://rekvizitai.vz.lt/en/company/archiformus/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Estubos baldai",
+    "country": "LT",
+    "company_code": "305464737",
+    "city": "Klaipėda",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 30,
+    "employees_trend": "20 (2021-08-05) to 30 (2026-07-14); +50.0%",
+    "turnover_by_year": {
+      "2021": 102494,
+      "2022": 829549,
+      "2023": 1166123,
+      "2024": 1234925,
+      "2025": 1346949
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": -117332,
+      "2022": 13896,
+      "2023": 18104,
+      "2024": 17443,
+      "2025": 17776
+    },
+    "net_profit_by_year": {
+      "2021": -117332,
+      "2022": 13270,
+      "2023": 17283,
+      "2024": 16636,
+      "2025": 16904
+    },
+    "estimated_payroll_cost_eur": 608910,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 30 insured employees × €1,662.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 121225,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/estubos_baldai/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/estubos_baldai/",
+      "https://rekvizitai.vz.lt/en/company/estubos_baldai/turnover/",
+      "https://rekvizitai.vz.lt/en/company/estubos_baldai/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Protingi baldai",
+    "country": "LT",
+    "company_code": "302652602",
+    "city": "Vilnius",
+    "sector": "Virtuvės baldai; Spintos ir įmontuojami baldai; Miegamojo ir vonios baldai",
+    "employees_latest": 26,
+    "employees_trend": "11 (2021-10-03) to 26 (2026-07-24); +136.4%",
+    "turnover_by_year": {
+      "2021": 417939,
+      "2022": 830689,
+      "2023": 978060,
+      "2024": 1067151,
+      "2025": 1215559
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 18728,
+      "2022": 18050,
+      "2023": 17090,
+      "2024": 8832,
+      "2025": -7098
+    },
+    "net_profit_by_year": {
+      "2021": 15909,
+      "2022": 15307,
+      "2023": 14522,
+      "2024": 7161,
+      "2025": -7098
+    },
+    "estimated_payroll_cost_eur": 408016,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 26 insured employees × €1,285.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 109400,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/uab_protingi_baldai/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_protingi_baldai/",
+      "https://rekvizitai.vz.lt/en/company/uab_protingi_baldai/turnover/",
+      "https://rekvizitai.vz.lt/en/company/uab_protingi_baldai/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  },
+  {
+    "legal_name": "UAB Uosis",
+    "country": "LT",
+    "company_code": "176520937",
+    "city": "Utena",
+    "sector": "Kiti nestandartiniai baldai",
+    "employees_latest": 15,
+    "employees_trend": "17 (2021-08-14) to 15 (2026-04-25); -11.8%",
+    "turnover_by_year": {
+      "2021": 1064763,
+      "2022": 1166946,
+      "2023": 806289,
+      "2024": 1235190,
+      "2025": 1198179
+    },
+    "operating_profit_by_year": {},
+    "depreciation_amortisation_by_year": {},
+    "profit_before_tax_by_year": {
+      "2021": 99934,
+      "2022": 31839,
+      "2023": 7896,
+      "2024": 19321,
+      "2025": 25459
+    },
+    "net_profit_by_year": {
+      "2021": 84902,
+      "2022": 27063,
+      "2023": 5386,
+      "2024": 19321,
+      "2025": 21372
+    },
+    "estimated_payroll_cost_eur": 244187,
+    "estimated_payroll_cost_formula": "Estimated annual employer payroll = 15 insured employees × €1,333.00 average monthly gross salary × 12 × 1.0177 employer social-insurance factor (Sodra data displayed by Rekvizitai).",
+    "ebitda_proxy_eur": 107836,
+    "ebitda_proxy_year": 2025,
+    "ebitda_proxy_status": "estimated",
+    "ebitda_proxy_formula": "Estimated EBITDA proxy = latest reported turnover × 9%; sensitivity range = turnover × 6% to 12%. D&A and operating profit were not disclosed in the free source.",
+    "ebitda_margin_pct": 9.0,
+    "source_url": "https://rekvizitai.vz.lt/en/company/uosis/",
+    "supporting_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uosis/",
+      "https://rekvizitai.vz.lt/en/company/uosis/turnover/",
+      "https://rekvizitai.vz.lt/en/company/uosis/number-of-employees/"
+    ],
+    "source_notes": "Free Rekvizitai company financial page (annual turnover, profit-before-tax and net profit) plus its Sodra-backed insured-employee history. Rekvizitai is a public registry-derived data service; figures must be reconciled to signed Registry Centre statements before a transaction decision. Operating profit and D&A were not available on the retrieved free page, so no filed EBITDA bridge is claimed.",
+    "confidence": "medium"
+  }
+]
