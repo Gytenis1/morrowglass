@@ -256,6 +256,54 @@ onRecordAfterCreateSuccess((event) => {
   }
 }, "buyer_requests");
 
+onRecordAfterCreateSuccess((event) => {
+  event.next();
+
+  const record = event.record;
+  if (record.getString("mandate_fit") !== "high") {
+    return;
+  }
+
+  const eventsUrl = $os.getenv("SUPERNAUT_EVENTS_URL");
+  if (!eventsUrl) {
+    return;
+  }
+
+  try {
+    const oneLine = (value) => String(value || "").replace(/\s+/g, " ").trim();
+    const summary = [
+      "Company: " + oneLine(record.getString("company_name")),
+      "Country: " + oneLine(record.getString("country")),
+      "Sector: " + oneLine(record.getString("sector_tag")),
+      "Signal: " + oneLine(record.getString("signal_type")),
+      "Source: " + oneLine(record.getString("source_url")),
+      "Fit rationale: " + (oneLine(record.getString("fit_rationale")) || "Not provided"),
+    ].join("\n");
+    const response = $http.send({
+      method: "POST",
+      url: eventsUrl,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event: "deal_signal_high_fit_created",
+        subject: "New high-fit deal signal",
+        text: summary,
+      }),
+      timeout: 15,
+    });
+    if (response.statusCode < 200 || response.statusCode >= 300) {
+      throw new Error("SUPERNAUT_EVENTS_URL returned HTTP " + response.statusCode);
+    }
+  } catch (err) {
+    event.app.logger().error(
+      "High-fit deal signal dashboard notification failed",
+      "recordId",
+      record.id,
+      "error",
+      String(err)
+    );
+  }
+}, "deal_signals");
+
 onRecordEnrich((event) => {
   if (!event.requestInfo.auth || !event.requestInfo.auth.isSuperuser()) {
     event.record.hide(
