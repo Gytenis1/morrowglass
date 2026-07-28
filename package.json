@@ -9,9 +9,12 @@
     "pocketbase": "latest"
   },
   "devDependencies": {
+    "typescript": "latest",
     "vite": "latest",
-    "wrangler": "latest",
-    "typescript": "latest"
+    "wrangler": "4.107.1",
+    "@cloudflare/workerd-linux-64": "1.20260702.1",
+    "@rolldown/binding-linux-x64-musl": "1.1.4",
+    "lightningcss-linux-x64-musl": "1.32.0"
   },
   "name": "pocketbase-frontend",
   "private": true,
