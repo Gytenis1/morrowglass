@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lithuanian-eta-app.supernaut.to/sitemap.xml

@@ -123,3 +123,18 @@ Add future project-specific rules to this file.
 - Browser code must call the Fly.io PocketBase API URL explicitly through `VITE_POCKETBASE_URL`; do not assume same-origin API requests.
 - Do not mention PocketBase in user-facing frontend or landing page copy; it is an internal implementation tool.
 - Do not add user-facing links, buttons, or navigation to the PocketBase admin UI.
+
+## Frontend deploy: prebuilt assets are committed
+
+The generated static site in `public/` is committed to the repository and Wrangler no
+longer runs a build step during deployment (`wrangler.toml` has no `[build]` section).
+The Cloudflare deploy therefore only uploads `public/`.
+
+Before deploying a frontend or data change:
+
+1. Run `npm ci && npm run build` (install off the small repo volume if disk is tight,
+   e.g. copy the checkout to `/root/build`, build there, and copy `public/` back).
+2. Commit the regenerated `public/` tree together with the source change.
+3. Deploy with `cloudflare_deploy_static_worker` (`managedFE=true`).
+
+If `public/` is not regenerated, the live site keeps serving the previously committed build.
