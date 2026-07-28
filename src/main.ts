@@ -45,6 +45,15 @@ type Manufacturer = RecordModel & {
   verified_at: string | null;
 };
 
+type ManufacturerReview = RecordModel & {
+  manufacturer: string;
+  rating: number;
+  display_name: string;
+  review_text: string;
+  project_type?: string;
+  status: string;
+};
+
 type BrowseState = {
   query: string;
   category: string;
@@ -107,6 +116,8 @@ const FOUNDED_PERIOD_OPTIONS: FilterOption[] = [
 ];
 const PROJECT_BRIEF_MIN_LENGTH = 40;
 const PROJECT_BRIEF_MAX_LENGTH = 3000;
+const REVIEW_TEXT_MIN_LENGTH = 40;
+const REVIEW_TEXT_MAX_LENGTH = 2000;
 const projectTypeOptions = [
   'Virtuvės baldai',
   'Spintos ar įmontuojami baldai',
@@ -170,7 +181,7 @@ const guideArticles: GuideArticle[] = [
   {
     slug: 'medziagos-sutartis-avansas-garantija',
     title: 'Medžiagos, sutartis, avansas ir garantija: ką aptarti',
-    summary: 'Atsargus kontrolinis sąrašas Lietuvos pirkėjui prieš patvirtinant medžiagas, mokėjimą ir garantinio aptarnavimo tvarką.',
+    summary: 'LMDP ir MDF, faneruotės, masyvo, stalviršių, furnitūros, briaunų, sutarties ir garantinio aptarnavimo klausimai.',
     readingLabel: 'Dokumentai ir atsakomybės',
     featured: true,
   },
@@ -245,6 +256,39 @@ function escapeHtml(value: string): string {
 function textOrUnknown(value: string | null | undefined, unknown = 'Viešuose šaltiniuose nenurodyta.'): string {
   const normalizedValue = value?.trim();
   return normalizedValue || unknown;
+}
+
+function employeeBandLabel(value: string): string {
+  const labels: Record<string, string> = {
+    '0': 'Viešame darbuotojų skaičiaus įraše – 0 darbuotojų',
+    '1-9': 'Labai maža komanda – 1–9 darbuotojai',
+    '10-49': 'Nedidelė įmonė – 10–49 darbuotojai',
+    '50-249': 'Didesnė įmonė – 50–249 darbuotojai',
+    '250+': 'Didelė įmonė – 250 ar daugiau darbuotojų',
+  };
+  return labels[value] ?? `${value} darbuotojų (viešo šaltinio grupė)`;
+}
+
+function approvedReviewCountLabel(count: number): string {
+  const lastTwo = count % 100;
+  const last = count % 10;
+  if (lastTwo >= 11 && lastTwo <= 19) return `${count} patvirtintų atsiliepimų`;
+  if (last === 0) return `${count} patvirtintų atsiliepimų`;
+  if (last === 1) return `${count} patvirtintas atsiliepimas`;
+  return `${count} patvirtinti atsiliepimai`;
+}
+
+function formatReviewDate(value: string | null | undefined): { iso: string; label: string } | null {
+  const date = value ? new Date(value) : null;
+  if (!date || Number.isNaN(date.getTime())) return null;
+  return {
+    iso: date.toISOString(),
+    label: new Intl.DateTimeFormat('lt-LT', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(date),
+  };
 }
 
 function getRegistryCheckedDate(value: string | null | undefined): { iso: string; label: string } | null {
@@ -1040,6 +1084,39 @@ function createFactRow(term: string, detail: string): HTMLDivElement {
   return wrapper;
 }
 
+function createEmployeeSizeFactRow(record: Manufacturer, employeeCountBand: string): HTMLDivElement {
+  const wrapper = document.createElement('div');
+  const dt = document.createElement('dt');
+  dt.textContent = 'Įmonės dydžio signalas';
+  const dd = document.createElement('dd');
+  const label = document.createElement('strong');
+  label.textContent = employeeBandLabel(employeeCountBand);
+  const explanation = document.createElement('p');
+  explanation.className = 'fact-explanation';
+  explanation.textContent = 'Tai viešame įmonės įraše nurodyta darbuotojų skaičiaus grupė. Ji neparodo darbų kokybės, dabartinio užimtumo ar galimybės priimti jūsų projektą.';
+  dd.append(label, explanation);
+
+  const sources = asStringArray(record.public_details_source_urls).filter((url) => url.includes('rekvizitai.vz.lt'));
+  if (sources.length) {
+    const sourceList = document.createElement('ul');
+    sourceList.className = 'fact-source-list';
+    sources.forEach((url, index) => {
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = sources.length === 1 ? 'Atverti viešą darbuotojų skaičiaus šaltinį' : `Atverti viešą šaltinį ${index + 1}`;
+      item.append(link);
+      sourceList.append(item);
+    });
+    dd.append(sourceList);
+  }
+
+  wrapper.append(dt, dd);
+  return wrapper;
+}
+
 function createUrlFactRow(term: string, value: string | null | undefined): HTMLDivElement {
   const wrapper = document.createElement('div');
   const dt = document.createElement('dt');
@@ -1086,7 +1163,7 @@ function createPublicDetailsSection(record: Manufacturer): HTMLElement | null {
   if (streetAddress) rows.push(createFactRow('Registracijos adresas', streetAddress));
   if (postcode) rows.push(createFactRow('Pašto kodas', postcode));
   if (Number.isInteger(record.founded_year)) rows.push(createFactRow('Įkurta', String(record.founded_year)));
-  if (employeeCountBand) rows.push(createFactRow('Darbuotojų skaičiaus grupė', employeeCountBand));
+  if (employeeCountBand) rows.push(createEmployeeSizeFactRow(record, employeeCountBand));
   if (publicPhone) rows.push(createTelephoneFactRow('Viešas telefono numeris', publicPhone));
   if (!rows.length) return null;
 
@@ -1097,7 +1174,7 @@ function createPublicDetailsSection(record: Manufacturer): HTMLElement | null {
     <div class="section-heading">
       <p class="kicker">Viešuose šaltiniuose patikrinti faktai</p>
       <h2 id="profile-public-details-title">Vieši įmonės duomenys</h2>
-      <p>Rodomi tik tie įmonės duomenys, kuriems katalogo rinkinyje yra nurodytas viešas šaltinis.</p>
+      <p>Rodomi tik tie įmonės duomenys, kuriems katalogo rinkinyje yra nurodytas viešas šaltinis. Darbuotojų skaičiaus grupė yra orientacinis viešo įrašo signalas, o ne gamintojo kokybės ar prieinamumo įvertinimas.</p>
     </div>
   `;
   const facts = document.createElement('dl');
@@ -1194,6 +1271,299 @@ function createSourceSection(record: Manufacturer): HTMLElement {
   }
 
   section.append(heading, copy, list, date);
+  return section;
+}
+
+function createReviewSection(record: Manufacturer): HTMLElement {
+  const section = document.createElement('section');
+  section.className = 'profile-reviews';
+  section.setAttribute('aria-labelledby', 'profile-reviews-title');
+
+  const heading = document.createElement('div');
+  heading.className = 'section-heading';
+  heading.innerHTML = `
+    <p class="kicker">Pirkėjų patirtys</p>
+    <h2 id="profile-reviews-title">Atsiliepimai apie šį gamintoją</h2>
+    <p>Skelbiami tik moderavimo metu patvirtinti atsiliepimai. Jie yra asmeninės autorių patirtys, o ne katalogo patvirtinimas, kokybės sertifikatas ar rekomendacija.</p>
+  `;
+
+  const reviewContent = document.createElement('div');
+  reviewContent.className = 'review-content';
+  const reviewStatus = document.createElement('p');
+  reviewStatus.className = 'review-loading';
+  reviewStatus.setAttribute('role', 'status');
+  reviewStatus.setAttribute('aria-live', 'polite');
+  reviewStatus.textContent = 'Kraunami patvirtinti atsiliepimai…';
+  reviewContent.append(reviewStatus);
+
+  const formSection = document.createElement('div');
+  formSection.className = 'review-form-section';
+  const formHeading = document.createElement('div');
+  formHeading.className = 'review-form-heading';
+  const formTitle = document.createElement('h3');
+  formTitle.id = 'review-form-title';
+  formTitle.textContent = 'Pasidalykite naudinga patirtimi';
+  const formIntro = document.createElement('p');
+  formIntro.textContent = 'Atsiliepimas pirmiausia pateks moderavimui ir nebus paskelbtas iš karto. Rašykite apie konkretų projektą, susitarimų aiškumą, eigą ir rezultatą.';
+  formHeading.append(formTitle, formIntro);
+
+  const form = document.createElement('form');
+  form.className = 'review-form';
+  form.setAttribute('aria-labelledby', 'review-form-title');
+
+  const ratingField = document.createElement('div');
+  ratingField.className = 'form-field';
+  const ratingLabel = document.createElement('label');
+  ratingLabel.htmlFor = 'review-rating';
+  ratingLabel.textContent = 'Įvertinimas nuo 1 iki 5 *';
+  const ratingWrap = document.createElement('div');
+  ratingWrap.className = 'select-wrap';
+  const rating = document.createElement('select');
+  rating.id = 'review-rating';
+  rating.name = 'rating';
+  rating.required = true;
+  const ratingPlaceholder = document.createElement('option');
+  ratingPlaceholder.value = '';
+  ratingPlaceholder.textContent = 'Pasirinkite įvertinimą';
+  ratingPlaceholder.disabled = true;
+  ratingPlaceholder.selected = true;
+  rating.append(ratingPlaceholder);
+  [
+    [5, '5 – labai gerai'],
+    [4, '4 – gerai'],
+    [3, '3 – vidutiniškai'],
+    [2, '2 – prastai'],
+    [1, '1 – labai prastai'],
+  ].forEach(([value, label]) => {
+    const option = document.createElement('option');
+    option.value = String(value);
+    option.textContent = String(label);
+    rating.append(option);
+  });
+  ratingWrap.append(rating);
+  ratingField.append(ratingLabel, ratingWrap);
+
+  const nameField = document.createElement('div');
+  nameField.className = 'form-field';
+  const nameLabel = document.createElement('label');
+  nameLabel.htmlFor = 'review-display-name';
+  nameLabel.textContent = 'Rodomas vardas arba inicialai *';
+  const displayName = document.createElement('input');
+  displayName.id = 'review-display-name';
+  displayName.name = 'display_name';
+  displayName.type = 'text';
+  displayName.autocomplete = 'name';
+  displayName.minLength = 2;
+  displayName.maxLength = 80;
+  displayName.required = true;
+  nameField.append(nameLabel, displayName);
+
+  const projectField = document.createElement('div');
+  projectField.className = 'form-field form-field--wide';
+  const projectLabel = document.createElement('label');
+  projectLabel.htmlFor = 'review-project-type';
+  projectLabel.textContent = 'Projekto rūšis (nebūtina)';
+  const projectWrap = document.createElement('div');
+  projectWrap.className = 'select-wrap';
+  const projectType = document.createElement('select');
+  projectType.id = 'review-project-type';
+  projectType.name = 'project_type';
+  const projectPlaceholder = document.createElement('option');
+  projectPlaceholder.value = '';
+  projectPlaceholder.textContent = 'Nenurodyti';
+  projectType.append(projectPlaceholder);
+  projectTypeOptions.forEach((label) => {
+    const option = document.createElement('option');
+    option.value = label;
+    option.textContent = label;
+    projectType.append(option);
+  });
+  projectWrap.append(projectType);
+  projectField.append(projectLabel, projectWrap);
+
+  const commentField = document.createElement('div');
+  commentField.className = 'form-field form-field--wide';
+  const commentLabel = document.createElement('label');
+  commentLabel.htmlFor = 'review-text';
+  commentLabel.textContent = 'Naudingas komentaras *';
+  const commentHint = document.createElement('p');
+  commentHint.className = 'field-hint';
+  commentHint.id = 'review-text-hint';
+  commentHint.textContent = `Bent ${REVIEW_TEXT_MIN_LENGTH} ženklų. Nevartokite įžeidimų ir neskelbkite kitų žmonių asmens duomenų.`;
+  const comment = document.createElement('textarea');
+  comment.id = 'review-text';
+  comment.name = 'review_text';
+  comment.rows = 6;
+  comment.minLength = REVIEW_TEXT_MIN_LENGTH;
+  comment.maxLength = REVIEW_TEXT_MAX_LENGTH;
+  comment.required = true;
+  comment.setAttribute('aria-describedby', 'review-text-hint');
+  commentField.append(commentLabel, commentHint, comment);
+
+  const emailField = document.createElement('div');
+  emailField.className = 'form-field form-field--wide';
+  const emailLabel = document.createElement('label');
+  emailLabel.htmlFor = 'review-contact-email';
+  emailLabel.textContent = 'Kontaktinis el. paštas *';
+  const emailHint = document.createElement('p');
+  emailHint.className = 'field-hint';
+  emailHint.id = 'review-email-hint';
+  emailHint.textContent = 'Naudojamas tik moderavimui ar patikslinimui; viešai nerodomas.';
+  const email = document.createElement('input');
+  email.id = 'review-contact-email';
+  email.name = 'contact_email';
+  email.type = 'email';
+  email.inputMode = 'email';
+  email.autocomplete = 'email';
+  email.maxLength = 254;
+  email.required = true;
+  email.placeholder = 'vardas@pavyzdys.lt';
+  email.setAttribute('aria-describedby', 'review-email-hint');
+  emailField.append(emailLabel, emailHint, email);
+
+  const honeypotField = document.createElement('div');
+  honeypotField.className = 'honeypot-field';
+  honeypotField.setAttribute('aria-hidden', 'true');
+  const honeypotLabel = document.createElement('label');
+  honeypotLabel.htmlFor = 'review-website';
+  honeypotLabel.textContent = 'Interneto svetainė';
+  const honeypot = document.createElement('input');
+  honeypot.id = 'review-website';
+  honeypot.name = 'honeypot';
+  honeypot.type = 'text';
+  honeypot.autocomplete = 'off';
+  honeypot.tabIndex = -1;
+  honeypot.maxLength = 200;
+  honeypotField.append(honeypotLabel, honeypot);
+
+  const actions = document.createElement('div');
+  actions.className = 'review-submit form-field--wide';
+  const submit = document.createElement('button');
+  submit.className = 'primary-button';
+  submit.type = 'submit';
+  submit.textContent = 'Pateikti moderavimui';
+  const formStatus = document.createElement('p');
+  formStatus.className = 'form-status';
+  formStatus.setAttribute('role', 'status');
+  formStatus.setAttribute('aria-live', 'polite');
+  formStatus.tabIndex = -1;
+  actions.append(submit, formStatus);
+
+  form.append(ratingField, nameField, projectField, commentField, emailField, honeypotField, actions);
+  formSection.append(formHeading, form);
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    submit.disabled = true;
+    submit.setAttribute('aria-busy', 'true');
+    submit.textContent = 'Pateikiama…';
+    formStatus.className = 'form-status';
+    formStatus.setAttribute('role', 'status');
+    formStatus.textContent = 'Atsiliepimas siunčiamas moderavimui.';
+
+    try {
+      await pb.collection('manufacturer_reviews').create({
+        manufacturer: record.id,
+        rating: Number(rating.value),
+        display_name: displayName.value.trim(),
+        review_text: comment.value.trim(),
+        project_type: projectType.value,
+        contact_email: email.value.trim(),
+        honeypot: honeypot.value,
+        status: 'pending',
+      });
+      form.reset();
+      formStatus.className = 'form-status form-status--success';
+      formStatus.textContent = 'Ačiū. Atsiliepimas gautas ir bus paskelbtas tik tuo atveju, jei po moderavimo bus patvirtintas.';
+      formStatus.focus();
+    } catch (error) {
+      console.error('Nepavyko pateikti atsiliepimo moderavimui.', error);
+      formStatus.className = 'form-status form-status--error';
+      formStatus.setAttribute('role', 'alert');
+      formStatus.textContent = 'Atsiliepimo pateikti nepavyko. Patikrinkite laukus ir interneto ryšį, tada bandykite dar kartą.';
+      formStatus.focus();
+    } finally {
+      submit.disabled = false;
+      submit.removeAttribute('aria-busy');
+      submit.textContent = 'Pateikti moderavimui';
+    }
+  });
+
+  void (async () => {
+    try {
+      const reviews = await pb.collection('manufacturer_reviews').getFullList<ManufacturerReview>({
+        filter: pb.filter('manufacturer = {:manufacturer} && status = "approved"', { manufacturer: record.id }),
+        sort: '-created',
+      });
+      reviewContent.replaceChildren();
+      if (!reviews.length) {
+        const empty = document.createElement('p');
+        empty.className = 'review-empty';
+        empty.textContent = 'Patvirtintų atsiliepimų dar nėra. Suvestinė bus rodoma tik tada, kai bus bent vienas patvirtintas atsiliepimas.';
+        reviewContent.append(empty);
+        return;
+      }
+
+      const average = reviews.reduce((sum, review) => sum + Number(review.rating), 0) / reviews.length;
+      const summary = document.createElement('div');
+      summary.className = 'review-summary';
+      const score = document.createElement('strong');
+      score.textContent = `${average.toLocaleString('lt-LT', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} iš 5`;
+      const count = document.createElement('span');
+      count.textContent = approvedReviewCountLabel(reviews.length);
+      const caveat = document.createElement('p');
+      caveat.textContent = 'Suvestinė apskaičiuota tik iš šiame kataloge patvirtintų atsiliepimų.';
+      summary.append(score, count, caveat);
+
+      const list = document.createElement('ol');
+      list.className = 'review-list';
+      reviews.forEach((review) => {
+        const item = document.createElement('li');
+        const itemHeader = document.createElement('div');
+        itemHeader.className = 'review-item-header';
+        const reviewer = document.createElement('strong');
+        reviewer.textContent = textOrUnknown(review.display_name, 'Vardas nenurodytas');
+        const ratingText = document.createElement('span');
+        ratingText.className = 'review-rating';
+        ratingText.textContent = `Įvertinimas: ${Number(review.rating)} iš 5`;
+        itemHeader.append(reviewer, ratingText);
+
+        const meta = document.createElement('p');
+        meta.className = 'review-meta';
+        const project = review.project_type?.trim();
+        if (project) meta.append(project);
+        const date = formatReviewDate(review.created);
+        if (date) {
+          if (project) meta.append(' · ');
+          const time = document.createElement('time');
+          time.dateTime = date.iso;
+          time.textContent = date.label;
+          meta.append(time);
+        }
+
+        const text = document.createElement('p');
+        text.className = 'review-text';
+        text.textContent = review.review_text;
+        item.append(itemHeader);
+        if (meta.textContent) item.append(meta);
+        item.append(text);
+        list.append(item);
+      });
+      reviewContent.append(summary, list);
+    } catch (error) {
+      console.error('Nepavyko įkelti patvirtintų atsiliepimų.', error);
+      reviewContent.replaceChildren();
+      const failure = document.createElement('p');
+      failure.className = 'review-error';
+      failure.setAttribute('role', 'alert');
+      failure.textContent = 'Patvirtintų atsiliepimų šiuo metu įkelti nepavyko. Bandykite atnaujinti puslapį vėliau.';
+      reviewContent.append(failure);
+    }
+  })();
+
+  section.append(heading, reviewContent, formSection);
   return section;
 }
 
@@ -2454,7 +2824,7 @@ function renderProfile(record: Manufacturer | undefined): void {
   article.append(note, details);
   if (publicDetails) article.append(publicDetails);
   if (profileLandings) article.append(profileLandings);
-  article.append(createSourceSection(record), createCorrectionSection(record));
+  article.append(createReviewSection(record), createSourceSection(record), createCorrectionSection(record));
   main.append(back, article);
 }
 
@@ -2508,7 +2878,19 @@ function renderGuideHub(): void {
           <p class="kicker">Pirkėjo gidas</p>
           <h1 id="guide-title">Sprendimą grįskite palyginama informacija, ne vien pažadu</h1>
         </div>
-        <p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda patikrinti atranką, suprasti kainos ribas, valdyti projekto etapus ir aiškiai aptarti dokumentus.</p>
+        <p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda išversti techninius terminus į palyginamus klausimus apie medžiagas, kainos apimtį, projekto eigą ir pirkimo dokumentus.</p>
+      </section>
+      <section class="guide-start" aria-labelledby="guide-start-title">
+        <div class="guide-hub-heading">
+          <h2 id="guide-start-title">Pradėkite nuo sprendimo, kurį turite priimti</h2>
+          <p>Nereikia išmanyti baldų gamybos. Pasirinkite artimiausią klausimą ir pasižymėkite, ką paprašysite įrašyti į pasiūlymą.</p>
+        </div>
+        <ul class="guide-start-links">
+          <li><a href="/gidas/medziagos-sutartis-avansas-garantija/">Suprasti LMDP, MDF, medieną, stalviršius, furnitūrą ir briaunas <span aria-hidden="true">→</span></a></li>
+          <li><a href="/gidas/virtuves-baldu-kainos/">Patikrinti, ką iš tiesų apima vieši kainų orientyrai <span aria-hidden="true">→</span></a></li>
+          <li><a href="/gidas/kaip-pasirinkti-baldu-gamintoja/">Palyginti tiekėjus pagal tą pačią apimtį ir dokumentus <span aria-hidden="true">→</span></a></li>
+          <li><a href="https://vvtat.lrv.lt/lt/veiklos-sritys-54/ne-maisto-produktai-55/vartotoju-teises-ir-garantijos-714/" target="_blank" rel="noopener noreferrer">Atverti oficialią VVTAT informaciją apie vartotojų teises ir garantijas <span aria-hidden="true">↗</span></a></li>
+        </ul>
       </section>
       <section class="guide-hub" aria-labelledby="featured-guides-title">
         <div class="guide-hub-heading">

@@ -1204,6 +1204,7 @@
 
   .profile-details,
   .profile-landings,
+  .profile-reviews,
   .provenance-section,
   .correction-section {
     display: grid;
@@ -1213,6 +1214,7 @@
 
   .profile-details,
   .profile-landings,
+  .profile-reviews,
   .provenance-section {
     border-bottom: 1px solid var(--line);
   }
@@ -1236,6 +1238,7 @@
   }
 
   .profile-facts dd a,
+  .fact-source-list a,
   .source-list a {
     color: var(--pine-strong);
     overflow-wrap: anywhere;
@@ -1289,9 +1292,159 @@
     flex: 0 0 auto;
   }
 
+  .fact-explanation {
+    max-width: 65ch;
+    margin-top: 0.35rem;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+
+  .fact-source-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    margin-top: 0.55rem;
+    font-size: 0.86rem;
+  }
+
   .unknown-value {
     color: var(--ink-soft);
     font-style: italic;
+  }
+
+  .profile-reviews {
+    background: var(--surface);
+  }
+
+  .review-content {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .review-loading,
+  .review-empty,
+  .review-error {
+    max-width: 65ch;
+    padding: 1rem;
+    color: var(--ink-soft);
+    background: oklch(0.965 0.012 158);
+    border-radius: 8px;
+  }
+
+  .review-error {
+    color: var(--critical);
+    background: var(--critical-bg);
+    font-weight: 760;
+  }
+
+  .review-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.8rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .review-summary strong {
+    color: var(--pine-strong);
+    font-family: var(--display);
+    font-size: 2rem;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .review-summary span {
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .review-summary p {
+    flex-basis: 100%;
+    color: var(--ink-soft);
+    font-size: 0.86rem;
+  }
+
+  .review-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .review-list li {
+    display: grid;
+    gap: 0.55rem;
+    padding-block: 1.25rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .review-item-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.35rem 1rem;
+  }
+
+  .review-rating {
+    color: var(--pine-strong);
+    font-size: 0.88rem;
+    font-weight: 820;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .review-meta {
+    color: var(--ink-soft);
+    font-size: 0.84rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .review-text {
+    max-width: 65ch;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+  }
+
+  .review-form-section {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.4fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .review-form-heading {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .review-form-heading h3 {
+    font-size: 1.55rem;
+  }
+
+  .review-form-heading p {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+  }
+
+  .review-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .review-submit {
+    display: grid;
+    justify-items: start;
+    gap: 0.75rem;
+  }
+
+  .review-submit .form-status {
+    max-width: 65ch;
+    min-height: 1.4em;
   }
 
   .provenance-section {
@@ -2157,11 +2310,51 @@
     line-height: 1.65;
   }
 
+  .guide-start,
   .guide-hub,
   .guide-principles,
   .uncertainty-note {
     width: min(calc(100% - 2rem), var(--content-width));
     margin-inline: auto;
+  }
+
+  .guide-start {
+    padding-block: clamp(2.5rem, 6vw, 4.5rem);
+    display: grid;
+    grid-template-columns: minmax(230px, 0.52fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 7vw, 7rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .guide-start-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .guide-start-links li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .guide-start-links a {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.85rem;
+    color: var(--pine-strong);
+    font-weight: 800;
+  }
+
+  .guide-start-links a:hover {
+    background: oklch(0.975 0.01 158);
+    text-decoration-thickness: 2px;
+  }
+
+  .guide-start-links span {
+    flex: 0 0 auto;
   }
 
   .guide-hub {
@@ -2580,6 +2773,8 @@
     }
 
     .correction-section,
+    .review-form-section,
+    .guide-start,
     .guide-hub,
     .guide-principles,
     .landing-hero,
@@ -2699,6 +2894,7 @@
     .profile-main,
     .request-main,
     .owner-main,
+    .guide-start,
     .guide-hub,
     .guide-principles,
     .uncertainty-note,
@@ -2774,6 +2970,7 @@
     }
 
     .correction-form,
+    .review-form,
     .buyer-request-form,
     .owner-enquiry-form,
     .valuation-fields {
@@ -2781,6 +2978,7 @@
     }
 
     .correction-form > *,
+    .review-form > *,
     .buyer-request-form > *,
     .owner-enquiry-form > * {
       grid-column: 1;
