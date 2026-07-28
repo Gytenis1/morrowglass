@@ -61,6 +61,7 @@ type GuideArticle = {
   summary: string;
   readingLabel: string;
   featured?: boolean;
+  buyerIntent?: boolean;
 };
 
 type HeaderSection = 'directory' | 'guide' | 'request' | 'owner';
@@ -154,6 +155,54 @@ const guideArticles: GuideArticle[] = [
     summary: 'Atsargus kontrolinis sąrašas Lietuvos pirkėjui prieš patvirtinant medžiagas, mokėjimą ir garantinio aptarnavimo tvarką.',
     readingLabel: 'Dokumentai ir atsakomybės',
     featured: true,
+  },
+  {
+    slug: 'spintos-ir-drabuzines-kaina',
+    title: 'Spintos ir drabužinės kaina: ką apibrėžti prieš lyginant pasiūlymus',
+    summary: 'Apimtis, vidaus įranga ir montavimo sąlygos, kurios padeda palyginti pasiūlymus.',
+    readingLabel: 'Spintos ir drabužinės',
+    featured: true,
+    buyerIntent: true,
+  },
+  {
+    slug: 'mdf-faneruote-masyvas-fasadai',
+    title: 'MDF, faneruotė ar masyvas fasadams: klausimai prieš pasirenkant',
+    summary: 'Fasadų specifikacijos, pavyzdžiai, priežiūra ir kompromisai.',
+    readingLabel: 'Fasadai ir medžiagos',
+    featured: true,
+    buyerIntent: true,
+  },
+  {
+    slug: 'kvarcas-ar-akmuo-stalvirsiui',
+    title: 'Kvarcas ar natūralus akmuo stalviršiui: apimtis, priežiūra ir klausimai',
+    summary: 'Šablonavimo, išpjovų, sujungimų ir montavimo kontrolinis sąrašas.',
+    readingLabel: 'Stalviršiai',
+    featured: true,
+    buyerIntent: true,
+  },
+  {
+    slug: 'matavimas-ir-montavimas-kontrole',
+    title: 'Galutinis matavimas ir montavimo diena: kontrolinis sąrašas',
+    summary: 'Objekto parengtis, dokumentai ir priėmimo patikra.',
+    readingLabel: 'Matavimas ir montavimas',
+    featured: true,
+    buyerIntent: true,
+  },
+  {
+    slug: 'baldu-defektai-ir-garantinis-aptarnavimas',
+    title: 'Baldų defektai ir garantinis aptarnavimas: kaip fiksuoti ir sekti',
+    summary: 'Dokumentavimas, pranešimas ir sutartos korekcijos sekimas.',
+    readingLabel: 'Defektai ir aptarnavimas',
+    featured: true,
+    buyerIntent: true,
+  },
+  {
+    slug: 'mazo-buto-irengimas-pagal-uzsakyma',
+    title: 'Mažo buto įrengimas pagal užsakymą: prioritetai ir užklausos sąrašas',
+    summary: 'Saugojimo, judėjimo, matavimo ir montavimo prioritetai.',
+    readingLabel: 'Mažas butas',
+    featured: true,
+    buyerIntent: true,
   },
 ];
 
@@ -381,6 +430,15 @@ function renderFooter(): string {
       </div>
     </footer>
   `;
+}
+
+function getContextualGuide(record: Manufacturer): { slug: string; label: string } {
+  const codes = new Set(asStringArray(record.category_codes));
+  if (codes.has('W')) return { slug: 'spintos-ir-drabuzines-kaina', label: 'Spintų ir drabužinių kainos bei apimties klausimai' };
+  if (codes.has('K')) return { slug: 'kvarcas-ar-akmuo-stalvirsiui', label: 'Stalviršio medžiagos ir apimties klausimai' };
+  if (codes.has('OC') || codes.has('HR')) return { slug: 'matavimas-ir-montavimas-kontrole', label: 'Matavimo ir montavimo kontrolinis sąrašas' };
+  if (codes.has('SW')) return { slug: 'mdf-faneruote-masyvas-fasadai', label: 'Medžiagų ir apdailos klausimai' };
+  return { slug: 'matavimas-ir-montavimas-kontrole', label: 'Matavimo ir montavimo kontrolinis sąrašas' };
 }
 
 function getProfileLandingLinks(record: Manufacturer): ProfileLandingLink[] {
@@ -2025,12 +2083,18 @@ function renderProfile(record: Manufacturer | undefined): void {
   guideLink.href = '/gidas';
   guideLink.dataset.internalLink = 'true';
   guideLink.textContent = 'Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →';
+  const contextualGuide = getContextualGuide(record);
+  const contextualGuideLink = document.createElement('a');
+  contextualGuideLink.className = 'profile-guide-link';
+  contextualGuideLink.href = `/gidas/${contextualGuide.slug}`;
+  contextualGuideLink.dataset.internalLink = 'true';
+  contextualGuideLink.textContent = `${contextualGuide.label} →`;
   const ownerLink = document.createElement('a');
   ownerLink.className = 'profile-owner-link';
   ownerLink.href = '/savininkams';
   ownerLink.dataset.internalLink = 'true';
   ownerLink.textContent = 'Svarstote savo verslo tęstinumą? Privatus pokalbis savininkams →';
-  profileActions.append(requestLink, guideLink, ownerLink);
+  profileActions.append(requestLink, guideLink, contextualGuideLink, ownerLink);
   hero.append(headingGroup, profileActions);
 
   const note = document.createElement('div');
@@ -2133,7 +2197,14 @@ function renderGuideHub(): void {
           <h2 id="featured-guides-title">Keturi išsamūs gidai svarbiausiems sprendimams</h2>
           <p>Pradėkite nuo klausimo, kurį turite dabar: kandidato patikra, kaina, projekto eiga arba susitarimo detalės.</p>
         </div>
-        ${renderGuideLinks(guideArticles.filter((article) => article.featured))}
+        ${renderGuideLinks(guideArticles.filter((article) => article.featured && !article.buyerIntent))}
+      </section>
+      <section class="guide-hub" aria-labelledby="buyer-intent-guides-title">
+        <div class="guide-hub-heading">
+          <h2 id="buyer-intent-guides-title">Pirkėjo klausimai prieš užsakant</h2>
+          <p>Rinkitės temą pagal sprendinį, medžiagą, objekto parengtį arba aptarnavimo situaciją.</p>
+        </div>
+        ${renderGuideLinks(guideArticles.filter((article) => article.buyerIntent))}
       </section>
       <section class="guide-hub guide-hub--secondary" aria-labelledby="concise-guides-title">
         <div class="guide-hub-heading">

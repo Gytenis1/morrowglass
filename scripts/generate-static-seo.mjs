@@ -121,6 +121,120 @@ const guideArticles = [
       ['Patvirtinkite, kada terminas tampa įsipareigojimu', 'Raštu išsiaiškinkite, nuo kokio įvykio skaičiuojamas laikas, kurios datos preliminarios ir kaip pasikeitimai perskaičiuoja grafiką.'],
     ],
   },
+  {
+    slug: 'spintos-ir-drabuzines-kaina',
+    title: 'Spintos ir drabužinės kaina: ką apibrėžti prieš lyginant pasiūlymus',
+    summary: 'Spintos ar drabužinės apimties, vidaus įrangos ir montavimo sąlygų klausimai, kurie padeda palyginti pasiūlymus be tariamos universalios kainos.',
+    metaDescription: 'Spintos ir drabužinės pagal užsakymą kainą keičiantys sprendimai: apimtis, durys, vidaus įranga, matavimas, montavimas ir klausimų sąrašas.',
+    hubLabel: 'Spintos ir drabužinės',
+    featured: true,
+    buyerIntent: true,
+    categoryCode: 'W',
+    citySlug: 'vilnius',
+    content: `<section><h2>Spintos kaina prasideda nuo apimties, ne nuo vieno skaičiaus</h2><p>Spinta nišoje, prieškambario sprendinys ir atskira drabužinė gali turėti panašų plotį, tačiau skiriasi korpusais, durimis, vidaus įranga, apdaila ir montavimo darbais. Todėl universali kaina būtų klaidinanti: palyginti verta tik pasiūlymus, kuriuose vienodai aprašyta, kas bus pagaminta ir sumontuota.</p><p>Prieš prašydami kainos nusibrėžkite sienas, angas, lubų aukštį, grindjuostes, elektros taškus ir numatytą naudojimą. Preliminarus eskizas padeda pradėti pokalbį, o galutiniams sprendiniams paprastai reikia patikslinto matavimo.</p></section>
+<section><h2>Kas dažniausiai keičia pasiūlymo apimtį</h2><ul><li><strong>Vieta ir geometrija:</strong> niša, kampas, šlaitinės lubos, nelygios sienos, uždengimai ir priderinimas prie esamos apdailos.</li><li><strong>Durų sprendinys:</strong> varstomos ar stumdomos durys, jų skaičius, profiliai, veidrodžiai, stiklas, frezavimas ir rankenėlės.</li><li><strong>Vidus:</strong> lentynų, stalčių, pakabų, krepšių, ištraukiamų mechanizmų bei apšvietimo kiekis ir išdėstymas.</li><li><strong>Medžiagos ir apdaila:</strong> korpuso plokštė, fasadų specifikacija, briaunos, spalvos, matomi šonai bei galinės sienelės.</li><li><strong>Paslaugos:</strong> matavimas, projektavimas, senos spintos išmontavimas, pristatymas, užnešimas, montavimas ir baigiamasis sureguliavimas.</li></ul></section>
+<section><h2>Klausimai vienodai užklausai</h2><div class="checklist-block"><ul><li>Ar pasiūlyme nurodyti išoriniai matmenys ir kiekvienos sekcijos vidaus įranga?</li><li>Koks tikslus durų, profilių, plokščių, briaunų ir furnitūros pavadinimas ar kodas?</li><li>Ar įskaičiuoti uždengimai, grindjuosčių išpjovos, nelygumų kompensavimas ir tvirtinimas?</li><li>Kas matuojama prieš gamybą ir kurie brėžiniai turi būti patvirtinti raštu?</li><li>Kas įtraukta į pristatymą, užnešimą bei montavimą, o kas būtų papildomas darbas?</li><li>Kaip fiksuojami pakeitimai, jei po matavimo keičiasi niša, vidaus poreikiai ar pasirinktos medžiagos?</li></ul></div><p class="inline-warning"><strong>Palyginimo taisyklė:</strong> mažesnė bendra suma nepasako, ar durų, vidaus įrangos ir montavimo apimtis tokia pati. Paprašykite kiekvieną išimtį pažymėti raštu.</p></section>`,
+    faq: [
+      { question: 'Ar galima nustatyti spintos kainą vien pagal plotį?', answer: 'Ne. Plotis neapibrėžia durų tipo, vidaus įrangos, medžiagų, geometrijos, matavimo ir montavimo darbų. Palyginti galima tik aiškiai aprašytą vienodą apimtį.' },
+      { question: 'Kada verta prašyti galutinio pasiūlymo?', answer: 'Kai patalpos apdaila, angos, grindys ir svarbūs komunikacijų sprendiniai yra pakankamai aiškūs galutiniam matavimui. Iki jo pasiūlyme verta atskirti prielaidas nuo patvirtintų sprendinių.' },
+      { question: 'Ką nusiųsti pirmoje užklausoje?', answer: 'Pridėkite nuotraukas, apytikslius matmenis, eskizą, pageidaujamą durų tipą, vidaus poreikius, miestą ir informaciją apie prieigą montavimui. Tai nėra galutinio matavimo pakaitalas.' },
+    ],
+  },
+  {
+    slug: 'mdf-faneruote-masyvas-fasadai',
+    title: 'MDF, faneruotė ar masyvas fasadams: klausimai prieš pasirenkant',
+    summary: 'Dažytų ir plėvele dengtų MDF, faneruotų bei medžio masyvo fasadų specifikacijos, pavyzdžiai, priežiūra ir kompromisai.',
+    metaDescription: 'MDF, faneruotės ir medžio masyvo fasadai: kaip prašyti tikslios specifikacijos, palyginti pavyzdžius, priežiūrą, apdailą ir pasiūlymo ribas.',
+    hubLabel: 'Fasadai ir medžiagos',
+    featured: true,
+    buyerIntent: true,
+    categoryCode: 'K',
+    citySlug: 'kaunas',
+    content: `<section><h2>Pavadinimas dar neapibrėžia fasado</h2><p>„MDF“, „faneruotė“ ar „masyvas“ nurodo skirtingas medžiagų grupes, tačiau vien žodis nepasako apie pagrindą, apdailą, kraštus, spalvą, raštą ar konkrečią gamybos technologiją. Dažytas MDF ir plėvele dengtas MDF taip pat nėra tas pats sprendinys. Prašykite pasiūlyme įrašyti medžiagą taip, kad ją galėtumėte atpažinti vėliau.</p><p>Šiame gide nėra universalaus reitingo. Tinkamas pasirinkimas priklauso nuo naudojimo, vizualaus rezultato, patalpos sąlygų, priežiūros įpročių, biudžeto ir to, ką konkrečiai gali įgyvendinti gamintojas.</p></section>
+<section><h2>Kaip aptarti skirtingas grupes</h2><div class="comparison-table-wrap" tabindex="0" role="region" aria-label="Fasadų medžiagų klausimų lentelė"><table><thead><tr><th>Medžiagos grupė</th><th>Ką patikslinti</th><th>Ką palyginti pavyzdyje</th></tr></thead><tbody><tr><td>Dažytas MDF</td><td>Pagrindo storį, dažymo sistemą, blizgumo lygį, frezavimą, matomas briaunas ir spalvos kodą</td><td>Spalvą skirtingoje šviesoje, frezuotą profilį, kampus ir valymo rekomendaciją</td></tr><tr><td>Plėvele dengtas MDF</td><td>Plėvelės tipą, raštą, paviršiaus tekstūrą, frezavimo ribas ir kraštų sprendimą</td><td>Rašto kartojimą, kampus, rankenėlių vietas ir priežiūros nurodymus</td></tr><tr><td>Faneruotė</td><td>Medienos rūšį, faneruotės pjūvį ir atranką, pagrindą, laką ar alyvą, rašto derinimą</td><td>Natūralius atspalvio bei rašto skirtumus, sujungimus ir apdailos atnaujinimo tvarką</td></tr><tr><td>Medžio masyvas</td><td>Medienos rūšį, konstrukciją, sujungimus, drėgmės sąlygų prielaidas ir apdailą</td><td>Šakotumą, spalvos variaciją, judėjimą bei gamintojo priežiūros rekomendaciją</td></tr></tbody></table></div></section>
+<section><h2>Pavyzdžiai ir priežiūra yra specifikacijos dalis</h2><p>Paprašykite realaus pavyzdžio arba aiškiai identifikuoto gamintojo mėginio ir peržiūrėkite jį prie numatyto apšvietimo. Užrašykite, kuri fasado pusė, rankenėlės, frezavimas ir spalva buvo patvirtinti. Natūralioms medžiagoms aptarkite leidžiamą rašto bei atspalvio variaciją, o visoms grupėms – kokias valymo priemones ir naudojimo sąlygas rekomenduoja konkrečios medžiagos tiekėjas ar gamintojas.</p><div class="checklist-block"><h3>Ką įrašyti į pasiūlymą</h3><ul><li>fasado medžiaga, storis, apdailos pavadinimas, kolekcija ir spalvos ar dekoro kodas;</li><li>matomos ir nematomos briaunos, frezavimas, rankenėlės bei stiklo ar metalo intarpai;</li><li>patvirtinto pavyzdžio data ir ar natūralaus rašto skirtumai laikomi numatyta savybe;</li><li>priežiūros rekomendacijos ir kam pranešti, jei prieš montavimą pastebite neatitikimą.</li></ul></div></section>`,
+    faq: [
+      { question: 'Ar MDF visada reiškia dažytą fasadą?', answer: 'Ne. MDF yra pagrindas, o apdaila gali būti skirtinga, pavyzdžiui, dažyta ar plėvele dengta. Pasiūlyme prašykite nurodyti visą fasado specifikaciją.' },
+      { question: 'Ar faneruotė ir masyvas turi atrodyti visiškai vienodai?', answer: 'Natūrali mediena gali turėti rašto ir atspalvio skirtumų. Prieš patvirtinimą aptarkite, koks pavyzdys, atranka ir rašto derinimas yra numatyti konkrečiam projektui.' },
+      { question: 'Kaip palyginti fasadų pasiūlymus?', answer: 'Lyginkite ne bendrinius pavadinimus, o pagrindą, storį, apdailą, kodą, frezavimą, briaunas, furnitūrą, priežiūrą ir pavyzdžio patvirtinimą.' },
+    ],
+  },
+  {
+    slug: 'kvarcas-ar-akmuo-stalvirsiui',
+    title: 'Kvarcas ar natūralus akmuo stalviršiui: apimtis, priežiūra ir klausimai',
+    summary: 'Kompozicinio kvarco ir natūralaus akmens stalviršių pasirinkimą padedantis struktūruoti kontrolinis sąrašas – nuo šablonavimo iki sujungimų ir montavimo.',
+    metaDescription: 'Kvarco kompozito ir natūralaus akmens stalviršiai: ką patikslinti apie šablonavimą, išpjovas, sujungimus, montavimą, priežiūrą ir kainos apimtį.',
+    hubLabel: 'Stalviršiai',
+    featured: true,
+    buyerIntent: true,
+    categoryCode: 'K',
+    citySlug: 'vilnius',
+    content: `<section><h2>Stalviršį lyginkite kaip paslaugų ir medžiagos komplektą</h2><p>Kompozicinis kvarcas ir natūralus akmuo yra skirtingos medžiagų grupės, todėl sprendimą verta grįsti konkrečia plokšte, jos apdaila, virtuvės geometrija ir naudojimo būdu. Be paties paviršiaus, pasiūlymo apimtį gali sudaryti galutinis šablonavimas, išpjovos, briaunos, sujungimai, transportas, užnešimas ir montavimas.</p><p>Viešas 2026 m. „Furnity“ gidas pateikia plačias nurodomas įrengtų kompozito / kvarco ir natūralaus akmens kainų ribas. Tai tik datuotas bendras kontekstas, ne jūsų projekto sąmata ir ne kainos citata: medžiaga, storis, plokštės išeiga, išpjovos bei montavimo sąlygos gali reikšmingai pakeisti pasiūlymą. Gintaro Baldai taip pat nurodo, kad stalviršio medžiaga reikšmingai veikia projekto kainą.</p></section>
+<section><h2>Prieš pasirinkdami patikrinkite visą apimtį</h2><ul><li><strong>Plokštė ir išvaizda:</strong> kolekcija, spalva, raštas, storis, paviršiaus apdaila, briaunų profilis ir matomi kraštai.</li><li><strong>Matavimas:</strong> kada galima atlikti galutinį šablonavimą, ar korpusai ir sienų apdaila jau turi būti įrengti, kas tvirtina brėžinį.</li><li><strong>Išpjovos:</strong> kaitlentė, plautuvė, maišytuvas, dozatorius, lizdai, ventiliacija, nutekėjimo grioveliai ir jų atsakomybės ribos.</li><li><strong>Sujungimai ir atramos:</strong> kur jie bus, kaip atrodys, ar reikia papildomų konstrukcinių sprendimų, bei kaip derinamos salos ir sienelės.</li><li><strong>Logistika:</strong> plokščių atnešimo kelias, aukštas, liftas, laiptai, montavimo langas ir objekto apsauga.</li></ul></section>
+<section><h2>Priežiūros klausimai nėra vien formalumas</h2><p>Prašykite konkrečios pasirinkto paviršiaus priežiūros instrukcijos: ką naudoti kasdien, ko vengti, kaip elgtis su dėmėmis, kaitra, smūgiais ir chemikalais. Nelaikykite vienos medžiagos pavadinimo pažadu apie visas konkretaus tiekėjo plokštes. Pavyzdį apžiūrėkite realioje šviesoje ir iš anksto aptarkite, kaip prieš montavimą bus tikrinama spalva bei raštas.</p><div class="checklist-block"><h3>Klausimai pasiūlymui</h3><ul><li>Ar į kainą įtrauktas galutinis šablonavimas, brėžinys, išpjovos, sujungimai ir montavimas?</li><li>Koks tikslus plokštės pavadinimas, storis, apdaila ir briaunų sprendinys?</li><li>Kas nustato ir patvirtina įrangos išpjovų vietas bei montavimo instrukcijas?</li><li>Kur numatyti sujungimai ir kokios objekto sąlygos būtinos saugiam montavimui?</li><li>Kokią rašytinę priežiūros informaciją gausite konkrečiam paviršiui?</li></ul></div></section>`,
+    faq: [
+      { question: 'Ar viešos €/m² ribos parodo mano stalviršio kainą?', answer: 'Ne. Jos neapibrėžia konkrečios plokštės, storio, išeigos, šablonavimo, išpjovų, sujungimų, transporto ir montavimo. Naudokite jas tik kaip datuotą kontekstą, o ne kaip sąmatą.' },
+      { question: 'Kada atlikti galutinį stalviršio matavimą?', answer: 'Tai suderinkite su pasirinktu tiekėju ir gamintoju. Paprastai būtina aiški korpusų, sienų, įrangos ir apdailos būklė, kad šablonavimas atitiktų realų objektą.' },
+      { question: 'Ar kvarcas ir natūralus akmuo prižiūrimi vienodai?', answer: 'Nedarykite tokios prielaidos. Paprašykite pasirinktos plokštės tiekėjo ar montuotojo rašytinių priežiūros rekomendacijų ir jų laikykitės.' },
+    ],
+  },
+  {
+    slug: 'matavimas-ir-montavimas-kontrole',
+    title: 'Galutinis matavimas ir montavimo diena: kontrolinis sąrašas',
+    summary: 'Kokius dokumentus, sąlygas ir patikrinimus verta turėti prieš galutinį matavimą bei priimant sumontuotus baldus.',
+    metaDescription: 'Baldų galutinio matavimo ir montavimo dienos kontrolinis sąrašas: objekto parengtis, brėžiniai, dokumentai, priėmimo patikra ir neatitikimų fiksavimas.',
+    hubLabel: 'Matavimas ir montavimas',
+    featured: true,
+    buyerIntent: true,
+    categoryCode: 'W',
+    citySlug: 'kaunas',
+    content: `<section><h2>Galutinis matavimas patvirtina realų objektą</h2><p>Bendras projekto eigos planas neatsako, ar konkreti patalpa jau paruošta matuoti. Prieš susitikimą patikrinkite, ar baigtos tos sienos, grindys, lubos, nišos ir komunikacijos, prie kurių bus derinami baldai. Jei dar numatyti plytelių, dažymo, grindjuosčių, pertvarų, elektros ar santechnikos pakeitimai, juos aiškiai aptarkite prieš tvirtinant matmenis.</p><p>Matavimo metu naudinga turėti vieną naujausią projekto versiją ir žinoti, kas priima sprendimus. Žodinis pakeitimas neturėtų likti vieninteliu įrašu: paprašykite atnaujinto brėžinio ar specifikacijos, kurioje aiškiai matosi, kas pasikeitė.</p></section>
+<section><h2>Prieš galutinį matavimą paruoškite</h2><div class="checklist-block"><ul><li>adresą, kontaktą objekte ir saugų priėjimą prie visų matuojamų vietų;</li><li>naujausią planą su nišomis, įranga, durų atsidarymo kryptimis ir aukščiais;</li><li>informaciją apie grindų, sienų, lubų, plytelių, grindjuosčių bei apšvietimo galutinę būklę;</li><li>techninius buitinės įrangos, plautuvės, maišytuvo, gartraukio ar kitų integruojamų elementų modelius;</li><li>elektros, vandens, nuotekų, vėdinimo ir kitų taškų vietas, kurių po patvirtinimo neplanuojate keisti;</li><li>rašytinį sąrašą, kuriuos sprendinius reikia patvirtinti po matavimo: medžiagas, spalvas, rankenėles, išpjovas, furnitūrą ir paslaugų ribas.</li></ul></div></section>
+<section><h2>Montavimo dienos priėmimo patikra</h2><p>Prieš pasirašydami priėmimo dokumentą skirkite laiko apžiūrai gerame apšvietime. Patikra nėra techninė ekspertizė, tačiau padeda konkrečiai užfiksuoti tai, ką galima matyti ir išbandyti montavimo metu.</p><ul><li>sutikrinkite gaminių kiekį, matomas spalvas, fasadus, rankenėles ir komplektaciją su patvirtinta versija;</li><li>atidarykite duris bei stalčius, patikrinkite lygius tarpus, reguliavimą, veikiančius mechanizmus ir prieigą prie įrangos;</li><li>apžiūrėkite matomus paviršius, briaunas, stiklą, stalviršį, sujungimus bei tvirtinimo vietas;</li><li>patikrinkite, ar montavimo vieta palikta saugi ir ar sutarta, kas atsako už likusius kitų rangovų darbus;</li><li>jei pastebėjote neatitikimą, nufotografuokite, aprašykite vietą ir paprašykite įrašyti į priėmimo ar darbų užbaigimo dokumentą kartu su tolimesne tvarka.</li></ul><p class="inline-warning"><strong>Neskubėkite užpildyti spragų prielaidomis:</strong> atskirkite pastebėjimą nuo jo priežasties ir susitarkite, kas bei kada pateiks atsakymą ar korekcijos planą.</p></section>`,
+    faq: [
+      { question: 'Ar galutiniam matavimui pakanka ankstyvo plano?', answer: 'Planą naudinga turėti, tačiau jis nepatvirtina realių apdailos, nišų ir komunikacijų matmenų. Su gamintoju sutarkite, kurios objekto sąlygos turi būti galutinės prieš matavimą.' },
+      { question: 'Ką daryti, jei montuojant pastebiu neatitikimą?', answer: 'Ramiai jį aprašykite, nurodykite vietą, padarykite nuotraukas ir paprašykite rašytinai užfiksuoti tolimesnę nagrinėjimo ar korekcijos tvarką. Nepriskirkite priežasties jos nepatikrinus.' },
+      { question: 'Ar priėmimo dokumentas turi būti pasirašytas iš karto?', answer: 'Dokumento reikšmę ir tvarką aptarkite su sutarties šalimi. Prieš pasirašant verta perskaityti, ką jis fiksuoja, ir įrašyti pastebimus neatitikimus ar sutartas tolesnes užduotis.' },
+    ],
+  },
+  {
+    slug: 'baldu-defektai-ir-garantinis-aptarnavimas',
+    title: 'Baldų defektai ir garantinis aptarnavimas: kaip fiksuoti ir sekti',
+    summary: 'Atsargus praktinis kelias, kaip dokumentuoti pastebėjimą, pranešti sutarties šaliai ir sekti sutartą korekcijos eigą.',
+    metaDescription: 'Baldų defektų, neatitikimų ir garantinio aptarnavimo kontrolinis sąrašas: įrodymai, pranešimas, sutarties klausimai ir korekcijos sekimas be teisinių pažadų.',
+    hubLabel: 'Defektai ir aptarnavimas',
+    featured: true,
+    buyerIntent: true,
+    categoryCode: 'W',
+    citySlug: 'vilnius',
+    content: `<section><h2>Pirmiausia fiksuokite faktus, o ne išvadas</h2><p>Pastebėję pažeidimą, neveikiantį mechanizmą, neatitikimą brėžiniui ar reguliavimo poreikį, užrašykite, ką konkrečiai matote ir kada tai pastebėjote. Nufotografuokite bendrą vaizdą bei detalę, išsaugokite pasiūlymą, patvirtintus brėžinius, priėmimo dokumentus, sąskaitas ir ankstesnį susirašinėjimą. Tai padeda kitai šaliai suprasti situaciją ir išvengti skirtingų to paties fakto interpretacijų.</p><p>Šis gidas nėra teisinė konsultacija ir nenustato fiksuotų teisių ar terminų. Jūsų sutarties, garantijos, pateiktų dokumentų ir konkrečių aplinkybių turinį prireikus įvertinkite su tinkamu specialistu.</p></section>
+<section><h2>Trumpas pranešimas, į kurį lengviau atsakyti</h2><div class="checklist-block"><h3>Įtraukite</h3><ul><li>užsakymo, sutarties ar pasiūlymo identifikatorių ir montavimo ar perdavimo datą, jei ją turite;</li><li>konkrečią vietą bei elementą, pavyzdžiui, „kairės aukštos spintos viršutinis fasadas“;</li><li>neutralų pastebėjimo aprašą: kas neveikia, kuo skiriasi nuo patvirtintos versijos ar kas matoma paviršiuje;</li><li>nuotraukas ar vaizdo įrašą, jei jie padeda parodyti situaciją;</li><li>prašymą patvirtinti gavimą ir nurodyti kitą vertinimo, atvykimo ar korekcijos žingsnį.</li></ul></div><p>Rašykite šaliai, su kuria sudarėte susitarimą ar kuri nurodyta dokumentuose. Išsaugokite išsiųstą versiją ir atsakymus vienoje vietoje.</p></section>
+<section><h2>Stebėkite susitarimą iki užbaigimo</h2><p>Jei siūlomas reguliavimas, detalės keitimas ar apžiūra, paprašykite patvirtinti apimtį, atsakingą kontaktą ir numatomą laiką. Po atlikto darbo palyginkite rezultatą su užfiksuotu klausimu, o ne vien su bendru įspūdžiu. Jei lieka neišspręsta dalis, aiškiai nurodykite, kuri vieta dar neatitinka sutarto sprendimo.</p><ul><li>Kur dokumentuose aprašyta medžiaga, furnitūra, montavimas ir aptarnavimo tvarka?</li><li>Ar garantija ar kitas susitarimas numato registravimo kanalą, dokumentus ar sąlygas?</li><li>Ar pakeitimas, reguliavimas ir naujas pastebėjimas atskirti vienas nuo kito raštu?</li><li>Kada ir kaip patvirtinsite, kad konkretus sutartas darbas baigtas?</li></ul></section>`,
+    faq: [
+      { question: 'Ar kiekvienas pastebėjimas yra garantinis atvejis?', answer: 'To nereikėtų numanyti. Pateikite faktus ir peržiūrėkite savo sutartį, garantijos dokumentus bei kitos šalies atsakymą. Konkreti situacija gali priklausyti nuo aplinkybių ir susitarimo.' },
+      { question: 'Kokias nuotraukas verta išsaugoti?', answer: 'Naudingas bendras vaizdas, detalė iš arti, vieta patalpoje ir prireikus palyginimas su patvirtintu brėžiniu ar specifikacija. Nuotraukos turėtų papildyti trumpą aiškų aprašą.' },
+      { question: 'Kaip sekti korekcijos eigą?', answer: 'Vienoje vietoje laikykite pranešimą, atsakymą, sutartą veiksmą, datą ir rezultatą. Paprašykite raštu patvirtinti, ką konkrečiai numatoma patikrinti ar koreguoti.' },
+    ],
+  },
+  {
+    slug: 'mazo-buto-irengimas-pagal-uzsakyma',
+    title: 'Mažo buto įrengimas pagal užsakymą: prioritetai ir užklausos sąrašas',
+    summary: 'Kaip trumpai aprašyti mažo buto saugojimo, judėjimo, matavimo ir montavimo poreikius, kad pasiūlymas spręstų realų naudojimą.',
+    metaDescription: 'Mažo buto baldai pagal užsakymą: saugojimo, judėjimo, matavimų, funkcijų ir montavimo prioritetai bei kontrolinis sąrašas užklausai.',
+    hubLabel: 'Mažas butas',
+    featured: true,
+    buyerIntent: true,
+    categoryCode: 'W',
+    citySlug: 'kaunas',
+    content: `<section><h2>Mažame bute pradėkite nuo judėjimo ir daiktų</h2><p>Maža patalpa nebūtinai reikalauja vieno „maksimalaus“ baldo. Pirmiausia aprašykite, kas joje gyvena, kur dedami kasdieniai daiktai, kaip atsidaro durys ir stalčiai, kur reikalingas praėjimas, sėdėjimas, miegas ar darbas. Tai padeda išvengti sprendinio, kuris užpildo tūrį, bet apsunkina naudojimą.</p><p>Suskaidykite poreikį į prioritetus: kas turi būti pasiekiama kasdien, kas gali būti laikoma aukščiau ar giliau, o ko apskritai nereikia įtraukti. Tada gamintojui lengviau pasiūlyti konstrukciją, o jums – palyginti, ar vidus ir fasadai sprendžia tą pačią užduotį.</p></section>
+<section><h2>Trumpas brifas prieš pirmą pasiūlymą</h2><div class="checklist-block"><ul><li>patalpos planas, sienų ilgiai, lubų aukštis, langai, radiatoriai, durys ir jų atsidarymo kryptys;</li><li>nuotraukos, rodančios nišas, kampus, šlaitus, grindjuostes, lizdus, jungiklius ir kitus kliuvinius;</li><li>daiktų sąrašas su apytiksliais kiekiais: drabužiai, lagaminai, valymo priemonės, buitiniai prietaisai, darbo priemonės;</li><li>kas naudosis baldu ir kokiame aukštyje turi būti dažniausiai naudojamos zonos;</li><li>privalomos funkcijos, pavyzdžiui, darbo vieta, skalbyklės paslėpimas, vieta robotui siurbliui ar sulankstoma miego zona;</li><li>pastato ir montavimo sąlygos: aukštas, liftas, laiptai, parkavimas, darbų laikas bei jau baigta apdaila.</li></ul></div></section>
+<section><h2>Praktiniai prioritetai projektavimui</h2><ul><li><strong>Praėjimai:</strong> prieš tvirtindami fasadus ir stalčius patikrinkite jų atsidarymo trajektorijas bei kasdienį kelią po kambarį.</li><li><strong>Pasiekiamumas:</strong> dažnai naudojamus daiktus numatykite patogioje zonoje; aukštas spintas ir gilius modulius vertinkite kartu su prieiga.</li><li><strong>Matavimo prielaidos:</strong> nepasikliaukite vien brėžiniu, jei planuojamos grindys, plytelės, pertvaros ar įranga dar keisis.</li><li><strong>Vientisa apimtis:</strong> pasiūlyme atskirkite baldus, apšvietimą, elektros pakeitimus, pristatymą ir montavimą, kad mažesnis pasiūlymas nereišktų mažiau nei tikėjotės.</li></ul><p class="inline-warning"><strong>Mažoje erdvėje svarbi seka:</strong> prieš patvirtindami galutinį sprendinį patikrinkite realią apdailą, įrangos modelius ir montavimo prieigą. Pakeitimai po gamybos pradžios gali paveikti apimtį ir grafiką.</p></section>`,
+    faq: [
+      { question: 'Ar verta užsakyti baldą iki galutinių matavimų?', answer: 'Ankstyvas planavimas padeda, tačiau galutiniai sprendiniai turėtų atsižvelgti į realią apdailą, nišas, įrangą ir komunikacijas. Su gamintoju išsiaiškinkite, kada atliekamas patvirtinantis matavimas.' },
+      { question: 'Ką pirmiausia nurodyti mažo buto užklausoje?', answer: 'Nurodykite patalpos planą ir nuotraukas, naudotojus, daiktus, privalomas funkcijas, atsidarymo bei praėjimo ribas ir montavimo sąlygas. Bendras stiliaus įkvėpimas šios informacijos nepakeičia.' },
+      { question: 'Kaip palyginti du skirtingus sprendinius?', answer: 'Pirmiausia sutikrinkite, ar abu sprendžia tuos pačius saugojimo ir judėjimo poreikius. Tada lyginkite medžiagas, vidinę įrangą, apšvietimą, matavimą, pristatymą ir montavimą.' },
+    ],
+  },
 ];
 
 function escapeHtml(value = '') {
@@ -283,7 +397,7 @@ function injectPage({ title, description, path, body, type = 'website', robots =
     <meta name="twitter:title" content="${escapeHtml(title)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
 ${[...siteStructuredData(), ...structuredData].map((data) => `    <script type="application/ld+json" data-seo-structured-data>${safeJson(data)}</script>`).join('\n')}`;
-  return html.replace('</head>', `${head}\n  </head>`);
+  return html.replace(/\s*<\/head>/, `${head}\n  </head>`);
 }
 
 function header(active = 'directory') {
@@ -313,6 +427,25 @@ const categoryBySlug = new Map(landingConfig.categories.map((category) => [categ
 const cityBySlug = new Map(eligibleCities.map((city) => [city.slug, city]));
 for (const slug of categoryBySlug.keys()) {
   if (cityBySlug.has(slug)) throw new Error(`Category/city route collision: ${slug}`);
+}
+
+function guideRelatedLinks(article) {
+  if (!article.categoryCode) return '';
+  const category = landingConfig.categories.find((item) => item.code === article.categoryCode);
+  const city = eligibleCities.find((item) => item.slug === article.citySlug) ?? eligibleCities[0];
+  const matching = manufacturers.filter((record) => (record.category_codes ?? []).includes(article.categoryCode));
+  const profiles = [...matching, ...manufacturers].filter((record, index, records) => records.findIndex((candidate) => candidate.slug === record.slug) === index).slice(0, 3);
+  if (!category || !city || profiles.length < 3) throw new Error(`Guide ${article.slug} needs a category, city and three profile links.`);
+  return `<section class="article-related"><h2>Tęskite konkrečia užklausa</h2><p>Peržiūrėkite <a href="/baldai-pagal-uzsakyma/${category.slug}">${escapeHtml(category.title)}</a> ir <a href="/baldai-pagal-uzsakyma/${city.slug}">Baldų gamintojų kandidatus: ${escapeHtml(city.city)}</a>. Vienodą projekto aprašą pateikite <a href="/gauti-pasiulymus">projekto užklausos formoje</a>.</p><h3>Susiję katalogo įrašai</h3><ul>${profiles.map((record) => `<li><a href="/gamintojas/${record.slug}">${escapeHtml(record.trading_name)}</a></li>`).join('')}</ul></section>`;
+}
+
+function contextualGuide(record) {
+  const codes = new Set(record.category_codes ?? []);
+  if (codes.has('W')) return { slug: 'spintos-ir-drabuzines-kaina', label: 'Spintų ir drabužinių kainos bei apimties klausimai' };
+  if (codes.has('K')) return { slug: 'kvarcas-ar-akmuo-stalvirsiui', label: 'Stalviršio medžiagos ir apimties klausimai' };
+  if (codes.has('OC') || codes.has('HR')) return { slug: 'matavimas-ir-montavimas-kontrole', label: 'Matavimo ir montavimo kontrolinis sąrašas' };
+  if (codes.has('SW')) return { slug: 'mdf-faneruote-masyvas-fasadai', label: 'Medžiagų ir apdailos klausimai' };
+  return { slug: 'matavimas-ir-montavimas-kontrole', label: 'Matavimo ir montavimo kontrolinis sąrašas' };
 }
 
 function profileLandingSection(record) {
@@ -443,7 +576,7 @@ for (const record of manufacturers) {
   const publicDetails = publicFacts.length || publicPhone
     ? `<section class="profile-details profile-public-details" aria-labelledby="profile-public-details-title"><div class="section-heading"><p class="kicker">Viešuose šaltiniuose patikrinti faktai</p><h2 id="profile-public-details-title">Vieši įmonės duomenys</h2><p>Rodomi tik tie įmonės duomenys, kuriems katalogo rinkinyje yra nurodytas viešas šaltinis.</p></div><dl class="profile-facts">${publicFacts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${publicPhone ? `<div><dt>Viešas telefono numeris</dt><dd><a href="${escapeHtml(telephoneHref)}">${escapeHtml(publicPhone)}</a></dd></div>` : ''}</dl></section>`
     : '';
-  const body = `${header()}<main class="profile-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="profile-sheet"><header class="profile-hero"><div class="profile-heading-group"><p class="record-status">Nepatvirtintas viešų šaltinių įrašas</p><h1>${escapeHtml(record.trading_name)}</h1><p class="profile-identity">${escapeHtml(record.source_identity)}</p></div><div class="profile-actions"><a class="primary-button" href="/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}">Įtraukti į projekto užklausą</a><a class="profile-guide-link" href="/gidas">Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →</a><a class="profile-owner-link" href="/savininkams">Svarstote savo verslo tęstinumą? Privatus pokalbis savininkams →</a></div></header><div class="profile-note"><strong>Duomenys nėra garantija.</strong><span>Šis įrašas nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span></div><section class="profile-details"><div class="section-heading"><h2>Tapatybė, vieta ir veiklos kryptys</h2></div><dl class="profile-facts">${facts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${linkFacts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd><a href="${escapeHtml(value)}" rel="noopener noreferrer">${escapeHtml(value)}</a></dd></div>`).join('')}</dl></section>${publicDetails}${profileLandingSection(record)}<section class="provenance-section"><h2>Šaltiniai ir duomenų kilmė</h2><p>Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju.</p><ul class="source-list">${sources.map((source, index) => `<li><span>${index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`}</span><a href="${escapeHtml(source)}" rel="noopener noreferrer">${escapeHtml(source)}</a></li>`).join('')}</ul><p class="collection-date">Šaltinių surinkimo data: <time datetime="${record.source_collection_date}">${record.source_collection_date}</time></p></section></article></main>${footer()}`;
+  const body = `${header()}<main class="profile-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="profile-sheet"><header class="profile-hero"><div class="profile-heading-group"><p class="record-status">Nepatvirtintas viešų šaltinių įrašas</p><h1>${escapeHtml(record.trading_name)}</h1><p class="profile-identity">${escapeHtml(record.source_identity)}</p></div><div class="profile-actions"><a class="primary-button" href="/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}">Įtraukti į projekto užklausą</a><a class="profile-guide-link" href="/gidas">Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →</a><a class="profile-guide-link" href="/gidas/${contextualGuide(record).slug}">${escapeHtml(contextualGuide(record).label)} →</a><a class="profile-owner-link" href="/savininkams">Svarstote savo verslo tęstinumą? Privatus pokalbis savininkams →</a></div></header><div class="profile-note"><strong>Duomenys nėra garantija.</strong><span>Šis įrašas nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span></div><section class="profile-details"><div class="section-heading"><h2>Tapatybė, vieta ir veiklos kryptys</h2></div><dl class="profile-facts">${facts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${linkFacts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd><a href="${escapeHtml(value)}" rel="noopener noreferrer">${escapeHtml(value)}</a></dd></div>`).join('')}</dl></section>${publicDetails}${profileLandingSection(record)}<section class="provenance-section"><h2>Šaltiniai ir duomenų kilmė</h2><p>Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju.</p><ul class="source-list">${sources.map((source, index) => `<li><span>${index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`}</span><a href="${escapeHtml(source)}" rel="noopener noreferrer">${escapeHtml(source)}</a></li>`).join('')}</ul><p class="collection-date">Šaltinių surinkimo data: <time datetime="${record.source_collection_date}">${record.source_collection_date}</time></p></section></article></main>${footer()}`;
   await writeRoute(path, injectPage({
     title: `${record.trading_name} | Baldų gamintojo įrašas`,
     description: `${record.trading_name}: viešais šaltiniais paremtas, nepatvirtintas gamintojo kandidato įrašas su vieta, kategorijomis ir šaltinių nuorodomis.`,
@@ -497,10 +630,11 @@ const guideFaq = [
   { question: 'Ar galima lyginti tik galutinę pasiūlymo kainą?', answer: 'Ne. Kainą reikia lyginti kartu su medžiagomis, furnitūra, matavimu, projektavimu, pristatymu, montavimu, terminais ir aiškiai nurodytomis išimtimis.' },
   { question: 'Kaip patikrinti siūlomą gamybos terminą?', answer: 'Paprašykite grafiko etapais ir raštu patvirtinkite, nuo kokio įvykio terminas skaičiuojamas, kokios jo prielaidos ir kas nutinka pasikeitus apimčiai.' },
 ];
-const featuredGuides = guideArticles.filter((article) => article.featured);
+const featuredGuides = guideArticles.filter((article) => article.featured && !article.buyerIntent);
+const buyerIntentGuides = guideArticles.filter((article) => article.buyerIntent);
 const conciseGuides = guideArticles.filter((article) => !article.featured);
 const guideRouteList = (articles) => `<ul class="guide-route-list">${articles.map((article) => `<li><div><p>${escapeHtml(article.hubLabel)}</p><h3><a href="/gidas/${article.slug}/">${escapeHtml(article.title)}</a></h3><p>${escapeHtml(article.summary)}</p></div><span class="route-arrow" aria-hidden="true">→</span></li>`).join('')}</ul>`;
-const guideHubBody = `${header('guide')}<main><section class="guide-intro"><div><p class="kicker">Pirkėjo gidas</p><h1>Sprendimą grįskite palyginama informacija, ne vien pažadu</h1></div><p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda patikrinti atranką, suprasti kainos ribas, valdyti projekto etapus ir aiškiai aptarti dokumentus.</p></section><section class="guide-hub"><div class="guide-hub-heading"><h2>Keturi išsamūs gidai svarbiausiems sprendimams</h2><p>Pradėkite nuo klausimo, kurį turite dabar: kandidato patikra, kaina, projekto eiga arba susitarimo detalės.</p></div>${guideRouteList(featuredGuides)}</section><section class="guide-hub guide-hub--secondary"><div class="guide-hub-heading"><h2>Trumpi praktiniai straipsniai</h2><p>Anksčiau publikuoti gidai lieka pasiekiami tais pačiais adresais.</p></div>${guideRouteList(conciseGuides)}</section>${faqHtml(guideFaq)}</main>${footer()}`;
+const guideHubBody = `${header('guide')}<main><section class="guide-intro"><div><p class="kicker">Pirkėjo gidas</p><h1>Sprendimą grįskite palyginama informacija, ne vien pažadu</h1></div><p>Katalogas padeda rasti viešuose šaltiniuose matomus kandidatus. Gidas padeda patikrinti atranką, suprasti kainos ribas, valdyti projekto etapus ir aiškiai aptarti dokumentus.</p></section><section class="guide-hub"><div class="guide-hub-heading"><h2>Keturi išsamūs gidai svarbiausiems sprendimams</h2><p>Pradėkite nuo kandidato patikros, kainos, projekto eigos arba susitarimo detalių.</p></div>${guideRouteList(featuredGuides)}</section><section class="guide-hub" aria-labelledby="buyer-intent-guides-title"><div class="guide-hub-heading"><h2 id="buyer-intent-guides-title">Pirkėjo klausimai prieš užsakant</h2><p>Rinkitės temą pagal sprendinį, medžiagą, objekto parengtį arba aptarnavimo situaciją.</p></div>${guideRouteList(buyerIntentGuides)}</section><section class="guide-hub guide-hub--secondary"><div class="guide-hub-heading"><h2>Trumpi praktiniai straipsniai</h2><p>Anksčiau publikuoti gidai lieka pasiekiami tais pačiais adresais.</p></div>${guideRouteList(conciseGuides)}</section>${faqHtml(guideFaq)}</main>${footer()}`;
 await writeRoute('/gidas', injectPage({ title: 'Pirkėjo gidas | Baldai pagal užsakymą Lietuvoje', description: 'Lietuviški pirkėjo gidai apie baldų gamintojo pasirinkimą, realistiškas kainų nuorodas, projekto etapus, medžiagas, sutartį, avansą ir garantiją.', path: '/gidas', body: guideHubBody, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Pirkėjo gidas', path: '/gidas' }]), faqSchema(guideFaq)] }));
 
 function renderArticleFaq(items) {
@@ -511,7 +645,7 @@ function renderArticleFaq(items) {
 for (const article of guideArticles) {
   const path = `/gidas/${article.slug}`;
   const guideContent = article.content ?? article.sections.map(([heading, copy]) => `<section><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(copy)}</p></section>`).join('');
-  const body = `${header('guide')}<main class="article-main"><a class="back-link" href="/gidas">← Grįžti į pirkėjo gidą</a><article class="guide-article"><header class="article-header"><p class="kicker">Pirkėjo gidas</p><h1>${escapeHtml(article.title)}</h1><p>${escapeHtml(article.summary)}</p></header><div class="guide-copy">${guideContent}${renderArticleFaq(article.faq)}</div><nav class="article-next" aria-label="Toliau"><a href="/gidas">Visi pirkėjo gidai</a><a href="/gauti-pasiulymus">Parengti projekto užklausą →</a></nav></article></main>${footer()}`;
+  const body = `${header('guide')}<main class="article-main"><a class="back-link" href="/gidas">← Grįžti į pirkėjo gidą</a><article class="guide-article"><header class="article-header"><p class="kicker">Pirkėjo gidas</p><h1>${escapeHtml(article.title)}</h1><p>${escapeHtml(article.summary)}</p></header><div class="guide-copy">${guideContent}${guideRelatedLinks(article)}${renderArticleFaq(article.faq)}</div><nav class="article-next" aria-label="Toliau"><a href="/gidas">Visi pirkėjo gidai</a><a href="/gauti-pasiulymus">Parengti projekto užklausą →</a></nav></article></main>${footer()}`;
   const structuredData = [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Pirkėjo gidas', path: '/gidas' }, { name: article.title, path }]), articleSchema(article, path)];
   if (article.faq?.length) structuredData.push(faqSchema(article.faq));
   await writeRoute(path, injectPage({ title: `${article.title} | Pirkėjo gidas`, description: article.metaDescription ?? article.summary, path, type: 'article', body, structuredData }));
