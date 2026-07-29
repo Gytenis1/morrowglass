@@ -411,20 +411,29 @@ function syncBrowseState(mode: 'push' | 'replace'): void {
   window.history[mode === 'push' ? 'pushState' : 'replaceState']({}, '', nextUrl);
 }
 
+function normalizePathname(pathname = window.location.pathname): string {
+  return pathname.replace(/\/index\.html$/, '').replace(/\/+$/, '') || '/';
+}
+
+function isContractPath(pathname = window.location.pathname): boolean {
+  return normalizePathname(pathname) === '/gidas/baldu-pirkimo-sutarties-sablonas';
+}
+
 function isGuidePath(pathname = window.location.pathname): boolean {
-  return pathname === '/gidas' || pathname.startsWith('/gidas/');
+  const path = normalizePathname(pathname);
+  return path === '/gidas' || path.startsWith('/gidas/');
 }
 
 function isLandingPath(pathname = window.location.pathname): boolean {
-  return pathname.startsWith('/baldai-pagal-uzsakyma/');
+  return normalizePathname(pathname).startsWith('/baldai-pagal-uzsakyma/');
 }
 
 function isRequestPath(pathname = window.location.pathname): boolean {
-  return pathname.replace(/\/+$/, '') === '/gauti-pasiulymus';
+  return normalizePathname(pathname) === '/gauti-pasiulymus';
 }
 
 function isComparisonPath(pathname = window.location.pathname): boolean {
-  return pathname.replace(/\/+$/, '') === '/palyginti-pasiulymus';
+  return normalizePathname(pathname) === '/palyginti-pasiulymus';
 }
 
 function getPolicyPage(pathname = window.location.pathname): PolicyPage | undefined {
@@ -2595,14 +2604,9 @@ function renderGuideNotFound(): void {
 }
 
 function renderGuideRoute(): void {
-  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  const path = normalizePathname();
   if (path === '/gidas') {
     renderGuideHub();
-    return;
-  }
-  if (path === '/gidas/baldu-pirkimo-sutarties-sablonas') {
-    if (!root) return;
-    renderContractTool({ root, renderHeader, renderFooter });
     return;
   }
 
@@ -2645,8 +2649,11 @@ function route(): void {
     return;
   }
 
-  if (isGuidePath()) {
-    renderGuideRoute();
+  // Buyer tools use canonical standalone routes. Match them before the broader
+  // guide namespace so the contract tool can never fall through as an article.
+  if (isContractPath()) {
+    if (!root) return;
+    renderContractTool({ root, renderHeader, renderFooter });
     return;
   }
 
@@ -2658,6 +2665,11 @@ function route(): void {
 
   if (isRequestPath()) {
     renderRequestPage();
+    return;
+  }
+
+  if (isGuidePath()) {
+    renderGuideRoute();
     return;
   }
 
