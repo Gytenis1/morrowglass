@@ -5,9 +5,9 @@ import { fileURLToPath } from 'node:url';
 
 const rootDir = fileURLToPath(new URL('..', import.meta.url));
 const publicDir = join(rootDir, 'public');
-const SITE_URL = 'https://lithuanian-eta-app.supernaut.to';
+const SITE_URL = 'https://www.baldininkai.org';
 const SITE_NAME = 'Baldai pagal užsakymą Lietuvoje';
-const sourceDate = '2026-07-27';
+const sourceDate = '2026-07-29';
 
 const [manufacturers, landingConfig, baseHtml] = await Promise.all([
   readFile(join(rootDir, 'data/manufacturers.json'), 'utf8').then(JSON.parse),

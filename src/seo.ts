@@ -1,6 +1,6 @@
 import landingConfig from '../data/seo-landings.json';
 
-export const SITE_URL = 'https://lithuanian-eta-app.supernaut.to';
+export const SITE_URL = 'https://www.baldininkai.org';
 export const SITE_NAME = 'Baldai pagal užsakymą Lietuvoje';
 export const CITY_LANDING_THRESHOLD = landingConfig.cityThreshold;
 
