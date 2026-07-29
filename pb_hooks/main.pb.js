@@ -857,6 +857,105 @@ onRecordAfterCreateSuccess((event) => {
 // RFQ tender foundation: the public API is intentionally limited to a single
 // submission route. Collections remain superuser-only; dispatching and proposal
 // handling have no public endpoint and never send external messages from hooks.
+onRecordAfterCreateSuccess((event) => {
+  event.next();
+
+  const record = event.record;
+  const reference = record.getString("reference");
+  // Keep this alert operational only: buyer and provider contact details, the
+  // preferred shortlist, and any dispatch data must remain out of notifications.
+  const oneLine = (value) => String(value || "Nenurodyta").replace(/\s+/g, " ").trim();
+  const summary = [
+    "RFQ " + reference,
+    "Kategorija: " + oneLine(record.getString("category")),
+    "Savivaldybė: " + oneLine(record.getString("municipality")),
+    "Regionas: " + oneLine(record.getString("service_region")),
+    "Etapas: " + oneLine(record.getString("project_stage")),
+    "Biudžetas: " + record.get("budget_min") + "–" + record.get("budget_max") + " EUR",
+    "Pageidaujamas terminas: " + oneLine(record.getString("desired_completion_date")),
+  ].join(" · ");
+
+  const agentMailKey = $os.getenv("AGENTMAIL_API_KEY");
+  const agentMailInbox = $os.getenv("AGENTMAIL_INBOX_ID");
+  if (!agentMailKey || !agentMailInbox) {
+    event.app.logger().error(
+      "RFQ operator notification email skipped because AgentMail environment is unavailable",
+      "recordId",
+      record.id
+    );
+  } else {
+    try {
+      const response = $http.send({
+        method: "POST",
+        url: "https://api.agentmail.to/v0/inboxes/" + encodeURIComponent(agentMailInbox) + "/messages/send",
+        headers: {
+          "Authorization": "Bearer " + agentMailKey,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: ["info@baldininkai.org"],
+          subject: "Nauja RFQ užklausa: " + reference,
+          text: [
+            "Nauja RFQ užklausa priimta operatoriaus peržiūrai.",
+            "",
+            summary,
+            "",
+            "Užklausa nėra automatiškai siunčiama gamintojams.",
+          ].join("\n"),
+          labels: ["app"],
+        }),
+        timeout: 15,
+      });
+      if (response.statusCode < 200 || response.statusCode >= 300) {
+        throw new Error("AgentMail returned HTTP " + response.statusCode);
+      }
+    } catch (err) {
+      event.app.logger().error(
+        "RFQ operator notification email failed",
+        "recordId",
+        record.id,
+        "error",
+        String(err)
+      );
+    }
+  }
+
+  const eventsUrl = $os.getenv("SUPERNAUT_EVENTS_URL");
+  if (!eventsUrl) {
+    event.app.logger().error(
+      "RFQ dashboard notification skipped because SUPERNAUT_EVENTS_URL is unavailable",
+      "recordId",
+      record.id
+    );
+    return;
+  }
+
+  try {
+    const response = $http.send({
+      method: "POST",
+      url: eventsUrl,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event: "rfq_submitted",
+        subject: "Nauja RFQ užklausa: " + reference,
+        text: summary,
+      }),
+      timeout: 15,
+    });
+    if (response.statusCode < 200 || response.statusCode >= 300) {
+      throw new Error("SUPERNAUT_EVENTS_URL returned HTTP " + response.statusCode);
+    }
+  } catch (err) {
+    event.app.logger().error(
+      "RFQ dashboard notification failed",
+      "recordId",
+      record.id,
+      "error",
+      String(err)
+    );
+  }
+}, "rfqs");
+
 routerAdd("POST", "/api/public/rfqs", (event) => {
   const fail = (field, code, message) => {
     const data = {};
