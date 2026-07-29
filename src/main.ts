@@ -1,6 +1,6 @@
 import type { RecordModel } from 'pocketbase';
 import './styles.css';
-import baldininkaiLogoUrl from './assets/baldininkai-logo.svg';
+import baldininkaiLogoUrl from './assets/baldininkai-logo.png';
 import { pb } from './pocketbase';
 import { renderComparisonTool, renderContractTool, renderRfqTool } from './buyerTools';
 import {
@@ -589,6 +589,20 @@ function formatManufacturerCount(count: number): string {
   return `${count} gamintojų kandidatų`;
 }
 
+function getActiveBrowseFilterLabels(): string[] {
+  const findLabel = (options: FilterOption[], value: string): string =>
+    options.find((option) => option.value === value)?.label ?? value;
+  const labels: string[] = [];
+  if (browseState.query) labels.push(`Paieška: „${browseState.query}“`);
+  if (browseState.category) labels.push(`Kategorija: ${findLabel(getCategoryOptions(manufacturers), browseState.category)}`);
+  if (browseState.city) labels.push(`Miestas: ${findLabel(getOptions(manufacturers, 'city', 'city'), browseState.city)}`);
+  if (browseState.region) labels.push(`Regiono grupė: ${findLabel(getOptions(manufacturers, 'region', 'region_label'), browseState.region)}`);
+  if (browseState.employeeBand) labels.push(`Įmonės dydis: ${findLabel(EMPLOYEE_BAND_OPTIONS, browseState.employeeBand)}`);
+  if (browseState.foundedPeriod) labels.push(`Įkurta: ${findLabel(FOUNDED_PERIOD_OPTIONS, browseState.foundedPeriod)}`);
+  if (browseState.registryCheckedOnly) labels.push('Registro duomenys patikrinti');
+  return labels;
+}
+
 function distinctLegalName(record: Manufacturer): string {
   const legal = record.legal_name?.trim() ?? '';
   if (!legal) return '';
@@ -613,6 +627,12 @@ function distinctLegalName(record: Manufacturer): string {
 }
 
 function renderHeader(active: HeaderSection): string {
+  const activeLabel: Record<HeaderSection, string> = {
+    directory: 'Katalogas',
+    request: 'Projekto užklausa',
+    guide: 'Pirkėjo gidas',
+    policy: 'Informacija',
+  };
   return `
     <header class="site-header">
       <div class="header-inner">
@@ -622,7 +642,12 @@ function renderHeader(active: HeaderSection): string {
           </span>
           <span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span>
         </a>
-        <nav aria-label="Pagrindinė navigacija">
+        <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Atverti pagrindinį meniu. Dabartinis skyrius: ${activeLabel[active]}">
+          <span class="navigation-toggle-label">Meniu</span>
+          <span class="navigation-current">${activeLabel[active]}</span>
+          <span class="navigation-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Pagrindinė navigacija">
           <a href="/" data-internal-link="true"${active === 'directory' ? ' aria-current="page"' : ''}>Katalogas</a>
           <a href="/gauti-pasiulymus" data-internal-link="true"${active === 'request' ? ' aria-current="page"' : ''}>Projekto užklausa</a>
           <a href="/gidas" data-internal-link="true"${active === 'guide' ? ' aria-current="page"' : ''}>Pirkėjo gidas</a>
@@ -928,18 +953,28 @@ function renderShell(): void {
         <div class="intro-copy">
           <p class="kicker">Viešas paieškos katalogas</p>
           <h1 id="page-title">Raskite baldų gamintojus pagal poreikį ir vietą</h1>
-          <p class="lead">Ieškokite Lietuvos nestandartinių baldų gamintojų kandidatų pagal kategoriją, vietą, įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p>
+          <p class="lead">Pradėkite nuo baldų rūšies ir miesto. Rezultatus galėsite tikslinti pagal pavadinimą, įmonės duomenis ir kitus katalogo kriterijus.</p>
           <div class="intro-actions">
-            <a class="primary-button primary-button--light" href="/gauti-pasiulymus" data-internal-link="true">Pateikti projekto užklausą</a>
+            <a class="intro-secondary-link" href="/gauti-pasiulymus" data-internal-link="true">Jau turite projekto aprašymą? Pateikti užklausą →</a>
             <a class="intro-guide-link" href="/gidas" data-internal-link="true">Kaip atrinkti ir palyginti gamintojus →</a>
           </div>
         </div>
-        <aside class="directory-note" id="apie-kataloga" aria-labelledby="directory-note-title">
-          <h2 id="directory-note-title">Ką svarbu žinoti</h2>
-          <p>Tai iš viešų šaltinių sudarytas, nepatvirtintų kandidatų katalogas. Įrašai nėra kokybės, užimtumo ar meistrystės garantija, todėl informaciją ir pasiūlymus įvertinkite savarankiškai.</p>
-        </aside>
+        <div class="home-search-panel" aria-labelledby="home-search-title">
+          <div class="home-search-heading">
+            <h2 id="home-search-title">Ko ieškote?</h2>
+            <p>Pasirinkite poreikį ir vietą — katalogas atsinaujins iškart.</p>
+          </div>
+          <div id="home-filter-controls"></div>
+          <aside id="apie-kataloga">
+            <details class="directory-note">
+              <summary>Ką svarbu žinoti apie katalogą</summary>
+              <p>Tai iš viešų šaltinių sudarytas, nepatvirtintų kandidatų katalogas. Įrašai nėra kokybės, užimtumo ar meistrystės garantija, todėl informaciją ir pasiūlymus įvertinkite savarankiškai.</p>
+            </details>
+          </aside>
+        </div>
       </section>
-      <section class="browse-section" id="gamintojai" aria-labelledby="browse-title">
+      <section class="browse-section" id="gamintojai" aria-labelledby="browse-results-title">
+        <h2 class="visually-hidden" id="browse-results-title">Gamintojų katalogo rezultatai</h2>
         <div id="browse-content"></div>
       </section>
       ${renderLandingDirectory()}
@@ -955,7 +990,7 @@ function renderLoading(): void {
     <div class="loading-state" role="status" aria-live="polite">
       <span class="loading-mark" aria-hidden="true"><span></span><span></span><span></span></span>
       <div>
-        <h2 id="browse-title">Kraunamas gamintojų katalogas</h2>
+        <h2>Kraunamas gamintojų katalogas</h2>
         <p>Gaunami naujausi viešo šaltinio įrašai…</p>
       </div>
     </div>
@@ -989,45 +1024,37 @@ function renderDirectoryError(): void {
 }
 
 function renderBrowse(): void {
+  const controlsHost = document.querySelector<HTMLElement>('#home-filter-controls');
   const container = document.querySelector<HTMLElement>('#browse-content');
-  if (!container) return;
+  if (!controlsHost || !container) return;
 
   const categoryOptions = getCategoryOptions(manufacturers);
   const cityOptions = getOptions(manufacturers, 'city', 'city');
   const regionOptions = getOptions(manufacturers, 'region', 'region_label');
   validateBrowseState(categoryOptions, cityOptions, regionOptions);
 
+  controlsHost.replaceChildren();
   container.replaceChildren();
 
   const controls = document.createElement('div');
   controls.className = 'browse-controls';
 
-  const controlsHeading = document.createElement('div');
-  controlsHeading.className = 'controls-heading';
-  controlsHeading.innerHTML = `
-    <div>
-      <p class="kicker">Paieška ir filtrai</p>
-      <h2 id="browse-title">Gamintojų katalogas</h2>
-    </div>
-    <p>Filtrai taikomi kartu. Registro patikros žyma nurodo tik viešų duomenų būseną, o ne gamintojo kokybę ar prieinamumą.</p>
-  `;
-
   const form = document.createElement('form');
   form.className = 'filter-form';
   form.setAttribute('role', 'search');
-  form.addEventListener('submit', (event) => event.preventDefault());
+  form.setAttribute('aria-label', 'Gamintojų katalogo paieška');
 
   const searchField = document.createElement('div');
   searchField.className = 'filter-field filter-field--search';
   const searchLabel = document.createElement('label');
   searchLabel.htmlFor = 'directory-search';
-  searchLabel.textContent = 'Ieškoti kataloge';
+  searchLabel.textContent = 'Poreikis arba pavadinimas';
   const searchInput = document.createElement('input');
   searchInput.id = 'directory-search';
   searchInput.name = 'paieska';
   searchInput.type = 'search';
   searchInput.autocomplete = 'off';
-  searchInput.placeholder = 'Pavadinimas, aprašymas ar kategorija';
+  searchInput.placeholder = 'Pvz., virtuvės baldai arba įmonės pavadinimas';
   searchInput.value = browseState.query;
   searchField.append(searchLabel, searchInput);
 
@@ -1037,29 +1064,65 @@ function renderBrowse(): void {
     searchField,
     createSelect('category-filter', 'Baldų kategorija', 'Visos kategorijos', categoryOptions, browseState.category),
     createSelect('city-filter', 'Miestas', 'Visi miestai', cityOptions, browseState.city),
-    createSelect('region-filter', 'Šaltinio regiono grupė', 'Visos regiono grupės', regionOptions, browseState.region),
   );
+
   const advancedControls = createAdvancedFilterFields('directory');
+  const advancedDetails = document.createElement('details');
+  advancedDetails.className = 'advanced-filters';
+  advancedDetails.open = Boolean(browseState.region || hasAdvancedFilters());
+  const advancedSummary = document.createElement('summary');
+  const advancedSummaryLabel = document.createElement('span');
+  advancedSummaryLabel.textContent = 'Daugiau filtrų';
+  const advancedSummaryStatus = document.createElement('span');
+  advancedSummaryStatus.className = 'advanced-filter-status';
+  advancedSummary.append(advancedSummaryLabel, advancedSummaryStatus);
+  const advancedFields = document.createElement('div');
+  advancedFields.className = 'filter-grid filter-grid--advanced';
+  advancedFields.append(
+    createSelect('region-filter', 'Šaltinio regiono grupė', 'Visos regiono grupės', regionOptions, browseState.region),
+    ...Array.from(advancedControls.fields.children),
+  );
+  advancedDetails.append(advancedSummary, advancedFields);
 
   const filterActions = document.createElement('div');
   filterActions.className = 'filter-actions';
-  const activeHint = document.createElement('p');
-  activeHint.textContent = 'Paieška atnaujinama iškart vedant tekstą.';
+  const showResultsButton = document.createElement('button');
+  showResultsButton.className = 'primary-button home-search-submit';
+  showResultsButton.type = 'submit';
+  showResultsButton.textContent = 'Rodyti gamintojus';
   const clearButton = document.createElement('button');
   clearButton.className = 'text-button';
   clearButton.id = 'clear-filters';
   clearButton.type = 'button';
-  clearButton.textContent = 'Išvalyti paiešką ir filtrus';
-  filterActions.append(activeHint, clearButton);
+  clearButton.textContent = 'Išvalyti filtrus';
+  filterActions.append(showResultsButton, clearButton);
 
-  form.append(fields, advancedControls.fields, filterActions);
-  controls.append(controlsHeading, form);
+  form.append(fields, advancedDetails, filterActions);
+  controls.append(form);
 
   const results = document.createElement('div');
   results.className = 'results-area';
   results.id = 'results-area';
 
-  container.append(controls, results);
+  controlsHost.append(controls);
+  container.append(results);
+
+  const updateAdvancedSummary = (): void => {
+    const count = [browseState.region, browseState.employeeBand, browseState.foundedPeriod]
+      .filter(Boolean).length + (browseState.registryCheckedOnly ? 1 : 0);
+    advancedSummaryStatus.textContent = count ? `${count} pasirinkta` : 'Nebūtina';
+  };
+  updateAdvancedSummary();
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const resultCount = document.querySelector<HTMLElement>('.result-count');
+    document.querySelector<HTMLElement>('#gamintojai')?.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start',
+    });
+    resultCount?.focus({ preventScroll: true });
+  });
 
   searchInput.addEventListener('input', () => {
     browseState.query = searchInput.value.trimStart();
@@ -1080,21 +1143,25 @@ function renderBrowse(): void {
   document.querySelector<HTMLSelectElement>('#region-filter')?.addEventListener('change', (event) => {
     browseState.region = (event.currentTarget as HTMLSelectElement).value;
     syncBrowseState('push');
+    updateAdvancedSummary();
     renderResults();
   });
   advancedControls.employeeBandSelect.addEventListener('change', () => {
     browseState.employeeBand = advancedControls.employeeBandSelect.value;
     syncBrowseState('push');
+    updateAdvancedSummary();
     renderResults();
   });
   advancedControls.foundedPeriodSelect.addEventListener('change', () => {
     browseState.foundedPeriod = advancedControls.foundedPeriodSelect.value;
     syncBrowseState('push');
+    updateAdvancedSummary();
     renderResults();
   });
   advancedControls.registryToggle.addEventListener('change', () => {
     browseState.registryCheckedOnly = advancedControls.registryToggle.checked;
     syncBrowseState('push');
+    updateAdvancedSummary();
     renderResults();
   });
   clearButton.addEventListener('click', () => {
@@ -1123,6 +1190,7 @@ function renderResults(): void {
   resultHeader.className = 'result-header';
   const count = document.createElement('p');
   count.className = 'result-count';
+  count.tabIndex = -1;
   count.setAttribute('role', 'status');
   count.setAttribute('aria-live', 'polite');
   count.textContent = hasFilters
@@ -1131,9 +1199,14 @@ function renderResults(): void {
   resultHeader.append(count);
 
   if (hasFilters) {
-    const active = document.createElement('p');
+    const active = document.createElement('ul');
     active.className = 'active-filters';
-    active.textContent = 'Aktyvi atranka pagal pasirinktus kriterijus';
+    active.setAttribute('aria-label', 'Aktyvūs paieškos kriterijai');
+    getActiveBrowseFilterLabels().forEach((label) => {
+      const item = document.createElement('li');
+      item.textContent = label;
+      active.append(item);
+    });
     resultHeader.append(active);
   }
 
@@ -2347,7 +2420,7 @@ function renderGuideHub(): void {
           <p>Trys atskiri įrankiai padeda išlaikyti vienodą projekto informaciją nuo užklausos iki pasiūlymų ir sutarties peržiūros.</p>
         </div>
         <ul class="buyer-tool-links">
-          <li><a href="/gauti-pasiulymus" data-internal-link="true"><strong>Pateikti saugią projekto RFQ</strong><span>Operatoriaus peržiūra ir jokių automatinių kontaktų su gamintojais.</span></a></li>
+          <li><a href="/gauti-pasiulymus" data-internal-link="true"><strong>Pateikti saugią projekto pasiūlymo užklausą</strong><span>Operatoriaus peržiūra ir jokių automatinių kontaktų su gamintojais.</span></a></li>
           <li><a href="/palyginti-pasiulymus" data-internal-link="true"><strong>Palyginti 2–5 pasiūlymus</strong><span>Aiški formulė, jūsų svoriai, įrodymai ir matomos spragos.</span></a></li>
           <li><a href="/gidas/baldu-pirkimo-sutarties-sablonas" data-internal-link="true"><strong>Redaguoti sutarties struktūros šabloną</strong><span>Naršyklėje pildomas ir spausdinamas informacinis B2C ruošinys.</span></a></li>
         </ul>
@@ -2757,6 +2830,43 @@ function navigateToCurrentRoute(): void {
   }
   void loadDirectory();
 }
+
+function setPrimaryNavigationOpen(header: HTMLElement, open: boolean, returnFocus = false): void {
+  const toggle = header.querySelector<HTMLButtonElement>('.navigation-toggle');
+  if (!toggle) return;
+  if (open) header.dataset.menuOpen = 'true';
+  else delete header.dataset.menuOpen;
+  toggle.setAttribute('aria-expanded', String(open));
+  const current = toggle.querySelector<HTMLElement>('.navigation-current')?.textContent?.trim() ?? '';
+  toggle.setAttribute(
+    'aria-label',
+    `${open ? 'Užverti' : 'Atverti'} pagrindinį meniu. Dabartinis skyrius: ${current}`,
+  );
+  if (returnFocus) toggle.focus();
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+  const toggle = target.closest<HTMLButtonElement>('.navigation-toggle');
+  if (toggle) {
+    const header = toggle.closest<HTMLElement>('.site-header');
+    if (!header) return;
+    setPrimaryNavigationOpen(header, toggle.getAttribute('aria-expanded') !== 'true');
+    return;
+  }
+
+  const openHeader = document.querySelector<HTMLElement>('.site-header[data-menu-open="true"]');
+  if (openHeader && !openHeader.contains(target)) setPrimaryNavigationOpen(openHeader, false);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  const openHeader = document.querySelector<HTMLElement>('.site-header[data-menu-open="true"]');
+  if (!openHeader) return;
+  event.preventDefault();
+  setPrimaryNavigationOpen(openHeader, false, true);
+});
 
 document.addEventListener('click', (event) => {
   const target = event.target;

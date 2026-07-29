@@ -723,7 +723,7 @@ function mapApiErrors(root: HTMLElement, payload: unknown): boolean {
 export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers = [] }: ToolContext): void {
   setPageMetadata({
     title: 'Pateikite saugią baldų projekto užklausą | Baldai pagal užsakymą Lietuvoje',
-    description: 'Struktūruota baldų projekto RFQ užklausa operatoriaus peržiūrai, be automatinio siuntimo gamintojams ir su atskiru patvirtinimu prieš išsiuntimą.',
+    description: 'Struktūruota baldų projekto pasiūlymo užklausa operatoriaus peržiūrai, be automatinio siuntimo gamintojams ir su atskiru patvirtinimu prieš išsiuntimą.',
     path: RFQ_PATH,
     robots: window.location.search ? 'noindex, follow' : 'index, follow',
     structuredData: [breadcrumbStructuredData([
@@ -753,13 +753,13 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
       <section class="request-intro" aria-labelledby="request-title">
         <div>
           <p class="kicker">Saugi projekto užklausa</p>
-          <h1 id="request-title">Parenkite vienodą baldų projekto RFQ</h1>
+          <h1 id="request-title">Parenkite vienodą baldų projekto pasiūlymo užklausą</h1>
           <p class="lead">Pateikite pakankamai tikslią projekto santrauką operatoriaus peržiūrai. Gamintojų kontaktai čia nesiunčiami ir nė vienas tiekėjas nekontaktuojamas automatiškai.</p>
         </div>
         <aside class="request-expectation" aria-labelledby="request-expectation-title">
           <h2 id="request-expectation-title">Svarbi proceso riba</h2>
-          <p>Formos pateikimas tik sukuria RFQ peržiūros įrašą. Siuntimui gamintojams būtinas atskiras operatoriaus patvirtinimas.</p>
-          <p>Pateikimas negarantuoja, kad RFQ bus išsiųstas, kad gamintojas atsakys ar kad pasiūlymas bus priimtas.</p>
+          <p>Formos pateikimas tik sukuria pasiūlymo užklausos peržiūros įrašą. Siuntimui gamintojams būtinas atskiras operatoriaus patvirtinimas.</p>
+          <p>Pateikimas negarantuoja, kad pasiūlymo užklausa bus išsiųsta, kad gamintojas atsakys ar kad pasiūlymas bus priimtas.</p>
         </aside>
       </section>
 
@@ -769,10 +769,10 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
           <p>Kontaktas su tiekėjais atsiranda tik po peržiūros ir atskiro sprendimo.</p>
         </div>
         <ol>
-          <li><strong>Pirkėjas pateikia santrauką.</strong><span>Forma sukuria privatų RFQ įrašą operatoriaus peržiūrai.</span></li>
-          <li><strong>Operatorius patikrina briefą ir tinkamus kandidatus.</strong><span>Vertinama, ar informacijos pakanka ir kurie katalogo kandidatai galėtų atitikti apimtį.</span></li>
-          <li><strong>RFQ siunčiamas tik po atskiro patvirtinimo.</strong><span>Iki šio patvirtinimo pasirinkti gamintojai nekontaktuojami.</span></li>
-          <li><strong>Po išsiuntimo tiekėjai turi penkias dienas.</strong><span>Terminas pradedamas skaičiuoti nuo faktinio RFQ išsiuntimo, ne nuo šios formos pateikimo.</span></li>
+          <li><strong>Pirkėjas pateikia santrauką.</strong><span>Forma sukuria privatų pasiūlymo užklausos įrašą operatoriaus peržiūrai.</span></li>
+          <li><strong>Operatorius patikrina projekto aprašymą ir tinkamus kandidatus.</strong><span>Vertinama, ar informacijos pakanka ir kurie katalogo kandidatai galėtų atitikti apimtį.</span></li>
+          <li><strong>Pasiūlymo užklausa siunčiama tik po atskiro patvirtinimo.</strong><span>Iki šio patvirtinimo pasirinkti gamintojai nekontaktuojami.</span></li>
+          <li><strong>Po išsiuntimo tiekėjai turi penkias dienas.</strong><span>Terminas pradedamas skaičiuoti nuo faktinio pasiūlymo užklausos išsiuntimo, ne nuo šios formos pateikimo.</span></li>
           <li><strong>Pirkėjui grąžinami palyginami pasiūlymai.</strong><span>Grąžinami gauti ir suvienodinti atsakymai; atsakymų skaičius negarantuojamas.</span></li>
         </ol>
       </section>
@@ -786,7 +786,7 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
           <div class="form-error-summary" id="rfq-error-summary" role="alert" tabindex="-1" hidden></div>
           <div class="rfq-success" id="rfq-success" role="status" tabindex="-1" hidden>
             <p class="state-label">Užklausa gauta</p>
-            <h2>RFQ nuoroda: <span id="rfq-reference"></span></h2>
+            <h2>Užklausos numeris: <span id="rfq-reference"></span></h2>
             <p>Užklausa perduota operatoriaus peržiūrai. Gamintojai nebuvo kontaktuoti automatiškai; galimas siuntimas vyks tik po atskiro patvirtinimo.</p>
           </div>
           <form class="buyer-request-form rfq-form" id="rfq-form" novalidate>
@@ -887,11 +887,11 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
 
             <div class="attachment-limit form-field--wide">
               <strong>Failų ši forma neįkelia.</strong>
-              <p>Planų, nuotraukų ar brėžinių čia prisegti negalima. Jei jų reikės, operatorius RFQ peržiūros metu nurodys, kaip ir kada juos pateikti; iki atskiro patvirtinimo jie nebus perduodami gamintojams.</p>
+              <p>Planų, nuotraukų ar brėžinių čia prisegti negalima. Jei jų reikės, operatorius pasiūlymo užklausos peržiūros metu nurodys, kaip ir kada juos pateikti; iki atskiro patvirtinimo jie nebus perduodami gamintojams.</p>
             </div>
-            <p class="form-privacy-note form-field--wide">Kontaktus ir projekto informaciją naudosime RFQ administruoti. Užklausa automatiškai nepersiunčiama gamintojams. Skaitykite <a href="/privatumas" data-internal-link="true">privatumo pranešimą</a>.</p>
+            <p class="form-privacy-note form-field--wide">Kontaktus ir projekto informaciją naudosime pasiūlymo užklausai administruoti. Užklausa automatiškai nepersiunčiama gamintojams. Skaitykite <a href="/privatumas" data-internal-link="true">privatumo pranešimą</a>.</p>
             <div class="request-submit form-field--wide">
-              <button class="primary-button" type="submit">Pateikti RFQ operatoriaus peržiūrai</button>
+              <button class="primary-button" type="submit">Pateikti pasiūlymo užklausą operatoriaus peržiūrai</button>
               <p class="form-status" id="rfq-status" role="status" aria-live="polite" tabindex="-1"></p>
             </div>
           </form>
@@ -986,7 +986,7 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
     submit.setAttribute('aria-busy', 'true');
     submit.textContent = 'Pateikiama…';
     status.className = 'form-status';
-    status.textContent = 'RFQ kuriamas operatoriaus peržiūrai. Gamintojai nekontaktuojami.';
+    status.textContent = 'Pasiūlymo užklausa kuriama operatoriaus peržiūrai. Gamintojai nekontaktuojami.';
 
     try {
       const response = await fetch(`${apiBaseUrl.replace(/\/+$/, '')}/api/public/rfqs`, {
@@ -1007,9 +1007,9 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
             summary.focus();
           }
         }
-        throw new Error(body?.message || 'RFQ pateikti nepavyko.');
+        throw new Error(body?.message || 'Pasiūlymo užklausos pateikti nepavyko.');
       }
-      if (!body?.reference) throw new Error('Serveris negrąžino RFQ nuorodos.');
+      if (!body?.reference) throw new Error('Serveris negrąžino pasiūlymo užklausos numerio.');
 
       const success = root.querySelector<HTMLElement>('#rfq-success');
       const reference = root.querySelector<HTMLElement>('#rfq-reference');
@@ -1019,22 +1019,22 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
         success.focus();
       }
       status.className = 'form-status form-status--success';
-      status.textContent = `RFQ ${body.reference} gautas operatoriaus peržiūrai. Gamintojai nebuvo kontaktuoti automatiškai.`;
-      submit.textContent = 'RFQ pateiktas';
+      status.textContent = `Pasiūlymo užklausa ${body.reference} gauta operatoriaus peržiūrai. Gamintojai nebuvo kontaktuoti automatiškai.`;
+      submit.textContent = 'Pasiūlymo užklausa pateikta';
       submit.removeAttribute('aria-busy');
       form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>('input, textarea, select').forEach((field) => { field.disabled = true; });
       return;
     } catch (error) {
-      console.error('Nepavyko pateikti RFQ.', error);
+      console.error('Nepavyko pateikti pasiūlymo užklausos.', error);
       status.className = 'form-status form-status--error';
       status.setAttribute('role', 'alert');
-      status.textContent = 'RFQ pateikti nepavyko. Įvesti duomenys liko formoje. Patikrinkite pažymėtus laukus ir interneto ryšį, tada bandykite dar kartą.';
+      status.textContent = 'Pasiūlymo užklausos pateikti nepavyko. Įvesti duomenys liko formoje. Patikrinkite pažymėtus laukus ir interneto ryšį, tada bandykite dar kartą.';
       status.focus();
     } finally {
-      if (!submit.disabled || submit.textContent !== 'RFQ pateiktas') {
+      if (!submit.disabled || submit.textContent !== 'Pasiūlymo užklausa pateikta') {
         submit.disabled = false;
         submit.removeAttribute('aria-busy');
-        submit.textContent = 'Pateikti RFQ operatoriaus peržiūrai';
+        submit.textContent = 'Pateikti pasiūlymo užklausą operatoriaus peržiūrai';
       }
     }
   });
