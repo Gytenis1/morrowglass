@@ -2,6 +2,7 @@ import type { RecordModel } from 'pocketbase';
 import './styles.css';
 import baldininkaiLogoUrl from './assets/baldininkai-logo.svg';
 import { pb } from './pocketbase';
+import { renderComparisonTool, renderContractTool, renderRfqTool } from './buyerTools';
 import {
   CATEGORY_LANDINGS,
   SITE_URL,
@@ -422,6 +423,10 @@ function isRequestPath(pathname = window.location.pathname): boolean {
   return pathname.replace(/\/+$/, '') === '/gauti-pasiulymus';
 }
 
+function isComparisonPath(pathname = window.location.pathname): boolean {
+  return pathname.replace(/\/+$/, '') === '/palyginti-pasiulymus';
+}
+
 function getPolicyPage(pathname = window.location.pathname): PolicyPage | undefined {
   const normalizedPath = pathname.replace(/\/+$/, '') || '/';
   return policyPages.find((page) => page.path === normalizedPath);
@@ -612,6 +617,7 @@ function renderHeader(active: HeaderSection): string {
           <a href="/" data-internal-link="true"${active === 'directory' ? ' aria-current="page"' : ''}>Katalogas</a>
           <a href="/gauti-pasiulymus" data-internal-link="true"${active === 'request' ? ' aria-current="page"' : ''}>Projekto užklausa</a>
           <a href="/gidas" data-internal-link="true"${active === 'guide' ? ' aria-current="page"' : ''}>Pirkėjo gidas</a>
+          <a href="/gidas#pirkejo-irankiai">Pirkėjo įrankiai</a>
         </nav>
       </div>
     </header>
@@ -629,6 +635,8 @@ function renderFooter(): string {
         <nav aria-label="Poraštės navigacija">
           <a href="/gauti-pasiulymus" data-internal-link="true">Projekto užklausa</a>
           <a href="/gidas" data-internal-link="true">Pirkėjo gidas</a>
+          <a href="/gidas/baldu-pirkimo-sutarties-sablonas" data-internal-link="true">Sutarties šablonas</a>
+          <a href="/palyginti-pasiulymus" data-internal-link="true">Pasiūlymų palyginimas</a>
           <a href="/privatumas" data-internal-link="true">Privatumas</a>
           <a href="/naudojimosi-salygos" data-internal-link="true">Naudojimosi sąlygos</a>
           <a href="/slapukai" data-internal-link="true">Slapukai</a>
@@ -2049,261 +2057,11 @@ function renderLandingPage(slug: string): void {
 
 function renderRequestPage(): void {
   if (!root) return;
-
-  const requestPath = '/gauti-pasiulymus';
-  const requestedSlug = new URLSearchParams(window.location.search).get('gamintojas')?.trim() ?? '';
-  const preselectedManufacturer = requestedSlug
-    ? manufacturers.find((record) => record.slug === requestedSlug)
-    : undefined;
-  const hasInvalidPreselection = Boolean(requestedSlug && !preselectedManufacturer);
-
-  setPageMetadata({
-    title: 'Pateikite baldų projekto užklausą | Baldai pagal užsakymą Lietuvoje',
-    description: 'Aprašykite nestandartinių baldų projektą, biudžetą, vietą ir terminą bei pasirinkite kataloge rastus gamintojų kandidatus.',
-    path: requestPath,
-    robots: window.location.search ? 'noindex, follow' : 'index, follow',
-    structuredData: [
-      breadcrumbStructuredData([
-        { name: 'Gamintojų katalogas', path: '/' },
-        { name: 'Projekto užklausa', path: requestPath },
-      ]),
-    ],
-  });
-
-  const selectOptions = (items: string[], placeholder: string) => `
-    <option value="">${escapeHtml(placeholder)}</option>
-    ${items.map((item) => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}
-  `;
-  const orderedManufacturers = preselectedManufacturer
-    ? [preselectedManufacturer, ...manufacturers.filter((record) => record.slug !== preselectedManufacturer.slug)]
-    : manufacturers;
-  const manufacturerChoices = orderedManufacturers.map((record) => {
-    const details = [record.city?.trim(), asStringArray(record.category_labels).slice(0, 2).join(', ')].filter(Boolean).join(' · ');
-    const checked = preselectedManufacturer?.slug === record.slug ? ' checked' : '';
-    return `
-      <label class="manufacturer-choice">
-        <input type="checkbox" name="shortlisted_manufacturer_slugs" value="${escapeHtml(record.slug)}"${checked}>
-        <span>
-          <strong>${escapeHtml(record.trading_name)}</strong>
-          <small>${escapeHtml(details || 'Vieta ir kategorijos viešame įraše nenurodytos')}</small>
-        </span>
-      </label>
-    `;
-  }).join('');
-
-  root.innerHTML = `
-    ${renderHeader('request')}
-    <main class="request-main">
-      <section class="request-intro" aria-labelledby="request-title">
-        <div>
-          <p class="kicker">Pirkėjo projekto santrauka</p>
-          <h1 id="request-title">Aprašykite baldų projektą vienoje vietoje</h1>
-          <p class="lead">Pateikite pagrindinę informaciją, kuri padeda vienodai įvertinti projekto rūšį, vietą, biudžetą ir pageidaujamą laiką.</p>
-        </div>
-        <aside class="request-expectation" aria-labelledby="request-expectation-title">
-          <h2 id="request-expectation-title">Kas nutinka pateikus?</h2>
-          <p>Užklausa išsaugoma katalogo peržiūrai. Katalogas jos automatiškai nepersiunčia pasirinktiems gamintojams ir netikrina gamintojų.</p>
-          <p>Pateikimas negarantuoja atsakymo, pasiūlymo, kainos ar projekto priėmimo.</p>
-        </aside>
-      </section>
-
-      <div class="request-layout">
-        <section class="request-form-section" aria-labelledby="request-form-title">
-          <div class="section-heading">
-            <h2 id="request-form-title">Projekto duomenys</h2>
-            <p>Žvaigždute pažymėti laukai yra privalomi. Nesiųskite asmens kodo, mokėjimo duomenų ar kitos jautrios informacijos.</p>
-          </div>
-          <form class="buyer-request-form" id="buyer-request-form">
-            <div class="form-field">
-              <label for="project-type">Projekto rūšis *</label>
-              <div class="select-wrap">
-                <select id="project-type" name="project_type" required>
-                  ${selectOptions(projectTypeOptions, 'Pasirinkite projekto rūšį')}
-                </select>
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="city-region">Miestas arba regionas *</label>
-              <input id="city-region" name="city_region" type="text" autocomplete="address-level1" maxlength="160" required placeholder="Pvz., Vilnius arba Kauno rajonas">
-            </div>
-
-            <div class="form-field">
-              <label for="budget-band">Planuojamas biudžetas *</label>
-              <div class="select-wrap">
-                <select id="budget-band" name="budget_band" required>
-                  ${selectOptions(budgetBandOptions, 'Pasirinkite biudžeto ribas')}
-                </select>
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="timeline">Pageidaujamas laikas *</label>
-              <div class="select-wrap">
-                <select id="timeline" name="timeline" required>
-                  ${selectOptions(timelineOptions, 'Pasirinkite laikotarpį')}
-                </select>
-              </div>
-            </div>
-
-            <div class="form-field form-field--wide">
-              <label for="project-brief">Trumpai aprašykite projektą *</label>
-              <p class="field-hint" id="project-brief-hint">Bent ${PROJECT_BRIEF_MIN_LENGTH} ženklų. Nurodykite baldus, apytikslius matmenis, medžiagų ar funkcijų prioritetus ir kokių paslaugų reikia.</p>
-              <textarea id="project-brief" name="project_brief" rows="8" minlength="${PROJECT_BRIEF_MIN_LENGTH}" maxlength="${PROJECT_BRIEF_MAX_LENGTH}" required aria-describedby="project-brief-hint"></textarea>
-            </div>
-
-            <fieldset class="manufacturer-fieldset form-field--wide">
-              <legend>Pasirinkti gamintojų kandidatai (nebūtina)</legend>
-              <p class="field-hint" id="manufacturer-choice-hint">Pasirinkimas tik pridedamas prie užklausos. Katalogas jos automatiškai nesiunčia šiems gamintojams ir jų netikrina.</p>
-              ${hasInvalidPreselection ? '<p class="selection-notice" role="status">Nuorodoje nurodyto gamintojo kataloge nerasta. Galite pasirinkti kitą kandidatą.</p>' : ''}
-              <div class="manufacturer-picker">
-                <div class="manufacturer-picker-toolbar">
-                  <div class="form-field">
-                    <label for="manufacturer-search">Ieškoti kandidatų</label>
-                    <input id="manufacturer-search" type="search" autocomplete="off" maxlength="120" placeholder="Pavadinimas, miestas ar kategorija">
-                  </div>
-                  <p id="manufacturer-selection-count" aria-live="polite">${preselectedManufacturer ? 'Pasirinktas 1 kandidatas' : 'Kandidatų nepasirinkta'}</p>
-                </div>
-                <div class="manufacturer-choice-list" id="manufacturer-choice-list" aria-describedby="manufacturer-choice-hint">
-                  ${manufacturerChoices}
-                </div>
-                <p class="manufacturer-empty" id="manufacturer-empty" hidden>Pagal šią paiešką kandidatų nerasta.</p>
-              </div>
-            </fieldset>
-
-            <div class="form-field">
-              <label for="contact-name">Jūsų vardas *</label>
-              <input id="contact-name" name="contact_name" type="text" autocomplete="name" maxlength="120" required>
-            </div>
-
-            <div class="form-field">
-              <label for="contact-email">El. paštas *</label>
-              <input id="contact-email" name="contact_email" type="email" inputmode="email" autocomplete="email" maxlength="254" required placeholder="vardas@pavyzdys.lt">
-            </div>
-
-            <div class="honeypot-field" aria-hidden="true">
-              <label for="company-website">Įmonės svetainė</label>
-              <input id="company-website" name="honeypot" type="text" autocomplete="off" tabindex="-1" maxlength="200">
-            </div>
-
-            <p class="form-privacy-note form-field--wide">Vardą, el. paštą ir projekto informaciją naudosime tik užklausai administruoti. Užklausa automatiškai nepersiunčiama gamintojams. Skaitykite <a href="/privatumas" data-internal-link="true">privatumo pranešimą</a>.</p>
-
-            <div class="request-submit form-field--wide">
-              <button class="primary-button" type="submit">Pateikti projekto užklausą</button>
-              <p class="form-status" id="buyer-request-status" role="status" aria-live="polite" tabindex="-1"></p>
-            </div>
-          </form>
-        </section>
-
-        <aside class="request-guidance" aria-labelledby="request-guidance-title">
-          <h2 id="request-guidance-title">Prieš pateikiant</h2>
-          <ul>
-            <li>Aiškiai atskirkite būtinus sprendimus nuo pageidavimų.</li>
-            <li>Biudžetą vertinkite kartu su medžiagomis, furnitūra, pristatymu ir montavimu.</li>
-            <li>Pasirinktų kandidatų tapatybę, užimtumą ir pasiūlymą patikrinkite savarankiškai.</li>
-          </ul>
-          <a href="/gidas/uzklausa-ir-pasiulymas" data-internal-link="true">Kaip parengti palyginamą užklausą →</a>
-        </aside>
-      </div>
-    </main>
-    ${renderFooter()}
-  `;
-
-  const form = document.querySelector<HTMLFormElement>('#buyer-request-form');
-  const brief = document.querySelector<HTMLTextAreaElement>('#project-brief');
-  const manufacturerSearch = document.querySelector<HTMLInputElement>('#manufacturer-search');
-  const manufacturerList = document.querySelector<HTMLElement>('#manufacturer-choice-list');
-  const manufacturerEmpty = document.querySelector<HTMLElement>('#manufacturer-empty');
-  const selectionCount = document.querySelector<HTMLElement>('#manufacturer-selection-count');
-  const status = document.querySelector<HTMLElement>('#buyer-request-status');
-  const submit = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
-  const honeypot = document.querySelector<HTMLInputElement>('#company-website');
-  if (!form || !brief || !manufacturerSearch || !manufacturerList || !manufacturerEmpty || !selectionCount || !status || !submit || !honeypot) return;
-
-  const choices = Array.from(manufacturerList.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'));
-  const updateSelectionCount = () => {
-    const count = choices.filter((choice) => choice.checked).length;
-    selectionCount.textContent = count === 0
-      ? 'Kandidatų nepasirinkta'
-      : count === 1
-        ? 'Pasirinktas 1 kandidatas'
-        : `Pasirinkta kandidatų: ${count}`;
-  };
-  const filterManufacturers = () => {
-    const query = normalize(manufacturerSearch.value);
-    let visibleCount = 0;
-    manufacturerList.querySelectorAll<HTMLElement>('.manufacturer-choice').forEach((choice) => {
-      const visible = !query || normalize(choice.textContent ?? '').includes(query);
-      choice.hidden = !visible;
-      if (visible) visibleCount += 1;
-    });
-    manufacturerEmpty.hidden = visibleCount > 0;
-  };
-  choices.forEach((choice) => choice.addEventListener('change', updateSelectionCount));
-  manufacturerSearch.addEventListener('input', filterManufacturers);
-
-  const validateBrief = () => {
-    const length = brief.value.trim().length;
-    brief.setCustomValidity(length > 0 && length < PROJECT_BRIEF_MIN_LENGTH
-      ? `Aprašykite projektą bent ${PROJECT_BRIEF_MIN_LENGTH} ženklų.`
-      : '');
-  };
-  brief.addEventListener('input', () => brief.setCustomValidity(''));
-  brief.addEventListener('blur', validateBrief);
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    validateBrief();
-    if (!form.reportValidity()) return;
-
-    submit.disabled = true;
-    submit.setAttribute('aria-busy', 'true');
-    submit.textContent = 'Pateikiama…';
-    status.className = 'form-status';
-    status.setAttribute('role', 'status');
-    status.textContent = 'Užklausa pateikiama katalogo peržiūrai.';
-
-    const projectType = document.querySelector<HTMLSelectElement>('#project-type');
-    const cityRegion = document.querySelector<HTMLInputElement>('#city-region');
-    const budgetBand = document.querySelector<HTMLSelectElement>('#budget-band');
-    const timeline = document.querySelector<HTMLSelectElement>('#timeline');
-    const contactName = document.querySelector<HTMLInputElement>('#contact-name');
-    const contactEmail = document.querySelector<HTMLInputElement>('#contact-email');
-    if (!projectType || !cityRegion || !budgetBand || !timeline || !contactName || !contactEmail) return;
-
-    const shortlisted = choices.filter((choice) => choice.checked).map((choice) => choice.value);
-
-    try {
-      await pb.collection('buyer_requests').create({
-        project_type: projectType.value,
-        city_region: cityRegion.value.trim(),
-        budget_band: budgetBand.value,
-        timeline: timeline.value,
-        project_brief: brief.value.trim(),
-        contact_name: contactName.value.trim(),
-        contact_email: contactEmail.value.trim(),
-        shortlisted_manufacturer_slugs: shortlisted.length ? shortlisted : undefined,
-        ...(honeypot.value ? { honeypot: honeypot.value } : {}),
-      });
-      form.reset();
-      brief.setCustomValidity('');
-      manufacturerSearch.value = '';
-      filterManufacturers();
-      updateSelectionCount();
-      status.className = 'form-status form-status--success';
-      status.textContent = 'Užklausa gauta. Ji išsaugota katalogo peržiūrai ir nebuvo automatiškai persiųsta gamintojams. Atsakymas ar pasiūlymas negarantuojamas.';
-      status.focus();
-    } catch (error) {
-      console.error('Nepavyko pateikti pirkėjo projekto užklausos.', error);
-      status.className = 'form-status form-status--error';
-      status.setAttribute('role', 'alert');
-      status.textContent = 'Užklausos pateikti nepavyko. Patikrinkite laukus ir interneto ryšį, tada bandykite dar kartą.';
-      status.focus();
-    } finally {
-      submit.disabled = false;
-      submit.removeAttribute('aria-busy');
-      submit.textContent = 'Pateikti projekto užklausą';
-    }
+  renderRfqTool({
+    root,
+    renderHeader,
+    renderFooter,
+    manufacturers,
   });
 }
 
@@ -2573,6 +2331,18 @@ function renderGuideHub(): void {
           <li><a href="https://vvtat.lrv.lt/lt/veiklos-sritys-54/ne-maisto-produktai-55/vartotoju-teises-ir-garantijos-714/" target="_blank" rel="noopener noreferrer">Atverti oficialią VVTAT informaciją apie vartotojų teises ir garantijas <span aria-hidden="true">↗</span></a></li>
         </ul>
       </section>
+      <section class="buyer-tools-hub" id="pirkejo-irankiai" aria-labelledby="buyer-tools-title">
+        <div class="guide-hub-heading">
+          <p class="kicker">Pirkėjo įrankiai</p>
+          <h2 id="buyer-tools-title">Parenkite, palyginkite ir užfiksuokite</h2>
+          <p>Trys atskiri įrankiai padeda išlaikyti vienodą projekto informaciją nuo užklausos iki pasiūlymų ir sutarties peržiūros.</p>
+        </div>
+        <ul class="buyer-tool-links">
+          <li><a href="/gauti-pasiulymus" data-internal-link="true"><strong>Pateikti saugią projekto RFQ</strong><span>Operatoriaus peržiūra ir jokių automatinių kontaktų su gamintojais.</span></a></li>
+          <li><a href="/palyginti-pasiulymus" data-internal-link="true"><strong>Palyginti 2–5 pasiūlymus</strong><span>Aiški formulė, jūsų svoriai, įrodymai ir matomos spragos.</span></a></li>
+          <li><a href="/gidas/baldu-pirkimo-sutarties-sablonas" data-internal-link="true"><strong>Redaguoti sutarties struktūros šabloną</strong><span>Naršyklėje pildomas ir spausdinamas informacinis B2C ruošinys.</span></a></li>
+        </ul>
+      </section>
       <section class="guide-hub" aria-labelledby="featured-guides-title">
         <div class="guide-hub-heading">
           <h2 id="featured-guides-title">Keturi išsamūs gidai svarbiausiems sprendimams</h2>
@@ -2830,6 +2600,11 @@ function renderGuideRoute(): void {
     renderGuideHub();
     return;
   }
+  if (path === '/gidas/baldu-pirkimo-sutarties-sablonas') {
+    if (!root) return;
+    renderContractTool({ root, renderHeader, renderFooter });
+    return;
+  }
 
   const articleSlug = decodeURIComponent(path.split('/').filter(Boolean)[1] ?? '');
   const article = guideArticles.find((item) => item.slug === articleSlug);
@@ -2872,6 +2647,12 @@ function route(): void {
 
   if (isGuidePath()) {
     renderGuideRoute();
+    return;
+  }
+
+  if (isComparisonPath()) {
+    if (!root) return;
+    renderComparisonTool({ root, renderHeader, renderFooter });
     return;
   }
 
@@ -2954,7 +2735,7 @@ async function loadDirectory(): Promise<void> {
 
 function navigateToCurrentRoute(): void {
   browseState = readBrowseState();
-  if (isGuidePath() || isPolicyPath()) {
+  if (isGuidePath() || isPolicyPath() || isComparisonPath()) {
     route();
     return;
   }
@@ -2983,7 +2764,7 @@ document.addEventListener('click', (event) => {
 
 window.addEventListener('popstate', navigateToCurrentRoute);
 
-if (isGuidePath() || isPolicyPath()) {
+if (isGuidePath() || isPolicyPath() || isComparisonPath()) {
   route();
 } else {
   void loadDirectory();

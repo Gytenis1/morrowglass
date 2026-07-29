@@ -2424,6 +2424,765 @@
     font-weight: 800;
   }
 
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .secondary-button,
+  .text-button {
+    min-height: 46px;
+    padding: 0.72rem 1rem;
+    color: var(--pine-strong);
+    background: var(--surface);
+    border: 1px solid var(--pine);
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+  }
+
+  .secondary-button:hover,
+  .text-button:hover {
+    color: var(--surface);
+    background: var(--pine);
+  }
+
+  .secondary-button:active,
+  .text-button:active {
+    background: var(--pine-strong);
+  }
+
+  .secondary-button:disabled,
+  .text-button:disabled {
+    color: oklch(0.52 0.018 158);
+    background: oklch(0.94 0.008 158);
+    border-color: var(--line);
+    cursor: not-allowed;
+  }
+
+  .text-button {
+    min-height: 44px;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.84rem;
+  }
+
+  .buyer-tool-main {
+    width: min(calc(100% - 2rem), var(--content-width));
+    min-height: calc(100vh - 148px);
+    margin-inline: auto;
+    padding-block: clamp(1.5rem, 5vw, 4.5rem);
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .tool-navigation {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding-block: 0.85rem;
+    color: var(--ink);
+    border-block: 1px solid var(--line);
+  }
+
+  .tool-navigation > strong {
+    flex: 0 0 auto;
+    color: var(--pine);
+  }
+
+  .tool-navigation > div {
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem 1.25rem;
+  }
+
+  .tool-navigation a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--pine-strong);
+    font-size: 0.9rem;
+    font-weight: 780;
+  }
+
+  .tool-navigation a[aria-current="page"] {
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--moss);
+  }
+
+  .tool-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+    align-items: end;
+    gap: clamp(2rem, 6vw, 6rem);
+    padding-bottom: clamp(2rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .tool-intro > div {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .tool-intro .kicker {
+    color: var(--pine);
+  }
+
+  .tool-intro h1 {
+    max-width: 20ch;
+  }
+
+  .tool-intro .lead {
+    color: var(--ink-soft);
+  }
+
+  .local-only-note,
+  .attachment-limit {
+    display: grid;
+    gap: 0.55rem;
+    padding: 1.1rem 1.2rem;
+    color: oklch(0.3 0.04 225);
+    background: var(--registry-bg);
+    border: 1px solid oklch(0.82 0.045 225);
+    border-radius: 10px;
+  }
+
+  .local-only-note p,
+  .attachment-limit p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .buyer-tools-hub {
+    width: min(calc(100% - 2rem), var(--content-width));
+    margin: clamp(3rem, 8vw, 7rem) auto;
+    display: grid;
+    grid-template-columns: minmax(240px, 0.55fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(2rem, 6vw, 6rem);
+    scroll-margin-top: 1.5rem;
+  }
+
+  .buyer-tools-hub .kicker {
+    color: var(--pine);
+  }
+
+  .buyer-tool-links {
+    border-top: 1px solid var(--line);
+  }
+
+  .buyer-tool-links li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .buyer-tool-links a {
+    min-height: 92px;
+    display: grid;
+    grid-template-columns: minmax(190px, 0.75fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.1rem 0.5rem;
+    color: var(--pine-strong);
+    text-decoration: none;
+    transition: background-color 180ms cubic-bezier(0.25, 1, 0.5, 1), padding-inline 180ms cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .buyer-tool-links a:hover {
+    padding-inline: 0.9rem;
+    background: oklch(0.955 0.022 158);
+  }
+
+  .buyer-tool-links span {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+  }
+
+  .legal-template-warning {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    display: grid;
+    grid-template-columns: minmax(175px, 0.28fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1rem 1.2rem;
+    color: var(--warning-ink);
+    background: var(--warning-bg);
+    border: 1px solid oklch(0.82 0.07 78);
+    border-radius: 10px;
+  }
+
+  .legal-template-warning strong {
+    font-size: 0.9rem;
+  }
+
+  .legal-template-warning p {
+    max-width: 86ch;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .contract-document {
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .contract-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.46fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    color: var(--surface);
+    background: var(--pine-strong);
+    border-radius: 11px 11px 0 0;
+  }
+
+  .contract-heading > div {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .contract-heading h1 {
+    max-width: 18ch;
+  }
+
+  .contract-heading p:not(.kicker) {
+    max-width: 62ch;
+    color: oklch(0.94 0.014 158);
+  }
+
+  .contract-heading .kicker {
+    color: oklch(0.87 0.115 137);
+  }
+
+  .template-version {
+    align-self: end;
+    border-top: 1px solid oklch(0.86 0.02 158 / 0.45);
+  }
+
+  .template-version > div {
+    display: grid;
+    gap: 0.3rem;
+    padding-block: 0.75rem;
+    border-bottom: 1px solid oklch(0.86 0.02 158 / 0.45);
+  }
+
+  .template-version dt {
+    color: oklch(0.87 0.1 137);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .template-version dd {
+    color: var(--surface);
+    font-size: 0.9rem;
+  }
+
+  .contract-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    padding: 1rem clamp(1.25rem, 5vw, 3.5rem);
+    background: oklch(0.965 0.012 158);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contract-actions p {
+    color: var(--ink-soft);
+    font-size: 0.84rem;
+  }
+
+  .contract-sections {
+    padding: clamp(1.25rem, 5vw, 3.5rem);
+  }
+
+  .contract-section {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    padding-block: clamp(1.5rem, 4vw, 2.5rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contract-section:first-child {
+    padding-top: 0;
+  }
+
+  .contract-section:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .contract-section-heading {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    align-content: start;
+    gap: 0.75rem;
+  }
+
+  .contract-section-heading > span {
+    color: var(--pine);
+    font-family: var(--display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .contract-section-heading > div {
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .contract-section h2 {
+    font-size: 1.35rem;
+  }
+
+  .contract-section-heading p {
+    color: var(--ink-soft);
+    font-size: 0.84rem;
+  }
+
+  .contract-section textarea {
+    width: 100%;
+    min-height: 10rem;
+    overflow: hidden;
+    resize: none;
+    padding: 1rem;
+    color: var(--ink);
+    background: oklch(0.985 0.007 158);
+    border: 1px solid oklch(0.74 0.025 158);
+    border-radius: 9px;
+    line-height: 1.65;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  }
+
+  .contract-section textarea:hover {
+    border-color: var(--pine);
+  }
+
+  .contract-section textarea:focus {
+    background: var(--surface);
+    border-color: var(--focus);
+    box-shadow: 0 0 0 3px oklch(0.61 0.15 247 / 0.18);
+  }
+
+  .contract-print-footer {
+    display: none;
+  }
+
+  .comparison-method,
+  .comparison-offers {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .weight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    border-top: 1px solid var(--line);
+  }
+
+  .weight-control {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+  }
+
+  .weight-control span {
+    font-size: 0.9rem;
+    font-weight: 760;
+  }
+
+  .weight-control input {
+    width: 58px;
+    min-height: 44px;
+    flex: 0 0 auto;
+    padding: 0.55rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid oklch(0.72 0.025 158);
+    border-radius: 8px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .formula-details {
+    padding: 1rem 1.1rem;
+    background: oklch(0.955 0.022 158);
+    border-radius: 10px;
+  }
+
+  .formula-details summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .formula-details p {
+    max-width: 78ch;
+    padding-top: 0.6rem;
+    color: var(--ink-soft);
+  }
+
+  .comparison-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .offer-editor-list {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .offer-editor {
+    min-width: 0;
+    margin: 0;
+    padding: clamp(1.25rem, 4vw, 2.25rem);
+    display: grid;
+    gap: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .offer-editor legend {
+    padding-inline: 0.45rem;
+    color: var(--pine-strong);
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .offer-editor-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .offer-editor-heading p {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  .offer-primary-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(190px, 0.4fr);
+    gap: 1rem;
+  }
+
+  .offer-criteria {
+    border-top: 1px solid var(--line);
+  }
+
+  .offer-criterion {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 0.38fr);
+    align-items: end;
+    gap: 1rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .offer-criterion textarea {
+    min-height: 7rem;
+  }
+
+  .criterion-rating select {
+    min-height: 50px;
+  }
+
+  .comparison-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+  }
+
+  .comparison-actions p {
+    color: var(--ink-soft);
+    font-size: 0.84rem;
+  }
+
+  .comparison-results:empty {
+    display: none;
+  }
+
+  .comparison-results {
+    display: grid;
+    gap: 1.5rem;
+    padding-top: clamp(2rem, 5vw, 4rem);
+    border-top: 2px solid var(--pine);
+  }
+
+  .comparison-results-heading {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .comparison-results-heading > div {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .comparison-results-heading .kicker {
+    color: var(--pine);
+  }
+
+  .comparison-results-heading > p {
+    max-width: 72ch;
+    color: var(--ink-soft);
+  }
+
+  .comparison-caution {
+    padding: 1rem 1.1rem;
+    color: var(--warning-ink);
+    background: var(--warning-bg);
+    border-radius: 9px;
+  }
+
+  .comparison-result-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .comparison-result {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .comparison-result > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.25rem 1.4rem;
+    color: var(--surface);
+    background: var(--pine-strong);
+    border-radius: 11px 11px 0 0;
+  }
+
+  .comparison-result > header > div:first-child {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .comparison-result > header h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-result > header p {
+    color: oklch(0.93 0.015 158);
+    font-size: 0.86rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .comparison-score {
+    flex: 0 0 auto;
+    display: grid;
+    justify-items: end;
+    gap: 0.15rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .comparison-score strong {
+    font-family: var(--display);
+    font-size: 1.75rem;
+  }
+
+  .comparison-score span {
+    color: oklch(0.9 0.045 137);
+    font-size: 0.74rem;
+    font-weight: 800;
+  }
+
+  .comparison-issues,
+  .comparison-complete {
+    padding: 1rem 1.4rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .comparison-issues {
+    display: grid;
+    gap: 0.45rem;
+    color: var(--warning-ink);
+    background: var(--warning-bg);
+  }
+
+  .comparison-complete {
+    color: oklch(0.31 0.08 145);
+    background: oklch(0.95 0.035 145);
+  }
+
+  .comparison-evidence-list > div {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1rem 1.4rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .comparison-evidence-list > div:last-child {
+    border-bottom: 0;
+  }
+
+  .comparison-evidence-list .is-missing {
+    background: var(--critical-bg);
+  }
+
+  .comparison-evidence-list .is-non-comparable {
+    background: var(--warning-bg);
+  }
+
+  .comparison-evidence-list dt {
+    font-weight: 800;
+  }
+
+  .comparison-evidence-list dt span {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--ink-soft);
+    font-size: 0.76rem;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .comparison-evidence-list dd {
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+  }
+
+  .rfq-main {
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .rfq-process {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.42fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .rfq-process ol {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    list-style: none;
+    counter-reset: rfq-step;
+    border-top: 1px solid var(--line);
+  }
+
+  .rfq-process li {
+    counter-increment: rfq-step;
+    display: grid;
+    grid-template-columns: 2.1rem minmax(170px, 0.45fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .rfq-process li::before {
+    content: counter(rfq-step);
+    color: var(--pine);
+    font-family: var(--display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rfq-process li span {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  .rfq-form textarea {
+    min-height: 8rem;
+  }
+
+  .field-error {
+    min-height: 1.2em;
+    color: var(--critical);
+    font-size: 0.8rem;
+    font-weight: 720;
+  }
+
+  .form-field [aria-invalid="true"] {
+    border-color: var(--critical);
+    background: var(--critical-bg);
+  }
+
+  .form-error-summary,
+  .rfq-success {
+    display: grid;
+    gap: 0.65rem;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+  }
+
+  .form-error-summary {
+    color: var(--critical);
+    background: var(--critical-bg);
+    border: 1px solid oklch(0.79 0.085 27);
+  }
+
+  .form-error-summary[hidden],
+  .rfq-success[hidden] {
+    display: none;
+  }
+
+  .form-error-summary ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.25rem;
+    list-style: square;
+  }
+
+  .rfq-success {
+    color: oklch(0.29 0.075 145);
+    background: oklch(0.95 0.035 145);
+    border: 1px solid oklch(0.78 0.075 145);
+  }
+
+  .rfq-success h2 {
+    font-family: var(--body);
+    font-size: 1.1rem;
+    letter-spacing: 0;
+  }
+
+  .rfq-success span {
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+  }
+
+  .attachment-limit {
+    color: var(--registry-ink);
+  }
+
   @keyframes loading-bars {
     from {
       opacity: 0.55;
@@ -2454,7 +3213,13 @@
     .landing-hero,
     .landing-related,
     .request-intro,
-    .request-layout {
+    .request-layout,
+    .tool-intro,
+    .buyer-tools-hub,
+    .contract-heading,
+    .contract-section,
+    .comparison-results-heading,
+    .rfq-process {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
@@ -2479,10 +3244,11 @@
 
     .site-header nav {
       width: 100%;
-      gap: 0.85rem;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.85rem;
       padding: 0 0 0.2rem;
       font-size: 0.86rem;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     .footer-inner {
@@ -2549,9 +3315,44 @@
       display: flex;
     }
 
-    .landing-guide-callout {
+    .landing-guide-callout,
+    .comparison-section-heading,
+    .offer-editor-heading,
+    .comparison-result > header {
       align-items: flex-start;
       flex-direction: column;
+    }
+
+    .tool-navigation {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .tool-navigation > div {
+      justify-content: flex-start;
+    }
+
+    .legal-template-warning {
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+    }
+
+    .offer-primary-fields,
+    .offer-criterion,
+    .comparison-evidence-list > div {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-score {
+      justify-items: start;
+    }
+
+    .rfq-process li {
+      grid-template-columns: 2rem minmax(0, 1fr);
+    }
+
+    .rfq-process li span {
+      grid-column: 2;
     }
   }
 
@@ -2560,6 +3361,7 @@
     .browse-section,
     .profile-main,
     .request-main,
+    .buyer-tool-main,
     .policy-main,
     .guide-start,
     .guide-hub,
@@ -2675,6 +3477,24 @@
       grid-template-columns: minmax(0, 1fr) auto;
     }
 
+    .buyer-tool-links a {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+
+    .contract-actions,
+    .comparison-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .contract-actions .primary-button,
+    .contract-actions .secondary-button,
+    .comparison-actions .primary-button,
+    .comparison-actions .secondary-button {
+      width: 100%;
+    }
+
     .route-arrow {
       display: none;
     }
@@ -2696,6 +3516,123 @@
       padding-inline: 1.1rem;
     }
 
+  }
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+
+    body {
+      min-width: 0;
+      color: #111;
+      background: #fff;
+      font-size: 10.5pt;
+    }
+
+    .site-header,
+    body > #app > footer,
+    .tool-navigation,
+    .contract-actions {
+      display: none !important;
+    }
+
+    .buyer-tool-main,
+    .contract-tool-main {
+      width: 100%;
+      min-height: 0;
+      padding: 0;
+      gap: 8mm;
+    }
+
+    .legal-template-warning {
+      position: static;
+      display: block;
+      padding: 4mm;
+      color: #3b2600;
+      background: #fff7d6;
+      border: 1.5pt solid #7a5600;
+      border-radius: 0;
+      break-inside: avoid;
+    }
+
+    .legal-template-warning strong {
+      display: block;
+      margin-bottom: 2mm;
+    }
+
+    .contract-document {
+      border: 0;
+      border-radius: 0;
+    }
+
+    .contract-heading {
+      display: block;
+      padding: 0 0 6mm;
+      color: #111;
+      background: #fff;
+      border-bottom: 1pt solid #333;
+      border-radius: 0;
+    }
+
+    .contract-heading .kicker,
+    .contract-heading p:not(.kicker),
+    .template-version dt,
+    .template-version dd {
+      color: #111;
+    }
+
+    .template-version {
+      margin-top: 5mm;
+      border-top-color: #777;
+    }
+
+    .template-version > div {
+      padding-block: 2mm;
+      border-bottom-color: #aaa;
+    }
+
+    .contract-sections {
+      padding: 0;
+    }
+
+    .contract-section {
+      display: block;
+      padding-block: 5mm;
+      border-bottom: 0.75pt solid #bbb;
+      break-inside: avoid;
+    }
+
+    .contract-section-heading {
+      margin-bottom: 3mm;
+    }
+
+    .contract-section-heading p {
+      display: none;
+    }
+
+    .contract-section textarea {
+      height: auto !important;
+      min-height: 0;
+      padding: 0;
+      overflow: visible;
+      color: #111;
+      background: #fff;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      resize: none;
+      white-space: pre-wrap;
+    }
+
+    .contract-print-footer {
+      display: grid;
+      gap: 3mm;
+      padding-top: 6mm;
+      font-size: 9pt;
+      break-inside: avoid;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
