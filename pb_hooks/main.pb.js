@@ -4,6 +4,63 @@ routerAdd("GET", "/api/supernaut/ready", (event) => {
   return event.json(200, { ok: true });
 });
 
+const sendOperatorEmail = (event, record, subject, fields) => {
+  const agentMailKey = $os.getenv("AGENTMAIL_API_KEY");
+  const agentMailInbox = $os.getenv("AGENTMAIL_INBOX_ID");
+  if (!agentMailKey || !agentMailInbox) {
+    event.app.logger().error(
+      "Operator notification email skipped because AgentMail environment is unavailable",
+      "recordId",
+      record.id
+    );
+    return;
+  }
+
+  const textValue = (value) => String(value === undefined || value === null || value === "" ? "Nenurodyta" : value)
+    .replace(/\r\n?/g, "\n");
+  const escapeHtml = (value) => textValue(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;")
+    .replaceAll("\n", "<br>");
+  const plainText = fields.map(([label, value]) => label + ": " + textValue(value)).join("\n");
+  const html = "<p>Gauta nauja viešos svetainės forma.</p><ul>" + fields
+    .map(([label, value]) => "<li><strong>" + escapeHtml(label) + ":</strong> " + escapeHtml(value) + "</li>")
+    .join("") + "</ul>";
+
+  try {
+    const response = $http.send({
+      method: "POST",
+      url: "https://api.agentmail.to/v0/inboxes/" + encodeURIComponent(agentMailInbox) + "/messages/send",
+      headers: {
+        "Authorization": "Bearer " + agentMailKey,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        to: ["info@baldininkai.org"],
+        subject: subject,
+        text: plainText,
+        html: html,
+        labels: ["app"],
+      }),
+      timeout: 15,
+    });
+    if (response.statusCode < 200 || response.statusCode >= 300) {
+      throw new Error("AgentMail returned HTTP " + response.statusCode);
+    }
+  } catch (err) {
+    event.app.logger().error(
+      "Operator notification email failed",
+      "recordId",
+      record.id,
+      "error",
+      String(err)
+    );
+  }
+};
+
 onRecordAfterUpdateSuccess((event) => {
   event.next();
 
@@ -144,6 +201,17 @@ onRecordAfterCreateSuccess((event) => {
   const budgetBand = record.getString("budget_band");
   const timeline = record.getString("timeline");
   const shortlisted = record.getStringSlice("shortlisted_manufacturer_slugs");
+
+  sendOperatorEmail(event, record, "Nauja pirkėjo projekto užklausa", [
+    ["Projekto rūšis", projectType],
+    ["Miestas / regionas", cityRegion],
+    ["Biudžetas", budgetBand],
+    ["Pageidaujamas laikas", timeline],
+    ["Projekto aprašymas", record.getString("project_brief")],
+    ["Kontaktinis vardas", record.getString("contact_name")],
+    ["Kontaktinis el. paštas", contactEmail],
+    ["Pasirinkti katalogo įrašai", shortlisted.length ? shortlisted.join(", ") : "Nėra"],
+  ]);
 
   const agentMailKey = $os.getenv("AGENTMAIL_API_KEY");
   const agentMailInbox = $os.getenv("AGENTMAIL_INBOX_ID");
@@ -511,6 +579,33 @@ onRecordAfterCreateSuccess((event) => {
   const ownershipSuccessionSituation = record.getString("ownership_succession_situation");
   const timeline = record.getString("timeline");
 
+  const operatorFields = [
+    ["Įmonė", companyName],
+    ["Miestas", city],
+    ["Sektorius", sector],
+    ["Pajamų riba", revenueBand],
+    ["EBITDA riba", ebitdaBand],
+    ["Nuosavybės / perėmimo situacija", ownershipSuccessionSituation],
+    ["Laikotarpis", timeline],
+    ["Žinutė", record.getString("message")],
+    ["Kontaktinis vardas", record.getString("contact_name")],
+    ["Kontaktinis el. paštas", contactEmail],
+    ["Kontaktinis telefonas", record.getString("contact_phone")],
+  ];
+  const valuationEbitdaEurForEmail = Number(record.get("valuation_ebitda_eur"));
+  if (Number.isFinite(valuationEbitdaEurForEmail) && valuationEbitdaEurForEmail > 0) {
+    operatorFields.push(
+      ["Vertinimo pajamos", record.get("valuation_revenue_eur") + " €"],
+      ["Vertinimo EBITDA", valuationEbitdaEurForEmail + " €"],
+      ["Savininko vaidmuo", record.getString("valuation_owner_involvement")],
+      ["Klientų koncentracija", record.getString("valuation_customer_concentration")],
+      ["Užsakymų portfelis", record.getString("valuation_order_backlog")],
+      ["Vertės intervalas", record.get("valuation_ev_low_eur") + " €–" + record.get("valuation_ev_high_eur") + " €"],
+      ["EBITDA daugiklis", record.get("valuation_multiple_low") + "–" + record.get("valuation_multiple_high") + "×"],
+    );
+  }
+  sendOperatorEmail(event, record, "Nauja konfidenciali savininko užklausa", operatorFields);
+
   const agentMailKey = $os.getenv("AGENTMAIL_API_KEY");
   const agentMailInbox = $os.getenv("AGENTMAIL_INBOX_ID");
   if (!agentMailKey || !agentMailInbox) {
@@ -705,3 +800,56 @@ onRecordCreateRequest((event) => {
 
   event.next();
 }, "manufacturer_reviews");
+
+onRecordAfterCreateSuccess((event) => {
+  event.next();
+
+  const record = event.record;
+  const manufacturerId = record.getString("manufacturer");
+  let manufacturerName = "Nenurodyta";
+  let manufacturerSlug = "Nenurodyta";
+  try {
+    const manufacturer = event.app.findRecordById("manufacturers", manufacturerId);
+    manufacturerName = manufacturer.getString("trading_name");
+    manufacturerSlug = manufacturer.getString("slug");
+  } catch (err) {
+    event.app.logger().error(
+      "Manufacturer review operator notification could not load manufacturer context",
+      "recordId",
+      record.id,
+      "manufacturerId",
+      manufacturerId,
+      "error",
+      String(err)
+    );
+  }
+
+  sendOperatorEmail(event, record, "Naujas gamintojo atsiliepimas peržiūrai", [
+    ["Gamintojas", manufacturerName],
+    ["Gamintojo slug", manufacturerSlug],
+    ["Gamintojo įrašo ID", manufacturerId],
+    ["Įvertinimas", record.get("rating") + " / 5"],
+    ["Pateikėjo vardas", record.getString("display_name")],
+    ["Projekto rūšis", record.getString("project_type")],
+    ["Kontaktinis el. paštas", record.getString("contact_email")],
+    ["Atsiliepimas", record.getString("review_text")],
+  ]);
+}, "manufacturer_reviews");
+
+onRecordAfterCreateSuccess((event) => {
+  event.next();
+
+  const record = event.record;
+  const requestKind = record.getString("request_kind");
+  const requestKindLabel = requestKind === "claim"
+    ? "Patvirtinti atstovavimą įrašui"
+    : "Pataisyti duomenis arba pranešti apie problemą";
+
+  sendOperatorEmail(event, record, "Naujas katalogo " + (requestKind === "claim" ? "atstovavimo" : "pataisos") + " prašymas", [
+    ["Įrašo pavadinimas", record.getString("manufacturer_display_name")],
+    ["Gamintojo slug", record.getString("manufacturer_slug")],
+    ["Prašymo rūšis", requestKindLabel],
+    ["Kontaktinis el. paštas", record.getString("contact_email")],
+    ["Prašymas", record.getString("report_text")],
+  ]);
+}, "correction_requests");

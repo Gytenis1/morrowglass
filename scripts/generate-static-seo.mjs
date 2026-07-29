@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -14,11 +14,86 @@ const [manufacturers, landingConfig, baseHtml] = await Promise.all([
   readFile(join(rootDir, 'data/seo-landings.json'), 'utf8').then(JSON.parse),
   readFile(join(publicDir, 'index.html'), 'utf8'),
 ]);
+await rm(join(publicDir, 'savininkams'), { recursive: true, force: true });
+
 const logoAssetUrl = baseHtml.match(/<link rel="icon" type="image\/svg\+xml" href="([^"]+)" \/>/)?.[1];
 
 if (!logoAssetUrl) {
   throw new Error('Could not resolve the built Baldininkai logo asset URL.');
 }
+
+
+const policyPages = [
+  {
+    path: '/privatumas',
+    title: 'Privatumo pranešimas | Baldai pagal užsakymą Lietuvoje',
+    heading: 'Privatumo pranešimas',
+    description: 'Kaip GG Ventures UAB tvarko Baldininkai.org katalogo užklausų, atsiliepimų ir įrašų pataisymo ar atstovavimo formų asmens duomenis.',
+    summary: 'Šiame pranešime paaiškiname, kokius asmens duomenis gauname per katalogo formas, kam juos naudojame, kiek laiko saugome ir kokias teises turite.',
+    content: `
+      <section><h2>Kas tvarko duomenis</h2><p>Svetainės ir katalogo duomenų valdytojas yra <strong>GG Ventures UAB</strong>, įmonės kodas <strong>305442420</strong>. Su privatumu susijusiais klausimais rašykite <a href="mailto:info@baldininkai.org">info@baldininkai.org</a>.</p></section>
+      <section><h2>Kokius duomenis gauname</h2><p>Kai pateikiate pirkėjo projekto užklausą, gauname jūsų vardą, el. pašto adresą, projekto vietą, rūšį, biudžeto ir termino intervalą, projekto aprašymą bei pasirinktų katalogo kandidatų sąrašą. Katalogas šios užklausos automatiškai nepersiunčia gamintojams.</p><p>Kai pateikiate atsiliepimą, gauname rodomą vardą arba inicialus, įvertinimą, projekto rūšį, atsiliepimo tekstą ir neviešą kontaktinį el. paštą, reikalingą moderavimui ar patikslinimui.</p><p>Kai prašote pataisyti, papildyti, pašalinti, atstovauti ar perimti katalogo įrašą, gauname prašymo turinį, įrašo identifikaciją, jūsų nurodytus šaltinius ir, jei pateikiate, kontaktinį el. paštą bei informaciją, reikalingą atstovavimo teisei patikrinti.</p><p>Taip pat galime gauti įprastus techninius užklausų ir saugumo žurnalų duomenis, reikalingus svetainės veikimui, apsaugai ir klaidų tyrimui.</p></section>
+      <section><h2>Kodėl duomenis naudojame</h2><p>Duomenis naudojame tam, kad priimtume ir administruotume jūsų prašymą, atsakytume, moderuotume atsiliepimus, tikrintume įrašų pataisymus ar atstovavimo prašymus, saugotume katalogą nuo piktnaudžiavimo ir vykdytume taikomus teisinius reikalavimus. Atsižvelgiant į situaciją, tvarkymas grindžiamas jūsų prašymu, teisėtu interesu administruoti patikimą katalogą arba teisine pareiga.</p></section>
+      <section><h2>Kam duomenys gali būti atskleisti</h2><p>Duomenis gali tvarkyti svetainės prieglobos, duomenų saugojimo, saugumo ar ryšio paslaugų teikėjai tiek, kiek būtina jų paslaugoms. Duomenis taip pat galime pateikti kompetentingoms institucijoms, kai to reikalauja teisė. Pirkėjo projekto formos duomenys nėra automatiškai persiunčiami kataloge nurodytiems gamintojams.</p></section>
+      <section><h2>Kiek laiko saugome</h2><p>Formų duomenis ir susijusį susirašinėjimą saugome tik tiek, kiek būtina konkrečiam prašymui išnagrinėti, katalogo patikimumui apsaugoti ir taikomiems teisiniams poreikiams įvykdyti. Konkretus laikotarpis priklauso nuo prašymo pobūdžio, ginčo ar piktnaudžiavimo rizikos ir teisinių saugojimo pareigų.</p></section>
+      <section><h2>Jūsų teisės</h2><p>Taikytinais atvejais galite prašyti susipažinti su savo duomenimis, juos ištaisyti ar ištrinti, apriboti jų tvarkymą, nesutikti su tvarkymu, gauti pateiktus duomenis perkeliamu formatu arba atšaukti sutikimą, kai tvarkymas juo grindžiamas. Prašymą siųskite <a href="mailto:info@baldininkai.org">info@baldininkai.org</a>. Taip pat turite teisę pateikti skundą Valstybinei duomenų apsaugos inspekcijai.</p></section>
+      <section><h2>Slapukai ir pranešimo pakeitimai</h2><p>Šiuo metu svetainė nenaudoja pasirenkamų reklamos ar analitikos slapukų. Jei tai pasikeis, prieš pradėdami tokį naudojimą atnaujinsime <a href="/slapukai" data-internal-link="true">slapukų pranešimą</a> ir, kai būtina, paprašysime pasirinkimo. Šį privatumo pranešimą galime atnaujinti pasikeitus funkcijoms ar teisiniams reikalavimams.</p></section>`,
+  },
+  {
+    path: '/naudojimosi-salygos',
+    title: 'Naudojimosi sąlygos | Baldai pagal užsakymą Lietuvoje',
+    heading: 'Naudojimosi sąlygos',
+    description: 'Baldininkai.org viešų šaltinių baldų gamintojų katalogo naudojimo, užklausų, atsakomybės ir būsimo susitarimo ribos.',
+    summary: 'Šios sąlygos apibrėžia, ką katalogas pateikia, ko negarantuoja ir kokia atsakomybė lieka naudotojui bei pasirinktam gamintojui.',
+    content: `
+      <section><h2>Operatorius ir sąlygų taikymas</h2><p>Svetainę valdo <strong>GG Ventures UAB</strong>, įmonės kodas <strong>305442420</strong>, kontaktinis el. paštas <a href="mailto:info@baldininkai.org">info@baldininkai.org</a>. Naudodamiesi svetaine sutinkate laikytis šių sąlygų ir taikomos teisės.</p></section>
+      <section><h2>Katalogo paskirtis</h2><p>Kataloge pateikiami iš viešų šaltinių surinkti galimi baldų gamintojų kandidatai, skirti savarankiškai paieškai ir palyginimui. Įrašas nėra rekomendacija, sertifikatas ar patvirtinimas ir negarantuoja tapatybės, informacijos tikslumo, darbų kokybės, kainos, terminų, dabartinio užimtumo, paslaugų teritorijos ar galimybės priimti konkretų projektą.</p><p>Prieš priimdami sprendimą savarankiškai patikrinkite juridinius ir kontaktinius duomenis, aktualią veiklą, pasiūlymo apimtį, sutarties šalį, mokėjimo gavėją, medžiagas, garantijas ir kitus jums svarbius faktus.</p></section>
+      <section><h2>Projekto užklausos</h2><p>Pirkėjo projekto forma padeda vienoje vietoje suformuoti projekto santrauką ir išsaugoti ją katalogo peržiūrai. Katalogas pirkėjo užklausos automatiškai nepersiunčia pasirinktiems ar kitiems gamintojams. Formos pateikimas negarantuoja atsakymo, pasiūlymo, kainos ar projekto priėmimo.</p></section>
+      <section><h2>Susitarimai su gamintojais</h2><p>Jei vėliau susisiekiate su gamintoju ir sudarote susitarimą, jis sudaromas tiesiogiai tarp jūsų ir gamintojo ar kitos aiškiai nurodytos sutarties šalies. Katalogas ir GG Ventures UAB nėra tokio būsimo kliento ir gamintojo susitarimo šalis, tarpininkas, garantas ar mokėjimų vykdytojas.</p></section>
+      <section><h2>Atsiliepimai ir pataisymai</h2><p>Atsiliepimai skelbiami tik po moderavimo pagal <a href="/atsiliepimu-taisykles" data-internal-link="true">atsiliepimų taisykles</a>. Apie netikslų įrašą ar teisę jam atstovauti galima pranešti pagal <a href="/irasyti-pataisyma" data-internal-link="true">įrašo pataisymo ir atstovavimo tvarką</a>. Viešas pakeitimas atliekamas tik įvertinus pateiktą informaciją.</p></section>
+      <section><h2>Leistinas naudojimas ir atsakomybės ribos</h2><p>Nenaudokite svetainės neteisėtai, nebandykite trikdyti jos veikimo, automatizuotai rinkti duomenų neproporcingu mastu, apsimesti kitu asmeniu ar teikti žinomai klaidingo, grasinamo ar žalingo turinio. Dedame pagrįstas pastangas palaikyti svetainę, tačiau negarantuojame nepertraukiamo veikimo ar to, kad visi viešų šaltinių duomenys visada bus aktualūs. Kiek leidžia taikoma teisė, už sprendimus, priimtus vien pagal katalogo įrašą, atsako pats naudotojas.</p></section>
+      <section><h2>Pakeitimai ir kontaktas</h2><p>Sąlygas galime atnaujinti pasikeitus katalogo funkcijoms ar teisiniams reikalavimams. Klausimus siųskite <a href="mailto:info@baldininkai.org">info@baldininkai.org</a>.</p></section>`,
+  },
+  {
+    path: '/slapukai',
+    title: 'Slapukų pranešimas | Baldai pagal užsakymą Lietuvoje',
+    heading: 'Slapukų pranešimas',
+    description: 'Kokius būtinus techninius saugojimo sprendimus gali naudoti Baldininkai.org ir patvirtinimas, kad nėra pasirenkamų reklamos ar analitikos slapukų.',
+    summary: 'Paaiškiname, kokie techniniai naršyklės duomenys gali būti reikalingi svetainei ir kokių pasirenkamų stebėjimo priemonių šiuo metu nenaudojame.',
+    content: `
+      <section><h2>Kas yra slapukai</h2><p>Slapukai yra nedideli duomenų failai, kuriuos svetainė ar jos naudojama paslauga gali išsaugoti naršyklėje. Panašiai gali veikti vietinė naršyklės saugykla ar kiti techniniai identifikatoriai.</p></section>
+      <section><h2>Ką naudoja ši svetainė</h2><p>Svetainė gali naudoti tik būtinus techninius saugojimo ar saugumo sprendimus, reikalingus puslapiams pateikti, formų apsaugai, tinklo veikimui ir klaidų prevencijai. Tokie sprendimai nenaudojami reklamos profiliams kurti.</p><p><strong>Šiuo metu svetainė nenaudoja pasirenkamų reklamos ar analitikos slapukų.</strong> Todėl nėra pasirenkamų reklamos ar analitikos kategorijų, kurias reikėtų įjungti.</p></section>
+      <section><h2>Naršyklės valdymas</h2><p>Slapukus ir kitą svetainių saugyklą galite peržiūrėti ar ištrinti savo naršyklės nustatymuose. Uždraudus būtinus techninius sprendimus, kai kurios formos ar apsaugos priemonės gali neveikti taip, kaip numatyta.</p></section>
+      <section><h2>Jei naudojimas pasikeistų</h2><p>Prieš pradėdami naudoti pasirenkamus reklamos ar analitikos slapukus atnaujinsime šį pranešimą ir, kai būtina, pateiksime pasirinkimo priemonę. Duomenų valdytojas yra <strong>GG Ventures UAB</strong>, įmonės kodas <strong>305442420</strong>; klausimus siųskite <a href="mailto:info@baldininkai.org">info@baldininkai.org</a>.</p></section>`,
+  },
+  {
+    path: '/atsiliepimu-taisykles',
+    title: 'Atsiliepimų ir moderavimo taisyklės | Baldai pagal užsakymą Lietuvoje',
+    heading: 'Atsiliepimų ir moderavimo taisyklės',
+    description: 'Baldininkai.org atsiliepimų pateikimo, interesų konfliktų, faktinių teiginių, moderavimo, pašalinimo ir pataisymo taisyklės.',
+    summary: 'Atsiliepimai turi padėti pirkėjams suprasti konkrečią patirtį, todėl prieš paskelbimą juos moderuojame ir galime prašyti patikslinimų.',
+    content: `
+      <section><h2>Kas gali pateikti atsiliepimą</h2><p>Atsiliepimą teikite tik apie savo tikrą ir tiesioginę patirtį su konkrečiu gamintoju ar sutarties šalimi. Neteikite atsiliepimo, jei esate vertinamos įmonės savininkas, darbuotojas, samdomas atstovas, artimas konkurentas ar turite kitą neatskleistą interesų konfliktą.</p></section>
+      <section><h2>Ko neleidžiame</h2><p>Neskelbiame suklastotų, už atlygį parašytų ar kelių asmenų patirtimi apsimetančių atsiliepimų. Neleidžiami grasinimai, įžeidimai, neapykantos kalba, šantažas, reklama, svetimi asmens duomenys, komercinės paslaptys ar teiginiai apie nusikaltimus ir kitus sunkius pažeidimus, kai jie nepagrįsti patikrinama informacija.</p><p>Atskirkite tai, ką tiesiogiai patyrėte, nuo prielaidų apie priežastis ar ketinimus. Faktiniai teiginiai turi būti konkretūs ir, paprašius, pagrindžiami susirašinėjimu, sutartimi, sąskaita, nuotrauka ar kitu tinkamu įrodymu.</p></section>
+      <section><h2>Kaip moderuojame</h2><p>Kiekvienas atsiliepimas prieš paskelbimą peržiūrimas. Galime pataisyti akivaizdžias rašybos klaidas nekeisdami prasmės, paprašyti patikslinimo, paslėpti asmens duomenis, atmesti visą atsiliepimą arba paskelbti tik tinkamą jo dalį. Paskelbimas nėra katalogo patvirtinimas, kokybės sertifikatas ar pritarimas autoriaus nuomonei.</p></section>
+      <section><h2>Pašalinimas ir pataisymas</h2><p>Autorius, gamintojas ar jo įgaliotas atstovas gali paprašyti peržiūrėti paskelbtą atsiliepimą parašydamas <a href="mailto:info@baldininkai.org">info@baldininkai.org</a> arba pateikdamas įrašo pataisymo formą. Nurodykite gamintoją, ginčijamą teiginį, prašomą veiksmą ir turimus pagrindžiančius duomenis. Vertindami galime laikinai paslėpti turinį, susisiekti su autoriumi, pataisyti aiškų netikslumą arba pašalinti taisykles pažeidžiantį atsiliepimą.</p></section>
+      <section><h2>Operatorius</h2><p>Taisykles administruoja <strong>GG Ventures UAB</strong>, įmonės kodas <strong>305442420</strong>. Kontaktinis el. paštas: <a href="mailto:info@baldininkai.org">info@baldininkai.org</a>. Kontaktiniai duomenys tvarkomi pagal <a href="/privatumas" data-internal-link="true">privatumo pranešimą</a>.</p></section>`,
+  },
+  {
+    path: '/irasyti-pataisyma',
+    title: 'Įrašo pataisymo ir atstovavimo tvarka | Baldai pagal užsakymą Lietuvoje',
+    heading: 'Įrašo pataisymo ir atstovavimo tvarka',
+    description: 'Kaip baldų gamintojas ar jo atstovas gali prašyti pataisyti, papildyti, pašalinti, atstovauti ar perimti Baldininkai.org katalogo įrašą.',
+    summary: 'Gamintojas ar jo atstovas gali pranešti apie netikslumą arba prašyti atstovauti įrašui, tačiau prieš viešą pakeitimą patikriname prašymą ir atstovavimo teisę.',
+    content: `
+      <section><h2>Kaip pateikti prašymą</h2><p>Atverkite atitinkamą gamintojo katalogo įrašą ir naudokite skilties „Pataisyti, atstovauti ar pranešti“ formą. Jei įrašo nerandate arba forma netinka, rašykite <a href="mailto:info@baldininkai.org">info@baldininkai.org</a>. Nurodykite įrašo pavadinimą ar nuorodą, konkretų netikslumą, teisingą informaciją ir, jei turite, viešą patvirtinantį šaltinį.</p></section>
+      <section><h2>Ką galima prašyti pakeisti</h2><p>Galite prašyti pataisyti pavadinimą, veiklos aprašymą, vietą, kategoriją, svetainės ar kontaktinę nuorodą, pažymėti pasibaigusią veiklą, pašalinti klaidingai priskirtą informaciją arba pateikti kitą pagrįstą įrašo korekciją.</p></section>
+      <section><h2>Kaip atstovauti arba perimti įrašą</h2><p>Gamintojas, įmonės darbuotojas ar įgaliotas atstovas gali prašyti pažymėti, kad atstovauja katalogo įrašui, ir suderinti jo viešą informaciją. Prašyme paaiškinkite savo ryšį su gamintoju ir pateikite tokį patvirtinimą, kurį galima pagrįstai patikrinti, pavyzdžiui, rašykite iš oficialaus įmonės domeno el. pašto arba pateikite kitą įgaliojimą patvirtinančią informaciją.</p></section>
+      <section><h2>Patikrinimas prieš viešą pakeitimą</h2><p>Prašymo pateikimas savaime nesuteikia įrašo kontrolės ir nereiškia, kad pakeitimas bus paskelbtas. Prieš viešai keisdami duomenis tikriname prašymo pagrįstumą, šaltinius ir, kai prašoma atstovauti įrašui, pareiškėjo ryšį ar įgaliojimą. Galime paprašyti papildomos informacijos, atmesti nepatikrinamą prašymą arba palikti viešo šaltinio duomenis su aiškia pastaba.</p></section>
+      <section><h2>Duomenys ir kontaktas</h2><p>Prašymo informaciją naudojame tik katalogo peržiūrai, ryšiui ir galimiems teisiniams poreikiams pagal <a href="/privatumas" data-internal-link="true">privatumo pranešimą</a>. Tvarką administruoja <strong>GG Ventures UAB</strong>, įmonės kodas <strong>305442420</strong>; kontaktinis el. paštas <a href="mailto:info@baldininkai.org">info@baldininkai.org</a>.</p></section>`,
+  },
+];
+
 
 const guideArticles = [
   {
@@ -443,7 +518,7 @@ function header(active = 'directory') {
 }
 
 function footer() {
-  return '<footer><div class="footer-inner"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><nav aria-label="Poraštės navigacija"><a href="/gauti-pasiulymus">Pateikti projekto užklausą</a><a href="/gidas">Pirkėjo gidas</a><a href="/savininkams">Verslo savininkams ir tęstinumui</a></nav></div></footer>';
+  return '<footer><div class="footer-inner"><div class="footer-summary"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Poraštės navigacija"><a href="/gauti-pasiulymus">Projekto užklausa</a><a href="/gidas">Pirkėjo gidas</a><a href="/privatumas">Privatumas</a><a href="/naudojimosi-salygos">Naudojimosi sąlygos</a><a href="/slapukai">Slapukai</a><a href="/atsiliepimu-taisykles">Atsiliepimų taisyklės</a><a href="/irasyti-pataisyma">Įrašo pataisymas</a></nav></div></footer>';
 }
 
 function manufacturerCard(record) {
@@ -534,59 +609,18 @@ await writeRoute(requestPath, injectPage({
   structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Projekto užklausa', path: requestPath }])],
 }));
 
-const ownerPath = '/savininkams';
-const ownerDescription = 'Konfidencialus tiesioginis pokalbis su Lithuanian ETA apie brandaus savininko valdomo verslo tęstinumą, perėmimą ar pardavimo svarstymą Baltijos šalyse.';
-const ownerRevenueBands = ['Iki 1 mln. €', '1–3 mln. €', '3–10 mln. €', 'Daugiau nei 10 mln. €', 'Nenoriu nurodyti'];
-const ownerEbitdaBands = ['Iki 300 tūkst. €', '300–750 tūkst. €', '750 tūkst.–1,5 mln. €', '1,5–2,5 mln. €', 'Daugiau nei 2,5 mln. €', 'Nenoriu nurodyti'];
-const ownerSituations = ['Paveldėjimo ar įpėdinystės planavimas', 'Savininko pasitraukimas iš kasdienės veiklos', 'Dalinio ar visiško pardavimo svarstymas', 'Kita tęstinumo situacija'];
-const ownerTimelines = ['Per artimiausius 6 mėn.', 'Per 6–18 mėn.', 'Vėliau nei po 18 mėn.', 'Noriu pradėti be konkretaus termino'];
-const valuationOwnerInvolvementOptions = ['Kasdienis operacinis vaidmuo', 'Dalinė operacinė veikla', 'Nedalyvauja kasdienėje veikloje'];
-const valuationCustomerConcentrationOptions = ['Nė vienas klientas nesudaro daugiau nei 20 % pajamų', 'Didžiausias klientas sudaro 20–40 % pajamų', 'Didžiausias klientas sudaro daugiau nei 40 % pajamų'];
-const valuationOrderBacklogOptions = ['Mažiau nei 3 mėn.', '3–6 mėn.', 'Daugiau nei 6 mėn.'];
-const ownerOptions = (items, placeholder) => `<option value="">${escapeHtml(placeholder)}</option>${items.map((item) => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}`;
-const ownerBody = `${header('owner')}<main class="owner-main">
-<section class="owner-hero" aria-labelledby="owner-title"><div class="owner-hero-copy"><p class="kicker">Lithuanian ETA · privatus tiesioginis pirkėjas</p><h1 id="owner-title">Kai svarbu ne tik parduoti, bet ir tęsti verslą</h1><p class="lead">Lithuanian ETA siekia įsigyti ir toliau auginti brandų, savininko sukurtą verslą. Tai tiesioginis pirkėjas, o ne brokeris, tarpininkas ar įmonių skelbimų svetainė.</p></div><aside class="owner-position" aria-labelledby="owner-position-title"><h2 id="owner-position-title">Pokalbis be katalogo tarpininkavimo</h2><p>Ši savininkams skirta kryptis yra atskira nuo viešo baldų gamintojų katalogo. Pateikta informacija nėra siunčiama kataloge esančioms įmonėms.</p></aside></section>
-<section class="owner-profile" aria-labelledby="owner-profile-title"><div class="owner-section-heading"><p class="kicker">Pradinis profilis</p><h2 id="owner-profile-title">Kokį verslą prasminga aptarti</h2><p>Tai orientyras pirmajam pokalbiui, ne pasiūlymas, vertinimas ar pažadas sudaryti sandorį.</p></div><dl class="owner-profile-facts"><div><dt>Veiklos mastas</dt><dd>Paprastai maždaug 300 tūkst.–2,5 mln. € EBITDA.</dd></div><div><dt>Geografija</dt><dd>Lietuva, Latvija arba Estija.</dd></div><div><dt>Situacija</dt><dd>Įpėdinystė, veiklos tęstinumas, savininko atsitraukimas arba dalinio ar visiško pardavimo svarstymas.</dd></div></dl></section>
-<section class="owner-valuation" aria-labelledby="valuation-title">
-<header class="owner-section-heading owner-valuation-heading"><p class="kicker">Orientacinis scenarijus</p><h2 id="valuation-title">Įmonės vertės intervalo indikatorius</h2><p>Įveskite metines pajamas, normalizuotą EBITDA ir tris veiklos aplinkybes. Skaičiavimas atliekamas tik jūsų naršyklėje ir automatiškai atnaujinamas pakeitus bet kurį lauką.</p></header>
-<div class="owner-valuation-layout"><div class="valuation-input-panel" aria-describedby="valuation-method-summary"><div class="valuation-fields">
-<div class="form-field"><label for="valuation-revenue">Metinės pajamos, €</label><input id="valuation-revenue" type="number" inputmode="numeric" min="1000" max="1000000000000" step="1000" placeholder="Pvz., 3 000 000" required></div>
-<div class="form-field"><label for="valuation-ebitda">Normalizuota metinė EBITDA, €</label><input id="valuation-ebitda" type="number" inputmode="numeric" min="1000" max="1000000000000" step="1000" placeholder="Pvz., 500 000" required></div>
-<div class="form-field form-field--wide"><label for="valuation-owner-involvement">Savininko darbas kasdienėje veikloje</label><div class="select-wrap"><select id="valuation-owner-involvement" required>${ownerOptions(valuationOwnerInvolvementOptions, 'Pasirinkite savininko vaidmenį')}</select></div></div>
-<div class="form-field form-field--wide"><label for="valuation-customer-concentration">Klientų koncentracija</label><div class="select-wrap"><select id="valuation-customer-concentration" required>${ownerOptions(valuationCustomerConcentrationOptions, 'Pasirinkite didžiausio kliento dalį')}</select></div></div>
-<div class="form-field form-field--wide"><label for="valuation-order-backlog">Patvirtintų užsakymų rezervas</label><div class="select-wrap"><select id="valuation-order-backlog" required>${ownerOptions(valuationOrderBacklogOptions, 'Pasirinkite, keliems mėnesiams pakanka užsakymų')}</select></div></div>
-</div><p class="valuation-status" id="valuation-status" role="status" aria-live="polite">Užpildykite visus penkis laukus — rezultatas pasirodys automatiškai.</p>
-<details class="valuation-method"><summary>Kaip tiksliai skaičiuojamas intervalas</summary><div id="valuation-method-summary"><p>Pradinis scenarijus yra 2,00–4,00× normalizuotos EBITDA. Kiekvienas iš trijų situacijos veiksnių abi ribas pakeičia vienodai: −0,25×, 0 arba +0,25×. Galutinis daugiklis ribojamas iki 1,00–5,00×.</p><ul><li><strong>Savininko vaidmuo:</strong> kasdienis −0,25×; dalinis 0; savininkas kasdien nedalyvauja +0,25×.</li><li><strong>Klientų koncentracija:</strong> nė vienas klientas neviršija 20 % +0,25×; didžiausias sudaro 20–40 % 0; viršija 40 % −0,25×.</li><li><strong>Užsakymų rezervas:</strong> mažiau nei 3 mėn. −0,25×; 3–6 mėn. 0; daugiau nei 6 mėn. +0,25×.</li></ul><p>Rodoma įmonės vertė (EV) visada lygi jūsų įvestai EBITDA, padaugintai iš rodomos apatinės arba viršutinės daugiklio ribos.</p></div></details></div>
-<div class="valuation-result-shell"><div class="valuation-placeholder" id="valuation-placeholder"><h3>Rezultatas pasirodys čia</h3><p>Rodysime orientacinį įmonės vertės intervalą, pritaikytus daugiklius ir kiekvieno pasirinkto veiksnio įtaką.</p></div><div class="valuation-result" id="valuation-result" hidden aria-labelledby="valuation-result-title"><p class="valuation-result-label" id="valuation-result-title">Orientacinė įmonės vertė (enterprise value)</p><output class="valuation-ev-range" id="valuation-ev-range"></output><dl class="valuation-result-facts"><div><dt>Naudotas daugiklis</dt><dd id="valuation-multiple-range"></dd></div><div><dt>Pradinis scenarijus</dt><dd>2,00–4,00× EBITDA</dd></div><div><dt>Bendra korekcija</dt><dd id="valuation-adjustment"></dd></div></dl><div class="valuation-explanation"><h3>Kas pakeitė intervalą</h3><ul id="valuation-factor-list"></ul></div><a class="primary-button valuation-enquiry-link" href="#owner-form-title">Tęsti konfidencialią užklausą</a></div></div></div>
-<div class="valuation-evidence"><p><strong>Tyrimo ribos.</strong> <a href="https://prod-agent-artifact-engine-production.up.railway.app/render/17738284-ba9a-430f-9574-5a390750fa7d" rel="noopener noreferrer">Ankstesnio viešo Baltijos tyrimo medžiaga</a> nenustato aiškaus, vien Baltijos mažoms ir vidutinėms įmonėms, kurių EBITDA mažesnė nei 5 mln. €, taikomo daugiklio. Todėl 2–4× bazė čia yra konservatyvus įsigijimo scenarijus, o ne stebėta rinkos taisyklė ar tyrimo patvirtintas rinkos daugiklis.</p><p class="valuation-disclaimer"><strong>Svarbu:</strong> šis skaičiavimas skirtas tik edukaciniam ir orientaciniam naudojimui. Tai nėra pasiūlymas pirkti ar parduoti, įsipareigojimas, profesionalus verslo vertinimas, finansinė, teisinė ar mokesčių konsultacija. Faktinė vertė gali iš esmės skirtis atlikus išsamų patikrinimą ir įvertinus skolą, grynuosius pinigus, apyvartinį kapitalą bei kitas aplinkybes.</p></div>
-</section>
-<section class="owner-process" aria-labelledby="owner-process-title"><div class="owner-section-heading"><h2 id="owner-process-title">Kaip prasideda pirmas pokalbis</h2><p>Pakanka trumpos informacijos, kad būtų galima įvertinti, ar verta kalbėtis toliau.</p></div><ol><li><strong>Pateikite trumpą konfidencialią žinutę.</strong><span>Nurodykite verslo pobūdį, vietą, apytiksles finansines ribas ir savo situaciją.</span></li><li><strong>Lithuanian ETA ją peržiūri.</strong><span>Informacija vertinama tik galimo tiesioginio pokalbio kontekste.</span></li><li><strong>Jei profilis tinkamas, galima sutarti privatų pokalbį.</strong><span>Formos pateikimas savaime nėra pasiūlymas, vertinimas ar tarpininkavimo susitarimas.</span></li></ol></section>
-<div class="owner-enquiry-layout"><section class="owner-form-section" aria-labelledby="owner-form-title"><div class="owner-section-heading"><p class="kicker">Konfidenciali užklausa</p><h2 id="owner-form-title">Trumpai papasakokite apie situaciją</h2><p>Žvaigždute pažymėti laukai yra privalomi. Pradiniame etape nepateikite komercinių paslapčių, asmens kodų ar kitų ypač jautrių duomenų.</p></div><form class="owner-enquiry-form" id="owner-enquiry-form">
-<div class="form-field"><label for="owner-company-name">Įmonės pavadinimas *</label><input id="owner-company-name" name="company_name" type="text" autocomplete="organization" minlength="2" maxlength="160" required></div>
-<div class="form-field"><label for="owner-city">Miestas arba vietovė *</label><input id="owner-city" name="city" type="text" autocomplete="address-level2" minlength="2" maxlength="160" required></div>
-<div class="form-field form-field--wide"><label for="owner-sector">Veiklos sektorius *</label><input id="owner-sector" name="sector" type="text" minlength="2" maxlength="160" required placeholder="Pvz., gamyba, verslo paslaugos ar logistika"></div>
-<div class="form-field"><label for="owner-revenue-band">Metinės pajamos *</label><div class="select-wrap"><select id="owner-revenue-band" name="revenue_band" required>${ownerOptions(ownerRevenueBands, 'Pasirinkite pajamų ribas')}</select></div></div>
-<div class="form-field"><label for="owner-ebitda-band">EBITDA *</label><div class="select-wrap"><select id="owner-ebitda-band" name="ebitda_band" required>${ownerOptions(ownerEbitdaBands, 'Pasirinkite EBITDA ribas')}</select></div></div>
-<div class="form-field form-field--wide"><label for="owner-situation">Savininko arba tęstinumo situacija *</label><div class="select-wrap"><select id="owner-situation" name="ownership_succession_situation" required>${ownerOptions(ownerSituations, 'Pasirinkite artimiausią situaciją')}</select></div></div>
-<div class="form-field form-field--wide"><label for="owner-timeline">Svarstomas laikas *</label><div class="select-wrap"><select id="owner-timeline" name="timeline" required>${ownerOptions(ownerTimelines, 'Pasirinkite laikotarpį')}</select></div></div>
-<div class="form-field form-field--wide"><label for="owner-message">Trumpa konfidenciali žinutė *</label><p class="field-hint" id="owner-message-hint">Bent 40 ženklų. Galite aprašyti verslo istoriją, savo vaidmenį ir ko tikitės iš pirmo pokalbio.</p><textarea id="owner-message" name="message" rows="8" minlength="40" maxlength="3000" required aria-describedby="owner-message-hint"></textarea></div>
-<div class="form-field"><label for="owner-contact-name">Jūsų vardas *</label><input id="owner-contact-name" name="contact_name" type="text" autocomplete="name" minlength="2" maxlength="120" required></div>
-<div class="form-field"><label for="owner-contact-email">El. paštas *</label><input id="owner-contact-email" name="contact_email" type="email" inputmode="email" autocomplete="email" maxlength="254" required placeholder="vardas@imone.lt"></div>
-<div class="form-field form-field--wide"><label for="owner-contact-phone">Telefono numeris (nebūtina)</label><input id="owner-contact-phone" name="contact_phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40"></div>
-<input type="hidden" name="valuation_revenue_eur" data-valuation-field disabled><input type="hidden" name="valuation_ebitda_eur" data-valuation-field disabled><input type="hidden" name="valuation_owner_involvement" data-valuation-field disabled><input type="hidden" name="valuation_customer_concentration" data-valuation-field disabled><input type="hidden" name="valuation_order_backlog" data-valuation-field disabled><input type="hidden" name="valuation_ev_low_eur" data-valuation-field disabled><input type="hidden" name="valuation_ev_high_eur" data-valuation-field disabled><input type="hidden" name="valuation_multiple_low" data-valuation-field disabled><input type="hidden" name="valuation_multiple_high" data-valuation-field disabled>
-<div class="honeypot-field" aria-hidden="true"><label for="owner-website">Interneto svetainė</label><input id="owner-website" name="honeypot" type="text" autocomplete="off" tabindex="-1" maxlength="200"></div>
-<div class="owner-submit form-field--wide"><button class="primary-button" type="submit">Pateikti konfidencialiai peržiūrai</button><p class="form-status" id="owner-enquiry-status" role="status" aria-live="polite" tabindex="-1"></p></div>
-</form></section><aside class="owner-confidentiality" aria-labelledby="owner-confidentiality-title"><h2 id="owner-confidentiality-title">Ką reiškia pateikimas</h2><p>Žinutė gaunama konfidencialiai Lithuanian ETA peržiūrai ir nėra persiunčiama kataloge esančioms įmonėms.</p><p>Formos pateikimas nėra pasiūlymas, verslo vertinimas ar brokerio bei tarpininkavimo susitarimas.</p></aside></div></main>${footer()}`;
-await writeRoute(ownerPath, injectPage({
-  title: 'Verslo tęstinumas ir privatus pardavimo pokalbis | Lithuanian ETA',
-  description: ownerDescription,
-  path: ownerPath,
-  body: ownerBody,
-  structuredData: [
-    { '@context': 'https://schema.org', '@type': 'ContactPage', '@id': `${SITE_URL}/savininkams/#contact-page`, url: `${SITE_URL}/savininkams/`, name: 'Privatus pokalbis verslo savininkams', description: ownerDescription, inLanguage: 'lt-LT', isPartOf: { '@id': `${SITE_URL}/#website` } },
-    breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Verslo savininkams', path: ownerPath }]),
-  ],
-}));
+
+
+for (const page of policyPages) {
+  const body = `${header('policy')}<main class="policy-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="policy-document"><header class="policy-header"><p class="kicker">Svetainės informacija</p><h1>${escapeHtml(page.heading)}</h1><p class="lead">${escapeHtml(page.summary)}</p></header><dl class="policy-operator" aria-label="Svetainės valdytojo duomenys"><div><dt>Valdytojas</dt><dd>GG Ventures UAB</dd></div><div><dt>Įmonės kodas</dt><dd>305442420</dd></div><div><dt>Kontaktas</dt><dd><a href="mailto:info@baldininkai.org">info@baldininkai.org</a></dd></div></dl><div class="policy-copy">${page.content}</div></article></main>${footer()}`;
+  await writeRoute(page.path, injectPage({
+    title: page.title,
+    description: page.description,
+    path: page.path,
+    body,
+    structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: page.heading, path: page.path }])],
+  }));
+}
 
 for (const record of manufacturers) {
   const path = `/gamintojas/${record.slug}`;
@@ -627,7 +661,7 @@ for (const record of manufacturers) {
   const registryStatus = isRegistryChecked(record)
     ? `<section class="profile-registry-status" aria-labelledby="profile-registry-status-title"><span class="registry-check-mark registry-check-mark--large" aria-hidden="true"></span><div><h2 id="profile-registry-status-title">Registro duomenys patikrinti</h2><p>${checkedDate ? `Paskutinė registro duomenų patikra: <time datetime="${checkedDate.iso}">${escapeHtml(checkedDate.label)}</time>. ` : 'Paskutinės patikros data viešame įraše nenurodyta. '}Ši žyma nurodo tik registro duomenų peržiūros būseną; ji nepatvirtina darbų kokybės, užimtumo ar paslaugų prieinamumo.</p></div></section>`
     : '';
-  const body = `${header()}<main class="profile-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="profile-sheet"><header class="profile-hero"><div class="profile-heading-group"><p class="record-status">Nepatvirtintas viešų šaltinių įrašas</p><h1>${escapeHtml(record.trading_name)}</h1><p class="profile-identity">${escapeHtml(record.source_identity)}</p></div><div class="profile-actions"><a class="primary-button" href="/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}">Įtraukti į projekto užklausą</a><a class="profile-guide-link" href="/gidas">Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →</a><a class="profile-guide-link" href="/gidas/${contextualGuide(record).slug}">${escapeHtml(contextualGuide(record).label)} →</a><a class="profile-owner-link" href="/savininkams">Svarstote savo verslo tęstinumą? Privatus pokalbis savininkams →</a></div></header>${registryStatus}<div class="profile-note"><strong>Duomenys nėra garantija.</strong><span>Šis įrašas nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span></div><section class="profile-details"><div class="section-heading"><h2>Tapatybė, vieta ir veiklos kryptys</h2></div><dl class="profile-facts">${facts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${linkFacts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd><a href="${escapeHtml(value)}" rel="noopener noreferrer">${escapeHtml(value)}</a></dd></div>`).join('')}</dl></section>${publicDetails}${profileLandingSection(record)}${staticReviews}<section class="provenance-section"><h2>Šaltiniai ir duomenų kilmė</h2><p>Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju ir negarantuoja jų tikslumo, aktualumo, darbų kokybės ar paslaugų prieinamumo.</p><ul class="source-list">${sources.map((source, index) => `<li><span>${index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`}</span><a href="${escapeHtml(source)}" rel="noopener noreferrer">${escapeHtml(source)}</a></li>`).join('')}</ul><p class="collection-date">Šaltinių surinkimo data: <time datetime="${record.source_collection_date}">${record.source_collection_date}</time></p></section></article></main>${footer()}`;
+  const body = `${header()}<main class="profile-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="profile-sheet"><header class="profile-hero"><div class="profile-heading-group"><p class="record-status">Nepatvirtintas viešų šaltinių įrašas</p><h1>${escapeHtml(record.trading_name)}</h1><p class="profile-identity">${escapeHtml(record.source_identity)}</p></div><div class="profile-actions"><a class="primary-button" href="/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}">Įtraukti į projekto užklausą</a><a class="profile-guide-link" href="/gidas">Prieš kreipdamiesi peržiūrėkite pirkėjo gidą →</a><a class="profile-guide-link" href="/gidas/${contextualGuide(record).slug}">${escapeHtml(contextualGuide(record).label)} →</a></div></header>${registryStatus}<div class="profile-note"><strong>Duomenys nėra garantija.</strong><span>Šis įrašas nepatvirtina gamintojo tapatybės, kokybės, užimtumo, kainos, terminų ar tinkamumo jūsų projektui.</span></div><section class="profile-details"><div class="section-heading"><h2>Tapatybė, vieta ir veiklos kryptys</h2></div><dl class="profile-facts">${facts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${linkFacts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd><a href="${escapeHtml(value)}" rel="noopener noreferrer">${escapeHtml(value)}</a></dd></div>`).join('')}</dl></section>${publicDetails}${profileLandingSection(record)}${staticReviews}<section class="provenance-section"><h2>Šaltiniai ir duomenų kilmė</h2><p>Įrašas sudarytas iš viešai prieinamų šaltinių. Katalogas šių duomenų netvirtino su gamintoju ir negarantuoja jų tikslumo, aktualumo, darbų kokybės ar paslaugų prieinamumo.</p><ul class="source-list">${sources.map((source, index) => `<li><span>${index === 0 ? 'Viešas šaltinis' : `Papildomas šaltinis ${index + 1}`}</span><a href="${escapeHtml(source)}" rel="noopener noreferrer">${escapeHtml(source)}</a></li>`).join('')}</ul><p class="collection-date">Šaltinių surinkimo data: <time datetime="${record.source_collection_date}">${record.source_collection_date}</time></p></section></article></main>${footer()}`;
   await writeRoute(path, injectPage({
     title: `${record.trading_name} | Baldų gamintojo įrašas`,
     description: `${record.trading_name}: viešais šaltiniais paremtas, nepatvirtintas gamintojo kandidato įrašas su vieta, kategorijomis ir šaltinių nuorodomis.`,
@@ -706,7 +740,7 @@ for (const article of guideArticles) {
 const sitemapPaths = [
   '/',
   '/gauti-pasiulymus',
-  '/savininkams',
+  ...policyPages.map((page) => page.path),
   '/gidas',
   ...guideArticles.map((article) => `/gidas/${article.slug}`),
   ...manufacturers.map((record) => `/gamintojas/${record.slug}`),
@@ -717,4 +751,4 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://w
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${eligibleCities.length} city routes, 1 buyer request route, 1 owner route, ${guideArticles.length + 1} guide routes, sitemap.xml and robots.txt.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${eligibleCities.length} city routes, 1 buyer request route, ${policyPages.length} policy routes, ${guideArticles.length + 1} guide routes, sitemap.xml and robots.txt.`);

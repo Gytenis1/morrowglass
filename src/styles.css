@@ -788,13 +788,21 @@
     gap: 1rem 2rem;
   }
 
-  .footer-inner > p {
+  .footer-summary {
     max-width: 72ch;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .footer-summary p:last-child {
+    color: oklch(0.82 0.012 158);
   }
 
   .footer-inner nav {
-    flex: 0 0 auto;
-    gap: 1rem;
+    flex: 0 1 38rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
     font-size: 0.83rem;
   }
 
@@ -1572,6 +1580,19 @@
     font-weight: 760;
   }
 
+  .form-privacy-note {
+    max-width: 68ch;
+    padding-top: 0.2rem;
+    color: var(--ink-soft);
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .form-privacy-note a {
+    color: var(--pine-strong);
+    font-weight: 780;
+  }
+
   .not-found-state {
     min-height: 23rem;
     align-content: center;
@@ -1831,439 +1852,105 @@
     border-radius: 12px;
   }
 
-  .profile-owner-link {
-    max-width: 32ch;
-    color: var(--ink-soft);
-    font-size: 0.84rem;
-    font-weight: 750;
-  }
 
-  .owner-main {
-    width: min(calc(100% - 2rem), var(--content-width));
+
+  .policy-main {
+    width: min(calc(100% - 2rem), 920px);
     min-height: calc(100vh - 148px);
     margin-inline: auto;
-    padding-block: clamp(1.5rem, 5vw, 4.5rem) clamp(3.5rem, 8vw, 7rem);
+    padding-block: clamp(2rem, 7vw, 5.5rem);
     display: grid;
-    gap: clamp(3.5rem, 8vw, 7rem);
+    gap: 1.5rem;
   }
 
-  .owner-hero {
+  .policy-document {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .policy-header {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.65fr);
-    align-items: end;
-    gap: clamp(2.5rem, 7vw, 7rem);
-    padding: clamp(1.6rem, 5vw, 4.5rem);
+    gap: 1rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
     color: var(--surface);
     background: var(--pine);
-    border-radius: 12px;
   }
 
-  .owner-hero-copy {
-    display: grid;
-    gap: 1.2rem;
-  }
-
-  .owner-hero .kicker {
+  .policy-header .kicker {
     color: oklch(0.87 0.115 137);
   }
 
-  .owner-hero h1 {
-    max-width: 24ch;
-    font-size: clamp(2.35rem, 4.1vw, 3.25rem);
+  .policy-header h1 {
+    max-width: 22ch;
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
   }
 
-  .owner-position {
-    display: grid;
-    gap: 0.85rem;
-    padding-block: 1.25rem;
-    border-block: 1px solid oklch(0.89 0.025 158 / 0.45);
-  }
-
-  .owner-position h2 {
-    font-family: var(--body);
+  .policy-header .lead {
+    max-width: 64ch;
+    color: oklch(0.96 0.012 158);
     font-size: 1.05rem;
-    line-height: 1.35;
-    letter-spacing: 0;
   }
 
-  .owner-position p {
-    color: oklch(0.94 0.014 158);
-    font-size: 0.94rem;
-    line-height: 1.65;
-  }
-
-  .owner-profile,
-  .owner-process {
+  .policy-operator {
     display: grid;
-    grid-template-columns: minmax(220px, 0.48fr) minmax(0, 1fr);
-    gap: clamp(2.5rem, 7vw, 7rem);
-  }
-
-  .owner-section-heading {
-    display: grid;
-    align-content: start;
-    gap: 0.85rem;
-  }
-
-  .owner-section-heading .kicker {
-    color: var(--pine);
-  }
-
-  .owner-section-heading > p:not(.kicker) {
-    max-width: 62ch;
-    color: var(--ink-soft);
-  }
-
-  .owner-profile-facts {
-    display: grid;
-  }
-
-  .owner-profile-facts > div {
-    display: grid;
-    grid-template-columns: minmax(140px, 0.3fr) minmax(0, 1fr);
-    gap: 1rem;
-    padding-block: 1.2rem;
-    border-top: 1px solid var(--line);
-  }
-
-  .owner-profile-facts > div:last-child {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     border-bottom: 1px solid var(--line);
   }
 
-  .owner-profile-facts dt {
-    color: var(--ink-soft);
-    font-size: 0.82rem;
-    font-weight: 800;
-  }
-
-  .owner-profile-facts dd {
-    font-weight: 680;
-  }
-
-  .owner-valuation {
-    display: grid;
-    gap: 2rem;
-    padding-block: clamp(2.5rem, 6vw, 5rem);
-    border-block: 1px solid var(--line);
-  }
-
-  .owner-valuation-heading {
-    max-width: 68ch;
-  }
-
-  .owner-valuation-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
-    align-items: start;
-    gap: clamp(1.5rem, 5vw, 4rem);
-  }
-
-  .valuation-input-panel {
+  .policy-operator > div {
     min-width: 0;
     display: grid;
-    gap: 1.25rem;
+    gap: 0.35rem;
+    padding: 1rem clamp(1.25rem, 4vw, 2.2rem);
+    border-right: 1px solid var(--line);
   }
 
-  .valuation-fields {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+  .policy-operator > div:last-child {
+    border-right: 0;
   }
 
-  .valuation-status {
-    min-height: 1.5em;
+  .policy-operator dt {
     color: var(--ink-soft);
-    font-size: 0.9rem;
-    font-weight: 680;
-  }
-
-  .valuation-status--error {
-    color: var(--critical);
-  }
-
-  .valuation-status--complete {
-    color: oklch(0.34 0.09 145);
-  }
-
-  .valuation-method {
-    border-block: 1px solid var(--line);
-  }
-
-  .valuation-method summary {
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    color: var(--pine-strong);
-    font-weight: 800;
-    cursor: pointer;
-  }
-
-  .valuation-method summary:hover {
-    color: var(--ink);
-  }
-
-  .valuation-method > div {
-    display: grid;
-    gap: 0.9rem;
-    padding-bottom: 1.2rem;
-    color: var(--ink-soft);
-    font-size: 0.92rem;
-  }
-
-  .valuation-method ul,
-  .valuation-explanation ul {
-    padding-left: 1.2rem;
-    display: grid;
-    gap: 0.55rem;
-    list-style: square;
-  }
-
-  .valuation-method li::marker {
-    color: var(--moss);
-  }
-
-  .valuation-result-shell {
-    min-width: 0;
-  }
-
-  .valuation-placeholder,
-  .valuation-result {
-    min-height: 20rem;
-    padding: clamp(1.3rem, 4vw, 2.2rem);
-    border-radius: 12px;
-  }
-
-  .valuation-placeholder {
-    display: grid;
-    align-content: center;
-    gap: 0.8rem;
-    color: var(--ink-soft);
-    background: oklch(0.955 0.018 158);
-    border: 1px solid var(--line);
-  }
-
-  .valuation-placeholder h3 {
-    color: var(--ink);
-  }
-
-  .valuation-placeholder[hidden],
-  .valuation-result[hidden] {
-    display: none;
-  }
-
-  .valuation-result {
-    display: grid;
-    align-content: start;
-    gap: 1.35rem;
-    color: var(--surface);
-    background: var(--pine-strong);
-  }
-
-  .valuation-result-label {
-    color: oklch(0.92 0.035 158);
-    font-size: 0.84rem;
+    font-size: 0.78rem;
     font-weight: 800;
   }
 
-  .valuation-ev-range {
-    display: block;
-    color: var(--surface);
-    font-family: var(--display);
-    font-size: clamp(1.65rem, 4vw, 2.45rem);
-    font-weight: 700;
-    line-height: 1.12;
-    letter-spacing: -0.025em;
+  .policy-operator dd {
     overflow-wrap: anywhere;
+    font-weight: 720;
     font-variant-numeric: tabular-nums;
   }
 
-  .valuation-result-facts {
-    display: grid;
-    border-top: 1px solid oklch(0.9 0.02 158 / 0.35);
-  }
-
-  .valuation-result-facts > div {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding-block: 0.7rem;
-    border-bottom: 1px solid oklch(0.9 0.02 158 / 0.35);
-  }
-
-  .valuation-result-facts dt {
-    color: oklch(0.92 0.035 158);
-    font-size: 0.82rem;
-  }
-
-  .valuation-result-facts dd {
-    text-align: right;
-    font-weight: 800;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .valuation-explanation {
-    display: grid;
-    gap: 0.75rem;
-  }
-
-  .valuation-explanation h3 {
-    font-family: var(--body);
-    font-size: 1rem;
-    line-height: 1.35;
-    letter-spacing: 0;
-  }
-
-  .valuation-explanation li {
-    color: oklch(0.94 0.014 158);
-    font-size: 0.88rem;
-  }
-
-  .valuation-explanation li::marker {
-    color: oklch(0.82 0.12 137);
-  }
-
-  .valuation-enquiry-link {
-    justify-self: start;
+  .policy-operator a,
+  .policy-copy a {
     color: var(--pine-strong);
-    background: var(--surface);
-    border-color: var(--surface);
+    font-weight: 760;
   }
 
-  .valuation-enquiry-link:hover {
-    color: var(--surface);
-    background: var(--ink);
-    border-color: var(--ink);
+  .policy-copy {
+    padding: 0 clamp(1.5rem, 5vw, 3.5rem) clamp(2rem, 6vw, 4rem);
   }
 
-  .valuation-evidence {
+  .policy-copy section {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    font-size: 0.92rem;
-  }
-
-  .valuation-evidence > p {
-    padding: 1.15rem;
-    border-radius: 10px;
-  }
-
-  .valuation-evidence > p:first-child {
-    color: var(--ink-soft);
-    background: var(--surface);
-    border: 1px solid var(--line);
-  }
-
-  .valuation-evidence a {
-    color: var(--pine-strong);
-    font-weight: 800;
-  }
-
-  .valuation-disclaimer {
-    color: var(--warning-ink);
-    background: var(--warning-bg);
-  }
-
-  .owner-process {
-    padding-block: clamp(2.5rem, 6vw, 5rem);
-    border-block: 1px solid var(--line);
-  }
-
-  .owner-process ol {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 0;
-    list-style: none;
-    counter-reset: owner-step;
-  }
-
-  .owner-process li {
-    display: grid;
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 0.35rem 1rem;
-    padding-block: 1.1rem;
-    border-top: 1px solid var(--line);
-    counter-increment: owner-step;
-  }
-
-  .owner-process li:last-child {
+    gap: 0.85rem;
+    padding-block: clamp(1.6rem, 4vw, 2.5rem);
     border-bottom: 1px solid var(--line);
   }
 
-  .owner-process li::before {
-    content: counter(owner-step);
-    grid-row: 1 / span 2;
-    color: var(--pine);
-    font-family: var(--display);
-    font-size: 1.45rem;
-    font-weight: 700;
-    line-height: 1.1;
-    font-variant-numeric: tabular-nums;
+  .policy-copy section:last-child {
+    border-bottom: 0;
   }
 
-  .owner-process li span {
-    color: var(--ink-soft);
+  .policy-copy h2 {
+    max-width: 30ch;
+    font-size: clamp(1.45rem, 3vw, 1.9rem);
   }
 
-  .owner-enquiry-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.36fr);
-    align-items: start;
-    gap: clamp(2rem, 6vw, 5rem);
-  }
-
-  .owner-form-section {
-    min-width: 0;
-    display: grid;
-    gap: 2rem;
-  }
-
-  .owner-enquiry-form {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem;
-    padding: clamp(1.25rem, 4vw, 2.4rem);
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-  }
-
-  .owner-enquiry-form textarea {
-    min-height: 11rem;
-  }
-
-  .owner-submit {
-    display: grid;
-    justify-items: start;
-    gap: 0.8rem;
-    padding-top: 0.4rem;
-  }
-
-  .owner-submit .form-status {
-    max-width: 65ch;
-    min-height: 1.4em;
-  }
-
-  .owner-confidentiality {
-    position: sticky;
-    top: 1.5rem;
-    display: grid;
-    gap: 0.9rem;
-    padding: 1.25rem;
-    color: var(--ink);
-    background: oklch(0.955 0.022 158);
-    border-radius: 10px;
-  }
-
-  .owner-confidentiality h2 {
-    font-family: var(--body);
-    font-size: 1.05rem;
-    line-height: 1.35;
-    letter-spacing: 0;
-  }
-
-  .owner-confidentiality p {
-    font-size: 0.92rem;
+  .policy-copy p {
+    max-width: 68ch;
   }
 
   .guide-intro {
@@ -2767,22 +2454,13 @@
     .landing-hero,
     .landing-related,
     .request-intro,
-    .request-layout,
-    .owner-hero,
-    .owner-profile,
-    .owner-process,
-    .owner-enquiry-layout,
-    .owner-valuation-layout {
+    .request-layout {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
 
-    .valuation-evidence {
-      grid-template-columns: 1fr;
-    }
 
-    .request-guidance,
-    .owner-confidentiality {
+    .request-guidance {
       position: static;
     }
   }
@@ -2814,6 +2492,8 @@
 
     .footer-inner nav {
       width: 100%;
+      flex: 0 0 auto;
+      justify-content: flex-start;
       flex-wrap: wrap;
     }
 
@@ -2845,10 +2525,10 @@
       max-width: 38ch;
     }
 
-    .profile-guide-link,
-    .profile-owner-link {
+    .profile-guide-link {
       max-width: 38ch;
     }
+
 
     .guide-intro {
       grid-template-columns: 1fr;
@@ -2880,7 +2560,7 @@
     .browse-section,
     .profile-main,
     .request-main,
-    .owner-main,
+    .policy-main,
     .guide-start,
     .guide-hub,
     .guide-principles,
@@ -2941,8 +2621,7 @@
     .profile-landing-links li,
     .source-list li,
     .profile-note,
-    .landing-faq dl > div,
-    .owner-profile-facts > div {
+    .landing-faq dl > div {
       grid-template-columns: 1fr;
       gap: 0.35rem;
     }
@@ -2958,17 +2637,27 @@
 
     .correction-form,
     .review-form,
-    .buyer-request-form,
-    .owner-enquiry-form,
-    .valuation-fields {
+    .buyer-request-form {
       grid-template-columns: 1fr;
     }
 
     .correction-form > *,
     .review-form > *,
-    .buyer-request-form > *,
-    .owner-enquiry-form > * {
+    .buyer-request-form > * {
       grid-column: 1;
+    }
+
+    .policy-operator {
+      grid-template-columns: 1fr;
+    }
+
+    .policy-operator > div {
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .policy-operator > div:last-child {
+      border-bottom: 0;
     }
 
     .manufacturer-picker-toolbar {
@@ -2998,6 +2687,7 @@
       grid-column: 2;
     }
 
+
     .guide-intro {
       padding-inline: 0.625rem;
     }
@@ -3006,19 +2696,6 @@
       padding-inline: 1.1rem;
     }
 
-    .valuation-result-facts > div {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .valuation-result-facts dd {
-      text-align: left;
-    }
-
-    .valuation-enquiry-link {
-      width: 100%;
-    }
   }
 
   @media (prefers-reduced-motion: reduce) {
