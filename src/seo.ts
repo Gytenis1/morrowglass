@@ -3,6 +3,7 @@ import landingConfig from '../data/seo-landings.json';
 export const SITE_URL = 'https://www.baldininkai.org';
 export const SITE_NAME = 'Baldai pagal užsakymą Lietuvoje';
 export const CITY_LANDING_THRESHOLD = landingConfig.cityThreshold;
+export const CITY_CATEGORY_LANDING_THRESHOLD = landingConfig.cityCategoryThreshold;
 
 export type CategoryLanding = {
   code: string;
@@ -10,6 +11,14 @@ export type CategoryLanding = {
   title: string;
   intro: string;
   buyer_note: string;
+};
+
+export type CityCategoryLanding = {
+  category: CategoryLanding;
+  city: string;
+  citySlug: string;
+  count: number;
+  path: string;
 };
 
 export type SeoManufacturer = {
@@ -67,15 +76,53 @@ export function slugifyLithuanian(value: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-export function getEligibleCities(records: SeoManufacturer[]): { city: string; slug: string; count: number }[] {
+function getCityCounts(records: SeoManufacturer[]): Map<string, number> {
   const counts = new Map<string, number>();
   records.forEach((record) => {
     const city = record.city?.trim();
     if (city) counts.set(city, (counts.get(city) ?? 0) + 1);
   });
+  return counts;
+}
 
-  return Array.from(counts, ([city, count]) => ({ city, slug: slugifyLithuanian(city), count }))
+export function getEligibleCityCategoryLandings(records: SeoManufacturer[]): CityCategoryLanding[] {
+  const combinations: CityCategoryLanding[] = [];
+
+  CATEGORY_LANDINGS.forEach((category) => {
+    const cityCounts = new Map<string, number>();
+    records.forEach((record) => {
+      const city = record.city?.trim();
+      if (city && (record.category_codes ?? []).includes(category.code)) {
+        cityCounts.set(city, (cityCounts.get(city) ?? 0) + 1);
+      }
+    });
+
+    cityCounts.forEach((count, city) => {
+      if (count < CITY_CATEGORY_LANDING_THRESHOLD) return;
+      const citySlug = slugifyLithuanian(city);
+      combinations.push({
+        category,
+        city,
+        citySlug,
+        count,
+        path: `/baldai-pagal-uzsakyma/${category.slug}/miestas/${citySlug}`,
+      });
+    });
+  });
+
+  return combinations.sort((a, b) => a.category.title.localeCompare(b.category.title, 'lt') || a.city.localeCompare(b.city, 'lt'));
+}
+
+export function getEligibleCities(records: SeoManufacturer[]): { city: string; slug: string; count: number }[] {
+  return Array.from(getCityCounts(records), ([city, count]) => ({ city, slug: slugifyLithuanian(city), count }))
     .filter((entry) => entry.count >= CITY_LANDING_THRESHOLD)
+    .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
+}
+
+export function getLandingCities(records: SeoManufacturer[]): { city: string; slug: string; count: number }[] {
+  const combinationCities = new Set(getEligibleCityCategoryLandings(records).map((entry) => entry.city));
+  return Array.from(getCityCounts(records), ([city, count]) => ({ city, slug: slugifyLithuanian(city), count }))
+    .filter((entry) => entry.count >= CITY_LANDING_THRESHOLD || combinationCities.has(entry.city))
     .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
 }
 

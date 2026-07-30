@@ -541,13 +541,33 @@ function faqHtml(items) {
 }
 
 const cityCounts = new Map();
-for (const record of manufacturers) cityCounts.set(record.city, (cityCounts.get(record.city) ?? 0) + 1);
-const eligibleCities = Array.from(cityCounts, ([city, count]) => ({ city, count, slug: slugifyLithuanian(city) }))
-  .filter((entry) => entry.count >= landingConfig.cityThreshold)
+for (const record of manufacturers) {
+  const city = record.city?.trim();
+  if (city) cityCounts.set(city, (cityCounts.get(city) ?? 0) + 1);
+}
+const cityCategoryLandings = landingConfig.categories.flatMap((category) => {
+  const counts = new Map();
+  for (const record of manufacturers) {
+    const city = record.city?.trim();
+    if (city && (record.category_codes ?? []).includes(category.code)) {
+      counts.set(city, (counts.get(city) ?? 0) + 1);
+    }
+  }
+  return Array.from(counts, ([city, count]) => ({
+    category,
+    city,
+    citySlug: slugifyLithuanian(city),
+    count,
+    path: `/baldai-pagal-uzsakyma/${category.slug}/miestas/${slugifyLithuanian(city)}`,
+  })).filter((entry) => entry.count >= landingConfig.cityCategoryThreshold);
+}).sort((a, b) => a.category.title.localeCompare(b.category.title, 'lt') || a.city.localeCompare(b.city, 'lt'));
+const cityCategoryNames = new Set(cityCategoryLandings.map((entry) => entry.city));
+const landingCities = Array.from(cityCounts, ([city, count]) => ({ city, count, slug: slugifyLithuanian(city) }))
+  .filter((entry) => entry.count >= landingConfig.cityThreshold || cityCategoryNames.has(entry.city))
   .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
 
 const categoryBySlug = new Map(landingConfig.categories.map((category) => [category.slug, category]));
-const cityBySlug = new Map(eligibleCities.map((city) => [city.slug, city]));
+const cityBySlug = new Map(landingCities.map((city) => [city.slug, city]));
 for (const slug of categoryBySlug.keys()) {
   if (cityBySlug.has(slug)) throw new Error(`Category/city route collision: ${slug}`);
 }
@@ -555,7 +575,7 @@ for (const slug of categoryBySlug.keys()) {
 function guideRelatedLinks(article) {
   if (!article.categoryCode) return '';
   const category = landingConfig.categories.find((item) => item.code === article.categoryCode);
-  const city = eligibleCities.find((item) => item.slug === article.citySlug) ?? eligibleCities[0];
+  const city = landingCities.find((item) => item.slug === article.citySlug) ?? landingCities[0];
   const matching = manufacturers.filter((record) => (record.category_codes ?? []).includes(article.categoryCode));
   const profiles = [...matching, ...manufacturers].filter((record, index, records) => records.findIndex((candidate) => candidate.slug === record.slug) === index).slice(0, 3);
   if (!category || !city || profiles.length < 3) throw new Error(`Guide ${article.slug} needs a category, city and three profile links.`);
@@ -574,7 +594,7 @@ function contextualGuide(record) {
 function profileLandingSection(record) {
   const links = [];
   const city = record.city?.trim();
-  const eligibleCity = city ? eligibleCities.find((entry) => entry.city === city) : undefined;
+  const eligibleCity = city ? landingCities.find((entry) => entry.city === city) : undefined;
   if (eligibleCity) {
     links.push({ kind: 'Miestas', slug: eligibleCity.slug, label: `Baldų gamintojų kandidatai: ${eligibleCity.city}` });
   }
@@ -596,7 +616,7 @@ async function writeRoute(path, html) {
   await writeFile(output, html);
 }
 
-const homeBody = `${header()}<main><section class="intro" aria-labelledby="page-title"><div class="intro-copy"><p class="kicker">Viešas paieškos katalogas</p><h1 id="page-title">Raskite baldų gamintojus pagal poreikį ir vietą</h1><p class="lead">Pradėkite nuo baldų rūšies ir miesto. Rezultatus galėsite tikslinti pagal pavadinimą, įmonės duomenis ir kitus katalogo kriterijus.</p><div class="intro-actions"><a class="intro-secondary-link" href="/gauti-pasiulymus">Jau turite projekto aprašymą? Pateikti užklausą →</a><a class="intro-guide-link" href="/gidas">Kaip atrinkti ir palyginti gamintojus →</a></div></div><div class="home-search-panel" aria-labelledby="home-search-title"><div class="home-search-heading"><h2 id="home-search-title">Ko ieškote?</h2><p>Pasirinkite poreikį ir vietą — katalogas atsinaujins iškart.</p></div><div class="request-static-loading" role="status"><p>Paieška ir filtrai parengiami įkėlus katalogą.</p></div><aside id="apie-kataloga"><details class="directory-note"><summary>Ką svarbu žinoti apie katalogą</summary><p>Tai iš viešų šaltinių sudarytas, nepatvirtintų kandidatų katalogas. Įrašai nėra kokybės, užimtumo ar meistrystės garantija, todėl informaciją ir pasiūlymus įvertinkite savarankiškai.</p></details></aside></div></section><section class="browse-section" id="gamintojai" aria-labelledby="browse-results-title"><h2 class="visually-hidden" id="browse-results-title">Gamintojų katalogo rezultatai</h2><div class="results-area"><div class="result-header"><p class="result-count">Kataloge – ${formatCount(manufacturers.length)}.</p></div><div class="manufacturer-list">${manufacturers.map(manufacturerCard).join('')}</div></div></section><section class="landing-directory"><div class="section-heading"><h2>Naršykite pagal baldų rūšį arba miestą</h2></div><div class="landing-link-groups"><div><h3>Pagal baldų rūšį</h3><ul>${landingConfig.categories.map((category) => `<li><a href="/baldai-pagal-uzsakyma/${category.slug}">${escapeHtml(category.title)}</a></li>`).join('')}</ul></div><div><h3>Pagal šaltinyje nurodytą miestą</h3><ul>${eligibleCities.map((city) => `<li><a href="/baldai-pagal-uzsakyma/${city.slug}">Baldų gamintojų kandidatai: ${escapeHtml(city.city)} (${city.count})</a></li>`).join('')}</ul></div></div></section></main>${footer()}`;
+const homeBody = `${header()}<main><section class="intro" aria-labelledby="page-title"><div class="intro-copy"><p class="kicker">Viešas paieškos katalogas</p><h1 id="page-title">Raskite baldų gamintojus pagal poreikį ir vietą</h1><p class="lead">Pradėkite nuo baldų rūšies ir miesto. Rezultatus galėsite tikslinti pagal pavadinimą, įmonės duomenis ir kitus katalogo kriterijus.</p><div class="intro-actions"><a class="intro-secondary-link" href="/gauti-pasiulymus">Jau turite projekto aprašymą? Pateikti užklausą →</a><a class="intro-guide-link" href="/gidas">Kaip atrinkti ir palyginti gamintojus →</a></div></div><div class="home-search-panel" aria-labelledby="home-search-title"><div class="home-search-heading"><h2 id="home-search-title">Ko ieškote?</h2><p>Pasirinkite poreikį ir vietą — katalogas atsinaujins iškart.</p></div><div class="request-static-loading" role="status"><p>Paieška ir filtrai parengiami įkėlus katalogą.</p></div><aside id="apie-kataloga"><details class="directory-note"><summary>Ką svarbu žinoti apie katalogą</summary><p>Tai iš viešų šaltinių sudarytas, nepatvirtintų kandidatų katalogas. Įrašai nėra kokybės, užimtumo ar meistrystės garantija, todėl informaciją ir pasiūlymus įvertinkite savarankiškai.</p></details></aside></div></section><section class="browse-section" id="gamintojai" aria-labelledby="browse-results-title"><h2 class="visually-hidden" id="browse-results-title">Gamintojų katalogo rezultatai</h2><div class="results-area"><div class="result-header"><p class="result-count">Kataloge – ${formatCount(manufacturers.length)}.</p></div><div class="manufacturer-list">${manufacturers.map(manufacturerCard).join('')}</div></div></section><section class="landing-directory"><div class="section-heading"><h2>Naršykite pagal baldų rūšį arba miestą</h2></div><div class="landing-link-groups"><div><h3>Pagal baldų rūšį</h3><ul>${landingConfig.categories.map((category) => `<li><a href="/baldai-pagal-uzsakyma/${category.slug}">${escapeHtml(category.title)}</a></li>`).join('')}</ul></div><div><h3>Pagal šaltinyje nurodytą miestą</h3><ul>${landingCities.map((city) => `<li><a href="/baldai-pagal-uzsakyma/${city.slug}">Baldų gamintojų kandidatai: ${escapeHtml(city.city)} (${city.count})</a></li>`).join('')}</ul></div></div></section></main>${footer()}`;
 await writeRoute('/', injectPage({
   title: 'Baldai pagal užsakymą Lietuvoje | Gamintojų katalogas',
   description: 'Viešais šaltiniais paremtas nepatvirtintų Lietuvos nestandartinių baldų gamintojų kandidatų katalogas su paieška pagal kategoriją ir vietą.',
@@ -715,26 +735,83 @@ function cityFaq(city) {
   ];
 }
 
+function cityCategoryFaq(category, city) {
+  return [
+    { question: `Kodėl ${category.title.toLocaleLowerCase('lt-LT')} kandidatai pateikti miesto ${city} puslapyje?`, answer: `Šių įrašų viešuose šaltiniuose užfiksuota kategorija „${category.title}“, o bazės miestas ar vietovė nurodyta ${city}. Abi žymos yra informacinės.` },
+    { question: `Ar šie gamintojai aptarnauja visą miestą ${city}?`, answer: 'Katalogas to netvirtina. Matavimo, pristatymo ir montavimo teritoriją reikia patikrinti tiesiogiai su kiekvienu kandidatu.' },
+    { question: 'Ar patekimas į šį sąrašą reiškia rekomendaciją?', answer: 'Ne. Įrašai yra nepatvirtinti, jų eiliškumas nėra reitingas, o kategorijos ir miesto sutapimas negarantuoja kokybės, prieinamumo ar tinkamumo konkrečiam projektui.' },
+  ];
+}
+
+function landingItemList(records) {
+  return { '@context': 'https://schema.org', '@type': 'ItemList', numberOfItems: records.length, itemListElement: records.map((record, index) => ({ '@type': 'ListItem', position: index + 1, url: canonicalUrl(`/gamintojas/${record.slug}`), name: record.trading_name })) };
+}
+
 async function writeLanding({ slug, title, intro, buyerNote, records, related, faq, kind }) {
   const path = `/baldai-pagal-uzsakyma/${slug}`;
   const description = kind === 'category'
     ? `${title}: ${records.length} viešais šaltiniais paremti nepatvirtinti Lietuvos gamintojų kandidatai, miestai ir atrankos gairės.`
     : `${title.replace('Baldų gamintojų kandidatai: ', '')}: ${records.length} viešuose šaltiniuose šiame mieste registruoti baldų gamintojų kandidatai. Sąrašas nėra paslaugų teritorijos ar kokybės garantija.`;
-  const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">${kind === 'category' ? 'Baldų kategorija' : 'Šaltinyje nurodytas miestas'}</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section><section class="landing-related"><div class="section-heading"><h2>${kind === 'category' ? 'Susiję miestų puslapiai' : 'Šaltiniuose nurodytos veiklos kryptys'}</h2></div><ul class="landing-related-links">${related.map((item) => `<li><a href="/baldai-pagal-uzsakyma/${item.slug}">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}</ul></section><section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
-  const itemList = { '@context': 'https://schema.org', '@type': 'ItemList', numberOfItems: records.length, itemListElement: records.map((record, index) => ({ '@type': 'ListItem', position: index + 1, url: canonicalUrl(`/gamintojas/${record.slug}`), name: record.trading_name })) };
-  await writeRoute(path, injectPage({ title: `${title} | Gamintojų katalogas`, description, path, body, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }]), faqSchema(faq), itemList] }));
+  const relatedTitle = kind === 'category' ? 'Šios baldų rūšies miestų puslapiai' : 'Šio miesto baldų rūšių puslapiai';
+  const relatedSection = related.length
+    ? `<section class="landing-related"><div class="section-heading"><h2>${relatedTitle}</h2><p>Nuorodos rodomos tik toms baldų rūšies ir miesto sankirtoms, kuriose yra bent trys katalogo įrašai.</p></div><ul class="landing-related-links">${related.map((item) => `<li><a href="${item.path}">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}</ul></section>`
+    : '';
+  const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">${kind === 'category' ? 'Baldų kategorija' : 'Šaltinyje nurodytas miestas'}</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section>${relatedSection}<section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
+  await writeRoute(path, injectPage({ title: `${title} | Gamintojų katalogas`, description, path, body, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }]), faqSchema(faq), landingItemList(records)] }));
+}
+
+async function writeCityCategoryLanding(combination) {
+  const { category, city, path } = combination;
+  const records = manufacturers
+    .filter((record) => record.city === city && (record.category_codes ?? []).includes(category.code))
+    .sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'lt'));
+  const cityLanding = landingCities.find((entry) => entry.city === city);
+  if (!cityLanding || records.length < landingConfig.cityCategoryThreshold) {
+    throw new Error(`City/category landing prerequisites missing: ${category.slug}/${combination.citySlug}`);
+  }
+  const title = `${category.title} – ${city}`;
+  const intro = `Šiame puslapyje pateikiami ${records.length} nepatvirtinti kandidatų įrašai, kurių viešuose šaltiniuose nurodyta baldų rūšis „${category.title}“ ir bazės miestas ar vietovė „${city}“.`;
+  const buyerNote = 'Kategorijos ir miesto sutapimas nepatvirtina darbų kokybės, dabartinio užimtumo, paslaugų teritorijos ar tinkamumo jūsų projektui. Matavimo, pristatymo ir montavimo sąlygas patikrinkite tiesiogiai.';
+  const faq = cityCategoryFaq(category, city);
+  const description = `${category.title}, ${city}: ${records.length} viešais šaltiniais paremti nepatvirtinti gamintojų kandidatai. Sąrašas nėra kokybės, prieinamumo ar paslaugų teritorijos garantija.`;
+  const categoryCount = manufacturers.filter((record) => (record.category_codes ?? []).includes(category.code)).length;
+  const related = [
+    { path: `/baldai-pagal-uzsakyma/${category.slug}`, label: category.title, count: categoryCount },
+    { path: `/baldai-pagal-uzsakyma/${cityLanding.slug}`, label: `Baldų gamintojų kandidatai: ${city}`, count: cityLanding.count },
+  ];
+  const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">Baldų rūšis ir miestas</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section><section class="landing-related"><div class="section-heading"><h2>Naršykite platesnius sąrašus</h2><p>Grįžkite į visos baldų rūšies arba viso miesto kandidatų sąrašą.</p></div><ul class="landing-related-links">${related.map((item) => `<li><a href="${item.path}">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}</ul></section><section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
+  await writeRoute(path, injectPage({
+    title: `${title} | Gamintojų katalogas`,
+    description,
+    path,
+    body,
+    structuredData: [
+      breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: category.title, path: `/baldai-pagal-uzsakyma/${category.slug}` }, { name: title, path }]),
+      faqSchema(faq),
+      landingItemList(records),
+    ],
+  }));
 }
 
 for (const category of landingConfig.categories) {
   const records = manufacturers.filter((record) => record.category_codes.includes(category.code)).sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'lt'));
-  const related = eligibleCities.map((city) => ({ ...city, label: city.city, count: records.filter((record) => record.city === city.city).length })).filter((city) => city.count > 0).sort((a, b) => b.count - a.count || a.city.localeCompare(b.city, 'lt'));
+  const related = cityCategoryLandings
+    .filter((entry) => entry.category.code === category.code)
+    .map((entry) => ({ path: entry.path, label: entry.city, count: entry.count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'lt'));
   await writeLanding({ slug: category.slug, title: category.title, intro: category.intro, buyerNote: category.buyer_note, records, related, faq: categoryFaq(category), kind: 'category' });
 }
 
-for (const city of eligibleCities) {
+for (const city of landingCities) {
   const records = manufacturers.filter((record) => record.city === city.city).sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'lt'));
-  const related = landingConfig.categories.map((category) => ({ slug: category.slug, label: category.title, count: records.filter((record) => record.category_codes.includes(category.code)).length })).filter((category) => category.count > 0);
+  const related = cityCategoryLandings
+    .filter((entry) => entry.city === city.city)
+    .map((entry) => ({ path: entry.path, label: entry.category.title, count: entry.count }));
   await writeLanding({ slug: city.slug, title: `Baldų gamintojų kandidatai: ${city.city}`, intro: `Čia pateikiami ${records.length} nepatvirtinti baldų gamintojų kandidatai, kurių viešo šaltinio įraše kaip bazės miestas ar vietovė nurodytas ${city.city}.`, buyerNote: 'Šis sąrašas nepatvirtina, kad kandidatai aptarnauja visą miestą ar aplinkinį regioną. Matavimo, pristatymo ir montavimo vietas patikrinkite tiesiogiai.', records, related, faq: cityFaq(city.city), kind: 'city' });
+}
+
+for (const combination of cityCategoryLandings) {
+  await writeCityCategoryLanding(combination);
 }
 
 const guideFaq = [
@@ -775,10 +852,11 @@ const sitemapPaths = [
   ...guideArticles.map((article) => `/gidas/${article.slug}`),
   ...manufacturers.map((record) => `/gamintojas/${record.slug}`),
   ...landingConfig.categories.map((category) => `/baldai-pagal-uzsakyma/${category.slug}`),
-  ...eligibleCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
+  ...landingCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
+  ...cityCategoryLandings.map((entry) => entry.path),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(sourceDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${eligibleCities.length} city routes, 1 buyer request route, 1 comparison route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, sitemap.xml and robots.txt.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, ${cityCategoryLandings.length} city/category routes, 1 buyer request route, 1 comparison route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, sitemap.xml and robots.txt.`);

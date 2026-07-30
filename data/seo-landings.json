@@ -64,5 +64,6 @@
       "buyer_note": "Prieš kreipdamiesi paprašykite patvirtinti, kokius gaminius, medžiagas, paslaugų apimtį ir terminus kandidatas gali pasiūlyti. Ši bendroji kategorija nepatvirtina konkrečių produktų, medžiagų, pajėgumo ar tinkamumo jūsų projektui."
     }
   ],
-  "cityThreshold": 5
+  "cityThreshold": 5,
+  "cityCategoryThreshold": 3
 }
