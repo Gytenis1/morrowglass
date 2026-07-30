@@ -1,6 +1,6 @@
 import type { RecordModel } from 'pocketbase';
 import './styles.css';
-import baldininkaiLogoUrl from './assets/baldininkai-logo.png';
+import baldininkaiLogoUrl from './assets/baldininkai-logo.svg';
 import { pb } from './pocketbase';
 import { renderComparisonTool, renderContractTool, renderRfqTool } from './buyerTools';
 import {

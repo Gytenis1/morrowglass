@@ -16,7 +16,7 @@ const [manufacturers, landingConfig, baseHtml] = await Promise.all([
 ]);
 await rm(join(publicDir, 'savininkams'), { recursive: true, force: true });
 
-const logoAssetUrl = baseHtml.match(/<link rel="icon" type="image\/png" href="([^"]+)" \/>/)?.[1];
+const logoAssetUrl = baseHtml.match(/<link rel="icon" type="image\/svg\+xml" href="([^"]+)" \/>/)?.[1];
 
 if (!logoAssetUrl) {
   throw new Error('Could not resolve the built Baldininkai logo asset URL.');
