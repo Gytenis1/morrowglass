@@ -440,9 +440,11 @@ function employeeBandLabel(value) {
   return labels[value] ?? `${value} darbuotojų (viešo šaltinio grupė)`;
 }
 
-function siteStructuredData() {
+function siteStructuredData(path) {
+  const organization = { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: SITE_URL };
+  if (path !== '/') return [organization];
   return [
-    { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: SITE_URL },
+    organization,
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
@@ -546,7 +548,7 @@ function injectPage({ title, description, path, body, type = 'website', robots =
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
-${[...siteStructuredData(), ...structuredData].map((data) => `    <script type="application/ld+json" data-seo-structured-data>${safeJson(data)}</script>`).join('\n')}`;
+${[...siteStructuredData(path), ...structuredData].map((data) => `    <script type="application/ld+json" data-seo-structured-data>${safeJson(data)}</script>`).join('\n')}`;
   return html.replace(/\s*<\/head>/, `${head}\n  </head>`);
 }
 
@@ -663,6 +665,7 @@ await writeRoute('/', injectPage({
   description: 'Viešais šaltiniais paremtas nepatvirtintų Lietuvos nestandartinių baldų gamintojų kandidatų katalogas su paieška pagal kategoriją ir vietą.',
   path: '/',
   body: homeBody,
+  structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }])],
 }));
 
 const requestPath = '/gauti-pasiulymus';
