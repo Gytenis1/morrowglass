@@ -47,6 +47,7 @@ function toolNavigation(active: 'contract' | 'comparison' | 'rfq'): string {
 }
 
 const contractWarning = 'Svarbu prieš naudojant: tai informacinis redaguojamas šablonas, o ne teisinė konsultacija ar teisinis vertinimas. Jis negarantuoja, kad tinka jūsų situacijai, atitinka visus reikalavimus ar bus vykdytinas. Prieš pasirašydami peržiūrėkite visą tekstą ir, kai tinkama, pasitarkite su kvalifikuotu teisininku.';
+const comparisonWarning = 'Svarbu: pasiūlymų palyginimo įrankis yra informacinio pobūdžio ir nėra teisinė konsultacija ar teisinis vertinimas.';
 
 const contractSections = [
   {
@@ -508,6 +509,10 @@ export function renderComparisonTool({ root, renderHeader, renderFooter }: ToolC
       ${renderHeader('guide')}
       <main class="buyer-tool-main comparison-tool-main">
         ${toolNavigation('comparison')}
+        <aside class="legal-template-warning" role="note" aria-label="Svarbus perspėjimas">
+          <strong>Informacinis įrankis</strong>
+          <p>${escapeHtml(comparisonWarning)}</p>
+        </aside>
         <section class="tool-intro" aria-labelledby="comparison-title">
           <div>
             <p class="kicker">Naršyklėje veikiantis palyginimas</p>
