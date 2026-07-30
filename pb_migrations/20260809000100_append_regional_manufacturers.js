@@ -5,7 +5,10 @@ migrate((app) => {
   // It inserts only previously absent slugs, so it never overwrites cataloguing or
   // operator-enriched fields on either legacy or partially seeded records.
   const seed = require(__hooks + "/../data/regional_manufacturers_20260809.json")
-  const legacySeed = require(__hooks + "/../data/manufacturers.json")
+  // The static source now contains all 315 records; this historic migration still
+  // owns only the 115-record regional batch on a fresh database.
+  const allSeed = require(__hooks + "/../data/manufacturers.json")
+  const legacySeed = Array.isArray(allSeed) ? allSeed.slice(0, 200) : allSeed
   const categoryLabels = {
     K: "Virtuvės baldai",
     W: "Spintos ir įmontuojami baldai",
@@ -29,11 +32,11 @@ migrate((app) => {
     "verification_status",
   ]
 
-  if (!Array.isArray(legacySeed) || legacySeed.length !== 200) {
-    throw new Error("data/manufacturers.json must retain exactly 200 legacy manufacturer records")
+  if (!Array.isArray(allSeed) || allSeed.length !== 315 || !Array.isArray(legacySeed) || legacySeed.length !== 200) {
+    throw new Error("data/manufacturers.json must retain the 200 legacy and 115 regional manufacturer records")
   }
-  if (!Array.isArray(seed) || seed.length < 100) {
-    throw new Error("regional manufacturer batch must contain at least 100 records")
+  if (!Array.isArray(seed) || seed.length !== 115) {
+    throw new Error("regional manufacturer batch must contain exactly 115 records")
   }
 
   const legacySlugs = new Set()

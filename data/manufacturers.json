@@ -10010,5 +10010,3438 @@
     "revenue_availability": "paskelbta",
     "financial_verification_status": "patikrinta",
     "verified_at": "2026-07-28"
+  },
+  {
+    "slug": "alantas-baldu-salonas",
+    "legal_name": "Alantas, baldų salonas, UAB",
+    "trading_name": "Alantas, baldų salonas",
+    "source_identity": "Alantas, baldų salonas, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Alantas, baldų salonas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/alantas_baldu_salonas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/alantas_baldu_salonas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/alantas_baldu_salonas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/alantas_baldu_salonas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "minshape-m-jakucionio-ivv",
+    "trading_name": "Minshape, M. Jakučionio IVV",
+    "source_identity": "Minshape, M. Jakučionio IVV",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Minshape, M. Jakučionio IVV“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Kaunas",
+    "city": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/minshape_m_jakucionio_ivv/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/minshape_m_jakucionio_ivv/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/minshape_m_jakucionio_ivv/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/minshape_m_jakucionio_ivv/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "valdrena",
+    "legal_name": "Valdrena, MB",
+    "trading_name": "Valdrena",
+    "source_identity": "Valdrena, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Valdrena“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/valdrena/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/valdrena/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/valdrena/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/valdrena/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mbi-minkstu-baldu-ideja",
+    "trading_name": "MBI minkštų baldų idėja",
+    "source_identity": "MBI minkštų baldų idėja",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „MBI minkštų baldų idėja“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/mbi_minkstu_baldu_ideja/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/mbi_minkstu_baldu_ideja/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mbi_minkstu_baldu_ideja/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/mbi_minkstu_baldu_ideja/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dronga-medienos-meistrai",
+    "trading_name": "Dronga, medienos meistrai",
+    "source_identity": "Dronga, medienos meistrai",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Dronga, medienos meistrai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/dronga_medienos_meistrai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/dronga_medienos_meistrai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/dronga_medienos_meistrai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/dronga_medienos_meistrai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "romanta",
+    "legal_name": "Romanta, MB",
+    "trading_name": "Romanta",
+    "source_identity": "Romanta, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Romanta“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/romanta/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/romanta/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/romanta/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/romanta/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "laumes-baldu-gamyba",
+    "legal_name": "Laumės baldų gamyba, UAB",
+    "trading_name": "Laumės baldų gamyba",
+    "source_identity": "Laumės baldų gamyba, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Laumės baldų gamyba“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/laumes_baldu_gamyba/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/laumes_baldu_gamyba/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/laumes_baldu_gamyba/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/laumes_baldu_gamyba/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldijos-projektai",
+    "legal_name": "Baldijos projektai, UAB",
+    "trading_name": "Baldijos projektai",
+    "source_identity": "Baldijos projektai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldijos projektai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldijos_projektai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldijos_projektai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldijos_projektai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldijos_projektai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "anp-inovaciniai-sprendimai",
+    "legal_name": "ANP inovaciniai sprendimai, UAB",
+    "trading_name": "ANP inovaciniai sprendimai",
+    "source_identity": "ANP inovaciniai sprendimai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „ANP inovaciniai sprendimai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "pajurio-baldai",
+    "legal_name": "Pajūrio baldai, UAB",
+    "trading_name": "Pajūrio baldai",
+    "source_identity": "Pajūrio baldai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Pajūrio baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/pajurio_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/pajurio_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/pajurio_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/pajurio_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "klaipedos-baldai",
+    "legal_name": "Klaipėdos baldai, UAB",
+    "trading_name": "Klaipėdos baldai",
+    "source_identity": "Klaipėdos baldai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Klaipėdos baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "minijos-baldai",
+    "legal_name": "Minijos baldai, UAB",
+    "trading_name": "Minijos baldai",
+    "source_identity": "Minijos baldai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Minijos baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/minijos_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/minijos_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/minijos_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/minijos_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sakuona",
+    "legal_name": "Sakuona, UAB",
+    "trading_name": "Sakuona",
+    "source_identity": "Sakuona, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Sakuona“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/sakuona/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/sakuona/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/sakuona/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/sakuona/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dovaina",
+    "legal_name": "Dovaina, UAB",
+    "trading_name": "Dovaina",
+    "source_identity": "Dovaina, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Dovaina“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Klaipėda",
+    "city": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/dovaina/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/dovaina/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/dovaina/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/dovaina/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "arta-a-burgailos-imone",
+    "trading_name": "Arta, A. Burgailos įmonė",
+    "source_identity": "Arta, A. Burgailos įmonė",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Arta, A. Burgailos įmonė“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-profai-delvisa",
+    "legal_name": "Baldų profai, UAB Delvisa",
+    "trading_name": "Baldų profai Delvisa",
+    "source_identity": "Baldų profai, UAB Delvisa",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldų profai Delvisa“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_profai_delvisa/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_profai_delvisa/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_profai_delvisa/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldu_profai_delvisa/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "almyros-baldai-a-pakarnio-imone",
+    "trading_name": "Almyros baldai, A. Pakarnio įmonė",
+    "source_identity": "Almyros baldai, A. Pakarnio įmonė",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Almyros baldai, A. Pakarnio įmonė“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/almyros_baldai_a_pakarnio_imone/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/almyros_baldai_a_pakarnio_imone/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/almyros_baldai_a_pakarnio_imone/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/almyros_baldai_a_pakarnio_imone/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "bd-furniture",
+    "legal_name": "BD Furniture, UAB",
+    "trading_name": "BD Furniture",
+    "source_identity": "BD Furniture, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „BD Furniture“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/bd_furniture/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/bd_furniture/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/bd_furniture/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/bd_furniture/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "rejben-baldai",
+    "legal_name": "Rejben baldai, UAB",
+    "trading_name": "Rejben baldai",
+    "source_identity": "Rejben baldai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Rejben baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/rejben_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/rejben_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/rejben_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/rejben_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kesna",
+    "legal_name": "Kesna, UAB",
+    "trading_name": "Kesna",
+    "source_identity": "Kesna, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Kesna“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/kesna/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/kesna/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kesna/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/kesna/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-aleja",
+    "legal_name": "Baldų alėja, UAB",
+    "trading_name": "Baldų alėja",
+    "source_identity": "Baldų alėja, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldų alėja“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Šiauliai",
+    "city": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_aleja/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_aleja/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_aleja/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldu_aleja/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tribus",
+    "legal_name": "Tribus, UAB",
+    "trading_name": "Tribus",
+    "source_identity": "Tribus, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Tribus“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/tribus/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/tribus/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/tribus/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/tribus/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-tvirtove-panevezys",
+    "legal_name": "Baldų tvirtovė, MB Panevėžys",
+    "trading_name": "Baldų tvirtovė Panevėžys",
+    "source_identity": "Baldų tvirtovė, MB Panevėžys",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldų tvirtovė Panevėžys“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_tvirtove_panevezys/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_tvirtove_panevezys/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_tvirtove_panevezys/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldu_tvirtove_panevezys/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "gmdg-v-grinienes-ii",
+    "trading_name": "Gmdg, V. Grinienės IĮ",
+    "source_identity": "Gmdg, V. Grinienės IĮ",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Gmdg, V. Grinienės IĮ“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-linija-panevezys",
+    "legal_name": "Baldų linija, UAB Panevėžys",
+    "trading_name": "Baldų linija Panevėžys",
+    "source_identity": "Baldų linija, UAB Panevėžys",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldų linija Panevėžys“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_linija_panevezys/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_linija_panevezys/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_linija_panevezys/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldu_linija_panevezys/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mk-baldai",
+    "trading_name": "MK Baldai",
+    "source_identity": "MK Baldai",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „MK Baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Panevėžys",
+    "city": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/mk_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/mk_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mk_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/mk_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dazymo-studija",
+    "legal_name": "Dažymo studija, MB",
+    "trading_name": "Dažymo studija",
+    "source_identity": "Dažymo studija, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Dažymo studija“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/dazymo_studija/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/dazymo_studija/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/dazymo_studija/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/dazymo_studija/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-studija-besta",
+    "legal_name": "Baldų studija Besta, UAB",
+    "trading_name": "Baldų studija Besta",
+    "source_identity": "Baldų studija Besta, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldų studija Besta“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_studija_besta/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_studija_besta/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_studija_besta/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldu_studija_besta/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "deccorus",
+    "legal_name": "Deccorus, UAB",
+    "trading_name": "Deccorus",
+    "source_identity": "Deccorus, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Deccorus“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/deccorus/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/deccorus/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/deccorus/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/deccorus/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "egerta",
+    "legal_name": "Egerta, MB",
+    "trading_name": "Egerta",
+    "source_identity": "Egerta, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Egerta“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/egerta/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/egerta/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/egerta/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/egerta/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "inoxi",
+    "legal_name": "Inoxi, UAB",
+    "trading_name": "Inoxi",
+    "source_identity": "Inoxi, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Inoxi“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/inoxi/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/inoxi/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/inoxi/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/inoxi/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kampu",
+    "legal_name": "Kampu, MB",
+    "trading_name": "Kampu",
+    "source_identity": "Kampu, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Kampu“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/kampu/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/kampu/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kampu/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/kampu/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sanitarina",
+    "legal_name": "Sanitarina, MB",
+    "trading_name": "Sanitarina",
+    "source_identity": "Sanitarina, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Sanitarina“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/sanitarina/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/sanitarina/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/sanitarina/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/sanitarina/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldociai",
+    "legal_name": "Baldočiai, UAB",
+    "trading_name": "Baldočiai",
+    "source_identity": "Baldočiai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldočiai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldociai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldociai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldociai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldociai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "furneta",
+    "legal_name": "Furneta, UAB",
+    "trading_name": "Furneta",
+    "source_identity": "Furneta, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Furneta“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/furneta/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/furneta/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/furneta/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/furneta/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldturas-a-laseviciaus-ivv",
+    "trading_name": "Baldturas, A. Lasevičiaus IVV",
+    "source_identity": "Baldturas, A. Lasevičiaus IVV",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Baldturas, A. Lasevičiaus IVV“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldturas_a_laseviciaus_ivv/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldturas_a_laseviciaus_ivv/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldturas_a_laseviciaus_ivv/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldturas_a_laseviciaus_ivv/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "pasmeta-lt",
+    "legal_name": "Pasmeta LT, MB",
+    "trading_name": "Pasmeta LT",
+    "source_identity": "Pasmeta LT, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Pasmeta LT“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/pasmeta_lt/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldukas",
+    "legal_name": "Baldukas, MB",
+    "trading_name": "Baldukas",
+    "source_identity": "Baldukas, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldukas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldukas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldukas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldukas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldukas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ratuoti-sapnai",
+    "legal_name": "Ratuoti sapnai, MB",
+    "trading_name": "Ratuoti sapnai",
+    "source_identity": "Ratuoti sapnai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Ratuoti sapnai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/ratuoti_sapnai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/ratuoti_sapnai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ratuoti_sapnai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/ratuoti_sapnai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "nestandart",
+    "legal_name": "Nestandart, MB",
+    "trading_name": "Nestandart",
+    "source_identity": "Nestandart, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Nestandart“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/nestandart/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/nestandart/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/nestandart/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/nestandart/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "g-baldai",
+    "legal_name": "G baldai, MB",
+    "trading_name": "G baldai",
+    "source_identity": "G baldai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „G baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/g_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/g_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/g_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/g_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mr-design",
+    "legal_name": "Mr design, MB",
+    "trading_name": "Mr design",
+    "source_identity": "Mr design, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Mr design“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/mr_design/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/mr_design/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mr_design/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/mr_design/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "arpolis",
+    "legal_name": "Arpolis, UAB",
+    "trading_name": "Arpolis",
+    "source_identity": "Arpolis, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Arpolis“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Alytus",
+    "city": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/arpolis/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/arpolis/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/arpolis/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/arpolis/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "suduvos-baldai-morita",
+    "legal_name": "Sūduvos baldai, UAB Morita",
+    "trading_name": "Sūduvos baldai Morita",
+    "source_identity": "Sūduvos baldai, UAB Morita",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Sūduvos baldai Morita“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Marijampolė",
+    "city": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/suduvos_baldai_morita/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/suduvos_baldai_morita/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/suduvos_baldai_morita/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/suduvos_baldai_morita/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "medbalda",
+    "legal_name": "Medbalda, MB",
+    "trading_name": "Medbalda",
+    "source_identity": "Medbalda, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Medbalda“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Marijampolė",
+    "city": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/medbalda/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/medbalda/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/medbalda/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/medbalda/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mood-furniture",
+    "legal_name": "Mood Furniture, UAB",
+    "trading_name": "Mood Furniture",
+    "source_identity": "Mood Furniture, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Mood Furniture“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Marijampolė",
+    "city": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/mood_furniture/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/mood_furniture/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mood_furniture/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/mood_furniture/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "a-z-statyba",
+    "legal_name": "A-Z Statyba, UAB",
+    "trading_name": "A-Z Statyba",
+    "source_identity": "A-Z Statyba, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „A-Z Statyba“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Marijampolė",
+    "city": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/a_z_statyba/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/a_z_statyba/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/a_z_statyba/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/a_z_statyba/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "krivijas",
+    "legal_name": "Krivijas, UAB",
+    "trading_name": "Krivijas",
+    "source_identity": "Krivijas, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Krivijas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Marijampolė",
+    "city": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/krivijas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/krivijas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/krivijas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/krivijas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "balduma-k-grigaitienes-firma",
+    "trading_name": "Balduma, K. Grigaitienės firma",
+    "source_identity": "Balduma, K. Grigaitienės firma",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Balduma, K. Grigaitienės firma“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Marijampolė",
+    "city": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/balduma_k_grigaitienes_firma/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/balduma_k_grigaitienes_firma/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/balduma_k_grigaitienes_firma/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/balduma_k_grigaitienes_firma/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dzukijos-baldu-fabrikas",
+    "trading_name": "Dzūkijos baldų fabrikas",
+    "source_identity": "Dzūkijos baldų fabrikas",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Dzūkijos baldų fabrikas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Marijampolė",
+    "city": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/dzukijos_baldu_fabrikas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/dzukijos_baldu_fabrikas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/dzukijos_baldu_fabrikas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/dzukijos_baldu_fabrikas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baltfur",
+    "legal_name": "Baltfur, UAB",
+    "trading_name": "Baltfur",
+    "source_identity": "Baltfur, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baltfur“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Marijampolė",
+    "city": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baltfur/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baltfur/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baltfur/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baltfur/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tipo-baldai",
+    "legal_name": "Tipo baldai, MB",
+    "trading_name": "Tipo baldai",
+    "source_identity": "Tipo baldai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Tipo baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/tipo_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/tipo_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/tipo_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/tipo_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "furnistetika",
+    "legal_name": "Furnistetika, MB",
+    "trading_name": "Furnistetika",
+    "source_identity": "Furnistetika, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Furnistetika“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/furnistetika/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/furnistetika/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/furnistetika/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/furnistetika/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kamadotbl",
+    "legal_name": "Kamadotbl, MB",
+    "trading_name": "Kamadotbl",
+    "source_identity": "Kamadotbl, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Kamadotbl“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/kamadotbl/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/kamadotbl/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kamadotbl/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/kamadotbl/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baltasis-bizonas",
+    "legal_name": "Baltasis bizonas, UAB",
+    "trading_name": "Baltasis bizonas",
+    "source_identity": "Baltasis bizonas, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baltasis bizonas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baltasis_bizonas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baltasis_bizonas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "r-meistrai",
+    "legal_name": "R meistrai, MB",
+    "trading_name": "R meistrai",
+    "source_identity": "R meistrai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „R meistrai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/r_meistrai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/r_meistrai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/r_meistrai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/r_meistrai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-sprendimai",
+    "legal_name": "Baldų sprendimai, MB",
+    "trading_name": "Baldų sprendimai",
+    "source_identity": "Baldų sprendimai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldų sprendimai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_sprendimai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_sprendimai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_sprendimai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldu_sprendimai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kokybisku-baldu-dirbtuves",
+    "legal_name": "Kokybiškų baldų dirbtuvės, MB",
+    "trading_name": "Kokybiškų baldų dirbtuvės",
+    "source_identity": "Kokybiškų baldų dirbtuvės, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Kokybiškų baldų dirbtuvės“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/kokybisku_baldu_dirbtuves/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/kokybisku_baldu_dirbtuves/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kokybisku_baldu_dirbtuves/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/kokybisku_baldu_dirbtuves/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "medynmetis",
+    "legal_name": "Medynmetis, MB",
+    "trading_name": "Medynmetis",
+    "source_identity": "Medynmetis, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Medynmetis“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/medynmetis/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/medynmetis/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/medynmetis/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/medynmetis/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dalduva-ii",
+    "trading_name": "Dalduva, IĮ",
+    "source_identity": "Dalduva, IĮ",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Dalduva, IĮ“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/dalduva_ii/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/dalduva_ii/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/dalduva_ii/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/dalduva_ii/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "roberto-laiptai",
+    "legal_name": "Roberto laiptai, UAB",
+    "trading_name": "Roberto laiptai",
+    "source_identity": "Roberto laiptai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Roberto laiptai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/roberto_laiptai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/roberto_laiptai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/roberto_laiptai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/roberto_laiptai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "gieva-s-trapikienes-firma",
+    "trading_name": "Gieva, S. Trapikienės firma",
+    "source_identity": "Gieva, S. Trapikienės firma",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Gieva, S. Trapikienės firma“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/gieva_s_trapikienes_firma/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/gieva_s_trapikienes_firma/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/gieva_s_trapikienes_firma/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/gieva_s_trapikienes_firma/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "egidijaus-baldai",
+    "legal_name": "Egidijaus baldai, MB",
+    "trading_name": "Egidijaus baldai",
+    "source_identity": "Egidijaus baldai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Egidijaus baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/egidijaus_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/egidijaus_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/egidijaus_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/egidijaus_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "rokiskio-baldai",
+    "legal_name": "Rokiškio baldai, MB",
+    "trading_name": "Rokiškio baldai",
+    "source_identity": "Rokiškio baldai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Rokiškio baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/rokiskio_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/rokiskio_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/rokiskio_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/rokiskio_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "drilius",
+    "legal_name": "Drilius, MB",
+    "trading_name": "Drilius",
+    "source_identity": "Drilius, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Drilius“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/drilius/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/drilius/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/drilius/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/drilius/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mariaus-baldu-studija",
+    "legal_name": "Mariaus baldų studija, MB",
+    "trading_name": "Mariaus baldų studija",
+    "source_identity": "Mariaus baldų studija, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Mariaus baldų studija“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/mariaus_baldu_studija/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/mariaus_baldu_studija/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mariaus_baldu_studija/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/mariaus_baldu_studija/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "pickwood-lt",
+    "legal_name": "Pickwood LT, MB",
+    "trading_name": "Pickwood LT",
+    "source_identity": "Pickwood LT, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Pickwood LT“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Utena",
+    "city": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/pickwood_lt/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/pickwood_lt/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/pickwood_lt/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/pickwood_lt/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "digio",
+    "legal_name": "Digio, MB",
+    "trading_name": "Digio",
+    "source_identity": "Digio, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Digio“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Kėdainiai",
+    "city": "Kėdainiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/digio/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/digio/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/digio/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/digio/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "m-pralgausko-imone",
+    "trading_name": "M. Pralgausko įmonė",
+    "source_identity": "M. Pralgausko įmonė",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „M. Pralgausko įmonė“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Kėdainiai",
+    "city": "Kėdainiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tomadeco",
+    "legal_name": "Tomadeco, MB",
+    "trading_name": "Tomadeco",
+    "source_identity": "Tomadeco, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Tomadeco“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Kėdainiai",
+    "city": "Kėdainiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/tomadeco/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/tomadeco/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/tomadeco/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/tomadeco/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "darau-2",
+    "legal_name": "Darau 2, MB",
+    "trading_name": "Darau 2",
+    "source_identity": "Darau 2, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Darau 2“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Kėdainiai",
+    "city": "Kėdainiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/darau_2/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/darau_2/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/darau_2/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/darau_2/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "luxury-furniture",
+    "legal_name": "Luxury furniture, UAB",
+    "trading_name": "Luxury furniture",
+    "source_identity": "Luxury furniture, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Luxury furniture“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Kėdainiai",
+    "city": "Kėdainiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/luxury_furniture/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/luxury_furniture/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/luxury_furniture/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/luxury_furniture/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldmaris-nestandartiniu-baldu-gamyba",
+    "trading_name": "Baldmaris - nestandartinių baldų gamyba",
+    "source_identity": "Baldmaris - nestandartinių baldų gamyba",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Baldmaris - nestandartinių baldų gamyba“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Tauragė",
+    "city": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldmaris_nestandartiniu_baldu_gamyba/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldmaris_nestandartiniu_baldu_gamyba/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldmaris_nestandartiniu_baldu_gamyba/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldmaris_nestandartiniu_baldu_gamyba/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "baldu-cechas",
+    "legal_name": "Baldų cechas, MB",
+    "trading_name": "Baldų cechas",
+    "source_identity": "Baldų cechas, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldų cechas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Tauragė",
+    "city": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_cechas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/baldu_cechas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_cechas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/baldu_cechas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "tailida",
+    "legal_name": "Tailida, MB",
+    "trading_name": "Tailida",
+    "source_identity": "Tailida, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Tailida“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Tauragė",
+    "city": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/tailida/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/tailida/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/tailida/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/tailida/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "silales-baldai",
+    "trading_name": "Šilalės baldai",
+    "source_identity": "Šilalės baldai",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Šilalės baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Tauragė",
+    "city": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/silales_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/silales_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/silales_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/silales_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ziliukai",
+    "legal_name": "Žiliukai, UAB",
+    "trading_name": "Žiliukai",
+    "source_identity": "Žiliukai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Žiliukai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Tauragė",
+    "city": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/ziliukai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/ziliukai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ziliukai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/ziliukai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "vilgma",
+    "legal_name": "Vilgma, MB",
+    "trading_name": "Vilgma",
+    "source_identity": "Vilgma, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Vilgma“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Tauragė",
+    "city": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/vilgma/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/vilgma/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/vilgma/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/vilgma/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mdaspect",
+    "legal_name": "MDAspect, UAB",
+    "trading_name": "MDAspect",
+    "source_identity": "MDAspect, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „MDAspect“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Tauragė",
+    "city": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/mdaspect/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/mdaspect/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mdaspect/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/mdaspect/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "urtbalda",
+    "legal_name": "Urtbalda, MB",
+    "trading_name": "Urtbalda",
+    "source_identity": "Urtbalda, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Urtbalda“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Tauragė",
+    "city": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/urtbalda/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/urtbalda/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/urtbalda/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/urtbalda/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "laterus",
+    "legal_name": "Laterus, UAB",
+    "trading_name": "Laterus",
+    "source_identity": "Laterus, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Laterus“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Ukmergė",
+    "city": "Ukmergė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/laterus/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/laterus/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/laterus/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/laterus/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "rebilda",
+    "legal_name": "Rebilda, UAB",
+    "trading_name": "Rebilda",
+    "source_identity": "Rebilda, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Rebilda“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Ukmergė",
+    "city": "Ukmergė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/rebilda/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/rebilda/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/rebilda/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/rebilda/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "uzupio-baldai",
+    "legal_name": "Užupio baldai, MB",
+    "trading_name": "Užupio baldai",
+    "source_identity": "Užupio baldai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Užupio baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Ukmergė",
+    "city": "Ukmergė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/uzupio_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/uzupio_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uzupio_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/uzupio_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sato-baldu-idejos",
+    "legal_name": "Sato baldų idėjos, MB",
+    "trading_name": "Sato baldų idėjos",
+    "source_identity": "Sato baldų idėjos, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Sato baldų idėjos“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Ukmergė",
+    "city": "Ukmergė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/sato_baldu_idejos/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/sato_baldu_idejos/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/sato_baldu_idejos/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/sato_baldu_idejos/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "narbutas-edge",
+    "legal_name": "Narbutas Edge, UAB",
+    "trading_name": "Narbutas Edge",
+    "source_identity": "Narbutas Edge, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Narbutas Edge“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Ukmergė",
+    "city": "Ukmergė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/narbutas_edge/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/narbutas_edge/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/narbutas_edge/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/narbutas_edge/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "gdm-creative",
+    "legal_name": "Gdm creative, MB",
+    "trading_name": "Gdm creative",
+    "source_identity": "Gdm creative, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Gdm creative“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Ukmergė",
+    "city": "Ukmergė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/gdm_creative/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/gdm_creative/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/gdm_creative/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/gdm_creative/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "narbutas-international",
+    "legal_name": "Narbutas International, UAB",
+    "trading_name": "Narbutas International",
+    "source_identity": "Narbutas International, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Narbutas International“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Ukmergė",
+    "city": "Ukmergė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/narbutas_international/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/narbutas_international/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/narbutas_international/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/narbutas_international/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "albero-baldai",
+    "legal_name": "Albero baldai, MB",
+    "trading_name": "Albero baldai",
+    "source_identity": "Albero baldai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Albero baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Jonava",
+    "city": "Jonava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/albero_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/albero_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/albero_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/albero_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "raimeta",
+    "legal_name": "Raimeta, MB",
+    "trading_name": "Raimeta",
+    "source_identity": "Raimeta, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Raimeta“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Jonava",
+    "city": "Jonava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/raimeta/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/raimeta/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/raimeta/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/raimeta/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "mingridas",
+    "legal_name": "Mingridas, UAB",
+    "trading_name": "Mingridas",
+    "source_identity": "Mingridas, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Mingridas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Jonava",
+    "city": "Jonava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/mingridas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/mingridas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mingridas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/mingridas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "balda",
+    "legal_name": "Balda, UAB",
+    "trading_name": "Balda",
+    "source_identity": "Balda, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Balda“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Jonava",
+    "city": "Jonava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/balda/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/balda/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/balda/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/balda/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "esd-baldai",
+    "legal_name": "ESD baldai, UAB",
+    "trading_name": "ESD baldai",
+    "source_identity": "ESD baldai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „ESD baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Jonava",
+    "city": "Jonava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/esd_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/esd_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/esd_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/esd_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "balajano-slenio-baldai",
+    "legal_name": "Balajano slėnio baldai, MB",
+    "trading_name": "Balajano slėnio baldai",
+    "source_identity": "Balajano slėnio baldai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Balajano slėnio baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Raseiniai",
+    "city": "Raseiniai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/balajano_slenio_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/balajano_slenio_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/balajano_slenio_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/balajano_slenio_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "vanago-miskas",
+    "legal_name": "Vanago miškas, MB",
+    "trading_name": "Vanago miškas",
+    "source_identity": "Vanago miškas, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Vanago miškas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Raseiniai",
+    "city": "Raseiniai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/vanago_miskas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/vanago_miskas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/vanago_miskas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/vanago_miskas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "medgamas",
+    "legal_name": "Medgamas, MB",
+    "trading_name": "Medgamas",
+    "source_identity": "Medgamas, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Medgamas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Raseiniai",
+    "city": "Raseiniai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/medgamas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/medgamas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/medgamas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/medgamas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "inscoco",
+    "legal_name": "Inscoco, UAB",
+    "trading_name": "Inscoco",
+    "source_identity": "Inscoco, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Inscoco“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Raseiniai",
+    "city": "Raseiniai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/inscoco/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/inscoco/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/inscoco/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/inscoco/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ravera",
+    "legal_name": "Ravera, MB",
+    "trading_name": "Ravera",
+    "source_identity": "Ravera, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Ravera“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Raseiniai",
+    "city": "Raseiniai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/ravera/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/ravera/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ravera/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/ravera/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "uzuolas",
+    "legal_name": "Ūžuolas, MB",
+    "trading_name": "Ūžuolas",
+    "source_identity": "Ūžuolas, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Ūžuolas“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Raseiniai",
+    "city": "Raseiniai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/uzuolas/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/uzuolas/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uzuolas/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/uzuolas/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "vavap",
+    "legal_name": "Vavap, MB",
+    "trading_name": "Vavap",
+    "source_identity": "Vavap, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Vavap“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Raseiniai",
+    "city": "Raseiniai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/vavap/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/vavap/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/vavap/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/vavap/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "metalo-kalve",
+    "trading_name": "Metalo kalvė",
+    "source_identity": "Metalo kalvė",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „Metalo kalvė“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/metalo_kalve/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/metalo_kalve/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/metalo_kalve/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/metalo_kalve/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "k-viktoraviciaus-ivv",
+    "trading_name": "K. Viktoravičiaus IVV",
+    "source_identity": "K. Viktoravičiaus IVV",
+    "legal_entity_known": false,
+    "description_lt": "Rekvizitai viešame profilyje „K. Viktoravičiaus IVV“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/k_viktoraviciaus_ivv/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/k_viktoraviciaus_ivv/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/k_viktoraviciaus_ivv/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/k_viktoraviciaus_ivv/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "zt-furni",
+    "legal_name": "ŽT furni, MB",
+    "trading_name": "ŽT furni",
+    "source_identity": "ŽT furni, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „ŽT furni“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/zt_furni/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/zt_furni/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/zt_furni/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/zt_furni/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "sandriaus-baldai",
+    "legal_name": "Sandriaus baldai, UAB",
+    "trading_name": "Sandriaus baldai",
+    "source_identity": "Sandriaus baldai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Sandriaus baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/sandriaus_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/sandriaus_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/sandriaus_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/sandriaus_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "augriva",
+    "legal_name": "Augriva, UAB",
+    "trading_name": "Augriva",
+    "source_identity": "Augriva, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Augriva“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/augriva/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/augriva/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/augriva/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/augriva/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "medideja",
+    "legal_name": "Medidėja, UAB",
+    "trading_name": "Medidėja",
+    "source_identity": "Medidėja, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Medidėja“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/medideja/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/medideja/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/medideja/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/medideja/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "dazoma",
+    "legal_name": "Dažoma, UAB",
+    "trading_name": "Dažoma",
+    "source_identity": "Dažoma, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Dažoma“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/dazoma/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/dazoma/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/dazoma/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/dazoma/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ajala",
+    "legal_name": "Ajala, UAB",
+    "trading_name": "Ajala",
+    "source_identity": "Ajala, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Ajala“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/ajala/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/ajala/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ajala/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/ajala/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "ryno",
+    "legal_name": "Ryno, UAB",
+    "trading_name": "Ryno",
+    "source_identity": "Ryno, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Ryno“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/ryno/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/ryno/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ryno/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/ryno/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "doko-sofa",
+    "legal_name": "Doko sofa, MB",
+    "trading_name": "Doko sofa",
+    "source_identity": "Doko sofa, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Doko sofa“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/doko_sofa/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/doko_sofa/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/doko_sofa/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/doko_sofa/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "balduzis",
+    "legal_name": "Baldužis, UAB",
+    "trading_name": "Baldužis",
+    "source_identity": "Baldužis, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Baldužis“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/balduzis/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/balduzis/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/balduzis/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/balduzis/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kazbaro-baldai",
+    "legal_name": "Kazbaro baldai, MB",
+    "trading_name": "Kazbaro baldai",
+    "source_identity": "Kazbaro baldai, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Kazbaro baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/kazbaro_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/kazbaro_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kazbaro_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/kazbaro_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "kneita",
+    "legal_name": "Kneita, MB",
+    "trading_name": "Kneita",
+    "source_identity": "Kneita, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Kneita“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/kneita/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/kneita/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kneita/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/kneita/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "benfok",
+    "legal_name": "Benfok, MB",
+    "trading_name": "Benfok",
+    "source_identity": "Benfok, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Benfok“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/benfok/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/benfok/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/benfok/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/benfok/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "velmera",
+    "legal_name": "Velmera, MB",
+    "trading_name": "Velmera",
+    "source_identity": "Velmera, MB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Velmera“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/velmera/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/velmera/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/velmera/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/velmera/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
+  },
+  {
+    "slug": "plunges-baldai",
+    "legal_name": "Plungės baldai, UAB",
+    "trading_name": "Plungės baldai",
+    "source_identity": "Plungės baldai, UAB",
+    "legal_entity_known": true,
+    "description_lt": "Rekvizitai viešame profilyje „Plungės baldai“ nurodoma kaip Lietuvos baldų gamybos kandidatė.",
+    "location": "Telšiai",
+    "city": "Telšiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "category_codes": [
+      "MM"
+    ],
+    "category_labels": [
+      "Kiti baldai"
+    ],
+    "audience": "abiem",
+    "portfolio_status": "nežinoma",
+    "confidence": "vidutinis",
+    "confidence_evidence": "Viešas Rekvizitai įmonės profilis pateikia įrašą baldų gamybos katalogo patikrai. Šaltinis: https://rekvizitai.vz.lt/en/company/plunges_baldai/",
+    "scope_evidence": "Rekvizitai viešame įmonės profilyje nurodyta baldų gamybos veikla; siauresnė gaminių apimtis šiame šaltinyje neįvardyta. Šaltinis: https://rekvizitai.vz.lt/en/company/plunges_baldai/",
+    "evidence_source_type": "Rekvizitai",
+    "source_urls": [
+      "https://rekvizitai.vz.lt/en/company/plunges_baldai/"
+    ],
+    "source_artifact_url": "https://rekvizitai.vz.lt/en/company/plunges_baldai/",
+    "source_collection_date": "2026-07-30",
+    "verification_status": "nepatvirtinta"
   }
 ]

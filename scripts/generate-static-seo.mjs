@@ -14,6 +14,43 @@ const [manufacturers, landingConfig, baseHtml] = await Promise.all([
   readFile(join(rootDir, 'data/seo-landings.json'), 'utf8').then(JSON.parse),
   readFile(join(publicDir, 'index.html'), 'utf8'),
 ]);
+
+const profileSlugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const generatedRoutes = new Set();
+
+function assertUnique(values, label) {
+  const seen = new Set();
+  for (const value of values) {
+    if (seen.has(value)) throw new Error(`Duplicate ${label}: ${value}`);
+    seen.add(value);
+  }
+}
+
+function validateManufacturers(records) {
+  if (!Array.isArray(records)) throw new Error('data/manufacturers.json must contain an array.');
+  for (const [index, record] of records.entries()) {
+    const descriptor = `manufacturer record ${index + 1}`;
+    if (!record || typeof record !== 'object') throw new Error(`${descriptor} must be an object.`);
+    if (typeof record.slug !== 'string' || record.slug.trim() !== record.slug || !profileSlugPattern.test(record.slug)) {
+      throw new Error(`${descriptor} has an invalid or unpublishable profile slug: ${String(record.slug)}.`);
+    }
+    if (typeof record.trading_name !== 'string' || !record.trading_name.trim()) throw new Error(`${descriptor} (${record.slug}) has no publishable trading name.`);
+    if (typeof record.city !== 'string' || !record.city.trim()) throw new Error(`${descriptor} (${record.slug}) has no publishable city.`);
+    if (!Array.isArray(record.category_codes) || !record.category_codes.length || !Array.isArray(record.category_labels) || record.category_codes.length !== record.category_labels.length) {
+      throw new Error(`${descriptor} (${record.slug}) has invalid category route inputs.`);
+    }
+  }
+  assertUnique(records.map((record) => record.slug), 'manufacturer profile slug');
+}
+
+function assertUniqueRoutePaths(paths, label) {
+  for (const path of paths) {
+    if (typeof path !== 'string' || !path.startsWith('/')) throw new Error(`Invalid ${label} route: ${String(path)}`);
+  }
+  assertUnique(paths, `${label} route`);
+}
+
+validateManufacturers(manufacturers);
 await rm(join(publicDir, 'savininkams'), { recursive: true, force: true });
 
 const logoAssetUrl = baseHtml.match(/<link rel="icon" type="image\/svg\+xml" href="([^"]+)" \/>/)?.[1];
@@ -566,11 +603,13 @@ const landingCities = Array.from(cityCounts, ([city, count]) => ({ city, count, 
   .filter((entry) => entry.count >= landingConfig.cityThreshold || cityCategoryNames.has(entry.city))
   .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
 
-const categoryBySlug = new Map(landingConfig.categories.map((category) => [category.slug, category]));
-const cityBySlug = new Map(landingCities.map((city) => [city.slug, city]));
-for (const slug of categoryBySlug.keys()) {
-  if (cityBySlug.has(slug)) throw new Error(`Category/city route collision: ${slug}`);
-}
+assertUnique(landingConfig.categories.map((category) => category.slug), 'category slug');
+assertUnique(landingCities.map((city) => city.slug), 'city slug');
+assertUniqueRoutePaths([
+  ...landingConfig.categories.map((category) => `/baldai-pagal-uzsakyma/${category.slug}`),
+  ...landingCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
+  ...cityCategoryLandings.map((entry) => entry.path),
+], 'catalogue landing');
 
 function guideRelatedLinks(article) {
   if (!article.categoryCode) return '';
@@ -611,6 +650,8 @@ function profileLandingSection(record) {
 }
 
 async function writeRoute(path, html) {
+  if (generatedRoutes.has(path)) throw new Error(`Refusing to overwrite duplicate generated route: ${path}`);
+  generatedRoutes.add(path);
   const output = path === '/' ? join(publicDir, 'index.html') : join(publicDir, path.replace(/^\//, ''), 'index.html');
   await mkdir(dirname(output), { recursive: true });
   await writeFile(output, html);
@@ -855,6 +896,7 @@ const sitemapPaths = [
   ...landingCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
   ...cityCategoryLandings.map((entry) => entry.path),
 ];
+assertUniqueRoutePaths(sitemapPaths, 'sitemap');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(sourceDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);

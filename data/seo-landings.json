@@ -62,6 +62,13 @@
       "title": "Kiti nestandartiniai baldai pagal užsakymą",
       "intro": "Šiame puslapyje pateikiami Lietuvos gamintojų kandidatai, kurių vieši šaltiniai patvirtina nestandartinių ar pagal individualų užsakymą gaminamų baldų veiklą, tačiau nepakanka informacijos juos priskirti siauresnei produktų kategorijai.",
       "buyer_note": "Prieš kreipdamiesi paprašykite patvirtinti, kokius gaminius, medžiagas, paslaugų apimtį ir terminus kandidatas gali pasiūlyti. Ši bendroji kategorija nepatvirtina konkrečių produktų, medžiagų, pajėgumo ar tinkamumo jūsų projektui."
+    },
+    {
+      "code": "MM",
+      "slug": "kiti-baldai",
+      "title": "Kiti baldai pagal užsakymą",
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su kitais baldais susieti Lietuvos gamintojų kandidatai. Konkrečią gaminių apimtį, medžiagas ir galimybę priimti užsakymą patikrinkite tiesiogiai.",
+      "buyer_note": "Ši bendroji šaltinio kategorija nepatvirtina konkrečių gaminių, medžiagų, kainos, termino ar dabartinio užimtumo. Prieš kreipdamiesi aiškiai aprašykite savo projektą ir paprašykite patvirtinti apimtį."
     }
   ],
   "cityThreshold": 5,
