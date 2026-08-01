@@ -1751,138 +1751,189 @@ function createCorrectionSection(record: Manufacturer): HTMLElement {
   section.className = 'correction-section';
   section.setAttribute('aria-labelledby', 'correction-title');
   section.innerHTML = `
-    <div class="section-heading">
-      <p class="kicker">Įrašo peržiūra</p>
-      <h2 id="correction-title">Pataisyti, atstovauti ar pranešti</h2>
-      <p>Ši forma siunčia žinutę tik katalogo peržiūros eilei. Ji nesusisiekia su gamintoju ir nesiunčia užklausos dėl baldų.</p>
+    <div class="section-heading correction-heading">
+      <p class="kicker">Gamintojams ir jų atstovams</p>
+      <h2 id="correction-title">Ar tai jūsų įmonė?</h2>
+      <p>Patvirtinkite, kad atstovaujate įmonei, arba nurodykite, ką šiame katalogo įraše reikia pataisyti. Prašymas pateks katalogo peržiūrai; viešas pakeitimas nebus atliekamas automatiškai.</p>
+      <p class="correction-boundary">Ši forma nėra baldų projekto užklausa ir nėra siunčiama kataloge nurodytai įmonei.</p>
     </div>
+    <form class="correction-form" aria-labelledby="correction-title" novalidate>
+      <p class="form-record-context">Katalogo įrašas: ${escapeHtml(textOrUnknown(record.trading_name, 'Pavadinimas nenurodytas'))}</p>
+      <input type="hidden" name="manufacturer_slug" value="${escapeHtml(record.slug)}" />
+
+      <div class="form-field form-field--wide">
+        <label for="claim-company-name">Įmonės pavadinimas *</label>
+        <input id="claim-company-name" name="company_name" type="text" autocomplete="organization" maxlength="240" value="${escapeHtml(record.trading_name)}" required aria-describedby="claim-company-name-error" />
+        <p class="field-error" id="claim-company-name-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="claimant-name">Jūsų vardas ir pavardė *</label>
+        <input id="claimant-name" name="claimant_name" type="text" autocomplete="name" minlength="2" maxlength="120" required aria-describedby="claimant-name-error" />
+        <p class="field-error" id="claimant-name-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="claimant-role">Pareigos arba ryšys su įmone *</label>
+        <input id="claimant-role" name="role" type="text" autocomplete="organization-title" minlength="2" maxlength="160" placeholder="Pvz., savininkas, vadovė, darbuotojas" required aria-describedby="claimant-role-error" />
+        <p class="field-error" id="claimant-role-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="claimant-email">Darbinis el. paštas *</label>
+        <input id="claimant-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" placeholder="vardas@imone.lt" required aria-describedby="claimant-email-hint claimant-email-error" />
+        <p class="field-hint" id="claimant-email-hint">Naudosime tik prašymui patikrinti ir dėl jo susisiekti.</p>
+        <p class="field-error" id="claimant-email-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="claimant-phone">Telefono numeris (nebūtina)</label>
+        <input id="claimant-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" aria-describedby="claimant-phone-error" />
+        <p class="field-error" id="claimant-phone-error"></p>
+      </div>
+
+      <div class="form-field form-field--wide">
+        <label for="claim-message">Ką norite patvirtinti ar pataisyti? *</label>
+        <p class="field-hint" id="claim-message-hint">Trumpai aprašykite savo ryšį su įmone ir konkrečius keitimus. Jei galite, pridėkite viešą informaciją, kuri padėtų juos patikrinti.</p>
+        <textarea id="claim-message" name="message" rows="7" minlength="10" maxlength="5000" required aria-describedby="claim-message-hint claim-message-error"></textarea>
+        <p class="field-error" id="claim-message-error"></p>
+      </div>
+
+      <div class="honeypot-field" aria-hidden="true">
+        <label for="claim-website">Interneto svetainė</label>
+        <input id="claim-website" name="honeypot" type="text" autocomplete="off" tabindex="-1" maxlength="200" />
+      </div>
+
+      <div class="consent-field form-field--wide">
+        <input id="claim-consent" name="consent" type="checkbox" required aria-describedby="claim-consent-error" />
+        <label for="claim-consent">Patvirtinu, kad pateikta informacija yra teisinga, ir sutinku, kad mano kontaktiniai duomenys būtų naudojami šiam prašymui patikrinti. Kaip tvarkome duomenis, paaiškinta <a href="/privatumas" data-internal-link="true">privatumo pranešime</a>. *</label>
+        <p class="field-error" id="claim-consent-error"></p>
+      </div>
+
+      <div class="form-actions">
+        <button class="primary-button" type="submit">Pateikti įrašo peržiūrai</button>
+        <p class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+      </div>
+    </form>
   `;
 
-  const form = document.createElement('form');
-  form.className = 'correction-form';
-  form.noValidate = false;
+  const form = section.querySelector<HTMLFormElement>('form');
+  const companyName = section.querySelector<HTMLInputElement>('#claim-company-name');
+  const claimantName = section.querySelector<HTMLInputElement>('#claimant-name');
+  const role = section.querySelector<HTMLInputElement>('#claimant-role');
+  const email = section.querySelector<HTMLInputElement>('#claimant-email');
+  const phone = section.querySelector<HTMLInputElement>('#claimant-phone');
+  const message = section.querySelector<HTMLTextAreaElement>('#claim-message');
+  const consent = section.querySelector<HTMLInputElement>('#claim-consent');
+  const honeypot = section.querySelector<HTMLInputElement>('#claim-website');
+  const submit = section.querySelector<HTMLButtonElement>('button[type="submit"]');
+  const status = section.querySelector<HTMLElement>('.form-status');
 
-  const recordContext = document.createElement('p');
-  recordContext.className = 'form-record-context';
-  recordContext.textContent = `Įrašas: ${textOrUnknown(record.trading_name, 'Pavadinimas nenurodytas')}`;
+  if (!form || !companyName || !claimantName || !role || !email || !phone || !message || !consent || !honeypot || !submit || !status) {
+    return section;
+  }
 
-  const slugInput = document.createElement('input');
-  slugInput.type = 'hidden';
-  slugInput.name = 'manufacturer_slug';
-  slugInput.value = record.slug;
+  const controls = [companyName, claimantName, role, email, phone, message, consent];
+  const errorFor = (control: HTMLInputElement | HTMLTextAreaElement): HTMLElement | null => {
+    const describedBy = control.getAttribute('aria-describedby')?.split(' ') ?? [];
+    const errorId = describedBy.find((id) => id.endsWith('-error'));
+    return errorId ? section.querySelector<HTMLElement>(`#${errorId}`) : null;
+  };
+  const validateControl = (control: HTMLInputElement | HTMLTextAreaElement): boolean => {
+    let errorMessage = '';
+    if (control === companyName && companyName.value.trim().length < 2) {
+      errorMessage = 'Įrašykite įmonės pavadinimą.';
+    } else if (control === claimantName && claimantName.value.trim().length < 2) {
+      errorMessage = 'Įrašykite savo vardą ir pavardę.';
+    } else if (control === role && role.value.trim().length < 2) {
+      errorMessage = 'Nurodykite savo pareigas arba ryšį su įmone.';
+    } else if (control === email && !email.value.trim()) {
+      errorMessage = 'Įrašykite el. pašto adresą.';
+    } else if (control === email && email.validity.typeMismatch) {
+      errorMessage = 'Įrašykite galiojantį el. pašto adresą.';
+    } else if (control === phone && phone.value.trim() && !/^[0-9+().\-\s]+$/.test(phone.value.trim())) {
+      errorMessage = 'Telefono numeriui naudokite tik skaitmenis ir įprastus numerio ženklus.';
+    } else if (control === message && message.value.trim().length < 10) {
+      errorMessage = 'Aprašykite prašymą bent 10 ženklų.';
+    } else if (control === consent && !consent.checked) {
+      errorMessage = 'Norėdami pateikti prašymą, patvirtinkite šį sutikimą.';
+    }
 
-  const displayNameInput = document.createElement('input');
-  displayNameInput.type = 'hidden';
-  displayNameInput.name = 'manufacturer_display_name';
-  displayNameInput.value = record.trading_name;
+    const error = errorFor(control);
+    if (error) error.textContent = errorMessage;
+    if (errorMessage) control.setAttribute('aria-invalid', 'true');
+    else control.removeAttribute('aria-invalid');
+    return !errorMessage;
+  };
 
-  const kindField = document.createElement('div');
-  kindField.className = 'form-field';
-  const kindLabel = document.createElement('label');
-  kindLabel.htmlFor = 'request-kind';
-  kindLabel.textContent = 'Prašymo rūšis';
-  const kindSelectWrap = document.createElement('div');
-  kindSelectWrap.className = 'select-wrap';
-  const kindSelect = document.createElement('select');
-  kindSelect.id = 'request-kind';
-  kindSelect.name = 'request_kind';
-  kindSelect.required = true;
-  [
-    ['correction', 'Pataisyti duomenis arba pranešti apie problemą'],
-    ['claim', 'Patvirtinti, kad atstovauju šiam įrašui'],
-  ].forEach(([value, label]) => {
-    const option = document.createElement('option');
-    option.value = value;
-    option.textContent = label;
-    kindSelect.append(option);
-  });
-  kindSelectWrap.append(kindSelect);
-  kindField.append(kindLabel, kindSelectWrap);
-
-  const reportField = document.createElement('div');
-  reportField.className = 'form-field form-field--wide';
-  const reportLabel = document.createElement('label');
-  reportLabel.htmlFor = 'report-text';
-  reportLabel.textContent = 'Ką reikia peržiūrėti?';
-  const reportHint = document.createElement('p');
-  reportHint.className = 'field-hint';
-  reportHint.id = 'report-hint';
-  reportHint.textContent = 'Nurodykite konkretų lauką, teisingą informaciją ir, jei turite, viešą patvirtinantį šaltinį.';
-  const report = document.createElement('textarea');
-  report.id = 'report-text';
-  report.name = 'report_text';
-  report.rows = 6;
-  report.maxLength = 5000;
-  report.required = true;
-  report.setAttribute('aria-describedby', 'report-hint');
-  reportField.append(reportLabel, reportHint, report);
-
-  const emailField = document.createElement('div');
-  emailField.className = 'form-field form-field--wide';
-  const emailLabel = document.createElement('label');
-  emailLabel.htmlFor = 'request-email';
-  emailLabel.textContent = 'El. paštas atsakymui (nebūtina)';
-  const email = document.createElement('input');
-  email.id = 'request-email';
-  email.name = 'contact_email';
-  email.type = 'email';
-  email.inputMode = 'email';
-  email.autocomplete = 'email';
-  email.maxLength = 254;
-  email.placeholder = 'vardas@pavyzdys.lt';
-  emailField.append(emailLabel, email);
-
-  const actions = document.createElement('div');
-  actions.className = 'form-actions';
-  const submit = document.createElement('button');
-  submit.className = 'primary-button';
-  submit.type = 'submit';
-  submit.textContent = 'Siųsti peržiūrai';
-  const status = document.createElement('p');
-  status.className = 'form-status';
-  status.setAttribute('role', 'status');
-  status.setAttribute('aria-live', 'polite');
-  actions.append(submit, status);
-  const privacyNote = document.createElement('p');
-  privacyNote.className = 'form-privacy-note form-field--wide';
-  privacyNote.innerHTML = 'Pateiktus kontaktinius duomenis naudosime tik šiam prašymui patikrinti ir administruoti. Skaitykite <a href="/privatumas" data-internal-link="true">privatumo pranešimą</a> ir <a href="/irasyti-pataisyma" data-internal-link="true">įrašo pataisymo bei atstovavimo tvarką</a>.';
-
-  form.append(recordContext, slugInput, displayNameInput, kindField, reportField, emailField, privacyNote, actions);
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-
-    submit.disabled = true;
-    submit.setAttribute('aria-busy', 'true');
-    submit.textContent = 'Siunčiama…';
-    status.className = 'form-status';
-    status.textContent = 'Prašymas siunčiamas į katalogo peržiūros eilę.';
-
-    try {
-      await pb.collection('correction_requests').create({
-        manufacturer_slug: record.slug,
-        manufacturer_display_name: record.trading_name,
-        request_kind: kindSelect.value,
-        report_text: report.value.trim(),
-        contact_email: email.value.trim(),
+  controls.forEach((control) => {
+    control.addEventListener(control === consent ? 'change' : 'blur', () => validateControl(control));
+    if (control !== consent) {
+      control.addEventListener('input', () => {
+        if (control.hasAttribute('aria-invalid')) validateControl(control);
       });
-      report.value = '';
-      email.value = '';
-      status.className = 'form-status form-status--success';
-      status.textContent = 'Prašymas gautas. Katalogo komanda jį peržiūrės; gamintojui niekas neišsiųsta.';
-    } catch (error) {
-      console.error('Nepavyko pateikti katalogo pataisos prašymo.', error);
-      status.className = 'form-status form-status--error';
-      status.textContent = 'Prašymo išsiųsti nepavyko. Patikrinkite ryšį ir bandykite dar kartą vėliau.';
-    } finally {
-      submit.disabled = false;
-      submit.removeAttribute('aria-busy');
-      submit.textContent = 'Siųsti peržiūrai';
     }
   });
 
-  section.append(form);
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    let valid = true;
+    controls.forEach((control) => {
+      if (!validateControl(control)) valid = false;
+    });
+    if (!valid) {
+      status.className = 'form-status form-status--error';
+      status.setAttribute('role', 'alert');
+      status.textContent = 'Patikrinkite pažymėtus laukus ir bandykite dar kartą.';
+      controls.find((control) => control.getAttribute('aria-invalid') === 'true')?.focus();
+      return;
+    }
+
+    submit.disabled = true;
+    submit.setAttribute('aria-busy', 'true');
+    form.setAttribute('aria-busy', 'true');
+    submit.textContent = 'Pateikiama…';
+    status.className = 'form-status';
+    status.setAttribute('role', 'status');
+    status.textContent = 'Prašymas siunčiamas į katalogo peržiūros eilę.';
+
+    try {
+      await pb.collection('manufacturer_claims').create({
+        manufacturer_slug: record.slug,
+        company_name: companyName.value.trim(),
+        claimant_name: claimantName.value.trim(),
+        role: role.value.trim(),
+        email: email.value.trim().toLocaleLowerCase('lt-LT'),
+        phone: phone.value.trim(),
+        message: message.value.trim(),
+        consent: consent.checked,
+        honeypot: honeypot.value,
+      });
+      form.reset();
+      companyName.value = record.trading_name;
+      controls.forEach((control) => {
+        control.removeAttribute('aria-invalid');
+        const fieldError = errorFor(control);
+        if (fieldError) fieldError.textContent = '';
+      });
+      status.className = 'form-status form-status--success';
+      status.setAttribute('role', 'status');
+      status.textContent = 'Ačiū. Prašymas gautas ir bus patikrintas prieš atliekant bet kokį viešą pakeitimą.';
+      status.focus();
+    } catch (error) {
+      console.error('Nepavyko pateikti gamintojo atstovavimo ar pataisos prašymo.', error);
+      status.className = 'form-status form-status--error';
+      status.setAttribute('role', 'alert');
+      status.textContent = 'Prašymo pateikti nepavyko. Patikrinkite interneto ryšį ir laukus, tada bandykite dar kartą.';
+      status.focus();
+    } finally {
+      submit.disabled = false;
+      submit.removeAttribute('aria-busy');
+      form.removeAttribute('aria-busy');
+      submit.textContent = 'Pateikti įrašo peržiūrai';
+    }
+  });
+
   return section;
 }
 

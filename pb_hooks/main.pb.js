@@ -4,62 +4,6 @@ routerAdd("GET", "/api/supernaut/ready", (event) => {
   return event.json(200, { ok: true });
 });
 
-const sendOperatorEmail = (event, record, subject, fields) => {
-  const agentMailKey = $os.getenv("AGENTMAIL_API_KEY");
-  const agentMailInbox = $os.getenv("AGENTMAIL_INBOX_ID");
-  if (!agentMailKey || !agentMailInbox) {
-    event.app.logger().error(
-      "Operator notification email skipped because AgentMail environment is unavailable",
-      "recordId",
-      record.id
-    );
-    return;
-  }
-
-  const textValue = (value) => String(value === undefined || value === null || value === "" ? "Nenurodyta" : value)
-    .replace(/\r\n?/g, "\n");
-  const escapeHtml = (value) => textValue(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;")
-    .replaceAll("\n", "<br>");
-  const plainText = fields.map(([label, value]) => label + ": " + textValue(value)).join("\n");
-  const html = "<p>Gauta nauja viešos svetainės forma.</p><ul>" + fields
-    .map(([label, value]) => "<li><strong>" + escapeHtml(label) + ":</strong> " + escapeHtml(value) + "</li>")
-    .join("") + "</ul>";
-
-  try {
-    const response = $http.send({
-      method: "POST",
-      url: "https://api.agentmail.to/v0/inboxes/" + encodeURIComponent(agentMailInbox) + "/messages/send",
-      headers: {
-        "Authorization": "Bearer " + agentMailKey,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        to: ["info@baldininkai.org"],
-        subject: subject,
-        text: plainText,
-        html: html,
-        labels: ["app"],
-      }),
-      timeout: 15,
-    });
-    if (response.statusCode < 200 || response.statusCode >= 300) {
-      throw new Error("AgentMail returned HTTP " + response.statusCode);
-    }
-  } catch (err) {
-    event.app.logger().error(
-      "Operator notification email failed",
-      "recordId",
-      record.id,
-      "error",
-      String(err)
-    );
-  }
-};
 
 onRecordAfterUpdateSuccess((event) => {
   event.next();
@@ -202,6 +146,7 @@ onRecordAfterCreateSuccess((event) => {
   const timeline = record.getString("timeline");
   const shortlisted = record.getStringSlice("shortlisted_manufacturer_slugs");
 
+  const { sendOperatorEmail } = require(__hooks + "/operator_email.js");
   sendOperatorEmail(event, record, "Nauja pirkėjo projekto užklausa", [
     ["Projekto rūšis", projectType],
     ["Miestas / regionas", cityRegion],
@@ -604,6 +549,7 @@ onRecordAfterCreateSuccess((event) => {
       ["EBITDA daugiklis", record.get("valuation_multiple_low") + "–" + record.get("valuation_multiple_high") + "×"],
     );
   }
+  const { sendOperatorEmail } = require(__hooks + "/operator_email.js");
   sendOperatorEmail(event, record, "Nauja konfidenciali savininko užklausa", operatorFields);
 
   const agentMailKey = $os.getenv("AGENTMAIL_API_KEY");
@@ -824,6 +770,7 @@ onRecordAfterCreateSuccess((event) => {
     );
   }
 
+  const { sendOperatorEmail } = require(__hooks + "/operator_email.js");
   sendOperatorEmail(event, record, "Naujas gamintojo atsiliepimas peržiūrai", [
     ["Gamintojas", manufacturerName],
     ["Gamintojo slug", manufacturerSlug],
@@ -845,6 +792,7 @@ onRecordAfterCreateSuccess((event) => {
     ? "Patvirtinti atstovavimą įrašui"
     : "Pataisyti duomenis arba pranešti apie problemą";
 
+  const { sendOperatorEmail } = require(__hooks + "/operator_email.js");
   sendOperatorEmail(event, record, "Naujas katalogo " + (requestKind === "claim" ? "atstovavimo" : "pataisos") + " prašymas", [
     ["Įrašo pavadinimas", record.getString("manufacturer_display_name")],
     ["Gamintojo slug", record.getString("manufacturer_slug")],
@@ -853,6 +801,121 @@ onRecordAfterCreateSuccess((event) => {
     ["Prašymas", record.getString("report_text")],
   ]);
 }, "correction_requests");
+
+onRecordCreateRequest((event) => {
+  const fail = (field, code, message) => {
+    const data = {};
+    data[field] = new ValidationError(code, message);
+    throw new BadRequestError("Patikrinkite pateiktus duomenis.", data);
+  };
+
+  const honeypot = event.record.getString("honeypot").trim();
+  if (honeypot) {
+    fail("honeypot", "invalid_honeypot", "Pateikimas atmestas.");
+  }
+
+  const trimText = (name, min, max, required) => {
+    const value = event.record.getString(name).trim();
+    if ((required && !value) || value.length < min || value.length > max) {
+      fail(name, "invalid_length", "Patikrinkite pateikto teksto ilgį.");
+    }
+    event.record.set(name, value);
+    return value;
+  };
+
+  const manufacturerSlug = trimText("manufacturer_slug", 1, 180, true);
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manufacturerSlug)) {
+    fail("manufacturer_slug", "invalid_slug", "Nurodykite tinkamą gamintojo identifikatorių.");
+  }
+  try {
+    event.app.findFirstRecordByData("manufacturers", "slug", manufacturerSlug);
+  } catch (_) {
+    fail("manufacturer_slug", "unknown_manufacturer", "Gamintojas kataloge nerastas.");
+  }
+
+  trimText("company_name", 1, 240, true);
+  trimText("claimant_name", 2, 120, true);
+  trimText("role", 2, 160, true);
+  trimText("message", 10, 5000, true);
+
+  const email = event.record.getString("email").trim().toLowerCase();
+  if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    fail("email", "invalid_email", "Nurodykite galiojantį el. pašto adresą.");
+  }
+  event.record.set("email", email);
+
+  const phone = event.record.getString("phone").trim().replace(/\s+/g, " ");
+  if (phone.length > 40 || (phone && !/^[0-9+().\-\s]+$/.test(phone))) {
+    fail("phone", "invalid_phone", "Nurodykite galiojantį telefono numerį.");
+  }
+  event.record.set("phone", phone);
+
+  if (!event.record.getBool("consent")) {
+    fail("consent", "consent_required", "Būtinas sutikimas susisiekti dėl prašymo.");
+  }
+
+  // Workflow state and trap values are controlled by the server, not the visitor.
+  event.record.set("consent", true);
+  event.record.set("status", "new");
+  event.record.set("honeypot", "");
+  event.next();
+}, "manufacturer_claims");
+
+onRecordAfterCreateSuccess((event) => {
+  event.next();
+
+  const record = event.record;
+  const { sendOperatorEmail } = require(__hooks + "/operator_email.js");
+  sendOperatorEmail(event, record, "Naujas gamintojo atstovavimo ar pataisos prašymas", [
+    ["Gamintojo slug", record.getString("manufacturer_slug")],
+    ["Įmonės pavadinimas", record.getString("company_name")],
+    ["Pateikėjo vardas", record.getString("claimant_name")],
+    ["Pareigos", record.getString("role")],
+    ["Kontaktinis el. paštas", record.getString("email")],
+    ["Telefonas", record.getString("phone")],
+    ["Prašymas", record.getString("message")],
+  ]);
+
+  const eventsUrl = $os.getenv("SUPERNAUT_EVENTS_URL");
+  if (!eventsUrl) {
+    event.app.logger().error(
+      "Manufacturer claim dashboard notification skipped because SUPERNAUT_EVENTS_URL is unavailable",
+      "recordId",
+      record.id
+    );
+    return;
+  }
+
+  try {
+    const summary = "Naujas gamintojo atstovavimo ar pataisos prašymas: " + [
+      record.getString("company_name"),
+      record.getString("claimant_name") + " (" + record.getString("role") + ")",
+      record.getString("manufacturer_slug"),
+    ].join(" · ");
+    const response = $http.send({
+      method: "POST",
+      url: eventsUrl,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event: "manufacturer_claim_created",
+        subject: "Naujas gamintojo atstovavimo ar pataisos prašymas",
+        text: summary,
+      }),
+      timeout: 15,
+    });
+    if (response.statusCode < 200 || response.statusCode >= 300) {
+      throw new Error("SUPERNAUT_EVENTS_URL returned HTTP " + response.statusCode);
+    }
+  } catch (err) {
+    event.app.logger().error(
+      "Manufacturer claim dashboard notification failed",
+      "recordId",
+      record.id,
+      "error",
+      String(err)
+    );
+  }
+}, "manufacturer_claims");
 
 // RFQ tender foundation: the public API is intentionally limited to a single
 // submission route. Collections remain superuser-only; dispatching and proposal
