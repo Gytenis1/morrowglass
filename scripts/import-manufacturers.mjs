@@ -44,10 +44,6 @@ const regions = new Set(["vilnius-east-south", "kaunas-north", "klaipeda-panevez
 const originalRecordCount = 121;
 const legacyRecordCount = 315;
 const expectedSynchronizedRecordCount = 450;
-// These two duplicate codes pre-date this official-source batch and identify historic
-// alternate directory profiles for the same legal entities. New records cannot use them.
-const historicalDuplicateCompanyCodes = new Set(["304956995", "302893592"]);
-
 function normalizeName(value) {
   return String(value || "")
     .normalize("NFD")
@@ -109,9 +105,7 @@ function validate(records) {
     const hasCompanyCode = record.company_code !== undefined && record.company_code !== null && record.company_code !== "";
     if (hasCompanyCode) {
       if (!/^\d{7,12}$/.test(record.company_code)) throw new Error(`Invalid public company identifier for ${record.slug}`);
-      const priorCompanyIndex = companyCodes.get(record.company_code);
-      const allowedHistoricalDuplicate = priorCompanyIndex !== undefined && index < legacyRecordCount && priorCompanyIndex < legacyRecordCount && historicalDuplicateCompanyCodes.has(record.company_code);
-      if (priorCompanyIndex !== undefined && !allowedHistoricalDuplicate) throw new Error(`Duplicate company_code: ${record.company_code}`);
+      if (companyCodes.has(record.company_code)) throw new Error(`Duplicate company_code: ${record.company_code}`);
       companyCodes.set(record.company_code, index);
     }
     const hasFinancialEnrichment = financialEnrichmentFields.some((field) => record[field] !== undefined);
