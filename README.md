@@ -23,7 +23,7 @@ Pradinio rinkinio šaltinių surinkimo data yra `2026-07-27`, o patikros būsena
 - `pb_migrations/` – duomenų bazės schema ir istorinis pradinis seed.
 - `pb_hooks/` – serverio kabliai.
 - `pb_public/` – pasirenkami backend statiniai failai.
-- `public/` – frontend build išvestis. Ji yra ignoruojama Git ir negali būti redaguojama ranka.
+- `public/` – į Git committinama frontend build išvestis, įskaitant generatoriaus sukurtą IndexNow rakto failą. Jos failų neredaguokite ranka; pakeitimus atlikite šaltinyje ir paleiskite build.
 
 ## Duomenų modelis
 
@@ -162,7 +162,7 @@ npm run build
    - statinius esamus gido maršrutus;
    - `public/sitemap.xml` ir `public/robots.txt`.
 
-Statiniuose HTML yra lietuviški title/description, canonical, robots, Open Graph, Twitter ir šaltiniais apriboti JSON-LD duomenys. `public/` yra build išvestis ir nėra committinama; SEO failai turi būti tikrinami po kiekvieno build.
+Statiniuose HTML yra lietuviški title/description, canonical, robots, Open Graph, Twitter ir šaltiniais apriboti JSON-LD duomenys. `public/` yra build išvestis ir yra committinama; SEO failai turi būti tikrinami po kiekvieno build.
 
 Vietinė peržiūra:
 
@@ -177,6 +177,26 @@ npm run deploy
 ```
 
 Produkcijos bazinis URL generatoriuje yra `https://lithuanian-eta-app.supernaut.to`; keičiant viešą domeną būtina vienu pakeitimu atnaujinti runtime SEO konfigūraciją ir statinį generatorių, tada perkurti frontend.
+
+## IndexNow sitemap pateikimas
+
+Build metu `scripts/generate-static-seo.mjs` sukuria viešą šakninį IndexNow rakto failą `public/bdbf192043551ef057b872c40309c70792110cbb37b7a8c716b8030741f84397.txt`. Rakto reikšmė yra sąmoningai vieša ir failo turinys turi sutapti su jo pavadinimo dalimi.
+
+Tik **po frontend deploy**, kai gyvai atsidaro <https://www.baldininkai.org/bdbf192043551ef057b872c40309c70792110cbb37b7a8c716b8030741f84397.txt>, pateikite visą sitemap:
+
+```sh
+npm run submit:indexnow
+```
+
+Komanda paima `https://www.baldininkai.org/sitemap.xml`, patikrina, kad visi `<loc>` URL priklauso tam pačiam viešam hostui, pašalina dublikatus ir siunčia juos į IndexNow paketais iki 10 000 URL. Ji išveda sitemap adresą, URL skaičių, paketų eigą bei kiekvieną HTTP atsakymą. Tik `200` ir `202` laikomi priimtais; tuščias sitemap, netinkamas URL, užklausos ar atsakymo klaida užbaigia komandą su nenuliniu kodu. Komandą saugu kartoti.
+
+Jei reikia pateikti kitą sitemap kelią tame pačiame viešame hoste, galima aiškiai nurodyti HTTPS URL be prisijungimo duomenų ar porto:
+
+```sh
+SITEMAP_URL="https://www.baldininkai.org/kitas-sitemap.xml" npm run submit:indexnow
+```
+
+Vykdykite šią komandą po reikšmingų sitemap pakeitimų (pavyzdžiui, pridėjus ar pašalinus daug viešų puslapių), bet ne prieš rakto failui tampant pasiekiamam gyvai. Komanda nesaugo ir nenaudoja jokių slaptų duomenų.
 
 ## Kada reikia backend redeploy
 

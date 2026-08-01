@@ -2,6 +2,7 @@
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { INDEXNOW_KEY, INDEXNOW_KEY_FILENAME } from './indexnow-key.mjs';
 
 const rootDir = fileURLToPath(new URL('..', import.meta.url));
 const publicDir = join(rootDir, 'public');
@@ -903,5 +904,6 @@ assertUniqueRoutePaths(sitemapPaths, 'sitemap');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(sourceDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+await writeFile(join(publicDir, INDEXNOW_KEY_FILENAME), INDEXNOW_KEY);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, ${cityCategoryLandings.length} city/category routes, 1 buyer request route, 1 comparison route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, sitemap.xml and robots.txt.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, ${cityCategoryLandings.length} city/category routes, 1 buyer request route, 1 comparison route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);
