@@ -3284,6 +3284,338 @@
     color: var(--registry-ink);
   }
 
+  .rfq-prefill-note {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem 0.8rem;
+    padding: 1rem 1.1rem;
+    color: oklch(0.29 0.075 145);
+    background: oklch(0.95 0.035 145);
+    border: 1px solid oklch(0.78 0.075 145);
+    border-radius: 10px;
+  }
+
+  .rfq-prefill-note span {
+    font-size: 0.9rem;
+  }
+
+  .estimator-main {
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .estimator-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.55fr);
+    align-items: end;
+    gap: clamp(2rem, 6vw, 6rem);
+    padding-bottom: clamp(2rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .estimator-intro > div {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .estimator-intro .kicker {
+    color: var(--pine);
+  }
+
+  .estimator-intro h1 {
+    max-width: 21ch;
+  }
+
+  .estimator-intro .lead {
+    max-width: 62ch;
+    color: var(--ink-soft);
+  }
+
+  .estimator-intro-note {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1.1rem 1.2rem;
+    color: var(--warning-ink);
+    background: var(--warning-bg);
+    border: 1px solid oklch(0.82 0.07 78);
+    border-radius: 10px;
+  }
+
+  .estimator-intro-note p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .estimator-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1.14fr);
+    align-items: start;
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .estimator-form {
+    display: grid;
+    gap: 2.25rem;
+  }
+
+  .estimator-form fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.1rem;
+    border: 0;
+  }
+
+  .estimator-form legend {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    color: var(--pine-strong);
+    border-bottom: 1px solid var(--line);
+    font-family: var(--display);
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .estimator-field {
+    min-width: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .estimator-field label {
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 780;
+  }
+
+  .estimator-field input,
+  .estimator-field select {
+    width: 100%;
+    padding: 0.76rem 0.88rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid oklch(0.68 0.03 158);
+    border-radius: 9px;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  }
+
+  .estimator-field input:hover,
+  .estimator-field select:hover {
+    border-color: var(--pine);
+  }
+
+  .estimator-field input:focus,
+  .estimator-field select:focus {
+    border-color: var(--focus);
+    box-shadow: 0 0 0 3px oklch(0.61 0.15 247 / 0.18);
+  }
+
+  .estimator-number-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: stretch;
+  }
+
+  .estimator-number-row input {
+    border-radius: 9px 0 0 9px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .estimator-number-row span {
+    min-width: 8rem;
+    display: flex;
+    align-items: center;
+    padding-inline: 0.85rem;
+    color: var(--pine-strong);
+    background: oklch(0.945 0.02 158);
+    border: 1px solid oklch(0.68 0.03 158);
+    border-left: 0;
+    border-radius: 0 9px 9px 0;
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .estimator-field .field-hint {
+    max-width: 58ch;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+  .estimate-result {
+    position: sticky;
+    top: 1.5rem;
+    overflow: hidden;
+    color: var(--surface);
+    background: var(--pine-strong);
+    border-radius: 12px;
+  }
+
+  .estimate-result > header {
+    display: grid;
+    gap: 0.35rem;
+    padding: clamp(1.25rem, 4vw, 2rem) clamp(1.25rem, 4vw, 2rem) 0;
+  }
+
+  .estimate-result > header p {
+    color: oklch(0.88 0.08 137);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .estimate-result > header h2 {
+    color: var(--surface);
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+  }
+
+  .estimate-range {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 1.5rem clamp(1.25rem, 4vw, 2rem);
+  }
+
+  .estimate-range > div {
+    min-width: 0;
+    display: grid;
+    gap: 0.35rem;
+    padding-inline: 1rem;
+    border-right: 1px solid oklch(0.82 0.03 158 / 0.32);
+  }
+
+  .estimate-range > div:first-child {
+    padding-left: 0;
+  }
+
+  .estimate-range > div:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .estimate-range dt {
+    color: oklch(0.9 0.025 158);
+    font-size: 0.74rem;
+    font-weight: 760;
+  }
+
+  .estimate-range dd {
+    overflow-wrap: anywhere;
+    color: var(--surface);
+    font-family: var(--display);
+    font-size: clamp(1.2rem, 2.4vw, 1.75rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+
+  .estimate-range-typical dd {
+    color: oklch(0.87 0.115 137);
+  }
+
+  .estimate-summary {
+    margin-inline: clamp(1.25rem, 4vw, 2rem);
+    padding-block: 1rem;
+    color: oklch(0.94 0.014 158);
+    border-block: 1px solid oklch(0.82 0.03 158 / 0.32);
+    font-size: 0.9rem;
+  }
+
+  .estimate-scope {
+    padding: 1.25rem clamp(1.25rem, 4vw, 2rem);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .estimate-scope > div {
+    min-width: 0;
+    display: grid;
+    align-content: start;
+    gap: 0.65rem;
+  }
+
+  .estimate-scope h3 {
+    color: var(--surface);
+    font-family: var(--body);
+    font-size: 0.9rem;
+    letter-spacing: 0;
+  }
+
+  .estimate-scope ul {
+    display: grid;
+    gap: 0.45rem;
+    padding-left: 1rem;
+    list-style: square;
+  }
+
+  .estimate-scope li {
+    color: oklch(0.91 0.018 158);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .estimate-cta {
+    margin: 0 clamp(1.25rem, 4vw, 2rem);
+    color: var(--pine-strong);
+    background: var(--surface);
+    border-color: var(--surface);
+  }
+
+  .estimate-cta:hover {
+    color: var(--surface);
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .estimate-cta-note {
+    padding: 0.75rem clamp(1.25rem, 4vw, 2rem) 1.5rem;
+    color: oklch(0.9 0.02 158);
+    font-size: 0.78rem;
+  }
+
+  .estimator-method {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.55fr);
+    align-items: start;
+    gap: clamp(2rem, 6vw, 6rem);
+    padding-top: clamp(2rem, 5vw, 4rem);
+    border-top: 1px solid var(--line);
+  }
+
+  .estimator-method > div {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .estimator-method > div p {
+    max-width: 72ch;
+    color: var(--ink-soft);
+  }
+
+  .estimator-method > div a {
+    color: var(--pine-strong);
+    font-weight: 720;
+    overflow-wrap: anywhere;
+  }
+
+  .estimator-method aside {
+    display: grid;
+    gap: 0.55rem;
+    padding: 1.1rem 1.2rem;
+    color: var(--warning-ink);
+    background: var(--warning-bg);
+    border: 1px solid oklch(0.82 0.07 78);
+    border-radius: 10px;
+  }
+
+  .estimator-method aside p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
   @keyframes loading-bars {
     from {
       opacity: 0.55;
@@ -3317,6 +3649,9 @@
     .request-layout,
     .tool-intro,
     .buyer-tools-hub,
+    .estimator-intro,
+    .estimator-layout,
+    .estimator-method,
     .contract-heading,
     .contract-section,
     .comparison-results-heading,
@@ -3326,7 +3661,8 @@
     }
 
 
-    .request-guidance {
+    .request-guidance,
+    .estimate-result {
       position: static;
     }
   }
@@ -3592,6 +3928,49 @@
   }
 
   @media (max-width: 560px) {
+    .estimate-range,
+    .estimate-scope {
+      grid-template-columns: 1fr;
+    }
+
+    .estimate-range {
+      gap: 0.85rem;
+    }
+
+    .estimate-range > div,
+    .estimate-range > div:first-child,
+    .estimate-range > div:last-child {
+      padding: 0 0 0.85rem;
+      border-right: 0;
+      border-bottom: 1px solid oklch(0.82 0.03 158 / 0.32);
+    }
+
+    .estimate-range > div:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .estimator-number-row {
+      grid-template-columns: 1fr;
+    }
+
+    .estimator-number-row input {
+      border-radius: 9px 9px 0 0;
+    }
+
+    .estimator-number-row span {
+      min-width: 0;
+      min-height: 44px;
+      border-left: 1px solid oklch(0.68 0.03 158);
+      border-top: 0;
+      border-radius: 0 0 9px 9px;
+    }
+
+    .rfq-prefill-note {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
     .header-inner,
     .browse-section,
     .profile-main,

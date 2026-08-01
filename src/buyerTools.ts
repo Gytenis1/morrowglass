@@ -21,6 +21,7 @@ type ToolContext = {
 const CONTRACT_PATH = '/gidas/baldu-pirkimo-sutarties-sablonas';
 const COMPARISON_PATH = '/palyginti-pasiulymus';
 const RFQ_PATH = '/gauti-pasiulymus';
+const ESTIMATOR_PATH = '/baldu-kainos-skaiciuokle';
 const CONTRACT_STORAGE_KEY = 'baldininkai_contract_template_v1';
 const COMPARISON_STORAGE_KEY = 'baldininkai_offer_comparison_v1';
 
@@ -38,9 +39,10 @@ function toolNavigation(active: 'contract' | 'comparison' | 'rfq'): string {
     <nav class="tool-navigation" aria-label="Pirkėjo įrankiai">
       <strong>Pirkėjo įrankiai</strong>
       <div>
-        <a href="${CONTRACT_PATH}" data-internal-link="true"${active === 'contract' ? ' aria-current="page"' : ''}>Sutarties šablonas</a>
-        <a href="${COMPARISON_PATH}" data-internal-link="true"${active === 'comparison' ? ' aria-current="page"' : ''}>Pasiūlymų palyginimas</a>
+        <a href="${ESTIMATOR_PATH}" data-internal-link="true">Kainos skaičiuoklė</a>
         <a href="${RFQ_PATH}" data-internal-link="true"${active === 'rfq' ? ' aria-current="page"' : ''}>Projekto užklausa</a>
+        <a href="${COMPARISON_PATH}" data-internal-link="true"${active === 'comparison' ? ' aria-current="page"' : ''}>Pasiūlymų palyginimas</a>
+        <a href="${CONTRACT_PATH}" data-internal-link="true"${active === 'contract' ? ' aria-current="page"' : ''}>Sutarties šablonas</a>
       </div>
     </nav>
   `;
@@ -726,6 +728,21 @@ function mapApiErrors(root: HTMLElement, payload: unknown): boolean {
 }
 
 export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers = [] }: ToolContext): void {
+  const query = new URLSearchParams(window.location.search);
+  const isEstimatorPrefill = query.get('saltinis') === 'kainos-skaiciuokle';
+  const prefill = isEstimatorPrefill
+    ? {
+      category: query.get('category')?.trim().slice(0, 160) ?? '',
+      municipality: query.get('municipality')?.trim().slice(0, 160) ?? '',
+      service_region: query.get('service_region')?.trim().slice(0, 160) ?? '',
+      project_stage: query.get('project_stage')?.trim().slice(0, 160) ?? '',
+      project_scope: query.get('project_scope')?.trim().slice(0, 3000) ?? '',
+      dimensions_room_count: query.get('dimensions_room_count')?.trim().slice(0, 1200) ?? '',
+      materials_requirements: query.get('materials_requirements')?.trim().slice(0, 3000) ?? '',
+      budget_min: query.get('budget_min')?.trim().slice(0, 20) ?? '',
+      budget_max: query.get('budget_max')?.trim().slice(0, 20) ?? '',
+    }
+    : undefined;
   setPageMetadata({
     title: 'Pateikite saugią baldų projekto užklausą | Baldai pagal užsakymą Lietuvoje',
     description: 'Struktūruota baldų projekto pasiūlymo užklausa operatoriaus peržiūrai, be automatinio siuntimo gamintojams ir su atskiru patvirtinimu prieš išsiuntimą.',
@@ -737,7 +754,7 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
     ])],
   });
 
-  const requestedSlug = new URLSearchParams(window.location.search).get('gamintojas')?.trim() ?? '';
+  const requestedSlug = query.get('gamintojas')?.trim() ?? '';
   const preselected = requestedSlug ? manufacturers.find((record) => record.slug === requestedSlug) : undefined;
   const invalidPreselection = Boolean(requestedSlug && !preselected);
   const ordered = preselected ? [preselected, ...manufacturers.filter((record) => record.slug !== preselected.slug)] : manufacturers;
@@ -788,6 +805,7 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
             <h2 id="request-form-title">Projekto ir kontaktiniai duomenys</h2>
             <p>Visi žvaigždute pažymėti laukai privalomi. Nesiųskite asmens kodo, banko duomenų ar kitos šiai užklausai nereikalingos jautrios informacijos.</p>
           </div>
+          ${isEstimatorPrefill ? '<div class="rfq-prefill-note" role="status"><strong>Skaičiuoklės duomenys perkelti.</strong><span>Patikrinkite apimtį, medžiagas ir biudžeto intervalą, tada užpildykite likusius laukus.</span></div>' : ''}
           <div class="form-error-summary" id="rfq-error-summary" role="alert" tabindex="-1" hidden></div>
           <div class="rfq-success" id="rfq-success" role="status" tabindex="-1" hidden>
             <p class="state-label">Užklausa gauta</p>
@@ -926,6 +944,15 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
   const status = root.querySelector<HTMLElement>('#rfq-status');
   const submit = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
   if (!form || !search || !list || !empty || !selectionCount || !status || !submit) return;
+
+  if (prefill) {
+    Object.entries(prefill).forEach(([name, value]) => {
+      const field = form.elements.namedItem(name);
+      if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement) {
+        field.value = value;
+      }
+    });
+  }
 
   const shortlistChoices = Array.from(list.querySelectorAll<HTMLInputElement>('[name="preferred_shortlist"]'));
   const updateSelection = (changed?: HTMLInputElement) => {

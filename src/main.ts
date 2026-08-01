@@ -3,6 +3,7 @@ import './styles.css';
 import baldininkaiLogoUrl from './assets/baldininkai-logo.svg';
 import { pb } from './pocketbase';
 import { renderComparisonTool, renderContractTool, renderRfqTool } from './buyerTools';
+import { ESTIMATOR_PATH, renderPriceEstimator } from './priceEstimator';
 import {
   CATEGORY_LANDINGS,
   SITE_URL,
@@ -437,6 +438,10 @@ function isComparisonPath(pathname = window.location.pathname): boolean {
   return normalizePathname(pathname) === '/palyginti-pasiulymus';
 }
 
+function isEstimatorPath(pathname = window.location.pathname): boolean {
+  return normalizePathname(pathname) === ESTIMATOR_PATH;
+}
+
 function getPolicyPage(pathname = window.location.pathname): PolicyPage | undefined {
   const normalizedPath = pathname.replace(/\/+$/, '') || '/';
   return policyPages.find((page) => page.path === normalizedPath);
@@ -670,6 +675,7 @@ function renderFooter(): string {
         <nav aria-label="Poraštės navigacija">
           <a href="/gauti-pasiulymus" data-internal-link="true">Projekto užklausa</a>
           <a href="/gidas" data-internal-link="true">Pirkėjo gidas</a>
+          <a href="/baldu-kainos-skaiciuokle" data-internal-link="true">Kainos skaičiuoklė</a>
           <a href="/gidas/baldu-pirkimo-sutarties-sablonas" data-internal-link="true">Sutarties šablonas</a>
           <a href="/palyginti-pasiulymus" data-internal-link="true">Pasiūlymų palyginimas</a>
           <a href="/privatumas" data-internal-link="true">Privatumas</a>
@@ -956,6 +962,7 @@ function renderShell(): void {
           <h1 id="page-title">Raskite baldų gamintojus pagal poreikį ir vietą</h1>
           <p class="lead">Pradėkite nuo baldų rūšies ir miesto. Rezultatus galėsite tikslinti pagal pavadinimą, įmonės duomenis ir kitus katalogo kriterijus.</p>
           <div class="intro-actions">
+            <a class="primary-button primary-button--light" href="/baldu-kainos-skaiciuokle" data-internal-link="true">Apskaičiuoti preliminarią kainą</a>
             <a class="intro-secondary-link" href="/gauti-pasiulymus" data-internal-link="true">Jau turite projekto aprašymą? Pateikti užklausą →</a>
             <a class="intro-guide-link" href="/gidas" data-internal-link="true">Kaip atrinkti ir palyginti gamintojus →</a>
           </div>
@@ -2483,10 +2490,11 @@ function renderGuideHub(): void {
       <section class="buyer-tools-hub" id="pirkejo-irankiai" aria-labelledby="buyer-tools-title">
         <div class="guide-hub-heading">
           <p class="kicker">Pirkėjo įrankiai</p>
-          <h2 id="buyer-tools-title">Parenkite, palyginkite ir užfiksuokite</h2>
-          <p>Trys atskiri įrankiai padeda išlaikyti vienodą projekto informaciją nuo užklausos iki pasiūlymų ir sutarties peržiūros.</p>
+          <h2 id="buyer-tools-title">Įvertinkite, parenkite, palyginkite ir užfiksuokite</h2>
+          <p>Keturi atskiri įrankiai padeda išlaikyti vienodą projekto informaciją nuo pirmojo biudžeto orientyro iki pasiūlymų ir sutarties peržiūros.</p>
         </div>
         <ul class="buyer-tool-links">
+          <li><a href="/baldu-kainos-skaiciuokle" data-internal-link="true"><strong>Apskaičiuoti preliminarų kainos intervalą</strong><span>Žema, tipinė ir aukšta riba pagal projekto apimtį bei pasirinktus sprendinius.</span></a></li>
           <li><a href="/gauti-pasiulymus" data-internal-link="true"><strong>Pateikti saugią projekto pasiūlymo užklausą</strong><span>Operatoriaus peržiūra ir jokių automatinių kontaktų su gamintojais.</span></a></li>
           <li><a href="/palyginti-pasiulymus" data-internal-link="true"><strong>Palyginti 2–5 pasiūlymus</strong><span>Aiški formulė, jūsų svoriai, įrodymai ir matomos spragos.</span></a></li>
           <li><a href="/gidas/baldu-pirkimo-sutarties-sablonas" data-internal-link="true"><strong>Redaguoti sutarties struktūros šabloną</strong><span>Naršyklėje pildomas ir spausdinamas informacinis B2C ruošinys.</span></a></li>
@@ -2791,6 +2799,12 @@ function route(): void {
 
   // Buyer tools use canonical standalone routes. Match them before the broader
   // guide namespace so the contract tool can never fall through as an article.
+  if (isEstimatorPath()) {
+    if (!root) return;
+    renderPriceEstimator({ root, renderHeader, renderFooter });
+    return;
+  }
+
   if (isContractPath()) {
     if (!root) return;
     renderContractTool({ root, renderHeader, renderFooter });
@@ -2893,7 +2907,7 @@ async function loadDirectory(): Promise<void> {
 
 function navigateToCurrentRoute(): void {
   browseState = readBrowseState();
-  if (isGuidePath() || isPolicyPath() || isComparisonPath()) {
+  if (isGuidePath() || isPolicyPath() || isComparisonPath() || isEstimatorPath()) {
     route();
     return;
   }
@@ -2959,7 +2973,7 @@ document.addEventListener('click', (event) => {
 
 window.addEventListener('popstate', navigateToCurrentRoute);
 
-if (isGuidePath() || isPolicyPath() || isComparisonPath()) {
+if (isGuidePath() || isPolicyPath() || isComparisonPath() || isEstimatorPath()) {
   route();
 } else {
   void loadDirectory();
