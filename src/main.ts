@@ -378,6 +378,15 @@ function getRegistryCheckedDate(value: string | null | undefined): { iso: string
   };
 }
 
+function getSourceCollectionDate(value: string | null | undefined): { iso: string; label: string } | null {
+  const rawValue = value?.trim() ?? '';
+  const datePart = /^(\d{4}-\d{2}-\d{2})/.exec(rawValue)?.[1];
+  if (!datePart) return null;
+  const formatted = getRegistryCheckedDate(datePart);
+  if (!formatted) return null;
+  return { iso: rawValue, label: formatted.label };
+}
+
 function asStringArray(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
   return value.filter((item): item is string => typeof item === 'string' && item.trim().length > 0);
@@ -1260,6 +1269,17 @@ function createFactRow(term: string, detail: string): HTMLDivElement {
   return wrapper;
 }
 
+function createOptionalFactRow(
+  term: string,
+  value: string | null | undefined,
+  unknown = 'Viešuose šaltiniuose nenurodyta.',
+): HTMLDivElement {
+  const normalizedValue = value?.trim() ?? '';
+  const row = createFactRow(term, normalizedValue || unknown);
+  if (!normalizedValue) row.querySelector('dd')?.classList.add('unknown-value');
+  return row;
+}
+
 function createEmployeeSizeFactRow(record: Manufacturer, employeeCountBand: string): HTMLDivElement {
   const wrapper = document.createElement('div');
   const dt = document.createElement('dt');
@@ -1338,7 +1358,7 @@ function createPublicDetailsSection(record: Manufacturer): HTMLElement | null {
   if (companyCode) rows.push(createFactRow('Įmonės kodas', companyCode));
   if (streetAddress) rows.push(createFactRow('Registracijos adresas', streetAddress));
   if (postcode) rows.push(createFactRow('Pašto kodas', postcode));
-  if (Number.isInteger(record.founded_year)) rows.push(createFactRow('Įkurta', String(record.founded_year)));
+  if (Number.isInteger(record.founded_year) && Number(record.founded_year) > 0) rows.push(createFactRow('Įkurta', String(record.founded_year)));
   if (employeeCountBand) rows.push(createEmployeeSizeFactRow(record, employeeCountBand));
   if (publicPhone) rows.push(createTelephoneFactRow('Viešas telefono numeris', publicPhone));
   if (!rows.length) return null;
@@ -1389,6 +1409,114 @@ function createRegistryVerificationSection(record: Manufacturer): HTMLElement | 
   return section;
 }
 
+function createProfileOverview(record: Manufacturer): HTMLElement {
+  const section = document.createElement('section');
+  section.className = 'profile-overview';
+  section.setAttribute('aria-labelledby', 'profile-overview-title');
+
+  const heading = document.createElement('div');
+  heading.className = 'profile-overview-heading';
+  heading.innerHTML = `
+    <h2 id="profile-overview-title">Ką apie šį profilį galima įvertinti dabar</h2>
+    <p>Santrauka rodo, kurie duomenys pateikti katalogo įraše. Ji nėra kokybės, veiklos ar tapatybės patvirtinimas.</p>
+  `;
+
+  const location = record.city?.trim() || record.location?.trim() || '';
+  const region = record.region_label?.trim() || '';
+  const website = record.website?.trim() || '';
+  const contactUrl = record.public_contact_url?.trim() || '';
+  const phone = record.public_phone?.trim() || '';
+  const contactKinds: string[] = [];
+  if (phone) contactKinds.push('telefono numeris');
+  if (website) contactKinds.push('svetainė');
+  if (contactUrl && contactUrl !== website) contactKinds.push('kontaktų puslapis');
+
+  const coverageChecks = [
+    record.legal_name?.trim(),
+    record.description_lt?.trim(),
+    record.scope_evidence?.trim(),
+    location,
+    region,
+    asStringArray(record.category_labels).length > 0,
+    website,
+    contactUrl,
+    record.company_code?.trim(),
+    phone,
+    record.street_address?.trim(),
+    record.postcode?.trim(),
+    Number.isInteger(record.founded_year) && Number(record.founded_year) > 0,
+    record.employee_count_band?.trim(),
+  ];
+  const completedFields = coverageChecks.filter(Boolean).length;
+  const collectionDate = getSourceCollectionDate(record.source_collection_date);
+
+  const summary = document.createElement('dl');
+  summary.className = 'profile-overview-list';
+
+  const appendSummaryItem = (
+    term: string,
+    value: string,
+    detail: string,
+    state: 'present' | 'partial' | 'missing',
+    time?: { iso: string; label: string } | null,
+  ): void => {
+    const item = document.createElement('div');
+    item.dataset.state = state;
+    const dt = document.createElement('dt');
+    dt.textContent = term;
+    const dd = document.createElement('dd');
+    const marker = document.createElement('span');
+    marker.className = 'profile-overview-marker';
+    marker.setAttribute('aria-hidden', 'true');
+    const strong = document.createElement('strong');
+    if (time) {
+      strong.append(value);
+      const timeElement = document.createElement('time');
+      timeElement.dateTime = time.iso;
+      timeElement.textContent = time.label;
+      strong.append(timeElement);
+    } else {
+      strong.textContent = value;
+    }
+    const explanation = document.createElement('span');
+    explanation.textContent = detail;
+    dd.append(marker, strong, explanation);
+    item.append(dt, dd);
+    summary.append(item);
+  };
+
+  appendSummaryItem(
+    'Vieta',
+    location || (region ? 'Nurodyta tik regiono grupė' : 'Nenurodyta'),
+    location
+      ? (region ? `Šaltinio regiono grupė: ${region}.` : 'Tai šaltinyje nurodyta vieta, ne aptarnavimo teritorija.')
+      : (region || 'Viešuose šaltiniuose vieta nepateikta.'),
+    location ? 'present' : (region ? 'partial' : 'missing'),
+  );
+  appendSummaryItem(
+    'Vieši kontaktai',
+    contactKinds.length ? `${contactKinds.length} ${contactKinds.length === 1 ? 'kontakto būdas' : 'kontakto būdai'}` : 'Nenurodyta',
+    contactKinds.length ? `Kataloge pateikta: ${contactKinds.join(', ')}.` : 'Telefono, svetainės ar atskiros kontaktų nuorodos katalogo laukuose nėra.',
+    contactKinds.length ? 'present' : 'missing',
+  );
+  appendSummaryItem(
+    'Duomenų apimtis',
+    `${completedFields} iš ${coverageChecks.length} pagrindinių laukų`,
+    'Tai katalogo laukų užpildymo, o ne informacijos patikimumo rodiklis.',
+    completedFields === coverageChecks.length ? 'present' : (completedFields > 0 ? 'partial' : 'missing'),
+  );
+  appendSummaryItem(
+    'Šaltinių data',
+    collectionDate ? 'Surinkta ' : 'Nenurodyta',
+    collectionDate ? 'Data rodo šaltinių rinkimo laiką, ne dabartinės veiklos patvirtinimą.' : 'Šaltinių surinkimo data katalogo įraše nepateikta.',
+    collectionDate ? 'present' : 'missing',
+    collectionDate,
+  );
+
+  section.append(heading, summary);
+  return section;
+}
+
 function createSourceSection(record: Manufacturer): HTMLElement {
   const section = document.createElement('section');
   section.className = 'provenance-section';
@@ -1433,16 +1561,17 @@ function createSourceSection(record: Manufacturer): HTMLElement {
 
   const date = document.createElement('p');
   date.className = 'collection-date';
-  date.textContent = 'Šaltinių surinkimo data: ';
-  if (record.source_collection_date?.trim()) {
+  date.textContent = 'Šaltinių informacija surinkta: ';
+  const collectionDate = getSourceCollectionDate(record.source_collection_date);
+  if (collectionDate) {
     const time = document.createElement('time');
-    time.dateTime = record.source_collection_date;
-    time.textContent = record.source_collection_date;
+    time.dateTime = collectionDate.iso;
+    time.textContent = collectionDate.label;
     date.append(time);
   } else {
     const unknown = document.createElement('span');
     unknown.className = 'unknown-value';
-    unknown.textContent = 'nenurodyta';
+    unknown.textContent = 'data katalogo įraše nenurodyta';
     date.append(unknown);
   }
 
@@ -1749,12 +1878,13 @@ function createReviewSection(record: Manufacturer): HTMLElement {
 function createCorrectionSection(record: Manufacturer): HTMLElement {
   const section = document.createElement('section');
   section.className = 'correction-section';
+  section.id = 'pataisyti-profili';
   section.setAttribute('aria-labelledby', 'correction-title');
   section.innerHTML = `
     <div class="section-heading correction-heading">
       <p class="kicker">Gamintojams ir jų atstovams</p>
-      <h2 id="correction-title">Ar tai jūsų įmonė?</h2>
-      <p>Patvirtinkite, kad atstovaujate įmonei, arba nurodykite, ką šiame katalogo įraše reikia pataisyti. Prašymas pateks katalogo peržiūrai; viešas pakeitimas nebus atliekamas automatiškai.</p>
+      <h2 id="correction-title">Papildykite arba pataisykite savo profilį</h2>
+      <p>Jei atstovaujate šiai įmonei, padėkite pirkėjams rasti tikslesnę informaciją. Nurodykite savo ryšį su įmone ir ką reikia papildyti ar pataisyti. Kiekvieną prašymą peržiūrime prieš viešą pakeitimą.</p>
       <p class="correction-boundary">Ši forma nėra baldų projekto užklausa ir nėra siunčiama kataloge nurodytai įmonei.</p>
     </div>
     <form class="correction-form" aria-labelledby="correction-title" novalidate>
@@ -2414,6 +2544,10 @@ function renderProfile(record: Manufacturer | undefined): void {
   requestLink.href = `/gauti-pasiulymus?gamintojas=${encodeURIComponent(record.slug)}`;
   requestLink.dataset.internalLink = 'true';
   requestLink.textContent = 'Įtraukti į projekto užklausą';
+  const claimLink = document.createElement('a');
+  claimLink.className = 'secondary-button profile-claim-link';
+  claimLink.href = '#pataisyti-profili';
+  claimLink.textContent = 'Atstovaujate įmonei? Papildyti profilį';
   const guideLink = document.createElement('a');
   guideLink.className = 'profile-guide-link';
   guideLink.href = '/gidas';
@@ -2425,7 +2559,7 @@ function renderProfile(record: Manufacturer | undefined): void {
   contextualGuideLink.href = `/gidas/${contextualGuide.slug}`;
   contextualGuideLink.dataset.internalLink = 'true';
   contextualGuideLink.textContent = `${contextualGuide.label} →`;
-  profileActions.append(requestLink, guideLink, contextualGuideLink);
+  profileActions.append(requestLink, claimLink, guideLink, contextualGuideLink);
   hero.append(headingGroup, profileActions);
 
   const note = document.createElement('div');
@@ -2447,16 +2581,17 @@ function renderProfile(record: Manufacturer | undefined): void {
 
   const facts = document.createElement('dl');
   facts.className = 'profile-facts';
+  const categoryLabels = asStringArray(record.category_labels);
   facts.append(
     createFactRow('Viešas / prekinis pavadinimas', displayName),
-    createFactRow('Juridinis pavadinimas', textOrUnknown(record.legal_name, 'Viešame šaltinyje juridinis pavadinimas nenurodytas.')),
-    createFactRow('Šaltinyje pateikta tapatybė', textOrUnknown(record.source_identity)),
-    createFactRow('Vietovė šaltinyje', textOrUnknown(record.location)),
-    createFactRow('Miestas ar vietovė', textOrUnknown(record.city)),
-    createFactRow('Šaltinio regiono grupė', textOrUnknown(record.region_label)),
-    createFactRow('Kategorijos', asStringArray(record.category_labels).join(', ') || 'Kategorijos viešuose šaltiniuose nenurodytos.'),
-    createFactRow('Aprašymas', textOrUnknown(record.description_lt, 'Trumpas aprašymas šaltiniuose nepateiktas.')),
-    createFactRow('Šaltinyje aprašyta veiklos apimtis', textOrUnknown(record.scope_evidence, 'Papildomas veiklos apimties aprašymas šaltinyje nepateiktas.')),
+    createOptionalFactRow('Juridinis pavadinimas', record.legal_name, 'Viešame šaltinyje juridinis pavadinimas nenurodytas.'),
+    createOptionalFactRow('Šaltinyje pateikta tapatybė', record.source_identity),
+    createOptionalFactRow('Vietovė šaltinyje', record.location),
+    createOptionalFactRow('Miestas ar vietovė', record.city),
+    createOptionalFactRow('Šaltinio regiono grupė', record.region_label),
+    createOptionalFactRow('Kategorijos', categoryLabels.join(', '), 'Kategorijos viešuose šaltiniuose nenurodytos.'),
+    createOptionalFactRow('Aprašymas', record.description_lt, 'Trumpas aprašymas šaltiniuose nepateiktas.'),
+    createOptionalFactRow('Šaltinyje aprašyta veiklos apimtis', record.scope_evidence, 'Papildomas veiklos apimties aprašymas šaltinyje nepateiktas.'),
     createUrlFactRow('Svetainė', record.website),
     createUrlFactRow('Viešai nurodytas kontaktinis adresas', record.public_contact_url),
   );
@@ -2465,7 +2600,7 @@ function renderProfile(record: Manufacturer | undefined): void {
   const registryVerification = createRegistryVerificationSection(record);
   const publicDetails = createPublicDetailsSection(record);
   const profileLandings = createProfileLandingSection(record);
-  article.append(hero);
+  article.append(hero, createProfileOverview(record));
   if (registryVerification) article.append(registryVerification);
   article.append(note, details);
   if (publicDetails) article.append(publicDetails);
