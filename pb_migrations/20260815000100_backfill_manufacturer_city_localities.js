@@ -2,11 +2,16 @@
 
 migrate((app) => {
   const batch = require(__hooks + "/../data/manufacturer_city_locality_backfill_20260815.json")
-  const expectedCount = 5
-  const textFields = ["company_code", "slug", "legal_name", "city", "locality", "location", "region", "region_label", "source_url", "source_collection_date", "checked_date"]
+  const expectedCount = 127
+  const textFields = ["company_code", "slug", "legal_name", "city", "locality", "location", "region", "region_label", "source_collection_date"]
+  const supportedRegions = {
+    "vilnius-east-south": "Vilnius, rytų ir pietų Lietuva",
+    "kaunas-north": "Kaunas ir šiaurės Lietuva",
+    "klaipeda-panevezys-west-central": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+  }
 
   if (!Array.isArray(batch) || batch.length !== expectedCount) {
-    throw new Error("manufacturer city/locality backfill requires the immutable 5-record source batch")
+    throw new Error("manufacturer city/locality backfill requires the immutable 127-record source batch")
   }
 
   const seenCodes = new Set()
@@ -20,15 +25,15 @@ migrate((app) => {
         throw new Error("manufacturer city/locality backfill has an empty " + field + " for " + record.company_code)
       }
     }
-    if (record.city === "Lietuva" || record.location === "Lietuva" || record.locality === "Lietuva" ||
-        !/^https:\/\/rekvizitai\.vz\.lt\//.test(record.source_url) ||
-        !/^\d{4}-\d{2}-\d{2}$/.test(record.checked_date) || record.source_collection_date !== record.checked_date) {
-      throw new Error("manufacturer city/locality backfill has invalid sourced locality metadata for " + record.company_code)
+    // locality is kept in the manifest for source auditability; this collection's
+    // displayed locality columns are city and location, which must agree with it.
+    if (record.city === "Lietuva" || record.locality !== record.city || record.location !== record.city ||
+        !Array.isArray(record.public_details_source_urls) || record.public_details_source_urls.length !== 1 ||
+        !/^https:\/\/get\.data\.gov\.lt\/datasets\/gov\/rc\/ar\/gyvenamojivietove\/GyvenamojiVietove\/[0-9a-f-]{36}$/.test(record.public_details_source_urls[0]) ||
+        !/^\d{4}-\d{2}-\d{2}$/.test(record.source_collection_date)) {
+      throw new Error("manufacturer city/locality backfill has invalid official locality metadata for " + record.company_code)
     }
-    if ((record.region === "vilnius-east-south" && record.region_label !== "Vilnius, rytų ir pietų Lietuva") ||
-        (record.region === "kaunas-north" && record.region_label !== "Kaunas ir šiaurės Lietuva") ||
-        (record.region === "klaipeda-panevezys-west-central" && record.region_label !== "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva") ||
-        !["vilnius-east-south", "kaunas-north", "klaipeda-panevezys-west-central"].includes(record.region)) {
+    if (supportedRegions[record.region] !== record.region_label) {
       throw new Error("manufacturer city/locality backfill has an unsupported region grouping for " + record.company_code)
     }
   }
@@ -52,8 +57,8 @@ migrate((app) => {
     record.location,
     record.region,
     record.region_label,
-    record.source_url,
-    record.checked_date,
+    record.public_details_source_urls[0],
+    record.source_collection_date,
   ].map(sqlValue).join(", ") + ")").join(", ")
   const sourceValue = (field) => "(SELECT `" + field + "` FROM `source` WHERE `source`.`company_code` = `manufacturers`.`company_code`)"
   const sourceUrl = sourceValue("source_url")
@@ -66,18 +71,22 @@ migrate((app) => {
       "ELSE json_array(json_extract(" + existingSources + ", '$'), " + sourceUrl + ") END " +
     "ELSE json_array(" + sourceUrl + ") END"
 
-  // A single bounded statement is atomic and only matches the known placeholder. It
-  // neither creates nor removes records, leaves stronger cities untouched, and appends
-  // this concrete source URL only when it is not already present.
+  // Region grouping is deterministic from the verified Savivaldybė: the
+  // Vilnius/Alytus/Marijampolė/Utena east-south municipalities use the Vilnius
+  // label; Kaunas/Šiauliai/Telšiai/Tauragė municipalities use Kaunas/north;
+  // Klaipėda and Panevėžys (including Kėdainiai central) use west/central.
+  // The single bounded statement is atomic and only matches the current national
+  // placeholder. It cannot create/delete rows, preserves already-specific cities,
+  // and appends (rather than replaces) the concrete official locality source.
   app.db().newQuery(
-    "WITH `source` (`company_code`, `city`, `location`, `region`, `region_label`, `source_url`, `checked_date`) AS (VALUES " + values + ") " +
+    "WITH `source` (`company_code`, `city`, `location`, `region`, `region_label`, `source_url`, `source_collection_date`) AS (VALUES " + values + ") " +
     "UPDATE `manufacturers` SET " +
       "`city` = " + sourceValue("city") + ", " +
       "`location` = " + sourceValue("location") + ", " +
       "`region` = " + sourceValue("region") + ", " +
       "`region_label` = " + sourceValue("region_label") + ", " +
       "`public_details_source_urls` = " + mergedSources + ", " +
-      "`source_collection_date` = " + sourceValue("checked_date") + " " +
+      "`source_collection_date` = " + sourceValue("source_collection_date") + " " +
     "WHERE `city` = 'Lietuva' AND `company_code` IN (SELECT `company_code` FROM `source`)"
   ).execute()
 }, (app) => {

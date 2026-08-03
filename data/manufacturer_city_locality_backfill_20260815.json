@@ -1,5 +1,19 @@
 [
   {
+    "company_code": "123645712",
+    "slug": "uzdaroji-akcine-bendrove-zbiga-123645712",
+    "legal_name": "Uždaroji akcinė bendrovė \"ZBIGA\"",
+    "city": "Riešė",
+    "locality": "Riešė",
+    "location": "Riešė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/3abe4440-0301-4f48-b2c3-f8e20957bded"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
     "company_code": "123915741",
     "slug": "uzdaroji-akcine-bendrove-balresta-123915741",
     "legal_name": "Uždaroji akcinė bendrovė \"BALRESTA\"",
@@ -8,9 +22,10 @@
     "location": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "source_url": "https://rekvizitai.vz.lt/en/company/balresta/",
-    "source_collection_date": "2026-08-15",
-    "checked_date": "2026-08-15"
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
   },
   {
     "company_code": "124264828",
@@ -21,9 +36,10 @@
     "location": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "source_url": "https://rekvizitai.vz.lt/en/company/fenolita/",
-    "source_collection_date": "2026-08-15",
-    "checked_date": "2026-08-15"
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
   },
   {
     "company_code": "125510364",
@@ -34,9 +50,66 @@
     "location": "Vilnius",
     "region": "vilnius-east-south",
     "region_label": "Vilnius, rytų ir pietų Lietuva",
-    "source_url": "https://rekvizitai.vz.lt/en/company/anjaras/",
-    "source_collection_date": "2026-08-15",
-    "checked_date": "2026-08-15"
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "125751995",
+    "slug": "uab-julsata-125751995",
+    "legal_name": "UAB \"JULSATA\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "125773881",
+    "slug": "sigito-baciansko-individuali-imone-125773881",
+    "legal_name": "Sigito Baciansko individuali įmonė",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "126273181",
+    "slug": "uab-baldu-sistemos-126273181",
+    "legal_name": "UAB \"Baldų sistemos\"",
+    "city": "Nemėžis",
+    "locality": "Nemėžis",
+    "location": "Nemėžis",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/83c32051-1500-47d8-85b8-0098e152c794"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "133386126",
+    "slug": "uab-freda-133386126",
+    "legal_name": "UAB \"Freda\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
   },
   {
     "company_code": "133663349",
@@ -47,21 +120,1661 @@
     "location": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "source_url": "https://rekvizitai.vz.lt/en/company/litvaista/",
-    "source_collection_date": "2026-08-15",
-    "checked_date": "2026-08-15"
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
   },
   {
     "company_code": "135053451",
     "slug": "uab-timo-verslas-135053451",
     "legal_name": "UAB \"Timo verslas\"",
-    "city": "Lipliūnų k.",
-    "locality": "Lipliūnų k.",
-    "location": "Lipliūnų k.",
+    "city": "Lipliūnai",
+    "locality": "Lipliūnai",
+    "location": "Lipliūnai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58ff770c-cd40-4cd3-aa7b-6cfd23b5d980"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "135871110",
+    "slug": "uab-lukandra-135871110",
+    "legal_name": "UAB \"Lukandra\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
     "region": "kaunas-north",
     "region_label": "Kaunas ir šiaurės Lietuva",
-    "source_url": "https://rekvizitai.vz.lt/en/company/uab_timo_verslas/",
-    "source_collection_date": "2026-08-15",
-    "checked_date": "2026-08-15"
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "148051482",
+    "slug": "uzdaroji-akcine-bendrove-medrika-148051482",
+    "legal_name": "Uždaroji akcinė bendrovė \"MEDRIKA\"",
+    "city": "Panevėžys",
+    "locality": "Panevėžys",
+    "location": "Panevėžys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9a5836b5-825f-472b-9223-bf095ee30b97"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "157689644",
+    "slug": "uab-joniskio-baldai-157689644",
+    "legal_name": "UAB \"Joniškio baldai\"",
+    "city": "Pavirčiuvė",
+    "locality": "Pavirčiuvė",
+    "location": "Pavirčiuvė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/6ed9cb33-1d83-404d-a56b-11cba9a6b1b0"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "164741529",
+    "slug": "uab-agla-164741529",
+    "legal_name": "UAB \"AGLA\"",
+    "city": "Vodonys",
+    "locality": "Vodonys",
+    "location": "Vodonys",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/e2d5722d-a0cf-4bce-be13-f6b2cbbf6f9c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "171703525",
+    "slug": "uab-tigna-171703525",
+    "legal_name": "UAB \"Tigna\"",
+    "city": "Plungė",
+    "locality": "Plungė",
+    "location": "Plungė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9c609953-2e4c-46cf-90d1-40ab676e6291"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "179463167",
+    "slug": "ii-a-gaizausko-imone-miltauja-179463167",
+    "legal_name": "IĮ A. Gaižausko imonė \"Miltauja\"",
+    "city": "Taurai",
+    "locality": "Taurai",
+    "location": "Taurai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/bc3289be-f582-417b-ad4b-4d6db10fc2dd"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "179749033",
+    "slug": "egidijaus-kino-imone-179749033",
+    "legal_name": "Egidijaus Kino įmonė",
+    "city": "Tauragė",
+    "locality": "Tauragė",
+    "location": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/431396ae-8163-46d2-9bdf-e228d4efddfa"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "224476650",
+    "slug": "uzdaroji-akcine-bendrove-riardzis-224476650",
+    "legal_name": "Uždaroji akcinė bendrovė \"RIARDŽIS\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "234003980",
+    "slug": "uzdaroji-akcine-bendrove-saloza-234003980",
+    "legal_name": "Uždaroji akcinė bendrovė \"Saloža\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "251237590",
+    "slug": "uzdaroji-akcine-bendrove-marijampoles-komprojektas-251237590",
+    "legal_name": "Uždaroji akcinė bendrovė \"Marijampolės komprojektas\"",
+    "city": "Karmėlava",
+    "locality": "Karmėlava",
+    "location": "Karmėlava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/4e3f67cd-9e28-4bce-a93d-f1b11fab6779"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "255973180",
+    "slug": "uab-vagensas-255973180",
+    "legal_name": "UAB \"VAGENSAS\"",
+    "city": "Visaginas",
+    "locality": "Visaginas",
+    "location": "Visaginas",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f8f8c4c8-ad7b-47e5-b786-e45a582163dc"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300003654",
+    "slug": "uab-ego-verus-300003654",
+    "legal_name": "UAB \"Ego verus\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300050141",
+    "slug": "uab-bhk-lietuva-300050141",
+    "legal_name": "UAB \"BHK Lietuva\"",
+    "city": "Ignalina",
+    "locality": "Ignalina",
+    "location": "Ignalina",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/93292ad2-64bb-48e0-92c0-135591d773fa"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300085719",
+    "slug": "uab-cps-engineering-300085719",
+    "legal_name": "UAB \"CPS Engineering\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300098524",
+    "slug": "vilmers-uab-300098524",
+    "legal_name": "Vilmers UAB",
+    "city": "Šiauliai",
+    "locality": "Šiauliai",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300104258",
+    "slug": "uab-sk-design-300104258",
+    "legal_name": "UAB \"SK Design\"",
+    "city": "Augustavas",
+    "locality": "Augustavas",
+    "location": "Augustavas",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/fb784ca6-1889-4a2f-a24c-890a8e0e1120"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300132909",
+    "slug": "uab-ctt-300132909",
+    "legal_name": "UAB \"CTT\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300591314",
+    "slug": "uab-narbutas-international-300591314",
+    "legal_name": "UAB \"Narbutas International\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300646141",
+    "slug": "ii-arominda-300646141",
+    "legal_name": "IĮ \"Arominda\"",
+    "city": "Kazlų Rūda",
+    "locality": "Kazlų Rūda",
+    "location": "Kazlų Rūda",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/02c47f40-8032-4661-a73d-153552dbcb58"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300647357",
+    "slug": "uab-forneris-300647357",
+    "legal_name": "UAB \"Forneris\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300657700",
+    "slug": "uab-ar-studio-300657700",
+    "legal_name": "UAB \"AR - STUDIO\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300832459",
+    "slug": "uab-inovacijos-ir-sprendimai-300832459",
+    "legal_name": "UAB \"Inovacijos ir sprendimai\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301089656",
+    "slug": "uab-esd-baldai-301089656",
+    "legal_name": "UAB \"ESD baldai\"",
+    "city": "Kaišiadorys",
+    "locality": "Kaišiadorys",
+    "location": "Kaišiadorys",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9106cb72-2142-4882-a44e-333c184db11e"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301537376",
+    "slug": "uab-minora-301537376",
+    "legal_name": "UAB \"Minora\"",
+    "city": "Šiauliai",
+    "locality": "Šiauliai",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301696898",
+    "slug": "uab-sonavita-301696898",
+    "legal_name": "UAB \"SONAVITA\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301785585",
+    "slug": "uab-s2s-301785585",
+    "legal_name": "UAB \"S2S\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301887572",
+    "slug": "uab-kitaip-301887572",
+    "legal_name": "UAB \"KITAIP\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302327402",
+    "slug": "uzdaroji-akcine-bendrove-mantisa-302327402",
+    "legal_name": "Uždaroji akcinė bendrovė \"MANTISA\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302430459",
+    "slug": "uab-smv-projektai-302430459",
+    "legal_name": "UAB \"SMV projektai\"",
+    "city": "Laibgaliai",
+    "locality": "Laibgaliai",
+    "location": "Laibgaliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/4665db2a-001a-465c-9a8f-87a274c8059c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302453276",
+    "slug": "uab-real-vision-302453276",
+    "legal_name": "UAB \"Real Vision\"",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302469437",
+    "slug": "uab-korsara-302469437",
+    "legal_name": "UAB \"Korsara\"",
+    "city": "Kretingalė",
+    "locality": "Kretingalė",
+    "location": "Kretingalė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7dbe0b72-0678-4455-815b-1b4a2ee487d4"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302495535",
+    "slug": "ideju-aleja-uab-302495535",
+    "legal_name": "Idėjų alėja, UAB",
+    "city": "Šiauliai",
+    "locality": "Šiauliai",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302526443",
+    "slug": "uab-eltino-302526443",
+    "legal_name": "UAB \"ELTINO\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302532624",
+    "slug": "uab-ofus-302532624",
+    "legal_name": "UAB \"Ofus\"",
+    "city": "Šiauliai",
+    "locality": "Šiauliai",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302539095",
+    "slug": "uab-lacio-302539095",
+    "legal_name": "UAB \"Lacio\"",
+    "city": "Jonava",
+    "locality": "Jonava",
+    "location": "Jonava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ee291b6f-3524-4fa1-96c1-1d73950cdb0b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302542006",
+    "slug": "uab-kensa-302542006",
+    "legal_name": "UAB \"Kensa\"",
+    "city": "Šiauliai",
+    "locality": "Šiauliai",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302556080",
+    "slug": "uab-mirandeka-302556080",
+    "legal_name": "UAB \"Mirandeka\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302563491",
+    "slug": "uab-laisves-baldai-302563491",
+    "legal_name": "UAB \"Laisvės baldai\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302568620",
+    "slug": "uab-geri-amatai-302568620",
+    "legal_name": "UAB \"Geri amatai\"",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302678383",
+    "slug": "uab-vilgma-gi-302678383",
+    "legal_name": "UAB VILGMA GI",
+    "city": "Šiauduva",
+    "locality": "Šiauduva",
+    "location": "Šiauduva",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f71cd4af-d473-4bc8-a8f7-2c135c01bded"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302680509",
+    "slug": "uab-ms-baldai-302680509",
+    "legal_name": "UAB \"MS baldai\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302743411",
+    "slug": "uab-robenas-302743411",
+    "legal_name": "UAB \"Robenas\"",
+    "city": "Šiauliai",
+    "locality": "Šiauliai",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302761402",
+    "slug": "uab-stilforma-302761402",
+    "legal_name": "UAB \"Stilforma\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303022154",
+    "slug": "uab-korela-303022154",
+    "legal_name": "UAB KORELA",
+    "city": "Tyruliai",
+    "locality": "Tyruliai",
+    "location": "Tyruliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/8f3601da-4356-4fa8-9aaa-a1e3aba105c4"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303056929",
+    "slug": "mb-stilo-baldai-303056929",
+    "legal_name": "MB \"Stilo baldai\"",
+    "city": "Prienai",
+    "locality": "Prienai",
+    "location": "Prienai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/291a93c7-5b5b-46aa-be1f-222388cf2636"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303126904",
+    "slug": "uab-artus-lt-303126904",
+    "legal_name": "UAB \"Artus LT\"",
+    "city": "Bakšiai",
+    "locality": "Bakšiai",
+    "location": "Bakšiai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/eb0476da-ba37-4956-b147-faf7f2b09339"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303192562",
+    "slug": "uab-magnum-reditus-303192562",
+    "legal_name": "UAB \"Magnum reditus\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303242378",
+    "slug": "uab-rigresta-303242378",
+    "legal_name": "UAB \"Rigresta\"",
+    "city": "Kyviškės",
+    "locality": "Kyviškės",
+    "location": "Kyviškės",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/d897caa9-fdac-42ab-b78b-2bb4db0b8d6a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303245214",
+    "slug": "uab-nero-baldai-303245214",
+    "legal_name": "UAB \"Nero baldai\"",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303301150",
+    "slug": "uab-milpra-303301150",
+    "legal_name": "UAB \"Milpra\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303927859",
+    "slug": "uab-baldu-svaja-303927859",
+    "legal_name": "UAB \"Baldų svaja\"",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304048440",
+    "slug": "uab-baldu-tonas-304048440",
+    "legal_name": "UAB \"Baldų tonas\"",
+    "city": "Didžiosios Kabiškės",
+    "locality": "Didžiosios Kabiškės",
+    "location": "Didžiosios Kabiškės",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f2562716-7c65-471e-b93d-5bc35c4703e0"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304098482",
+    "slug": "mb-baldu-gaminiai-304098482",
+    "legal_name": "MB \"Baldų gaminiai\"",
+    "city": "Marijampolė",
+    "locality": "Marijampolė",
+    "location": "Marijampolė",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/e44e30fc-52be-4cf1-9010-0a9d07862dbc"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304103246",
+    "slug": "uab-dominyko-projektai-304103246",
+    "legal_name": "UAB \"Dominyko projektai\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304106769",
+    "slug": "uab-kadeira-304106769",
+    "legal_name": "UAB \"Kadeira\"",
+    "city": "Šiauliai",
+    "locality": "Šiauliai",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304171090",
+    "slug": "uab-arnitana-304171090",
+    "legal_name": "UAB \"Arnitana\"",
+    "city": "Gailiūnai",
+    "locality": "Gailiūnai",
+    "location": "Gailiūnai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7fcc067a-2f75-4bb3-9a61-3a066b8490d6"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304186306",
+    "slug": "uab-alneka-304186306",
+    "legal_name": "UAB \"Alneka\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304222065",
+    "slug": "uab-piluka-304222065",
+    "legal_name": "UAB \"Piluka\"",
+    "city": "Pigašiai",
+    "locality": "Pigašiai",
+    "location": "Pigašiai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/edd2d858-3dbf-471a-b924-b9d1a5caa83a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304231694",
+    "slug": "uab-baltasis-bizonas-304231694",
+    "legal_name": "UAB \"Baltasis bizonas\"",
+    "city": "Utena",
+    "locality": "Utena",
+    "location": "Utena",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/abc51f64-c334-4644-a0ca-56ba963727ae"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304291360",
+    "slug": "mb-interius-304291360",
+    "legal_name": "MB \"Interius\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304395996",
+    "slug": "uab-algideja-304395996",
+    "legal_name": "UAB \"Algidėja\"",
+    "city": "Šatijai",
+    "locality": "Šatijai",
+    "location": "Šatijai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/827c6d9b-b6dc-497d-a473-8f87998f4202"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304418854",
+    "slug": "uab-skaisteriai-nt-304418854",
+    "legal_name": "UAB \"Skaisteriai NT\"",
+    "city": "Skaisteriai",
+    "locality": "Skaisteriai",
+    "location": "Skaisteriai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/0ec8a05f-1b1e-4e13-9105-6e8736263437"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304459872",
+    "slug": "uab-domingus-304459872",
+    "legal_name": "UAB \"Domingus\"",
+    "city": "Miriniškiai",
+    "locality": "Miriniškiai",
+    "location": "Miriniškiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/d249d60f-d315-4a4f-893f-a0c4cbb790ce"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304521861",
+    "slug": "mb-aistis-ir-rokas-304521861",
+    "legal_name": "MB \"Aistis ir Rokas\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304835958",
+    "slug": "mb-pintora-304835958",
+    "legal_name": "MB \"Pintora\"",
+    "city": "Plungė",
+    "locality": "Plungė",
+    "location": "Plungė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9c609953-2e4c-46cf-90d1-40ab676e6291"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304840040",
+    "slug": "ii-vysniu-baldai-304840040",
+    "legal_name": "IĮ \"Vyšnių baldai\"",
+    "city": "Senkiškiai",
+    "locality": "Senkiškiai",
+    "location": "Senkiškiai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/c93596f4-47a5-4d24-ad61-2e90878c8142"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304885612",
+    "slug": "uab-evprojektas-304885612",
+    "legal_name": "UAB \"Evprojektas\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304887143",
+    "slug": "uab-aikstis-304887143",
+    "legal_name": "UAB \"Aikštis\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304940471",
+    "slug": "uab-oaky-oak-304940471",
+    "legal_name": "UAB OAKY OAK",
+    "city": "Stančiai",
+    "locality": "Stančiai",
+    "location": "Stančiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2dfa4c6a-2ec2-4dca-8309-3642374c05b7"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304945568",
+    "slug": "uab-vintori-304945568",
+    "legal_name": "UAB Vintori",
+    "city": "Šiauliai",
+    "locality": "Šiauliai",
+    "location": "Šiauliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304960125",
+    "slug": "mb-versus-interior-304960125",
+    "legal_name": "MB \"Versus interior\"",
+    "city": "Jauniūnai",
+    "locality": "Jauniūnai",
+    "location": "Jauniūnai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/808ce4e1-4722-454f-b4a1-b90e306524b7"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304978027",
+    "slug": "uab-lead-time-zero-304978027",
+    "legal_name": "UAB LEAD TIME ZERO",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304985961",
+    "slug": "uab-dimantra-304985961",
+    "legal_name": "UAB \"Dimantra\"",
+    "city": "Prūsaliai",
+    "locality": "Prūsaliai",
+    "location": "Prūsaliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/02ae58af-9bce-4467-8f81-25b082cfbd4f"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304990410",
+    "slug": "uab-sprendimai-baldininkams-304990410",
+    "legal_name": "UAB \"Sprendimai baldininkams\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305201921",
+    "slug": "uab-emona-lt-305201921",
+    "legal_name": "UAB \"Emona LT\"",
+    "city": "Kuliai",
+    "locality": "Kuliai",
+    "location": "Kuliai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/854e7f3e-c4f5-48fe-a393-ab017e7a4f07"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305217644",
+    "slug": "uab-ternis-305217644",
+    "legal_name": "UAB \"Ternis\"",
+    "city": "Ginėnai",
+    "locality": "Ginėnai",
+    "location": "Ginėnai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/e186b686-670b-4176-ba2a-6c745899aae7"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305236609",
+    "slug": "mb-milijonas-kampu-305236609",
+    "legal_name": "MB \"Milijonas kampų\"",
+    "city": "Alytus",
+    "locality": "Alytus",
+    "location": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/21bbe639-b485-490c-8ab4-e58494826b8c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305390728",
+    "slug": "mb-labanoris-305390728",
+    "legal_name": "MB \"Labanoris\"",
+    "city": "Pumpučiai",
+    "locality": "Pumpučiai",
+    "location": "Pumpučiai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9bb6fff1-8ec9-47b1-93b1-2f6f27bd5dc3"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305393037",
+    "slug": "mb-alfo-statybos-305393037",
+    "legal_name": "MB \"Alfo statybos\"",
+    "city": "Aunuvėnai",
+    "locality": "Aunuvėnai",
+    "location": "Aunuvėnai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/039b004d-53b4-4635-a9cb-1b121c129bc8"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305568967",
+    "slug": "mb-lurenos-baldai-305568967",
+    "legal_name": "MB \"Lurenos baldai\"",
+    "city": "Plikiai",
+    "locality": "Plikiai",
+    "location": "Plikiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/0af923dd-067a-4863-b25d-287fb9ef808e"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305679775",
+    "slug": "mb-ba-dirbtuves-305679775",
+    "legal_name": "MB \"BA dirbtuvės\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305679946",
+    "slug": "uab-kzk-studija-305679946",
+    "legal_name": "UAB Kzk studija",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305684562",
+    "slug": "mazoji-bendrija-valdo-projektai-305684562",
+    "legal_name": "Mažoji bendrija Valdo projektai",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305699614",
+    "slug": "uab-furnipro-305699614",
+    "legal_name": "UAB \"Furnipro\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305771184",
+    "slug": "uab-rupeja-305771184",
+    "legal_name": "UAB \"Rupėja\"",
+    "city": "Laukstėnai",
+    "locality": "Laukstėnai",
+    "location": "Laukstėnai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/45f1aea7-4027-4cb0-a9c5-e9296d05c391"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305778798",
+    "slug": "uab-arredo-deko-projektai-305778798",
+    "legal_name": "UAB \"Arredo deko projektai\"",
+    "city": "Padrečiai",
+    "locality": "Padrečiai",
+    "location": "Padrečiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/cce7333d-cc4f-4a1e-a9a3-9511283c99b1"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305831539",
+    "slug": "mazoji-bendrija-obrimus-305831539",
+    "legal_name": "Mažoji bendrija \"Obrimus\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305844611",
+    "slug": "mb-tovera-305844611",
+    "legal_name": "MB Tovera",
+    "city": "Ringaudai",
+    "locality": "Ringaudai",
+    "location": "Ringaudai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/be3da577-5ddb-4213-9d9b-c197ac916225"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305913872",
+    "slug": "uab-destructa-305913872",
+    "legal_name": "UAB \"Destructa\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305939301",
+    "slug": "mb-furnidedes-305939301",
+    "legal_name": "MB Furnidėdės",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305961874",
+    "slug": "furniture-trade-lt-mb-305961874",
+    "legal_name": "Furniture Trade LT MB",
+    "city": "Miklusėnai",
+    "locality": "Miklusėnai",
+    "location": "Miklusėnai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/43fd6298-aa13-4083-b8a2-6b801fd393a1"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305981318",
+    "slug": "artrum-mb-305981318",
+    "legal_name": "Artrum, MB",
+    "city": "Rumšiškės",
+    "locality": "Rumšiškės",
+    "location": "Rumšiškės",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7e73708d-b0d6-4e25-b901-dc7b0b28d14d"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305991312",
+    "slug": "karaliaus-baldai-uab-305991312",
+    "legal_name": "Karaliaus baldai, UAB",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306069853",
+    "slug": "mb-re-baldai-306069853",
+    "legal_name": "MB \"Re baldai\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306083828",
+    "slug": "uab-gm-art-306083828",
+    "legal_name": "UAB \"GM ART\"",
+    "city": "Šlapšilė",
+    "locality": "Šlapšilė",
+    "location": "Šlapšilė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/0e938e28-78ae-4ea5-a71c-70c47ea37896"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306125063",
+    "slug": "mb-45-kampai-306125063",
+    "legal_name": "MB \"45 kampai\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306167137",
+    "slug": "mb-esteto-baldai-306167137",
+    "legal_name": "MB Esteto baldai",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306183629",
+    "slug": "mb-blanko-baldai-306183629",
+    "legal_name": "MB Blanko baldai",
+    "city": "Tauragė",
+    "locality": "Tauragė",
+    "location": "Tauragė",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/431396ae-8163-46d2-9bdf-e228d4efddfa"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306198588",
+    "slug": "uab-metalo-pulsas-306198588",
+    "legal_name": "UAB Metalo pulsas",
+    "city": "Grauminė",
+    "locality": "Grauminė",
+    "location": "Grauminė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/42c53065-93ab-4e35-98e8-72eabc3c1d4f"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306236409",
+    "slug": "mb-virtnora-306236409",
+    "legal_name": "MB \"Virtnora\"",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306323928",
+    "slug": "mb-baldaiska-306323928",
+    "legal_name": "MB Baldaiska",
+    "city": "Šilutė",
+    "locality": "Šilutė",
+    "location": "Šilutė",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7466bde0-9db4-431c-a248-2b2276b3422b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306365293",
+    "slug": "mb-armiba-306365293",
+    "legal_name": "MB \"Armiba\"",
+    "city": "Dainos",
+    "locality": "Dainos",
+    "location": "Dainos",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/3421039b-f1f2-4e7f-ace9-e044b9d016d1"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306391498",
+    "slug": "mb-space-idea-property-306391498",
+    "legal_name": "MB Space idea property",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306635924",
+    "slug": "mb-grg-baldai-306635924",
+    "legal_name": "MB Grg baldai",
+    "city": "Gargždai",
+    "locality": "Gargždai",
+    "location": "Gargždai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/8fb3e00c-b30a-4535-ae9d-8455257a748c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306653648",
+    "slug": "mb-abc-baldai-306653648",
+    "legal_name": "MB Abc baldai",
+    "city": "Gilūšis",
+    "locality": "Gilūšis",
+    "location": "Gilūšis",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/1505cabe-4657-494f-afb6-da40849ad5f6"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306708016",
+    "slug": "mb-la-projects-306708016",
+    "legal_name": "MB \"LA projects\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306712160",
+    "slug": "mb-baldakas-306712160",
+    "legal_name": "MB \"Baldakas\"",
+    "city": "Vainotiškiai",
+    "locality": "Vainotiškiai",
+    "location": "Vainotiškiai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ad3a191b-123b-4e77-b03a-e656298d4833"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306723872",
+    "slug": "mb-borera-306723872",
+    "legal_name": "MB Borera",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306879647",
+    "slug": "mb-tryse-baldai-306879647",
+    "legal_name": "MB Tryse baldai",
+    "city": "Ramučiai",
+    "locality": "Ramučiai",
+    "location": "Ramučiai",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/921b09ad-7a8c-4c81-b48d-0958472863cc"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306997147",
+    "slug": "baldasta-mb-306997147",
+    "legal_name": "Baldasta, MB",
+    "city": "Alytus",
+    "locality": "Alytus",
+    "location": "Alytus",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/21bbe639-b485-490c-8ab4-e58494826b8c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307020485",
+    "slug": "mb-jurio-baldai-307020485",
+    "legal_name": "MB \"Jurio baldai\"",
+    "city": "Vileikiai",
+    "locality": "Vileikiai",
+    "location": "Vileikiai",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/cc4db439-639a-43bd-b405-8156c88e7d98"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307021377",
+    "slug": "mazoji-bendrija-baldukai-307021377",
+    "legal_name": "Mažoji bendrija Baldukai",
+    "city": "Jakai",
+    "locality": "Jakai",
+    "location": "Jakai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/03bb0e68-8928-4f31-9f19-fdbc0baa567c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307059068",
+    "slug": "mazoji-bendrija-dili-baldai-307059068",
+    "legal_name": "Mažoji bendrija Dili baldai",
+    "city": "Gargždai",
+    "locality": "Gargždai",
+    "location": "Gargždai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/8fb3e00c-b30a-4535-ae9d-8455257a748c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307086574",
+    "slug": "uab-visokie-baldai-307086574",
+    "legal_name": "UAB Visokie baldai",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307093825",
+    "slug": "mb-tabalda-307093825",
+    "legal_name": "MB \"Tabalda\"",
+    "city": "Trušeliai",
+    "locality": "Trušeliai",
+    "location": "Trušeliai",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/c8eefa8c-1787-4618-a740-23986bf16d0c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307106831",
+    "slug": "mb-tvm-furniture-307106831",
+    "legal_name": "MB TVM Furniture",
+    "city": "Garliava",
+    "locality": "Garliava",
+    "location": "Garliava",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/248200e2-bdf4-414b-877d-3a151265eb80"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307296512",
+    "slug": "mb-kanteka-307296512",
+    "legal_name": "MB Kanteka",
+    "city": "Klaipėda",
+    "locality": "Klaipėda",
+    "location": "Klaipėda",
+    "region": "klaipeda-panevezys-west-central",
+    "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab"
+    ],
+    "source_collection_date": "2026-08-15"
   }
 ]
