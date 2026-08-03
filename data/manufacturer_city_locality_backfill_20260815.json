@@ -1,0 +1,67 @@
+[
+  {
+    "company_code": "123915741",
+    "slug": "uzdaroji-akcine-bendrove-balresta-123915741",
+    "legal_name": "Uždaroji akcinė bendrovė \"BALRESTA\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "source_url": "https://rekvizitai.vz.lt/en/company/balresta/",
+    "source_collection_date": "2026-08-15",
+    "checked_date": "2026-08-15"
+  },
+  {
+    "company_code": "124264828",
+    "slug": "uab-fenolita-124264828",
+    "legal_name": "Uždaroji akcinė bendrovė \"FENOLITA\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "source_url": "https://rekvizitai.vz.lt/en/company/fenolita/",
+    "source_collection_date": "2026-08-15",
+    "checked_date": "2026-08-15"
+  },
+  {
+    "company_code": "125510364",
+    "slug": "uab-anjaras-125510364",
+    "legal_name": "UAB \"ANJARAS\"",
+    "city": "Vilnius",
+    "locality": "Vilnius",
+    "location": "Vilnius",
+    "region": "vilnius-east-south",
+    "region_label": "Vilnius, rytų ir pietų Lietuva",
+    "source_url": "https://rekvizitai.vz.lt/en/company/anjaras/",
+    "source_collection_date": "2026-08-15",
+    "checked_date": "2026-08-15"
+  },
+  {
+    "company_code": "133663349",
+    "slug": "uzdaroji-akcine-bendrove-litvaista-133663349",
+    "legal_name": "Uždaroji akcinė bendrovė \"Litvaista\"",
+    "city": "Kaunas",
+    "locality": "Kaunas",
+    "location": "Kaunas",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "source_url": "https://rekvizitai.vz.lt/en/company/litvaista/",
+    "source_collection_date": "2026-08-15",
+    "checked_date": "2026-08-15"
+  },
+  {
+    "company_code": "135053451",
+    "slug": "uab-timo-verslas-135053451",
+    "legal_name": "UAB \"Timo verslas\"",
+    "city": "Lipliūnų k.",
+    "locality": "Lipliūnų k.",
+    "location": "Lipliūnų k.",
+    "region": "kaunas-north",
+    "region_label": "Kaunas ir šiaurės Lietuva",
+    "source_url": "https://rekvizitai.vz.lt/en/company/uab_timo_verslas/",
+    "source_collection_date": "2026-08-15",
+    "checked_date": "2026-08-15"
+  }
+]
