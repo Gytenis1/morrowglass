@@ -39,11 +39,15 @@ migrate((app) => {
   }
 
   const collection = app.findCollectionByNameOrId("manufacturers")
-  for (const fieldName of ["company_code", "city", "location", "region", "region_label", "source_collection_date"]) {
+  for (const fieldName of ["company_code", "city", "location", "region_label", "source_collection_date"]) {
     const field = collection.fields.getByName(fieldName)
     if (!field || field.type() !== "text") {
       throw new Error("manufacturers." + fieldName + " must be a text field")
     }
+  }
+  const region = collection.fields.getByName("region")
+  if (!region || region.type() !== "select") {
+    throw new Error("manufacturers.region must be a select field")
   }
   const provenance = collection.fields.getByName("public_details_source_urls")
   if (!provenance || provenance.type() !== "json") {
