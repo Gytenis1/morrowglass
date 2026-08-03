@@ -1,0 +1,1575 @@
+[
+  {
+    "company_code": "123645712",
+    "slug": "uzdaroji-akcine-bendrove-zbiga-123645712",
+    "legal_name": "Uždaroji akcinė bendrovė \"ZBIGA\"",
+    "street_address": "Beržų g. 2B",
+    "postcode": "LT-14266",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8ec5a590-1894-49f5-9d29-e4f49d0655c7"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "123915741",
+    "slug": "uzdaroji-akcine-bendrove-balresta-123915741",
+    "legal_name": "Uždaroji akcinė bendrovė \"BALRESTA\"",
+    "street_address": "Vytenio g. 50",
+    "postcode": "LT-03229",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cca52401-fd89-4dda-ab9c-8672e73b52cb"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "124264828",
+    "slug": "uab-fenolita-124264828",
+    "legal_name": "Uždaroji akcinė bendrovė \"FENOLITA\"",
+    "street_address": "Jono Puzino g. 21",
+    "postcode": "LT-08300",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/fenolita/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "125510364",
+    "slug": "uab-anjaras-125510364",
+    "legal_name": "UAB \"ANJARAS\"",
+    "street_address": "Žirnių g. 10",
+    "postcode": "LT-02120",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/dce68bac-4e15-4b2f-9572-62879477b9e4"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "125751995",
+    "slug": "uab-julsata-125751995",
+    "legal_name": "UAB \"JULSATA\"",
+    "street_address": "Perkūnkiemio g. 13",
+    "postcode": "LT-12114",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/j_tamasausko_firma_julsata/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "125773881",
+    "slug": "sigito-baciansko-individuali-imone-125773881",
+    "legal_name": "Individuali įmonė",
+    "street_address": "Gilužio g. 6",
+    "postcode": "LT-06279",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/sigito_baciansko_ii/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "126273181",
+    "slug": "uab-baldu-sistemos-126273181",
+    "legal_name": "UAB \"Baldų sistemos\"",
+    "street_address": "Geležinkelio g. 2A",
+    "postcode": "LT-13263",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/883dfe14-b6fd-4942-ad14-90d2cde5417a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "133386126",
+    "slug": "uab-freda-133386126",
+    "legal_name": "UAB \"Freda\"",
+    "street_address": "Piliakalnio g. 3",
+    "postcode": "LT-46224",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/04fceef6-c85d-47d7-9e83-f97127375c40"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "133663349",
+    "slug": "uzdaroji-akcine-bendrove-litvaista-133663349",
+    "legal_name": "Uždaroji akcinė bendrovė \"Litvaista\"",
+    "street_address": "Taikos pr. 104A",
+    "postcode": "LT-51197",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f9ff65fa-7a53-444c-9d7c-a252e6d37146"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "135053451",
+    "slug": "uab-timo-verslas-135053451",
+    "legal_name": "UAB \"Timo verslas\"",
+    "street_address": "Tuopų g. 1B",
+    "postcode": "LT-57102",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f1f42667-a0b0-46bb-9ba6-c441651e498a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "135499959",
+    "slug": "uab-aztrekas-135499959",
+    "legal_name": "UAB \"Aztrekas\"",
+    "street_address": "V. Krėvės pr. 53",
+    "postcode": "LT-50358",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/aztrekas/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "135871110",
+    "slug": "uab-lukandra-135871110",
+    "legal_name": "UAB \"Lukandra\"",
+    "street_address": "Neries krant. 16",
+    "postcode": "LT-48402",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d09fa89d-2c34-4375-9fb8-8040d9f30833"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "144333114",
+    "slug": "arta",
+    "legal_name": "Individuali įmonė",
+    "street_address": "J. Basanavičiaus g. 129C",
+    "postcode": "LT-76129",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "145073477",
+    "slug": "almyros-baldai",
+    "legal_name": "Individuali įmonė",
+    "street_address": "Dainų g. 46A",
+    "postcode": "LT-78284",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/a_pakarnio_ii/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "148051482",
+    "slug": "uzdaroji-akcine-bendrove-medrika-148051482",
+    "legal_name": "Uždaroji akcinė bendrovė \"MEDRIKA\"",
+    "street_address": "Katkų g. 89",
+    "postcode": "LT-35295",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1817961d-8016-4351-8adc-ee2e1ea91daf"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "151204721",
+    "slug": "suduvos-baldai",
+    "legal_name": "Uždaroji akcinė bendrovė \"Morita\"",
+    "street_address": "Gedimino g. 96",
+    "postcode": "LT-68118",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ff287656-828e-4826-8b21-d6ac37507c59"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "157689644",
+    "slug": "uab-joniskio-baldai-157689644",
+    "legal_name": "UAB \"Joniškio baldai\"",
+    "street_address": "Liepų g. 25B",
+    "postcode": "LT-84425",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_joniskio_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "164741529",
+    "slug": "uab-agla-164741529",
+    "legal_name": "UAB \"AGLA\"",
+    "street_address": "Vodonių K. 2",
+    "postcode": "LT-40320",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/agla/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "171703525",
+    "slug": "uab-tigna-171703525",
+    "legal_name": "UAB \"Tigna\"",
+    "street_address": "Birutės g. 43A",
+    "postcode": "LT-90170",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/feda7c84-2ff1-4278-9f7e-49e4cf81aaac"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "179463167",
+    "slug": "ii-a-gaizausko-imone-miltauja-179463167",
+    "legal_name": "Individuali įmonė",
+    "street_address": "Verslininkų g. 33",
+    "postcode": "LT-72116",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/99234df6-ef34-4dd3-94f8-cb1fe9124a2b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "179749033",
+    "slug": "egidijaus-kino-imone-179749033",
+    "legal_name": "Individuali įmonė",
+    "street_address": "Smėlynų skg. 15",
+    "postcode": "LT-72311",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ed55631c-eafa-4a02-8410-5bd5f3f9600c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "224476650",
+    "slug": "uzdaroji-akcine-bendrove-riardzis-224476650",
+    "legal_name": "Uždaroji akcinė bendrovė \"RIARDŽIS\"",
+    "street_address": "J. Basanavičiaus g. 63",
+    "postcode": "LT-03109",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/riardzis/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "234003980",
+    "slug": "uzdaroji-akcine-bendrove-saloza-234003980",
+    "legal_name": "Uždaroji akcinė bendrovė \"Saloža\"",
+    "street_address": "Šaldytuvų g. 47",
+    "postcode": "LT-45126",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/daf27939-e08a-4f36-840d-75f1cbd0d9b1"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "251237590",
+    "slug": "uzdaroji-akcine-bendrove-marijampoles-komprojektas-251237590",
+    "legal_name": "Uždaroji akcinė bendrovė \"Marijampolės komprojektas\"",
+    "street_address": "Baldininkų g. 15",
+    "postcode": "LT-54448",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f1a284a8-81a7-47a0-ace7-fb08349f7f99"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "255973180",
+    "slug": "uab-vagensas-255973180",
+    "legal_name": "UAB \"VAGENSAS\"",
+    "street_address": "Sedulinos al. 16",
+    "postcode": "LT-31121",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldai_vagensas_parduotuve/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "258888760",
+    "slug": "nerijaus-bucio-imone-258888760",
+    "legal_name": "Nerijaus Bučio įmonė",
+    "street_address": "Žaslių g. 12",
+    "postcode": "LT-56114",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/n_bucio/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300003654",
+    "slug": "uab-ego-verus-300003654",
+    "legal_name": "UAB \"Ego verus\"",
+    "street_address": "Mileišiškių Sodų 3-IOJI g. 6",
+    "postcode": "LT-10211",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ego_verus/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300004336",
+    "slug": "uab-eega1-300004336",
+    "legal_name": "UAB \"EEGA1\"",
+    "street_address": "Žemynos g. 13",
+    "postcode": "LT-75102",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/eega1/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300032531",
+    "slug": "uab-visagino-linija-300032531",
+    "legal_name": "UAB \"Visagino linija\"",
+    "street_address": "Pramonės g. 4",
+    "postcode": "LT-31147",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/visagino_linija/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300050141",
+    "slug": "uab-bhk-lietuva-300050141",
+    "legal_name": "UAB \"BHK Lietuva\"",
+    "street_address": "Technikos g. 5",
+    "postcode": "LT-30132",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/411fb9e3-a3f3-437c-97b1-b882e2adb55b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300085719",
+    "slug": "uab-cps-engineering-300085719",
+    "legal_name": "UAB \"CPS Engineering\"",
+    "street_address": "Šeimyniškių g. 38",
+    "postcode": "LT-09200",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/cps_engineering/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300098524",
+    "slug": "vilmers-uab-300098524",
+    "legal_name": "Vilmers UAB",
+    "street_address": "Pramonės g. 15",
+    "postcode": "LT-78137",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/litsofa/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300104258",
+    "slug": "uab-sk-design-300104258",
+    "legal_name": "UAB \"SK Design\"",
+    "street_address": "Švenčionių g. 6",
+    "postcode": "LT-18206",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e1c31477-3f70-4c2f-a864-69183a687320"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300132909",
+    "slug": "uab-ctt-300132909",
+    "legal_name": "UAB \"CTT\"",
+    "street_address": "Panerių g. 51",
+    "postcode": "LT-03160",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/411bde2d-5967-4e50-8c00-b7eb9f280de8"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300591314",
+    "slug": "uab-narbutas-international-300591314",
+    "legal_name": "UAB \"Narbutas International\"",
+    "street_address": "Eitminų g. 3",
+    "postcode": "LT-12113",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/narbutas_international/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300646141",
+    "slug": "ii-arominda-300646141",
+    "legal_name": "Individuali įmonė",
+    "street_address": "S. Daukanto g. 19",
+    "postcode": "LT-69430",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ii_arominda/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300647357",
+    "slug": "uab-forneris-300647357",
+    "legal_name": "UAB \"Forneris\"",
+    "street_address": "Sedulų g. 4",
+    "postcode": "LT-45487",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cfe20525-fca5-40e7-89e1-efb79bd28f5c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300657700",
+    "slug": "uab-ar-studio-300657700",
+    "legal_name": "UAB \"AR - STUDIO\"",
+    "street_address": "Šermukšnių g. 1",
+    "postcode": "LT-01106",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_ar_studio/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "300832459",
+    "slug": "uab-inovacijos-ir-sprendimai-300832459",
+    "legal_name": "UAB \"Inovacijos ir sprendimai\"",
+    "street_address": "Ratnyčios g. 58",
+    "postcode": "LT-08215",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/599a7fce-637a-48fa-851a-9b871d69e7a4"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301089656",
+    "slug": "uab-esd-baldai-301089656",
+    "legal_name": "UAB \"ESD baldai\"",
+    "street_address": "Kęstučio g. 14",
+    "postcode": "LT-56121",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d43db99c-0280-4c8b-8c11-e924637cb925"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301537376",
+    "slug": "uab-minora-301537376",
+    "legal_name": "UAB \"Minora\"",
+    "street_address": "B.mejerytės g. 5A",
+    "postcode": "LT-80162",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_minora/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301696898",
+    "slug": "uab-sonavita-301696898",
+    "legal_name": "UAB \"SONAVITA\"",
+    "street_address": "Pikulo g. 66",
+    "postcode": "LT-48435",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d3dad691-475f-4e04-85e2-ea97d74f24f1"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301785585",
+    "slug": "uab-s2s-301785585",
+    "legal_name": "UAB \"S2S\"",
+    "street_address": "Naujininkų g. 21",
+    "postcode": "LT-02109",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_s2s/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "301887572",
+    "slug": "uab-kitaip-301887572",
+    "legal_name": "UAB \"KITAIP\"",
+    "street_address": "Kapsų g. 19",
+    "postcode": "LT-02182",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_kitaip/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302301724",
+    "slug": "baldai-uoga",
+    "legal_name": "UAB RAMZO",
+    "street_address": "Gamyklos g. 10",
+    "postcode": "LT-13210",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3c578148-a1ae-4026-b5fe-d3815e7b03b0"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302327402",
+    "slug": "uzdaroji-akcine-bendrove-mantisa-302327402",
+    "legal_name": "Uždaroji akcinė bendrovė \"MANTISA\"",
+    "street_address": "Papilėnų g. 3",
+    "postcode": "LT-06224",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_mantisa/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302335947",
+    "slug": "ukas",
+    "legal_name": "UAB Ūko baldai",
+    "street_address": "J. Basanavičiaus g. 14",
+    "postcode": "LT-03224",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uko_baldai_uab/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302430459",
+    "slug": "uab-smv-projektai-302430459",
+    "legal_name": "UAB \"SMV projektai\"",
+    "street_address": "Jūžintų g. 23",
+    "postcode": "LT-42273",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c30f68b5-de40-455b-a6a2-da1b87783bc0"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302453276",
+    "slug": "uab-real-vision-302453276",
+    "legal_name": "UAB \"Real Vision\"",
+    "street_address": "Alksnynės g. 15B",
+    "postcode": "",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_real_vision/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302469437",
+    "slug": "uab-korsara-302469437",
+    "legal_name": "UAB \"Korsara\"",
+    "street_address": "Klaipėdos g. 1H",
+    "postcode": "LT-96332",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3e98d0e3-c19f-44f3-b22e-9c3a1550c380"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302495535",
+    "slug": "ideju-aleja-uab-302495535",
+    "legal_name": "Idėjų alėja, UAB",
+    "street_address": "Kikilių g. 17",
+    "postcode": "LT-76383",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ad173e15-5572-4065-8279-10e6eba6aa8a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302526443",
+    "slug": "uab-eltino-302526443",
+    "legal_name": "UAB \"ELTINO\"",
+    "street_address": "Verkių g. 39",
+    "postcode": "LT-09109",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_eltino/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302532624",
+    "slug": "uab-ofus-302532624",
+    "legal_name": "UAB \"Ofus\"",
+    "street_address": "Kadagyno g. 16",
+    "postcode": "LT-76190",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/72224068-8dfc-4cd9-bc10-a23903b50532"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302539095",
+    "slug": "uab-lacio-302539095",
+    "legal_name": "UAB \"Lacio\"",
+    "street_address": "Kęstučio g. 13",
+    "postcode": "LT-55156",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/6c4cd700-a6d4-46f7-bc8f-cdac94a1f2aa"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302542006",
+    "slug": "uab-kensa-302542006",
+    "legal_name": "UAB \"Kensa\"",
+    "street_address": "V. Bielskio g. 14",
+    "postcode": "LT-76162",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c0ee2055-2917-4557-b24b-5da6d605aa4e"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302556080",
+    "slug": "uab-mirandeka-302556080",
+    "legal_name": "UAB \"Mirandeka\"",
+    "street_address": "Gedvydžių g. 1",
+    "postcode": "LT-06311",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/mirandeka/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302563491",
+    "slug": "uab-laisves-baldai-302563491",
+    "legal_name": "UAB \"Laisvės baldai\"",
+    "street_address": "Verbiškių 2-OJI g. 2",
+    "postcode": "LT-15140",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/klipas/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302568620",
+    "slug": "uab-geri-amatai-302568620",
+    "legal_name": "UAB \"Geri amatai\"",
+    "street_address": "Joniškės g. 24G",
+    "postcode": "LT-91266",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/geri_amatai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302678383",
+    "slug": "uab-vilgma-gi-302678383",
+    "legal_name": "UAB VILGMA GI",
+    "street_address": "Maironio g. 17",
+    "postcode": "LT-75381",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/29882d38-1f9a-4a87-a83f-f9c9cd8f115c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302680509",
+    "slug": "uab-ms-baldai-302680509",
+    "legal_name": "UAB \"MS baldai\"",
+    "street_address": "Raudondvario pl. 164",
+    "postcode": "LT-47173",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/7eb2b38c-15ca-4508-b149-59789efe93b8"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302711050",
+    "slug": "uab-fika-lt-302711050",
+    "legal_name": "UAB FIKA LT",
+    "street_address": "Rokakiemio g. 18",
+    "postcode": "LT-46115",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/uab_pifka/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302743411",
+    "slug": "uab-robenas-302743411",
+    "legal_name": "UAB \"Robenas\"",
+    "street_address": "Aušros al. 13",
+    "postcode": "LT-76298",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/bebro_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "302761402",
+    "slug": "uab-stilforma-302761402",
+    "legal_name": "UAB \"Stilforma\"",
+    "street_address": "Raudondvario pl. 101A",
+    "postcode": "LT-47184",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cf1d8f14-ba8f-4cc6-ab38-c92d661363d8"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303022154",
+    "slug": "uab-korela-303022154",
+    "legal_name": "UAB KORELA",
+    "street_address": "Žalgirio g. 9",
+    "postcode": "LT-82466",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/korela/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303056929",
+    "slug": "mb-stilo-baldai-303056929",
+    "legal_name": "MB \"Stilo baldai\"",
+    "street_address": "Vilniaus g. 24",
+    "postcode": "LT-59115",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5d589c9b-3fc4-4aa8-8103-17eb0cf88ceb"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303126904",
+    "slug": "uab-artus-lt-303126904",
+    "legal_name": "UAB \"Artus LT\"",
+    "street_address": "Putinų g. 61",
+    "postcode": "LT-62186",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/624ddf4a-c4c0-41ab-9bbe-44f83fde5a63"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303192562",
+    "slug": "uab-magnum-reditus-303192562",
+    "legal_name": "UAB \"Magnum reditus\"",
+    "street_address": "Gurių Sodų 10-oji g. 47",
+    "postcode": "LT-11310",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/25bb5495-6692-4d7e-aafd-a4cf4cd3bd30"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303242378",
+    "slug": "uab-rigresta-303242378",
+    "legal_name": "UAB \"Rigresta\"",
+    "street_address": "Lakūnų g. 7A",
+    "postcode": "LT-13132",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/00007209-12f6-49f6-9720-af28a5fca67b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303245214",
+    "slug": "uab-nero-baldai-303245214",
+    "legal_name": "UAB \"Nero baldai\"",
+    "street_address": "Brožynų g. 2",
+    "postcode": "LT-95209",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/nero_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303301150",
+    "slug": "uab-milpra-303301150",
+    "legal_name": "UAB \"Milpra\"",
+    "street_address": "Laisvės pr. 60",
+    "postcode": "LT-05120",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d26f2a7f-df7d-4622-a7f1-5a852511300a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "303927859",
+    "slug": "uab-baldu-svaja-303927859",
+    "legal_name": "UAB \"Baldų svaja\"",
+    "street_address": "Liepų g. 60A",
+    "postcode": "LT-92105",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_svaja/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304048440",
+    "slug": "uab-baldu-tonas-304048440",
+    "legal_name": "UAB \"Baldų tonas\"",
+    "street_address": "Nemenčinės g. 32",
+    "postcode": "LT-15153",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ebe9d25e-4e27-43aa-beba-95e5f54886dd"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304098482",
+    "slug": "mb-baldu-gaminiai-304098482",
+    "legal_name": "MB \"Baldų gaminiai\"",
+    "street_address": "Vasaros g. 19",
+    "postcode": "LT-68114",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8346ec3d-637d-4a2f-bbe5-48ff7551d46a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304103246",
+    "slug": "uab-dominyko-projektai-304103246",
+    "legal_name": "UAB \"Dominyko projektai\"",
+    "street_address": "Ukmergės g. 300F",
+    "postcode": "LT-06146",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/dominyko_projektai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304106769",
+    "slug": "uab-kadeira-304106769",
+    "legal_name": "UAB \"Kadeira\"",
+    "street_address": "Svajonės Sodų 2-oji g. 40",
+    "postcode": "LT-76399",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1006dc27-1cc6-404d-b9c1-89a081b4bc3f"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304171090",
+    "slug": "uab-arnitana-304171090",
+    "legal_name": "UAB \"Arnitana\"",
+    "street_address": "Gailiūnų g. 22",
+    "postcode": "LT-66381",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e9f5cb85-30a2-402c-b86b-74b2e7ec7856"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304186306",
+    "slug": "uab-alneka-304186306",
+    "legal_name": "UAB \"Alneka\"",
+    "street_address": "Žirmūnų g. 104",
+    "postcode": "LT-09121",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/alneka/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304222065",
+    "slug": "uab-piluka-304222065",
+    "legal_name": "UAB \"Piluka\"",
+    "street_address": "Girios g. 4",
+    "postcode": "LT-19181",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/2914e4fc-3a83-43fe-af5d-ed0c2f85dee6"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304231694",
+    "slug": "uab-baltasis-bizonas-304231694",
+    "legal_name": "UAB \"Baltasis bizonas\"",
+    "street_address": "Garažų g. 1A",
+    "postcode": "LT-28139",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304248359",
+    "slug": "baldai-j-g",
+    "legal_name": "UAB \"Jono ir Giedriaus baldai\"",
+    "street_address": "Kaimelio g. 9",
+    "postcode": "LT-21342",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cb94875a-1649-4ce7-8ae2-c003a6d10245"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304291360",
+    "slug": "mb-interius-304291360",
+    "legal_name": "MB \"Interius\"",
+    "street_address": "Liepų al. 66",
+    "postcode": "LT-02233",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9c2fe601-3524-4434-84a1-ebaf4b0651f2"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304395996",
+    "slug": "uab-algideja-304395996",
+    "legal_name": "UAB \"Algidėja\"",
+    "street_address": "Bebrų g. 9",
+    "postcode": "LT-54431",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f9bbc76b-bd58-4386-b477-db24076d7cdb"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304418854",
+    "slug": "uab-skaisteriai-nt-304418854",
+    "legal_name": "UAB \"Skaisteriai NT\"",
+    "street_address": "Skaisterių g. 2C",
+    "postcode": "LT-13118",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/6174dffe-02e4-46a4-9848-ea018e22d34f"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304459872",
+    "slug": "uab-domingus-304459872",
+    "legal_name": "UAB \"Domingus\"",
+    "street_address": "Debesų g. 22",
+    "postcode": "LT-53368",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/4c080294-e878-40b6-aecf-8e621d2a5341"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304521861",
+    "slug": "mb-aistis-ir-rokas-304521861",
+    "legal_name": "MB \"Aistis ir Rokas\"",
+    "street_address": "Ukmergės g. 226",
+    "postcode": "LT-07161",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/aistis_ir_rokas/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304835958",
+    "slug": "mb-pintora-304835958",
+    "legal_name": "MB \"Pintora\"",
+    "street_address": "V. Mačernio g. 25",
+    "postcode": "LT-90141",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/pintora/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304840040",
+    "slug": "ii-vysniu-baldai-304840040",
+    "legal_name": "Individuali įmonė",
+    "street_address": "Tuopų g. 1",
+    "postcode": "LT-70317",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f8f70e50-1a50-4147-8375-ebb823174e9d"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304885612",
+    "slug": "uab-evprojektas-304885612",
+    "legal_name": "UAB \"Evprojektas\"",
+    "street_address": "Lenktoji g. 32",
+    "postcode": "LT-08124",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/evprojektas/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304887143",
+    "slug": "uab-aikstis-304887143",
+    "legal_name": "UAB \"Aikštis\"",
+    "street_address": "Šaltkalvių g. 34",
+    "postcode": "LT-02172",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/aikstis/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304926429",
+    "slug": "uab-viva-style-304926429",
+    "legal_name": "UAB \"Viva style\"",
+    "street_address": "Dubysos g. 31",
+    "postcode": "LT-91181",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/viva_style/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304940471",
+    "slug": "uab-oaky-oak-304940471",
+    "legal_name": "UAB OAKY OAK",
+    "street_address": "Gandrų g. 6",
+    "postcode": "LT-96338",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/4eae005d-0c3e-4a8a-81a7-7ec59944af1a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304945568",
+    "slug": "uab-vintori-304945568",
+    "legal_name": "UAB Vintori",
+    "street_address": "Vilniaus g. 146",
+    "postcode": "LT-76297",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/vintori/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304960125",
+    "slug": "mb-versus-interior-304960125",
+    "legal_name": "MB \"Versus interior\"",
+    "street_address": "Pievų g. 22",
+    "postcode": "LT-19152",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9db7c101-bf43-41f3-8c5b-a3dc794b5186"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304978027",
+    "slug": "uab-lead-time-zero-304978027",
+    "legal_name": "UAB LEAD TIME ZERO",
+    "street_address": "Draugystės g. 15D",
+    "postcode": "LT-51227",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c9a45c5c-dca1-4638-b699-c678ef618f1e"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304985961",
+    "slug": "uab-dimantra-304985961",
+    "legal_name": "UAB \"Dimantra\"",
+    "street_address": "Liepų g. 17B",
+    "postcode": "LT-90101",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d329dc9f-7645-4019-9059-6e8413fa29dd"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "304990410",
+    "slug": "uab-sprendimai-baldininkams-304990410",
+    "legal_name": "UAB \"Sprendimai baldininkams\"",
+    "street_address": "Meistrų g. 9",
+    "postcode": "LT-02190",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/a66be85b-e659-4a9f-8f8f-9cccc918582e"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305201921",
+    "slug": "uab-emona-lt-305201921",
+    "legal_name": "UAB \"Emona LT\"",
+    "street_address": "Naujoji g. 1",
+    "postcode": "LT-90371",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9ba2a277-e69a-490a-8abf-8d6b1025acd9"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305217644",
+    "slug": "uab-ternis-305217644",
+    "legal_name": "UAB \"Ternis\"",
+    "street_address": "Smiltynų g. 20",
+    "postcode": "LT-54430",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/6697289e-1af6-4357-a720-07668f6daf17"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305236609",
+    "slug": "mb-milijonas-kampu-305236609",
+    "legal_name": "MB \"Milijonas kampų\"",
+    "street_address": "Seinų g. 3",
+    "postcode": "LT-62163",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/25c6773b-2593-48b5-8f40-bd9902a0ba76"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305390728",
+    "slug": "mb-labanoris-305390728",
+    "legal_name": "MB \"Labanoris\"",
+    "street_address": "Šilo g. 82",
+    "postcode": "LT-33291",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3f372482-d576-4c4a-87bc-86bf99279aa7"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305393037",
+    "slug": "mb-alfo-statybos-305393037",
+    "legal_name": "MB \"Alfo mediniai gaminiai\"",
+    "street_address": "Luokės g. 26",
+    "postcode": "LT-86369",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1626272a-c9f4-418d-87df-62e6ec821829"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305568967",
+    "slug": "mb-lurenos-baldai-305568967",
+    "legal_name": "MB \"Lurenos baldai\"",
+    "street_address": "Klaipėdos g. 13",
+    "postcode": "LT-96231",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/lurenos_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305621836",
+    "slug": "baldu-kalnas",
+    "legal_name": "MB Kauno statybų ranga",
+    "street_address": "Nemuno g. 3",
+    "postcode": "LT-46159",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/baldu_kalnas/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305679775",
+    "slug": "mb-ba-dirbtuves-305679775",
+    "legal_name": "MB \"BA dirbtuvės\"",
+    "street_address": "Partizanų g. 61",
+    "postcode": "LT-49282",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/ba_dirbtuves/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305679946",
+    "slug": "uab-kzk-studija-305679946",
+    "legal_name": "UAB Kzk studija",
+    "street_address": "Adutiškio g. 5",
+    "postcode": "LT-02112",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kzk_studija/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305684562",
+    "slug": "mazoji-bendrija-valdo-projektai-305684562",
+    "legal_name": "Mažoji bendrija Valdo projektai",
+    "street_address": "Gudobelių g. 9",
+    "postcode": "LT-92357",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c62814f0-f80e-4b2a-87c1-ed46c985bd3a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305699614",
+    "slug": "uab-furnipro-305699614",
+    "legal_name": "UAB \"Furnipro\"",
+    "street_address": "Europos pr. 96H",
+    "postcode": "LT-46351",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cafb7f75-d1be-45d7-949c-69e367b86c21"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305726050",
+    "slug": "baldaila",
+    "legal_name": "MB Alproduktai",
+    "street_address": "Tujų g. 26",
+    "postcode": "LT-53333",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/2770b398-57c4-49aa-876b-d257bd9b095a"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305771184",
+    "slug": "uab-rupeja-305771184",
+    "legal_name": "UAB \"Rupėja\"",
+    "street_address": "Laukstėnų K. 11",
+    "postcode": "LT-99413",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/rupeja/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305778798",
+    "slug": "uab-arredo-deko-projektai-305778798",
+    "legal_name": "UAB \"Arredo deko projektai\"",
+    "street_address": "Smėlyno g. 6",
+    "postcode": "LT-59289",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9c993d79-ebbe-421c-a058-e37772190a3c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305831539",
+    "slug": "mazoji-bendrija-obrimus-305831539",
+    "legal_name": "Mažoji bendrija \"Obrimus\"",
+    "street_address": "V. Nagevičiaus g. 3",
+    "postcode": "LT-08237",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3c9d9038-794a-4bff-9fed-53e763a915ca"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305844611",
+    "slug": "mb-tovera-305844611",
+    "legal_name": "MB Tovera",
+    "street_address": "Kantališkių g. 6",
+    "postcode": "LT-53331",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8318c35b-c8e7-493e-b5e9-5de09723322d"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305913872",
+    "slug": "uab-destructa-305913872",
+    "legal_name": "UAB \"Destructa\"",
+    "street_address": "Partizanų g. 61",
+    "postcode": "LT-49282",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/destructa/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305935228",
+    "slug": "mazoji-bendrija-sernosis-305935228",
+    "legal_name": "Mažoji bendrija \"Šernosis\"",
+    "street_address": "Ukmergės g. 29",
+    "postcode": "LT-20286",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/sernosis/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305939301",
+    "slug": "mb-furnidedes-305939301",
+    "legal_name": "MB Furnidėdės",
+    "street_address": "Chemijos g. 27C",
+    "postcode": "LT-51331",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/furnidedes/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305961874",
+    "slug": "furniture-trade-lt-mb-305961874",
+    "legal_name": "Furniture Trade LT MB",
+    "street_address": "Ūdrijos g. 82",
+    "postcode": "LT-62474",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/b8e47b06-b944-42db-a339-31a650ff697b"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305981318",
+    "slug": "artrum-mb-305981318",
+    "legal_name": "Artrum, MB",
+    "street_address": "Marių g. 99",
+    "postcode": "LT-56337",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/47ff0e81-1523-40ad-9cb3-b4e4625e3668"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "305991312",
+    "slug": "karaliaus-baldai-uab-305991312",
+    "legal_name": "Karaliaus baldai, UAB",
+    "street_address": "Naikupės g. 19",
+    "postcode": "LT-93205",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/karaliaus_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306069853",
+    "slug": "mb-re-baldai-306069853",
+    "legal_name": "MB \"Re baldai\"",
+    "street_address": "Šiaurės g. 9",
+    "postcode": "LT-11106",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/re_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306083828",
+    "slug": "uab-gm-art-306083828",
+    "legal_name": "UAB \"GM ART\"",
+    "street_address": "Šlapšilės g. 25",
+    "postcode": "LT-96173",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e497c172-af2c-4a5f-ab98-a2567a2406d0"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306125063",
+    "slug": "mb-45-kampai-306125063",
+    "legal_name": "MB \"45 kampai\"",
+    "street_address": "Europos pr. 28",
+    "postcode": "LT-46326",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/45_kampai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306146424",
+    "slug": "mb-melamin-306146424",
+    "legal_name": "MB \"Melamin\"",
+    "street_address": "Mažoji g. 5",
+    "postcode": "LT-82124",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/melamin/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306167137",
+    "slug": "mb-esteto-baldai-306167137",
+    "legal_name": "MB Esteto baldai",
+    "street_address": "Varnių g. 38",
+    "postcode": "LT-48387",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/esteto_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306183629",
+    "slug": "mb-blanko-baldai-306183629",
+    "legal_name": "MB Blanko baldai",
+    "street_address": "Liepų Tak. 7",
+    "postcode": "LT-72109",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/blanko_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306198588",
+    "slug": "uab-metalo-pulsas-306198588",
+    "legal_name": "UAB Metalo pulsas",
+    "street_address": "Grauminės g. 10",
+    "postcode": "LT-96231",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/0cdafe21-5f6f-480d-87dd-3ae91f70a794"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306236409",
+    "slug": "mb-virtnora-306236409",
+    "legal_name": "MB \"Virtnora\"",
+    "street_address": "I. Kanto g. 8",
+    "postcode": "LT-92235",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/virtnora/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306323928",
+    "slug": "mb-baldaiska-306323928",
+    "legal_name": "MB Baldaiska",
+    "street_address": "Pagraudos g. 12",
+    "postcode": "LT-99112",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d28fea15-c837-4c5e-a44e-5311343c3fb9"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306365293",
+    "slug": "mb-armiba-306365293",
+    "legal_name": "MB \"Armiba\"",
+    "street_address": "Švendrelio g. 1",
+    "postcode": "LT-77210",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5aef415b-c291-4d25-a0f3-48740d24f9bd"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306391498",
+    "slug": "mb-space-idea-property-306391498",
+    "legal_name": "MB Space idea property",
+    "street_address": "Ragainės g. 14",
+    "postcode": "LT-92196",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/space_idea_property/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306635924",
+    "slug": "mb-grg-baldai-306635924",
+    "legal_name": "MB Grg baldai",
+    "street_address": "Turgaus g. 28",
+    "postcode": "LT-96129",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/grg_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306653648",
+    "slug": "mb-abc-baldai-306653648",
+    "legal_name": "MB Abc baldai",
+    "street_address": "Naujoji g. 15",
+    "postcode": "LT-21406",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/461a438b-e44f-4738-94b7-b35c53e6cda4"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306708016",
+    "slug": "mb-la-projects-306708016",
+    "legal_name": "MB \"LA projects\"",
+    "street_address": "Giedraičių g. 39",
+    "postcode": "LT-09302",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/la_projects/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306712160",
+    "slug": "mb-baldakas-306712160",
+    "legal_name": "MB \"Baldakas\"",
+    "street_address": "Ežero g. 10",
+    "postcode": "LT-58337",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ea455ebe-197d-4e05-a3c0-c9f4fe60830e"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306723872",
+    "slug": "mb-borera-306723872",
+    "legal_name": "MB Borera",
+    "street_address": "Taikos g. 131",
+    "postcode": "LT-05206",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/borera/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306879647",
+    "slug": "mb-tryse-baldai-306879647",
+    "legal_name": "MB Tryse baldai",
+    "street_address": "K. Bielinio g. 6",
+    "postcode": "LT-54465",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/15b5d4f4-dedd-4d0b-8e5a-8e7a9d35ce22"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "306997147",
+    "slug": "baldasta-mb-306997147",
+    "legal_name": "Baldasta, MB",
+    "street_address": "Veliuonos g. 6",
+    "postcode": "LT-62231",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5f5fca63-26d8-482e-be75-2721d19640f7"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307020485",
+    "slug": "mb-jurio-baldai-307020485",
+    "legal_name": "MB \"Jurio baldai\"",
+    "street_address": "Seirijų kel. 45H",
+    "postcode": "LT-67277",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/62e0330e-3b1e-468f-97fd-79095a65b54c"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307021377",
+    "slug": "mazoji-bendrija-baldukai-307021377",
+    "legal_name": "Mažoji bendrija Baldukai",
+    "street_address": "Pašto g. 15",
+    "postcode": "LT-96324",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5a1995aa-257e-4556-b3a4-6440f62e3d02"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307059068",
+    "slug": "mazoji-bendrija-dili-baldai-307059068",
+    "legal_name": "Mažoji bendrija Dili baldai",
+    "street_address": "Skaidrioji g. 10",
+    "postcode": "LT-96155",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8a2f4bf2-8c3c-454a-9422-f23f8aa9dc75"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307086574",
+    "slug": "uab-visokie-baldai-307086574",
+    "legal_name": "UAB Visokie baldai",
+    "street_address": "Vandentiekio g. 34",
+    "postcode": "LT-03152",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/visokie_baldai/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307093825",
+    "slug": "mb-tabalda-307093825",
+    "legal_name": "MB \"Tabalda\"",
+    "street_address": "Liepų g. 43A",
+    "postcode": "LT-92440",
+    "public_details_source_urls": [
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c789df2e-5f47-43bc-b0d4-7a38dd435f16"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307106831",
+    "slug": "mb-tvm-furniture-307106831",
+    "legal_name": "MB TVM Furniture",
+    "street_address": "Liepų g. 33",
+    "postcode": "LT-53243",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/tvm_furniture/"
+    ],
+    "source_collection_date": "2026-08-15"
+  },
+  {
+    "company_code": "307296512",
+    "slug": "mb-kanteka-307296512",
+    "legal_name": "MB Kanteka",
+    "street_address": "Mogiliovo g. 6",
+    "postcode": "LT-95208",
+    "public_details_source_urls": [
+      "https://rekvizitai.vz.lt/en/company/kanteka/"
+    ],
+    "source_collection_date": "2026-08-15"
+  }
+]
