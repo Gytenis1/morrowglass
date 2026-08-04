@@ -8,7 +8,7 @@ const rootDir = fileURLToPath(new URL('..', import.meta.url));
 const publicDir = join(rootDir, 'public');
 const SITE_URL = 'https://www.baldininkai.org';
 const SITE_NAME = 'Baldai pagal užsakymą Lietuvoje';
-const sourceDate = '2026-07-29';
+const buildDate = new Date().toISOString().slice(0, 10);
 
 const [manufacturers, landingConfig, baseHtml] = await Promise.all([
   readFile(join(rootDir, 'data/manufacturers.json'), 'utf8').then(JSON.parse),
@@ -490,7 +490,7 @@ function articleSchema(article, path) {
     description: article.metaDescription ?? article.summary,
     inLanguage: 'lt-LT',
     mainEntityOfPage: canonicalUrl(path),
-    dateModified: sourceDate,
+    dateModified: buildDate,
     author: { '@id': `${SITE_URL}/#organization` },
     publisher: { '@id': `${SITE_URL}/#organization` },
   };
@@ -923,7 +923,7 @@ const sitemapPaths = [
   ...cityCategoryLandings.map((entry) => entry.path),
 ];
 assertUniqueRoutePaths(sitemapPaths, 'sitemap');
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(sourceDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(buildDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 await writeFile(join(publicDir, INDEXNOW_KEY_FILENAME), INDEXNOW_KEY);

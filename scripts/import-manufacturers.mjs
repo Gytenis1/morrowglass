@@ -22,8 +22,7 @@ const requiredFields = [
   "source_artifact_url", "source_collection_date", "verification_status",
 ];
 const financialEnrichmentFields = [
-  "public_details_source_urls", "financial_source_url", "revenue_availability",
-  "financial_verification_status", "verified_at",
+  "financial_source_url", "revenue_availability", "financial_verification_status", "verified_at",
 ];
 const categoryLabels = new Map([
   ["K", "Virtuvės baldai"],
@@ -41,6 +40,12 @@ const categoryCodes = new Set(categoryLabels.keys());
 // Keep accepting it so validation mirrors the database instead of rewriting source facts.
 const historicalCategoryLabels = new Map([["MM", new Set([categoryLabels.get("MM"), "Kiti baldai"])]]);
 const regions = new Set(["vilnius-east-south", "kaunas-north", "klaipeda-panevezys-west-central", "national"]);
+const regionLabels = new Map([
+  ["vilnius-east-south", new Set(["Vilnius, rytų ir pietų Lietuva"])],
+  ["kaunas-north", new Set(["Kaunas ir šiaurės Lietuva"])],
+  ["klaipeda-panevezys-west-central", new Set(["Klaipėda, Panevėžys, vakarų ir centrinė Lietuva", "Klaipėda, Panevėžys, vakarų ir vidurio Lietuva"])],
+  ["national", new Set(["Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)"])],
+]);
 const originalRecordCount = 121;
 const legacyRecordCount = 315;
 const expectedSynchronizedRecordCount = 450;
@@ -108,13 +113,19 @@ function validate(records) {
       if (companyCodes.has(record.company_code)) throw new Error(`Duplicate company_code: ${record.company_code}`);
       companyCodes.set(record.company_code, index);
     }
+    const hasPublicDetailsProvenance = Array.isArray(record.public_details_source_urls) && record.public_details_source_urls.length > 0;
+    if (record.public_details_source_urls !== undefined && record.public_details_source_urls !== null && (!Array.isArray(record.public_details_source_urls) || record.public_details_source_urls.some((url) => typeof url !== "string" || !/^https:\/\//.test(url)))) {
+      throw new Error(`Invalid public registry provenance for ${record.slug}`);
+    }
+    for (const field of ["street_address", "postcode"]) {
+      if (record[field] !== undefined && typeof record[field] !== "string") throw new Error(`Invalid ${field} for ${record.slug}`);
+      if (record[field]?.trim() && !hasPublicDetailsProvenance) throw new Error(`${field} requires public registry provenance for ${record.slug}`);
+    }
     const hasFinancialEnrichment = financialEnrichmentFields.some((field) => record[field] !== undefined);
     if (hasFinancialEnrichment && financialEnrichmentFields.some((field) => record[field] === undefined)) throw new Error(`Incomplete financial enrichment for ${record.slug}`);
     if (hasFinancialEnrichment) {
       if (!hasCompanyCode) throw new Error(`Financial enrichment requires a company_code for ${record.slug}`);
-      if (!Array.isArray(record.public_details_source_urls) || record.public_details_source_urls.length === 0 || record.public_details_source_urls.some((url) => typeof url !== "string" || !/^https:\/\//.test(url))) {
-        throw new Error(`Missing public registry provenance for ${record.slug}`);
-      }
+      if (!hasPublicDetailsProvenance) throw new Error(`Missing public registry provenance for ${record.slug}`);
       if (typeof record.financial_source_url !== "string" || !/^https:\/\//.test(record.financial_source_url)) throw new Error(`Missing financial source URL for ${record.slug}`);
       if (record.revenue_availability !== "paskelbta" && record.revenue_availability !== "nepaskelbta") throw new Error(`Invalid revenue availability for ${record.slug}`);
       if (record.financial_verification_status !== "patikrinta") throw new Error(`Unverified financial record for ${record.slug}`);
@@ -129,14 +140,18 @@ function validate(records) {
       if (typeof record.legal_name !== "string" || !record.legal_name.trim() || record.legal_entity_known !== true || !hasCompanyCode) {
         throw new Error(`Official-source record ${record.slug} must retain its legal identity and company code`);
       }
-      if (record.location !== "Lietuva" || record.city !== "Lietuva" || record.region !== "national" || record.region_label !== "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)") {
+      const retainsNationalMapping = record.location === "Lietuva" && record.city === "Lietuva" && record.region === "national" && record.region_label === "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)";
+      const hasSourceBackedLocation = hasPublicDetailsProvenance
+        && record.location === record.city
+        && regionLabels.get(record.region)?.has(record.region_label);
+      if (!retainsNationalMapping && !hasSourceBackedLocation) {
         throw new Error(`Official-source record ${record.slug} has an unsupported location mapping`);
       }
       if (record.category_codes.length !== 1 || record.category_codes[0] !== "O" || record.category_labels[0] !== categoryLabels.get("O") || record.audience !== "nežinoma" || record.portfolio_status !== "nežinoma" || record.confidence !== "vidutinis") {
         throw new Error(`Official-source record ${record.slug} must retain its conservative catalogue classification`);
       }
       if (record.evidence_source_type !== "Lietuvos atvirų duomenų portalas (Registrų centras)") throw new Error(`Official-source record ${record.slug} has invalid provenance type`);
-      if (record.source_collection_date !== "2026-08-01") throw new Error(`Official-source record ${record.slug} has invalid collection date`);
+      if (!hasPublicDetailsProvenance && record.source_collection_date !== "2026-08-01") throw new Error(`Official-source record ${record.slug} has invalid collection date`);
     }
   }
   const enrichedRecords = records.filter((record) => financialEnrichmentFields.some((field) => record[field] !== undefined));

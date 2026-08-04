@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "tsc --noEmit && vite build && node scripts/generate-static-seo.mjs",
+    "build": "node scripts/sync-public-manufacturers.mjs && node scripts/import-manufacturers.mjs --validate && tsc --noEmit && vite build && node scripts/generate-static-seo.mjs",
     "check:static-seo": "node scripts/check-static-seo.mjs",
     "submit:indexnow": "node scripts/submit-indexnow.mjs",
     "preview": "vite preview --host 0.0.0.0",
