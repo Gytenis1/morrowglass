@@ -1,0 +1,1334 @@
+{
+  "reconciliation": "identity_only_company_code_reconciliation",
+  "registry_dataset_source_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+  "source_collection_date": "2026-08-04",
+  "matching_method": "Exact deterministic normalized legal/trading name (case, diacritics, punctuation and legal-form position folded) plus a unique consistent official registered municipality or locality.",
+  "results": [
+    {
+      "slug": "alantas-baldu-salonas",
+      "input_identity": "Alantas, baldų salonas, UAB",
+      "input_city": "Kaunas",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "minshape-m-jakucionio-ivv",
+      "input_identity": "Minshape, M. Jakučionio IVV",
+      "input_city": "Kaunas",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "valdrena",
+      "input_identity": "Valdrena, MB",
+      "input_city": "Klaipėda",
+      "match_status": "matched",
+      "company_code": "306260303",
+      "canonical_official_name": "MB Valdrena",
+      "official_registered_municipality": "Klaipėdos rajono",
+      "official_registered_locality": "Klemiškė II",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/8eff10dd-f2f7-44cd-886c-c8a8e9daa888"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "mbi-minkstu-baldu-ideja",
+      "input_identity": "MBI minkštų baldų idėja",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "dronga-medienos-meistrai",
+      "input_identity": "Dronga, medienos meistrai",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "romanta",
+      "input_identity": "Romanta, MB",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "laumes-baldu-gamyba",
+      "input_identity": "Laumės baldų gamyba, UAB",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldijos-projektai",
+      "input_identity": "Baldijos projektai, UAB",
+      "input_city": "Klaipėda",
+      "match_status": "matched",
+      "company_code": "304903252",
+      "canonical_official_name": "UAB \"Baldijos projektai\"",
+      "official_registered_municipality": "Klaipėdos rajono",
+      "official_registered_locality": "Priekulė II",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/90f0f5e9-bc7d-4a0e-a953-646d9af28c3f"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "anp-inovaciniai-sprendimai",
+      "input_identity": "ANP inovaciniai sprendimai, UAB",
+      "input_city": "Klaipėda",
+      "match_status": "matched",
+      "company_code": "305604331",
+      "canonical_official_name": "UAB \"ANP inovaciniai sprendimai\"",
+      "official_registered_municipality": "Klaipėdos miesto",
+      "official_registered_locality": "Klaipėda",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/34fda8d2-3fc6-488e-9bda-21b67be09b8f"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "pajurio-baldai",
+      "input_identity": "Pajūrio baldai, UAB",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "klaipedos-baldai",
+      "input_identity": "Klaipėdos baldai, UAB",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "minijos-baldai",
+      "input_identity": "Minijos baldai, UAB",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "sakuona",
+      "input_identity": "Sakuona, UAB",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "dovaina",
+      "input_identity": "Dovaina, UAB",
+      "input_city": "Klaipėda",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "arta-a-burgailos-imone",
+      "input_identity": "Arta, A. Burgailos įmonė",
+      "input_city": "Šiauliai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldu-profai-delvisa",
+      "input_identity": "Baldų profai, UAB Delvisa",
+      "input_city": "Šiauliai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "almyros-baldai-a-pakarnio-imone",
+      "input_identity": "Almyros baldai, A. Pakarnio įmonė",
+      "input_city": "Šiauliai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "bd-furniture",
+      "input_identity": "BD Furniture, UAB",
+      "input_city": "Šiauliai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "rejben-baldai",
+      "input_identity": "Rejben baldai, UAB",
+      "input_city": "Šiauliai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "kesna",
+      "input_identity": "Kesna, UAB",
+      "input_city": "Šiauliai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldu-aleja",
+      "input_identity": "Baldų alėja, UAB",
+      "input_city": "Šiauliai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "tribus",
+      "input_identity": "Tribus, UAB",
+      "input_city": "Panevėžys",
+      "match_status": "matched",
+      "company_code": "302719951",
+      "canonical_official_name": "UAB \"Tribus\"",
+      "official_registered_municipality": "Panevėžio miesto",
+      "official_registered_locality": "Panevėžys",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/0ee25618-44a3-4e25-968d-7bbe1c41204c"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldu-tvirtove-panevezys",
+      "input_identity": "Baldų tvirtovė, MB Panevėžys",
+      "input_city": "Panevėžys",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "gmdg-v-grinienes-ii",
+      "input_identity": "Gmdg, V. Grinienės IĮ",
+      "input_city": "Panevėžys",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldu-linija-panevezys",
+      "input_identity": "Baldų linija, UAB Panevėžys",
+      "input_city": "Panevėžys",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "mk-baldai",
+      "input_identity": "MK Baldai",
+      "input_city": "Panevėžys",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "dazymo-studija",
+      "input_identity": "Dažymo studija, MB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "307079747",
+      "canonical_official_name": "MB Dažymo studija",
+      "official_registered_municipality": "Alytaus rajono",
+      "official_registered_locality": "Likiškėliai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/0aca7596-077d-46e0-abd1-d89a0275b755"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldu-studija-besta",
+      "input_identity": "Baldų studija Besta, UAB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "306096035",
+      "canonical_official_name": "UAB \"Baldų studija Besta\"",
+      "official_registered_municipality": "Alytaus miesto",
+      "official_registered_locality": "Alytus",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/72cd2a2f-e733-436c-91d2-d767559a0318"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "deccorus",
+      "input_identity": "Deccorus, UAB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "302542853",
+      "canonical_official_name": "UAB \"DECCORUS\"",
+      "official_registered_municipality": "Alytaus rajono",
+      "official_registered_locality": "Geistariškės",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/89155c6d-9656-4297-91ce-2e99770a2d2b"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "egerta",
+      "input_identity": "Egerta, MB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "305356398",
+      "canonical_official_name": "MB \"Egerta\"",
+      "official_registered_municipality": "Alytaus rajono",
+      "official_registered_locality": "Alovė",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/55114a85-bd74-46e4-bdf6-237367620938"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "inoxi",
+      "input_identity": "Inoxi, UAB",
+      "input_city": "Alytus",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "kampu",
+      "input_identity": "Kampu, MB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "305908188",
+      "canonical_official_name": "Kampu MB",
+      "official_registered_municipality": "Alytaus miesto",
+      "official_registered_locality": "Alytus",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/87b321f9-36bf-4b16-a813-d2191b3ed60d"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "sanitarina",
+      "input_identity": "Sanitarina, MB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "306265161",
+      "canonical_official_name": "Sanitarina MB",
+      "official_registered_municipality": "Alytaus miesto",
+      "official_registered_locality": "Alytus",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a55a9a04-8adb-485a-b16b-2e3352e3565b"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldociai",
+      "input_identity": "Baldočiai, UAB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "304137444",
+      "canonical_official_name": "UAB \"Baldočiai\"",
+      "official_registered_municipality": "Alytaus rajono",
+      "official_registered_locality": "Alytus",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a81aae96-b721-4d9d-9a7a-b8470b0959d8"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "furneta",
+      "input_identity": "Furneta, UAB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "304422048",
+      "canonical_official_name": "UAB \"Furneta\"",
+      "official_registered_municipality": "Alytaus rajono",
+      "official_registered_locality": "Kaniūkai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a2a3759b-8d69-497d-8d1e-ebcc294efdc0"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldturas-a-laseviciaus-ivv",
+      "input_identity": "Baldturas, A. Lasevičiaus IVV",
+      "input_city": "Alytus",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "pasmeta-lt",
+      "input_identity": "Pasmeta LT, MB",
+      "input_city": "Alytus",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldukas",
+      "input_identity": "Baldukas, MB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "306069344",
+      "canonical_official_name": "MB Baldukas",
+      "official_registered_municipality": "Alytaus rajono",
+      "official_registered_locality": "Kaniūkai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/2a5f677e-62ec-4c34-bae9-9a2a52002be9"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "ratuoti-sapnai",
+      "input_identity": "Ratuoti sapnai, MB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "307003404",
+      "canonical_official_name": "Ratuoti sapnai, MB",
+      "official_registered_municipality": "Alytaus miesto",
+      "official_registered_locality": "Alytus",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d439ce06-0e4e-4aea-ad72-b1eaf37997c4"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "nestandart",
+      "input_identity": "Nestandart, MB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "307132057",
+      "canonical_official_name": "MB \"nestandART\"",
+      "official_registered_municipality": "Alytaus miesto",
+      "official_registered_locality": "Alytus",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d02117b5-e8bd-4eb7-a25d-54746d817849"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "g-baldai",
+      "input_identity": "G baldai, MB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "307397002",
+      "canonical_official_name": "MB \"G BALDAI\"",
+      "official_registered_municipality": "Alytaus miesto",
+      "official_registered_locality": "Alytus",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a16c9f98-0de9-490a-bbaa-30eb9a36b2a5"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "mr-design",
+      "input_identity": "Mr design, MB",
+      "input_city": "Alytus",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "arpolis",
+      "input_identity": "Arpolis, UAB",
+      "input_city": "Alytus",
+      "match_status": "matched",
+      "company_code": "300614040",
+      "canonical_official_name": "UAB \"Arpolis\"",
+      "official_registered_municipality": "Alytaus rajono",
+      "official_registered_locality": "Geniai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fc31eb0b-30ac-4407-9fdb-cde1288cd3e1"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "suduvos-baldai-morita",
+      "input_identity": "Sūduvos baldai, UAB Morita",
+      "input_city": "Marijampolė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "medbalda",
+      "input_identity": "Medbalda, MB",
+      "input_city": "Marijampolė",
+      "match_status": "matched",
+      "company_code": "304442524",
+      "canonical_official_name": "MB \"Medbalda\"",
+      "official_registered_municipality": "Marijampolės",
+      "official_registered_locality": "Skardupiai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/b10f0487-37ee-454b-9d27-662d84485fd3"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "mood-furniture",
+      "input_identity": "Mood Furniture, UAB",
+      "input_city": "Marijampolė",
+      "match_status": "matched",
+      "company_code": "300108178",
+      "canonical_official_name": "UAB \"Mood Furniture\"",
+      "official_registered_municipality": "Marijampolės",
+      "official_registered_locality": "Marijampolė",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/69b41ff8-29bb-465e-9f38-138ca4e8b2fb"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "a-z-statyba",
+      "input_identity": "A-Z Statyba, UAB",
+      "input_city": "Marijampolė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "krivijas",
+      "input_identity": "Krivijas, UAB",
+      "input_city": "Marijampolė",
+      "match_status": "matched",
+      "company_code": "151262991",
+      "canonical_official_name": "UAB \"Krivijas\"",
+      "official_registered_municipality": "Marijampolės",
+      "official_registered_locality": "Marijampolė",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/de56f622-ce87-4d2a-ac19-f137146802ad"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "balduma-k-grigaitienes-firma",
+      "input_identity": "Balduma, K. Grigaitienės firma",
+      "input_city": "Marijampolė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "dzukijos-baldu-fabrikas",
+      "input_identity": "Dzūkijos baldų fabrikas",
+      "input_city": "Marijampolė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baltfur",
+      "input_identity": "Baltfur, UAB",
+      "input_city": "Marijampolė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "tipo-baldai",
+      "input_identity": "Tipo baldai, MB",
+      "input_city": "Utena",
+      "match_status": "matched",
+      "company_code": "306303263",
+      "canonical_official_name": "MB \"Tipo baldai\"",
+      "official_registered_municipality": "Utenos rajono",
+      "official_registered_locality": "Utena",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5438fe24-568a-49c1-8c3e-2d33be0fff33"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "furnistetika",
+      "input_identity": "Furnistetika, MB",
+      "input_city": "Utena",
+      "match_status": "matched",
+      "company_code": "306308755",
+      "canonical_official_name": "Furnistetika, MB",
+      "official_registered_municipality": "Utenos rajono",
+      "official_registered_locality": "Kiauliupys",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/073d3670-6262-4481-80c2-054a093b9cc0"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "kamadotbl",
+      "input_identity": "Kamadotbl, MB",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baltasis-bizonas",
+      "input_identity": "Baltasis bizonas, UAB",
+      "input_city": "Utena",
+      "match_status": "matched",
+      "company_code": "304231694",
+      "canonical_official_name": "UAB \"Baltasis bizonas\"",
+      "official_registered_municipality": "Utenos rajono",
+      "official_registered_locality": "Utena",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bcc50a71-b237-4c8f-9faa-d4c73e697f40"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "r-meistrai",
+      "input_identity": "R meistrai, MB",
+      "input_city": "Utena",
+      "match_status": "matched",
+      "company_code": "305665875",
+      "canonical_official_name": "MB \"R meistrai\"",
+      "official_registered_municipality": "Utenos rajono",
+      "official_registered_locality": "Jasonys",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/00dce3e3-f2b7-4179-b480-43c73c394a08"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldu-sprendimai",
+      "input_identity": "Baldų sprendimai, MB",
+      "input_city": "Utena",
+      "match_status": "matched",
+      "company_code": "306629348",
+      "canonical_official_name": "MB \"Baldų sprendimai\"",
+      "official_registered_municipality": "Utenos rajono",
+      "official_registered_locality": "Utena",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9d0a5e66-19a6-454c-ae41-bfe97d112d38"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "kokybisku-baldu-dirbtuves",
+      "input_identity": "Kokybiškų baldų dirbtuvės, MB",
+      "input_city": "Utena",
+      "match_status": "matched",
+      "company_code": "306650926",
+      "canonical_official_name": "MB \"Kokybiškų baldų dirbtuvės\"",
+      "official_registered_municipality": "Utenos rajono",
+      "official_registered_locality": "Vaikutėnai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9fa25856-4794-4683-92d3-d91b53d85581"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "medynmetis",
+      "input_identity": "Medynmetis, MB",
+      "input_city": "Utena",
+      "match_status": "matched",
+      "company_code": "306730856",
+      "canonical_official_name": "MB \"Medynmetis\"",
+      "official_registered_municipality": "Utenos rajono",
+      "official_registered_locality": "Kimėnai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/c1a37843-c2d5-4eda-8ff6-a24479929855"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "dalduva-ii",
+      "input_identity": "Dalduva, IĮ",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "roberto-laiptai",
+      "input_identity": "Roberto laiptai, UAB",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "gieva-s-trapikienes-firma",
+      "input_identity": "Gieva, S. Trapikienės firma",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "egidijaus-baldai",
+      "input_identity": "Egidijaus baldai, MB",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "rokiskio-baldai",
+      "input_identity": "Rokiškio baldai, MB",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "drilius",
+      "input_identity": "Drilius, MB",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "mariaus-baldu-studija",
+      "input_identity": "Mariaus baldų studija, MB",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "pickwood-lt",
+      "input_identity": "Pickwood LT, MB",
+      "input_city": "Utena",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "digio",
+      "input_identity": "Digio, MB",
+      "input_city": "Kėdainiai",
+      "match_status": "matched",
+      "company_code": "306162439",
+      "canonical_official_name": "MB Digio",
+      "official_registered_municipality": "Kėdainių rajono",
+      "official_registered_locality": "Šėta",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3a7f3bb3-62bf-43f4-97b9-67c09feaaa0f"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "m-pralgausko-imone",
+      "input_identity": "M. Pralgausko įmonė",
+      "input_city": "Kėdainiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "tomadeco",
+      "input_identity": "Tomadeco, MB",
+      "input_city": "Kėdainiai",
+      "match_status": "matched",
+      "company_code": "305724455",
+      "canonical_official_name": "MB Tomadeco",
+      "official_registered_municipality": "Kėdainių rajono",
+      "official_registered_locality": "Kėdainiai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3104f79f-8dbd-4754-ac89-6a38fa92c07b"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "darau-2",
+      "input_identity": "Darau 2, MB",
+      "input_city": "Kėdainiai",
+      "match_status": "matched",
+      "company_code": "305876580",
+      "canonical_official_name": "MB \"Darau 2\"",
+      "official_registered_municipality": "Kėdainių rajono",
+      "official_registered_locality": "Paaluonys",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/8f632100-87b4-41be-94c4-81633d2f2e83"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "luxury-furniture",
+      "input_identity": "Luxury furniture, UAB",
+      "input_city": "Kėdainiai",
+      "match_status": "matched",
+      "company_code": "306021189",
+      "canonical_official_name": "UAB \"Luxury furniture\"",
+      "official_registered_municipality": "Kėdainių rajono",
+      "official_registered_locality": "Kėdainiai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/220cc71a-ca5a-49ff-be5d-4b0bc887041b"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldmaris-nestandartiniu-baldu-gamyba",
+      "input_identity": "Baldmaris - nestandartinių baldų gamyba",
+      "input_city": "Tauragė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldu-cechas",
+      "input_identity": "Baldų cechas, MB",
+      "input_city": "Tauragė",
+      "match_status": "matched",
+      "company_code": "306263705",
+      "canonical_official_name": "MB \"Baldų cechas\"",
+      "official_registered_municipality": "Tauragės rajono",
+      "official_registered_locality": "Tauragė",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e6dea04f-3780-4b1f-b95a-34b3f825a046"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "tailida",
+      "input_identity": "Tailida, MB",
+      "input_city": "Tauragė",
+      "match_status": "matched",
+      "company_code": "307169696",
+      "canonical_official_name": "MB Tailida",
+      "official_registered_municipality": "Tauragės rajono",
+      "official_registered_locality": "Griežpelkiai I",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5af91c47-48f9-4678-91e9-0520f6d67865"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "silales-baldai",
+      "input_identity": "Šilalės baldai",
+      "input_city": "Tauragė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "ziliukai",
+      "input_identity": "Žiliukai, UAB",
+      "input_city": "Tauragė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "vilgma",
+      "input_identity": "Vilgma, MB",
+      "input_city": "Tauragė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "mdaspect",
+      "input_identity": "MDAspect, UAB",
+      "input_city": "Tauragė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "urtbalda",
+      "input_identity": "Urtbalda, MB",
+      "input_city": "Tauragė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "laterus",
+      "input_identity": "Laterus, UAB",
+      "input_city": "Ukmergė",
+      "match_status": "matched",
+      "company_code": "182728266",
+      "canonical_official_name": "UAB \"LATERUS\"",
+      "official_registered_municipality": "Ukmergės rajono",
+      "official_registered_locality": "Ukmergė",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/86c1e5c2-4064-4651-94e0-210222bff959"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "rebilda",
+      "input_identity": "Rebilda, UAB",
+      "input_city": "Ukmergė",
+      "match_status": "matched",
+      "company_code": "302885752",
+      "canonical_official_name": "UAB Rebilda",
+      "official_registered_municipality": "Ukmergės rajono",
+      "official_registered_locality": "Šemetiškiai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/7424199c-8de0-46de-92a3-4bb800a73e96"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "uzupio-baldai",
+      "input_identity": "Užupio baldai, MB",
+      "input_city": "Ukmergė",
+      "match_status": "matched",
+      "company_code": "304607367",
+      "canonical_official_name": "MB \"Užupio baldai\"",
+      "official_registered_municipality": "Ukmergės rajono",
+      "official_registered_locality": "Ukmergė",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e5360652-d630-4ea0-be7c-ea60a49338d7"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "sato-baldu-idejos",
+      "input_identity": "Sato baldų idėjos, MB",
+      "input_city": "Ukmergė",
+      "match_status": "matched",
+      "company_code": "306077348",
+      "canonical_official_name": "MB Sato baldų idėjos",
+      "official_registered_municipality": "Ukmergės rajono",
+      "official_registered_locality": "Krikštėnai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/94fc8dbf-97e9-4f81-9180-333ac68e2e01"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "narbutas-edge",
+      "input_identity": "Narbutas Edge, UAB",
+      "input_city": "Ukmergė",
+      "match_status": "matched",
+      "company_code": "307021466",
+      "canonical_official_name": "Narbutas Edge, UAB",
+      "official_registered_municipality": "Ukmergės rajono",
+      "official_registered_locality": "Ukmergė",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/21ba09b4-8d5d-4096-a4b6-b935f25493ed"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "gdm-creative",
+      "input_identity": "Gdm creative, MB",
+      "input_city": "Ukmergė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "narbutas-international",
+      "input_identity": "Narbutas International, UAB",
+      "input_city": "Ukmergė",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "albero-baldai",
+      "input_identity": "Albero baldai, MB",
+      "input_city": "Jonava",
+      "match_status": "matched",
+      "company_code": "305439851",
+      "canonical_official_name": "MB \"Albero baldai\"",
+      "official_registered_municipality": "Jonavos rajono",
+      "official_registered_locality": "Jonava",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/daaf1bef-2a15-4b38-b724-b8c0c57bc256"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "raimeta",
+      "input_identity": "Raimeta, MB",
+      "input_city": "Jonava",
+      "match_status": "matched",
+      "company_code": "305633571",
+      "canonical_official_name": "MB Raimeta",
+      "official_registered_municipality": "Jonavos rajono",
+      "official_registered_locality": "Pašiliai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bc78b9ce-a556-415b-872d-292a097f26b7"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "mingridas",
+      "input_identity": "Mingridas, UAB",
+      "input_city": "Jonava",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "balda",
+      "input_identity": "Balda, UAB",
+      "input_city": "Jonava",
+      "match_status": "matched",
+      "company_code": "304473249",
+      "canonical_official_name": "UAB \"Balda\"",
+      "official_registered_municipality": "Jonavos rajono",
+      "official_registered_locality": "Jonava",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9410d1ef-23d7-40d2-9690-537ef1067e36"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "esd-baldai",
+      "input_identity": "ESD baldai, UAB",
+      "input_city": "Jonava",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "balajano-slenio-baldai",
+      "input_identity": "Balajano slėnio baldai, MB",
+      "input_city": "Raseiniai",
+      "match_status": "matched",
+      "company_code": "307164852",
+      "canonical_official_name": "MB \"Balajano slėnio baldai\"",
+      "official_registered_municipality": "Raseinių rajono",
+      "official_registered_locality": "Raseiniai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/b3a583e2-863c-46c8-86b6-56b8fc358f29"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "vanago-miskas",
+      "input_identity": "Vanago miškas, MB",
+      "input_city": "Raseiniai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "medgamas",
+      "input_identity": "Medgamas, MB",
+      "input_city": "Raseiniai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "inscoco",
+      "input_identity": "Inscoco, UAB",
+      "input_city": "Raseiniai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "ravera",
+      "input_identity": "Ravera, MB",
+      "input_city": "Raseiniai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "uzuolas",
+      "input_identity": "Ūžuolas, MB",
+      "input_city": "Raseiniai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "vavap",
+      "input_identity": "Vavap, MB",
+      "input_city": "Raseiniai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "metalo-kalve",
+      "input_identity": "Metalo kalvė",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "k-viktoraviciaus-ivv",
+      "input_identity": "K. Viktoravičiaus IVV",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "zt-furni",
+      "input_identity": "ŽT furni, MB",
+      "input_city": "Telšiai",
+      "match_status": "matched",
+      "company_code": "305701321",
+      "canonical_official_name": "MB \"ŽT furni\"",
+      "official_registered_municipality": "Telšių rajono",
+      "official_registered_locality": "Telšiai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/928d7b61-cc79-458b-a067-fa9e50c00677"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "sandriaus-baldai",
+      "input_identity": "Sandriaus baldai, UAB",
+      "input_city": "Telšiai",
+      "match_status": "matched",
+      "company_code": "306673992",
+      "canonical_official_name": "UAB Sandriaus Baldai",
+      "official_registered_municipality": "Telšių rajono",
+      "official_registered_locality": "Rainiai",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/c999d75b-25ec-4f22-85fa-8da408d49ac9"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "augriva",
+      "input_identity": "Augriva, UAB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "medideja",
+      "input_identity": "Medidėja, UAB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "dazoma",
+      "input_identity": "Dažoma, UAB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "ajala",
+      "input_identity": "Ajala, UAB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "ryno",
+      "input_identity": "Ryno, UAB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "doko-sofa",
+      "input_identity": "Doko sofa, MB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "balduzis",
+      "input_identity": "Baldužis, UAB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "kazbaro-baldai",
+      "input_identity": "Kazbaro baldai, MB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "kneita",
+      "input_identity": "Kneita, MB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "benfok",
+      "input_identity": "Benfok, MB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "velmera",
+      "input_identity": "Velmera, MB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "plunges-baldai",
+      "input_identity": "Plungės baldai, UAB",
+      "input_city": "Telšiai",
+      "match_status": "not_found_in_register",
+      "public_details_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "source_collection_date": "2026-08-04"
+    }
+  ]
+}
