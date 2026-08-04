@@ -1,0 +1,4881 @@
+{
+  "research_method": "Bulk, cached review of existing public official-registry provenance and Rekvizitai public directory pages. A contact route is accepted only when the page exposes an exact matching company code and a direct telephone link. Code-less legacy rows are no-route after the documented registry check; no domain/contact is inferred.",
+  "source_collection_date": "2026-08-04",
+  "baseline_contactless_count": 255,
+  "results": [
+    {
+      "company_code": "",
+      "slug": "a-z-statyba",
+      "legal_name": "A-Z Statyba, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "ajala",
+      "legal_name": "Ajala, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "alantas-baldu-salonas",
+      "legal_name": "Alantas, baldų salonas, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "almyros-baldai-a-pakarnio-imone",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "augriva",
+      "legal_name": "Augriva, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "baldmaris-nestandartiniu-baldu-gamyba",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "baldturas-a-laseviciaus-ivv",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "baldu-linija-panevezys",
+      "legal_name": "Baldų linija, UAB Panevėžys",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "baldu-profai-delvisa",
+      "legal_name": "Baldų profai, UAB Delvisa",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "baldu-tvirtove-panevezys",
+      "legal_name": "Baldų tvirtovė, MB Panevėžys",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "balduma-k-grigaitienes-firma",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "balduzis",
+      "legal_name": "Baldužis, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "baltfur",
+      "legal_name": "Baltfur, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "bd-furniture",
+      "legal_name": "BD Furniture, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "benfok",
+      "legal_name": "Benfok, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "dalduva-ii",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "dazoma",
+      "legal_name": "Dažoma, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "doko-sofa",
+      "legal_name": "Doko sofa, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "dovaina",
+      "legal_name": "Dovaina, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "drilius",
+      "legal_name": "Drilius, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "dronga-medienos-meistrai",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "dzukijos-baldu-fabrikas",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "egidijaus-baldai",
+      "legal_name": "Egidijaus baldai, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "esd-baldai",
+      "legal_name": "ESD baldai, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "gieva-s-trapikienes-firma",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "gmdg-v-grinienes-ii",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "inoxi",
+      "legal_name": "Inoxi, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "inscoco",
+      "legal_name": "Inscoco, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "k-viktoraviciaus-ivv",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "kazbaro-baldai",
+      "legal_name": "Kazbaro baldai, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "kneita",
+      "legal_name": "Kneita, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "laumes-baldu-gamyba",
+      "legal_name": "Laumės baldų gamyba, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "mariaus-baldu-studija",
+      "legal_name": "Mariaus baldų studija, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "mbi-minkstu-baldu-ideja",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "mdaspect",
+      "legal_name": "MDAspect, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "medgamas",
+      "legal_name": "Medgamas, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "medideja",
+      "legal_name": "Medidėja, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "metalo-kalve",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "mingridas",
+      "legal_name": "Mingridas, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "minshape-m-jakucionio-ivv",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "mk-baldai",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "pajurio-baldai",
+      "legal_name": "Pajūrio baldai, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "pickwood-lt",
+      "legal_name": "Pickwood LT, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "plunges-baldai",
+      "legal_name": "Plungės baldai, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "ravera",
+      "legal_name": "Ravera, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "rejben-baldai",
+      "legal_name": "Rejben baldai, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "roberto-laiptai",
+      "legal_name": "Roberto laiptai, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "rokiskio-baldai",
+      "legal_name": "Rokiškio baldai, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "romanta",
+      "legal_name": "Romanta, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "ryno",
+      "legal_name": "Ryno, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "silales-baldai",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "suduvos-baldai-morita",
+      "legal_name": "Sūduvos baldai, UAB Morita",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "urtbalda",
+      "legal_name": "Urtbalda, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "uzuolas",
+      "legal_name": "Ūžuolas, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "vanago-miskas",
+      "legal_name": "Vanago miškas, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "vavap",
+      "legal_name": "Vavap, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "velmera",
+      "legal_name": "Velmera, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "vilgma",
+      "legal_name": "Vilgma, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "",
+      "slug": "ziliukai",
+      "legal_name": "Žiliukai, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "100016141710",
+      "slug": "x-baldai",
+      "legal_name": "D. Bražionio IVV",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://www.xbaldai.lt/",
+        "https://rekvizitai.vz.lt/en/company/d_brazionio_ivv/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "123645712",
+      "slug": "uzdaroji-akcine-bendrove-zbiga-123645712",
+      "legal_name": "Uždaroji akcinė bendrovė \"ZBIGA\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1714d119-b4c2-4e15-88e5-b6f4d494134b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/3abe4440-0301-4f48-b2c3-f8e20957bded",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8ec5a590-1894-49f5-9d29-e4f49d0655c7",
+        "https://rekvizitai.vz.lt/en/company/zbiga/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "123915741",
+      "slug": "uzdaroji-akcine-bendrove-balresta-123915741",
+      "legal_name": "Uždaroji akcinė bendrovė \"BALRESTA\"",
+      "public_phone": "+37052620773",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/balresta/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1830665c-1ecf-4d86-b143-ca3499afab8d",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cca52401-fd89-4dda-ab9c-8672e73b52cb",
+        "https://rekvizitai.vz.lt/en/company/balresta/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "124264828",
+      "slug": "uab-fenolita-124264828",
+      "legal_name": "Uždaroji akcinė bendrovė \"FENOLITA\"",
+      "public_phone": "+37069820048",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/fenolita/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1a197d41-7008-4e59-8881-28b9ef9ffc20",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/fenolita/",
+        "https://rekvizitai.vz.lt/en/company/fenolita/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "125510364",
+      "slug": "uab-anjaras-125510364",
+      "legal_name": "UAB \"ANJARAS\"",
+      "public_phone": "+37052152372",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/anjaras/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/041a8720-f52e-425a-b230-68441aecaee3",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/dce68bac-4e15-4b2f-9572-62879477b9e4",
+        "https://rekvizitai.vz.lt/en/company/anjaras/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "125751995",
+      "slug": "uab-julsata-125751995",
+      "legal_name": "UAB \"JULSATA\"",
+      "public_phone": "+37065656336",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/j_tamasausko_firma_julsata/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/00dce2de-6ce3-408a-ba74-2f2f57a86d53",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/j_tamasausko_firma_julsata/",
+        "https://rekvizitai.vz.lt/en/company/julsata/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "125773881",
+      "slug": "sigito-baciansko-individuali-imone-125773881",
+      "legal_name": "Sigito Baciansko individuali įmonė",
+      "public_phone": "+37052707104",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/sigito_baciansko_ii/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/05877d79-e88f-4ec8-aec0-154e7842aa5f",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/sigito_baciansko_ii/",
+        "https://rekvizitai.vz.lt/en/company/sigito_baciansko/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "126273181",
+      "slug": "uab-baldu-sistemos-126273181",
+      "legal_name": "UAB \"Baldų sistemos\"",
+      "public_phone": "+37064741220",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_sistemos/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/116a868b-3490-40dd-b119-1fa206213052",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/83c32051-1500-47d8-85b8-0098e152c794",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/883dfe14-b6fd-4942-ad14-90d2cde5417a",
+        "https://rekvizitai.vz.lt/en/company/baldu_sistemos/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "133386126",
+      "slug": "uab-freda-133386126",
+      "legal_name": "UAB \"Freda\"",
+      "public_phone": "+37037391212",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/freda/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/04e1dd8c-65ad-4aa2-b484-9e978c16a559",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/04fceef6-c85d-47d7-9e83-f97127375c40",
+        "https://rekvizitai.vz.lt/en/company/freda/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "133663349",
+      "slug": "uzdaroji-akcine-bendrove-litvaista-133663349",
+      "legal_name": "Uždaroji akcinė bendrovė \"Litvaista\"",
+      "public_phone": "+37069839943",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/litvaista/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/134e27db-7a28-405c-880f-ef6fa61a95cc",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f9ff65fa-7a53-444c-9d7c-a252e6d37146",
+        "https://rekvizitai.vz.lt/en/company/litvaista/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "135053451",
+      "slug": "uab-timo-verslas-135053451",
+      "legal_name": "UAB \"Timo verslas\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1731e9e2-f18b-422e-8e6a-ad74d36b1da4",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58ff770c-cd40-4cd3-aa7b-6cfd23b5d980",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f1f42667-a0b0-46bb-9ba6-c441651e498a",
+        "https://rekvizitai.vz.lt/en/company/timo_verslas/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "135499959",
+      "slug": "uab-aztrekas-135499959",
+      "legal_name": "UAB \"Aztrekas\"",
+      "public_phone": "+37037312506",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/aztrekas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/072cf424-b8e6-4465-b037-301878fb8127",
+        "https://rekvizitai.vz.lt/en/company/aztrekas/",
+        "https://rekvizitai.vz.lt/en/company/aztrekas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "135871110",
+      "slug": "uab-lukandra-135871110",
+      "legal_name": "UAB \"Lukandra\"",
+      "public_phone": "+37037563802",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/lukandra/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/179eb4b8-19b0-47ec-ade4-3896a417e89d",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d09fa89d-2c34-4375-9fb8-8040d9f30833",
+        "https://rekvizitai.vz.lt/en/company/lukandra/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "140258454",
+      "slug": "minijos-baldai",
+      "legal_name": "Minijos baldai, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/minijos_baldai/",
+        "https://rekvizitai.vz.lt/en/company/minijos_baldai/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "140656052",
+      "slug": "klaipedos-baldai",
+      "legal_name": "Klaipėdos baldai, UAB",
+      "public_phone": "+37069450451",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
+        "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "144333114",
+      "slug": "arta-a-burgailos-imone",
+      "legal_name": "",
+      "public_phone": "+37061730770",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/",
+        "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "145755086",
+      "slug": "baldu-aleja",
+      "legal_name": "Baldų alėja, UAB",
+      "public_phone": "+37041523478",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_aleja/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/baldu_aleja/",
+        "https://rekvizitai.vz.lt/en/company/baldu_aleja/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "148051482",
+      "slug": "uzdaroji-akcine-bendrove-medrika-148051482",
+      "legal_name": "Uždaroji akcinė bendrovė \"MEDRIKA\"",
+      "public_phone": "+37045516373",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/medrika/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0c048428-8544-4628-bbea-bca816dafe25",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9a5836b5-825f-472b-9223-bf095ee30b97",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1817961d-8016-4351-8adc-ee2e1ea91daf",
+        "https://rekvizitai.vz.lt/en/company/medrika/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "151262991",
+      "slug": "krivijas",
+      "legal_name": "Krivijas, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/de56f622-ce87-4d2a-ac19-f137146802ad",
+        "https://rekvizitai.vz.lt/en/company/krivijas/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "157689644",
+      "slug": "uab-joniskio-baldai-157689644",
+      "legal_name": "UAB \"Joniškio baldai\"",
+      "public_phone": "+37061118904",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uab_joniskio_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0bf0add1-ba1f-4bb5-ac27-712287577052",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/6ed9cb33-1d83-404d-a56b-11cba9a6b1b0",
+        "https://rekvizitai.vz.lt/en/company/uab_joniskio_baldai/",
+        "https://rekvizitai.vz.lt/en/company/joniskio_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "160289293",
+      "slug": "uzdaroji-akcine-bendrove-medinedas-160289293",
+      "legal_name": "Uždaroji akcinė bendrovė \"Medinedas\"",
+      "public_phone": "+37037563836",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/medinedas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0f787dba-60c7-4281-b4df-ab66ddf80bf5",
+        "https://rekvizitai.vz.lt/en/company/medinedas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "161637614",
+      "slug": "m-pralgausko-imone",
+      "legal_name": "",
+      "public_phone": "+37034756278",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/",
+        "https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "163314524",
+      "slug": "sakuona",
+      "legal_name": "Sakuona, UAB",
+      "public_phone": "+37046440241",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/sakuona/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/sakuona/",
+        "https://rekvizitai.vz.lt/en/company/sakuona/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "164741529",
+      "slug": "uab-agla-164741529",
+      "legal_name": "UAB \"AGLA\"",
+      "public_phone": "+37068622156",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/agla/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/13650c1a-b395-4ad8-a466-17850f6f771a",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/e2d5722d-a0cf-4bce-be13-f6b2cbbf6f9c",
+        "https://rekvizitai.vz.lt/en/company/agla/",
+        "https://rekvizitai.vz.lt/en/company/agla/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "171703525",
+      "slug": "uab-tigna-171703525",
+      "legal_name": "UAB \"Tigna\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/13020d93-c953-4c3c-9c8d-984176711632",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9c609953-2e4c-46cf-90d1-40ab676e6291",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/feda7c84-2ff1-4278-9f7e-49e4cf81aaac",
+        "https://rekvizitai.vz.lt/en/company/tigna/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "179463167",
+      "slug": "ii-a-gaizausko-imone-miltauja-179463167",
+      "legal_name": "IĮ A. Gaižausko imonė \"Miltauja\"",
+      "public_phone": "+37044670012",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/a_gaizausko_imone_miltauja/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0a935d14-bcf6-4510-9715-fe32b360070d",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/bc3289be-f582-417b-ad4b-4d6db10fc2dd",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/99234df6-ef34-4dd3-94f8-cb1fe9124a2b",
+        "https://rekvizitai.vz.lt/en/company/a_gaizausko_imone_miltauja/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "179749033",
+      "slug": "egidijaus-kino-imone-179749033",
+      "legal_name": "Egidijaus Kino įmonė",
+      "public_phone": "+37044661660",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/egidijaus_kino_imone/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0cc58516-57d8-4129-81ba-580ccdb2a105",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/431396ae-8163-46d2-9bdf-e228d4efddfa",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ed55631c-eafa-4a02-8410-5bd5f3f9600c",
+        "https://rekvizitai.vz.lt/en/company/egidijaus_kino_imone/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "180205242",
+      "slug": "s-baublio-veterinarijos-ambulatorija-180205242",
+      "legal_name": "S. Baublio veterinarijos ambulatorija",
+      "public_phone": "+37069885261",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/s_baublio_veterinarijos_ambulatorija/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/00b3c8ce-d8a1-44ca-a42f-a09542f8d83b",
+        "https://rekvizitai.vz.lt/en/company/s_baublio_veterinarijos_ambulatorija/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "182728266",
+      "slug": "laterus",
+      "legal_name": "Laterus, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/86c1e5c2-4064-4651-94e0-210222bff959",
+        "https://rekvizitai.vz.lt/en/company/laterus/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "224476650",
+      "slug": "uzdaroji-akcine-bendrove-riardzis-224476650",
+      "legal_name": "Uždaroji akcinė bendrovė \"RIARDŽIS\"",
+      "public_phone": "+37069926350",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/riardzis/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0277f331-f047-4176-9f90-584874ffe260",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/riardzis/",
+        "https://rekvizitai.vz.lt/en/company/riardzis/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "234003980",
+      "slug": "uzdaroji-akcine-bendrove-saloza-234003980",
+      "legal_name": "Uždaroji akcinė bendrovė \"Saloža\"",
+      "public_phone": "+37037341391",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/saloza/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/059b49ca-6ec7-4994-b43e-ad7929a8964e",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/daf27939-e08a-4f36-840d-75f1cbd0d9b1",
+        "https://rekvizitai.vz.lt/en/company/saloza/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "2413959",
+      "slug": "aurimo-baldai",
+      "legal_name": "",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://aurimobaldai.lt/",
+        "https://rekvizitai.vz.lt/en/company/aurimo_baldai/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "251237590",
+      "slug": "uzdaroji-akcine-bendrove-marijampoles-komprojektas-251237590",
+      "legal_name": "Uždaroji akcinė bendrovė \"Marijampolės komprojektas\"",
+      "public_phone": "+37065233617",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/marijampoles_komprojektas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1713d1bf-4f65-4a26-ad92-b67499e43e93",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/4e3f67cd-9e28-4bce-a93d-f1b11fab6779",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f1a284a8-81a7-47a0-ace7-fb08349f7f99",
+        "https://rekvizitai.vz.lt/en/company/marijampoles_komprojektas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "255973180",
+      "slug": "uab-vagensas-255973180",
+      "legal_name": "UAB \"VAGENSAS\"",
+      "public_phone": "+37038670727",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldai_vagensas_parduotuve/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0800a43b-e04a-4d3a-a217-2ef4d902709d",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f8f8c4c8-ad7b-47e5-b786-e45a582163dc",
+        "https://rekvizitai.vz.lt/en/company/baldai_vagensas_parduotuve/",
+        "https://rekvizitai.vz.lt/en/company/vagensas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "258888760",
+      "slug": "nerijaus-bucio-imone-258888760",
+      "legal_name": "Nerijaus Bučio įmonė",
+      "public_phone": "+37069962778",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/n_bucio/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/138b38ce-dbe2-41f1-8313-af3f2c5e28db",
+        "https://rekvizitai.vz.lt/en/company/n_bucio/",
+        "https://rekvizitai.vz.lt/en/company/nerijaus_bucio_imone/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300003654",
+      "slug": "uab-ego-verus-300003654",
+      "legal_name": "UAB \"Ego verus\"",
+      "public_phone": "+37060107071",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/ego_verus/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/145e65aa-86cc-4a86-a7eb-399469aac5c5",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/ego_verus/",
+        "https://rekvizitai.vz.lt/en/company/ego_verus/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300004336",
+      "slug": "uab-eega1-300004336",
+      "legal_name": "UAB \"EEGA1\"",
+      "public_phone": "+37065030971",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/eega1/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/08cb0e7f-b10c-4053-af43-1c90a59acc73",
+        "https://rekvizitai.vz.lt/en/company/eega1/",
+        "https://rekvizitai.vz.lt/en/company/eega1/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300032531",
+      "slug": "uab-visagino-linija-300032531",
+      "legal_name": "UAB \"Visagino linija\"",
+      "public_phone": "+37061899300",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/visagino_linija/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/00fec2f6-dcce-4a06-827e-aa52261719e2",
+        "https://rekvizitai.vz.lt/en/company/visagino_linija/",
+        "https://rekvizitai.vz.lt/en/company/visagino_linija/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300050141",
+      "slug": "uab-bhk-lietuva-300050141",
+      "legal_name": "UAB \"BHK Lietuva\"",
+      "public_phone": "+37038650045",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/bhk_lietuva/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0fd96b3a-b45a-4ea5-a61e-5a1645144033",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/93292ad2-64bb-48e0-92c0-135591d773fa",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/411fb9e3-a3f3-437c-97b1-b882e2adb55b",
+        "https://rekvizitai.vz.lt/en/company/bhk_lietuva/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300085719",
+      "slug": "uab-cps-engineering-300085719",
+      "legal_name": "UAB \"CPS Engineering\"",
+      "public_phone": "+37067054370",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/cps_engineering/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/18f072c7-0105-466c-95c5-5c77294deb32",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/cps_engineering/",
+        "https://rekvizitai.vz.lt/en/company/cps_engineering/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300098524",
+      "slug": "vilmers-uab-300098524",
+      "legal_name": "Vilmers UAB",
+      "public_phone": "+37041545134",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/litsofa/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/05e60422-63e5-4c46-923c-489efeec1590",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
+        "https://rekvizitai.vz.lt/en/company/litsofa/",
+        "https://rekvizitai.vz.lt/en/company/vilmers/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300104258",
+      "slug": "uab-sk-design-300104258",
+      "legal_name": "UAB \"SK Design\"",
+      "public_phone": "+37038731380",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/sk_design/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/04a7da35-1f01-40b6-89b1-3f0376b4fd8b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/fb784ca6-1889-4a2f-a24c-890a8e0e1120",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e1c31477-3f70-4c2f-a864-69183a687320",
+        "https://rekvizitai.vz.lt/en/company/sk_design/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300108178",
+      "slug": "mood-furniture",
+      "legal_name": "Mood Furniture, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/69b41ff8-29bb-465e-9f38-138ca4e8b2fb",
+        "https://rekvizitai.vz.lt/en/company/mood_furniture/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300132909",
+      "slug": "uab-ctt-300132909",
+      "legal_name": "UAB \"CTT\"",
+      "public_phone": "+37067874277",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/ctt/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0c4766b3-f14c-4721-9213-20c59461a2a6",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/411bde2d-5967-4e50-8c00-b7eb9f280de8",
+        "https://rekvizitai.vz.lt/en/company/ctt/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300591314",
+      "slug": "narbutas-international",
+      "legal_name": "Narbutas International, UAB",
+      "public_phone": "+37052107922",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/narbutas_international/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/narbutas_international/",
+        "https://rekvizitai.vz.lt/en/company/narbutas_international/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300591314",
+      "slug": "uab-narbutas-international-300591314",
+      "legal_name": "UAB \"Narbutas International\"",
+      "public_phone": "+37052107922",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/narbutas_international/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1610ed41-120b-4f20-80ad-91da6a0a483a",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/narbutas_international/",
+        "https://rekvizitai.vz.lt/en/company/narbutas_international/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300614040",
+      "slug": "arpolis",
+      "legal_name": "Arpolis, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fc31eb0b-30ac-4407-9fdb-cde1288cd3e1",
+        "https://rekvizitai.vz.lt/en/company/arpolis/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300646141",
+      "slug": "ii-arominda-300646141",
+      "legal_name": "IĮ \"Arominda\"",
+      "public_phone": "+37060184566",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/ii_arominda/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0008cdfd-d324-4d83-b00b-90115a1383fa",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/02c47f40-8032-4661-a73d-153552dbcb58",
+        "https://rekvizitai.vz.lt/en/company/ii_arominda/",
+        "https://rekvizitai.vz.lt/en/company/arominda/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300647357",
+      "slug": "uab-forneris-300647357",
+      "legal_name": "UAB \"Forneris\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/16ce77d7-8726-49f3-94d0-6f77dd95fbe4",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cfe20525-fca5-40e7-89e1-efb79bd28f5c",
+        "https://rekvizitai.vz.lt/en/company/forneris/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300657700",
+      "slug": "uab-ar-studio-300657700",
+      "legal_name": "UAB \"AR - STUDIO\"",
+      "public_phone": "+37061033663",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uab_ar_studio/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/19243bf1-b70c-4ac2-a275-b904591509f6",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/uab_ar_studio/",
+        "https://rekvizitai.vz.lt/en/company/ar_studio/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "300832459",
+      "slug": "uab-inovacijos-ir-sprendimai-300832459",
+      "legal_name": "UAB \"Inovacijos ir sprendimai\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/192e486f-6782-4dcc-9576-b39cb3188fa3",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/599a7fce-637a-48fa-851a-9b871d69e7a4",
+        "https://rekvizitai.vz.lt/en/company/inovacijos_ir_sprendimai/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "301089656",
+      "slug": "uab-esd-baldai-301089656",
+      "legal_name": "UAB \"ESD baldai\"",
+      "public_phone": "+37068745141",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/esd_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/11801649-ec7c-4441-8040-3eaed425455a",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9106cb72-2142-4882-a44e-333c184db11e",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d43db99c-0280-4c8b-8c11-e924637cb925",
+        "https://rekvizitai.vz.lt/en/company/esd_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "301537376",
+      "slug": "uab-minora-301537376",
+      "legal_name": "UAB \"Minora\"",
+      "public_phone": "+37062037871",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uab_minora/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/12a39e41-2965-4768-9f63-77be5307815c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
+        "https://rekvizitai.vz.lt/en/company/uab_minora/",
+        "https://rekvizitai.vz.lt/en/company/minora/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "301696898",
+      "slug": "uab-sonavita-301696898",
+      "legal_name": "UAB \"SONAVITA\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0d10e959-f5b0-49a5-a4f3-0898b0b3fdfa",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d3dad691-475f-4e04-85e2-ea97d74f24f1",
+        "https://rekvizitai.vz.lt/en/company/sonavita/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "301785585",
+      "slug": "uab-s2s-301785585",
+      "legal_name": "UAB \"S2S\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0c3584b4-17b1-4412-8b6a-4b8be4d5eea9",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/uab_s2s/",
+        "https://rekvizitai.vz.lt/en/company/s2s/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "301887572",
+      "slug": "uab-kitaip-301887572",
+      "legal_name": "UAB \"KITAIP\"",
+      "public_phone": "+37052656649",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uab_kitaip/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0d23357b-dc81-48c4-b6e3-82637b8f1007",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/uab_kitaip/",
+        "https://rekvizitai.vz.lt/en/company/kitaip/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302327402",
+      "slug": "uzdaroji-akcine-bendrove-mantisa-302327402",
+      "legal_name": "Uždaroji akcinė bendrovė \"MANTISA\"",
+      "public_phone": "+37068044024",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uab_mantisa/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/11f9d145-81fb-4084-b6dc-b036934f4b6b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/uab_mantisa/",
+        "https://rekvizitai.vz.lt/en/company/mantisa/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302430459",
+      "slug": "uab-smv-projektai-302430459",
+      "legal_name": "UAB \"SMV projektai\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e761547-b70b-4fe5-9b17-506308fe7797",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/4665db2a-001a-465c-9a8f-87a274c8059c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c30f68b5-de40-455b-a6a2-da1b87783bc0",
+        "https://rekvizitai.vz.lt/en/company/smv_projektai/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302453276",
+      "slug": "uab-real-vision-302453276",
+      "legal_name": "UAB \"Real Vision\"",
+      "public_phone": "+37068948536",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uab_real_vision/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e0e0579-a5e8-4997-810c-aa0a6bad659c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://rekvizitai.vz.lt/en/company/uab_real_vision/",
+        "https://rekvizitai.vz.lt/en/company/real_vision/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302469437",
+      "slug": "uab-korsara-302469437",
+      "legal_name": "UAB \"Korsara\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0796fc00-b7f4-4ce8-a075-5befc01da1af",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7dbe0b72-0678-4455-815b-1b4a2ee487d4",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3e98d0e3-c19f-44f3-b22e-9c3a1550c380",
+        "https://rekvizitai.vz.lt/en/company/korsara/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302495535",
+      "slug": "ideju-aleja-uab-302495535",
+      "legal_name": "Idėjų alėja, UAB",
+      "public_phone": "+37061554549",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/ideju_aleja/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/164300d1-abf9-48c9-9f3b-a4a97cebcaa7",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ad173e15-5572-4065-8279-10e6eba6aa8a",
+        "https://rekvizitai.vz.lt/en/company/ideju_aleja/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302526443",
+      "slug": "uab-eltino-302526443",
+      "legal_name": "UAB \"ELTINO\"",
+      "public_phone": "+37065506564",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uab_eltino/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1977aee7-6c02-4d43-a4c2-611c2ce242c7",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/uab_eltino/",
+        "https://rekvizitai.vz.lt/en/company/eltino/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302532624",
+      "slug": "uab-ofus-302532624",
+      "legal_name": "UAB \"Ofus\"",
+      "public_phone": "+37060196019",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/ofus/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0fe31370-aa80-454e-9a7c-dc796a796f2e",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/72224068-8dfc-4cd9-bc10-a23903b50532",
+        "https://rekvizitai.vz.lt/en/company/ofus/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302539095",
+      "slug": "uab-lacio-302539095",
+      "legal_name": "UAB \"Lacio\"",
+      "public_phone": "+37068262583",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/lacio/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/178138db-17da-45f0-89ae-e45fe77681cb",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ee291b6f-3524-4fa1-96c1-1d73950cdb0b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/6c4cd700-a6d4-46f7-bc8f-cdac94a1f2aa",
+        "https://rekvizitai.vz.lt/en/company/lacio/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302542006",
+      "slug": "uab-kensa-302542006",
+      "legal_name": "UAB \"Kensa\"",
+      "public_phone": "+37066422322",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/kensa/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/05e58e89-b527-4ef9-b70d-48c17bc59322",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c0ee2055-2917-4557-b24b-5da6d605aa4e",
+        "https://rekvizitai.vz.lt/en/company/kensa/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302542853",
+      "slug": "deccorus",
+      "legal_name": "Deccorus, UAB",
+      "public_phone": "+37031551384",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/deccorus/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/89155c6d-9656-4297-91ce-2e99770a2d2b",
+        "https://rekvizitai.vz.lt/en/company/deccorus/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302556080",
+      "slug": "uab-mirandeka-302556080",
+      "legal_name": "UAB \"Mirandeka\"",
+      "public_phone": "+37065656167",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/mirandeka/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0be36cfb-3f6e-4173-b412-22c8ca24a7b2",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/mirandeka/",
+        "https://rekvizitai.vz.lt/en/company/mirandeka/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302563491",
+      "slug": "uab-laisves-baldai-302563491",
+      "legal_name": "UAB \"Laisvės baldai\"",
+      "public_phone": "+37061402748",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/klipas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/187ec089-55d0-4c81-ac44-1e0471330836",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/klipas/",
+        "https://rekvizitai.vz.lt/en/company/laisves_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302568620",
+      "slug": "uab-geri-amatai-302568620",
+      "legal_name": "UAB \"Geri amatai\"",
+      "public_phone": "+37067508704",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/geri_amatai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/119576cd-37ed-4bc5-a6b7-b9ade6c0da2d",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://rekvizitai.vz.lt/en/company/geri_amatai/",
+        "https://rekvizitai.vz.lt/en/company/geri_amatai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302678383",
+      "slug": "uab-vilgma-gi-302678383",
+      "legal_name": "UAB VILGMA GI",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/18507f13-0a6b-4926-aa83-fc92401878bc",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f71cd4af-d473-4bc8-a8f7-2c135c01bded",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/29882d38-1f9a-4a87-a83f-f9c9cd8f115c",
+        "https://rekvizitai.vz.lt/en/company/vilgma_gi/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302680509",
+      "slug": "uab-ms-baldai-302680509",
+      "legal_name": "UAB \"MS baldai\"",
+      "public_phone": "+37067981195",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/ms_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e606202-073c-46c9-9149-434440da9e1b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/7eb2b38c-15ca-4508-b149-59789efe93b8",
+        "https://rekvizitai.vz.lt/en/company/ms_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302711050",
+      "slug": "uab-fika-lt-302711050",
+      "legal_name": "UAB FIKA LT",
+      "public_phone": "+37037211979",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uab_pifka/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03dfe5bb-f465-49f2-930b-9897792e9945",
+        "https://rekvizitai.vz.lt/en/company/uab_pifka/",
+        "https://rekvizitai.vz.lt/en/company/fika_lt/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302719951",
+      "slug": "tribus",
+      "legal_name": "Tribus, UAB",
+      "public_phone": "+37065617811",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/tribus/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/0ee25618-44a3-4e25-968d-7bbe1c41204c",
+        "https://rekvizitai.vz.lt/en/company/tribus/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302743411",
+      "slug": "uab-robenas-302743411",
+      "legal_name": "UAB \"Robenas\"",
+      "public_phone": "+37067805778",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/bebro_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/13503475-2aa7-49d0-b3f9-65a289c20d1c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
+        "https://rekvizitai.vz.lt/en/company/bebro_baldai/",
+        "https://rekvizitai.vz.lt/en/company/robenas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302761402",
+      "slug": "uab-stilforma-302761402",
+      "legal_name": "UAB \"Stilforma\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e5ed18a-f1ea-488c-8e7a-fde2aa5a50c7",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cf1d8f14-ba8f-4cc6-ab38-c92d661363d8",
+        "https://rekvizitai.vz.lt/en/company/stilforma/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "302885752",
+      "slug": "rebilda",
+      "legal_name": "Rebilda, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/7424199c-8de0-46de-92a3-4bb800a73e96",
+        "https://rekvizitai.vz.lt/en/company/rebilda/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303022154",
+      "slug": "uab-korela-303022154",
+      "legal_name": "UAB KORELA",
+      "public_phone": "+37068694869",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/korela/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/153246f0-a399-41e3-a734-8d659f6a8012",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/8f3601da-4356-4fa8-9aaa-a1e3aba105c4",
+        "https://rekvizitai.vz.lt/en/company/korela/",
+        "https://rekvizitai.vz.lt/en/company/korela/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303056929",
+      "slug": "mb-stilo-baldai-303056929",
+      "legal_name": "MB \"Stilo baldai\"",
+      "public_phone": "+37067753439",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/stilo_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/17eb3411-80ad-460d-ad3e-f59a45adee4c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/291a93c7-5b5b-46aa-be1f-222388cf2636",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5d589c9b-3fc4-4aa8-8103-17eb0cf88ceb",
+        "https://rekvizitai.vz.lt/en/company/stilo_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303126904",
+      "slug": "uab-artus-lt-303126904",
+      "legal_name": "UAB \"Artus LT\"",
+      "public_phone": "+37061813838",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/artus_lt/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/10843ef4-a4c2-4718-89d2-71306a20fb46",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/eb0476da-ba37-4956-b147-faf7f2b09339",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/624ddf4a-c4c0-41ab-9bbe-44f83fde5a63",
+        "https://rekvizitai.vz.lt/en/company/artus_lt/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303192562",
+      "slug": "uab-magnum-reditus-303192562",
+      "legal_name": "UAB \"Magnum reditus\"",
+      "public_phone": "+37067957939",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/magnum_reditus/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0baa86cf-f2fa-4457-9533-4fc74f16e308",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/25bb5495-6692-4d7e-aafd-a4cf4cd3bd30",
+        "https://rekvizitai.vz.lt/en/company/magnum_reditus/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303242378",
+      "slug": "uab-rigresta-303242378",
+      "legal_name": "UAB \"Rigresta\"",
+      "public_phone": "+37060022500",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/rigresta/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0d482686-c8c0-4e71-ae98-5d7c4ec80534",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/d897caa9-fdac-42ab-b78b-2bb4db0b8d6a",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/00007209-12f6-49f6-9720-af28a5fca67b",
+        "https://rekvizitai.vz.lt/en/company/rigresta/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303245214",
+      "slug": "uab-nero-baldai-303245214",
+      "legal_name": "UAB \"Nero baldai\"",
+      "public_phone": "+37065018399",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/nero_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/11cb98e9-dd66-42b3-a929-50bd4541a8c8",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://rekvizitai.vz.lt/en/company/nero_baldai/",
+        "https://rekvizitai.vz.lt/en/company/nero_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303301150",
+      "slug": "uab-milpra-303301150",
+      "legal_name": "UAB \"Milpra\"",
+      "public_phone": "+37060428238",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/milpra/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/04018f97-bade-460c-9919-0ece32673bca",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d26f2a7f-df7d-4622-a7f1-5a852511300a",
+        "https://rekvizitai.vz.lt/en/company/milpra/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303332085",
+      "slug": "kesna",
+      "legal_name": "Kesna, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/kesna/",
+        "https://rekvizitai.vz.lt/en/company/kesna/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "303927859",
+      "slug": "uab-baldu-svaja-303927859",
+      "legal_name": "UAB \"Baldų svaja\"",
+      "public_phone": "+37060606924",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_svaja/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0cd6476d-9e0b-46d8-835e-0fbbc8581431",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://rekvizitai.vz.lt/en/company/baldu_svaja/",
+        "https://rekvizitai.vz.lt/en/company/baldu_svaja/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304048440",
+      "slug": "uab-baldu-tonas-304048440",
+      "legal_name": "UAB \"Baldų tonas\"",
+      "public_phone": "+37068304583",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_tonas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/17d4743d-4af4-4799-89ac-fccac52fda65",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f2562716-7c65-471e-b93d-5bc35c4703e0",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ebe9d25e-4e27-43aa-beba-95e5f54886dd",
+        "https://rekvizitai.vz.lt/en/company/baldu_tonas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304098482",
+      "slug": "mb-baldu-gaminiai-304098482",
+      "legal_name": "MB \"Baldų gaminiai\"",
+      "public_phone": "+37061010085",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_gaminiai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/032b7679-505e-475d-9e3d-19c36456fffc",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/e44e30fc-52be-4cf1-9010-0a9d07862dbc",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8346ec3d-637d-4a2f-bbe5-48ff7551d46a",
+        "https://rekvizitai.vz.lt/en/company/baldu_gaminiai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304103246",
+      "slug": "uab-dominyko-projektai-304103246",
+      "legal_name": "UAB \"Dominyko projektai\"",
+      "public_phone": "+37060424328",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/dominyko_projektai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/124e6515-ef09-4ac3-bc40-d62b73cf363c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/dominyko_projektai/",
+        "https://rekvizitai.vz.lt/en/company/dominyko_projektai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304106769",
+      "slug": "uab-kadeira-304106769",
+      "legal_name": "UAB \"Kadeira\"",
+      "public_phone": "+37060994028",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/kadeira/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0b2c6ff0-9bd9-458a-bce0-fd0495050161",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1006dc27-1cc6-404d-b9c1-89a081b4bc3f",
+        "https://rekvizitai.vz.lt/en/company/kadeira/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304137444",
+      "slug": "baldociai",
+      "legal_name": "Baldočiai, UAB",
+      "public_phone": "+37060158322",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldociai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a81aae96-b721-4d9d-9a7a-b8470b0959d8",
+        "https://rekvizitai.vz.lt/en/company/baldociai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304171090",
+      "slug": "uab-arnitana-304171090",
+      "legal_name": "UAB \"Arnitana\"",
+      "public_phone": "+37061657237",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/arnitana/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1664bf69-7747-4ca1-83a3-64ccde4e666e",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7fcc067a-2f75-4bb3-9a61-3a066b8490d6",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e9f5cb85-30a2-402c-b86b-74b2e7ec7856",
+        "https://rekvizitai.vz.lt/en/company/arnitana/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304186306",
+      "slug": "uab-alneka-304186306",
+      "legal_name": "UAB \"Alneka\"",
+      "public_phone": "+37064118888",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/alneka/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0c10d385-6d63-42bb-a1bb-c96cdeae05cc",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/alneka/",
+        "https://rekvizitai.vz.lt/en/company/alneka/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304222065",
+      "slug": "uab-piluka-304222065",
+      "legal_name": "UAB \"Piluka\"",
+      "public_phone": "+37060370460",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/piluka/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/02cc7ec2-c399-44cf-8109-c45d08fbec4c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/edd2d858-3dbf-471a-b924-b9d1a5caa83a",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/2914e4fc-3a83-43fe-af5d-ed0c2f85dee6",
+        "https://rekvizitai.vz.lt/en/company/piluka/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304231694",
+      "slug": "baltasis-bizonas",
+      "legal_name": "Baltasis bizonas, UAB",
+      "public_phone": "+37063700070",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bcc50a71-b237-4c8f-9faa-d4c73e697f40",
+        "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304231694",
+      "slug": "uab-baltasis-bizonas-304231694",
+      "legal_name": "UAB \"Baltasis bizonas\"",
+      "public_phone": "+37063700070",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/02925f56-0c94-4c27-a478-e717af454316",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/abc51f64-c334-4644-a0ca-56ba963727ae",
+        "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/",
+        "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304231819",
+      "slug": "jogusta",
+      "legal_name": "UAB Jogusta",
+      "public_phone": "+37065475140",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/jogusta/"
+      ],
+      "checked_source_urls": [
+        "https://rekvizitai.vz.lt/en/company/jogusta/",
+        "https://rekvizitai.vz.lt/en/company/jogusta/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304291360",
+      "slug": "mb-interius-304291360",
+      "legal_name": "MB \"Interius\"",
+      "public_phone": "+37065532313",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/interius/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0ed51d20-d29c-4a85-904f-2d0b34cb74cd",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9c2fe601-3524-4434-84a1-ebaf4b0651f2",
+        "https://rekvizitai.vz.lt/en/company/interius/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304395996",
+      "slug": "uab-algideja-304395996",
+      "legal_name": "UAB \"Algidėja\"",
+      "public_phone": "+37060766969",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/algideja/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1158e540-82d8-4ba0-a689-a2838f1ab4d8",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/827c6d9b-b6dc-497d-a473-8f87998f4202",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f9bbc76b-bd58-4386-b477-db24076d7cdb",
+        "https://rekvizitai.vz.lt/en/company/algideja/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304418854",
+      "slug": "uab-skaisteriai-nt-304418854",
+      "legal_name": "UAB \"Skaisteriai NT\"",
+      "public_phone": "+37068571762",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/skaisteriai_nt/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/19ecc3d7-093e-4193-9447-6a6813dcc134",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/0ec8a05f-1b1e-4e13-9105-6e8736263437",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/6174dffe-02e4-46a4-9848-ea018e22d34f",
+        "https://rekvizitai.vz.lt/en/company/skaisteriai_nt/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304422048",
+      "slug": "furneta",
+      "legal_name": "Furneta, UAB",
+      "public_phone": "+37061134883",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/furneta/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a2a3759b-8d69-497d-8d1e-ebcc294efdc0",
+        "https://rekvizitai.vz.lt/en/company/furneta/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304442524",
+      "slug": "medbalda",
+      "legal_name": "Medbalda, MB",
+      "public_phone": "+37061836239",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/medbalda/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/b10f0487-37ee-454b-9d27-662d84485fd3",
+        "https://rekvizitai.vz.lt/en/company/medbalda/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304459872",
+      "slug": "uab-domingus-304459872",
+      "legal_name": "UAB \"Domingus\"",
+      "public_phone": "+37067834533",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/domingus/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0ab2e074-0431-496f-ba0e-73ca70a54df2",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/d249d60f-d315-4a4f-893f-a0c4cbb790ce",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/4c080294-e878-40b6-aecf-8e621d2a5341",
+        "https://rekvizitai.vz.lt/en/company/domingus/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304473249",
+      "slug": "balda",
+      "legal_name": "Balda, UAB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9410d1ef-23d7-40d2-9690-537ef1067e36",
+        "https://rekvizitai.vz.lt/en/company/balda/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304521861",
+      "slug": "mb-aistis-ir-rokas-304521861",
+      "legal_name": "MB \"Aistis ir Rokas\"",
+      "public_phone": "+37068693390",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/aistis_ir_rokas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/09b21f6f-8739-40ea-8ef5-d324079eeac7",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/aistis_ir_rokas/",
+        "https://rekvizitai.vz.lt/en/company/aistis_ir_rokas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304607367",
+      "slug": "uzupio-baldai",
+      "legal_name": "Užupio baldai, MB",
+      "public_phone": "+37063010032",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/uzupio_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e5360652-d630-4ea0-be7c-ea60a49338d7",
+        "https://rekvizitai.vz.lt/en/company/uzupio_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304835958",
+      "slug": "mb-pintora-304835958",
+      "legal_name": "MB \"Pintora\"",
+      "public_phone": "+37062077788",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/pintora/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0d48af0d-69cc-4d07-82ec-4b026aab5a49",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9c609953-2e4c-46cf-90d1-40ab676e6291",
+        "https://rekvizitai.vz.lt/en/company/pintora/",
+        "https://rekvizitai.vz.lt/en/company/pintora/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304840040",
+      "slug": "ii-vysniu-baldai-304840040",
+      "legal_name": "IĮ \"Vyšnių baldai\"",
+      "public_phone": "+37062080250",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/vysniu_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/05e8803f-0618-49c3-9975-5f21f8b35d33",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/c93596f4-47a5-4d24-ad61-2e90878c8142",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f8f70e50-1a50-4147-8375-ebb823174e9d",
+        "https://rekvizitai.vz.lt/en/company/vysniu_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304885612",
+      "slug": "uab-evprojektas-304885612",
+      "legal_name": "UAB \"Evprojektas\"",
+      "public_phone": "+37065645270",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/evprojektas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/00cfb476-f57c-4d04-997e-4076b9d66ada",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/evprojektas/",
+        "https://rekvizitai.vz.lt/en/company/evprojektas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304887143",
+      "slug": "uab-aikstis-304887143",
+      "legal_name": "UAB \"Aikštis\"",
+      "public_phone": "+37064533340",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/aikstis/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/013ac845-9edb-4af7-a995-3fae456d59c3",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/aikstis/",
+        "https://rekvizitai.vz.lt/en/company/aikstis/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304903252",
+      "slug": "baldijos-projektai",
+      "legal_name": "Baldijos projektai, UAB",
+      "public_phone": "+37068877340",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldijos_projektai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/90f0f5e9-bc7d-4a0e-a953-646d9af28c3f",
+        "https://rekvizitai.vz.lt/en/company/baldijos_projektai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304926429",
+      "slug": "uab-viva-style-304926429",
+      "legal_name": "UAB \"Viva style\"",
+      "public_phone": "+37065177717",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/viva_style/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03be44df-38bb-4168-a8d8-ecbb59823b7c",
+        "https://rekvizitai.vz.lt/en/company/viva_style/",
+        "https://rekvizitai.vz.lt/en/company/viva_style/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304940471",
+      "slug": "uab-oaky-oak-304940471",
+      "legal_name": "UAB OAKY OAK",
+      "public_phone": "+37064411155",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/oaky_oak/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/12fa9efc-7450-4b9e-bd91-5b9602c81d35",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2dfa4c6a-2ec2-4dca-8309-3642374c05b7",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/4eae005d-0c3e-4a8a-81a7-7ec59944af1a",
+        "https://rekvizitai.vz.lt/en/company/oaky_oak/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304945568",
+      "slug": "uab-vintori-304945568",
+      "legal_name": "UAB Vintori",
+      "public_phone": "+37060027746",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/vintori/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0284de15-9a6c-4415-abab-c95a0a2578ee",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
+        "https://rekvizitai.vz.lt/en/company/vintori/",
+        "https://rekvizitai.vz.lt/en/company/vintori/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304960125",
+      "slug": "mb-versus-interior-304960125",
+      "legal_name": "MB \"Versus interior\"",
+      "public_phone": "+37067283262",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/versus_interior/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0b52da2b-4a85-459e-b277-524fbf40b710",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/808ce4e1-4722-454f-b4a1-b90e306524b7",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9db7c101-bf43-41f3-8c5b-a3dc794b5186",
+        "https://rekvizitai.vz.lt/en/company/versus_interior/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304978027",
+      "slug": "uab-lead-time-zero-304978027",
+      "legal_name": "UAB LEAD TIME ZERO",
+      "public_phone": "+37067135502",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/lead_time_zero/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/027bc072-e98b-4a6f-a80c-67a47e0a79ec",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c9a45c5c-dca1-4638-b699-c678ef618f1e",
+        "https://rekvizitai.vz.lt/en/company/lead_time_zero/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304985961",
+      "slug": "uab-dimantra-304985961",
+      "legal_name": "UAB \"Dimantra\"",
+      "public_phone": "+37068630281",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/dimantra/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/194fbaa3-7732-423c-bd32-19ec3da8fc5c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/02ae58af-9bce-4467-8f81-25b082cfbd4f",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d329dc9f-7645-4019-9059-6e8413fa29dd",
+        "https://rekvizitai.vz.lt/en/company/dimantra/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "304990410",
+      "slug": "uab-sprendimai-baldininkams-304990410",
+      "legal_name": "UAB \"Sprendimai baldininkams\"",
+      "public_phone": "+37052329010",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/sprendimai_baldininkams/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e0fce19-0669-4a4f-a71d-91cff5e6278c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/a66be85b-e659-4a9f-8f8f-9cccc918582e",
+        "https://rekvizitai.vz.lt/en/company/sprendimai_baldininkams/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305201921",
+      "slug": "uab-emona-lt-305201921",
+      "legal_name": "UAB \"Emona LT\"",
+      "public_phone": "+37067012813",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/emona_lt/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/165f5070-9820-4138-8d5c-ec437c5dff1f",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/854e7f3e-c4f5-48fe-a393-ab017e7a4f07",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9ba2a277-e69a-490a-8abf-8d6b1025acd9",
+        "https://rekvizitai.vz.lt/en/company/emona_lt/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305217644",
+      "slug": "uab-ternis-305217644",
+      "legal_name": "UAB \"Ternis\"",
+      "public_phone": "+37068264005",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/ternis/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e0bbd8d-87cf-4ed3-a9a4-0be524fd7c47",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/e186b686-670b-4176-ba2a-6c745899aae7",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/6697289e-1af6-4357-a720-07668f6daf17",
+        "https://rekvizitai.vz.lt/en/company/ternis/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305236609",
+      "slug": "mb-milijonas-kampu-305236609",
+      "legal_name": "MB \"Milijonas kampų\"",
+      "public_phone": "+37069229825",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/milijonas_kampu/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/152ce523-2904-4477-a11e-b3bba5b621b4",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/21bbe639-b485-490c-8ab4-e58494826b8c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/25c6773b-2593-48b5-8f40-bd9902a0ba76",
+        "https://rekvizitai.vz.lt/en/company/milijonas_kampu/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305356398",
+      "slug": "egerta",
+      "legal_name": "Egerta, MB",
+      "public_phone": "+37068832216",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/egerta/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/55114a85-bd74-46e4-bdf6-237367620938",
+        "https://rekvizitai.vz.lt/en/company/egerta/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305390728",
+      "slug": "mb-labanoris-305390728",
+      "legal_name": "MB \"Labanoris\"",
+      "public_phone": "+37038388888",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/labanoris/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/056fe533-55f7-4cbf-80e3-c5259012d5a8",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9bb6fff1-8ec9-47b1-93b1-2f6f27bd5dc3",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3f372482-d576-4c4a-87bc-86bf99279aa7",
+        "https://rekvizitai.vz.lt/en/company/labanoris/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305393037",
+      "slug": "mb-alfo-statybos-305393037",
+      "legal_name": "MB \"Alfo statybos\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/192b7ce8-4f84-4d34-965b-6038e7f83f06",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/039b004d-53b4-4635-a9cb-1b121c129bc8",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1626272a-c9f4-418d-87df-62e6ec821829",
+        "https://rekvizitai.vz.lt/en/company/alfo_statybos/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305439851",
+      "slug": "albero-baldai",
+      "legal_name": "Albero baldai, MB",
+      "public_phone": "+37067970084",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/albero_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/daaf1bef-2a15-4b38-b724-b8c0c57bc256",
+        "https://rekvizitai.vz.lt/en/company/albero_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305568967",
+      "slug": "mb-lurenos-baldai-305568967",
+      "legal_name": "MB \"Lurenos baldai\"",
+      "public_phone": "+37063177050",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/lurenos_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/146d0920-b9af-4fca-bdb8-75a6ff1d6910",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/0af923dd-067a-4863-b25d-287fb9ef808e",
+        "https://rekvizitai.vz.lt/en/company/lurenos_baldai/",
+        "https://rekvizitai.vz.lt/en/company/lurenos_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305604331",
+      "slug": "anp-inovaciniai-sprendimai",
+      "legal_name": "ANP inovaciniai sprendimai, UAB",
+      "public_phone": "+37067347777",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/34fda8d2-3fc6-488e-9bda-21b67be09b8f",
+        "https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305633571",
+      "slug": "raimeta",
+      "legal_name": "Raimeta, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bc78b9ce-a556-415b-872d-292a097f26b7",
+        "https://rekvizitai.vz.lt/en/company/raimeta/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305665875",
+      "slug": "r-meistrai",
+      "legal_name": "R meistrai, MB",
+      "public_phone": "+37060140030",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/r_meistrai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/00dce3e3-f2b7-4179-b480-43c73c394a08",
+        "https://rekvizitai.vz.lt/en/company/r_meistrai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305679775",
+      "slug": "mb-ba-dirbtuves-305679775",
+      "legal_name": "MB \"BA dirbtuvės\"",
+      "public_phone": "+37064123453",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/ba_dirbtuves/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0519187d-6982-4309-aa8a-f3cfd712f72a",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://rekvizitai.vz.lt/en/company/ba_dirbtuves/",
+        "https://rekvizitai.vz.lt/en/company/ba_dirbtuves/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305679946",
+      "slug": "uab-kzk-studija-305679946",
+      "legal_name": "UAB Kzk studija",
+      "public_phone": "+37034945395",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/kzk_studija/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/020a4410-4d88-428e-9a31-3f12b6514a2b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/kzk_studija/",
+        "https://rekvizitai.vz.lt/en/company/kzk_studija/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305684562",
+      "slug": "mazoji-bendrija-valdo-projektai-305684562",
+      "legal_name": "Mažoji bendrija Valdo projektai",
+      "public_phone": "+37068711667",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/valdo_projektai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1798dec9-fd48-431c-887e-0e0ae13d9524",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c62814f0-f80e-4b2a-87c1-ed46c985bd3a",
+        "https://rekvizitai.vz.lt/en/company/valdo_projektai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305699614",
+      "slug": "uab-furnipro-305699614",
+      "legal_name": "UAB \"Furnipro\"",
+      "public_phone": "+37065029260",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/furnipro/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0770916a-7f87-49bc-97cd-8bfbd195d3b1",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cafb7f75-d1be-45d7-949c-69e367b86c21",
+        "https://rekvizitai.vz.lt/en/company/furnipro/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305701321",
+      "slug": "zt-furni",
+      "legal_name": "ŽT furni, MB",
+      "public_phone": "+37067823088",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/zt_furni/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/928d7b61-cc79-458b-a067-fa9e50c00677",
+        "https://rekvizitai.vz.lt/en/company/zt_furni/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305724455",
+      "slug": "tomadeco",
+      "legal_name": "Tomadeco, MB",
+      "public_phone": "+37068581623",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/tomadeco/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3104f79f-8dbd-4754-ac89-6a38fa92c07b",
+        "https://rekvizitai.vz.lt/en/company/tomadeco/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305771184",
+      "slug": "uab-rupeja-305771184",
+      "legal_name": "UAB \"Rupėja\"",
+      "public_phone": "+37064342476",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/rupeja/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0ac26ed0-db6b-42d4-ade3-3b915f86e0d6",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/45f1aea7-4027-4cb0-a9c5-e9296d05c391",
+        "https://rekvizitai.vz.lt/en/company/rupeja/",
+        "https://rekvizitai.vz.lt/en/company/rupeja/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305778798",
+      "slug": "uab-arredo-deko-projektai-305778798",
+      "legal_name": "UAB \"Arredo deko projektai\"",
+      "public_phone": "+37062330626",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/arredo_deko_projektai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0170be5b-e0e6-4804-9251-fafbe0c7802c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/cce7333d-cc4f-4a1e-a9a3-9511283c99b1",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9c993d79-ebbe-421c-a058-e37772190a3c",
+        "https://rekvizitai.vz.lt/en/company/arredo_deko_projektai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305831539",
+      "slug": "mazoji-bendrija-obrimus-305831539",
+      "legal_name": "Mažoji bendrija \"Obrimus\"",
+      "public_phone": "+37062589888",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/obrimus/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0329c6e3-1aae-4e10-b825-a6c70dfdd685",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3c9d9038-794a-4bff-9fed-53e763a915ca",
+        "https://rekvizitai.vz.lt/en/company/obrimus/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305844611",
+      "slug": "mb-tovera-305844611",
+      "legal_name": "MB Tovera",
+      "public_phone": "+37066238600",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/tovera/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/12753ecb-0010-4df4-95f3-29229d68520d",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/be3da577-5ddb-4213-9d9b-c197ac916225",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8318c35b-c8e7-493e-b5e9-5de09723322d",
+        "https://rekvizitai.vz.lt/en/company/tovera/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305876580",
+      "slug": "darau-2",
+      "legal_name": "Darau 2, MB",
+      "public_phone": "+37060867215",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/darau_2/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/8f632100-87b4-41be-94c4-81633d2f2e83",
+        "https://rekvizitai.vz.lt/en/company/darau_2/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305908188",
+      "slug": "kampu",
+      "legal_name": "Kampu, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/87b321f9-36bf-4b16-a813-d2191b3ed60d",
+        "https://rekvizitai.vz.lt/en/company/kampu/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305913872",
+      "slug": "uab-destructa-305913872",
+      "legal_name": "UAB \"Destructa\"",
+      "public_phone": "+37069411221",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/destructa/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0a370cfa-30b2-471e-aee0-00135657f26b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://rekvizitai.vz.lt/en/company/destructa/",
+        "https://rekvizitai.vz.lt/en/company/destructa/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305935228",
+      "slug": "mazoji-bendrija-sernosis-305935228",
+      "legal_name": "Mažoji bendrija \"Šernosis\"",
+      "public_phone": "+37064674990",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/sernosis/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e60408b-1a3a-43c7-a2bb-6ad20896ee5f",
+        "https://rekvizitai.vz.lt/en/company/sernosis/",
+        "https://rekvizitai.vz.lt/en/company/sernosis/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305939301",
+      "slug": "mb-furnidedes-305939301",
+      "legal_name": "MB Furnidėdės",
+      "public_phone": "+37061001023",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/furnidedes/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e0ca79f-cc83-42a4-b027-82ffdb3cef8e",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://rekvizitai.vz.lt/en/company/furnidedes/",
+        "https://rekvizitai.vz.lt/en/company/furnidedes/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305961874",
+      "slug": "furniture-trade-lt-mb-305961874",
+      "legal_name": "Furniture Trade LT MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/02ede07d-8a49-48b9-b191-e2d484a2246e",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/43fd6298-aa13-4083-b8a2-6b801fd393a1",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/b8e47b06-b944-42db-a339-31a650ff697b",
+        "https://rekvizitai.vz.lt/en/company/furniture_trade_lt/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305961874",
+      "slug": "pasmeta-lt",
+      "legal_name": "Pasmeta LT, MB",
+      "public_phone": "+37064514008",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/pasmeta_lt/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
+        "https://rekvizitai.vz.lt/en/company/pasmeta_lt/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305981318",
+      "slug": "artrum-mb-305981318",
+      "legal_name": "Artrum, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03a2c26c-9731-4bac-846b-a3b48c09c344",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7e73708d-b0d6-4e25-b901-dc7b0b28d14d",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/47ff0e81-1523-40ad-9cb3-b4e4625e3668",
+        "https://rekvizitai.vz.lt/en/company/artrum/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "305991312",
+      "slug": "karaliaus-baldai-uab-305991312",
+      "legal_name": "Karaliaus baldai, UAB",
+      "public_phone": "+37066444262",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/karaliaus_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/07d8a40b-f599-41c3-9946-088f986db8e8",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://rekvizitai.vz.lt/en/company/karaliaus_baldai/",
+        "https://rekvizitai.vz.lt/en/company/karaliaus_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306021189",
+      "slug": "luxury-furniture",
+      "legal_name": "Luxury furniture, UAB",
+      "public_phone": "+37060097642",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/luxury_furniture/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/220cc71a-ca5a-49ff-be5d-4b0bc887041b",
+        "https://rekvizitai.vz.lt/en/company/luxury_furniture/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306069344",
+      "slug": "baldukas",
+      "legal_name": "Baldukas, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/2a5f677e-62ec-4c34-bae9-9a2a52002be9",
+        "https://rekvizitai.vz.lt/en/company/baldukas/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306069853",
+      "slug": "mb-re-baldai-306069853",
+      "legal_name": "MB \"Re baldai\"",
+      "public_phone": "+37060525612",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/re_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/14cc7d91-eea1-4da9-a80e-12ca846bb2bb",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/re_baldai/",
+        "https://rekvizitai.vz.lt/en/company/re_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306077348",
+      "slug": "sato-baldu-idejos",
+      "legal_name": "Sato baldų idėjos, MB",
+      "public_phone": "+37067616253",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/sato_baldu_idejos/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/94fc8dbf-97e9-4f81-9180-333ac68e2e01",
+        "https://rekvizitai.vz.lt/en/company/sato_baldu_idejos/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306083828",
+      "slug": "uab-gm-art-306083828",
+      "legal_name": "UAB \"GM ART\"",
+      "public_phone": "+37064057000",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/gm_art/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1a0c2d53-0e8b-473a-b63c-a0a997f9cea3",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/0e938e28-78ae-4ea5-a71c-70c47ea37896",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e497c172-af2c-4a5f-ab98-a2567a2406d0",
+        "https://rekvizitai.vz.lt/en/company/gm_art/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306096035",
+      "slug": "baldu-studija-besta",
+      "legal_name": "Baldų studija Besta, UAB",
+      "public_phone": "+37062630867",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_studija_besta/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/72cd2a2f-e733-436c-91d2-d767559a0318",
+        "https://rekvizitai.vz.lt/en/company/baldu_studija_besta/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306125063",
+      "slug": "mb-45-kampai-306125063",
+      "legal_name": "MB \"45 kampai\"",
+      "public_phone": "+37067995055",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/45_kampai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/17221163-a7cb-4c60-a543-eaf03ca80a2c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://rekvizitai.vz.lt/en/company/45_kampai/",
+        "https://rekvizitai.vz.lt/en/company/45_kampai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306146424",
+      "slug": "mb-melamin-306146424",
+      "legal_name": "MB \"Melamin\"",
+      "public_phone": "+37064660603",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/melamin/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/07501f3b-4e30-477d-8cad-9e30241f52b3",
+        "https://rekvizitai.vz.lt/en/company/melamin/",
+        "https://rekvizitai.vz.lt/en/company/melamin/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306162439",
+      "slug": "digio",
+      "legal_name": "Digio, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3a7f3bb3-62bf-43f4-97b9-67c09feaaa0f",
+        "https://rekvizitai.vz.lt/en/company/digio/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306167137",
+      "slug": "mb-esteto-baldai-306167137",
+      "legal_name": "MB Esteto baldai",
+      "public_phone": "+37065184453",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/esteto_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/13bd20a4-4362-434b-9d3d-f3c035f3f9cc",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+        "https://rekvizitai.vz.lt/en/company/esteto_baldai/",
+        "https://rekvizitai.vz.lt/en/company/esteto_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306183629",
+      "slug": "mb-blanko-baldai-306183629",
+      "legal_name": "MB Blanko baldai",
+      "public_phone": "+37061393385",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/blanko_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1040e2d1-54d4-448a-a859-d1a9088f5457",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/431396ae-8163-46d2-9bdf-e228d4efddfa",
+        "https://rekvizitai.vz.lt/en/company/blanko_baldai/",
+        "https://rekvizitai.vz.lt/en/company/blanko_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306198588",
+      "slug": "uab-metalo-pulsas-306198588",
+      "legal_name": "UAB Metalo pulsas",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/117c2562-7c6e-44f3-8765-4365e9d1409a",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/42c53065-93ab-4e35-98e8-72eabc3c1d4f",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/0cdafe21-5f6f-480d-87dd-3ae91f70a794",
+        "https://rekvizitai.vz.lt/en/company/metalo_pulsas/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306236409",
+      "slug": "mb-virtnora-306236409",
+      "legal_name": "MB \"Virtnora\"",
+      "public_phone": "+37060153277",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/virtnora/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/193eb5c4-3fab-4831-9a7f-1f86311aed30",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://rekvizitai.vz.lt/en/company/virtnora/",
+        "https://rekvizitai.vz.lt/en/company/virtnora/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306260303",
+      "slug": "valdrena",
+      "legal_name": "Valdrena, MB",
+      "public_phone": "+37067964660",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/valdrena/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/8eff10dd-f2f7-44cd-886c-c8a8e9daa888",
+        "https://rekvizitai.vz.lt/en/company/valdrena/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306263705",
+      "slug": "baldu-cechas",
+      "legal_name": "Baldų cechas, MB",
+      "public_phone": "+37065552468",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_cechas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e6dea04f-3780-4b1f-b95a-34b3f825a046",
+        "https://rekvizitai.vz.lt/en/company/baldu_cechas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306265161",
+      "slug": "sanitarina",
+      "legal_name": "Sanitarina, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a55a9a04-8adb-485a-b16b-2e3352e3565b",
+        "https://rekvizitai.vz.lt/en/company/sanitarina/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306303263",
+      "slug": "tipo-baldai",
+      "legal_name": "Tipo baldai, MB",
+      "public_phone": "+37064782828",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/tipo_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5438fe24-568a-49c1-8c3e-2d33be0fff33",
+        "https://rekvizitai.vz.lt/en/company/tipo_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306308755",
+      "slug": "furnistetika",
+      "legal_name": "Furnistetika, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/073d3670-6262-4481-80c2-054a093b9cc0",
+        "https://rekvizitai.vz.lt/en/company/furnistetika/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306323928",
+      "slug": "mb-baldaiska-306323928",
+      "legal_name": "MB Baldaiska",
+      "public_phone": "+37065575871",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldaiska/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/038f8ff8-2a59-4461-83bc-e545e7879399",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7466bde0-9db4-431c-a248-2b2276b3422b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d28fea15-c837-4c5e-a44e-5311343c3fb9",
+        "https://rekvizitai.vz.lt/en/company/baldaiska/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306365293",
+      "slug": "mb-armiba-306365293",
+      "legal_name": "MB \"Armiba\"",
+      "public_phone": "+37068328165",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/armiba/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/17aa422e-72b3-4cac-8407-e8520f67d436",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/3421039b-f1f2-4e7f-ace9-e044b9d016d1",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5aef415b-c291-4d25-a0f3-48740d24f9bd",
+        "https://rekvizitai.vz.lt/en/company/armiba/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306391498",
+      "slug": "mb-space-idea-property-306391498",
+      "legal_name": "MB Space idea property",
+      "public_phone": "+37060130365",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/space_idea_property/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0422efde-09a9-4582-9d6b-543752c1a2e4",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://rekvizitai.vz.lt/en/company/space_idea_property/",
+        "https://rekvizitai.vz.lt/en/company/space_idea_property/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306629348",
+      "slug": "baldu-sprendimai",
+      "legal_name": "Baldų sprendimai, MB",
+      "public_phone": "+37062867701",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_sprendimai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9d0a5e66-19a6-454c-ae41-bfe97d112d38",
+        "https://rekvizitai.vz.lt/en/company/baldu_sprendimai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306635924",
+      "slug": "mb-grg-baldai-306635924",
+      "legal_name": "MB Grg baldai",
+      "public_phone": "+37063366870",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/grg_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0be4d477-6c77-4d19-ac7b-facd5f88f5d1",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/8fb3e00c-b30a-4535-ae9d-8455257a748c",
+        "https://rekvizitai.vz.lt/en/company/grg_baldai/",
+        "https://rekvizitai.vz.lt/en/company/grg_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306650926",
+      "slug": "kokybisku-baldu-dirbtuves",
+      "legal_name": "Kokybiškų baldų dirbtuvės, MB",
+      "public_phone": "+37061519379",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/kokybisku_baldu_dirbtuves/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9fa25856-4794-4683-92d3-d91b53d85581",
+        "https://rekvizitai.vz.lt/en/company/kokybisku_baldu_dirbtuves/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306653648",
+      "slug": "mb-abc-baldai-306653648",
+      "legal_name": "MB Abc baldai",
+      "public_phone": "+37067215153",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/abc_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0569677a-8802-4619-83e9-b62319ac9d92",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/1505cabe-4657-494f-afb6-da40849ad5f6",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/461a438b-e44f-4738-94b7-b35c53e6cda4",
+        "https://rekvizitai.vz.lt/en/company/abc_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306673992",
+      "slug": "sandriaus-baldai",
+      "legal_name": "Sandriaus baldai, UAB",
+      "public_phone": "+37061688549",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/sandriaus_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/c999d75b-25ec-4f22-85fa-8da408d49ac9",
+        "https://rekvizitai.vz.lt/en/company/sandriaus_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306708016",
+      "slug": "mb-la-projects-306708016",
+      "legal_name": "MB \"LA projects\"",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/043cdc20-5734-478b-8164-af596bb8b141",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/la_projects/",
+        "https://rekvizitai.vz.lt/en/company/la_projects/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306712160",
+      "slug": "mb-baldakas-306712160",
+      "legal_name": "MB \"Baldakas\"",
+      "public_phone": "+37063683874",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldakas/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/035bb7b5-079a-4be2-b89d-8a22d45d37f2",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ad3a191b-123b-4e77-b03a-e656298d4833",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ea455ebe-197d-4e05-a3c0-c9f4fe60830e",
+        "https://rekvizitai.vz.lt/en/company/baldakas/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306723872",
+      "slug": "mb-borera-306723872",
+      "legal_name": "MB Borera",
+      "public_phone": "+37064860453",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/borera/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0fe36575-b89f-4591-8715-4d01e98d7c21",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/borera/",
+        "https://rekvizitai.vz.lt/en/company/borera/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306730856",
+      "slug": "medynmetis",
+      "legal_name": "Medynmetis, MB",
+      "public_phone": "+37061630841",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/medynmetis/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/c1a37843-c2d5-4eda-8ff6-a24479929855",
+        "https://rekvizitai.vz.lt/en/company/medynmetis/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306879647",
+      "slug": "mb-tryse-baldai-306879647",
+      "legal_name": "MB Tryse baldai",
+      "public_phone": "+37069935753",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/tryse_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/04b5384b-ead4-4978-b3b1-3bb3632553bf",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/921b09ad-7a8c-4c81-b48d-0958472863cc",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/15b5d4f4-dedd-4d0b-8e5a-8e7a9d35ce22",
+        "https://rekvizitai.vz.lt/en/company/tryse_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "306997147",
+      "slug": "baldasta-mb-306997147",
+      "legal_name": "Baldasta, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0b180bd2-0d2f-4b10-a848-81c05f6ce38b",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/21bbe639-b485-490c-8ab4-e58494826b8c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5f5fca63-26d8-482e-be75-2721d19640f7",
+        "https://rekvizitai.vz.lt/en/company/baldasta/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307003404",
+      "slug": "ratuoti-sapnai",
+      "legal_name": "Ratuoti sapnai, MB",
+      "public_phone": "",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d439ce06-0e4e-4aea-ad72-b1eaf37997c4",
+        "https://rekvizitai.vz.lt/en/company/ratuoti_sapnai/"
+      ],
+      "result": "no_public_contact_route_found",
+      "no_public_contact_route": true,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307020485",
+      "slug": "mb-jurio-baldai-307020485",
+      "legal_name": "MB \"Jurio baldai\"",
+      "public_phone": "+37064040666",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/jurio_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/05968af2-e153-4177-9740-7bfdb1c40ae4",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/cc4db439-639a-43bd-b405-8156c88e7d98",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/62e0330e-3b1e-468f-97fd-79095a65b54c",
+        "https://rekvizitai.vz.lt/en/company/jurio_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307021377",
+      "slug": "mazoji-bendrija-baldukai-307021377",
+      "legal_name": "Mažoji bendrija Baldukai",
+      "public_phone": "+37061115563",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldukai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e79b41a-15da-4343-bf6a-bcb378b53dab",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/03bb0e68-8928-4f31-9f19-fdbc0baa567c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5a1995aa-257e-4556-b3a4-6440f62e3d02",
+        "https://rekvizitai.vz.lt/en/company/baldukai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307021466",
+      "slug": "narbutas-edge",
+      "legal_name": "Narbutas Edge, UAB",
+      "public_phone": "+37069930061",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/narbutas_edge/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/21ba09b4-8d5d-4096-a4b6-b935f25493ed",
+        "https://rekvizitai.vz.lt/en/company/narbutas_edge/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307059068",
+      "slug": "mazoji-bendrija-dili-baldai-307059068",
+      "legal_name": "Mažoji bendrija Dili baldai",
+      "public_phone": "+37069965438",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/dili_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/15d1b773-448e-48d6-a433-89b1b7115619",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/8fb3e00c-b30a-4535-ae9d-8455257a748c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8a2f4bf2-8c3c-454a-9422-f23f8aa9dc75",
+        "https://rekvizitai.vz.lt/en/company/dili_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307079747",
+      "slug": "dazymo-studija",
+      "legal_name": "Dažymo studija, MB",
+      "public_phone": "+37068536956",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/dazymo_studija/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/0aca7596-077d-46e0-abd1-d89a0275b755",
+        "https://rekvizitai.vz.lt/en/company/dazymo_studija/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307086574",
+      "slug": "uab-visokie-baldai-307086574",
+      "legal_name": "UAB Visokie baldai",
+      "public_phone": "+37067563762",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/visokie_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/17573ad0-3a57-4588-bf6d-d583a52c9c2e",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+        "https://rekvizitai.vz.lt/en/company/visokie_baldai/",
+        "https://rekvizitai.vz.lt/en/company/visokie_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307093825",
+      "slug": "mb-tabalda-307093825",
+      "legal_name": "MB \"Tabalda\"",
+      "public_phone": "+37066571661",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/tabalda/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0b6290f1-0720-4ffe-8934-488dc1b28781",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/c8eefa8c-1787-4618-a740-23986bf16d0c",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c789df2e-5f47-43bc-b0d4-7a38dd435f16",
+        "https://rekvizitai.vz.lt/en/company/tabalda/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307106831",
+      "slug": "mb-tvm-furniture-307106831",
+      "legal_name": "MB TVM Furniture",
+      "public_phone": "+37060391801",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/tvm_furniture/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/153732e7-d1ff-4866-85cb-23cb252c9144",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/248200e2-bdf4-414b-877d-3a151265eb80",
+        "https://rekvizitai.vz.lt/en/company/tvm_furniture/",
+        "https://rekvizitai.vz.lt/en/company/tvm_furniture/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307132057",
+      "slug": "nestandart",
+      "legal_name": "Nestandart, MB",
+      "public_phone": "+37062166563",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/nestandart/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d02117b5-e8bd-4eb7-a25d-54746d817849",
+        "https://rekvizitai.vz.lt/en/company/nestandart/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307164852",
+      "slug": "balajano-slenio-baldai",
+      "legal_name": "Balajano slėnio baldai, MB",
+      "public_phone": "+37067042514",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/balajano_slenio_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/b3a583e2-863c-46c8-86b6-56b8fc358f29",
+        "https://rekvizitai.vz.lt/en/company/balajano_slenio_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307169696",
+      "slug": "tailida",
+      "legal_name": "Tailida, MB",
+      "public_phone": "+37068137136",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/tailida/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5af91c47-48f9-4678-91e9-0520f6d67865",
+        "https://rekvizitai.vz.lt/en/company/tailida/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307296512",
+      "slug": "mb-kanteka-307296512",
+      "legal_name": "MB Kanteka",
+      "public_phone": "+37064582686",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/kanteka/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/07954d71-094a-42c6-a928-39b2ccfc19f1",
+        "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
+        "https://rekvizitai.vz.lt/en/company/kanteka/",
+        "https://rekvizitai.vz.lt/en/company/kanteka/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307397002",
+      "slug": "g-baldai",
+      "legal_name": "G baldai, MB",
+      "public_phone": "+37061149929",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/g_baldai/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a16c9f98-0de9-490a-bbaa-30eb9a36b2a5",
+        "https://rekvizitai.vz.lt/en/company/g_baldai/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307537931",
+      "slug": "kamadotbl",
+      "legal_name": "Kamadotbl, MB",
+      "public_phone": "+37062215761",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/kamadotbl/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/kamadotbl/",
+        "https://rekvizitai.vz.lt/en/company/kamadotbl/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307544445",
+      "slug": "gdm-creative",
+      "legal_name": "Gdm creative, MB",
+      "public_phone": "+37062062602",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/gdm_creative/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/gdm_creative/",
+        "https://rekvizitai.vz.lt/en/company/gdm_creative/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "company_code": "307569498",
+      "slug": "mr-design",
+      "legal_name": "Mr design, MB",
+      "public_phone": "+37068087004",
+      "website": "",
+      "public_contact_url": "",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/mr_design/"
+      ],
+      "checked_source_urls": [
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+        "https://rekvizitai.vz.lt/en/company/mr_design/",
+        "https://rekvizitai.vz.lt/en/company/mr_design/"
+      ],
+      "result": "public_route_found",
+      "no_public_contact_route": false,
+      "public_contact_checked_date": "2026-08-04",
+      "source_collection_date": "2026-08-04"
+    }
+  ]
+}
