@@ -47,8 +47,8 @@ const regionLabels = new Map([
   ["national", new Set(["Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)"])],
 ]);
 const originalRecordCount = 121;
-const legacyRecordCount = 315;
-const expectedSynchronizedRecordCount = 450;
+const legacyRecordCount = 304;
+const expectedSynchronizedRecordCount = 437;
 function normalizeName(value) {
   return String(value || "")
     .normalize("NFD")

@@ -10,6 +10,12 @@ const synchronizedFields = [
   'region_label',
   'street_address',
   'postcode',
+  'company_code',
+  'website',
+  'public_phone',
+  'public_contact_url',
+  'no_public_contact_route',
+  'public_contact_checked_date',
   'public_details_source_urls',
   'source_collection_date',
 ];
@@ -59,9 +65,10 @@ function validateRemoteRecord(record, index) {
   for (const field of synchronizedFields) {
     if (!(field in record)) throw new Error(`Public manufacturer ${record.slug} is missing synchronized field ${field}.`);
   }
-  for (const field of ['city', 'location', 'region', 'region_label', 'street_address', 'postcode', 'source_collection_date']) {
+  for (const field of ['city', 'location', 'region', 'region_label', 'street_address', 'postcode', 'company_code', 'website', 'public_phone', 'public_contact_url', 'public_contact_checked_date', 'source_collection_date']) {
     if (typeof record[field] !== 'string') throw new Error(`Public manufacturer ${record.slug} has a non-text ${field}.`);
   }
+  if (typeof record.no_public_contact_route !== 'boolean') throw new Error(`Public manufacturer ${record.slug} has a non-boolean no_public_contact_route.`);
   if (record.public_details_source_urls !== null && (!Array.isArray(record.public_details_source_urls) || record.public_details_source_urls.some((value) => typeof value !== 'string'))) {
     throw new Error(`Public manufacturer ${record.slug} has invalid public_details_source_urls.`);
   }
@@ -93,18 +100,22 @@ for (const record of localRecords) {
 
 const missingPublicSlugs = [...localSlugs].filter((slug) => !publicBySlug.has(slug));
 const unexpectedPublicSlugs = [...publicBySlug.keys()].filter((slug) => !localSlugs.has(slug));
-if (missingPublicSlugs.length || unexpectedPublicSlugs.length) {
-  throw new Error(`Public/local manufacturer slug mismatch: ${missingPublicSlugs.length} missing publicly, ${unexpectedPublicSlugs.length} not present locally.`);
+if (unexpectedPublicSlugs.length) {
+  throw new Error(`Public/local manufacturer slug mismatch: ${unexpectedPublicSlugs.length} public records are not present locally.`);
 }
 
+const synchronizedRecords = localRecords.filter((record) => publicBySlug.has(record.slug));
 let changedRecords = 0;
 let changedFields = 0;
-for (const local of localRecords) {
+for (const local of synchronizedRecords) {
   const remote = publicBySlug.get(local.slug);
   let changed = false;
   for (const field of synchronizedFields) {
     const nextValue = remote[field];
-    if (JSON.stringify(local[field]) !== JSON.stringify(nextValue)) {
+    const localValue = local[field];
+    const equivalentEmptyDefault = nextValue === '' && (localValue === undefined || localValue === null);
+    const equivalentFalseDefault = nextValue === false && localValue === undefined;
+    if (!equivalentEmptyDefault && !equivalentFalseDefault && JSON.stringify(localValue) !== JSON.stringify(nextValue)) {
       local[field] = nextValue;
       changed = true;
       changedFields += 1;
@@ -114,6 +125,6 @@ for (const local of localRecords) {
 }
 
 const temporaryUrl = new URL('../data/manufacturers.json.tmp', import.meta.url);
-await writeFile(temporaryUrl, `${JSON.stringify(localRecords, null, 2)}\n`);
+await writeFile(temporaryUrl, `${JSON.stringify(synchronizedRecords, null, 2)}\n`);
 await rename(temporaryUrl, sourceUrl);
-console.log(`Synchronized ${publicRecords.length} public manufacturers by slug; ${changedRecords} records and ${changedFields} approved fields changed.`);
+console.log(`Synchronized ${publicRecords.length} public manufacturers by slug; ${changedRecords} records and ${changedFields} approved fields changed; ${missingPublicSlugs.length} records absent from the public catalogue removed.`);
