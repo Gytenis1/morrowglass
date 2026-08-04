@@ -1,0 +1,127 @@
+{
+  "manifest_version": 1,
+  "decision_date": "2026-08-04",
+  "catalogue_total_before": 450,
+  "low_completeness_criteria": "Flag only a record with blank city, website, public_phone, public_contact_url, description_lt, and scope_evidence. No live record met all conditions.",
+  "merges": [
+    {
+      "kept_slug": "arta",
+      "removed_slug": "arta-a-burgailos-imone",
+      "reason": "Exact company code 144333114 and the same Rekvizitai entity page; retain the profile with the official site and narrower furniture scope.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/",
+        "https://arta.lt/"
+      ]
+    },
+    {
+      "kept_slug": "uab-baltasis-bizonas-304231694",
+      "removed_slug": "baltasis-bizonas",
+      "reason": "Exact company code 304231694 and the same Rekvizitai entity page; retain the official-record profile with the fuller provenance chain.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/",
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/02925f56-0c94-4c27-a478-e717af454316"
+      ]
+    },
+    {
+      "kept_slug": "pasmeta-lt",
+      "removed_slug": "furniture-trade-lt-mb-305961874",
+      "reason": "Exact company code 305961874; retain the richer public profile with its phone, contact-route result, and registry match.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/02ede07d-8a49-48b9-b191-e2d484a2246e"
+      ]
+    },
+    {
+      "kept_slug": "uab-narbutas-international-300591314",
+      "removed_slug": "narbutas-international",
+      "reason": "Exact company code 300591314 and the same Rekvizitai entity page; retain the official-record profile with the fuller provenance chain.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/narbutas_international/",
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1610ed41-120b-4f20-80ad-91da6a0a483a"
+      ]
+    },
+    {
+      "kept_slug": "minshape",
+      "removed_slug": "minshape-m-jakucionio-ivv",
+      "reason": "The removed profile names the same M. Jakučionio Minshape entity identified by the retained record's registry page; retain its code, contact route, and fuller scope.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/mindaugo_jakucionio_individuali_veikla/",
+        "https://rekvizitai.vz.lt/en/company/minshape_m_jakucionio_ivv/"
+      ]
+    },
+    {
+      "kept_slug": "mbi",
+      "removed_slug": "mbi-minkstu-baldu-ideja",
+      "reason": "The removed profile is the same MBI Minkštų baldų idėja entity named by the retained UAB profile; retain its company code, phone, and fuller custom-upholstery scope.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/minkstu_baldu_ideja/",
+        "https://rekvizitai.vz.lt/en/company/mbi_minkstu_baldu_ideja/"
+      ]
+    },
+    {
+      "kept_slug": "baldu-profai",
+      "removed_slug": "baldu-profai-delvisa",
+      "reason": "The removed profile explicitly identifies UAB Delvisa's Baldų profai brand, matching the retained entity; retain its company code, public route, and product scope.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/delvisa/",
+        "https://rekvizitai.vz.lt/en/company/baldu_profai_delvisa/",
+        "https://www.facebook.com/balduprofai/"
+      ]
+    },
+    {
+      "kept_slug": "almyros-baldai",
+      "removed_slug": "almyros-baldai-a-pakarnio-imone",
+      "reason": "The removed profile spells out the retained A. Pakarnio Almyros baldai entity; retain its company code, source-backed route, and scope.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/a_pakarnio_ii/",
+        "https://rekvizitai.vz.lt/en/company/almyros_baldai_a_pakarnio_imone/"
+      ]
+    },
+    {
+      "kept_slug": "gmdg",
+      "removed_slug": "gmdg-v-grinienes-ii",
+      "reason": "The removed profile spells out the retained V. Grinienės IĮ Gmdg entity; retain its company code, phone, and source-backed route.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/"
+      ]
+    },
+    {
+      "kept_slug": "baldu-tvirtove",
+      "removed_slug": "baldu-tvirtove-panevezys",
+      "reason": "Both profiles identify MB Baldų tvirtovė in Panevėžys; retain the record with company code, phone, and fuller source-backed scope.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_tvirtove/",
+        "https://rekvizitai.vz.lt/en/company/baldu_tvirtove_panevezys/"
+      ]
+    },
+    {
+      "kept_slug": "baldu-linija",
+      "removed_slug": "baldu-linija-panevezys",
+      "reason": "Both profiles identify UAB Baldų linija in Panevėžys; retain the record with company code, public site, phone, and fuller scope.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_linija/",
+        "https://rekvizitai.vz.lt/en/company/baldu_linija_panevezys/",
+        "https://www.baldulinija.lt/en/"
+      ]
+    },
+    {
+      "kept_slug": "uab-esd-baldai-301089656",
+      "removed_slug": "esd-baldai",
+      "reason": "Both profiles identify UAB ESD baldai through the same Rekvizitai entity page; retain the official-record profile with company code, phone, and fuller provenance.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/esd_baldai/",
+        "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/11801649-ec7c-4441-8040-3eaed425455a"
+      ]
+    }
+  ],
+  "removals": [
+    {
+      "slug": "s-baublio-veterinarijos-ambulatorija-180205242",
+      "reason": "Rekvizitai identifies company code 180205242's main activity as veterinary medicine, not furniture manufacture; remove the off-topic listing.",
+      "source_urls": [
+        "https://rekvizitai.vz.lt/en/company/s_baublio_veterinarijos_ambulatorija/"
+      ]
+    }
+  ],
+  "low_completeness_flags": []
+}
