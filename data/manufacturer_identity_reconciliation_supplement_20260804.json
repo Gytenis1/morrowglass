@@ -1,0 +1,129 @@
+{
+  "reconciliation": "supplemental_identity_only_company_code_reconciliation",
+  "supersedes": null,
+  "base_migration": "20260816000100_reconcile_legacy_manufacturer_identities.js",
+  "source_collection_date": "2026-08-04",
+  "matching_method": "Bounded second pass over only the base migration's not_found_in_register records. A correction requires an exact normalized legal or trading name (case, diacritics, punctuation and legal-form position folded) and a Rekvizitai public-directory page that directly associates that entity with its company code and a locality or municipality consistent with the live city. Historical/trading-name and factory-location evidence is retained explicitly where applicable.",
+  "corrections": [
+    {
+      "slug": "klaipedos-baldai",
+      "input_identity": "Klaipėdos baldai, UAB",
+      "input_city": "Klaipėda",
+      "company_code": "140656052",
+      "directory_identity": "Klaipėdos baldai, UAB",
+      "location_evidence": "Klaipėda",
+      "source_url": "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "minijos-baldai",
+      "input_identity": "Minijos baldai, UAB",
+      "input_city": "Klaipėda",
+      "company_code": "140258454",
+      "directory_identity": "Minijos baldai, UAB",
+      "location_evidence": "Klaipėda",
+      "source_url": "https://rekvizitai.vz.lt/en/company/minijos_baldai/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "sakuona",
+      "input_identity": "Sakuona, UAB",
+      "input_city": "Klaipėda",
+      "company_code": "163314524",
+      "directory_identity": "Sakuona, UAB",
+      "location_evidence": "Klaipėdos r.",
+      "source_url": "https://rekvizitai.vz.lt/en/company/sakuona/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "arta-a-burgailos-imone",
+      "input_identity": "Arta, A. Burgailos įmonė",
+      "input_city": "Šiauliai",
+      "company_code": "144333114",
+      "directory_identity": "Arta, A. Burgailos įmonė",
+      "location_evidence": "Šiauliai",
+      "source_url": "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "kesna",
+      "input_identity": "Kesna, UAB",
+      "input_city": "Šiauliai",
+      "company_code": "303332085",
+      "directory_identity": "KESNA, UAB",
+      "location_evidence": "Šiauliai",
+      "source_url": "https://rekvizitai.vz.lt/en/company/kesna/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "baldu-aleja",
+      "input_identity": "Baldų alėja, UAB",
+      "input_city": "Šiauliai",
+      "company_code": "145755086",
+      "directory_identity": "Baldų alėja, UAB",
+      "location_evidence": "Šiauliai",
+      "source_url": "https://rekvizitai.vz.lt/en/company/baldu_aleja/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "mr-design",
+      "input_identity": "Mr design, MB",
+      "input_city": "Alytus",
+      "company_code": "307569498",
+      "directory_identity": "MR Design, MB",
+      "location_evidence": "Alytaus r.",
+      "source_url": "https://rekvizitai.vz.lt/en/company/mr_design/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "pasmeta-lt",
+      "input_identity": "Pasmeta LT, MB",
+      "input_city": "Alytus",
+      "company_code": "305961874",
+      "directory_identity": "MB Pasmeta LT (directory's directly associated historical name for current Furniture Trade LT, MB)",
+      "location_evidence": "Alytaus r.",
+      "source_url": "https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "kamadotbl",
+      "input_identity": "Kamadotbl, MB",
+      "input_city": "Utena",
+      "company_code": "307537931",
+      "directory_identity": "Kamadotbl, MB",
+      "location_evidence": "Utenos r.",
+      "source_url": "https://rekvizitai.vz.lt/en/company/kamadotbl/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "m-pralgausko-imone",
+      "input_identity": "M. Pralgausko įmonė",
+      "input_city": "Kėdainiai",
+      "company_code": "161637614",
+      "directory_identity": "M. Pralgausko įmonė",
+      "location_evidence": "Kėdainiai",
+      "source_url": "https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "gdm-creative",
+      "input_identity": "Gdm creative, MB",
+      "input_city": "Ukmergė",
+      "company_code": "307544445",
+      "directory_identity": "GDM creative, MB",
+      "location_evidence": "Ukmergė",
+      "source_url": "https://rekvizitai.vz.lt/en/company/gdm_creative/",
+      "source_collection_date": "2026-08-04"
+    },
+    {
+      "slug": "narbutas-international",
+      "input_identity": "Narbutas International, UAB",
+      "input_city": "Ukmergė",
+      "company_code": "300591314",
+      "directory_identity": "Narbutas International, UAB",
+      "location_evidence": "The directory page identifies the company's factory in Ukmergė.",
+      "source_url": "https://rekvizitai.vz.lt/en/company/narbutas_international/",
+      "source_collection_date": "2026-08-04"
+    }
+  ]
+}
