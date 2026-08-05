@@ -5,72 +5,939 @@
       "slug": "virtuves-baldai",
       "title": "Virtuvės baldai pagal užsakymą",
       "intro": "Ieškantiems virtuvės baldų pagal užsakymą čia pateikiami viešuose šaltiniuose su šia kategorija susieti Lietuvos gamintojų kandidatai.",
-      "buyer_note": "Prieš kreipdamiesi palyginkite, ar kandidatas patvirtina jūsų projekto medžiagas, furnitūrą, matavimo, pristatymo ir montavimo apimtį. Kategorijos žyma nėra kokybės, užimtumo ar tinkamumo garantija."
+      "buyer_note": "Prieš kreipdamiesi palyginkite, ar kandidatas patvirtina jūsų projekto medžiagas, furnitūrą, matavimo, pristatymo ir montavimo apimtį. Kategorijos žyma nėra kokybės, užimtumo ar tinkamumo garantija.",
+      "guidanceSections": [
+        {
+          "heading": "Virtuvės projekte sprendžiama daugiau nei fasadų spalva",
+          "paragraphs": [
+            "Virtuvės baldų užduotis apima darbo zonų išdėstymą, korpusus ir fasadus, stalčius, kampinius sprendimus, stalviršį, sienelę, apšvietimą bei buitinės technikos integravimą. Užklausoje pažymėkite tikslius prietaisų modelius, vandens, nuotekų, elektros ir vėdinimo taškus. Patikrinkite durelių bei stalčių atsidarymo trajektorijas, praėjimus, stalviršio sujungimus ir priėjimą technikos priežiūrai. Jei patalpa dar remontuojama, suderinkite, kas atsako už taškų perkėlimą pagal galutinį baldų brėžinį."
+          ]
+        },
+        {
+          "heading": "Ką tikrinti medžiagose ir montavime",
+          "paragraphs": [
+            "Korpusui, fasadui ir stalviršiui keliami skirtingi atsparumo reikalavimai. Paprašykite įvardyti plokštes, briaunų sandarinimą, lankstų bei stalčių sistemas, drėgmei jautrių vietų apsaugą ir stalviršio išpjovų atlikėją. Montavimo priėmimo metu tikrinkite tarpelius, frontų reguliavimą, tvirtinimą, silikonines siūles, apšvietimą ir tai, ar technika išsiima jos neardant. 300–800 €/m nuoroda šiame puslapyje lieka tik plačiu gido orientyru; pilną pasiūlymą vertinkite pagal realią komplektaciją."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar virtuvės kainą galima patikimai palyginti pagal linijinį metrą?",
+          "answer": "Tik labai preliminariai. Spintelių aukštis, stalčiai, kampai, fasadai, stalviršis, furnitūra, technikos integravimas ir montavimas gali būti skirtingi, todėl palyginkite išskaidytą komplektaciją."
+        },
+        {
+          "question": "Ką pateikti virtuvės baldų gamintojui pirmoje užklausoje?",
+          "answer": "Pateikite planą ir nuotraukas, preliminarius matmenis, buitinės technikos modelius, komunikacijų vietas, norimas medžiagas, funkcijas, biudžeto ribą ir objekto miestą."
+        },
+        {
+          "question": "Kada atlikti galutinį virtuvės matavimą?",
+          "answer": "Kai sienų, grindų ir kitų matmenis keičiančių apdailos sluoksnių būklė yra galutinė. Jei matuojama anksčiau, raštu sutarkite pakartotinio matavimo poreikį."
+        },
+        {
+          "question": "Ar katalogo kandidatai yra patikrintos rekomendacijos?",
+          "answer": "Ne. Tai viešų šaltinių, nepatvirtinti kandidatai; jų tapatybę, darbus, pasiūlymą, sutartį ir tinkamumą tikrinkite savarankiškai."
+        }
+      ]
     },
     {
       "code": "W",
       "slug": "spintos-ir-imontuojami-baldai",
       "title": "Spintos ir įmontuojami baldai pagal užsakymą",
       "intro": "Šiame puslapyje surinkti viešuose šaltiniuose su spintomis ir įmontuojamais baldais susieti Lietuvos gamintojų kandidatai.",
-      "buyer_note": "Užklausoje nurodykite angų matmenis, vidaus įrangą, durų tipą, medžiagas ir montavimo sąlygas. Katalogo kategorija tik padeda pradėti atranką ir nepatvirtina dabartinės gamintojo pasiūlos."
+      "buyer_note": "Užklausoje nurodykite angų matmenis, vidaus įrangą, durų tipą, medžiagas ir montavimo sąlygas. Katalogo kategorija tik padeda pradėti atranką ir nepatvirtina dabartinės gamintojo pasiūlos.",
+      "guidanceSections": [
+        {
+          "heading": "Spintos užduotis prasideda nuo vidaus, ne nuo durų",
+          "paragraphs": [
+            "Įmontuojamos spintos projektas apima nišos matavimą, vidaus zonų paskirstymą, lentynas, stalčius, kabyklas, apšvietimą ir durų tipą. Užklausoje įvardykite, ką laikysite, kokio ilgio drabužiams reikia vietos, ar būtinos batų, lagaminų, buities prietaisų zonos ir kasdien pasiekiami stalčiai. Pažymėkite grindjuostes, rozetes, revizines angas, kreivas sienas, nuožulnias lubas bei šildymo elementus."
+          ]
+        },
+        {
+          "heading": "Durų sistemos ir tvirtinimas turi būti aprašyti",
+          "paragraphs": [
+            "Varstomoms, sulankstomoms ir slenkančioms durims reikia skirtingos vietos bei furnitūros. Paprašykite nurodyti profilių ar lankstų sistemą, užpildą, veidrodžio apsaugą, maksimalų durų dydį ir reguliavimo galimybę. Aptarkite, ar baldas turi nugarėlę, kaip bus kompensuojamos sienų paklaidos ir į kokį pagrindą jis tvirtinamas. Priėmimo metu durys turi judėti be kliūčių, lentynos – atitikti sutartą apkrovą, o komunikacijos likti pasiekiamos."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kokius spintos matmenis pateikti užklausoje?",
+          "answer": "Nurodykite nišos plotį, aukštį ir gylį keliose vietose, bet laikykite juos preliminariais iki gamintojo galutinio matavimo."
+        },
+        {
+          "question": "Kaip pasirinkti tarp varstomų ir slenkančių durų?",
+          "answer": "Vertinkite vietą atidarymui, prieigą prie viso spintos pločio, durų dydį, furnitūros priežiūrą ir norimą fasado vaizdą."
+        },
+        {
+          "question": "Ką susitarti dėl spintos vidaus?",
+          "answer": "Brėžinyje įrašykite lentynų, stalčių, kabyklų, apšvietimo, batų ir kitų zonų skaičių, aukštį, gylį bei furnitūrą."
+        },
+        {
+          "question": "Ar kategorijos įrašas garantuoja spintų gamybos patirtį?",
+          "answer": "Ne. Viešo šaltinio žyma yra tik paieškos pradžia; paprašykite panašių darbų pavyzdžių ir patikrinkite pasiūlymo apimtį."
+        }
+      ]
     },
     {
       "code": "BB",
       "slug": "miegamojo-ir-vonios-baldai",
       "title": "Miegamojo ir vonios baldai pagal užsakymą",
       "intro": "Čia pateikiami viešuose šaltiniuose su miegamojo arba vonios baldais susieti Lietuvos gamintojų kandidatai.",
-      "buyer_note": "Patikslinkite, kokiai patalpai skirtas projektas, kokios drėgmės sąlygos, medžiagos, furnitūra ir montavimo darbai įtraukiami. Įrašai yra nepatvirtinti ir nėra rekomendacijos."
+      "buyer_note": "Patikslinkite, kokiai patalpai skirtas projektas, kokios drėgmės sąlygos, medžiagos, furnitūra ir montavimo darbai įtraukiami. Įrašai yra nepatvirtinti ir nėra rekomendacijos.",
+      "guidanceSections": [
+        {
+          "heading": "Miegamajam ir voniai reikia skirtingų techninių atsakymų",
+          "paragraphs": [
+            "Miegamojo projekte svarbūs praėjimai aplink lovą, čiužinio matmenys, pakėlimo mechanizmas, naktinių spintelių aukštis, spintų vidus ir tyliai veikianti furnitūra. Vonios baldams papildomai reikia tiksliai pažymėti praustuvo, sifono, vandens taškų, grindinio šildymo ir ventiliacijos vietas. Užklausoje aiškiai atskirkite, kurios patalpos baldų reikia, nes vienodas apdailos pavadinimas nereiškia vienodo tinkamumo skirtingai drėgmei."
+          ]
+        },
+        {
+          "heading": "Drėgmė, priežiūra ir montavimo ribos",
+          "paragraphs": [
+            "Vonioje tikrinkite ne vien fasado atsparumą: svarbios korpuso briaunos, išpjovų sandarinimas, atstumas nuo tiesioginio vandens, vėdinimas ir tvirtinimo pagrindas. Susitarkite, kas montuoja praustuvą, sifoną, maišytuvą ir silikonines siūles, o kas tik baldą. Miegamajame paprašykite aprašyti lovos pagrindą, apkrovas, čiužinio įleidimą ir išardymo galimybę persikraustant. Abiem atvejais medžiagų pavyzdžius vertinkite esamame patalpos apšvietime."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar įprasta baldinė plokštė tinka vonios baldui?",
+          "answer": "Tinkamumas priklauso nuo konkrečios plokštės, briaunų, išpjovų sandarinimo, baldų vietos ir vėdinimo. Prašykite rašytinės specifikacijos."
+        },
+        {
+          "question": "Ką nurodyti užsakant lovą?",
+          "answer": "Nurodykite čiužinio matmenis, norimą aukštį, pagrindo tipą, pakėlimo mechanizmą, patalynės dėžę, apkrovos ir išardymo poreikį."
+        },
+        {
+          "question": "Kas turėtų prijungti vonios santechniką?",
+          "answer": "Tai reikia aiškiai sutarti. Baldų montavimas savaime nereiškia praustuvo, sifono ar maišytuvo prijungimo."
+        },
+        {
+          "question": "Ar sąrašas patvirtina kandidato tinkamumą drėgnoms patalpoms?",
+          "answer": "Ne. Katalogo įrašas nepatvirtintas; medžiagas, panašių darbų patirtį ir garantines sąlygas tikrinkite tiesiogiai."
+        }
+      ]
     },
     {
       "code": "OC",
       "slug": "biuro-ir-komerciniai-baldai",
       "title": "Biuro ir komerciniai baldai pagal užsakymą",
       "intro": "Puslapyje pateikiami viešuose šaltiniuose su biuro ar komerciniais baldais susieti Lietuvos gamintojų kandidatai.",
-      "buyer_note": "Aprašykite patalpų paskirtį, naudotojų skaičių, medžiagų ir atsparumo reikalavimus, pristatymo etapus bei montavimo ribas. Viešas įrašas nepatvirtina pajėgumo ar tinkamumo konkrečiam objektui."
+      "buyer_note": "Aprašykite patalpų paskirtį, naudotojų skaičių, medžiagų ir atsparumo reikalavimus, pristatymo etapus bei montavimo ribas. Viešas įrašas nepatvirtina pajėgumo ar tinkamumo konkrečiam objektui.",
+      "guidanceSections": [
+        {
+          "heading": "Komercinis baldas turi atitikti darbo scenarijų",
+          "paragraphs": [
+            "Biuro ar komercinės erdvės užduotyje nurodykite naudotojų skaičių, darbo vietų kaitą, techniką, kabelių trasas, dokumentų saugojimą, klientų aptarnavimo eigą ir valymo režimą. Reikia suderinti ne tik stalų ar spintų matmenis, bet ir praėjimus, ergonomiką, prieigą prie rozečių, pertvaras bei ženklinimo vietas. Jei projektas vykdomas etapais, pateikite patalpų planą ir prioritetus, kad tiekėjas atskirtų gamybos, pristatymo ir montavimo dalis."
+          ]
+        },
+        {
+          "heading": "Intensyvus naudojimas keičia medžiagų pasirinkimą",
+          "paragraphs": [
+            "Viešose zonose verta aptarti paviršių atsparumą dilimui, smūgiams ir valymo priemonėms, briaunų konstrukciją, keičiamos furnitūros prieinamumą bei tvirtinimą. Registratūrai ar prekybinei įrangai pažymėkite integruojamą techniką, apšvietimą, užraktus ir aptarnavimo angas. Paprašykite darbų saugos, objekto patekimo bei montavimo laiko reikalavimus įtraukti į planą. Priėmimą organizuokite pagal suderintą patalpų ar baldų žiniaraštį, o ne vien bendrą nuotrauką."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ką pateikti biuro baldų pasiūlymui?",
+          "answer": "Pateikite planą, darbo vietų ir naudotojų skaičių, techniką, kabelių poreikį, saugojimo apimtį, medžiagų reikalavimus ir įrengimo etapus."
+        },
+        {
+          "question": "Kaip palyginti komercinių baldų ilgaamžiškumą?",
+          "answer": "Lyginkite konkrečius paviršius, briaunas, furnitūros serijas, apkrovas, valymo sąlygas, keičiamas dalis ir garantijos apimtį."
+        },
+        {
+          "question": "Ar montavimas gali vykti veikiančiame biure?",
+          "answer": "Tai priklauso nuo objekto taisyklių ir tiekėjo galimybių. Raštu sutarkite patekimą, leidžiamą laiką, triukšmą, apsaugą ir etapų perdavimą."
+        },
+        {
+          "question": "Ar kandidato įrašas patvirtina pajėgumą dideliam objektui?",
+          "answer": "Ne. Viešo šaltinio įrašas nepatvirtina komandos dydžio, pajėgumo ar užimtumo; tai tik kandidatas tolimesnei patikrai."
+        }
+      ]
     },
     {
       "code": "HR",
       "slug": "horeca-ir-prekybos-baldai",
       "title": "HoReCa ir prekybos baldai pagal užsakymą",
       "intro": "Čia pateikiami viešuose šaltiniuose su HoReCa arba prekybos baldais susieti Lietuvos gamintojų kandidatai.",
-      "buyer_note": "Prieš atranką įvardykite objekto paskirtį, naudojimo intensyvumą, medžiagų reikalavimus, darbų etapus ir terminų prielaidas. Kategorija nėra patvirtinimas, kad kandidatas šiuo metu priima tokį užsakymą."
+      "buyer_note": "Prieš atranką įvardykite objekto paskirtį, naudojimo intensyvumą, medžiagų reikalavimus, darbų etapus ir terminų prielaidas. Kategorija nėra patvirtinimas, kad kandidatas šiuo metu priima tokį užsakymą.",
+      "guidanceSections": [
+        {
+          "heading": "HoReCa ir prekybos baldas kuriamas srautui",
+          "paragraphs": [
+            "Kavinės, restorano, viešbučio ar parduotuvės projekte aprašykite lankytojų ir darbuotojų judėjimą, aptarnavimo seką, eksponuojamas prekes, valymo režimą, darbo vietų techniką ir didžiausias apkrovas. Barai, kasos, vitrinos, minkštasuoliai bei sieninės sistemos turi derėti su inžineriniais taškais ir gaisriniais praėjimais. Užklausoje pridėkite patalpų planą, įrangos modelius, prekių matmenis, prekės ženklo spalvas ir objekto atidarymo priklausomybes."
+          ]
+        },
+        {
+          "heading": "Patvarumas ir aptarnavimas svarbiau už vien pristatymą",
+          "paragraphs": [
+            "Paprašykite nurodyti intensyviam naudojimui parinktus paviršius, valymo chemijos ribas, kampų ir briaunų apsaugą, audinių savybes, ventiliuojamas įrangos zonas ir keičiamas detales. Montavimo plane turi būti aišku, kas koordinuoja elektriką, santechniką, šaldymo ar kasos įrangą ir ženklinimą. Jei objektas atidaromas etapais, sutarkite tarpinius priėmimus ir defektų fiksavimą. Katalogas negali patvirtinti, ar kandidatas atitinka konkrečius objekto norminius reikalavimus."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kuo HoReCa baldų užklausa skiriasi nuo namų baldų?",
+          "answer": "Joje reikia aprašyti intensyvų naudojimą, lankytojų ir personalo srautą, valymą, įrangą, darbų etapus ir objekto patekimo taisykles."
+        },
+        {
+          "question": "Ką nurodyti užsakant barą ar kasą?",
+          "answer": "Nurodykite darbuotojo veiksmų seką, įrangos modelius, komunikacijas, saugojimą, užraktus, apšvietimą, aptarnavimo angas ir išorės apdailą."
+        },
+        {
+          "question": "Kaip planuoti montavimą prieš objekto atidarymą?",
+          "answer": "Susiekite baldų etapą su apdaila ir įrangos rangovais, numatykite tarpinius priėmimus ir raštu įvardykite, kas gali keisti grafiką."
+        },
+        {
+          "question": "Ar katalogas patvirtina atitiktį objekto reikalavimams?",
+          "answer": "Ne. Kandidatai yra nepatvirtinti; techninę, norminę ir sutartinę atitiktį turi įrodyti pats pasirinktas tiekėjas."
+        }
+      ]
     },
     {
       "code": "U",
       "slug": "minksti-baldai",
       "title": "Minkšti baldai pagal užsakymą",
       "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su minkštais baldais pagal užsakymą susieti Lietuvos gamintojų kandidatai.",
-      "buyer_note": "Užklausoje palyginkite konstrukciją, užpildus, audinius, matmenis, pristatymą ir garantines sąlygas. Viešo šaltinio kategorija nepatvirtina konkretaus modelio, kainos ar termino."
+      "buyer_note": "Užklausoje palyginkite konstrukciją, užpildus, audinius, matmenis, pristatymą ir garantines sąlygas. Viešo šaltinio kategorija nepatvirtina konkretaus modelio, kainos ar termino.",
+      "guidanceSections": [
+        {
+          "heading": "Minkšto baldo patogumą lemia nematomos dalys",
+          "paragraphs": [
+            "Užsakant sofą, lovą, kampą ar minkštasuolį reikia aprašyti matmenis, sėdėjimo aukštį ir gylį, norimą kietumą, naudotojus, miego funkciją, patalynės dėžę bei išardymo poreikį. Paprašykite įvardyti rėmo konstrukciją, atramas, spyruokles ar diržus, putų sluoksnius, jų tankį ir užvalkalų nuėmimą. Vien audinio pavyzdys neparodo, kaip baldas jausis, todėl, kai įmanoma, vertinkite panašios konstrukcijos fizinį pavyzdį."
+          ]
+        },
+        {
+          "heading": "Audinys turi atitikti realų naudojimą",
+          "paragraphs": [
+            "Audinį rinkitės pagal valymo būdą, dilimo ir pūkavimosi savybes, spalvos atsparumą, augintinius, vaikus ir tiesioginę saulę. Susitarkite dėl siūlių, rašto krypties, atspalvio partijų bei papildomo audinio taisymui. Prieš gamybą patikrinkite durų, laiptinės ir lifto angas: didelis baldas gali netilpti net tada, kai kambaryje vietos pakanka. Pristatymo pasiūlyme turi būti aišku, ar baldas užnešamas, surenkamas vietoje ir išvežama pakuotė."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kokią informaciją pateikti užsakant sofą?",
+          "answer": "Pateikite išorinius matmenis, sėdėjimo aukštį ir gylį, kietumo lūkestį, miego funkciją, naudotojus, audinio poreikius ir pristatymo kelią."
+        },
+        {
+          "question": "Kaip palyginti minkšto baldo konstrukciją?",
+          "answer": "Prašykite aprašyti rėmą, atramas, spyruokles ar diržus, putų sluoksnius ir tankį, siūles, užvalkalus bei garantijos dalis."
+        },
+        {
+          "question": "Ar pakanka audinį išsirinkti iš nuotraukos?",
+          "answer": "Ne. Spalva ekrane gali skirtis, o tekstūra ir valymas neįvertinami. Prašykite fizinio pavyzdžio ir techninių savybių."
+        },
+        {
+          "question": "Ar sąrašo kandidatai tikrai gamina mano norimą modelį?",
+          "answer": "Katalogas to negarantuoja. Viešas įrašas nepatvirtina konkretaus modelio, konstrukcijos, audinio prieinamumo ar termino."
+        }
+      ]
     },
     {
       "code": "SW",
       "slug": "medzio-darbai-ir-masyvo-baldai",
       "title": "Medžio darbai ir medžio masyvo baldai",
       "intro": "Čia pateikiami viešuose šaltiniuose su medžio darbais arba medžio masyvo baldais susieti Lietuvos gamintojų kandidatai.",
-      "buyer_note": "Patikslinkite medienos rūšį, drėgnumą, konstrukciją, apdailą, priežiūrą ir montavimo apimtį. Katalogas nevertina meistrystės ir negarantuoja, kad kandidatas imsis konkretaus projekto."
+      "buyer_note": "Patikslinkite medienos rūšį, drėgnumą, konstrukciją, apdailą, priežiūrą ir montavimo apimtį. Katalogas nevertina meistrystės ir negarantuoja, kad kandidatas imsis konkretaus projekto.",
+      "guidanceSections": [
+        {
+          "heading": "Masyvo užduotyje būtina įvardyti pačią medieną",
+          "paragraphs": [
+            "Medžio masyvo baldui nurodykite rūšį, matomų paviršių atranką, lentų sujungimo principą, galimas šakas, spalvos ir rašto variaciją. Konstrukcijoje svarbu medienos drėgnis, sezoninis judėjimas, sujungimai, leistinos deformacijos ir remonto galimybė. Užklausoje pridėkite tikslius matmenis, apkrovas, norimą kraštų profilį, kojų ar tvirtinimo sprendimą ir patalpos mikroklimatą. „Natūralus medis“ nėra pakankama specifikacija."
+          ]
+        },
+        {
+          "heading": "Apdaila keičia ir vaizdą, ir priežiūrą",
+          "paragraphs": [
+            "Aliejus, vaškas, lakas ar dažai skirtingai reaguoja į vandenį, karštį, dėmes ir vietinį remontą. Paprašykite patvirtinto apdailos pavyzdžio ant tos pačios medienos rūšies ir rašytinės priežiūros instrukcijos. Montuojant masyvo stalviršius ar sieninius elementus reikia palikti konstrukcijai numatytą judėjimą, naudoti tinkamą tvirtinimą ir įvertinti šilumos bei drėgmės šaltinius. Priėmimo kriterijuose iš anksto atskirkite natūralią variaciją nuo taisytino gamybos trūkumo."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ką reiškia „medžio masyvo baldas“ pasiūlyme?",
+          "answer": "Pasiūlyme vis tiek turi būti įvardyta medienos rūšis, masyvo dalys, galimi faneruoti elementai, sujungimai, drėgnis ir apdaila."
+        },
+        {
+          "question": "Ar natūralios šakos laikomos defektu?",
+          "answer": "Tai priklauso nuo iš anksto sutartos medienos atrankos ir pavyzdžio. Priimtiną šakotumą bei spalvos variaciją aptarkite prieš gamybą."
+        },
+        {
+          "question": "Kokią medžio apdailą rinktis?",
+          "answer": "Rinkitės pagal naudojimą, vandens ir karščio poveikį, norimą blizgumą, priežiūrą ir vietinio remonto galimybę, o ne vien pavadinimą."
+        },
+        {
+          "question": "Ar katalogas vertina staliaus meistrystę?",
+          "answer": "Ne. Sąrašas yra viešų šaltinių kandidatų rinkinys; konstrukciją, pavyzdžius, sutartį ir darbų kokybę tikrinkite savarankiškai."
+        }
+      ]
     },
     {
       "code": "MM",
       "slug": "metalo-ir-misriu-medziagu-baldai",
       "title": "Metalo ir mišrių medžiagų baldai pagal užsakymą",
       "intro": "Puslapyje pateikiami viešuose šaltiniuose su metalo arba mišrių medžiagų baldais susieti Lietuvos gamintojų kandidatai.",
-      "buyer_note": "Užklausoje aprašykite konstrukciją, medžiagų derinius, paviršių apdailą, apkrovas ir montavimo sąlygas. Viešas įrašas nėra techninių galimybių ar dabartinio užimtumo patvirtinimas."
+      "buyer_note": "Užklausoje aprašykite konstrukciją, medžiagų derinius, paviršių apdailą, apkrovas ir montavimo sąlygas. Viešas įrašas nėra techninių galimybių ar dabartinio užimtumo patvirtinimas.",
+      "guidanceSections": [
+        {
+          "heading": "Mišri konstrukcija turi vieną aiškų techninį brėžinį",
+          "paragraphs": [
+            "Metalo, medžio, plokštės, stiklo ar akmens derinyje reikia suderinti ne tik išvaizdą, bet ir skirtingų medžiagų svorį, plėtimąsi, tvirtinimą bei gamybos tolerancijas. Užklausoje nurodykite paskirtį, matmenis, apkrovas, metalo profilį, suvirinimo siūlių vaizdą, paviršiaus apdailą, kitų medžiagų specifikaciją ir reguliuojamas atramas. Vienas patvirtintas brėžinys turėtų parodyti, kas atsako už kiekvieną jungtį ir galutinį surinkimą."
+          ]
+        },
+        {
+          "heading": "Paviršiaus paruošimas priklauso nuo aplinkos",
+          "paragraphs": [
+            "Vidaus, drėgnos patalpos ir lauko konstrukcijoms reikia skirtingos apsaugos nuo korozijos bei skirtingų tvirtinimo elementų. Paprašykite įvardyti metalo paruošimą, dažymo ar kitos dangos sistemą, spalvos kodą, matomų siūlių apdirbimą ir priežiūrą. Stiklui, akmeniui ar medienai aptarkite kraštus, tarpines, keitimo galimybę ir transportavimo atsakomybę. Montavimo vietoje patikrinkite grindų lygumą, sienų pagrindą, užnešimo kelią ir apsaugą nuo paviršių subraižymo."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ką nurodyti metalo baldo brėžinyje?",
+          "answer": "Nurodykite profilius, sienelių storį, sujungimus, apkrovas, suvirinimo siūlių vaizdą, dangą, spalvos kodą, atramas ir kitų medžiagų tvirtinimą."
+        },
+        {
+          "question": "Ar ta pati metalo apdaila tinka vidui ir laukui?",
+          "answer": "Nebūtinai. Aplinkos drėgmė ir korozijos rizika keičia paruošimo, dangos ir tvirtinimo reikalavimus."
+        },
+        {
+          "question": "Kas atsako už stiklo ar akmens dalį mišriame balde?",
+          "answer": "Atsakomybę reikia įrašyti į pasiūlymą: kas matuoja, užsako, transportuoja, sumontuoja ir keičia pažeistą dalį."
+        },
+        {
+          "question": "Ar kategorijos žyma patvirtina technines gamintojo galimybes?",
+          "answer": "Ne. Ji paremta viešu šaltiniu ir nepatvirtina įrangos, suvirinimo, apdailos ar montavimo kompetencijos."
+        }
+      ]
     },
     {
       "code": "O",
       "slug": "kiti-nestandartiniai-baldai",
       "title": "Kiti nestandartiniai baldai pagal užsakymą",
       "intro": "Šiame puslapyje pateikiami Lietuvos gamintojų kandidatai, kurių vieši šaltiniai patvirtina nestandartinių ar pagal individualų užsakymą gaminamų baldų veiklą, tačiau nepakanka informacijos juos priskirti siauresnei produktų kategorijai.",
-      "buyer_note": "Prieš kreipdamiesi paprašykite patvirtinti, kokius gaminius, medžiagas, paslaugų apimtį ir terminus kandidatas gali pasiūlyti. Ši bendroji kategorija nepatvirtina konkrečių produktų, medžiagų, pajėgumo ar tinkamumo jūsų projektui."
+      "buyer_note": "Prieš kreipdamiesi paprašykite patvirtinti, kokius gaminius, medžiagas, paslaugų apimtį ir terminus kandidatas gali pasiūlyti. Ši bendroji kategorija nepatvirtina konkrečių produktų, medžiagų, pajėgumo ar tinkamumo jūsų projektui.",
+      "guidanceSections": [
+        {
+          "heading": "Nestandartinę idėją paverskite patikrinama užduotimi",
+          "paragraphs": [
+            "Kai gaminys netelpa į įprastą kategoriją, pradėkite nuo funkcijos: kas juo naudosis, ką jis laikys, kokias apkrovas patirs, kaip bus valomas ir ar turės judančių, elektrinių ar apšviestų dalių. Pridėkite patalpos planą, nuotraukas, matmenis ir pavyzdžius, tačiau aiškiai atskirkite įkvėpimą nuo privalomų savybių. Paprašykite kandidato paaiškinti siūlomą konstrukciją ir pažymėti, kuriuos sprendimus dar reikia išbandyti prototipu ar medžiagos pavyzdžiu."
+          ]
+        },
+        {
+          "heading": "Bendroji kategorija reikalauja daugiau patikros",
+          "paragraphs": [
+            "Ši kategorija reiškia, kad viešame šaltinyje matoma nestandartinių baldų veikla, bet nepakanka duomenų siauresnei specializacijai patvirtinti. Todėl prieš kainą išsiaiškinkite, ar kandidatas pats projektuoja, kokias medžiagas apdirba, ką perduoda partneriams ir ar turi panašios konstrukcijos darbų. Sutartyje įrašykite patvirtintą brėžinį, pavyzdžius, apkrovas, montavimo pagrindą, priėmimo kriterijus ir keitimų tvarką. Vien pažadas „pagaminsime“ nėra techninė specifikacija."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kaip aprašyti baldą, kuris neturi aiškios kategorijos?",
+          "answer": "Aprašykite funkciją, naudotojus, matmenis, apkrovas, medžiagų kryptį, judančias dalis, aplinką, montavimo vietą ir privalomas savybes."
+        },
+        {
+          "question": "Kada prašyti prototipo ar medžiagos pavyzdžio?",
+          "answer": "Kai sprendimas techniškai neįprastas, svarbus jutiminis paviršius, spalva ar judėjimas, o klaidą po gamybos būtų brangu taisyti."
+        },
+        {
+          "question": "Kodėl kandidatas priskirtas bendrajai kategorijai?",
+          "answer": "Viešas šaltinis rodo nestandartinių baldų veiklą, tačiau nepakanka patikimų duomenų siauresnei gaminių specializacijai nustatyti."
+        },
+        {
+          "question": "Ar bendros kategorijos įrašas yra rekomendacija?",
+          "answer": "Ne. Tai nepatvirtintas kandidatas; jo technines galimybes, tapatybę, partnerius, sutartį ir panašius darbus tikrinkite patys."
+        }
+      ]
     },
     {
       "code": "MM",
       "slug": "kiti-baldai",
       "title": "Kiti baldai pagal užsakymą",
       "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su kitais baldais susieti Lietuvos gamintojų kandidatai. Konkrečią gaminių apimtį, medžiagas ir galimybę priimti užsakymą patikrinkite tiesiogiai.",
-      "buyer_note": "Ši bendroji šaltinio kategorija nepatvirtina konkrečių gaminių, medžiagų, kainos, termino ar dabartinio užimtumo. Prieš kreipdamiesi aiškiai aprašykite savo projektą ir paprašykite patvirtinti apimtį."
+      "buyer_note": "Ši bendroji šaltinio kategorija nepatvirtina konkrečių gaminių, medžiagų, kainos, termino ar dabartinio užimtumo. Prieš kreipdamiesi aiškiai aprašykite savo projektą ir paprašykite patvirtinti apimtį.",
+      "guidanceSections": [
+        {
+          "heading": "Pirmiausia patvirtinkite, kokį gaminį kandidatas siūlo",
+          "paragraphs": [
+            "Šaltinio kategorija „kiti baldai“ gali apimti labai skirtingus gaminius, todėl jos nepakanka užsakymo tinkamumui įvertinti. Užklausoje įvardykite baldo paskirtį, patalpą, tikslius ar preliminarius matmenis, naudotojus, apkrovas, norimas medžiagas, pavyzdžius ir montavimo vietą. Paprašykite kandidato pirmame atsakyme patvirtinti, ar jis tokį gaminį projektuoja, gamina bei montuoja ir kurią dalį atliktų kiti tiekėjai."
+          ]
+        },
+        {
+          "heading": "Pasiūlymas turi panaikinti kategorijos neapibrėžtumą",
+          "paragraphs": [
+            "Tolesniam palyginimui reikia brėžinio ar aiškaus gaminių žiniaraščio, medžiagų ir furnitūros specifikacijos, kiekių, apdailos, pristatymo bei montavimo apimties. Jei siūlomas standartinis perparduodamas gaminys, atskirkite jį nuo pagal užsakymą gaminamų dalių ir patikrinkite gamintoją, modelį bei garantijos teikėją. Katalogas nepatvirtina, kad bendros kategorijos kandidatas priima konkretų projektą, todėl vertinkite tik raštu gautą atsakymą ir dokumentus."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ką reiškia kategorija „kiti baldai“?",
+          "answer": "Ji rodo bendrą viešo šaltinio kategoriją, bet nepatvirtina konkretaus gaminio, medžiagos ar gamybos būdo."
+        },
+        {
+          "question": "Ko paklausti kandidatą pirmame laiške?",
+          "answer": "Paprašykite patvirtinti, ar jis projektuoja, gamina, pristato ir montuoja jūsų aprašytą gaminį bei ką perduoda partneriams."
+        },
+        {
+          "question": "Kaip atskirti gaminamą ir perparduodamą baldą?",
+          "answer": "Pasiūlyme prašykite nurodyti kiekvienos dalies gamintoją, modelį, individualius pakeitimus, montuotoją ir garantijos teikėją."
+        },
+        {
+          "question": "Ar šio sąrašo eiliškumas yra reitingas?",
+          "answer": "Ne. Kandidatai pateikiami kaip viešų šaltinių įrašai; sąrašo vieta nėra kokybės, prieinamumo ar tinkamumo įvertinimas."
+        }
+      ]
     }
   ],
   "cityThreshold": 5,
-  "cityCategoryThreshold": 3
+  "cityCategoryThreshold": 3,
+  "guidance": {
+    "priceReference": "300–800 €/m",
+    "sharedSections": [
+      {
+        "heading": "Nuo poreikio iki sumontuoto baldo",
+        "paragraphs": [
+          "Baldas pagal užsakymą nėra vien pagamintas korpusas. Darbas paprastai prasideda nuo patalpos, naudojimo įpročių ir pageidaujamos išvaizdos aptarimo, po jo tikslinami matmenys, parengiama konstrukcija ar brėžiniai, suderinamos medžiagos, furnitūra, spalvos ir montavimo ribos. Tik tada gaminamos detalės, jos surenkamos, pristatomos ir pritaikomos konkrečioje vietoje. Skirtingi tiekėjai į pasiūlymą gali įtraukti nevienodą šių etapų dalį, todėl trumpa galutinė suma dar neparodo, ar lyginami tokie pat darbai.",
+          "Prieš pasirinkdami kandidatą paprašykite raštu įvardyti, kas matuos, kas atsakys už projektą, kokius brėžinius turėsite patvirtinti ir kada pasirinkimas taps galutinis. Atskirai susitarkite, kas paruošia sienas, grindis, elektros bei santechnikos taškus, kas išneša senus baldus ir kas sutvarko pakuotes. Toks apimties išskaidymas padeda pastebėti ne tik kainos skirtumą, bet ir darbus, kurie kitu atveju liktų pirkėjui."
+        ]
+      },
+      {
+        "heading": "Kaip vertinti kainą, o ne vieną skaičių",
+        "paragraphs": [
+          "Kaina gali būti sudaroma iš projektavimo ir matavimo, korpusų, fasadų, furnitūros, stalviršių ar kitų paviršių, pristatymo, užnešimo, montavimo ir papildomų darbų. Pasiūlyme turėtų būti aišku, ar nurodyta suma yra su mokesčiais, kokie kiekiai bei gamintojai į ją įtraukti ir kas būtų skaičiuojama papildomai. Linijinio metro palyginimas neparodo spintelių aukščio, stalčių skaičiaus, kampų, mechanizmų, apdailos ar montavimo sudėtingumo, todėl jis tinka tik labai ankstyvam orientavimuisi.",
+          "Šios svetainės virtuvės baldų kainų gide kaip platus istorinis ir viešai skelbto rinkos orientyro pavyzdys minimas 300–800 €/m intervalas. Tai nėra šios dienos pasiūlymas, kainos pažadas ar tarifas kitoms baldų kategorijoms. Net virtuvei jį reikia tikrinti pagal konkrečią komplektaciją ir šaltinio datą. Kitų kategorijų kainų iš šio intervalo išvesti negalima. Patikimas palyginimas prasideda tada, kai keli kandidatai gauna tą pačią užduotį ir kainą išskaido pagal vienodą apimtį."
+        ]
+      },
+      {
+        "heading": "Ką įrašyti į užklausą ir nuo ko priklauso grafikas",
+        "paragraphs": [
+          "Pirmoje užklausoje nurodykite miestą ir tikslų montavimo adresą ar bent jo tipą, patalpos paskirtį, preliminarius matmenis, norimus gaminius, medžiagų kryptį, spalvas, svarbiausias funkcijas ir pageidaujamą biudžeto ribą. Pridėkite patalpos nuotraukas, planą, inžinerinių taškų vietas bei įėjimo, laiptinės ar lifto informaciją. Jei remonto darbai dar vyksta, aiškiai pažymėkite, kurie matmenys yra preliminarūs. Paprašykite atsakyme atskirti įskaičiuotus ir neįskaičiuotus darbus.",
+          "Gamybos ir montavimo laikas priklauso nuo projekto patvirtinimo, galutinio matavimo, medžiagų bei furnitūros prieinamumo, nestandartinių detalių, kitų rangovų pasirengimo, gamintojo apkrovos ir pristatymo sąlygų. Vien žodinio pažado nepakanka: prašykite grafiko etapais ir užrašykite, nuo kokio įvykio jis pradedamas skaičiuoti. Jei keičiate spalvą, furnitūrą, matmenis ar patalpos parengtį, kartu raštu atnaujinkite ir kainą, ir grafiką. Šiame kataloge terminai nėra prognozuojami ar garantuojami."
+        ]
+      },
+      {
+        "heading": "Medžiagos, matavimas ir vietos sąlygos",
+        "paragraphs": [
+          "Medžiagos pavadinimas dar neapibrėžia viso rezultato. Pasiūlyme verta įrašyti plokštės ar medienos rūšį, gamintoją ir dekorą, fasado apdailą, briaunų sprendimą, furnitūros seriją, paviršių priežiūrą ir matomų pavyzdžių patvirtinimą. Montuojant svarbios sienų, grindų bei kampų paklaidos, tvirtinimo pagrindas, drėgmė, šilumos šaltiniai ir priėjimas prie komunikacijų. Galutinį matavimą logiška atlikti tada, kai jo nekeis likę apdailos sluoksniai.",
+          "Vietovė veikia ne baldo kokybę, o projekto logistiką: reikia suderinti matuotojo atvykimą, pristatymo zoną, parkavimą, užnešimą, lifto dydį, leidžiamą darbų laiką ir pakartotinio vizito sąlygas. Gamintojo bazės miestas savaime nereiškia, kad jis aptarnauja visą savivaldybę ar aplinkinį regioną. Šias ribas, kelionės kainą ir montuotojų atsakomybę patvirtinkite prieš mokėdami avansą."
+        ]
+      }
+    ],
+    "combinationHeading": "Kaip sujungti baldų rūšį ir vietos sąlygas",
+    "combinationParagraph": "Šiame puslapyje kategorijos sprendinius vertinkite kartu su konkrečios vietovės logistika. Kandidatui vienoje užklausoje pateikite ir techninę baldo užduotį, ir objekto parengtį, pristatymo bei montavimo aplinkybes. Taip atsakymas parodys ne vien tai, ar gamintojas dirba su pasirinkta baldų rūšimi, bet ir ar gali pamatuoti, pristatyti bei sumontuoti būtent šiame objekte. Katalogo miesto ir kategorijos žymos yra tik atrankos pradžia, o ne tokio suderinamumo patvirtinimas."
+  },
+  "cities": {
+    "Alytus": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Alytus“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Alytus“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Alytus“",
+          "paragraphs": [
+            "Alytuje atranką verta pradėti atskiriant gamintojo bazę nuo realios išvykų teritorijos. Miesto ir rajono objektai gali skirtis privažiavimu, užnešimu bei pakartotinio matavimo sąnaudomis. Užklausoje nurodykite, ar objektas yra daugiabutyje, individualiame name, sodų ar rajono vietovėje, koks parkavimas ir laiptinė. Vietinių kandidatų sąrašą lyginkite su Kauno ar kitų miestų pasiūlymais tik tada, kai visuose aiškiai įtrauktas transportas, matavimas ir montavimas."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar Alytaus kandidatai automatiškai aptarnauja visą rajoną?",
+          "answer": "Ne. Bazės miestas nerodo aptarnavimo ribos; tikslų adresą, kelionės kainą ir pakartotinių vizitų sąlygas suderinkite tiesiogiai."
+        },
+        {
+          "question": "Ar vietovės „Alytus“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Alytus“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Jonava": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Jonava“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Jonava“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Jonava“",
+          "paragraphs": [
+            "Jonavos objektui svarbu iš anksto nurodyti, ar montavimas vyks pačiame mieste, rajone, Rukloje ar kitoje aplinkinėje vietovėje. Nedidelis atstumas iki Kauno nereiškia, kad Kauno ir Jonavos kandidatų logistika bus vienoda. Pasiūlyme atskirkite išvyką matavimui, pristatymą, užnešimą ir galimą grįžimą reguliuoti baldų. Jei būstas renovuojamas ar naujai įrengiamas, suderinkite galutinio matavimo momentą su grindimis, sienomis ir inžineriniais taškais."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ką Jonavos objekte pasakyti apie vietą?",
+          "answer": "Nurodykite tikslų miestą ar rajono vietovę, pastato tipą, aukštą, liftą, parkavimą, remonto būklę ir leidžiamą montavimo laiką."
+        },
+        {
+          "question": "Ar vietovės „Jonava“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Jonava“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Kaunas": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Kaunas“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Kaunas“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Kaunas“",
+          "paragraphs": [
+            "Kaune kandidato bazės žyma gali reikšti miestą, priemiesčius ar gamybinę vietą rajone, todėl aptarnavimo teritoriją tikrinkite pagal konkretų adresą. Senamiesčio ir centro objektuose gali būti ribotas parkavimas ar užnešimo laikas, o priemiesčio name – nebaigti apdailos bei inžineriniai darbai. Užklausoje pažymėkite aukštą, liftą, kiemo patekimą ir ar reikalingas leidimas sustoti. Jei lyginate miesto ir rajono gamintojus, vienodai įtraukite matavimo, transporto, užnešimo, montavimo ir pakartotinio vizito kainą."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar Kauno įrašas apima Kauno rajoną?",
+          "answer": "Nebūtinai. Katalogo vieta yra šaltinyje nurodyta bazė; miesto, rajono ir priemiesčių aptarnavimą kandidatas turi patvirtinti pats."
+        },
+        {
+          "question": "Ar vietovės „Kaunas“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Kaunas“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Kėdainiai": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Kėdainiai“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Kėdainiai“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Kėdainiai“",
+          "paragraphs": [
+            "Kėdainiuose verta tiksliai atskirti miesto ir rajono adresą, nes gamintojo kelionės bei montavimo planas gali priklausyti nuo objekto vietos. Miesto daugiabutyje svarbus aukštas, liftas ir laiptinės posūkiai, o rajono name – privažiavimas, grindų bei sienų baigtumas ir elektros tiekimas montavimo įrankiams. Kad Kauno, Panevėžio ar vietiniai kandidatai būtų lyginami sąžiningai, paprašykite visų pasiūlyme parodyti transportą, matavimą ir galimus papildomus vizitus atskiromis eilutėmis."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kaip lyginti Kėdainių ir kitų miestų gamintojus?",
+          "answer": "Visiems pateikite tą patį adresą bei objekto sąlygas ir palyginkite bendrą apimtį su transportu, matavimu, užnešimu bei montavimu."
+        },
+        {
+          "question": "Ar vietovės „Kėdainiai“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Kėdainiai“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Klaipėda": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Klaipėda“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Klaipėda“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Klaipėda“",
+          "paragraphs": [
+            "Klaipėdoje prie įprastų matavimo ir pristatymo klausimų prisideda pajūrio drėgmė, vėdinimas ir pastato vieta. Tai ypač aktualu vonios, prieškambario, nešildomų ar arti lauko esančių zonų medžiagoms bei metalinėms dalims, tačiau sprendimą turi pagrįsti tiekėjas, o ne vien miesto pavadinimas. Centre ar senamiestyje iš anksto aptarkite parkavimą ir užnešimą; rajono ar pajūrio objekte – išvykos ribas. Užklausoje aiškiai nurodykite, ar adresas yra Klaipėdos mieste, rajone ar kitoje Vakarų Lietuvos vietovėje."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ką papildomai aptarti Klaipėdos objekte?",
+          "answer": "Aptarkite konkrečią vietovę, patalpos drėgmę ir vėdinimą, parkavimą, užnešimą bei tai, ar transporto ir montavimo kaina apima rajoną."
+        },
+        {
+          "question": "Ar vietovės „Klaipėda“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Klaipėda“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Lietuva": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Lietuva“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Lietuva“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Lietuva“",
+          "paragraphs": [
+            "Žyma „Lietuva“ nėra konkretus miestas: ji rodo, kad viešame šaltinyje nepavyko patikimai priskirti siauresnės bazės arba veikla pristatoma nacionaliniu mastu. Tokį kandidatą vertinkite tik pateikę tikslų objekto adresą. Paprašykite raštu patvirtinti, iš kur atvyks matuotojas ir montuotojai, kas apmoka kelionę, ar pristatymą vykdo pats gamintojas, kaip sprendžiami pakartotiniai vizitai ir garantinis aptarnavimas. Nacionalinis aprašymas savaime nereiškia vienodų sąlygų visoje šalyje."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ką reiškia kandidato vieta „Lietuva“?",
+          "answer": "Tai nėra patvirtinta nacionalinė aprėptis. Tikslų adresą, komandos išvyką, pristatymą, montavimą ir garantinius vizitus reikia suderinti individualiai."
+        },
+        {
+          "question": "Ar vietovės „Lietuva“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Lietuva“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Marijampolė": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Marijampolė“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Marijampolė“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Marijampolė“",
+          "paragraphs": [
+            "Marijampolės puslapyje bazės miestą vertinkite atskirai nuo aptarnavimo visoje savivaldybėje ar Suvalkijos regione. Užklausoje įrašykite tikslų adresą, pastato tipą, aukštą, liftą ir remonto parengtį, nes nuo to priklauso matavimo bei montavimo organizavimas. Jei kandidatas atvyksta iš Kauno ar kitos vietovės, paprašykite parodyti transporto ir pakartotinių vizitų sąlygas. Vietinis adresas taip pat negarantuoja nemokamo pristatymo, todėl visas išvykas įtraukite į bendrą palyginimą."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar Marijampolės bazė reiškia nemokamą pristatymą mieste?",
+          "answer": "Ne. Katalogas kainodaros netvirtina; pristatymo, užnešimo, matavimo ir pakartotinių vizitų sąlygas kandidatas turi pateikti raštu."
+        },
+        {
+          "question": "Ar vietovės „Marijampolė“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Marijampolė“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Mažeikiai": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Mažeikiai“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Mažeikiai“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Mažeikiai“",
+          "paragraphs": [
+            "Mažeikių kandidatų sąraše ypač svarbu patikrinti faktinę gamybos ir montavimo komandą, nes viešuose šaltiniuose miesto pavadinimas gali žymėti biurą, gamybą ar aptarnaujamą vietą. Nurodykite, ar objektas mieste, rajone ar atokesnėje vietovėje, ir aprašykite privažiavimą. Lygindami su Telšių, Šiaulių ar Klaipėdos tiekėjais į vieną sumą įtraukite matavimą, transportą, užnešimą, montavimą ir garantinį grįžimą. Katalogo mažesnis kandidatų skaičius nėra nei kokybės, nei prieinamumo signalas."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kodėl Mažeikiuose būtina tikrinti gamybos vietą?",
+          "answer": "Viešas įrašas gali nurodyti biurą, gamybą ar aptarnavimo vietą. Paklauskite, iš kur atvyks matuotojai ir montuotojai bei kas vykdys garantinį aptarnavimą."
+        },
+        {
+          "question": "Ar vietovės „Mažeikiai“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Mažeikiai“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Panevėžys": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Panevėžys“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Panevėžys“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Panevėžys“",
+          "paragraphs": [
+            "Panevėžyje pasiūlymo logistiką lemia ne tik miesto pavadinimas, bet ir konkretus kvartalas, daugiabučio patekimas ar rajono atstumas. Užklausoje įrašykite aukštą, lifto ir laiptinės angas, parkavimo galimybę bei apdailos būklę. Naujos statybos objekte nurodykite, kada bus baigtos grindys, sienos ir komunikacijos; senesniame būste perspėkite apie nelygius kampus bei senų baldų išnešimą. Kandidatus iš kitų miestų lyginkite tik su aiškiai įtrauktu matavimu ir montavimu."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kada Panevėžio objekte kviesti galutiniam matavimui?",
+          "answer": "Kai matmenų nebekeičia grindys, sienų apdaila ir komunikacijos. Jei matuojama anksčiau, sutarkite, kas ir kada tikrins matmenis dar kartą."
+        },
+        {
+          "question": "Ar vietovės „Panevėžys“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Panevėžys“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Raseiniai": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Raseiniai“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Raseiniai“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Raseiniai“",
+          "paragraphs": [
+            "Raseinių puslapyje miesto žyma neatsako, ar kandidatas dirba visame rajone ir aplinkinėse gyvenvietėse. Pirmoje užklausoje pateikite tikslų adresą ar bent atstumą nuo miesto, kelio ir privažiavimo sąlygas, pastato tipą bei montavimo aukštą. Kad vietinį tiekėją būtų galima palyginti su Kauno, Šiaulių ar kitų miestų kandidatais, vienodai įrašykite transportą, matavimą, užnešimą ir pakartotinį reguliavimą. Ilgesnė kelionė taip pat gali paveikti garantinio vizito organizavimą, todėl aptarkite jį prieš sutartį."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar Raseinių kandidatas privalo vykti į rajono gyvenvietes?",
+          "answer": "Ne. Aptarnavimo teritorija kataloge nepatvirtinta; konkretų adresą, išvykos kainą ir garantinio vizito tvarką suderinkite raštu."
+        },
+        {
+          "question": "Ar vietovės „Raseiniai“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Raseiniai“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Riešė": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Riešė“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Riešė“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Riešė“",
+          "paragraphs": [
+            "Riešės objektą svarbu aprašyti kaip konkrečią Vilniaus rajono vietą, o ne automatiškai prilyginti Vilniaus miestui. Nurodykite tikslų adresą, privažiavimą, ar gatvė ir kiemas tinkami pristatymo automobiliui, pastato parengtį bei montavimo elektros galimybes. Jei lyginate Riešės ir Vilniaus kandidatus, tikrinkite, ar pasiūlyme įtrauktos išvykos už miesto ribų ir pakartotinis matavimas. Mažas vietinių įrašų skaičius nėra rekomendacija rinktis artimiausią kandidatą be papildomos patikros."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar Riešė šiame kataloge laikoma Vilniaus miestu?",
+          "answer": "Ne. Ji pateikiama pagal atskirą šaltinio vietovės žymą; aptarnavimą iš Vilniaus ir kelionės sąlygas reikia patikrinti tiesiogiai."
+        },
+        {
+          "question": "Ar vietovės „Riešė“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Riešė“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Šiauliai": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Šiauliai“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Šiauliai“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Šiauliai“",
+          "paragraphs": [
+            "Šiauliuose verta patikslinti, ar kandidato bazė yra mieste, pramoninėje teritorijoje ar rajono gyvenvietėje, nes tai gali keisti matavimo ir pristatymo organizavimą. Miesto centre svarbus parkavimas bei užnešimas, o priemiesčio ar rajono name – privažiavimas ir apdailos baigtumas. Užklausoje nurodykite tikslų adresą, aukštą, liftą, durų angas ir leidžiamą darbų laiką. Lygindami su kitų miestų gamintojais reikalaukite vienodai parodyti transporto, montavimo ir garantinių vizitų sąlygas."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar Šiaulių sąrašas apima rajono gamintojus?",
+          "answer": "Puslapis remiasi konkrečia šaltinio miesto žyma. Rajono vietovės ir aptarnavimo aprėptis gali būti nurodytos atskirai, todėl tikrinkite tikslų adresą."
+        },
+        {
+          "question": "Ar vietovės „Šiauliai“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Šiauliai“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Tauragė": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Tauragė“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Tauragė“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Tauragė“",
+          "paragraphs": [
+            "Tauragėje baldų projektui svarbu atskirti miesto, rajono ir aplinkinių savivaldybių aptarnavimą. Užklausoje nurodykite objekto vietą, pastato tipą, privažiavimą, užnešimo kelią ir ar reikės derintis prie veikiančių patalpų darbo. Jei gamintojas turi gamybą rajone, paklauskite, kas atvyks matuoti ir kas montuos. Lygindami pasiūlymus įtraukite ne tik pristatymo kainą, bet ir pakartotinį reguliavimą bei garantinį vizitą, nes katalogo vietos žyma šių sąlygų nepatvirtina."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ką tikrinti, jei Tauragės gamintojo bazė yra rajone?",
+          "answer": "Patikrinkite, kas ir iš kur atvyks matuoti bei montuoti, kokia transporto kaina ir kaip organizuojami pakartotiniai bei garantiniai vizitai."
+        },
+        {
+          "question": "Ar vietovės „Tauragė“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Tauragė“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Telšiai": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Telšiai“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Telšiai“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Telšiai“",
+          "paragraphs": [
+            "Telšių kandidatų puslapyje bazės vieta gali būti mieste arba rajono gamybinėje vietovėje, todėl pirkėjo užklausoje reikia tikslaus objekto adreso. Pažymėkite privažiavimą, aukštą, liftą, laiptinės posūkius ir remonto parengtį. Jei lyginate Telšių, Mažeikių, Šiaulių ar Klaipėdos kandidatus, visų prašykite atskirai parodyti matavimą, transportą, užnešimą, montavimą ir garantinį aptarnavimą. Atstumas savaime neparodo nei galutinės kainos, nei to, kuri komanda greičiau priims projektą."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar Telšių miesto įrašas patvirtina gamybą pačiame mieste?",
+          "answer": "Ne. Viešas šaltinis gali rodyti bazę ar kontaktą; tikrą gamybos vietą, montavimo komandą ir kelionės sąlygas patvirtinkite su kandidatu."
+        },
+        {
+          "question": "Ar vietovės „Telšiai“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Telšiai“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Ukmergė": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Ukmergė“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Ukmergė“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Ukmergė“",
+          "paragraphs": [
+            "Ukmergėje patogu lyginti vietinius bei iš Vilniaus, Kauno ar Panevėžio atvykstančius kandidatus tik turint vienodą logistikos apimtį. Pirmoje užklausoje nurodykite, ar objektas mieste, rajone ar sodybinėje vietovėje, aprašykite privažiavimą, aukštą, liftą ir galutinio matavimo pasirengimą. Paprašykite atskirti matavimo išvyką, pristatymą, užnešimą, montavimą ir pakartotinį vizitą. Miesto vieta tarp didesnių centrų nėra pagrindas numanyti nemokamą ar greitesnį aptarnavimą."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kaip Ukmergėje palyginti vietinį ir atvykstantį gamintoją?",
+          "answer": "Palyginkite tą pačią techninę užduotį ir pilną kainą su visomis išvykomis, transportu, užnešimu, montavimu bei garantinio vizito sąlygomis."
+        },
+        {
+          "question": "Ar vietovės „Ukmergė“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Ukmergė“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Utena": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Utena“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Utena“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Utena“",
+          "paragraphs": [
+            "Utenos projekte nurodykite, ar objektas yra mieste, rajone, sodyboje ar kitoje Aukštaitijos vietovėje. Atokesniam adresui svarbūs privažiavimas, pristatymo automobilio galimybės, montavimo elektros tiekimas ir pakartotinių vizitų planas. Lygindami vietinius kandidatus su atvykstančiais iš Vilniaus ar kitų miestų, paprašykite vienodai išskaidyti matavimą, transportą, užnešimą ir montavimą. Gamintojo bazė Utenoje nepatvirtina, kad jis aptarnauja visą apskritį ar priima konkrečią baldų rūšį."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ar Utenos kandidatai aptarnauja visą Aukštaitiją?",
+          "answer": "Katalogas to netvirtina. Kandidatui pateikite tikslų adresą ir paprašykite patvirtinti išvyką, transporto kainą bei garantinio aptarnavimo ribas."
+        },
+        {
+          "question": "Ar vietovės „Utena“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Utena“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    },
+    "Vilnius": {
+      "intro": "Šiame puslapyje pateikiami viešuose šaltiniuose su vietove „Vilnius“ susieti nepatvirtinti baldų gamintojų kandidatai ir praktinės atrankos gairės.",
+      "buyer_note": "Vietovės žyma „Vilnius“ nereiškia patvirtintos paslaugų teritorijos. Matavimo, pristatymo, montavimo ir pakartotinių vizitų sąlygas tikrinkite tiesiogiai.",
+      "guidanceSections": [
+        {
+          "heading": "Ką įvertinti užsakant baldus vietovėje „Vilnius“",
+          "paragraphs": [
+            "Vilniuje vietos sąlygos gali smarkiai skirtis tarp senamiesčio, centro, tankių daugiabučių kvartalų, naujos statybos rajonų ir priemiesčių. Užklausoje nurodykite parkavimo bei įvažiavimo ribojimus, aukštą, lifto dydį, laiptinės posūkius ir leidžiamą triukšmingų darbų laiką. Naujos statybos objekte patvirtinkite, kada baigiamos grindys, sienos ir komunikacijos; senamiestyje ar senesniame name įvertinkite nelygias sienas bei nestandartines angas. Vilniaus bazė savaime nereiškia nemokamo matavimo visame mieste ar rajone."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kokią Vilniaus objekto informaciją būtina pateikti?",
+          "answer": "Nurodykite tikslų rajoną ar adresą, parkavimą, įvažiavimo ribas, aukštą, liftą, užnešimo angas, darbų laiką ir apdailos parengtį."
+        },
+        {
+          "question": "Ar vietovės „Vilnius“ žyma yra gamintojo rekomendacija?",
+          "answer": "Ne. Kandidatai surinkti iš viešų šaltinių ir nėra patvirtinti, reitinguojami ar rekomenduojami."
+        },
+        {
+          "question": "Ką nurodyti siunčiant užklausą dėl objekto vietovėje „Vilnius“?",
+          "answer": "Nurodykite tikslų adresą ar vietovę, pastato tipą, aukštą, liftą, parkavimą, užnešimo kelią, patalpos parengtį ir norimą baldų rūšį."
+        },
+        {
+          "question": "Kaip palyginti vietinius ir atvykstančius kandidatus?",
+          "answer": "Visiems siųskite vienodą užduotį ir lyginkite bendrą kainą su matavimu, transportu, užnešimu, montavimu bei garantinių vizitų sąlygomis."
+        }
+      ]
+    }
+  }
 }

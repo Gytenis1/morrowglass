@@ -2067,57 +2067,6 @@ function createCorrectionSection(record: Manufacturer): HTMLElement {
   return section;
 }
 
-function getCategoryFaq(category: CategoryLanding): { question: string; answer: string }[] {
-  return [
-    {
-      question: `Ar šiame puslapyje pateikti ${category.title.toLocaleLowerCase('lt-LT')} gamintojai yra rekomenduojami?`,
-      answer: 'Ne. Tai viešais šaltiniais paremtas nepatvirtintų kandidatų sąrašas, skirtas savarankiškai atrankai.',
-    },
-    {
-      question: 'Ar kategorijos žyma patvirtina, kad gamintojas priims mano užsakymą?',
-      answer: 'Ne. Kategorija rodo tik šaltinių rinkinyje užfiksuotą veiklos kryptį. Dabartinę pasiūlą, užimtumą ir projekto tinkamumą reikia patvirtinti tiesiogiai.',
-    },
-    {
-      question: 'Kaip palyginti pasirinktus kandidatus?',
-      answer: 'Siųskite vienodą projekto aprašymą ir raštu palyginkite medžiagas, furnitūrą, paslaugų apimtį, kainos sudėtį, terminų prielaidas bei priėmimo sąlygas.',
-    },
-  ];
-}
-
-function getCityFaq(city: string): { question: string; answer: string }[] {
-  return [
-    {
-      question: `Kodėl kandidatai pateikti ${city} puslapyje?`,
-      answer: `Jų šaltinio įraše kaip bazės miestas ar vietovė nurodytas ${city}. Tai nėra teiginys apie aptarnavimo teritoriją.`,
-    },
-    {
-      question: `Ar visi šiame sąraše esantys gamintojai aptarnauja visą ${city} miestą ar aplinkinį regioną?`,
-      answer: 'Katalogas to netvirtina. Pristatymo, matavimo ir montavimo teritoriją reikia patikrinti tiesiogiai su kiekvienu kandidatu.',
-    },
-    {
-      question: 'Ar sąrašo vieta reiškia kokybės ar prieinamumo patvirtinimą?',
-      answer: 'Ne. Įrašai nepatvirtinti, o jų eiliškumas nėra reitingas ar rekomendacija.',
-    },
-  ];
-}
-
-function getCityCategoryFaq(category: CategoryLanding, city: string): { question: string; answer: string }[] {
-  return [
-    {
-      question: `Kodėl ${category.title.toLocaleLowerCase('lt-LT')} kandidatai pateikti miesto ${city} puslapyje?`,
-      answer: `Šių įrašų viešuose šaltiniuose užfiksuota kategorija „${category.title}“, o bazės miestas ar vietovė nurodyta ${city}. Abi žymos yra informacinės.`,
-    },
-    {
-      question: `Ar šie gamintojai aptarnauja visą miestą ${city}?`,
-      answer: 'Katalogas to netvirtina. Matavimo, pristatymo ir montavimo teritoriją reikia patikrinti tiesiogiai su kiekvienu kandidatu.',
-    },
-    {
-      question: 'Ar patekimas į šį sąrašą reiškia rekomendaciją?',
-      answer: 'Ne. Įrašai yra nepatvirtinti, jų eiliškumas nėra reitingas, o kategorijos ir miesto sutapimas negarantuoja kokybės, prieinamumo ar tinkamumo konkrečiam projektui.',
-    },
-  ];
-}
-
 function renderFaq(items: { question: string; answer: string }[]): string {
   return `
     <section class="landing-faq" aria-labelledby="landing-faq-title">
@@ -2261,135 +2210,21 @@ function renderLandingPage(slug: string, citySlug?: string): void {
     const matchesCity = cityLanding ? record.city === cityLanding.city : true;
     return matchesCategory && matchesCity;
   });
-  const isCombination = Boolean(combination && category && cityLanding);
-  const title = isCombination
-    ? `${category?.title} – ${cityLanding?.city}`
-    : category
-      ? category.title
-      : `Baldų gamintojų kandidatai: ${cityLanding?.city}`;
-  const intro = isCombination
-    ? `Šiame puslapyje pateikiami ${records.length} nepatvirtinti kandidatų įrašai, kurių viešuose šaltiniuose nurodyta baldų rūšis „${category?.title}“ ir bazės miestas ar vietovė „${cityLanding?.city}“.`
-    : category
-      ? category.intro
-      : `Čia pateikiami ${records.length} nepatvirtinti baldų gamintojų kandidatai, kurių viešo šaltinio įraše kaip bazės miestas ar vietovė nurodytas ${cityLanding?.city}.`;
-  const buyerNote = isCombination
-    ? 'Kategorijos ir miesto sutapimas nepatvirtina darbų kokybės, dabartinio užimtumo, paslaugų teritorijos ar tinkamumo jūsų projektui. Matavimo, pristatymo ir montavimo sąlygas patikrinkite tiesiogiai.'
-    : category
-      ? category.buyer_note
-      : 'Šis sąrašas nepatvirtina, kad kandidatai aptarnauja visą miestą ar aplinkinį regioną. Matavimo, pristatymo ir montavimo vietas patikrinkite tiesiogiai.';
-  const faq = isCombination
-    ? getCityCategoryFaq(category as CategoryLanding, cityLanding?.city ?? '')
-    : category
-      ? getCategoryFaq(category)
-      : getCityFaq(cityLanding?.city ?? 'šiame mieste');
-  const path = combination?.path ?? `/baldai-pagal-uzsakyma/${slug}`;
-  const description = isCombination
-    ? `${category?.title}, ${cityLanding?.city}: ${records.length} viešais šaltiniais paremti nepatvirtinti gamintojų kandidatai. Sąrašas nėra kokybės, prieinamumo ar paslaugų teritorijos garantija.`
-    : category
-      ? `${category.title}: ${records.length} viešais šaltiniais paremti nepatvirtinti Lietuvos gamintojų kandidatai, miestai ir atrankos gairės.`
-      : `${cityLanding?.city}: ${records.length} viešuose šaltiniuose šiame mieste registruoti baldų gamintojų kandidatai. Sąrašas nėra paslaugų teritorijos ar kokybės garantija.`;
-  const breadcrumbItems = isCombination
-    ? [
-        { name: 'Gamintojų katalogas', path: '/' },
-        { name: category?.title ?? '', path: `/baldai-pagal-uzsakyma/${category?.slug}` },
-        { name: title, path },
-      ]
-    : [
-        { name: 'Gamintojų katalogas', path: '/' },
-        { name: title, path },
-      ];
-  const updateMetadata = (): void => {
-    setPageMetadata({
-      title: `${title} | Gamintojų katalogas`,
-      description,
-      path,
-      robots: window.location.search ? 'noindex, follow' : 'index, follow',
-      structuredData: [
-        breadcrumbStructuredData(breadcrumbItems),
-        faqStructuredData(faq),
-        itemListStructuredData(records),
-      ],
-    });
+  const hasStaticLanding = Boolean(
+    root.querySelector('.landing-guidance')
+    && root.querySelector('#landing-filter-controls')
+    && root.querySelector('#landing-manufacturer-list'),
+  );
+  if (!hasStaticLanding) {
+    window.location.reload();
+    return;
+  }
+
+  const updateIndexing = (): void => {
+    const robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+    if (robots) robots.content = window.location.search ? 'noindex, follow' : 'index, follow';
   };
-  updateMetadata();
-
-  const relatedItems = isCombination
-    ? [
-        {
-          path: `/baldai-pagal-uzsakyma/${category?.slug}`,
-          label: category?.title ?? '',
-          count: manufacturers.filter((record) => asStringArray(record.category_codes).includes(category?.code ?? '')).length,
-        },
-        {
-          path: `/baldai-pagal-uzsakyma/${cityLanding?.slug}`,
-          label: `Baldų gamintojų kandidatai: ${cityLanding?.city}`,
-          count: cityLanding?.count ?? 0,
-        },
-      ]
-    : category
-      ? combinations
-          .filter((entry) => entry.category.code === category.code)
-          .map((entry) => ({ path: entry.path, label: entry.city, count: entry.count }))
-          .sort((a, b) => b.count - a.count || collator.compare(a.label, b.label))
-      : combinations
-          .filter((entry) => entry.city === cityLanding?.city)
-          .map((entry) => ({ path: entry.path, label: entry.category.title, count: entry.count }));
-  const relatedTitle = isCombination
-    ? 'Naršykite platesnius sąrašus'
-    : category
-      ? 'Šios baldų rūšies miestų puslapiai'
-      : 'Šio miesto baldų rūšių puslapiai';
-  const relatedCopy = isCombination
-    ? 'Grįžkite į visos baldų rūšies arba viso miesto kandidatų sąrašą.'
-    : 'Nuorodos rodomos tik toms baldų rūšies ir miesto sankirtoms, kuriose yra bent trys katalogo įrašai.';
-
-  root.innerHTML = `
-    ${renderHeader('directory')}
-    <main class="landing-main">
-      <a class="back-link" href="/" data-internal-link="true">← Grįžti į gamintojų katalogą</a>
-      <section class="landing-hero" aria-labelledby="landing-title">
-        <div>
-          <p class="kicker">${isCombination ? 'Baldų rūšis ir miestas' : category ? 'Baldų kategorija' : 'Šaltinyje nurodytas miestas'}</p>
-          <h1 id="landing-title">${escapeHtml(title)}</h1>
-          <p class="lead">${escapeHtml(intro)}</p>
-        </div>
-        <aside class="landing-summary" aria-label="Sąrašo paaiškinimas">
-          <strong>${escapeHtml(formatManufacturerCount(records.length))}</strong>
-          <p>${escapeHtml(buyerNote)}</p>
-        </aside>
-      </section>
-      ${relatedItems.length ? `
-        <section class="landing-related" aria-labelledby="related-title">
-          <div class="section-heading">
-            <h2 id="related-title">${relatedTitle}</h2>
-            <p>${relatedCopy}</p>
-          </div>
-          <ul class="landing-related-links">
-            ${relatedItems.map((item) => `<li><a href="${item.path}" data-internal-link="true">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}
-          </ul>
-        </section>
-      ` : ''}
-      <section class="landing-results" aria-labelledby="landing-results-title">
-        <div class="section-heading">
-          <h2 id="landing-results-title">Kandidatai iš versijuoto šaltinių rinkinio</h2>
-          <p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p>
-        </div>
-        <div class="landing-filter-controls" id="landing-filter-controls"></div>
-        <div class="manufacturer-list" id="landing-manufacturer-list"></div>
-      </section>
-      ${renderFaq(faq)}
-      <section class="landing-guide-callout" aria-labelledby="landing-guide-title">
-        <div>
-          <h2 id="landing-guide-title">Atranką tęskite vienoda užklausa</h2>
-          <p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p>
-        </div>
-        <a class="primary-button" href="/gidas" data-internal-link="true">Atverti pirkėjo gidą</a>
-      </section>
-    </main>
-    ${renderFooter()}
-  `;
-
-  initializeLandingFilters(records, updateMetadata);
+  initializeLandingFilters(records, updateIndexing);
 }
 
 function renderRequestPage(): void {
@@ -3150,7 +2985,7 @@ document.addEventListener('click', (event) => {
   }
 
   const url = new URL(link.href, window.location.origin);
-  if (url.origin !== window.location.origin) return;
+  if (url.origin !== window.location.origin || url.pathname.startsWith('/baldai-pagal-uzsakyma/')) return;
   event.preventDefault();
   window.history.pushState({}, '', `${url.pathname}${url.search}${url.hash}`);
   navigateToCurrentRoute();

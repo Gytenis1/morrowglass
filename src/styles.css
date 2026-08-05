@@ -1016,6 +1016,62 @@
     font-size: 0.94rem;
   }
 
+  .landing-guidance {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.36fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(2rem, 6vw, 6rem);
+    padding-block: clamp(2rem, 5vw, 4rem);
+    border-block: 1px solid var(--line);
+  }
+
+  .landing-guidance-heading {
+    display: grid;
+    gap: 0.75rem;
+    position: sticky;
+    top: 1.5rem;
+  }
+
+  .landing-guidance-heading .kicker {
+    color: var(--pine);
+  }
+
+  .landing-guidance-heading p:last-child {
+    max-width: 38ch;
+    color: var(--ink-soft);
+  }
+
+  .landing-guidance-copy {
+    display: grid;
+  }
+
+  .landing-guidance-copy > section {
+    display: grid;
+    gap: 0.85rem;
+    padding-block: 1.6rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .landing-guidance-copy > section:first-child {
+    padding-top: 0;
+  }
+
+  .landing-guidance-copy > section:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .landing-guidance-copy h3 {
+    max-width: 34ch;
+    color: var(--pine-strong);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+  }
+
+  .landing-guidance-copy p {
+    max-width: 65ch;
+    color: var(--ink);
+  }
+
   .landing-related,
   .landing-results,
   .landing-faq {
@@ -3876,6 +3932,7 @@
     .guide-hub,
     .guide-principles,
     .landing-hero,
+    .landing-guidance,
     .landing-related,
     .request-intro,
     .request-layout,
@@ -3894,6 +3951,7 @@
 
 
     .request-guidance,
+    .landing-guidance-heading,
     .estimate-result {
       position: static;
     }

@@ -9,6 +9,7 @@ const SITE_URL = 'https://www.baldininkai.org';
 const errors = [];
 const titleRoutes = new Map();
 const descriptionRoutes = new Map();
+const hubGuidanceRoutes = new Map();
 
 async function htmlFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -48,18 +49,64 @@ function schemaTypes(value) {
   return [...types, ...graph, ...nested];
 }
 
-function visibleFaq(html) {
-  const rendered = html.replace(/<script\b[\s\S]*?<\/script>/gi, '');
+function withoutNonVisibleContent(html) {
+  return html
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<!--([\s\S]*?)-->/g, ' ');
+}
+
+function visibleText(html) {
+  return withoutNonVisibleContent(html)
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;|&#160;/gi, ' ')
+    .replace(/&(?:amp|#38);/gi, '&')
+    .replace(/&(?:quot|#34);/gi, '"')
+    .replace(/&(?:apos|#39);/gi, "'")
+    .replace(/&(?:lt|#60);/gi, '<')
+    .replace(/&(?:gt|#62);/gi, '>')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function visibleFaqEntries(html) {
+  const rendered = withoutNonVisibleContent(html);
   const sections = [...rendered.matchAll(/<section\b([^>]*)>([\s\S]*?)<\/section>/gi)];
-  return sections.some(([, attributes, content]) => {
+  for (const [, attributes, content] of sections) {
     const classes = attribute(`<section ${attributes}>`, 'class');
     const hidden = /\bhidden\b|aria-hidden\s*=\s*["']true["']|display\s*:\s*none/i.test(attributes);
-    return !hidden
-      && /(?:landing-faq|article-faq)/.test(classes)
-      && /<h2\b[^>]*>\s*Dažniausi klausimai\s*<\/h2>/i.test(content)
-      && /<dt\b[^>]*>\s*\S[\s\S]*?<\/dt>/i.test(content)
-      && /<dd\b[^>]*>\s*\S[\s\S]*?<\/dd>/i.test(content);
-  });
+    if (hidden || !/(?:landing-faq|article-faq)/.test(classes) || !/<h2\b[^>]*>\s*Dažniausi klausimai\s*<\/h2>/i.test(content)) continue;
+    const questions = [...content.matchAll(/<dt\b[^>]*>([\s\S]*?)<\/dt>/gi)].map((match) => visibleText(match[1])).filter(Boolean);
+    const answers = [...content.matchAll(/<dd\b[^>]*>([\s\S]*?)<\/dd>/gi)].map((match) => visibleText(match[1])).filter(Boolean);
+    return questions.length === answers.length ? questions.length : -1;
+  }
+  return 0;
+}
+
+function hubGuidance(html) {
+  const rendered = withoutNonVisibleContent(html);
+  const match = /<section\b[^>]*class=(["'])[^"']*\blanding-guidance\b[^"']*\1[^>]*>([\s\S]*?)<\/section>\s*<section\b[^>]*class=(["'])[^"']*\blanding-(?:related|results)\b[^"']*\3/i.exec(rendered);
+  return match ? visibleText(match[2]) : '';
+}
+
+function lithuanianWordCount(text) {
+  return text.match(/[\p{L}\p{M}]+(?:[’'-][\p{L}\p{M}]+)*/gu)?.length ?? 0;
+}
+
+function validFaqPage(schemas, expectedEntries) {
+  const candidates = [];
+  const visit = (value) => {
+    if (!value || typeof value !== 'object') return;
+    if ((Array.isArray(value['@type']) ? value['@type'] : [value['@type']]).includes('FAQPage')) candidates.push(value);
+    for (const child of Object.values(value)) Array.isArray(child) ? child.forEach(visit) : visit(child);
+  };
+  schemas.forEach(visit);
+  return candidates.some((schema) => Array.isArray(schema.mainEntity)
+    && schema.mainEntity.length === expectedEntries
+    && schema.mainEntity.every((item) => item?.['@type'] === 'Question'
+      && typeof item.name === 'string' && item.name.trim()
+      && item.acceptedAnswer?.['@type'] === 'Answer'
+      && typeof item.acceptedAnswer.text === 'string' && item.acceptedAnswer.text.trim()));
 }
 
 function addError(route, message) {
@@ -134,6 +181,26 @@ for (const file of files.sort()) {
   if (isHub) {
     counts.hubs += 1;
     if (!hasType('ItemList')) addError(route, 'category/city hub is missing ItemList schema');
+    if (!hasType('FAQPage')) addError(route, 'category/city hub is missing FAQPage schema');
+
+    const guidance = hubGuidance(html);
+    const guidanceWords = lithuanianWordCount(guidance);
+    if (guidanceWords < 400) addError(route, `buyer guidance has ${guidanceWords} visible words; expected at least 400`);
+    if (!/[ąčęėįšųūž]/i.test(guidance) || !/\b(?:kad|ir|yra|bei|ar|su|į|nuo|pagal)\b/i.test(guidance)) {
+      addError(route, 'buyer guidance does not appear to be substantive Lithuanian copy');
+    }
+    if (guidance) {
+      const normalized = guidance.toLocaleLowerCase('lt-LT').replace(/\s+/g, ' ').trim();
+      const routes = hubGuidanceRoutes.get(normalized) ?? [];
+      routes.push(route);
+      hubGuidanceRoutes.set(normalized, routes);
+    }
+
+    const faqEntries = visibleFaqEntries(html);
+    if (faqEntries < 3 || faqEntries > 5) addError(route, `visible FAQ must contain 3–5 complete Q&A entries; found ${faqEntries}`);
+    if (faqEntries >= 3 && faqEntries <= 5 && !validFaqPage(schemas, faqEntries)) {
+      addError(route, 'FAQPage schema must contain the same number of complete Question/Answer entries as the visible FAQ');
+    }
   }
 
   const isProfile = route.startsWith('/gamintojas/');
@@ -155,7 +222,7 @@ for (const file of files.sort()) {
 
   if (hasType('FAQPage')) {
     counts.faqPages += 1;
-    if (!visibleFaq(html)) addError(route, 'FAQPage schema has no visible FAQ content');
+    if (visibleFaqEntries(html) <= 0) addError(route, 'FAQPage schema has no visible FAQ content');
   }
 }
 
@@ -164,6 +231,9 @@ for (const [title, routes] of titleRoutes) {
 }
 for (const [description, routes] of descriptionRoutes) {
   if (routes.length > 1) errors.push(`duplicate meta description "${description}" on ${routes.join(', ')}`);
+}
+for (const [guidance, routes] of hubGuidanceRoutes) {
+  if (routes.length > 1) errors.push(`identical hub guidance on ${routes.join(', ')} (starts "${guidance.slice(0, 90)}…")`);
 }
 
 if (errors.length) {
