@@ -16,6 +16,7 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Kainos skaičiuoklė: https://www.baldininkai.org/baldu-kainos-skaiciuokle/
 - Projekto pasiūlymo užklausa: https://www.baldininkai.org/gauti-pasiulymus/
 - Baldų rinkos apžvalga: https://www.baldininkai.org/baldu-rinkos-apzvalga/
+- Lithuanian furniture makers data (English): https://www.baldininkai.org/en/lithuanian-furniture-makers-data/
 - Atviri duomenys ir naudojimo sąlygos: https://www.baldininkai.org/atviri-duomenys/
 - JSON duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.json
 - CSV duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.csv
@@ -63,4 +64,4 @@ Duomenų rinkinys licencijuojamas pagal Creative Commons Attribution 4.0 Interna
 Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-06
 
 ## English summary
-Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Browse the catalogue at https://www.baldininkai.org/, buyer guides at https://www.baldininkai.org/gidas/, and the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.
+Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Read the English catalogue-data overview at https://www.baldininkai.org/en/lithuanian-furniture-makers-data/, browse the catalogue at https://www.baldininkai.org/, and use the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.

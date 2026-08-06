@@ -471,7 +471,8 @@ function isOpenDataPath(pathname = window.location.pathname): boolean {
 }
 
 function isMarketOverviewPath(pathname = window.location.pathname): boolean {
-  return normalizePathname(pathname) === '/baldu-rinkos-apzvalga';
+  const path = normalizePathname(pathname);
+  return path === '/baldu-rinkos-apzvalga' || path === '/en/lithuanian-furniture-makers-data';
 }
 
 async function fetchAllManufacturers(): Promise<Manufacturer[]> {
