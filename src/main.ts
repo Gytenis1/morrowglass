@@ -475,6 +475,11 @@ function isMarketOverviewPath(pathname = window.location.pathname): boolean {
   return path === '/baldu-rinkos-apzvalga' || path === '/en/lithuanian-furniture-makers-data';
 }
 
+function isEnglishSourcingPath(pathname = window.location.pathname): boolean {
+  const path = normalizePathname(pathname);
+  return path === '/en' || path.startsWith('/en/furniture-makers/');
+}
+
 async function fetchAllManufacturers(): Promise<Manufacturer[]> {
   const records: Manufacturer[] = [];
   let page = 1;
@@ -2946,7 +2951,7 @@ function setHomeMetadata(): void {
 }
 
 function route(): void {
-  if (isOpenDataPath() || isMarketOverviewPath()) return;
+  if (isOpenDataPath() || isMarketOverviewPath() || isEnglishSourcingPath()) return;
 
   const policyPage = getPolicyPage();
   if (policyPage) {
@@ -3068,7 +3073,7 @@ async function loadDirectory(): Promise<void> {
 
 function navigateToCurrentRoute(): void {
   browseState = readBrowseState();
-  if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isComparisonPath() || isEstimatorPath()) {
+  if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isEnglishSourcingPath() || isComparisonPath() || isEstimatorPath()) {
     route();
     return;
   }

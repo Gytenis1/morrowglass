@@ -16,6 +16,28 @@ const MARKET_OVERVIEW_PATH = '/baldu-rinkos-apzvalga';
 const MARKET_OVERVIEW_URL = `${SITE_URL}${MARKET_OVERVIEW_PATH}/`;
 const ENGLISH_MARKET_OVERVIEW_PATH = '/en/lithuanian-furniture-makers-data';
 const ENGLISH_MARKET_OVERVIEW_URL = `${SITE_URL}${ENGLISH_MARKET_OVERVIEW_PATH}/`;
+const ENGLISH_HUB_PATH = '/en';
+const ENGLISH_HUB_URL = `${SITE_URL}/en/`;
+const ENGLISH_CATEGORY_BASE_PATH = '/en/furniture-makers';
+const ENGLISH_CATEGORY_LABELS = new Map([
+  ['virtuves-baldai', 'Custom kitchen furniture'],
+  ['spintos-ir-imontuojami-baldai', 'Custom wardrobes and fitted furniture'],
+  ['miegamojo-ir-vonios-baldai', 'Custom bedroom and bathroom furniture'],
+  ['biuro-ir-komerciniai-baldai', 'Custom office and commercial furniture'],
+  ['horeca-ir-prekybos-baldai', 'Custom HoReCa and retail furniture'],
+  ['minksti-baldai', 'Custom upholstered furniture'],
+  ['medzio-darbai-ir-masyvo-baldai', 'Woodwork and solid-wood furniture'],
+  ['metalo-ir-misriu-medziagu-baldai', 'Custom metal and mixed-material furniture'],
+  ['kiti-nestandartiniai-baldai', 'Other custom furniture'],
+  ['kiti-baldai', 'Other furniture'],
+]);
+const ENGLISH_REGION_LABELS = new Map([
+  ['Vilnius, rytų ir pietų Lietuva', 'Vilnius, eastern and southern Lithuania'],
+  ['Kaunas ir šiaurės Lietuva', 'Kaunas and northern Lithuania'],
+  ['Klaipėda, Panevėžys, vakarų ir centrinė Lietuva', 'Klaipėda, Panevėžys, western and central Lithuania'],
+  ['Klaipėda, Panevėžys, vakarų ir vidurio Lietuva', 'Klaipėda, Panevėžys, western and central Lithuania'],
+  ['Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)', 'All Lithuania (no city stated in the official source)'],
+]);
 const manufacturers = JSON.parse(await readFile(join(rootDir, 'data/manufacturers.json'), 'utf8'));
 const landingConfig = JSON.parse(await readFile(join(rootDir, 'data/seo-landings.json'), 'utf8'));
 const manufacturersBySlug = new Map(manufacturers.map((record) => [record.slug, record]));
@@ -107,7 +129,7 @@ function visibleText(html) {
     .replace(/&nbsp;|&#160;/gi, ' ')
     .replace(/&(?:amp|#38);/gi, '&')
     .replace(/&(?:quot|#34);/gi, '"')
-    .replace(/&(?:apos|#39);/gi, "'")
+    .replace(/&(?:apos|#0*39);/gi, "'")
     .replace(/&(?:lt|#60);/gi, '<')
     .replace(/&(?:gt|#62);/gi, '>')
     .replace(/\s+/g, ' ')
@@ -388,7 +410,7 @@ async function checkGeneratedAssets() {
 
   try {
     const llms = await readFile(join(publicDir, 'llms.txt'), 'utf8');
-    for (const required of ['Baldininkai.org', OPEN_DATA_URL, MARKET_OVERVIEW_URL, ENGLISH_MARKET_OVERVIEW_URL, DATASET_JSON_URL, DATASET_CSV_URL, `${SITE_URL}/sitemap.xml`, 'English summary', 'nepatvirtinti viešų šaltinių kandidatai', DATASET_LICENSE_NAME, 'CC BY 4.0', DATASET_LICENSE_URL, expectedAttribution]) {
+    for (const required of ['Baldininkai.org', OPEN_DATA_URL, MARKET_OVERVIEW_URL, ENGLISH_HUB_URL, ENGLISH_MARKET_OVERVIEW_URL, ...landingConfig.categories.map((category) => canonicalUrl(`${ENGLISH_CATEGORY_BASE_PATH}/${category.slug}`)), DATASET_JSON_URL, DATASET_CSV_URL, `${SITE_URL}/sitemap.xml`, 'English summary', 'English category pages', 'nepatvirtinti viešų šaltinių kandidatai', DATASET_LICENSE_NAME, 'CC BY 4.0', DATASET_LICENSE_URL, expectedAttribution]) {
       if (!llms.includes(required)) addError('/llms.txt', `missing required content: ${required}`);
     }
   } catch (error) {
@@ -400,6 +422,11 @@ async function checkGeneratedAssets() {
     if (!sitemap.includes(`<loc>${SITE_URL}/atviri-duomenys/</loc>`)) addError('/sitemap.xml', 'missing open-data route');
     if (!sitemap.includes(`<loc>${MARKET_OVERVIEW_URL}</loc>`)) addError('/sitemap.xml', 'missing Lithuanian market-overview route');
     if (!sitemap.includes(`<loc>${ENGLISH_MARKET_OVERVIEW_URL}</loc>`)) addError('/sitemap.xml', 'missing English market-overview route');
+    if (!sitemap.includes(`<loc>${ENGLISH_HUB_URL}</loc>`)) addError('/sitemap.xml', 'missing English sourcing hub');
+    for (const category of landingConfig.categories) {
+      const categoryUrl = canonicalUrl(`${ENGLISH_CATEGORY_BASE_PATH}/${category.slug}`);
+      if (!sitemap.includes(`<loc>${categoryUrl}</loc>`)) addError('/sitemap.xml', `missing English category route ${categoryUrl}`);
+    }
   } catch (error) {
     addError('/sitemap.xml', `missing or unreadable (${error.message})`);
   }
@@ -407,7 +434,7 @@ async function checkGeneratedAssets() {
   try {
     const robots = await readFile(join(publicDir, 'robots.txt'), 'utf8');
     if (/^\s*Disallow\s*:/im.test(robots)) addError('/robots.txt', 'must not disallow any crawler path');
-    for (const required of ['User-agent: *', 'Allow: /', 'Allow: /llms.txt', 'Allow: /atviri-duomenys/', `Allow: ${MARKET_OVERVIEW_PATH}/`, `Allow: ${ENGLISH_MARKET_OVERVIEW_PATH}/`, 'Allow: /baldininkai-org-gamintojai.json', 'Allow: /baldininkai-org-gamintojai.csv', `Sitemap: ${SITE_URL}/sitemap.xml`]) {
+    for (const required of ['User-agent: *', 'Allow: /', 'Allow: /en/', 'Allow: /llms.txt', 'Allow: /atviri-duomenys/', `Allow: ${MARKET_OVERVIEW_PATH}/`, `Allow: ${ENGLISH_MARKET_OVERVIEW_PATH}/`, 'Allow: /baldininkai-org-gamintojai.json', 'Allow: /baldininkai-org-gamintojai.csv', `Sitemap: ${SITE_URL}/sitemap.xml`]) {
       if (!robots.includes(required)) addError('/robots.txt', `missing directive: ${required}`);
     }
   } catch (error) {
@@ -443,6 +470,13 @@ const expectedEmployeeBandLabels = new Map([
   ['50-249', '50–249 darbuotojai'],
   ['250+', '250 ir daugiau darbuotojų'],
 ]);
+const expectedEnglishEmployeeBandLabels = new Map([
+  ['0', '0 employees'],
+  ['1-9', '1–9 employees'],
+  ['10-49', '10–49 employees'],
+  ['50-249', '50–249 employees'],
+  ['250+', '250 or more employees'],
+]);
 const expectedTurnovers = manufacturers
   .map((record) => ({ record, turnover: publishedTurnover(record) }))
   .filter((entry) => entry.turnover)
@@ -477,16 +511,28 @@ const expectedNewestFoundingYear = Math.max(...expectedFoundingRecords.map((reco
 const expectedRegions = new Map(countBy(manufacturers, (record) => record.region_label?.trim()));
 const expectedLeadingCities = countBy(manufacturers, (record) => record.city?.trim()).slice(0, 10);
 const categoryPageCountsByCode = new Map(countBy(landingConfig.categories, (category) => category.code));
-const expectedCategoryMix = landingConfig.categories.map((category) => {
+function manufacturerMatchesPublishedCategory(record, category) {
   const currentLabel = category.title.replace(/ pagal užsakymą$/, '');
-  return {
-    code: category.code,
-    slug: category.slug,
-    count: manufacturers.filter((record) => record.category_codes.some((code, index) => code === category.code
-      && (categoryPageCountsByCode.get(category.code) === 1 || record.category_labels[index] === currentLabel))).length,
-    href: `/baldai-pagal-uzsakyma/${category.slug}`,
-  };
-});
+  return record.category_codes.some((code, index) => code === category.code
+    && (categoryPageCountsByCode.get(category.code) === 1 || record.category_labels[index] === currentLabel));
+}
+const expectedEnglishCategories = landingConfig.categories.map((category) => ({
+  category,
+  label: ENGLISH_CATEGORY_LABELS.get(category.slug) ?? category.title,
+  route: `${ENGLISH_CATEGORY_BASE_PATH}/${category.slug}`,
+  records: manufacturers
+    .filter((record) => manufacturerMatchesPublishedCategory(record, category))
+    .sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'en')),
+}));
+const expectedEnglishCategoryByRoute = new Map(expectedEnglishCategories.map((entry) => [entry.route, entry]));
+const expectedEnglishCategoryByLithuanianRoute = new Map(expectedEnglishCategories.map((entry) => [`/baldai-pagal-uzsakyma/${entry.category.slug}`, entry]));
+const expectedCategoryMix = expectedEnglishCategories.map((entry) => ({
+  code: entry.category.code,
+  slug: entry.category.slug,
+  count: entry.records.length,
+  hrefLt: `/baldai-pagal-uzsakyma/${entry.category.slug}`,
+  hrefEn: entry.route,
+}));
 const expectedSnapshotRoutes = new Map([
   ...landingConfig.categories.map((category) => [
     `/baldai-pagal-uzsakyma/${category.slug}`,
@@ -625,7 +671,9 @@ function validateLandingSnapshot(route, html, records, kind) {
   }
 }
 
-const counts = { breadcrumbs: 0, hubs: 0, cityIndexes: 0, profiles: 0, guideArticles: 0, faqPages: 0, marketOverviews: 0, landingSnapshots: 0 };
+const counts = { breadcrumbs: 0, hubs: 0, cityIndexes: 0, profiles: 0, guideArticles: 0, faqPages: 0, marketOverviews: 0, landingSnapshots: 0, englishHubs: 0, englishCategories: 0 };
+const englishTitleOwners = new Map();
+const englishDescriptionOwners = new Map();
 
 for (const file of files.sort()) {
   const route = routeFor(file);
@@ -649,8 +697,17 @@ for (const file of files.sort()) {
   }
 
   const htmlTag = /<html\b[^>]*>/i.exec(html)?.[0] ?? '';
-  const expectedLanguage = route === ENGLISH_MARKET_OVERVIEW_PATH ? 'en' : 'lt';
-  const expectedLocale = route === ENGLISH_MARKET_OVERVIEW_PATH ? 'en_GB' : 'lt_LT';
+  const isEnglishRoute = route === ENGLISH_HUB_PATH || route.startsWith('/en/');
+  const expectedLanguage = isEnglishRoute ? 'en' : 'lt';
+  const expectedLocale = isEnglishRoute ? 'en_GB' : 'lt_LT';
+  if (isEnglishRoute && titles.length === 1 && descriptions.length === 1) {
+    const previousTitleRoute = englishTitleOwners.get(titles[0]);
+    if (previousTitleRoute) addError(route, `English title duplicates ${previousTitleRoute}: ${titles[0]}`);
+    else englishTitleOwners.set(titles[0], route);
+    const previousDescriptionRoute = englishDescriptionOwners.get(descriptions[0]);
+    if (previousDescriptionRoute) addError(route, `English meta description duplicates ${previousDescriptionRoute}`);
+    else englishDescriptionOwners.set(descriptions[0], route);
+  }
   if (attribute(htmlTag, 'lang') !== expectedLanguage) addError(route, `html lang must be "${expectedLanguage}"`);
 
   const canonicals = tags(html, 'link').filter((tag) => attribute(tag, 'rel').toLowerCase() === 'canonical').map((tag) => attribute(tag, 'href'));
@@ -658,9 +715,21 @@ for (const file of files.sort()) {
 
   const alternateLinks = tags(html, 'link').filter((tag) => attribute(tag, 'rel').toLowerCase() === 'alternate');
   const alternates = new Map(alternateLinks.map((tag) => [attribute(tag, 'hreflang'), attribute(tag, 'href')]));
-  const expectedAlternates = route === MARKET_OVERVIEW_PATH || route === ENGLISH_MARKET_OVERVIEW_PATH
-    ? new Map([['lt', MARKET_OVERVIEW_URL], ['en', ENGLISH_MARKET_OVERVIEW_URL]])
-    : new Map([['lt', expectedCanonical]]);
+  const englishCategory = expectedEnglishCategoryByRoute.get(route);
+  const lithuanianCategory = expectedEnglishCategoryByLithuanianRoute.get(route);
+  let expectedAlternates;
+  if (route === MARKET_OVERVIEW_PATH || route === ENGLISH_MARKET_OVERVIEW_PATH) {
+    expectedAlternates = new Map([['lt', MARKET_OVERVIEW_URL], ['en', ENGLISH_MARKET_OVERVIEW_URL]]);
+  } else if (route === '/' || route === ENGLISH_HUB_PATH) {
+    expectedAlternates = new Map([['lt', canonicalUrl('/')], ['en', ENGLISH_HUB_URL], ['x-default', canonicalUrl('/')]]);
+  } else if (englishCategory) {
+    const lithuanianUrl = canonicalUrl(`/baldai-pagal-uzsakyma/${englishCategory.category.slug}`);
+    expectedAlternates = new Map([['en', expectedCanonical], ['lt', lithuanianUrl], ['x-default', lithuanianUrl]]);
+  } else if (lithuanianCategory) {
+    expectedAlternates = new Map([['lt', expectedCanonical], ['en', canonicalUrl(lithuanianCategory.route)], ['x-default', expectedCanonical]]);
+  } else {
+    expectedAlternates = new Map([['lt', expectedCanonical]]);
+  }
   if (alternateLinks.length !== expectedAlternates.size || alternates.size !== expectedAlternates.size) addError(route, `expected ${expectedAlternates.size} unique hreflang alternate link(s)`);
   for (const [hreflang, href] of expectedAlternates) {
     if (alternates.get(hreflang) !== href) addError(route, `hreflang ${hreflang} must point to ${href}`);
@@ -696,6 +765,129 @@ for (const file of files.sort()) {
     addError(route, 'WebSite and SearchAction schema are allowed only on the home page');
   }
 
+  if (route === ENGLISH_HUB_PATH) {
+    counts.englishHubs += 1;
+    const text = visibleText(html);
+    for (const required of [
+      'Lithuanian furniture makers by category',
+      `${manufacturers.length} candidate makers`,
+      'unverified public-source candidates',
+      'not an endorsement or ranking',
+      'does not guarantee identity, accuracy, quality, capacity, pricing, timing, availability, service coverage or suitability',
+      'Creative Commons Attribution 4.0 International (CC BY 4.0)',
+    ]) {
+      if (!text.includes(required)) addError(route, `missing English hub evidence: ${required}`);
+    }
+    for (const href of ['/', '/atviri-duomenys/', '/en/lithuanian-furniture-makers-data/', DATASET_LICENSE_URL]) {
+      if (!html.includes(`href="${href}"`)) addError(route, `missing required English hub link ${href}`);
+    }
+    const expectedCoverage = new Map([
+      ['total', manufacturers.length],
+      ['turnover', expectedTurnovers.length],
+      ['employees', expectedEmployeeRecords.length],
+      ['founded', expectedFoundingRecords.length],
+    ]);
+    for (const [metric, count] of expectedCoverage) {
+      if (!html.includes(`data-en-hub-coverage="${metric}" data-count="${count}"`)) addError(route, `English hub coverage ${metric} must equal ${count}`);
+      if (!text.includes(formatPercent(count, manufacturers.length, 'en-GB').replace(/\s+/g, ' '))) addError(route, `English hub coverage ${metric} is missing share ${formatPercent(count, manufacturers.length, 'en-GB')}`);
+    }
+    const categoryRows = [...html.matchAll(/<tr data-en-hub-category="([^"]+)" data-count="(\d+)">([\s\S]*?)<\/tr>/g)];
+    if (categoryRows.length !== expectedEnglishCategories.length) addError(route, `expected ${expectedEnglishCategories.length} English category links, found ${categoryRows.length}`);
+    else categoryRows.forEach(([, slug, count, row], index) => {
+      const expected = expectedEnglishCategories[index];
+      if (slug !== expected.category.slug || Number(count) !== expected.records.length) addError(route, `English hub category row ${index + 1} does not match ${expected.category.slug}`);
+      if (!row.includes(`href="${expected.route}/"`) || !visibleText(row).includes(expected.label)) addError(route, `English hub category ${expected.category.slug} must link to ${expected.route}/ with its English label`);
+    });
+
+    const collectionPages = schemasOfType(schemas, 'CollectionPage');
+    const itemLists = schemasOfType(schemas, 'ItemList');
+    if (collectionPages.length !== 1) addError(route, `expected exactly one CollectionPage schema, found ${collectionPages.length}`);
+    if (itemLists.length !== 1) addError(route, `expected exactly one ItemList schema, found ${itemLists.length}`);
+    const collection = collectionPages[0];
+    const itemList = itemLists[0];
+    const itemListId = `${ENGLISH_HUB_URL}#categories`;
+    if (collection && (collection.name !== 'Lithuanian furniture makers by category' || collection.description !== descriptions[0] || collection.url !== ENGLISH_HUB_URL || collection.inLanguage !== 'en' || collection.mainEntity?.['@id'] !== itemListId)) addError(route, 'English hub CollectionPage schema does not match the visible canonical collection');
+    if (collection && Object.values(collection).some((value) => value === '' || value == null)) addError(route, 'English hub CollectionPage schema contains an empty property');
+    if (itemList) {
+      if (itemList['@id'] !== itemListId || itemList.numberOfItems !== expectedEnglishCategories.length || !Array.isArray(itemList.itemListElement) || itemList.itemListElement.length !== expectedEnglishCategories.length) addError(route, 'English hub ItemList count or identity is inaccurate');
+      else itemList.itemListElement.forEach((item, index) => {
+        const expected = expectedEnglishCategories[index];
+        if (item?.['@type'] !== 'ListItem' || item.position !== index + 1 || item.name !== expected.label || item.url !== canonicalUrl(expected.route)) addError(route, `English hub ItemList entry ${index + 1} does not match ${expected.category.slug}`);
+      });
+    }
+  }
+
+  const expectedEnglishCategory = expectedEnglishCategoryByRoute.get(route);
+  if (expectedEnglishCategory) {
+    counts.englishCategories += 1;
+    const { category, label, records } = expectedEnglishCategory;
+    const text = visibleText(html);
+    for (const required of [
+      `${label} makers in Lithuania`,
+      `${records.length} candidate makers`,
+      'Not published',
+      'Alphabetical by company name; not ranked.',
+      'Listings are unverified public-source candidates.',
+      'not an endorsement or ranking',
+      'Creative Commons Attribution 4.0 International (CC BY 4.0)',
+    ]) {
+      if (!text.includes(required)) addError(route, `missing English category evidence: ${required}`);
+    }
+    const lithuanianPath = `/baldai-pagal-uzsakyma/${category.slug}/`;
+    for (const href of ['/en/', lithuanianPath, '/atviri-duomenys/', DATASET_LICENSE_URL]) {
+      if (!html.includes(`href="${href}"`)) addError(route, `missing required English category link ${href}`);
+    }
+    const makerRows = [...html.matchAll(/<tr data-en-category-maker="([^"]+)">([\s\S]*?)<\/tr>/g)];
+    if (makerRows.length !== records.length) addError(route, `expected ${records.length} source-matched maker rows, found ${makerRows.length}`);
+    else makerRows.forEach(([, slug, row], index) => {
+      const record = records[index];
+      const rowText = visibleText(row);
+      if (slug !== record.slug) addError(route, `maker row ${index + 1} must be ${record.slug}, found ${slug}`);
+      if (!row.includes(`href="/gamintojas/${record.slug}/"`) || !rowText.includes(record.trading_name)) addError(route, `maker ${record.slug} must link to its existing Lithuanian profile`);
+      if (!rowText.includes(record.city)) addError(route, `maker ${record.slug} must show city ${record.city}`);
+      const expectedRegion = record.region_label?.trim() ? (ENGLISH_REGION_LABELS.get(record.region_label.trim()) ?? record.region_label.trim()) : 'Region not published';
+      if (!rowText.includes(expectedRegion)) addError(route, `maker ${record.slug} must show its source region or explicit absence`);
+
+      const employeeLabel = expectedEnglishEmployeeBandLabels.get(record.employee_count_band);
+      if (employeeLabel) {
+        if (!row.includes(`data-en-employee-status="published" data-band="${record.employee_count_band}"`) || !rowText.includes(employeeLabel)) addError(route, `maker ${record.slug} must show employee band ${record.employee_count_band}`);
+      } else if (!row.includes('data-en-employee-status="not-published"') || !rowText.includes('Not published')) {
+        addError(route, `maker ${record.slug} must explicitly mark employee band not published`);
+      }
+
+      const turnover = publishedTurnover(record);
+      if (turnover) {
+        if (!row.includes(`data-en-turnover-status="published" data-amount="${turnover.amount}" data-year="${turnover.year}"`) || !rowText.includes(formatEuro(turnover.amount, 'en-GB')) || !rowText.includes(`Fiscal year ${turnover.year}`) || !row.includes(`href="${turnover.sourceUrl}"`)) addError(route, `maker ${record.slug} must show valid published turnover amount, year and direct source`);
+      } else if (!row.includes('data-en-turnover-status="not-published"') || !rowText.includes('Not published')) {
+        addError(route, `maker ${record.slug} must explicitly mark turnover not published`);
+      }
+
+      const foundingYear = Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= overviewYear ? record.founded_year : null;
+      if (foundingYear) {
+        if (!row.includes(`data-en-founding-status="published" data-year="${foundingYear}"`) || !rowText.includes(String(foundingYear))) addError(route, `maker ${record.slug} must show founding year ${foundingYear}`);
+      } else if (!row.includes('data-en-founding-status="not-published"') || !rowText.includes('Not published')) {
+        addError(route, `maker ${record.slug} must explicitly mark founding year not published`);
+      }
+    });
+
+    const collectionPages = schemasOfType(schemas, 'CollectionPage');
+    const itemLists = schemasOfType(schemas, 'ItemList');
+    if (collectionPages.length !== 1) addError(route, `expected exactly one CollectionPage schema, found ${collectionPages.length}`);
+    if (itemLists.length !== 1) addError(route, `expected exactly one ItemList schema, found ${itemLists.length}`);
+    const collection = collectionPages[0];
+    const itemList = itemLists[0];
+    const itemListId = `${expectedCanonical}#makers`;
+    if (collection && (collection.name !== `${label} makers in Lithuania` || collection.description !== descriptions[0] || collection.url !== expectedCanonical || collection.inLanguage !== 'en' || collection.mainEntity?.['@id'] !== itemListId)) addError(route, 'English category CollectionPage schema does not match the visible canonical collection');
+    if (collection && Object.values(collection).some((value) => value === '' || value == null)) addError(route, 'English category CollectionPage schema contains an empty property');
+    if (itemList) {
+      if (itemList['@id'] !== itemListId || itemList.numberOfItems !== records.length || !Array.isArray(itemList.itemListElement) || itemList.itemListElement.length !== records.length) addError(route, 'English category ItemList count or identity is inaccurate');
+      else itemList.itemListElement.forEach((item, index) => {
+        const record = records[index];
+        if (item?.['@type'] !== 'ListItem' || item.position !== index + 1 || item.name !== record.trading_name || item.url !== canonicalUrl(`/gamintojas/${record.slug}`)) addError(route, `English category ItemList entry ${index + 1} does not match ${record.slug}`);
+      });
+    }
+  }
+
   const isCityIndex = route === cityIndexRoute;
   const isHub = route.startsWith('/baldai-pagal-uzsakyma/') && !isCityIndex;
   if (isCityIndex) {
@@ -719,6 +911,7 @@ for (const file of files.sort()) {
   }
   if (isHub) {
     counts.hubs += 1;
+    if (lithuanianCategory && !html.includes(`href="${lithuanianCategory.route}/"`)) addError(route, `Lithuanian category page must visibly link to ${lithuanianCategory.route}/`);
     if (!hasType('ItemList')) addError(route, 'category/city hub is missing ItemList schema');
     if (!hasType('FAQPage')) addError(route, 'category/city hub is missing FAQPage schema');
 
@@ -932,7 +1125,7 @@ for (const file of files.sort()) {
     }
     for (const category of expectedCategoryMix) {
       const row = new RegExp(`<tr data-market-category="${category.slug}" data-code="${category.code}" data-count="${category.count}">([\\s\\S]*?)<\\/tr>`).exec(html)?.[1] ?? '';
-      if (!row || !row.includes(`href="${category.href}"`)) addError(route, `category ${category.slug} must show count ${category.count} and link to ${category.href}`);
+      if (!row || !row.includes(`href="${category.hrefLt}"`)) addError(route, `category ${category.slug} must show count ${category.count} and link to ${category.hrefLt}`);
     }
 
     const articles = schemasOfType(schemas, 'Article');
@@ -1030,7 +1223,7 @@ for (const file of files.sort()) {
     }
     for (const category of expectedCategoryMix) {
       const row = new RegExp(`<tr data-market-category="${category.slug}" data-code="${category.code}" data-count="${category.count}">([\\s\\S]*?)<\\/tr>`).exec(html)?.[1] ?? '';
-      if (!row || !row.includes(`href="${category.href}"`)) addError(route, `category ${category.slug} must show count ${category.count} and link to ${category.href}`);
+      if (!row || !row.includes(`href="${category.hrefEn}/"`)) addError(route, `category ${category.slug} must show count ${category.count} and link to ${category.hrefEn}/`);
     }
 
     const articles = schemasOfType(schemas, 'Article');
@@ -1051,6 +1244,7 @@ for (const file of files.sort()) {
 
   if (!/href="\/atviri-duomenys\/?"/.test(html)) addError(route, 'footer is missing the open-data link');
   if (!/href="\/baldu-rinkos-apzvalga\/?"/.test(html)) addError(route, 'navigation is missing the market-overview link');
+  if (!html.includes('href="/en/"')) addError(route, 'navigation or footer is missing the English sourcing hub link');
 
   const isGuideArticle = /<article\b[^>]*\bclass=(["'])[^"']*\bguide-article\b[^"']*\1/i.test(html);
   if (isGuideArticle) {
@@ -1083,6 +1277,8 @@ if (cityIntroRoutes.size !== expectedLandingCities.length) {
   errors.push(`expected ${expectedLandingCities.length} distinct generated city landing intros, found ${cityIntroRoutes.size}`);
 }
 if (counts.cityIndexes !== 1) errors.push(`expected exactly one all-cities index, found ${counts.cityIndexes}`);
+if (counts.englishHubs !== 1) errors.push(`expected exactly one English sourcing hub, found ${counts.englishHubs}`);
+if (counts.englishCategories !== expectedEnglishCategories.length) errors.push(`expected ${expectedEnglishCategories.length} English category routes, found ${counts.englishCategories}`);
 if (counts.marketOverviews !== 2) errors.push(`expected exactly two reciprocal-language market-overview routes, found ${counts.marketOverviews}`);
 if (counts.landingSnapshots !== expectedSnapshotRoutes.size) errors.push(`expected ${expectedSnapshotRoutes.size} city/category landing snapshots, found ${counts.landingSnapshots}`);
 const sitemap = await readFile(join(publicDir, 'sitemap.xml'), 'utf8');
@@ -1092,6 +1288,11 @@ for (const city of expectedLandingCities) {
   const canonical = canonicalUrl(`/baldai-pagal-uzsakyma/${city.slug}`);
   if (!sitemap.includes(`<loc>${canonical}</loc>`)) errors.push(`sitemap is missing city landing ${canonical}`);
 }
+if (!sitemap.includes(`<loc>${ENGLISH_HUB_URL}</loc>`)) errors.push(`sitemap is missing English sourcing hub ${ENGLISH_HUB_URL}`);
+for (const entry of expectedEnglishCategories) {
+  const canonical = canonicalUrl(entry.route);
+  if (!sitemap.includes(`<loc>${canonical}</loc>`)) errors.push(`sitemap is missing English category ${canonical}`);
+}
 
 if (errors.length) {
   console.error(`SEO audit failed: ${errors.length} issue${errors.length === 1 ? '' : 's'} across ${files.length} pages.`);
@@ -1100,4 +1301,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; ${counts.landingSnapshots} audited city/category maker snapshots; open-data and ${counts.marketOverviews} reciprocal-language market-overview routes, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; ItemList ${counts.hubs} hubs plus ${counts.cityIndexes} all-cities index; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles plus market overviews; FAQPage ${counts.faqPages} visible FAQ sections.`);
+console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; ${counts.landingSnapshots} audited city/category maker snapshots; 1 English sourcing hub and ${counts.englishCategories} source-matched English category tables; open-data and ${counts.marketOverviews} reciprocal-language market-overview routes, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; CollectionPage + ItemList validated on all English sourcing routes; ItemList ${counts.hubs} Lithuanian hubs plus ${counts.cityIndexes} all-cities index; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles plus market overviews; FAQPage ${counts.faqPages} visible FAQ sections.`);

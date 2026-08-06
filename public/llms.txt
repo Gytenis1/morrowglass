@@ -16,6 +16,7 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Kainos skaičiuoklė: https://www.baldininkai.org/baldu-kainos-skaiciuokle/
 - Projekto pasiūlymo užklausa: https://www.baldininkai.org/gauti-pasiulymus/
 - Baldų rinkos apžvalga: https://www.baldininkai.org/baldu-rinkos-apzvalga/
+- English sourcing hub: https://www.baldininkai.org/en/
 - Lithuanian furniture makers data (English): https://www.baldininkai.org/en/lithuanian-furniture-makers-data/
 - Atviri duomenys ir naudojimo sąlygos: https://www.baldininkai.org/atviri-duomenys/
 - JSON duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.json
@@ -33,6 +34,18 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Metalo ir mišrių medžiagų baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/metalo-ir-misriu-medziagu-baldai/
 - Kiti nestandartiniai baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/kiti-nestandartiniai-baldai/
 - Kiti baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/kiti-baldai/
+
+## English category pages
+- Custom kitchen furniture: https://www.baldininkai.org/en/furniture-makers/virtuves-baldai/
+- Custom wardrobes and fitted furniture: https://www.baldininkai.org/en/furniture-makers/spintos-ir-imontuojami-baldai/
+- Custom bedroom and bathroom furniture: https://www.baldininkai.org/en/furniture-makers/miegamojo-ir-vonios-baldai/
+- Custom office and commercial furniture: https://www.baldininkai.org/en/furniture-makers/biuro-ir-komerciniai-baldai/
+- Custom HoReCa and retail furniture: https://www.baldininkai.org/en/furniture-makers/horeca-ir-prekybos-baldai/
+- Custom upholstered furniture: https://www.baldininkai.org/en/furniture-makers/minksti-baldai/
+- Woodwork and solid-wood furniture: https://www.baldininkai.org/en/furniture-makers/medzio-darbai-ir-masyvo-baldai/
+- Custom metal and mixed-material furniture: https://www.baldininkai.org/en/furniture-makers/metalo-ir-misriu-medziagu-baldai/
+- Other custom furniture: https://www.baldininkai.org/en/furniture-makers/kiti-nestandartiniai-baldai/
+- Other furniture: https://www.baldininkai.org/en/furniture-makers/kiti-baldai/
 
 ## Miestų puslapiai
 - Alytus: https://www.baldininkai.org/baldai-pagal-uzsakyma/alytus/
@@ -64,4 +77,4 @@ Duomenų rinkinys licencijuojamas pagal Creative Commons Attribution 4.0 Interna
 Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-06
 
 ## English summary
-Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Read the English catalogue-data overview at https://www.baldininkai.org/en/lithuanian-furniture-makers-data/, browse the catalogue at https://www.baldininkai.org/, and use the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.
+Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Browse the English sourcing hub at https://www.baldininkai.org/en/, read the English catalogue-data overview at https://www.baldininkai.org/en/lithuanian-furniture-makers-data/, browse the Lithuanian catalogue at https://www.baldininkai.org/, and use the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.
