@@ -1,0 +1,2755 @@
+{
+  "method": "Bulk paginated public API baseline followed by cached, rate-limited deterministic candidate review. Rekvizitai, info.lt, VisasVerslas, Imones (and already-recorded public directory URLs) nominate candidates; a deterministic DuckDuckGo HTML query is used only as fallback. Directories/aggregators and social networks are never accepted as websites. A candidate is accepted only after a fresh HTTP 200 fetch whose visible text contains the exact normalized legal or trading name and furniture/baldai-business evidence.",
+  "baseline": {
+    "filter": "website='' || website=null",
+    "checked_date": "2026-08-06",
+    "target_count": 273,
+    "fields": [
+      "slug",
+      "legal_name",
+      "trading_name",
+      "company_code",
+      "city",
+      "website",
+      "source_urls",
+      "public_details_source_urls"
+    ]
+  },
+  "counts": {
+    "total": 273,
+    "found": 5,
+    "not_found": 268
+  },
+  "results": [
+    {
+      "slug": "a-z-statyba",
+      "legal_name": "A-Z Statyba, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ajala",
+      "legal_name": "Ajala, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "alantas-baldu-salonas",
+      "legal_name": "Alantas, baldų salonas, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "albero-baldai",
+      "legal_name": "Albero baldai, MB",
+      "company_code": "305439851",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "albruva",
+      "legal_name": "UAB Albruva",
+      "company_code": "124637939",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "anp-inovaciniai-sprendimai",
+      "legal_name": "ANP inovaciniai sprendimai, UAB",
+      "company_code": "305604331",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "arpolis",
+      "legal_name": "Arpolis, UAB",
+      "company_code": "300614040",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "artrum-mb-305981318",
+      "legal_name": "Artrum, MB",
+      "company_code": "305981318",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "augriva",
+      "legal_name": "Augriva, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "aurimo-baldai",
+      "legal_name": "",
+      "company_code": "2413959",
+      "website": "https://aurimobaldai.com/",
+      "website_source_url": "https://www.info.lt/imones/Aurimo-baldai/2413959",
+      "checked_date": "2026-08-06",
+      "evidence_note": "Official site returned HTTP 200 and its visible page text contained the exact legal or trading name and furniture/baldai business evidence; public directory/search page cited as candidate provenance.",
+      "status": "found"
+    },
+    {
+      "slug": "balajano-slenio-baldai",
+      "legal_name": "Balajano slėnio baldai, MB",
+      "company_code": "307164852",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "balda",
+      "legal_name": "Balda, UAB",
+      "company_code": "304473249",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldasta-mb-306997147",
+      "legal_name": "Baldasta, MB",
+      "company_code": "306997147",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldijos-projektai",
+      "legal_name": "Baldijos projektai, UAB",
+      "company_code": "304903252",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldmaris-nestandartiniu-baldu-gamyba",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldociai",
+      "legal_name": "Baldočiai, UAB",
+      "company_code": "304137444",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldturas-a-laseviciaus-ivv",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldu-aleja",
+      "legal_name": "Baldų alėja, UAB",
+      "company_code": "145755086",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldu-cechas",
+      "legal_name": "Baldų cechas, MB",
+      "company_code": "306263705",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldu-prizme",
+      "legal_name": "MB Baldų prizmė",
+      "company_code": "305681438",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldu-profesionalai",
+      "legal_name": "UAB Baldų profesionalai",
+      "company_code": "300154930",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldu-sprendimai",
+      "legal_name": "Baldų sprendimai, MB",
+      "company_code": "306629348",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldu-studija-besta",
+      "legal_name": "Baldų studija Besta, UAB",
+      "company_code": "306096035",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldu-tvirtove",
+      "legal_name": "MB Baldų tvirtovė",
+      "company_code": "305916338",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baldukas",
+      "legal_name": "Baldukas, MB",
+      "company_code": "306069344",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "balduma-k-grigaitienes-firma",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "balduzis",
+      "legal_name": "Baldužis, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "baltfur",
+      "legal_name": "Baltfur, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "balzena",
+      "legal_name": "IĮ Balzena",
+      "company_code": "284216290",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "barsis",
+      "legal_name": "UAB Barsis",
+      "company_code": "151156970",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "bd-furniture",
+      "legal_name": "BD Furniture, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "benfok",
+      "legal_name": "Benfok, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "busto-baldai",
+      "legal_name": "UAB Būsto baldai",
+      "company_code": "302301884",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "dalduva-ii",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "darau-2",
+      "legal_name": "Darau 2, MB",
+      "company_code": "305876580",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "dazoma",
+      "legal_name": "Dažoma, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "dazymo-studija",
+      "legal_name": "Dažymo studija, MB",
+      "company_code": "307079747",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "deccorus",
+      "legal_name": "Deccorus, UAB",
+      "company_code": "302542853",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "deluxe-baldai",
+      "legal_name": "UAB Deluxe baldai",
+      "company_code": "302631227",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "diara-baldu-studija",
+      "legal_name": "UAB Diara LT",
+      "company_code": "300659516",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "digio",
+      "legal_name": "Digio, MB",
+      "company_code": "306162439",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "doko-sofa",
+      "legal_name": "Doko sofa, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "dovaina",
+      "legal_name": "Dovaina, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "drilius",
+      "legal_name": "Drilius, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "dronga-medienos-meistrai",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "dzukijos-baldu-fabrikas",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "egerta",
+      "legal_name": "Egerta, MB",
+      "company_code": "305356398",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "egidijaus-baldai",
+      "legal_name": "Egidijaus baldai, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "egidijaus-kino-imone-179749033",
+      "legal_name": "Egidijaus Kino įmonė",
+      "company_code": "179749033",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "emlitos-baldai",
+      "legal_name": "UAB Emlitos baldai",
+      "company_code": "304337352",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "evaldo-baldai",
+      "legal_name": "UAB Evaldo baldai",
+      "company_code": "303053420",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "exus-furniture",
+      "legal_name": "MB Exus furniture",
+      "company_code": "307162723",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "furneta",
+      "legal_name": "Furneta, UAB",
+      "company_code": "304422048",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "furnistetika",
+      "legal_name": "Furnistetika, MB",
+      "company_code": "306308755",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "furnmaster",
+      "legal_name": "UAB FurnMaster",
+      "company_code": "302900446",
+      "website": "https://www.furnmaster.com/global-presence/",
+      "website_source_url": "https://www.furnmaster.com/global-presence/",
+      "checked_date": "2026-08-06",
+      "evidence_note": "Official site returned HTTP 200 and its visible page text contained the exact legal or trading name and furniture/baldai business evidence; public directory/search page cited as candidate provenance.",
+      "status": "found"
+    },
+    {
+      "slug": "g-baldai",
+      "legal_name": "G baldai, MB",
+      "company_code": "307397002",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "gdm-creative",
+      "legal_name": "Gdm creative, MB",
+      "company_code": "307544445",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "getanas",
+      "legal_name": "UAB Getanas",
+      "company_code": "305645488",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "gieva-s-trapikienes-firma",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ideju-aleja-uab-302495535",
+      "legal_name": "Idėjų alėja, UAB",
+      "company_code": "302495535",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ii-a-gaizausko-imone-miltauja-179463167",
+      "legal_name": "IĮ A. Gaižausko imonė \"Miltauja\"",
+      "company_code": "179463167",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ii-arominda-300646141",
+      "legal_name": "IĮ \"Arominda\"",
+      "company_code": "300646141",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ii-vysniu-baldai-304840040",
+      "legal_name": "IĮ \"Vyšnių baldai\"",
+      "company_code": "304840040",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "inoxi",
+      "legal_name": "Inoxi, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "inscoco",
+      "legal_name": "Inscoco, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "jogusta",
+      "legal_name": "UAB Jogusta",
+      "company_code": "304231819",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "jumika",
+      "legal_name": "UAB Jumika",
+      "company_code": "304436998",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "k-viktoraviciaus-ivv",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "kamadotbl",
+      "legal_name": "Kamadotbl, MB",
+      "company_code": "307537931",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "kampu",
+      "legal_name": "Kampu, MB",
+      "company_code": "305908188",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "karaliaus-baldai-uab-305991312",
+      "legal_name": "Karaliaus baldai, UAB",
+      "company_code": "305991312",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "kazbaro-baldai",
+      "legal_name": "Kazbaro baldai, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "kesna",
+      "legal_name": "Kesna, UAB",
+      "company_code": "303332085",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "kigi-lt",
+      "legal_name": "UAB KIGI LT",
+      "company_code": "303334307",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "klaipedos-baldai",
+      "legal_name": "Klaipėdos baldai, UAB",
+      "company_code": "140656052",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "kneita",
+      "legal_name": "Kneita, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "kokybisku-baldu-dirbtuves",
+      "legal_name": "Kokybiškų baldų dirbtuvės, MB",
+      "company_code": "306650926",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "krivijas",
+      "legal_name": "Krivijas, UAB",
+      "company_code": "151262991",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "l-a-r-a",
+      "legal_name": "UAB Lino baldai",
+      "company_code": "301531779",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "laterus",
+      "legal_name": "Laterus, UAB",
+      "company_code": "182728266",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "laumes-baldu-gamyba",
+      "legal_name": "Laumės baldų gamyba, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "liepas",
+      "legal_name": "MB Liepas",
+      "company_code": "303098166",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "luxury-furniture",
+      "legal_name": "Luxury furniture, UAB",
+      "company_code": "306021189",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "m-pralgausko-imone",
+      "legal_name": "",
+      "company_code": "161637614",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mariaus-baldu-studija",
+      "legal_name": "Mariaus baldų studija, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mazoji-bendrija-baldukai-307021377",
+      "legal_name": "Mažoji bendrija Baldukai",
+      "company_code": "307021377",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mazoji-bendrija-dili-baldai-307059068",
+      "legal_name": "Mažoji bendrija Dili baldai",
+      "company_code": "307059068",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mazoji-bendrija-obrimus-305831539",
+      "legal_name": "Mažoji bendrija \"Obrimus\"",
+      "company_code": "305831539",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mazoji-bendrija-sernosis-305935228",
+      "legal_name": "Mažoji bendrija \"Šernosis\"",
+      "company_code": "305935228",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mazoji-bendrija-valdo-projektai-305684562",
+      "legal_name": "Mažoji bendrija Valdo projektai",
+      "company_code": "305684562",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-45-kampai-306125063",
+      "legal_name": "MB \"45 kampai\"",
+      "company_code": "306125063",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-abc-baldai-306653648",
+      "legal_name": "MB Abc baldai",
+      "company_code": "306653648",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-aistis-ir-rokas-304521861",
+      "legal_name": "MB \"Aistis ir Rokas\"",
+      "company_code": "304521861",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-alfo-statybos-305393037",
+      "legal_name": "MB \"Alfo statybos\"",
+      "company_code": "305393037",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-armiba-306365293",
+      "legal_name": "MB \"Armiba\"",
+      "company_code": "306365293",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-ba-dirbtuves-305679775",
+      "legal_name": "MB \"BA dirbtuvės\"",
+      "company_code": "305679775",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-baldaiska-306323928",
+      "legal_name": "MB Baldaiska",
+      "company_code": "306323928",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-baldakas-306712160",
+      "legal_name": "MB \"Baldakas\"",
+      "company_code": "306712160",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-baldu-gaminiai-304098482",
+      "legal_name": "MB \"Baldų gaminiai\"",
+      "company_code": "304098482",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-blanko-baldai-306183629",
+      "legal_name": "MB Blanko baldai",
+      "company_code": "306183629",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-borera-306723872",
+      "legal_name": "MB Borera",
+      "company_code": "306723872",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-esteto-baldai-306167137",
+      "legal_name": "MB Esteto baldai",
+      "company_code": "306167137",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-furnidedes-305939301",
+      "legal_name": "MB Furnidėdės",
+      "company_code": "305939301",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-grg-baldai-306635924",
+      "legal_name": "MB Grg baldai",
+      "company_code": "306635924",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-interius-304291360",
+      "legal_name": "MB \"Interius\"",
+      "company_code": "304291360",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-jurio-baldai-307020485",
+      "legal_name": "MB \"Jurio baldai\"",
+      "company_code": "307020485",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-kanteka-307296512",
+      "legal_name": "MB Kanteka",
+      "company_code": "307296512",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-la-projects-306708016",
+      "legal_name": "MB \"LA projects\"",
+      "company_code": "306708016",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-labanoris-305390728",
+      "legal_name": "MB \"Labanoris\"",
+      "company_code": "305390728",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-lurenos-baldai-305568967",
+      "legal_name": "MB \"Lurenos baldai\"",
+      "company_code": "305568967",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-melamin-306146424",
+      "legal_name": "MB \"Melamin\"",
+      "company_code": "306146424",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-milijonas-kampu-305236609",
+      "legal_name": "MB \"Milijonas kampų\"",
+      "company_code": "305236609",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-pintora-304835958",
+      "legal_name": "MB \"Pintora\"",
+      "company_code": "304835958",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-re-baldai-306069853",
+      "legal_name": "MB \"Re baldai\"",
+      "company_code": "306069853",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-space-idea-property-306391498",
+      "legal_name": "MB Space idea property",
+      "company_code": "306391498",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-stilo-baldai-303056929",
+      "legal_name": "MB \"Stilo baldai\"",
+      "company_code": "303056929",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-tabalda-307093825",
+      "legal_name": "MB \"Tabalda\"",
+      "company_code": "307093825",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-tovera-305844611",
+      "legal_name": "MB Tovera",
+      "company_code": "305844611",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-tryse-baldai-306879647",
+      "legal_name": "MB Tryse baldai",
+      "company_code": "306879647",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-tvm-furniture-307106831",
+      "legal_name": "MB TVM Furniture",
+      "company_code": "307106831",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-versus-interior-304960125",
+      "legal_name": "MB \"Versus interior\"",
+      "company_code": "304960125",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mb-virtnora-306236409",
+      "legal_name": "MB \"Virtnora\"",
+      "company_code": "306236409",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mbi",
+      "legal_name": "UAB Minkštų baldų idėja",
+      "company_code": "302649200",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mdaspect",
+      "legal_name": "MDAspect, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "medbalda",
+      "legal_name": "Medbalda, MB",
+      "company_code": "304442524",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "medgamas",
+      "legal_name": "Medgamas, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "medideja",
+      "legal_name": "Medidėja, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "medynmetis",
+      "legal_name": "Medynmetis, MB",
+      "company_code": "306730856",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "metalo-kalve",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mingridas",
+      "legal_name": "Mingridas, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "minijos-baldai",
+      "legal_name": "Minijos baldai, UAB",
+      "company_code": "140258454",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mk-baldai",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mood-furniture",
+      "legal_name": "Mood Furniture, UAB",
+      "company_code": "300108178",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mr-design",
+      "legal_name": "Mr design, MB",
+      "company_code": "307569498",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "mwood",
+      "legal_name": "UAB MWood",
+      "company_code": "302597547",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "narbutas-edge",
+      "legal_name": "Narbutas Edge, UAB",
+      "company_code": "307021466",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "nerijaus-bucio-imone-258888760",
+      "legal_name": "Nerijaus Bučio įmonė",
+      "company_code": "258888760",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "nestandart",
+      "legal_name": "Nestandart, MB",
+      "company_code": "307132057",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "pajurio-baldai",
+      "legal_name": "Pajūrio baldai, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "pasmeta-lt",
+      "legal_name": "Pasmeta LT, MB",
+      "company_code": "305961874",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "pickwood-lt",
+      "legal_name": "Pickwood LT, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "plunges-baldai",
+      "legal_name": "Plungės baldai, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "protingi-baldai",
+      "legal_name": "UAB Protingi baldai",
+      "company_code": "302652602",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "r-meistrai",
+      "legal_name": "R meistrai, MB",
+      "company_code": "305665875",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "raimeta",
+      "legal_name": "Raimeta, MB",
+      "company_code": "305633571",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ratuoti-sapnai",
+      "legal_name": "Ratuoti sapnai, MB",
+      "company_code": "307003404",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ravera",
+      "legal_name": "Ravera, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "rebilda",
+      "legal_name": "Rebilda, UAB",
+      "company_code": "302885752",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "rejben-baldai",
+      "legal_name": "Rejben baldai, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "roberto-laiptai",
+      "legal_name": "Roberto laiptai, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "rokiskio-baldai",
+      "legal_name": "Rokiškio baldai, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "romanta",
+      "legal_name": "Romanta, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ryno",
+      "legal_name": "Ryno, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "sakuona",
+      "legal_name": "Sakuona, UAB",
+      "company_code": "163314524",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "saltum",
+      "legal_name": "UAB Saltum",
+      "company_code": "302486237",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "sandriaus-baldai",
+      "legal_name": "Sandriaus baldai, UAB",
+      "company_code": "306673992",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "sanitarina",
+      "legal_name": "Sanitarina, MB",
+      "company_code": "306265161",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "sato-baldu-idejos",
+      "legal_name": "Sato baldų idėjos, MB",
+      "company_code": "306077348",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "sigito-baciansko-individuali-imone-125773881",
+      "legal_name": "Sigito Baciansko individuali įmonė",
+      "company_code": "125773881",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "silales-baldai",
+      "legal_name": "",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "sole-lt",
+      "legal_name": "UAB Sole LT",
+      "company_code": "304135354",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "stilingi-baldai",
+      "legal_name": "UAB Stilingi baldai",
+      "company_code": "305393560",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "suduvos-baldai-morita",
+      "legal_name": "Sūduvos baldai, UAB Morita",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "surgede",
+      "legal_name": "UAB Surgėdė",
+      "company_code": "149887466",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "tailida",
+      "legal_name": "Tailida, MB",
+      "company_code": "307169696",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "tiko-baldai",
+      "legal_name": "UAB Tiko baldai",
+      "company_code": "300002495",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "tipo-baldai",
+      "legal_name": "Tipo baldai, MB",
+      "company_code": "306303263",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "tomadeco",
+      "legal_name": "Tomadeco, MB",
+      "company_code": "305724455",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "tribus",
+      "legal_name": "Tribus, UAB",
+      "company_code": "302719951",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "tvilis",
+      "legal_name": "UAB TVILIS",
+      "company_code": "302506330",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "tvirte",
+      "legal_name": "UAB Tvirtė",
+      "company_code": "303309275",
+      "website": "https://www.tvirte.com/",
+      "website_source_url": "https://www.tvirte.com/",
+      "checked_date": "2026-08-06",
+      "evidence_note": "Official site returned HTTP 200 and its visible page text contained the exact legal or trading name and furniture/baldai business evidence; public directory/search page cited as candidate provenance.",
+      "status": "found"
+    },
+    {
+      "slug": "uab-agla-164741529",
+      "legal_name": "UAB \"AGLA\"",
+      "company_code": "164741529",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-aikstis-304887143",
+      "legal_name": "UAB \"Aikštis\"",
+      "company_code": "304887143",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-algideja-304395996",
+      "legal_name": "UAB \"Algidėja\"",
+      "company_code": "304395996",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-alneka-304186306",
+      "legal_name": "UAB \"Alneka\"",
+      "company_code": "304186306",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-anjaras-125510364",
+      "legal_name": "UAB \"ANJARAS\"",
+      "company_code": "125510364",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-ar-studio-300657700",
+      "legal_name": "UAB \"AR - STUDIO\"",
+      "company_code": "300657700",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-arnitana-304171090",
+      "legal_name": "UAB \"Arnitana\"",
+      "company_code": "304171090",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-arredo-deko-projektai-305778798",
+      "legal_name": "UAB \"Arredo deko projektai\"",
+      "company_code": "305778798",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-artus-lt-303126904",
+      "legal_name": "UAB \"Artus LT\"",
+      "company_code": "303126904",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-aztrekas-135499959",
+      "legal_name": "UAB \"Aztrekas\"",
+      "company_code": "135499959",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-baldu-sistemos-126273181",
+      "legal_name": "UAB \"Baldų sistemos\"",
+      "company_code": "126273181",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-baldu-svaja-303927859",
+      "legal_name": "UAB \"Baldų svaja\"",
+      "company_code": "303927859",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-baldu-tonas-304048440",
+      "legal_name": "UAB \"Baldų tonas\"",
+      "company_code": "304048440",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-baltasis-bizonas-304231694",
+      "legal_name": "UAB \"Baltasis bizonas\"",
+      "company_code": "304231694",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-bhk-lietuva-300050141",
+      "legal_name": "UAB \"BHK Lietuva\"",
+      "company_code": "300050141",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-cps-engineering-300085719",
+      "legal_name": "UAB \"CPS Engineering\"",
+      "company_code": "300085719",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-ctt-300132909",
+      "legal_name": "UAB \"CTT\"",
+      "company_code": "300132909",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-destructa-305913872",
+      "legal_name": "UAB \"Destructa\"",
+      "company_code": "305913872",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-dimantra-304985961",
+      "legal_name": "UAB \"Dimantra\"",
+      "company_code": "304985961",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-domingus-304459872",
+      "legal_name": "UAB \"Domingus\"",
+      "company_code": "304459872",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-dominyko-projektai-304103246",
+      "legal_name": "UAB \"Dominyko projektai\"",
+      "company_code": "304103246",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-eega1-300004336",
+      "legal_name": "UAB \"EEGA1\"",
+      "company_code": "300004336",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-ego-verus-300003654",
+      "legal_name": "UAB \"Ego verus\"",
+      "company_code": "300003654",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-eltino-302526443",
+      "legal_name": "UAB \"ELTINO\"",
+      "company_code": "302526443",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-emona-lt-305201921",
+      "legal_name": "UAB \"Emona LT\"",
+      "company_code": "305201921",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-esd-baldai-301089656",
+      "legal_name": "UAB \"ESD baldai\"",
+      "company_code": "301089656",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-evprojektas-304885612",
+      "legal_name": "UAB \"Evprojektas\"",
+      "company_code": "304885612",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-fenolita-124264828",
+      "legal_name": "Uždaroji akcinė bendrovė \"FENOLITA\"",
+      "company_code": "124264828",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-fika-lt-302711050",
+      "legal_name": "UAB FIKA LT",
+      "company_code": "302711050",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-forneris-300647357",
+      "legal_name": "UAB \"Forneris\"",
+      "company_code": "300647357",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-freda-133386126",
+      "legal_name": "UAB \"Freda\"",
+      "company_code": "133386126",
+      "website": "https://www.freda.eu/apie-mus/",
+      "website_source_url": "https://rekvizitai.vz.lt/en/company/freda/",
+      "checked_date": "2026-08-06",
+      "evidence_note": "Official site returned HTTP 200 and its visible page text contained the exact legal or trading name and furniture/baldai business evidence; public directory/search page cited as candidate provenance.",
+      "status": "found"
+    },
+    {
+      "slug": "uab-furnipro-305699614",
+      "legal_name": "UAB \"Furnipro\"",
+      "company_code": "305699614",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-geri-amatai-302568620",
+      "legal_name": "UAB \"Geri amatai\"",
+      "company_code": "302568620",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-gm-art-306083828",
+      "legal_name": "UAB \"GM ART\"",
+      "company_code": "306083828",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-inovacijos-ir-sprendimai-300832459",
+      "legal_name": "UAB \"Inovacijos ir sprendimai\"",
+      "company_code": "300832459",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-joniskio-baldai-157689644",
+      "legal_name": "UAB \"Joniškio baldai\"",
+      "company_code": "157689644",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-julsata-125751995",
+      "legal_name": "UAB \"JULSATA\"",
+      "company_code": "125751995",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-kadeira-304106769",
+      "legal_name": "UAB \"Kadeira\"",
+      "company_code": "304106769",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-kensa-302542006",
+      "legal_name": "UAB \"Kensa\"",
+      "company_code": "302542006",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-kitaip-301887572",
+      "legal_name": "UAB \"KITAIP\"",
+      "company_code": "301887572",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-korela-303022154",
+      "legal_name": "UAB KORELA",
+      "company_code": "303022154",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-korsara-302469437",
+      "legal_name": "UAB \"Korsara\"",
+      "company_code": "302469437",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-kzk-studija-305679946",
+      "legal_name": "UAB Kzk studija",
+      "company_code": "305679946",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-lacio-302539095",
+      "legal_name": "UAB \"Lacio\"",
+      "company_code": "302539095",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-laisves-baldai-302563491",
+      "legal_name": "UAB \"Laisvės baldai\"",
+      "company_code": "302563491",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-lead-time-zero-304978027",
+      "legal_name": "UAB LEAD TIME ZERO",
+      "company_code": "304978027",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-lukandra-135871110",
+      "legal_name": "UAB \"Lukandra\"",
+      "company_code": "135871110",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-magnum-reditus-303192562",
+      "legal_name": "UAB \"Magnum reditus\"",
+      "company_code": "303192562",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-metalo-pulsas-306198588",
+      "legal_name": "UAB Metalo pulsas",
+      "company_code": "306198588",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-milpra-303301150",
+      "legal_name": "UAB \"Milpra\"",
+      "company_code": "303301150",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-minora-301537376",
+      "legal_name": "UAB \"Minora\"",
+      "company_code": "301537376",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-mirandeka-302556080",
+      "legal_name": "UAB \"Mirandeka\"",
+      "company_code": "302556080",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-ms-baldai-302680509",
+      "legal_name": "UAB \"MS baldai\"",
+      "company_code": "302680509",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-narbutas-international-300591314",
+      "legal_name": "UAB \"Narbutas International\"",
+      "company_code": "300591314",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-nero-baldai-303245214",
+      "legal_name": "UAB \"Nero baldai\"",
+      "company_code": "303245214",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-oaky-oak-304940471",
+      "legal_name": "UAB OAKY OAK",
+      "company_code": "304940471",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-ofus-302532624",
+      "legal_name": "UAB \"Ofus\"",
+      "company_code": "302532624",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-piluka-304222065",
+      "legal_name": "UAB \"Piluka\"",
+      "company_code": "304222065",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-real-vision-302453276",
+      "legal_name": "UAB \"Real Vision\"",
+      "company_code": "302453276",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-rigresta-303242378",
+      "legal_name": "UAB \"Rigresta\"",
+      "company_code": "303242378",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-robenas-302743411",
+      "legal_name": "UAB \"Robenas\"",
+      "company_code": "302743411",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-rupeja-305771184",
+      "legal_name": "UAB \"Rupėja\"",
+      "company_code": "305771184",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-s2s-301785585",
+      "legal_name": "UAB \"S2S\"",
+      "company_code": "301785585",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-sk-design-300104258",
+      "legal_name": "UAB \"SK Design\"",
+      "company_code": "300104258",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-skaisteriai-nt-304418854",
+      "legal_name": "UAB \"Skaisteriai NT\"",
+      "company_code": "304418854",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-smv-projektai-302430459",
+      "legal_name": "UAB \"SMV projektai\"",
+      "company_code": "302430459",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-sonavita-301696898",
+      "legal_name": "UAB \"SONAVITA\"",
+      "company_code": "301696898",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-sprendimai-baldininkams-304990410",
+      "legal_name": "UAB \"Sprendimai baldininkams\"",
+      "company_code": "304990410",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-stilforma-302761402",
+      "legal_name": "UAB \"Stilforma\"",
+      "company_code": "302761402",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-ternis-305217644",
+      "legal_name": "UAB \"Ternis\"",
+      "company_code": "305217644",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-tigna-171703525",
+      "legal_name": "UAB \"Tigna\"",
+      "company_code": "171703525",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-timo-verslas-135053451",
+      "legal_name": "UAB \"Timo verslas\"",
+      "company_code": "135053451",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-vagensas-255973180",
+      "legal_name": "UAB \"VAGENSAS\"",
+      "company_code": "255973180",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-vilgma-gi-302678383",
+      "legal_name": "UAB VILGMA GI",
+      "company_code": "302678383",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-vintori-304945568",
+      "legal_name": "UAB Vintori",
+      "company_code": "304945568",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-visagino-linija-300032531",
+      "legal_name": "UAB \"Visagino linija\"",
+      "company_code": "300032531",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-visokie-baldai-307086574",
+      "legal_name": "UAB Visokie baldai",
+      "company_code": "307086574",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uab-viva-style-304926429",
+      "legal_name": "UAB \"Viva style\"",
+      "company_code": "304926429",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uosis",
+      "legal_name": "UAB Uosis",
+      "company_code": "176520937",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uosvita",
+      "legal_name": "MB Uosvita",
+      "company_code": "306394626",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "urtbalda",
+      "legal_name": "Urtbalda, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-balresta-123915741",
+      "legal_name": "Uždaroji akcinė bendrovė \"BALRESTA\"",
+      "company_code": "123915741",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-litvaista-133663349",
+      "legal_name": "Uždaroji akcinė bendrovė \"Litvaista\"",
+      "company_code": "133663349",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-mantisa-302327402",
+      "legal_name": "Uždaroji akcinė bendrovė \"MANTISA\"",
+      "company_code": "302327402",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-marijampoles-komprojektas-251237590",
+      "legal_name": "Uždaroji akcinė bendrovė \"Marijampolės komprojektas\"",
+      "company_code": "251237590",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-medinedas-160289293",
+      "legal_name": "Uždaroji akcinė bendrovė \"Medinedas\"",
+      "company_code": "160289293",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-medrika-148051482",
+      "legal_name": "Uždaroji akcinė bendrovė \"MEDRIKA\"",
+      "company_code": "148051482",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-riardzis-224476650",
+      "legal_name": "Uždaroji akcinė bendrovė \"RIARDŽIS\"",
+      "company_code": "224476650",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-saloza-234003980",
+      "legal_name": "Uždaroji akcinė bendrovė \"Saloža\"",
+      "company_code": "234003980",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzdaroji-akcine-bendrove-zbiga-123645712",
+      "legal_name": "Uždaroji akcinė bendrovė \"ZBIGA\"",
+      "company_code": "123645712",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzuolas",
+      "legal_name": "Ūžuolas, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "uzupio-baldai",
+      "legal_name": "Užupio baldai, MB",
+      "company_code": "304607367",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "valdrena",
+      "legal_name": "Valdrena, MB",
+      "company_code": "306260303",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "vanago-miskas",
+      "legal_name": "Vanago miškas, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "vavap",
+      "legal_name": "Vavap, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "velmera",
+      "legal_name": "Velmera, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "vilgma",
+      "legal_name": "Vilgma, MB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "vilmers-uab-300098524",
+      "legal_name": "Vilmers UAB",
+      "company_code": "300098524",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "x-baldai",
+      "legal_name": "D. Bražionio IVV",
+      "company_code": "100016141710",
+      "website": "https://www.xbaldai.lt/",
+      "website_source_url": "https://www.xbaldai.lt/",
+      "checked_date": "2026-08-06",
+      "evidence_note": "Official site returned HTTP 200 and its visible page text contained the exact legal or trading name and furniture/baldai business evidence; public directory/search page cited as candidate provenance.",
+      "status": "found"
+    },
+    {
+      "slug": "xbaldai",
+      "legal_name": "UAB Molėtų baldai",
+      "company_code": "304729862",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "ziliukai",
+      "legal_name": "Žiliukai, UAB",
+      "company_code": "",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    },
+    {
+      "slug": "zt-furni",
+      "legal_name": "ŽT furni, MB",
+      "company_code": "305701321",
+      "website": null,
+      "website_source_url": null,
+      "checked_date": "2026-08-06",
+      "evidence_note": "No candidate from the reviewed public directories and deterministic public-search fallback met all acceptance tests (HTTP 200, exact legal/trading-name identity, and furniture/baldai business evidence).",
+      "status": "not_found"
+    }
+  ]
+}
