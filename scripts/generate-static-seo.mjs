@@ -488,6 +488,15 @@ function registryCheckedDate(value) {
   };
 }
 
+const employeeBandOrder = ['0', '1-9', '10-49', '50-249', '250+'];
+const employeeBandNames = new Map([
+  ['0', '0 darbuotojų'],
+  ['1-9', '1–9 darbuotojai'],
+  ['10-49', '10–49 darbuotojai'],
+  ['50-249', '50–249 darbuotojai'],
+  ['250+', '250 ir daugiau darbuotojų'],
+]);
+
 function employeeBandLabel(value) {
   const labels = {
     '0': 'Viešame darbuotojų skaičiaus įraše – 0 darbuotojų',
@@ -987,14 +996,6 @@ await writeRoute(openDataPath, injectPage({
 
 const marketOverviewPath = '/baldu-rinkos-apzvalga';
 const marketOverviewUrl = canonicalUrl(marketOverviewPath);
-const employeeBandOrder = ['0', '1-9', '10-49', '50-249', '250+'];
-const employeeBandNames = new Map([
-  ['0', '0 darbuotojų'],
-  ['1-9', '1–9 darbuotojai'],
-  ['10-49', '10–49 darbuotojai'],
-  ['50-249', '50–249 darbuotojai'],
-  ['250+', '250 ir daugiau darbuotojų'],
-]);
 const marketTurnovers = manufacturers
   .map((record) => ({ record, turnover: publishedTurnover(record) }))
   .filter((entry) => entry.turnover)
@@ -1134,6 +1135,48 @@ for (const record of manufacturers) {
   }));
 }
 
+const landingSnapshotNote = 'Skaičiai paremti viešais šaltiniais, apima skirtingus finansinius metus ir tik šiuo metu kataloge skelbiamus gamintojų kandidatus.';
+const landingSnapshotTurnoverMinimum = 3;
+
+function landingMakerSnapshot(records, kind) {
+  const total = records.length;
+  const turnoverRecords = records
+    .map((record) => ({ record, turnover: publishedTurnover(record) }))
+    .filter((entry) => entry.turnover);
+  const turnoverValues = turnoverRecords.map(({ turnover }) => turnover.amount);
+  const fiscalYearMix = countBy(turnoverRecords, ({ turnover }) => String(turnover.year));
+  const employeeRecords = records.filter((record) => employeeBandOrder.includes(record.employee_count_band));
+  const employeeDistribution = employeeBandOrder
+    .map((band) => ({ band, label: employeeBandNames.get(band), count: employeeRecords.filter((record) => record.employee_count_band === band).length }))
+    .filter(({ count }) => count > 0);
+  const foundingRecords = records.filter((record) => Number.isInteger(record.founded_year)
+    && record.founded_year >= 1800 && record.founded_year <= latestValidFoundingYear);
+  const oldestFoundingYear = foundingRecords.length ? Math.min(...foundingRecords.map((record) => record.founded_year)) : null;
+  const newestFoundingYear = foundingRecords.length ? Math.max(...foundingRecords.map((record) => record.founded_year)) : null;
+  const enoughTurnover = turnoverRecords.length >= landingSnapshotTurnoverMinimum;
+  const topTurnover = enoughTurnover
+    ? [...turnoverRecords].sort((a, b) => b.turnover.amount - a.turnover.amount
+      || a.record.trading_name.localeCompare(b.record.trading_name, 'lt'))[0]
+    : null;
+  const turnoverStats = enoughTurnover
+    ? `<dl class="snapshot-turnover-stats"><div data-snapshot-turnover-stat="total" data-value="${turnoverValues.reduce((sum, amount) => sum + amount, 0)}"><dt>Bendra paskelbta apyvarta</dt><dd>${escapeHtml(formatEuro(turnoverValues.reduce((sum, amount) => sum + amount, 0)))}</dd></div><div data-snapshot-turnover-stat="median" data-value="${median(turnoverValues)}"><dt>Mediana</dt><dd>${escapeHtml(formatEuro(median(turnoverValues)))}</dd></div></dl>`
+    : `<p class="snapshot-insufficient" data-snapshot-turnover-insufficient data-count="${turnoverRecords.length}" data-minimum="${landingSnapshotTurnoverMinimum}">Apyvartos suvestinei duomenų nepakanka: galiojančią paskelbtą apyvartą turi ${turnoverRecords.length} iš ${total} įrašų, o bendrai sumai, medianai ir didžiausios apyvartos gamintojui parodyti reikia bent ${landingSnapshotTurnoverMinimum}. Šie dydžiai nerodomi.</p>`;
+  const fiscalYears = fiscalYearMix.length
+    ? `<ul class="snapshot-distribution snapshot-year-mix" aria-label="Paskelbtos apyvartos finansinių metų pasiskirstymas">${fiscalYearMix.map(([year, count]) => `<li data-snapshot-fiscal-year="${year}" data-count="${count}"><span>${year} m.</span><strong>${count} <small>(${formatPercent(count, turnoverRecords.length)})</small></strong></li>`).join('')}</ul>`
+    : '<p class="snapshot-empty" data-snapshot-fiscal-year-insufficient>Finansinių metų mišinio nėra, nes šiame sąraše nėra galiojančių paskelbtos apyvartos reikšmių.</p>';
+  const employeeBands = employeeDistribution.length
+    ? `<ul class="snapshot-distribution" aria-label="Darbuotojų grupių pasiskirstymas">${employeeDistribution.map(({ band, label, count }) => `<li data-snapshot-employee-band="${escapeHtml(band)}" data-count="${count}"><span>${escapeHtml(label)}</span><strong>${count} <small>(${formatPercent(count, employeeRecords.length)})</small></strong></li>`).join('')}</ul>`
+    : '<p class="snapshot-empty" data-snapshot-employee-insufficient>Darbuotojų grupių pasiskirstymo parodyti negalima, nes šiame sąraše nėra galiojančių grupės reikšmių.</p>';
+  const foundingRange = foundingRecords.length
+    ? `<p class="snapshot-range" data-snapshot-founding-range data-oldest="${oldestFoundingYear}" data-newest="${newestFoundingYear}"><span>Įkūrimo metų intervalas</span><strong>${oldestFoundingYear === newestFoundingYear ? `${oldestFoundingYear} m. (vienintelė reikšmė)` : `${oldestFoundingYear}–${newestFoundingYear} m.`}</strong></p>`
+    : '<p class="snapshot-empty" data-snapshot-founding-insufficient>Įkūrimo metų intervalo parodyti negalima, nes šiame sąraše nėra galiojančių įkūrimo metų.</p>';
+  const topMaker = topTurnover
+    ? `<div class="snapshot-top-maker" data-snapshot-top-maker="${escapeHtml(topTurnover.record.slug)}" data-amount="${topTurnover.turnover.amount}" data-year="${topTurnover.turnover.year}"><h3>Didžiausia paskelbta apyvarta šiame sąraše</h3><p><a href="/gamintojas/${escapeHtml(topTurnover.record.slug)}">${escapeHtml(topTurnover.record.trading_name)}</a> — <strong>${escapeHtml(formatEuro(topTurnover.turnover.amount))}</strong> (${topTurnover.turnover.year} finansiniai metai). <a data-snapshot-top-source href="${escapeHtml(topTurnover.turnover.sourceUrl)}" rel="noopener noreferrer">Atverti tiesioginį viešą šaltinį ↗</a></p></div>`
+    : '';
+
+  return `<section class="landing-snapshot" data-maker-snapshot data-snapshot-scope="${kind}" data-record-count="${total}" aria-labelledby="maker-snapshot-title"><div class="snapshot-heading"><div><p class="kicker">Šio sąrašo duomenys</p><h2 id="maker-snapshot-title">Gamintojų duomenų pjūvis</h2><p>Rodoma tik tai, ką galima apskaičiuoti iš šiame puslapyje pateiktų katalogo įrašų.</p></div><p class="snapshot-version">Duomenų versija <time datetime="${buildDate}">${buildDate}</time></p></div><dl class="snapshot-coverage"><div data-snapshot-coverage="total" data-count="${total}" data-total="${total}"><dt>Gamintojų kandidatų</dt><dd>${total}</dd><small>100,0 %</small></div><div data-snapshot-coverage="turnover" data-count="${turnoverRecords.length}" data-total="${total}"><dt>Su paskelbta apyvarta</dt><dd>${turnoverRecords.length}</dd><small>${formatPercent(turnoverRecords.length, total)}</small></div><div data-snapshot-coverage="employees" data-count="${employeeRecords.length}" data-total="${total}"><dt>Su darbuotojų grupe</dt><dd>${employeeRecords.length}</dd><small>${formatPercent(employeeRecords.length, total)}</small></div><div data-snapshot-coverage="founded" data-count="${foundingRecords.length}" data-total="${total}"><dt>Su įkūrimo metais</dt><dd>${foundingRecords.length}</dd><small>${formatPercent(foundingRecords.length, total)}</small></div></dl><div class="snapshot-detail-grid"><section aria-labelledby="snapshot-turnover-title"><div class="snapshot-subheading"><h3 id="snapshot-turnover-title">Paskelbta apyvarta</h3><p>Galioja tik teigiama suma su finansiniais metais ir tiesioginiu viešu šaltiniu.</p></div>${turnoverStats}<h4>Finansinių metų mišinys</h4>${fiscalYears}</section><section aria-labelledby="snapshot-company-title"><div class="snapshot-subheading"><h3 id="snapshot-company-title">Darbuotojai ir įkūrimo metai</h3><p>Tušti ar negaliojantys laukai į pasiskirstymą ir intervalą neįtraukiami.</p></div><h4>Darbuotojų grupės</h4>${employeeBands}${foundingRange}</section></div>${topMaker}<p class="snapshot-note">${landingSnapshotNote} Metodiką rasite <a href="/baldu-rinkos-apzvalga/">baldų rinkos apžvalgoje</a>, o šaltinių rinkinį – <a href="/atviri-duomenys/">atvirų duomenų puslapyje</a>.</p></section>`;
+}
+
 function landingItemList(records) {
   return { '@context': 'https://schema.org', '@type': 'ItemList', numberOfItems: records.length, itemListElement: records.map((record, index) => ({ '@type': 'ListItem', position: index + 1, url: canonicalUrl(`/gamintojas/${record.slug}`), name: record.trading_name })) };
 }
@@ -1147,7 +1190,7 @@ async function writeLanding({ slug, title, intro, buyerNote, records, related, f
   const relatedSection = related.length
     ? `<section class="landing-related"><div class="section-heading"><h2>${relatedTitle}</h2><p>Nuorodos rodomos tik toms baldų rūšies ir miesto sankirtoms, kuriose yra bent trys katalogo įrašai.</p></div><ul class="landing-related-links">${related.map((item) => `<li><a href="${item.path}">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}</ul></section>`
     : '';
-  const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">${kind === 'category' ? 'Baldų kategorija' : 'Šaltinyje nurodyta vietovė'}</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section>${guidanceHtml(guidance)}${relatedSection}<section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="landing-filter-controls" id="landing-filter-controls"></div><div class="manufacturer-list" id="landing-manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
+  const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">${kind === 'category' ? 'Baldų kategorija' : 'Šaltinyje nurodyta vietovė'}</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section>${landingMakerSnapshot(records, kind)}${guidanceHtml(guidance)}${relatedSection}<section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="landing-filter-controls" id="landing-filter-controls"></div><div class="manufacturer-list" id="landing-manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
   await writeRoute(path, injectPage({ title: `${title} | Gamintojų katalogas`, description, path, body, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }]), faqSchema(faq), landingItemList(records)] }));
 }
 

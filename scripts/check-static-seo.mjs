@@ -429,10 +429,17 @@ for (const record of manufacturers) {
 }
 const expectedCities = [...recordsByCity].map(([city, records]) => ({ city, records, count: records.length, slug: slugifyLithuanian(city) }))
   .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
-const expectedLandingCities = expectedCities.filter((entry) => entry.count >= 2);
+const expectedLandingCities = expectedCities.filter((entry) => entry.count >= landingConfig.cityThreshold);
 const cityRouteSet = new Set(expectedLandingCities.map((entry) => `/baldai-pagal-uzsakyma/${entry.slug}`));
 const cityIndexRoute = '/baldai-pagal-uzsakyma/miestai';
 const expectedEmployeeBands = ['0', '1-9', '10-49', '50-249', '250+'];
+const expectedEmployeeBandLabels = new Map([
+  ['0', '0 darbuotojų'],
+  ['1-9', '1–9 darbuotojai'],
+  ['10-49', '10–49 darbuotojai'],
+  ['50-249', '50–249 darbuotojai'],
+  ['250+', '250 ir daugiau darbuotojų'],
+]);
 const expectedTurnovers = manufacturers
   .map((record) => ({ record, turnover: publishedTurnover(record) }))
   .filter((entry) => entry.turnover)
@@ -477,8 +484,145 @@ const expectedCategoryMix = landingConfig.categories.map((category) => {
     href: `/baldai-pagal-uzsakyma/${category.slug}`,
   };
 });
+const expectedSnapshotRoutes = new Map([
+  ...landingConfig.categories.map((category) => [
+    `/baldai-pagal-uzsakyma/${category.slug}`,
+    { kind: 'category', records: manufacturers.filter((record) => record.category_codes.includes(category.code)) },
+  ]),
+  ...expectedLandingCities.map((city) => [
+    `/baldai-pagal-uzsakyma/${city.slug}`,
+    { kind: 'city', records: city.records },
+  ]),
+]);
+const landingSnapshotNote = 'Skaičiai paremti viešais šaltiniais, apima skirtingus finansinius metus ir tik šiuo metu kataloge skelbiamus gamintojų kandidatus.';
+const landingSnapshotTurnoverMinimum = 3;
 
-const counts = { breadcrumbs: 0, hubs: 0, cityIndexes: 0, profiles: 0, guideArticles: 0, faqPages: 0, marketOverviews: 0 };
+function escapedAttribute(value) {
+  return String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function validateLandingSnapshot(route, html, records, kind) {
+  const total = records.length;
+  const snapshotMarkers = [...html.matchAll(/\bdata-maker-snapshot\b/g)];
+  if (snapshotMarkers.length !== 1) {
+    addError(route, `expected exactly one maker snapshot, found ${snapshotMarkers.length}`);
+    return;
+  }
+  if (!html.includes(`class="landing-snapshot" data-maker-snapshot data-snapshot-scope="${kind}" data-record-count="${total}"`)) {
+    addError(route, `snapshot scope/count must be ${kind}/${total}`);
+  }
+
+  const turnoverRecords = records.map((record) => ({ record, turnover: publishedTurnover(record) })).filter((entry) => entry.turnover);
+  const employeeRecords = records.filter((record) => expectedEmployeeBands.includes(record.employee_count_band));
+  const foundingRecords = records.filter((record) => Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= overviewYear);
+  const coverage = new Map([
+    ['total', total],
+    ['turnover', turnoverRecords.length],
+    ['employees', employeeRecords.length],
+    ['founded', foundingRecords.length],
+  ]);
+  for (const [metric, count] of coverage) {
+    if (!html.includes(`data-snapshot-coverage="${metric}" data-count="${count}" data-total="${total}"`)) {
+      addError(route, `snapshot ${metric} coverage must be ${count}/${total}`);
+    }
+    if (!visibleText(html).includes(formatPercent(count, total).replace(/\s+/g, ' '))) {
+      addError(route, `snapshot ${metric} coverage is missing share ${formatPercent(count, total)}`);
+    }
+  }
+
+  const expectedFiscalYearsForPage = new Map(countBy(turnoverRecords, ({ turnover }) => String(turnover.year)));
+  const renderedFiscalYears = [...html.matchAll(/data-snapshot-fiscal-year="(\d{4})" data-count="(\d+)"/g)];
+  if (renderedFiscalYears.length !== expectedFiscalYearsForPage.size) {
+    addError(route, `snapshot expected ${expectedFiscalYearsForPage.size} fiscal-year rows, found ${renderedFiscalYears.length}`);
+  }
+  for (const [year, count] of expectedFiscalYearsForPage) {
+    if (!html.includes(`data-snapshot-fiscal-year="${year}" data-count="${count}"`)) {
+      addError(route, `snapshot fiscal year ${year} must equal ${count}`);
+    }
+  }
+  if (!turnoverRecords.length && !html.includes('data-snapshot-fiscal-year-insufficient')) {
+    addError(route, 'snapshot with no valid turnover must explain that no fiscal-year mix is available');
+  }
+  if (turnoverRecords.length && html.includes('data-snapshot-fiscal-year-insufficient')) {
+    addError(route, 'snapshot must not claim the fiscal-year mix is unavailable when valid turnover exists');
+  }
+
+  if (turnoverRecords.length >= landingSnapshotTurnoverMinimum) {
+    const values = turnoverRecords.map(({ turnover }) => turnover.amount);
+    const expectedTotal = values.reduce((sum, amount) => sum + amount, 0);
+    const expectedMedian = median(values);
+    for (const [metric, value] of [['total', expectedTotal], ['median', expectedMedian]]) {
+      if (!html.includes(`data-snapshot-turnover-stat="${metric}" data-value="${value}"`)) {
+        addError(route, `snapshot turnover ${metric} must have raw value ${value}`);
+      }
+      if (!html.includes(formatEuro(value))) addError(route, `snapshot turnover ${metric} must show ${formatEuro(value)}`);
+    }
+    if (html.includes('data-snapshot-turnover-insufficient')) addError(route, 'snapshot must not show a turnover insufficiency notice with at least three valid records');
+
+    const top = [...turnoverRecords].sort((a, b) => b.turnover.amount - a.turnover.amount
+      || a.record.trading_name.localeCompare(b.record.trading_name, 'lt'))[0];
+    if (!html.includes(`data-snapshot-top-maker="${escapedAttribute(top.record.slug)}" data-amount="${top.turnover.amount}" data-year="${top.turnover.year}"`)) {
+      addError(route, `snapshot top maker must be ${top.record.slug} with ${top.turnover.amount} for ${top.turnover.year}`);
+    }
+    if (!html.includes(`data-snapshot-top-source href="${escapedAttribute(top.turnover.sourceUrl)}"`)) {
+      addError(route, `snapshot top maker must link directly to its valid public source ${top.turnover.sourceUrl}`);
+    }
+    if (!html.includes(formatEuro(top.turnover.amount)) || !html.includes(`${top.turnover.year} finansiniai metai`)) {
+      addError(route, 'snapshot top maker must visibly show its amount and fiscal year');
+    }
+  } else {
+    if (!html.includes(`data-snapshot-turnover-insufficient data-count="${turnoverRecords.length}" data-minimum="${landingSnapshotTurnoverMinimum}"`)) {
+      addError(route, `snapshot with ${turnoverRecords.length} valid turnover records must render the audited insufficiency notice`);
+    }
+    if (!visibleText(html).includes('Apyvartos suvestinei duomenų nepakanka') || !visibleText(html).includes('Šie dydžiai nerodomi.')) {
+      addError(route, 'snapshot turnover insufficiency notice must explicitly explain that aggregate figures are not shown');
+    }
+    if (/data-snapshot-turnover-stat=|data-snapshot-top-maker=|data-snapshot-top-source\b/.test(html)) {
+      addError(route, 'snapshot must not render turnover aggregates or a top maker with fewer than three valid turnover records');
+    }
+  }
+
+  const expectedEmployeeDistribution = new Map(expectedEmployeeBands
+    .map((band) => [band, employeeRecords.filter((record) => record.employee_count_band === band).length])
+    .filter(([, count]) => count > 0));
+  const renderedEmployeeBands = [...html.matchAll(/<li data-snapshot-employee-band="([^"]+)" data-count="(\d+)">([\s\S]*?)<\/li>/g)];
+  const expectedEmployeeRows = [...expectedEmployeeDistribution];
+  if (renderedEmployeeBands.length !== expectedEmployeeRows.length) {
+    addError(route, `snapshot expected ${expectedEmployeeRows.length} employee-band rows, found ${renderedEmployeeBands.length}`);
+  } else {
+    renderedEmployeeBands.forEach(([, band, count, row], index) => {
+      const [expectedBand, expectedCount] = expectedEmployeeRows[index];
+      if (band !== expectedBand || Number(count) !== expectedCount) {
+        addError(route, `snapshot employee row ${index + 1} must be ordered band ${expectedBand} with count ${expectedCount}`);
+      }
+      if (!visibleText(row).includes(expectedEmployeeBandLabels.get(expectedBand))) {
+        addError(route, `snapshot employee band ${expectedBand} is missing its public label`);
+      }
+    });
+  }
+  if (!employeeRecords.length && !html.includes('data-snapshot-employee-insufficient')) addError(route, 'snapshot with no employee bands must render an insufficiency notice');
+  if (employeeRecords.length && html.includes('data-snapshot-employee-insufficient')) addError(route, 'snapshot must not render an employee insufficiency notice when bands exist');
+
+  if (foundingRecords.length) {
+    const oldest = Math.min(...foundingRecords.map((record) => record.founded_year));
+    const newest = Math.max(...foundingRecords.map((record) => record.founded_year));
+    if (!html.includes(`data-snapshot-founding-range data-oldest="${oldest}" data-newest="${newest}"`)) {
+      addError(route, `snapshot founding-year range must be ${oldest}–${newest}`);
+    }
+    if (html.includes('data-snapshot-founding-insufficient')) addError(route, 'snapshot must not render a founding-year insufficiency notice when valid years exist');
+  } else {
+    if (!html.includes('data-snapshot-founding-insufficient')) addError(route, 'snapshot with no valid founding years must render an insufficiency notice');
+    if (html.includes('data-snapshot-founding-range')) addError(route, 'snapshot must not render a founding-year range without valid years');
+  }
+
+  const text = visibleText(html);
+  if (!text.includes(landingSnapshotNote)) addError(route, 'snapshot is missing the exact public-source/current-catalogue/fiscal-year limitations note');
+  for (const href of ['/baldu-rinkos-apzvalga/', '/atviri-duomenys/']) {
+    if (!html.includes(`href="${href}"`)) addError(route, `snapshot is missing required limitations/source link ${href}`);
+  }
+}
+
+const counts = { breadcrumbs: 0, hubs: 0, cityIndexes: 0, profiles: 0, guideArticles: 0, faqPages: 0, marketOverviews: 0, landingSnapshots: 0 };
 
 for (const file of files.sort()) {
   const route = routeFor(file);
@@ -548,7 +692,7 @@ for (const file of files.sort()) {
     } else {
       entries.forEach((entry, index) => {
         const expected = expectedCities[index];
-        const expectedHref = expected.count >= 2
+        const expectedHref = expected.count >= landingConfig.cityThreshold
           ? `/baldai-pagal-uzsakyma/${expected.slug}/`
           : `/gamintojas/${expected.records[0].slug}/`;
         if (entry.count !== expected.count || entry.href !== expectedHref) {
@@ -587,6 +731,12 @@ for (const file of files.sort()) {
       addNormalizedRoute(cityIntroRoutes, visibleText(intro), route);
       addNormalizedRoute(cityFaqRoutes, visibleText(faq), route);
     }
+  }
+
+  const expectedSnapshot = expectedSnapshotRoutes.get(route);
+  if (expectedSnapshot) {
+    counts.landingSnapshots += 1;
+    validateLandingSnapshot(route, html, expectedSnapshot.records, expectedSnapshot.kind);
   }
 
   const isProfile = route.startsWith('/gamintojas/');
@@ -814,6 +964,7 @@ if (cityIntroRoutes.size !== expectedLandingCities.length) {
 }
 if (counts.cityIndexes !== 1) errors.push(`expected exactly one all-cities index, found ${counts.cityIndexes}`);
 if (counts.marketOverviews !== 1) errors.push(`expected exactly one market-overview route, found ${counts.marketOverviews}`);
+if (counts.landingSnapshots !== expectedSnapshotRoutes.size) errors.push(`expected ${expectedSnapshotRoutes.size} city/category landing snapshots, found ${counts.landingSnapshots}`);
 const sitemap = await readFile(join(publicDir, 'sitemap.xml'), 'utf8');
 const cityIndexCanonical = canonicalUrl(cityIndexRoute);
 if (!sitemap.includes(`<loc>${cityIndexCanonical}</loc>`)) errors.push(`sitemap is missing all-cities index ${cityIndexCanonical}`);
@@ -829,4 +980,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; open-data and ${counts.marketOverviews} market-overview route, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; ItemList ${counts.hubs} hubs plus ${counts.cityIndexes} all-cities index; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles plus market overview; FAQPage ${counts.faqPages} visible FAQ sections.`);
+console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; ${counts.landingSnapshots} audited city/category maker snapshots; open-data and ${counts.marketOverviews} market-overview route, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; ItemList ${counts.hubs} hubs plus ${counts.cityIndexes} all-cities index; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles plus market overview; FAQPage ${counts.faqPages} visible FAQ sections.`);

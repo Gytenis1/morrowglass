@@ -1144,6 +1144,226 @@
     font-size: 0.94rem;
   }
 
+  .landing-snapshot {
+    overflow: hidden;
+    display: grid;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .snapshot-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .snapshot-heading > div,
+  .snapshot-subheading,
+  .snapshot-top-maker {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .snapshot-heading .kicker {
+    color: var(--pine);
+  }
+
+  .snapshot-heading p:not(.kicker),
+  .snapshot-subheading p {
+    max-width: 65ch;
+    color: var(--ink-soft);
+  }
+
+  .snapshot-version {
+    flex: 0 0 auto;
+    font-size: 0.88rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .snapshot-coverage {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-block: 1px solid var(--line);
+  }
+
+  .snapshot-coverage > div {
+    min-width: 0;
+    display: grid;
+    align-content: start;
+    gap: 0.25rem;
+    padding: 1.15rem clamp(1rem, 2.5vw, 1.5rem);
+    border-right: 1px solid var(--line);
+  }
+
+  .snapshot-coverage > div:last-child {
+    border-right: 0;
+  }
+
+  .snapshot-coverage dt {
+    color: var(--ink-soft);
+    font-size: 0.84rem;
+    font-weight: 680;
+  }
+
+  .snapshot-coverage dd {
+    color: var(--pine-strong);
+    font-family: var(--display);
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .snapshot-coverage small,
+  .snapshot-distribution small {
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+    font-weight: 650;
+  }
+
+  .snapshot-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .snapshot-detail-grid > section {
+    min-width: 0;
+    display: grid;
+    align-content: start;
+    gap: 1.15rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .snapshot-detail-grid > section + section {
+    border-left: 1px solid var(--line);
+  }
+
+  .snapshot-detail-grid h3 {
+    color: var(--pine-strong);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+  }
+
+  .snapshot-detail-grid h4 {
+    margin: 0.25rem 0 0;
+    color: var(--ink);
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+  }
+
+  .snapshot-turnover-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-block: 1px solid var(--line);
+  }
+
+  .snapshot-turnover-stats > div {
+    min-width: 0;
+    display: grid;
+    gap: 0.3rem;
+    padding: 1rem;
+  }
+
+  .snapshot-turnover-stats > div + div {
+    border-left: 1px solid var(--line);
+  }
+
+  .snapshot-turnover-stats dt {
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+  }
+
+  .snapshot-turnover-stats dd {
+    overflow-wrap: anywhere;
+    color: var(--pine-strong);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 780;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .snapshot-distribution {
+    border-top: 1px solid var(--line);
+  }
+
+  .snapshot-distribution li {
+    min-height: 44px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.65rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .snapshot-distribution strong,
+  .snapshot-range strong {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .snapshot-range {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.15rem;
+    border-top: 2px solid var(--pine);
+  }
+
+  .snapshot-range span {
+    color: var(--ink-soft);
+  }
+
+  .snapshot-insufficient,
+  .snapshot-empty {
+    max-width: 65ch;
+    color: var(--warning-ink);
+    background: var(--warning-bg);
+  }
+
+  .snapshot-insufficient {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .snapshot-empty {
+    padding: 0.75rem;
+  }
+
+  .snapshot-top-maker {
+    padding: 1.25rem clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--pine-strong);
+    background: var(--mist);
+    border-top: 1px solid var(--line);
+  }
+
+  .snapshot-top-maker h3 {
+    font-family: var(--body);
+    font-size: 0.88rem;
+    letter-spacing: 0;
+  }
+
+  .snapshot-top-maker p {
+    max-width: 80ch;
+  }
+
+  .snapshot-top-maker a,
+  .snapshot-note a {
+    color: var(--pine-strong);
+    font-weight: 750;
+  }
+
+  .snapshot-note {
+    max-width: none;
+    padding: 1.15rem clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--ink-soft);
+    border-top: 1px solid var(--line);
+    font-size: 0.9rem;
+  }
+
   .landing-guidance {
     display: grid;
     grid-template-columns: minmax(230px, 0.36fr) minmax(0, 1fr);
@@ -4584,6 +4804,14 @@
       gap: 2rem;
     }
 
+    .snapshot-detail-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .snapshot-detail-grid > section + section {
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
 
     .request-guidance,
     .landing-guidance-heading,
@@ -4669,12 +4897,25 @@
       display: flex;
     }
 
+    .snapshot-heading,
     .landing-guide-callout,
     .comparison-section-heading,
     .offer-editor-heading,
     .comparison-result > header {
       align-items: flex-start;
       flex-direction: column;
+    }
+
+    .snapshot-coverage {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .snapshot-coverage > div:nth-child(2) {
+      border-right: 0;
+    }
+
+    .snapshot-coverage > div:nth-child(-n + 2) {
+      border-bottom: 1px solid var(--line);
     }
 
     .tool-navigation {
@@ -4762,6 +5003,33 @@
   }
 
   @media (max-width: 560px) {
+    .snapshot-coverage,
+    .snapshot-turnover-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .snapshot-coverage > div,
+    .snapshot-coverage > div:nth-child(2) {
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .snapshot-coverage > div:last-child {
+      border-bottom: 0;
+    }
+
+    .snapshot-turnover-stats > div + div {
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
+
+    .snapshot-distribution li,
+    .snapshot-range {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
     .estimate-range,
     .estimate-scope {
       grid-template-columns: 1fr;
