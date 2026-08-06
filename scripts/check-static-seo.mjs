@@ -6,6 +6,12 @@ import { fileURLToPath } from 'node:url';
 const rootDir = fileURLToPath(new URL('..', import.meta.url));
 const publicDir = join(rootDir, 'public');
 const SITE_URL = 'https://www.baldininkai.org';
+const DATASET_LICENSE_NAME = 'Creative Commons Attribution 4.0 International';
+const DATASET_LICENSE_VERSION = '4.0';
+const DATASET_LICENSE_URL = 'https://creativecommons.org/licenses/by/4.0/';
+const DATASET_JSON_URL = `${SITE_URL}/baldininkai-org-gamintojai.json`;
+const DATASET_CSV_URL = `${SITE_URL}/baldininkai-org-gamintojai.csv`;
+const OPEN_DATA_URL = `${SITE_URL}/atviri-duomenys/`;
 const manufacturers = JSON.parse(await readFile(join(rootDir, 'data/manufacturers.json'), 'utf8'));
 const manufacturersBySlug = new Map(manufacturers.map((record) => [record.slug, record]));
 const datasetHeaders = [
@@ -26,6 +32,7 @@ const datasetHeaders = [
   'verification_date',
 ];
 const errors = [];
+let generatedDatasetMetadata = null;
 const titleRoutes = new Map();
 const descriptionRoutes = new Map();
 const hubGuidanceRoutes = new Map();
@@ -68,6 +75,18 @@ function schemaTypes(value) {
     .filter(([key]) => key !== '@graph')
     .flatMap(([, child]) => Array.isArray(child) ? child.flatMap(schemaTypes) : schemaTypes(child));
   return [...types, ...graph, ...nested];
+}
+
+function schemasOfType(schemas, type) {
+  const matches = [];
+  const visit = (value) => {
+    if (!value || typeof value !== 'object') return;
+    const types = Array.isArray(value['@type']) ? value['@type'] : [value['@type']].filter(Boolean);
+    if (types.includes(type)) matches.push(value);
+    for (const child of Object.values(value)) Array.isArray(child) ? child.forEach(visit) : visit(child);
+  };
+  schemas.forEach(visit);
+  return matches;
 }
 
 function withoutNonVisibleContent(html) {
@@ -249,11 +268,38 @@ async function checkGeneratedAssets() {
   const csvPath = join(publicDir, 'baldininkai-org-gamintojai.csv');
   let dataset = [];
   try {
-    dataset = JSON.parse(await readFile(jsonPath, 'utf8'));
+    const document = JSON.parse(await readFile(jsonPath, 'utf8'));
+    if (!document || typeof document !== 'object' || Array.isArray(document)) {
+      addError('/baldininkai-org-gamintojai.json', 'dataset must be an object with metadata and records');
+    } else {
+      const topLevelKeys = Object.keys(document).sort();
+      if (JSON.stringify(topLevelKeys) !== JSON.stringify(['metadata', 'records'])) addError('/baldininkai-org-gamintojai.json', 'top-level keys must be exactly metadata and records');
+      generatedDatasetMetadata = document.metadata;
+      dataset = document.records;
+    }
   } catch (error) {
     addError('/baldininkai-org-gamintojai.json', `missing or invalid JSON (${error.message})`);
   }
-  if (!Array.isArray(dataset)) addError('/baldininkai-org-gamintojai.json', 'dataset must be a JSON array');
+
+  const generatedDate = validIsoDate(generatedDatasetMetadata?.generated_date);
+  const expectedAttribution = generatedDate
+    ? `Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, ${OPEN_DATA_URL}, versija ${generatedDate}`
+    : '';
+  if (!generatedDatasetMetadata || typeof generatedDatasetMetadata !== 'object' || Array.isArray(generatedDatasetMetadata)) {
+    addError('/baldininkai-org-gamintojai.json', 'metadata must be a non-empty object');
+  } else {
+    const expectedMetadataKeys = ['attribution', 'generated_date', 'license', 'open_data_url', 'source', 'source_url', 'version'];
+    if (JSON.stringify(Object.keys(generatedDatasetMetadata).sort()) !== JSON.stringify(expectedMetadataKeys)) addError('/baldininkai-org-gamintojai.json', 'metadata keys do not match the documented licence/source structure');
+    if (!generatedDate) addError('/baldininkai-org-gamintojai.json', 'metadata generated_date must be a valid ISO date');
+    if (generatedDatasetMetadata.version !== generatedDate) addError('/baldininkai-org-gamintojai.json', 'metadata version must equal generated_date');
+    if (generatedDatasetMetadata.attribution !== expectedAttribution) addError('/baldininkai-org-gamintojai.json', 'metadata attribution does not match the required dated text');
+    if (generatedDatasetMetadata.source !== 'Baldininkai.org' || generatedDatasetMetadata.source_url !== SITE_URL || generatedDatasetMetadata.open_data_url !== OPEN_DATA_URL) addError('/baldininkai-org-gamintojai.json', 'metadata source URLs do not identify Baldininkai.org and the open-data page');
+    const license = generatedDatasetMetadata.license;
+    const expectedLicense = { name: DATASET_LICENSE_NAME, version: DATASET_LICENSE_VERSION, url: DATASET_LICENSE_URL };
+    if (JSON.stringify(license) !== JSON.stringify(expectedLicense)) addError('/baldininkai-org-gamintojai.json', 'metadata license must identify CC BY 4.0 with its direct URL');
+  }
+
+  if (!Array.isArray(dataset)) addError('/baldininkai-org-gamintojai.json', 'records must be a JSON array');
   else {
     if (dataset.length !== manufacturers.length) addError('/baldininkai-org-gamintojai.json', `expected ${manufacturers.length} objects, found ${dataset.length}`);
     const sourceSlugs = new Set(manufacturers.map((record) => record.slug));
@@ -274,16 +320,29 @@ async function checkGeneratedAssets() {
   }
 
   try {
-    const rows = parseCsv(await readFile(csvPath, 'utf8'));
+    const csv = await readFile(csvPath, 'utf8');
+    const lines = csv.split(/\r?\n/);
+    const metadataLines = [];
+    while (lines[0]?.startsWith('#')) metadataLines.push(lines.shift());
+    const expectedMetadataLines = [
+      `# Licence: ${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION}) - ${DATASET_LICENSE_URL}`,
+      `# Attribution: ${expectedAttribution}`,
+      `# Generated: ${generatedDate}`,
+      `# Version: ${generatedDate}`,
+      `# Source: Baldininkai.org - ${SITE_URL} - open data: ${OPEN_DATA_URL}`,
+    ];
+    if (JSON.stringify(metadataLines) !== JSON.stringify(expectedMetadataLines)) addError('/baldininkai-org-gamintojai.csv', 'comment metadata must contain the exact licence, attribution, date/version and source lines before the header');
+    const rows = parseCsv(lines.join('\n'));
     const [headers, ...dataRows] = rows;
     if (JSON.stringify(headers) !== JSON.stringify(datasetHeaders)) addError('/baldininkai-org-gamintojai.csv', 'headers do not match the stable dataset header order');
     if (dataRows.length !== manufacturers.length) addError('/baldininkai-org-gamintojai.csv', `expected ${manufacturers.length} data rows, found ${dataRows.length}`);
     dataRows.forEach((row, index) => {
-      if (row.length !== datasetHeaders.length) addError('/baldininkai-org-gamintojai.csv', `row ${index + 2} has ${row.length} fields; expected ${datasetHeaders.length}`);
+      const fileLine = metadataLines.length + index + 2;
+      if (row.length !== datasetHeaders.length) addError('/baldininkai-org-gamintojai.csv', `row ${fileLine} has ${row.length} fields; expected ${datasetHeaders.length}`);
       const jsonRecord = dataset[index];
       if (!jsonRecord) return;
       const expectedRow = datasetHeaders.map((header) => Array.isArray(jsonRecord[header]) ? jsonRecord[header].join(' | ') : jsonRecord[header] == null ? '' : String(jsonRecord[header]));
-      if (JSON.stringify(row) !== JSON.stringify(expectedRow)) addError('/baldininkai-org-gamintojai.csv', `row ${index + 2} does not match JSON record ${jsonRecord.slug}`);
+      if (JSON.stringify(row) !== JSON.stringify(expectedRow)) addError('/baldininkai-org-gamintojai.csv', `row ${fileLine} does not match JSON record ${jsonRecord.slug}`);
     });
   } catch (error) {
     addError('/baldininkai-org-gamintojai.csv', `missing or invalid CSV (${error.message})`);
@@ -291,7 +350,7 @@ async function checkGeneratedAssets() {
 
   try {
     const llms = await readFile(join(publicDir, 'llms.txt'), 'utf8');
-    for (const required of ['Baldininkai.org', `${SITE_URL}/atviri-duomenys/`, `${SITE_URL}/baldininkai-org-gamintojai.json`, `${SITE_URL}/baldininkai-org-gamintojai.csv`, `${SITE_URL}/sitemap.xml`, 'English summary', 'nepatvirtinti viešų šaltinių kandidatai']) {
+    for (const required of ['Baldininkai.org', OPEN_DATA_URL, DATASET_JSON_URL, DATASET_CSV_URL, `${SITE_URL}/sitemap.xml`, 'English summary', 'nepatvirtinti viešų šaltinių kandidatai', DATASET_LICENSE_NAME, 'CC BY 4.0', DATASET_LICENSE_URL, expectedAttribution]) {
       if (!llms.includes(required)) addError('/llms.txt', `missing required content: ${required}`);
     }
   } catch (error) {
@@ -479,10 +538,48 @@ for (const file of files.sort()) {
 
   if (route === '/atviri-duomenys') {
     const text = visibleText(html);
-    for (const required of ['Atviri Baldininkai.org duomenys', 'JSON duomenų rinkinys', 'CSV duomenų rinkinys', 'no_public_contact_route', 'Priskyrimas']) {
-      if (!text.includes(required)) addError(route, `missing open-data content: ${required}`);
+    for (const required of ['Atviri Baldininkai.org duomenys', 'JSON duomenų rinkinys', 'CSV duomenų rinkinys', 'no_public_contact_route', 'Ribotumai', 'Licencija ir priskyrimas', DATASET_LICENSE_NAME, 'CC BY 4.0', 'versija 4.0', 'This dataset is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).', generatedDatasetMetadata?.attribution]) {
+      if (!required || !text.includes(required)) addError(route, `missing open-data content: ${String(required)}`);
     }
     if (!html.includes('href="/baldininkai-org-gamintojai.json"') || !html.includes('href="/baldininkai-org-gamintojai.csv"')) addError(route, 'missing dataset download links');
+    if (!html.includes(`href="${DATASET_LICENSE_URL}"`)) addError(route, 'missing direct CC BY 4.0 licence link');
+
+    const datasetSchemas = schemasOfType(schemas, 'Dataset');
+    if (datasetSchemas.length !== 1) addError(route, `expected exactly one Dataset schema, found ${datasetSchemas.length}`);
+    else {
+      const datasetSchema = datasetSchemas[0];
+      const expectedKeys = ['@context', '@type', 'creator', 'dateModified', 'datePublished', 'description', 'distribution', 'inLanguage', 'keywords', 'license', 'name', 'publisher', 'spatialCoverage', 'url'];
+      if (JSON.stringify(Object.keys(datasetSchema).sort()) !== JSON.stringify(expectedKeys)) addError(route, 'Dataset schema contains missing or undocumented properties');
+      if (datasetSchema['@context'] !== 'https://schema.org' || datasetSchema['@type'] !== 'Dataset') addError(route, 'Dataset schema context/type must be schema.org Dataset');
+      if (datasetSchema.name !== 'Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas') addError(route, 'Dataset schema name is missing or inaccurate');
+      if (typeof datasetSchema.description !== 'string' || !datasetSchema.description.trim()) addError(route, 'Dataset schema description must be non-empty');
+      if (datasetSchema.url !== OPEN_DATA_URL) addError(route, `Dataset schema url must be ${OPEN_DATA_URL}`);
+      if (datasetSchema.license !== DATASET_LICENSE_URL) addError(route, 'Dataset schema license must be the direct CC BY 4.0 URL');
+      for (const role of ['creator', 'publisher']) {
+        const organization = datasetSchema[role];
+        if (JSON.stringify(organization) !== JSON.stringify({ '@type': 'Organization', name: 'Baldininkai.org', url: SITE_URL })) addError(route, `Dataset schema ${role} must accurately identify Baldininkai.org`);
+      }
+      if (datasetSchema.inLanguage !== 'lt') addError(route, 'Dataset schema inLanguage must be lt');
+      if (datasetSchema.spatialCoverage !== 'Lithuania') addError(route, 'Dataset schema spatialCoverage must be Lithuania');
+      if (!Array.isArray(datasetSchema.keywords) || datasetSchema.keywords.length < 3 || datasetSchema.keywords.some((keyword) => typeof keyword !== 'string' || !keyword.trim())) addError(route, 'Dataset schema keywords must be a non-empty list of suitable terms');
+      if (!validIsoDate(datasetSchema.dateModified) || datasetSchema.dateModified !== generatedDatasetMetadata?.generated_date) addError(route, 'Dataset schema dateModified must match the generated build date');
+      if (!validIsoDate(datasetSchema.datePublished) || datasetSchema.datePublished !== generatedDatasetMetadata?.generated_date) addError(route, 'Dataset schema datePublished must match the generated build date');
+      if (!Array.isArray(datasetSchema.distribution) || datasetSchema.distribution.length !== 2) addError(route, 'Dataset schema must contain exactly two DataDownload distributions');
+      else {
+        const expectedDistributions = new Map([
+          [DATASET_JSON_URL, 'application/json'],
+          [DATASET_CSV_URL, 'text/csv'],
+        ]);
+        for (const distribution of datasetSchema.distribution) {
+          if (JSON.stringify(Object.keys(distribution).sort()) !== JSON.stringify(['@type', 'contentUrl', 'encodingFormat'])) addError(route, 'DataDownload distribution contains missing or undocumented properties');
+          if (distribution['@type'] !== 'DataDownload') addError(route, 'each Dataset distribution must be a DataDownload');
+          const expectedFormat = expectedDistributions.get(distribution.contentUrl);
+          if (!expectedFormat || distribution.encodingFormat !== expectedFormat) addError(route, `invalid Dataset download URL or encodingFormat: ${String(distribution.contentUrl)}`);
+          else expectedDistributions.delete(distribution.contentUrl);
+        }
+        if (expectedDistributions.size) addError(route, 'Dataset schema is missing a required JSON or CSV download URL');
+      }
+    }
   }
 
   if (!html.includes('href="/atviri-duomenys"')) addError(route, 'footer is missing the open-data link');

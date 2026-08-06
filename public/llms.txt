@@ -55,8 +55,11 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Utena: https://www.baldininkai.org/baldai-pagal-uzsakyma/utena/
 - Vilnius: https://www.baldininkai.org/baldai-pagal-uzsakyma/vilnius/
 
+## Licencija
+Duomenų rinkinys licencijuojamas pagal Creative Commons Attribution 4.0 International (CC BY 4.0), versija 4.0: https://creativecommons.org/licenses/by/4.0/
+
 ## Priskyrimas
-Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-06.
+Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-06
 
 ## English summary
 Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Browse the catalogue at https://www.baldininkai.org/, buyer guides at https://www.baldininkai.org/gidas/, and the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.

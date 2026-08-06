@@ -8,6 +8,9 @@ const rootDir = fileURLToPath(new URL('..', import.meta.url));
 const publicDir = join(rootDir, 'public');
 const SITE_URL = 'https://www.baldininkai.org';
 const SITE_NAME = 'Baldai pagal užsakymą Lietuvoje';
+const DATASET_LICENSE_NAME = 'Creative Commons Attribution 4.0 International';
+const DATASET_LICENSE_VERSION = '4.0';
+const DATASET_LICENSE_URL = 'https://creativecommons.org/licenses/by/4.0/';
 const buildDate = new Date().toISOString().slice(0, 10);
 
 const [manufacturers, landingConfig, baseHtml] = await Promise.all([
@@ -915,13 +918,37 @@ for (const page of policyPages) {
 
 const publicDataset = manufacturers.map(datasetRecord);
 const openDataPath = '/atviri-duomenys';
-const openDataBody = `${header('policy')}<main class="policy-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="policy-document open-data-document"><header class="policy-header"><p class="kicker">Viešas katalogo duomenų rinkinys</p><h1>Atviri Baldininkai.org duomenys</h1><p class="lead">Atsisiųskite šiuo svetainės versijos kūrimu paskelbtus Lietuvos nestandartinių baldų gamintojų kandidatų įrašus JSON arba CSV formatu.</p></header><dl class="policy-operator" aria-label="Duomenų rinkinio suvestinė"><div><dt>Įrašų</dt><dd>${publicDataset.length}</dd></div><div><dt>Atnaujinta</dt><dd><time datetime="${buildDate}">${buildDate}</time></dd></div><div><dt>Formatai</dt><dd>JSON ir CSV</dd></div></dl><div class="policy-copy open-data-copy"><section aria-labelledby="open-data-download-title"><h2 id="open-data-download-title">Atsisiųsti duomenis</h2><p>Abu failai sugeneruoti iš to paties šaltinio rinkinio ir turi po vieną eilutę ar objektą kiekvienam šiuo metu kataloge skelbiamam įrašui.</p><ul class="open-data-downloads"><li><a href="/baldininkai-org-gamintojai.json" download><strong>JSON duomenų rinkinys</strong><span>Struktūruoti objektai su kategorijų ir šaltinių masyvais</span><span aria-hidden="true">↓</span></a></li><li><a href="/baldininkai-org-gamintojai.csv" download><strong>CSV duomenų rinkinys</strong><span>Lentelė skaičiuoklėms ir duomenų analizės įrankiams</span><span aria-hidden="true">↓</span></a></li></ul></section><section><h2>Kas įtraukta</h2><p>Kiekviename įraše pateikiamas katalogo identifikatorius ir pilnas profilio adresas, viešas ar prekinis bei juridinis pavadinimas, įmonės kodas, miestas, gatvės adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių adresai ir turima patikros data.</p><p>Tušti laukai reiškia, kad atitinkama reikšmė šaltinio rinkinyje nepateikta. Būsena <code>no_public_contact_route</code> naudojama tik tada, kai šaltinio įraše aiškiai pažymėta, kad viešo kontaktinio kelio nerasta.</p></section><section><h2>Duomenų kilmė ir atnaujinimas</h2><p>Rinkinys sudarytas iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Prie kiekvieno įrašo pateikiamos šaltinių nuorodos, naudotos tapatybei, veiklos krypčiai ar viešiems įmonės duomenims pagrįsti.</p><p>Ši versija sugeneruota <time datetime="${buildDate}">${buildDate}</time> kartu su katalogo puslapiais. Failai atnaujinami iš to paties versijuoto šaltinių rinkinio kiekvieno svetainės kūrimo metu.</p></section><section><h2>Ribotumai</h2><p>Įrašai yra nepatvirtinti viešų šaltinių gamintojų kandidatai. Jų paskelbimas nėra Baldininkai.org rekomendacija, reitingas, kokybės įvertinimas ar tapatybės, informacijos tikslumo, kainos, terminų, užimtumo ir paslaugų prieinamumo garantija.</p><p>Vieši šaltiniai gali būti pasikeitę, neišsamūs ar netikslūs. Prieš priimdami sprendimą savarankiškai patikrinkite juridinius, kontaktinius ir pasiūlymo duomenis su pasirinktu gamintoju ar kitu tinkamu oficialiu šaltiniu.</p></section><section><h2>Naudojimas ir nuoroda į šaltinį</h2><p>Duomenis galite atsisiųsti, analizuoti ir pakartotinai naudoti, jei neiškreipiate jų prasmės, išlaikote aiškias ribotumų pastabas ir nenurodote, kad Baldininkai.org patvirtino ar rekomendavo įrašus.</p><p><strong>Priskyrimas:</strong> „Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, <a href="${canonicalUrl(openDataPath)}">${canonicalUrl(openDataPath)}</a>, versija ${buildDate}.“</p><p>Apie netikslumą ar reikalingą pataisymą praneškite per <a href="/irasyti-pataisyma">įrašo pataisymo tvarką</a>.</p></section></div></article></main>${footer()}`;
+const datasetJsonFilename = 'baldininkai-org-gamintojai.json';
+const datasetCsvFilename = 'baldininkai-org-gamintojai.csv';
+const openDataUrl = canonicalUrl(openDataPath);
+const datasetAttribution = `Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, ${openDataUrl}, versija ${buildDate}`;
+const datasetDescription = 'Viešų šaltinių Lietuvos nestandartinių baldų gamintojų kandidatų katalogas su profilio, įmonės, vietos, kategorijų, kontaktinio kelio ir šaltinių duomenimis.';
+const datasetSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas',
+  description: datasetDescription,
+  url: openDataUrl,
+  license: DATASET_LICENSE_URL,
+  creator: { '@type': 'Organization', name: 'Baldininkai.org', url: SITE_URL },
+  publisher: { '@type': 'Organization', name: 'Baldininkai.org', url: SITE_URL },
+  inLanguage: 'lt',
+  spatialCoverage: 'Lithuania',
+  keywords: ['Lietuvos baldų gamintojai', 'nestandartiniai baldai', 'vieši duomenys', 'gamintojų katalogas'],
+  dateModified: buildDate,
+  datePublished: buildDate,
+  distribution: [
+    { '@type': 'DataDownload', contentUrl: `${SITE_URL}/${datasetJsonFilename}`, encodingFormat: 'application/json' },
+    { '@type': 'DataDownload', contentUrl: `${SITE_URL}/${datasetCsvFilename}`, encodingFormat: 'text/csv' },
+  ],
+};
+const openDataBody = `${header('policy')}<main class="policy-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="policy-document open-data-document"><header class="policy-header"><p class="kicker">Viešas katalogo duomenų rinkinys</p><h1>Atviri Baldininkai.org duomenys</h1><p class="lead">Atsisiųskite šiuo svetainės versijos kūrimu paskelbtus Lietuvos nestandartinių baldų gamintojų kandidatų įrašus JSON arba CSV formatu.</p></header><dl class="policy-operator" aria-label="Duomenų rinkinio suvestinė"><div><dt>Įrašų</dt><dd>${publicDataset.length}</dd></div><div><dt>Atnaujinta</dt><dd><time datetime="${buildDate}">${buildDate}</time></dd></div><div><dt>Formatai</dt><dd>JSON ir CSV</dd></div></dl><div class="policy-copy open-data-copy"><section aria-labelledby="open-data-download-title"><h2 id="open-data-download-title">Atsisiųsti duomenis</h2><p>Abu failai sugeneruoti iš to paties šaltinio rinkinio ir turi po vieną eilutę ar objektą kiekvienam šiuo metu kataloge skelbiamam įrašui.</p><ul class="open-data-downloads"><li><a href="/${datasetJsonFilename}" download><strong>JSON duomenų rinkinys</strong><span>Metaduomenys ir įrašų masyvas su kategorijų bei šaltinių masyvais</span><span aria-hidden="true">↓</span></a></li><li><a href="/${datasetCsvFilename}" download><strong>CSV duomenų rinkinys</strong><span>Metaduomenų komentarai ir stabili lentelė skaičiuoklėms</span><span aria-hidden="true">↓</span></a></li></ul></section><section><h2>Kas įtraukta</h2><p>Kiekviename įraše pateikiamas katalogo identifikatorius ir pilnas profilio adresas, viešas ar prekinis bei juridinis pavadinimas, įmonės kodas, miestas, gatvės adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių adresai ir turima patikros data.</p><p>Tušti laukai reiškia, kad atitinkama reikšmė šaltinio rinkinyje nepateikta. Būsena <code>no_public_contact_route</code> naudojama tik tada, kai šaltinio įraše aiškiai pažymėta, kad viešo kontaktinio kelio nerasta.</p></section><section><h2>Duomenų kilmė ir atnaujinimas</h2><p>Rinkinys sudarytas iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Prie kiekvieno įrašo pateikiamos šaltinių nuorodos, naudotos tapatybei, veiklos krypčiai ar viešiems įmonės duomenims pagrįsti.</p><p>Ši versija sugeneruota <time datetime="${buildDate}">${buildDate}</time> kartu su katalogo puslapiais. Failai atnaujinami iš to paties versijuoto šaltinių rinkinio kiekvieno svetainės kūrimo metu.</p></section><section><h2>Ribotumai</h2><p>Įrašai yra nepatvirtinti viešų šaltinių gamintojų kandidatai. Jų paskelbimas nėra Baldininkai.org rekomendacija, reitingas, kokybės įvertinimas ar tapatybės, informacijos tikslumo, kainos, terminų, užimtumo ir paslaugų prieinamumo garantija.</p><p>Vieši šaltiniai gali būti pasikeitę, neišsamūs ar netikslūs. Prieš priimdami sprendimą savarankiškai patikrinkite juridinius, kontaktinius ir pasiūlymo duomenis su pasirinktu gamintoju ar kitu tinkamu oficialiu šaltiniu.</p></section><section><h2>Licencija ir priskyrimas</h2><p>Duomenų rinkinys licencijuojamas pagal <a href="${DATASET_LICENSE_URL}" rel="license"><strong>${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION})</strong></a> licenciją, versija <strong>${DATASET_LICENSE_VERSION}</strong>.</p><p lang="en">This dataset is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).</p><p>Duomenis galite atsisiųsti, analizuoti ir pakartotinai naudoti, jei neiškreipiate jų prasmės, išlaikote aiškias ribotumų pastabas ir nenurodote, kad Baldininkai.org patvirtino ar rekomendavo įrašus.</p><p><strong>Priskyrimas:</strong> <q>${datasetAttribution}</q></p><p>Apie netikslumą ar reikalingą pataisymą praneškite per <a href="/irasyti-pataisyma">įrašo pataisymo tvarką</a>.</p></section></div></article></main>${footer()}`;
 await writeRoute(openDataPath, injectPage({
   title: 'Atviri baldų gamintojų katalogo duomenys | Baldininkai.org',
   description: `Atsisiųskite ${publicDataset.length} viešų šaltinių Lietuvos baldų gamintojų kandidatų įrašus JSON arba CSV formatu ir peržiūrėkite naudojimo ribotumus.`,
   path: openDataPath,
   body: openDataBody,
-  structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Atviri duomenys', path: openDataPath }])],
+  structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Atviri duomenys', path: openDataPath }]), datasetSchema],
 }));
 
 for (const record of manufacturers) {
@@ -1120,8 +1147,6 @@ for (const article of guideArticles) {
   await writeRoute(path, injectPage({ title: `${article.title} | Pirkėjo gidas`, description: article.metaDescription ?? article.summary, path, type: 'article', body, structuredData }));
 }
 
-const datasetJsonFilename = 'baldininkai-org-gamintojai.json';
-const datasetCsvFilename = 'baldininkai-org-gamintojai.csv';
 const datasetHeaders = [
   'slug',
   'profile_url',
@@ -1139,11 +1164,29 @@ const datasetHeaders = [
   'public_source_urls',
   'verification_date',
 ];
+const datasetMetadata = {
+  license: {
+    name: DATASET_LICENSE_NAME,
+    version: DATASET_LICENSE_VERSION,
+    url: DATASET_LICENSE_URL,
+  },
+  attribution: datasetAttribution,
+  generated_date: buildDate,
+  version: buildDate,
+  source: 'Baldininkai.org',
+  source_url: SITE_URL,
+  open_data_url: openDataUrl,
+};
 const datasetCsv = [
+  `# Licence: ${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION}) - ${DATASET_LICENSE_URL}`,
+  `# Attribution: ${datasetAttribution}`,
+  `# Generated: ${buildDate}`,
+  `# Version: ${buildDate}`,
+  `# Source: Baldininkai.org - ${SITE_URL} - open data: ${openDataUrl}`,
   datasetHeaders.map(csvCell).join(','),
   ...publicDataset.map((record) => datasetHeaders.map((headerName) => csvCell(record[headerName])).join(',')),
 ].join('\n') + '\n';
-await writeFile(join(publicDir, datasetJsonFilename), `${JSON.stringify(publicDataset, null, 2)}\n`);
+await writeFile(join(publicDir, datasetJsonFilename), `${JSON.stringify({ metadata: datasetMetadata, records: publicDataset }, null, 2)}\n`);
 await writeFile(join(publicDir, datasetCsvFilename), datasetCsv);
 
 const llmsText = `# Baldininkai.org
@@ -1174,8 +1217,11 @@ ${landingConfig.categories.map((category) => `- ${category.title}: ${canonicalUr
 ## Miestų puslapiai
 ${landingCities.map((city) => `- ${city.city}: ${canonicalUrl(`/baldai-pagal-uzsakyma/${city.slug}`)}`).join('\n')}
 
+## Licencija
+Duomenų rinkinys licencijuojamas pagal Creative Commons Attribution 4.0 International (CC BY 4.0), versija 4.0: ${DATASET_LICENSE_URL}
+
 ## Priskyrimas
-Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, ${SITE_URL}/atviri-duomenys/, versija ${buildDate}.
+${datasetAttribution}
 
 ## English summary
 Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Browse the catalogue at ${SITE_URL}/, buyer guides at ${SITE_URL}/gidas/, and the documented JSON/CSV downloads at ${SITE_URL}/atviri-duomenys/.
