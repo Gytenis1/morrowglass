@@ -47,10 +47,15 @@ CATEGORY_PATTERNS = [
     ("MM", r"(?:\bmetal\w*.{0,70}\bbald\w*|\bbald\w*.{0,70}\bmetal\w*|\bmetal furniture)"),
 ]
 LINK_HINT = re.compile(r"produkc|gamin|bald|paslaug|katalog|apie|about|products?|services?|portfolio|galerij", re.I)
-# These hosts can contain many companies on one visible listing page.  They are not
-# rejected (the stored root audit is deliberately left intact), but their evidence
-# must occur in the local visible context of the target company's displayed name.
-LISTING_HOSTS = {"info.lt", "rekvizitai.vz.lt", "scoris.lt", "imones.lt", "1551.lt", "geltoni.lt"}
+# Stored URLs on public catalogues and social platforms are retained for an auditable
+# crawl, but they are not a maker's owned website and may never provide profile
+# evidence. Keep this boundary aligned with research_profile_content_20260806.py.
+DIRECTORY_HOSTS = (
+    "info.lt", "rekvizitai.vz.lt", "1551.lt", "imones.lt", "geltoni.lt",
+    "scoris.lt", "visasverslas.lt", "paslaugos.lt", "paslaugos24.lt",
+    "balticmaps.eu", "get.data.gov.lt", "data.gov.lt", "baldai.com",
+)
+SOCIAL_HOSTS = ("facebook.com", "instagram.com", "linkedin.com", "tiktok.com", "youtube.com", "x.com", "twitter.com")
 
 
 class PageParser(HTMLParser):
@@ -134,6 +139,19 @@ def clean_url(value):
 
 def host(url):
     return urllib.parse.urlsplit(url).hostname.lower() if urllib.parse.urlsplit(url).hostname else ""
+
+
+def host_is(url, domains):
+    current = host(url).removeprefix("www.")
+    return any(current == domain or current.endswith("." + domain) for domain in domains)
+
+
+def source_type(url):
+    if host_is(url, SOCIAL_HOSTS):
+        return "social_business_page"
+    if host_is(url, DIRECTORY_HOSTS):
+        return "public_business_page"
+    return "official_website"
 
 
 def same_site(candidate, root):
@@ -241,7 +259,7 @@ def research(record):
         checked_urls.extend([root, final])
         if response.get("status") == 200:
             text, anchors = parse_page(response.get("body", ""))
-            pages.append({"url": final, "text": text, "listing": host(final).removeprefix("www.") in LISTING_HOSTS})
+            pages.append({"url": final, "text": text, "source_type": source_type(final)})
             for internal in selected_internal_links(anchors, final, final, set(checked_urls)):
                 response = fetch(internal)
                 final_internal = clean_url(response.get("final_url", internal)) if http_url(response.get("final_url", "")) else internal
@@ -249,7 +267,7 @@ def research(record):
                 checked_urls.extend([internal, final_internal])
                 if response.get("status") == 200 and same_site(final_internal, final):
                     text, _ = parse_page(response.get("body", ""))
-                    pages.append({"url": final_internal, "text": text, "listing": host(final_internal).removeprefix("www.") in LISTING_HOSTS})
+                    pages.append({"url": final_internal, "text": text, "source_type": source_type(final_internal)})
     else:
         # Keep an auditable non-fetchable stored value while retaining the full cohort.
         checked_urls.append(root)
@@ -258,24 +276,22 @@ def research(record):
     evidence = []
     # Prefer a selected internal details page when it supplies the same category;
     # the stored root remains a fallback source when that is the only concrete text.
+    # Public directory/catalogue and social pages are audit-only: even a local company
+    # listing cannot enrich this own-site-only manifest.
     for page in pages[1:] + pages[:1]:
-        # A general business directory is only usable where the displayed target
-        # entry itself supplies the concrete statement; never classify its menu or
-        # another company's listing.  Validated non-listing sites use their visible
-        # page content directly, including internally crawled product/service pages.
-        texts = listing_contexts(page["text"], record) if page["listing"] else [page["text"]]
-        for text in texts:
-            for hit in classify(text):
-                hit["source_url"] = page["url"]
-                if not any(previous["code"] == hit["code"] for previous in evidence):
-                    evidence.append(hit)
+        if page["source_type"] != "official_website":
+            continue
+        for hit in classify(page["text"]):
+            hit["source_url"] = page["url"]
+            if not any(previous["code"] == hit["code"] for previous in evidence):
+                evidence.append(hit)
 
     if not evidence:
         source = pages[0]["url"] if pages else (checked_urls[0] if checked_urls else "")
         return {
             "slug": record["slug"], "legal_name": record.get("legal_name") or "", "company_code": record.get("company_code") or "",
             "checked_date": CHECKED_DATE, "status": "no_specifics", "source_url": source,
-            "source_type": "official_website" if source else "no_fetchable_website",
+            "source_type": source_type(source) if source else "no_fetchable_website",
             "checked_source_urls": checked_urls, "crawled_pages": crawled,
             "evidence": "Po visų pasiekiamų atrinktų svetainės puslapių peržiūros nerasta konkretaus, kategoriją pagrindžiančio produkto, paslaugos, medžiagos ar klientų aplinkos įrodymo.",
             "product_service_evidence": [], "description_lt": None,
@@ -295,7 +311,7 @@ def research(record):
     )
     return {
         "slug": record["slug"], "legal_name": record.get("legal_name") or "", "company_code": record.get("company_code") or "",
-        "checked_date": CHECKED_DATE, "status": "evidence_backed", "source_url": source_urls[0], "source_type": "official_website",
+        "checked_date": CHECKED_DATE, "status": "evidence_backed", "source_url": source_urls[0], "source_type": source_type(source_urls[0]),
         "checked_source_urls": checked_urls, "crawled_pages": crawled,
         "evidence": evidence_text[0], "product_service_evidence": evidence_text,
         "description_lt": description(name, evidence), "category_codes": codes, "category_labels": labels,
@@ -324,10 +340,15 @@ def validate_manifest(manifest):
     for row in results:
         if row["source_url"] and row["source_url"] not in row["checked_source_urls"]:
             raise RuntimeError("source URL was not crawled for %s" % row["slug"])
+        expected_source_type = source_type(row["source_url"]) if row["source_url"] else "no_fetchable_website"
+        if row["source_type"] != expected_source_type:
+            raise RuntimeError("source type is inconsistent: %s" % row["slug"])
         if row["status"] == "no_specifics":
             if row["category_codes"] != ["O"] or row["description_lt"] is not None:
                 raise RuntimeError("no_specifics row changed category or padded prose: %s" % row["slug"])
             continue
+        if row["source_type"] != "official_website":
+            raise RuntimeError("non-owned source supplied evidence: %s" % row["slug"])
         if not row["product_service_evidence"] or row["category_codes"] == ["O"]:
             raise RuntimeError("evidence row lacks category evidence: %s" % row["slug"])
         if len(re.findall(r"\S+", row["description_lt"])) < 40:
@@ -373,7 +394,7 @@ def main():
     reclassified = sum(row["category_codes"] != ["O"] for row in results)
     manifest = {
         "manifest_version": 1,
-        "research_method": "Paginuotas gyvo PocketBase tik skaitymo API bazės nuskaitymas; tik esamas audituotas fallback įrašų website laukas; šakninis URL ir iki šešių pagal nuorodos URL arba matomą inkaro tekstą atrinktų tos pačios svetainės produktų, gamybos, baldų, paslaugų, katalogo, apie, portfolio ar galerijos puslapių nuskaitymas. HTTP atsakymai saugomi /tmp talpykloje, užklausos ribojamos iki vienos kas 0,45 s, o kategorijos keičiamos tik pagal konkretų matomą puslapio tekstą.",
+        "research_method": "Paginuotas gyvo PocketBase tik skaitymo API bazės nuskaitymas; tik esamas audituotas fallback įrašų website laukas; šakninis URL ir iki šešių pagal nuorodos URL arba matomą inkaro tekstą atrinktų tos pačios svetainės produktų, gamybos, baldų, paslaugų, katalogo, apie, portfolio ar galerijos puslapių nuskaitymas. Viešų katalogų ir socialinių platformų URL paliekami tik nuskaitymo auditui ir niekada neteikia profilio įrodymų; kategorijos keičiamos tik pagal gamintojo nuosavos svetainės konkretų matomą puslapio tekstą. HTTP atsakymai saugomi /tmp talpykloje, užklausos ribojamos iki vienos kas 0,45 s.",
         "baseline": {
             "target_count": len(records), "checked_date": CHECKED_DATE,
             "filter": 'category_labels exactly ["Kiti nestandartiniai baldai"] and website is non-empty',

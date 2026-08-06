@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "research_method": "Paginuotas gyvo PocketBase tik skaitymo API bazės nuskaitymas; tik esamas audituotas fallback įrašų website laukas; šakninis URL ir iki šešių pagal nuorodos URL arba matomą inkaro tekstą atrinktų tos pačios svetainės produktų, gamybos, baldų, paslaugų, katalogo, apie, portfolio ar galerijos puslapių nuskaitymas. HTTP atsakymai saugomi /tmp talpykloje, užklausos ribojamos iki vienos kas 0,45 s, o kategorijos keičiamos tik pagal konkretų matomą puslapio tekstą.",
+  "research_method": "Paginuotas gyvo PocketBase tik skaitymo API bazės nuskaitymas; tik esamas audituotas fallback įrašų website laukas; šakninis URL ir iki šešių pagal nuorodos URL arba matomą inkaro tekstą atrinktų tos pačios svetainės produktų, gamybos, baldų, paslaugų, katalogo, apie, portfolio ar galerijos puslapių nuskaitymas. Viešų katalogų ir socialinių platformų URL paliekami tik nuskaitymo auditui ir niekada neteikia profilio įrodymų; kategorijos keičiamos tik pagal gamintojo nuosavos svetainės konkretų matomą puslapio tekstą. HTTP atsakymai saugomi /tmp talpykloje, užklausos ribojamos iki vienos kas 0,45 s.",
   "baseline": {
     "target_count": 95,
     "checked_date": "2026-08-06",
@@ -9,11 +9,11 @@
   },
   "counts": {
     "total": 95,
-    "evidence_backed": 4,
-    "no_specifics": 91,
-    "descriptions_40_words_or_more": 4,
-    "reclassified_away_from_O": 4,
-    "fallback_after_migration": 91
+    "evidence_backed": 3,
+    "no_specifics": 92,
+    "descriptions_40_words_or_more": 3,
+    "reclassified_away_from_O": 3,
+    "fallback_after_migration": 92
   },
   "results": [
     {
@@ -23,7 +23,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -94,7 +94,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -165,7 +165,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -236,7 +236,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -342,7 +342,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -413,7 +413,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -484,7 +484,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -555,7 +555,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -626,7 +626,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -697,7 +697,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -768,7 +768,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -839,7 +839,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -910,7 +910,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -1069,7 +1069,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -1140,7 +1140,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -1211,7 +1211,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -1282,7 +1282,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -1388,7 +1388,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -1558,7 +1558,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -1629,7 +1629,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -1700,7 +1700,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -1771,7 +1771,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -1842,7 +1842,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -1913,7 +1913,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -1984,7 +1984,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -2055,7 +2055,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -2126,7 +2126,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -2197,7 +2197,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -2268,7 +2268,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -2339,7 +2339,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -2410,7 +2410,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -2481,7 +2481,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -2552,7 +2552,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -2664,7 +2664,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -2776,7 +2776,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -2847,7 +2847,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -2918,7 +2918,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -3025,7 +3025,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -3096,7 +3096,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -3167,7 +3167,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -3238,7 +3238,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -3309,7 +3309,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -3380,7 +3380,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -3451,7 +3451,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -3522,7 +3522,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -3593,7 +3593,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -3664,7 +3664,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -3771,7 +3771,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -3842,7 +3842,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -3913,7 +3913,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -3984,7 +3984,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -4055,7 +4055,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -4126,7 +4126,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -4197,7 +4197,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -4268,7 +4268,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -4339,7 +4339,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -4451,7 +4451,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -4522,7 +4522,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -4593,7 +4593,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -4662,9 +4662,9 @@
       "legal_name": "UAB Raibaldera",
       "company_code": "306210179",
       "checked_date": "2026-08-06",
-      "status": "evidence_backed",
+      "status": "no_specifics",
       "source_url": "https://rekvizitai.vz.lt/en/company/raibaldera/",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://rekvizitai.vz.lt/en/company/raibaldera/",
         "https://rekvizitai.vz.lt/imone/raibaldera/",
@@ -4711,27 +4711,21 @@
           "status": 200
         }
       ],
-      "evidence": "s; online stores. Jonavos g. 254, LT-44110 Kaunas. Categories: furniture (manufacturing); furniture (trade); manufacturing; restaurant equipment. TOP Sofa designs and produces unique pieces of upholstered furniture and provides made-to-order products for businesses and individuals. In an effort to ensure the quality of our products and to fully fulfil our customers’ needs, we devo",
-      "product_service_evidence": [
-        "s; online stores. Jonavos g. 254, LT-44110 Kaunas. Categories: furniture (manufacturing); furniture (trade); manufacturing; restaurant equipment. TOP Sofa designs and produces unique pieces of upholstered furniture and provides made-to-order products for businesses and individuals. In an effort to ensure the quality of our products and to fully fulfil our customers’ needs, we devo"
-      ],
-      "description_lt": "UAB Raibaldera svetainės matomame tekste nurodoma: „s; online stores. Jonavos g. 254, LT-44110 Kaunas. Categories: furniture (manufacturing); furniture (trade); manufacturing; restaurant equipment. TOP Sofa designs and produces unique pieces of upholstered furniture and provides made-to-order products for businesses and individuals. In an effort to ensure the quality of our products and to fully fulfil our customers’ needs, we devo“. Šiame puslapyje tiesiogiai minima informacija, susijusi su minkšti baldai pagal užsakymą. Aprašyme pateikiama tik puslapio tekste įvardyta produkto, paslaugos, medžiagos arba klientų aplinkos informacija. Kitos veiklos ar kategorijos čia nepridedamos, nes jų šis nurodytas šaltinis tiesiogiai nepatvirtina.",
+      "evidence": "Po visų pasiekiamų atrinktų svetainės puslapių peržiūros nerasta konkretaus, kategoriją pagrindžiančio produkto, paslaugos, medžiagos ar klientų aplinkos įrodymo.",
+      "product_service_evidence": [],
+      "description_lt": null,
       "category_codes": [
-        "U"
+        "O"
       ],
       "category_labels": [
-        "Minkšti baldai pagal užsakymą"
+        "Kiti nestandartiniai baldai"
       ],
-      "scope_evidence": "Matomas fragmentas „s; online stores. Jonavos g. 254, LT-44110 Kaunas. Categories: furniture (manufacturing); furniture (trade); manufacturing; restaurant equipment. TOP Sofa designs and produces unique pieces of upholstered furniture and provides made-to-order products for businesses and individuals. In an effort to ensure the quality of our products and to fully fulfil our customers’ needs, we devo“ pagrindžia kategoriją Minkšti baldai pagal užsakymą. Šaltinis: https://rekvizitai.vz.lt/en/company/raibaldera/",
-      "confidence": "aukštas",
-      "confidence_evidence": "Kiekvienai priskirtai kategorijai pateiktas konkretus matomo svetainės teksto fragmentas ir jo tikslus puslapio URL.",
+      "scope_evidence": null,
+      "confidence": "vidutinis",
+      "confidence_evidence": "Išsaugoma esama O atsarginė klasifikacija, nes visas atliktas svetainės nuskaitymas nepateikė pakankamai konkretaus įrodymo.",
       "provenance_updates": {
-        "source_urls": [
-          "https://rekvizitai.vz.lt/en/company/raibaldera/"
-        ],
-        "public_details_source_urls": [
-          "https://rekvizitai.vz.lt/en/company/raibaldera/"
-        ]
+        "source_urls": [],
+        "public_details_source_urls": []
       }
     },
     {
@@ -4741,7 +4735,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -4812,7 +4806,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -4883,7 +4877,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -4954,7 +4948,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -5025,7 +5019,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -5096,7 +5090,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Alytus",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Alytus",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Alytus",
@@ -5167,7 +5161,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -5238,7 +5232,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -5309,7 +5303,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -5415,7 +5409,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -5486,7 +5480,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/%C5%A0iauliai",
@@ -5592,7 +5586,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Panev%C4%97%C5%BEys",
@@ -5663,7 +5657,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -5734,7 +5728,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Vilnius",
@@ -5805,7 +5799,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -5876,7 +5870,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -6100,7 +6094,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Kaunas",
@@ -6171,7 +6165,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Klaip%C4%97da",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Klaip%C4%97da",
         "https://www.info.lt/en/rubrika/Production-of-furniture/100419717/Klaip%C4%97da",
@@ -6338,7 +6332,7 @@
       "checked_date": "2026-08-06",
       "status": "no_specifics",
       "source_url": "https://scoris.lt/imone/304500493",
-      "source_type": "official_website",
+      "source_type": "public_business_page",
       "checked_source_urls": [
         "https://scoris.lt/imone/304500493",
         "https://scoris.lt/katalogas",
