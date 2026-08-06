@@ -100,6 +100,8 @@ type PolicyPage = {
 
 type HeaderSection = 'directory' | 'guide' | 'request' | 'policy' | 'overview';
 
+const ENGLISH_RFQ_PATH = '/en/quote-request';
+
 type ProfileLandingLink = {
   kind: 'Miestas' | 'Kategorija';
   slug: string;
@@ -446,7 +448,12 @@ function isLandingPath(pathname = window.location.pathname): boolean {
 }
 
 function isRequestPath(pathname = window.location.pathname): boolean {
-  return normalizePathname(pathname) === '/gauti-pasiulymus';
+  const path = normalizePathname(pathname);
+  return path === '/gauti-pasiulymus' || path === ENGLISH_RFQ_PATH;
+}
+
+function isEnglishRequestPath(pathname = window.location.pathname): boolean {
+  return normalizePathname(pathname) === ENGLISH_RFQ_PATH;
 }
 
 function isComparisonPath(pathname = window.location.pathname): boolean {
@@ -697,6 +704,56 @@ function renderHeader(active: HeaderSection): string {
         </nav>
       </div>
     </header>
+  `;
+}
+
+function renderEnglishHeader(): string {
+  return `
+    <header class="site-header site-header--english">
+      <div class="header-inner">
+        <a class="brand" href="/en/" aria-label="Baldininkai.org English sourcing hub">
+          <span class="brand-mark" aria-hidden="true"><img src="${baldininkaiLogoUrl}" alt="" width="44" height="44" /></span>
+          <span>Custom furniture makers <strong>in Lithuania</strong></span>
+        </a>
+        <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open the main menu. Current section: Quote request">
+          <span class="navigation-toggle-label">Menu</span><span class="navigation-current">Quote request</span><span class="navigation-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+          <a href="/en/">Sourcing hub</a>
+          <a href="/en/#categories">Categories</a>
+          <a href="${ENGLISH_RFQ_PATH}/" aria-current="page">Quote request</a>
+          <a href="/en/sourcing-guide/">Sourcing guide</a>
+          <a href="/en/lithuanian-furniture-makers-data/">Data overview</a>
+          <a href="/atviri-duomenys/">Open data</a>
+          <a href="/" lang="lt">Lietuvių</a>
+        </nav>
+      </div>
+    </header>
+  `;
+}
+
+function renderEnglishFooter(): string {
+  return `
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-summary">
+          <p>A public-source catalogue for independent research. Listings are unverified candidates and are not endorsements, rankings or guarantees.</p>
+          <p>Operator: GG Ventures UAB, company code 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="/en/">Sourcing hub</a>
+          <a href="/en/#categories">Furniture categories</a>
+          <a href="${ENGLISH_RFQ_PATH}/">Quote request</a>
+          <a href="/en/sourcing-guide/">Sourcing guide</a>
+          <a href="/en/lithuanian-furniture-makers-data/">Data overview</a>
+          <a href="/atviri-duomenys/">Open data</a>
+          <a href="/baldininkai-org-gamintojai.json">JSON</a>
+          <a href="/baldininkai-org-gamintojai.csv">CSV</a>
+          <a href="/baldu-rinkos-apzvalga/" lang="lt">Lithuanian overview</a>
+          <a href="/" lang="lt">Lithuanian catalogue</a>
+        </nav>
+      </div>
+    </footer>
   `;
 }
 
@@ -2373,11 +2430,15 @@ function renderLandingPage(slug: string, citySlug?: string): void {
 
 function renderRequestPage(): void {
   if (!root) return;
+  const english = isEnglishRequestPath();
   renderRfqTool({
     root,
-    renderHeader,
-    renderFooter,
+    renderHeader: english ? () => renderEnglishHeader() : renderHeader,
+    renderFooter: english ? renderEnglishFooter : renderFooter,
     manufacturers,
+    locale: english ? 'en' : 'lt',
+    path: english ? ENGLISH_RFQ_PATH : '/gauti-pasiulymus',
+    makerQueryParam: english ? 'maker' : 'gamintojas',
   });
 }
 
@@ -3050,15 +3111,16 @@ async function loadDirectory(): Promise<void> {
     }
   } else if (isRequestPath()) {
     if (root && !root.hasChildNodes()) {
+      const english = isEnglishRequestPath();
       root.innerHTML = `
-        ${renderHeader('request')}
+        ${english ? renderEnglishHeader() : renderHeader('request')}
         <main class="request-main">
           <div class="loading-state" role="status" aria-live="polite">
             <span class="loading-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-            <div><h1>Ruošiama projekto užklausa</h1><p>Gaunamas gamintojų kandidatų sąrašas…</p></div>
+            <div><h1>${english ? 'Preparing the quote request' : 'Ruošiama projekto užklausa'}</h1><p>${english ? 'Loading the current catalogue candidate list…' : 'Gaunamas gamintojų kandidatų sąrašas…'}</p></div>
           </div>
         </main>
-        ${renderFooter()}
+        ${english ? renderEnglishFooter() : renderFooter()}
       `;
     }
   }

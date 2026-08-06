@@ -8,6 +8,7 @@ type ManufacturerChoice = {
   slug: string;
   trading_name: string;
   city?: string;
+  category_codes?: string[];
   category_labels?: string[];
 };
 
@@ -616,27 +617,237 @@ export function renderComparisonTool({ root, renderHeader, renderFooter }: ToolC
 }
 
 const categoryOptions = [
-  'Virtuvės baldai',
-  'Spintos ar įmontuojami baldai',
-  'Miegamojo ar vonios baldai',
-  'Biuro ar komerciniai baldai',
-  'HoReCa ar prekybos baldai',
-  'Minkšti baldai',
-  'Medžio masyvo ar kiti nestandartiniai baldai',
-  'Kitas baldų projektas',
-];
+  { value: 'Virtuvės baldai', lt: 'Virtuvės baldai', en: 'Custom kitchen furniture' },
+  { value: 'Spintos ar įmontuojami baldai', lt: 'Spintos ar įmontuojami baldai', en: 'Wardrobes or fitted furniture' },
+  { value: 'Miegamojo ar vonios baldai', lt: 'Miegamojo ar vonios baldai', en: 'Bedroom or bathroom furniture' },
+  { value: 'Biuro ar komerciniai baldai', lt: 'Biuro ar komerciniai baldai', en: 'Office or commercial furniture' },
+  { value: 'HoReCa ar prekybos baldai', lt: 'HoReCa ar prekybos baldai', en: 'HoReCa or retail furniture' },
+  { value: 'Minkšti baldai', lt: 'Minkšti baldai', en: 'Upholstered furniture' },
+  { value: 'Medžio masyvo ar kiti nestandartiniai baldai', lt: 'Medžio masyvo ar kiti nestandartiniai baldai', en: 'Solid-wood or other custom furniture' },
+  { value: 'Kitas baldų projektas', lt: 'Kitas baldų projektas', en: 'Other furniture project' },
+] as const;
 
 const projectStageOptions = [
-  'Idėja ir poreikių formavimas',
-  'Yra preliminarūs matmenys',
-  'Yra patalpos planas ar projektas',
-  'Parinktos pagrindinės medžiagos',
-  'Objektas parengtas galutiniam matavimui',
-  'Reikia pakeisti ar papildyti esamą projektą',
-];
+  { value: 'Idėja ir poreikių formavimas', lt: 'Idėja ir poreikių formavimas', en: 'Early idea and requirements' },
+  { value: 'Yra preliminarūs matmenys', lt: 'Yra preliminarūs matmenys', en: 'Preliminary dimensions available' },
+  { value: 'Yra patalpos planas ar projektas', lt: 'Yra patalpos planas ar projektas', en: 'Room plan or design available' },
+  { value: 'Parinktos pagrindinės medžiagos', lt: 'Parinktos pagrindinės medžiagos', en: 'Main materials selected' },
+  { value: 'Objektas parengtas galutiniam matavimui', lt: 'Objektas parengtas galutiniam matavimui', en: 'Site ready for final measurement' },
+  { value: 'Reikia pakeisti ar papildyti esamą projektą', lt: 'Reikia pakeisti ar papildyti esamą projektą', en: 'Existing design needs changes or additions' },
+] as const;
 
-function options(items: string[], placeholder: string): string {
-  return `<option value="">${escapeHtml(placeholder)}</option>${items.map((item) => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}`;
+const englishCategoryLabels = new Map([
+  ['K', 'Custom kitchen furniture'],
+  ['W', 'Wardrobes and fitted furniture'],
+  ['BB', 'Bedroom and bathroom furniture'],
+  ['OC', 'Office and commercial furniture'],
+  ['HR', 'HoReCa and retail furniture'],
+  ['O', 'Other custom furniture'],
+  ['SW', 'Woodwork and solid-wood furniture'],
+  ['MM', 'Other furniture'],
+  ['U', 'Custom upholstered furniture'],
+]);
+
+type RfqLocale = 'lt' | 'en';
+
+type RfqToolContext = ToolContext & {
+  locale?: RfqLocale;
+  path?: string;
+  makerQueryParam?: string;
+};
+
+function getRfqCopy(locale: RfqLocale) {
+  if (locale === 'en') {
+    return {
+      locale,
+      title: 'Request furniture quotes in Lithuania | Baldininkai.org',
+      description: 'Prepare a structured furniture-project quote request for review. Catalogue candidates are unverified, makers are not contacted automatically and an introduction is not guaranteed.',
+      breadcrumbRoot: 'English sourcing hub',
+      breadcrumbPage: 'Quote request',
+      toolLabel: 'English sourcing',
+      toolLinks: [
+        { path: '/en/', label: 'Sourcing hub' },
+        { path: '/en/quote-request/', label: 'Quote request', current: true },
+        { path: '/en/sourcing-guide/', label: 'Sourcing guide' },
+        { path: '/en/lithuanian-furniture-makers-data/', label: 'Data overview' },
+      ],
+      kicker: 'Structured project request',
+      heading: 'Prepare one comparable furniture quote request',
+      lead: 'Describe the project for an operator review. Catalogue entries are unverified public-source candidates, submission does not guarantee an introduction, and makers are not contacted automatically.',
+      expectationTitle: 'Important process boundary',
+      expectationBody: 'Submitting this form creates a private quote-request review record. It does not send your details or project to any maker.',
+      expectationLimit: 'A separate review and decision is required before any possible contact. Submission does not guarantee that a request will be sent, that a maker will reply, or that an offer will be accepted.',
+      processTitle: 'What happens after submission',
+      processIntro: 'Maker contact can happen only after review and a separate decision.',
+      process: [
+        ['You submit a project summary.', 'The form creates a private quote-request record for operator review.'],
+        ['The project description and candidate fit are reviewed.', 'The review checks whether the information is sufficient and which catalogue candidates might fit the stated scope.'],
+        ['Any request is sent only after a separate decision.', 'Selected makers are not contacted automatically when you submit this form.'],
+        ['A response window starts only after an actual request is sent.', 'No response period starts from this form submission, and the number of replies is not guaranteed.'],
+        ['Any received answers can then be compared.', 'Only answers actually received can be returned and normalised for comparison.'],
+      ],
+      formTitle: 'Project and contact details',
+      formIntro: 'Fields marked with an asterisk are required. Do not submit identity numbers, banking details or other sensitive information that is not needed for this request.',
+      successLabel: 'Request received',
+      referenceLabel: 'Request reference:',
+      successBody: 'Your request has been sent for operator review. Makers were not contacted automatically; any possible outreach requires a separate decision.',
+      fields: {
+        fullName: 'Full name *',
+        email: 'Email *',
+        emailPlaceholder: 'name@example.com',
+        phone: 'Phone (optional)',
+        category: 'Project category *',
+        categoryPlaceholder: 'Select a category',
+        municipality: 'Municipality *',
+        municipalityPlaceholder: 'For example, Vilnius city municipality',
+        serviceRegion: 'Project location / service region *',
+        serviceRegionPlaceholder: 'City, district or locality',
+        projectStage: 'Project stage *',
+        projectStagePlaceholder: 'Select the current stage',
+        projectScope: 'Project scope *',
+        projectScopeHint: 'At least 10 characters. List the furniture, functions, required services and clear exclusions.',
+        dimensions: 'Dimensions and number of rooms *',
+        dimensionsHint: 'State which dimensions are preliminary and which have been checked.',
+        materials: 'Material and hardware requirements *',
+        materialsHint: 'If undecided, state your priorities and what should not be left entirely to the supplier.',
+        budgetMin: 'Minimum budget, € *',
+        budgetMax: 'Maximum budget, € *',
+        completionDate: 'Desired completion date *',
+        completionDateHint: 'This is a preference, not an automatically confirmed deadline.',
+        access: 'Installation and access constraints *',
+        accessPlaceholder: 'Floor, lift, parking, working hours and site readiness; if unknown, state that clearly.',
+      },
+      shortlistLegend: 'Preferred shortlist (optional, up to 8)',
+      shortlistHint: 'This is only a preference for review. Catalogue entries are unverified public-source candidates, and no selected maker is contacted automatically.',
+      selectedMaker: (name: string) => `Selected maker context: ${name}. This catalogue candidate will be included as a preference for review, not contacted automatically.`,
+      invalidMaker: 'The maker named in the link was not found in the current catalogue. You can choose another candidate.',
+      searchLabel: 'Search catalogue candidates',
+      searchPlaceholder: 'Name, city or category',
+      noCandidates: 'No catalogue candidates match this search.',
+      noLocation: 'Location and categories are not published in this catalogue entry',
+      selectionNone: 'No candidates selected',
+      selectionOne: '1 of 8 candidates selected',
+      selectionMany: (count: number) => `${count} of 8 candidates selected`,
+      fileTitle: 'This form does not upload files.',
+      fileBody: 'Plans, photographs and drawings cannot be attached here. If they are needed, the operator will explain how and when to provide them during review; they will not be passed to makers automatically.',
+      privacy: 'We will use your contact and project information to administer this quote request. It is not forwarded to makers automatically. Read the',
+      privacyLink: 'privacy notice (Lithuanian)',
+      submit: 'Submit quote request for review',
+      submitting: 'Submitting…',
+      submittedButton: 'Quote request submitted',
+      submittingStatus: 'Creating a quote-request record for operator review. Makers are not being contacted.',
+      submittedStatus: (reference: string) => `Quote request ${reference} was received for operator review. Makers were not contacted automatically.`,
+      errorStatus: 'The quote request could not be submitted. Your entries remain in the form. Check the marked fields and your internet connection, then try again.',
+      reviewTitle: 'Before you submit',
+      reviewItems: [
+        'Separate essential requirements from preferences.',
+        'Mark which dimensions are preliminary.',
+        'Consider VAT, materials, delivery and installation within the budget range.',
+        'Do not expect automatic contact with selected catalogue candidates.',
+      ],
+      reviewLinks: [
+        { path: '/en/', label: 'English sourcing hub →' },
+        { path: '/en/sourcing-guide/', label: 'Sourcing guide →' },
+      ],
+      errors: {
+        minimum: (label: string, min: number) => `${label}: enter at least ${min} character${min === 1 ? '' : 's'}.`,
+        labels: {
+          full_name: 'Full name', category: 'Project category', municipality: 'Municipality', service_region: 'Project location', project_stage: 'Project stage', project_scope: 'Project scope', dimensions_room_count: 'Dimensions and room count', materials_requirements: 'Material requirements', installation_access_constraints: 'Installation and access constraints',
+        },
+        email: 'Enter a valid email address.',
+        phone: 'Use only digits and standard phone punctuation.',
+        budgetMin: 'Enter a non-negative minimum budget.',
+        budgetMax: 'Enter a non-negative maximum budget.',
+        budgetOrder: 'The maximum budget cannot be lower than the minimum budget.',
+        date: 'Enter the desired completion date.',
+        shortlist: 'Select no more than 8 catalogue candidates.',
+        summary: 'Check the form:',
+        invalidField: 'Check this field and correct its value.',
+        apiField: 'The submitted value was rejected. Check this field and try again.',
+        apiSummary: 'The server asked you to correct:',
+        submitFailed: 'The quote request could not be submitted.',
+        missingReference: 'The server did not return a quote-request reference.',
+        console: 'Could not submit the quote request.',
+      },
+    } as const;
+  }
+
+  return {
+    locale,
+    title: 'Pateikite saugią baldų projekto užklausą | Baldai pagal užsakymą Lietuvoje',
+    description: 'Struktūruota baldų projekto pasiūlymo užklausa operatoriaus peržiūrai, be automatinio siuntimo gamintojams ir su atskiru patvirtinimu prieš išsiuntimą.',
+    breadcrumbRoot: 'Gamintojų katalogas',
+    breadcrumbPage: 'Projekto užklausa',
+    toolLabel: 'Pirkėjo įrankiai',
+    toolLinks: [
+      { path: ESTIMATOR_PATH, label: 'Kainos skaičiuoklė' },
+      { path: RFQ_PATH, label: 'Projekto užklausa', current: true },
+      { path: COMPARISON_PATH, label: 'Pasiūlymų palyginimas' },
+      { path: CONTRACT_PATH, label: 'Sutarties šablonas' },
+    ],
+    kicker: 'Saugi projekto užklausa',
+    heading: 'Parenkite vienodą baldų projekto pasiūlymo užklausą',
+    lead: 'Pateikite pakankamai tikslią projekto santrauką operatoriaus peržiūrai. Gamintojų kontaktai čia nesiunčiami ir nė vienas tiekėjas nekontaktuojamas automatiškai.',
+    expectationTitle: 'Svarbi proceso riba',
+    expectationBody: 'Formos pateikimas tik sukuria pasiūlymo užklausos peržiūros įrašą. Siuntimui gamintojams būtinas atskiras operatoriaus patvirtinimas.',
+    expectationLimit: 'Pateikimas negarantuoja, kad pasiūlymo užklausa bus išsiųsta, kad gamintojas atsakys ar kad pasiūlymas bus priimtas.',
+    processTitle: 'Kaip vyksta užklausa',
+    processIntro: 'Kontaktas su tiekėjais atsiranda tik po peržiūros ir atskiro sprendimo.',
+    process: [
+      ['Pirkėjas pateikia santrauką.', 'Forma sukuria privatų pasiūlymo užklausos įrašą operatoriaus peržiūrai.'],
+      ['Operatorius patikrina projekto aprašymą ir tinkamus kandidatus.', 'Vertinama, ar informacijos pakanka ir kurie katalogo kandidatai galėtų atitikti apimtį.'],
+      ['Pasiūlymo užklausa siunčiama tik po atskiro patvirtinimo.', 'Iki šio patvirtinimo pasirinkti gamintojai nekontaktuojami.'],
+      ['Po išsiuntimo tiekėjai turi penkias dienas.', 'Terminas pradedamas skaičiuoti nuo faktinio pasiūlymo užklausos išsiuntimo, ne nuo šios formos pateikimo.'],
+      ['Pirkėjui grąžinami palyginami pasiūlymai.', 'Grąžinami gauti ir suvienodinti atsakymai; atsakymų skaičius negarantuojamas.'],
+    ],
+    formTitle: 'Projekto ir kontaktiniai duomenys',
+    formIntro: 'Visi žvaigždute pažymėti laukai privalomi. Nesiųskite asmens kodo, banko duomenų ar kitos šiai užklausai nereikalingos jautrios informacijos.',
+    successLabel: 'Užklausa gauta',
+    referenceLabel: 'Užklausos numeris:',
+    successBody: 'Užklausa perduota operatoriaus peržiūrai. Gamintojai nebuvo kontaktuoti automatiškai; galimas siuntimas vyks tik po atskiro patvirtinimo.',
+    fields: {
+      fullName: 'Vardas ir pavardė *', email: 'El. paštas *', emailPlaceholder: 'vardas@pavyzdys.lt', phone: 'Telefonas (nebūtina)', category: 'Projekto kategorija *', categoryPlaceholder: 'Pasirinkite kategoriją', municipality: 'Savivaldybė *', municipalityPlaceholder: 'Pvz., Vilniaus miesto savivaldybė', serviceRegion: 'Paslaugos vieta / regionas *', serviceRegionPlaceholder: 'Miestas, rajonas ar vietovė', projectStage: 'Projekto etapas *', projectStagePlaceholder: 'Pasirinkite dabartinį etapą', projectScope: 'Projekto apimtis *', projectScopeHint: 'Bent 10 ženklų. Išvardykite baldus, funkcijas, reikalingas paslaugas ir aiškias ribas.', dimensions: 'Matmenys ir patalpų skaičius *', dimensionsHint: 'Pažymėkite, kurie matmenys preliminarūs, o kurie patikrinti.', materials: 'Medžiagų ir furnitūros reikalavimai *', materialsHint: 'Jei dar nežinote, įrašykite prioritetus ir ko nenorite palikti tiekėjo nuožiūrai.', budgetMin: 'Biudžetas nuo, € *', budgetMax: 'Biudžetas iki, € *', completionDate: 'Pageidaujama užbaigimo data *', completionDateHint: 'Tai pageidavimas, o ne automatiškai patvirtintas terminas.', access: 'Montavimo ir patekimo sąlygos *', accessPlaceholder: 'Aukštas, liftas, parkavimas, darbo laikas, objekto parengtis; jei apribojimų nežinote, taip ir įrašykite.',
+    },
+    shortlistLegend: 'Pageidaujamas trumpasis sąrašas (nebūtina, iki 8)',
+    shortlistHint: 'Pasirinkimas yra tik pageidavimas operatoriui. Kontaktiniai gamintojų duomenys nesiunčiami, o kandidatai nekontaktuojami iki atskiro patvirtinimo.',
+    selectedMaker: (name: string) => `Pasirinktas gamintojas: ${name}. Kandidatas įtrauktas kaip pageidavimas operatoriaus peržiūrai ir nėra kontaktuojamas automatiškai.`,
+    invalidMaker: 'Nuorodoje nurodyto gamintojo kataloge nerasta. Galite pasirinkti kitą kandidatą.',
+    searchLabel: 'Ieškoti kandidatų',
+    searchPlaceholder: 'Pavadinimas, miestas ar kategorija',
+    noCandidates: 'Pagal šią paiešką kandidatų nerasta.',
+    noLocation: 'Vieta ir kategorijos viešame įraše nenurodytos',
+    selectionNone: 'Kandidatų nepasirinkta',
+    selectionOne: 'Pasirinktas 1 kandidatas iš 8',
+    selectionMany: (count: number) => `Pasirinkta kandidatų: ${count} iš 8`,
+    fileTitle: 'Failų ši forma neįkelia.',
+    fileBody: 'Planų, nuotraukų ar brėžinių čia prisegti negalima. Jei jų reikės, operatorius pasiūlymo užklausos peržiūros metu nurodys, kaip ir kada juos pateikti; iki atskiro patvirtinimo jie nebus perduodami gamintojams.',
+    privacy: 'Kontaktus ir projekto informaciją naudosime pasiūlymo užklausai administruoti. Užklausa automatiškai nepersiunčiama gamintojams. Skaitykite',
+    privacyLink: 'privatumo pranešimą',
+    submit: 'Pateikti pasiūlymo užklausą operatoriaus peržiūrai',
+    submitting: 'Pateikiama…',
+    submittedButton: 'Pasiūlymo užklausa pateikta',
+    submittingStatus: 'Pasiūlymo užklausa kuriama operatoriaus peržiūrai. Gamintojai nekontaktuojami.',
+    submittedStatus: (reference: string) => `Pasiūlymo užklausa ${reference} gauta operatoriaus peržiūrai. Gamintojai nebuvo kontaktuoti automatiškai.`,
+    errorStatus: 'Pasiūlymo užklausos pateikti nepavyko. Įvesti duomenys liko formoje. Patikrinkite pažymėtus laukus ir interneto ryšį, tada bandykite dar kartą.',
+    reviewTitle: 'Prieš pateikiant',
+    reviewItems: ['Atskirkite būtinus reikalavimus nuo pageidavimų.', 'Pažymėkite, kurie matmenys preliminarūs.', 'Biudžetą vertinkite kartu su PVM, medžiagomis ir montavimo apimtimi.', 'Nesitikėkite automatinio kontakto su pasirinktais kandidatais.'],
+    reviewLinks: [{ path: COMPARISON_PATH, label: 'Kaip vėliau palyginti pasiūlymus →' }, { path: CONTRACT_PATH, label: 'Atverti sutarties struktūros šabloną →' }],
+    errors: {
+      minimum: (label: string, min: number) => `${label}: įrašykite bent ${min} ženkl${min === 1 ? 'ą' : 'ų'}.`,
+      labels: { full_name: 'Vardas ir pavardė', category: 'Projekto kategorija', municipality: 'Savivaldybė', service_region: 'Paslaugos vieta', project_stage: 'Projekto etapas', project_scope: 'Projekto apimtis', dimensions_room_count: 'Matmenys ir patalpų skaičius', materials_requirements: 'Medžiagų reikalavimai', installation_access_constraints: 'Montavimo ir patekimo sąlygos' },
+      email: 'Nurodykite galiojantį el. pašto adresą.', phone: 'Telefono numeryje naudokite tik skaitmenis ir įprastus skyrybos ženklus.', budgetMin: 'Nurodykite neneigiamą mažiausią biudžetą.', budgetMax: 'Nurodykite neneigiamą didžiausią biudžetą.', budgetOrder: 'Didžiausias biudžetas negali būti mažesnis už mažiausią.', date: 'Nurodykite pageidaujamą užbaigimo datą.', shortlist: 'Pasirinkite ne daugiau kaip 8 gamintojų kandidatus.', summary: 'Patikrinkite formą:', invalidField: 'Patikrinkite šį lauką.', apiField: 'Patikrinkite šį lauką ir bandykite dar kartą.', apiSummary: 'Serveris paprašė pataisyti:', submitFailed: 'Pasiūlymo užklausos pateikti nepavyko.', missingReference: 'Serveris negrąžino pasiūlymo užklausos numerio.', console: 'Nepavyko pateikti pasiūlymo užklausos.',
+    },
+  } as const;
+}
+
+type RfqCopy = ReturnType<typeof getRfqCopy>;
+
+function localizedOptions(items: readonly { value: string; lt: string; en: string }[], placeholder: string, locale: RfqLocale): string {
+  return `<option value="">${escapeHtml(placeholder)}</option>${items.map((item) => `<option value="${escapeHtml(item.value)}">${escapeHtml(item[locale])}</option>`).join('')}`;
+}
+
+function rfqToolNavigation(copy: RfqCopy): string {
+  return `<nav class="tool-navigation" aria-label="${escapeHtml(copy.toolLabel)}"><strong>${escapeHtml(copy.toolLabel)}</strong><div>${copy.toolLinks.map((link) => `<a href="${link.path}"${'current' in link && link.current ? ' aria-current="page"' : ''}>${escapeHtml(link.label)}</a>`).join('')}</div></nav>`;
 }
 
 function fieldError(id: string): string {
@@ -666,38 +877,38 @@ function clearRfqErrors(root: HTMLElement): void {
   }
 }
 
-function validateRfqForm(root: HTMLElement, form: HTMLFormElement): boolean {
+function validateRfqForm(root: HTMLElement, form: HTMLFormElement, copy: RfqCopy): boolean {
   clearRfqErrors(root);
   const errors: { field: string; message: string }[] = [];
-  const requireLength = (name: string, min: number, label: string) => {
+  const requireLength = (name: keyof typeof copy.errors.labels, min: number) => {
     const field = form.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null;
-    if (!field || field.value.trim().length < min) errors.push({ field: name, message: `${label}: įrašykite bent ${min} ženkl${min === 1 ? 'ą' : 'ų'}.` });
+    if (!field || field.value.trim().length < min) errors.push({ field: name, message: copy.errors.minimum(copy.errors.labels[name], min) });
   };
-  requireLength('full_name', 2, 'Vardas ir pavardė');
-  requireLength('category', 2, 'Projekto kategorija');
-  requireLength('municipality', 2, 'Savivaldybė');
-  requireLength('service_region', 2, 'Paslaugos vieta');
-  requireLength('project_stage', 2, 'Projekto etapas');
-  requireLength('project_scope', 10, 'Projekto apimtis');
-  requireLength('dimensions_room_count', 1, 'Matmenys ir patalpų skaičius');
-  requireLength('materials_requirements', 1, 'Medžiagų reikalavimai');
-  requireLength('installation_access_constraints', 1, 'Montavimo ir patekimo sąlygos');
+  requireLength('full_name', 2);
+  requireLength('category', 2);
+  requireLength('municipality', 2);
+  requireLength('service_region', 2);
+  requireLength('project_stage', 2);
+  requireLength('project_scope', 10);
+  requireLength('dimensions_room_count', 1);
+  requireLength('materials_requirements', 1);
+  requireLength('installation_access_constraints', 1);
 
   const email = form.elements.namedItem('email') as HTMLInputElement | null;
-  if (!email?.validity.valid) errors.push({ field: 'email', message: 'Nurodykite galiojantį el. pašto adresą.' });
+  if (!email?.validity.valid) errors.push({ field: 'email', message: copy.errors.email });
   const phone = form.elements.namedItem('phone') as HTMLInputElement | null;
-  if (phone?.value && !/^[0-9+().\-\s]+$/.test(phone.value.trim())) errors.push({ field: 'phone', message: 'Telefono numeryje naudokite tik skaitmenis ir įprastus skyrybos ženklus.' });
+  if (phone?.value && !/^[0-9+().\-\s]+$/.test(phone.value.trim())) errors.push({ field: 'phone', message: copy.errors.phone });
   const budgetMinField = form.elements.namedItem('budget_min') as HTMLInputElement | null;
   const budgetMaxField = form.elements.namedItem('budget_max') as HTMLInputElement | null;
   const budgetMin = Number(budgetMinField?.value);
   const budgetMax = Number(budgetMaxField?.value);
-  if (!budgetMinField?.value || !Number.isFinite(budgetMin) || budgetMin < 0) errors.push({ field: 'budget_min', message: 'Nurodykite neneigiamą mažiausią biudžetą.' });
-  if (!budgetMaxField?.value || !Number.isFinite(budgetMax) || budgetMax < 0) errors.push({ field: 'budget_max', message: 'Nurodykite neneigiamą didžiausią biudžetą.' });
-  if (budgetMinField?.value && budgetMaxField?.value && Number.isFinite(budgetMin) && Number.isFinite(budgetMax) && budgetMax < budgetMin) errors.push({ field: 'budget_max', message: 'Didžiausias biudžetas negali būti mažesnis už mažiausią.' });
+  if (!budgetMinField?.value || !Number.isFinite(budgetMin) || budgetMin < 0) errors.push({ field: 'budget_min', message: copy.errors.budgetMin });
+  if (!budgetMaxField?.value || !Number.isFinite(budgetMax) || budgetMax < 0) errors.push({ field: 'budget_max', message: copy.errors.budgetMax });
+  if (budgetMinField?.value && budgetMaxField?.value && Number.isFinite(budgetMin) && Number.isFinite(budgetMax) && budgetMax < budgetMin) errors.push({ field: 'budget_max', message: copy.errors.budgetOrder });
   const date = form.elements.namedItem('desired_completion_date') as HTMLInputElement | null;
-  if (!date?.value) errors.push({ field: 'desired_completion_date', message: 'Nurodykite pageidaujamą užbaigimo datą.' });
+  if (!date?.value) errors.push({ field: 'desired_completion_date', message: copy.errors.date });
   const selected = root.querySelectorAll<HTMLInputElement>('[name="preferred_shortlist"]:checked');
-  if (selected.length > 8) errors.push({ field: 'preferred_shortlist', message: 'Pasirinkite ne daugiau kaip 8 gamintojų kandidatus.' });
+  if (selected.length > 8) errors.push({ field: 'preferred_shortlist', message: copy.errors.shortlist });
 
   errors.forEach((error) => setFieldError(root, error.field, error.message));
   if (!errors.length && form.checkValidity()) return true;
@@ -705,14 +916,14 @@ function validateRfqForm(root: HTMLElement, form: HTMLFormElement): boolean {
   const summary = root.querySelector<HTMLElement>('#rfq-error-summary');
   if (summary) {
     summary.hidden = false;
-    summary.innerHTML = `<strong>Patikrinkite formą:</strong><ul>${errors.map((error) => `<li>${escapeHtml(error.message)}</li>`).join('')}</ul>`;
+    summary.innerHTML = `<strong>${escapeHtml(copy.errors.summary)}</strong><ul>${errors.map((error) => `<li>${escapeHtml(error.message)}</li>`).join('')}</ul>`;
     summary.focus();
   }
   if (!errors.length) form.reportValidity();
   return false;
 }
 
-function mapApiErrors(root: HTMLElement, payload: unknown): boolean {
+function mapApiErrors(root: HTMLElement, payload: unknown, copy: RfqCopy): boolean {
   if (!payload || typeof payload !== 'object') return false;
   const data = (payload as { data?: unknown }).data;
   if (!data || typeof data !== 'object') return false;
@@ -721,216 +932,88 @@ function mapApiErrors(root: HTMLElement, payload: unknown): boolean {
     if (!detail || typeof detail !== 'object') return;
     const message = (detail as { message?: unknown }).message;
     if (typeof message !== 'string') return;
-    setFieldError(root, field, message);
+    setFieldError(root, field, copy.locale === 'en' ? copy.errors.apiField : message);
     mapped = true;
   });
   return mapped;
 }
 
-export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers = [] }: ToolContext): void {
+export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers = [], locale = 'lt', path, makerQueryParam }: RfqToolContext): void {
+  const copy = getRfqCopy(locale);
+  const pagePath = path ?? (locale === 'en' ? '/en/quote-request' : RFQ_PATH);
   const query = new URLSearchParams(window.location.search);
-  const isEstimatorPrefill = query.get('saltinis') === 'kainos-skaiciuokle';
+  const isEstimatorPrefill = locale === 'lt' && query.get('saltinis') === 'kainos-skaiciuokle';
   const prefill = isEstimatorPrefill
     ? {
-      category: query.get('category')?.trim().slice(0, 160) ?? '',
-      municipality: query.get('municipality')?.trim().slice(0, 160) ?? '',
-      service_region: query.get('service_region')?.trim().slice(0, 160) ?? '',
-      project_stage: query.get('project_stage')?.trim().slice(0, 160) ?? '',
-      project_scope: query.get('project_scope')?.trim().slice(0, 3000) ?? '',
-      dimensions_room_count: query.get('dimensions_room_count')?.trim().slice(0, 1200) ?? '',
-      materials_requirements: query.get('materials_requirements')?.trim().slice(0, 3000) ?? '',
-      budget_min: query.get('budget_min')?.trim().slice(0, 20) ?? '',
-      budget_max: query.get('budget_max')?.trim().slice(0, 20) ?? '',
+      category: query.get('category')?.trim().slice(0, 160) ?? '', municipality: query.get('municipality')?.trim().slice(0, 160) ?? '', service_region: query.get('service_region')?.trim().slice(0, 160) ?? '', project_stage: query.get('project_stage')?.trim().slice(0, 160) ?? '', project_scope: query.get('project_scope')?.trim().slice(0, 3000) ?? '', dimensions_room_count: query.get('dimensions_room_count')?.trim().slice(0, 1200) ?? '', materials_requirements: query.get('materials_requirements')?.trim().slice(0, 3000) ?? '', budget_min: query.get('budget_min')?.trim().slice(0, 20) ?? '', budget_max: query.get('budget_max')?.trim().slice(0, 20) ?? '',
     }
     : undefined;
+  document.documentElement.lang = locale;
   setPageMetadata({
-    title: 'Pateikite saugią baldų projekto užklausą | Baldai pagal užsakymą Lietuvoje',
-    description: 'Struktūruota baldų projekto pasiūlymo užklausa operatoriaus peržiūrai, be automatinio siuntimo gamintojams ir su atskiru patvirtinimu prieš išsiuntimą.',
-    path: RFQ_PATH,
+    title: copy.title,
+    description: copy.description,
+    path: pagePath,
     robots: window.location.search ? 'noindex, follow' : 'index, follow',
     structuredData: [breadcrumbStructuredData([
-      { name: 'Gamintojų katalogas', path: '/' },
-      { name: 'Projekto užklausa', path: RFQ_PATH },
+      { name: copy.breadcrumbRoot, path: locale === 'en' ? '/en' : '/' },
+      { name: copy.breadcrumbPage, path: pagePath },
     ])],
   });
 
-  const requestedSlug = query.get('gamintojas')?.trim() ?? '';
+  const requestedSlug = query.get(makerQueryParam ?? (locale === 'en' ? 'maker' : 'gamintojas'))?.trim()
+    ?? (locale === 'en' ? query.get('gamintojas')?.trim() : '')
+    ?? '';
   const preselected = requestedSlug ? manufacturers.find((record) => record.slug === requestedSlug) : undefined;
   const invalidPreselection = Boolean(requestedSlug && !preselected);
   const ordered = preselected ? [preselected, ...manufacturers.filter((record) => record.slug !== preselected.slug)] : manufacturers;
   const choices = ordered.map((record) => {
-    const details = [record.city?.trim(), (record.category_labels ?? []).slice(0, 2).join(', ')].filter(Boolean).join(' · ');
-    return `
-      <label class="manufacturer-choice">
-        <input type="checkbox" name="preferred_shortlist" value="${escapeHtml(record.slug)}"${record.slug === preselected?.slug ? ' checked' : ''}>
-        <span><strong>${escapeHtml(record.trading_name)}</strong><small>${escapeHtml(details || 'Vieta ir kategorijos viešame įraše nenurodytos')}</small></span>
-      </label>
-    `;
+    const categoryLabels = locale === 'en'
+      ? (record.category_codes ?? []).map((code) => englishCategoryLabels.get(code)).filter((label): label is string => Boolean(label))
+      : (record.category_labels ?? []);
+    const details = [record.city?.trim(), categoryLabels.slice(0, 2).join(', ')].filter(Boolean).join(' · ');
+    return `<label class="manufacturer-choice"><input type="checkbox" name="preferred_shortlist" value="${escapeHtml(record.slug)}"${record.slug === preselected?.slug ? ' checked' : ''}><span><strong>${escapeHtml(record.trading_name)}</strong><small>${escapeHtml(details || copy.noLocation)}</small></span></label>`;
   }).join('');
 
   root.innerHTML = `
     ${renderHeader('request')}
     <main class="request-main rfq-main">
-      ${toolNavigation('rfq')}
+      ${rfqToolNavigation(copy)}
       <section class="request-intro" aria-labelledby="request-title">
-        <div>
-          <p class="kicker">Saugi projekto užklausa</p>
-          <h1 id="request-title">Parenkite vienodą baldų projekto pasiūlymo užklausą</h1>
-          <p class="lead">Pateikite pakankamai tikslią projekto santrauką operatoriaus peržiūrai. Gamintojų kontaktai čia nesiunčiami ir nė vienas tiekėjas nekontaktuojamas automatiškai.</p>
-        </div>
-        <aside class="request-expectation" aria-labelledby="request-expectation-title">
-          <h2 id="request-expectation-title">Svarbi proceso riba</h2>
-          <p>Formos pateikimas tik sukuria pasiūlymo užklausos peržiūros įrašą. Siuntimui gamintojams būtinas atskiras operatoriaus patvirtinimas.</p>
-          <p>Pateikimas negarantuoja, kad pasiūlymo užklausa bus išsiųsta, kad gamintojas atsakys ar kad pasiūlymas bus priimtas.</p>
-        </aside>
+        <div><p class="kicker">${escapeHtml(copy.kicker)}</p><h1 id="request-title">${escapeHtml(copy.heading)}</h1><p class="lead">${escapeHtml(copy.lead)}</p></div>
+        <aside class="request-expectation" aria-labelledby="request-expectation-title"><h2 id="request-expectation-title">${escapeHtml(copy.expectationTitle)}</h2><p>${escapeHtml(copy.expectationBody)}</p><p>${escapeHtml(copy.expectationLimit)}</p></aside>
       </section>
-
       <section class="rfq-process" aria-labelledby="rfq-process-title">
-        <div class="section-heading">
-          <h2 id="rfq-process-title">Kaip vyksta užklausa</h2>
-          <p>Kontaktas su tiekėjais atsiranda tik po peržiūros ir atskiro sprendimo.</p>
-        </div>
-        <ol>
-          <li><strong>Pirkėjas pateikia santrauką.</strong><span>Forma sukuria privatų pasiūlymo užklausos įrašą operatoriaus peržiūrai.</span></li>
-          <li><strong>Operatorius patikrina projekto aprašymą ir tinkamus kandidatus.</strong><span>Vertinama, ar informacijos pakanka ir kurie katalogo kandidatai galėtų atitikti apimtį.</span></li>
-          <li><strong>Pasiūlymo užklausa siunčiama tik po atskiro patvirtinimo.</strong><span>Iki šio patvirtinimo pasirinkti gamintojai nekontaktuojami.</span></li>
-          <li><strong>Po išsiuntimo tiekėjai turi penkias dienas.</strong><span>Terminas pradedamas skaičiuoti nuo faktinio pasiūlymo užklausos išsiuntimo, ne nuo šios formos pateikimo.</span></li>
-          <li><strong>Pirkėjui grąžinami palyginami pasiūlymai.</strong><span>Grąžinami gauti ir suvienodinti atsakymai; atsakymų skaičius negarantuojamas.</span></li>
-        </ol>
+        <div class="section-heading"><h2 id="rfq-process-title">${escapeHtml(copy.processTitle)}</h2><p>${escapeHtml(copy.processIntro)}</p></div>
+        <ol>${copy.process.map(([title, detail]) => `<li><strong>${escapeHtml(title)}</strong><span>${escapeHtml(detail)}</span></li>`).join('')}</ol>
       </section>
-
       <div class="request-layout">
         <section class="request-form-section" aria-labelledby="request-form-title">
-          <div class="section-heading">
-            <h2 id="request-form-title">Projekto ir kontaktiniai duomenys</h2>
-            <p>Visi žvaigždute pažymėti laukai privalomi. Nesiųskite asmens kodo, banko duomenų ar kitos šiai užklausai nereikalingos jautrios informacijos.</p>
-          </div>
+          <div class="section-heading"><h2 id="request-form-title">${escapeHtml(copy.formTitle)}</h2><p>${escapeHtml(copy.formIntro)}</p></div>
           ${isEstimatorPrefill ? '<div class="rfq-prefill-note" role="status"><strong>Skaičiuoklės duomenys perkelti.</strong><span>Patikrinkite apimtį, medžiagas ir biudžeto intervalą, tada užpildykite likusius laukus.</span></div>' : ''}
           <div class="form-error-summary" id="rfq-error-summary" role="alert" tabindex="-1" hidden></div>
-          <div class="rfq-success" id="rfq-success" role="status" tabindex="-1" hidden>
-            <p class="state-label">Užklausa gauta</p>
-            <h2>Užklausos numeris: <span id="rfq-reference"></span></h2>
-            <p>Užklausa perduota operatoriaus peržiūrai. Gamintojai nebuvo kontaktuoti automatiškai; galimas siuntimas vyks tik po atskiro patvirtinimo.</p>
-          </div>
+          <div class="rfq-success" id="rfq-success" role="status" tabindex="-1" hidden><p class="state-label">${escapeHtml(copy.successLabel)}</p><h2>${escapeHtml(copy.referenceLabel)} <span id="rfq-reference"></span></h2><p>${escapeHtml(copy.successBody)}</p></div>
           <form class="buyer-request-form rfq-form" id="rfq-form" novalidate>
-            <div class="form-field">
-              <label for="full-name">Vardas ir pavardė *</label>
-              <input id="full-name" name="full_name" type="text" autocomplete="name" minlength="2" maxlength="120" required aria-describedby="error-full-name">
-              ${fieldError('full-name')}
-            </div>
-            <div class="form-field">
-              <label for="email">El. paštas *</label>
-              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" required placeholder="vardas@pavyzdys.lt" aria-describedby="error-email">
-              ${fieldError('email')}
-            </div>
-            <div class="form-field">
-              <label for="phone">Telefonas (nebūtina)</label>
-              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" aria-describedby="error-phone">
-              ${fieldError('phone')}
-            </div>
-            <div class="form-field">
-              <label for="category">Projekto kategorija *</label>
-              <div class="select-wrap"><select id="category" name="category" required aria-describedby="error-category">${options(categoryOptions, 'Pasirinkite kategoriją')}</select></div>
-              ${fieldError('category')}
-            </div>
-            <div class="form-field">
-              <label for="municipality">Savivaldybė *</label>
-              <input id="municipality" name="municipality" type="text" autocomplete="address-level2" minlength="2" maxlength="160" required placeholder="Pvz., Vilniaus miesto savivaldybė" aria-describedby="error-municipality">
-              ${fieldError('municipality')}
-            </div>
-            <div class="form-field">
-              <label for="service-region">Paslaugos vieta / regionas *</label>
-              <input id="service-region" name="service_region" type="text" autocomplete="address-level1" minlength="2" maxlength="160" required placeholder="Miestas, rajonas ar vietovė" aria-describedby="error-service-region">
-              ${fieldError('service-region')}
-            </div>
-            <div class="form-field form-field--wide">
-              <label for="project-stage">Projekto etapas *</label>
-              <div class="select-wrap"><select id="project-stage" name="project_stage" required aria-describedby="error-project-stage">${options(projectStageOptions, 'Pasirinkite dabartinį etapą')}</select></div>
-              ${fieldError('project-stage')}
-            </div>
-            <div class="form-field form-field--wide">
-              <label for="project-scope">Projekto apimtis *</label>
-              <p class="field-hint" id="project-scope-hint">Bent 10 ženklų. Išvardykite baldus, funkcijas, reikalingas paslaugas ir aiškias ribas.</p>
-              <textarea id="project-scope" name="project_scope" rows="7" minlength="10" maxlength="5000" required aria-describedby="project-scope-hint error-project-scope"></textarea>
-              ${fieldError('project-scope')}
-            </div>
-            <div class="form-field form-field--wide">
-              <label for="dimensions-room-count">Matmenys ir patalpų skaičius *</label>
-              <p class="field-hint" id="dimensions-hint">Pažymėkite, kurie matmenys preliminarūs, o kurie patikrinti.</p>
-              <textarea id="dimensions-room-count" name="dimensions_room_count" rows="4" maxlength="1000" required aria-describedby="dimensions-hint error-dimensions-room-count"></textarea>
-              ${fieldError('dimensions-room-count')}
-            </div>
-            <div class="form-field form-field--wide">
-              <label for="materials-requirements">Medžiagų ir furnitūros reikalavimai *</label>
-              <p class="field-hint" id="materials-hint">Jei dar nežinote, įrašykite prioritetus ir ko nenorite palikti tiekėjo nuožiūrai.</p>
-              <textarea id="materials-requirements" name="materials_requirements" rows="5" maxlength="3000" required aria-describedby="materials-hint error-materials-requirements"></textarea>
-              ${fieldError('materials-requirements')}
-            </div>
-            <div class="form-field">
-              <label for="budget-min">Biudžetas nuo, € *</label>
-              <input id="budget-min" name="budget_min" type="number" min="0" max="100000000" step="1" inputmode="numeric" required aria-describedby="error-budget-min">
-              ${fieldError('budget-min')}
-            </div>
-            <div class="form-field">
-              <label for="budget-max">Biudžetas iki, € *</label>
-              <input id="budget-max" name="budget_max" type="number" min="0" max="100000000" step="1" inputmode="numeric" required aria-describedby="error-budget-max">
-              ${fieldError('budget-max')}
-            </div>
-            <div class="form-field">
-              <label for="desired-completion-date">Pageidaujama užbaigimo data *</label>
-              <input id="desired-completion-date" name="desired_completion_date" type="date" required aria-describedby="completion-date-hint error-desired-completion-date">
-              <p class="field-hint" id="completion-date-hint">Tai pageidavimas, o ne automatiškai patvirtintas terminas.</p>
-              ${fieldError('desired-completion-date')}
-            </div>
-            <div class="form-field">
-              <label for="installation-access-constraints">Montavimo ir patekimo sąlygos *</label>
-              <textarea id="installation-access-constraints" name="installation_access_constraints" rows="4" maxlength="3000" required placeholder="Aukštas, liftas, parkavimas, darbo laikas, objekto parengtis; jei apribojimų nežinote, taip ir įrašykite." aria-describedby="error-installation-access-constraints"></textarea>
-              ${fieldError('installation-access-constraints')}
-            </div>
-
-            <fieldset class="manufacturer-fieldset form-field--wide">
-              <legend>Pageidaujamas trumpasis sąrašas (nebūtina, iki 8)</legend>
-              <p class="field-hint" id="manufacturer-choice-hint">Pasirinkimas yra tik pageidavimas operatoriui. Kontaktiniai gamintojų duomenys nesiunčiami, o kandidatai nekontaktuojami iki atskiro patvirtinimo.</p>
-              ${invalidPreselection ? '<p class="selection-notice" role="status">Nuorodoje nurodyto gamintojo kataloge nerasta. Galite pasirinkti kitą kandidatą.</p>' : ''}
-              <div class="manufacturer-picker">
-                <div class="manufacturer-picker-toolbar">
-                  <div class="form-field">
-                    <label for="manufacturer-search">Ieškoti kandidatų</label>
-                    <input id="manufacturer-search" type="search" autocomplete="off" maxlength="120" placeholder="Pavadinimas, miestas ar kategorija">
-                  </div>
-                  <p id="manufacturer-selection-count" aria-live="polite">${preselected ? 'Pasirinktas 1 kandidatas iš 8' : 'Kandidatų nepasirinkta'}</p>
-                </div>
-                <div class="manufacturer-choice-list" id="manufacturer-choice-list" aria-describedby="manufacturer-choice-hint">
-                  ${choices}
-                </div>
-                <p class="manufacturer-empty" id="manufacturer-empty" hidden>Pagal šią paiešką kandidatų nerasta.</p>
-              </div>
-              ${fieldError('preferred-shortlist')}
-            </fieldset>
-
-            <div class="attachment-limit form-field--wide">
-              <strong>Failų ši forma neįkelia.</strong>
-              <p>Planų, nuotraukų ar brėžinių čia prisegti negalima. Jei jų reikės, operatorius pasiūlymo užklausos peržiūros metu nurodys, kaip ir kada juos pateikti; iki atskiro patvirtinimo jie nebus perduodami gamintojams.</p>
-            </div>
-            <p class="form-privacy-note form-field--wide">Kontaktus ir projekto informaciją naudosime pasiūlymo užklausai administruoti. Užklausa automatiškai nepersiunčiama gamintojams. Skaitykite <a href="/privatumas" data-internal-link="true">privatumo pranešimą</a>.</p>
-            <div class="request-submit form-field--wide">
-              <button class="primary-button" type="submit">Pateikti pasiūlymo užklausą operatoriaus peržiūrai</button>
-              <p class="form-status" id="rfq-status" role="status" aria-live="polite" tabindex="-1"></p>
-            </div>
+            <div class="form-field"><label for="full-name">${escapeHtml(copy.fields.fullName)}</label><input id="full-name" name="full_name" type="text" autocomplete="name" minlength="2" maxlength="120" required aria-describedby="error-full-name">${fieldError('full-name')}</div>
+            <div class="form-field"><label for="email">${escapeHtml(copy.fields.email)}</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" required placeholder="${escapeHtml(copy.fields.emailPlaceholder)}" aria-describedby="error-email">${fieldError('email')}</div>
+            <div class="form-field"><label for="phone">${escapeHtml(copy.fields.phone)}</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" aria-describedby="error-phone">${fieldError('phone')}</div>
+            <div class="form-field"><label for="category">${escapeHtml(copy.fields.category)}</label><div class="select-wrap"><select id="category" name="category" required aria-describedby="error-category">${localizedOptions(categoryOptions, copy.fields.categoryPlaceholder, locale)}</select></div>${fieldError('category')}</div>
+            <div class="form-field"><label for="municipality">${escapeHtml(copy.fields.municipality)}</label><input id="municipality" name="municipality" type="text" autocomplete="address-level2" minlength="2" maxlength="160" required placeholder="${escapeHtml(copy.fields.municipalityPlaceholder)}" aria-describedby="error-municipality">${fieldError('municipality')}</div>
+            <div class="form-field"><label for="service-region">${escapeHtml(copy.fields.serviceRegion)}</label><input id="service-region" name="service_region" type="text" autocomplete="address-level1" minlength="2" maxlength="160" required placeholder="${escapeHtml(copy.fields.serviceRegionPlaceholder)}" aria-describedby="error-service-region">${fieldError('service-region')}</div>
+            <div class="form-field form-field--wide"><label for="project-stage">${escapeHtml(copy.fields.projectStage)}</label><div class="select-wrap"><select id="project-stage" name="project_stage" required aria-describedby="error-project-stage">${localizedOptions(projectStageOptions, copy.fields.projectStagePlaceholder, locale)}</select></div>${fieldError('project-stage')}</div>
+            <div class="form-field form-field--wide"><label for="project-scope">${escapeHtml(copy.fields.projectScope)}</label><p class="field-hint" id="project-scope-hint">${escapeHtml(copy.fields.projectScopeHint)}</p><textarea id="project-scope" name="project_scope" rows="7" minlength="10" maxlength="5000" required aria-describedby="project-scope-hint error-project-scope"></textarea>${fieldError('project-scope')}</div>
+            <div class="form-field form-field--wide"><label for="dimensions-room-count">${escapeHtml(copy.fields.dimensions)}</label><p class="field-hint" id="dimensions-hint">${escapeHtml(copy.fields.dimensionsHint)}</p><textarea id="dimensions-room-count" name="dimensions_room_count" rows="4" maxlength="1000" required aria-describedby="dimensions-hint error-dimensions-room-count"></textarea>${fieldError('dimensions-room-count')}</div>
+            <div class="form-field form-field--wide"><label for="materials-requirements">${escapeHtml(copy.fields.materials)}</label><p class="field-hint" id="materials-hint">${escapeHtml(copy.fields.materialsHint)}</p><textarea id="materials-requirements" name="materials_requirements" rows="5" maxlength="3000" required aria-describedby="materials-hint error-materials-requirements"></textarea>${fieldError('materials-requirements')}</div>
+            <div class="form-field"><label for="budget-min">${escapeHtml(copy.fields.budgetMin)}</label><input id="budget-min" name="budget_min" type="number" min="0" max="100000000" step="1" inputmode="numeric" required aria-describedby="error-budget-min">${fieldError('budget-min')}</div>
+            <div class="form-field"><label for="budget-max">${escapeHtml(copy.fields.budgetMax)}</label><input id="budget-max" name="budget_max" type="number" min="0" max="100000000" step="1" inputmode="numeric" required aria-describedby="error-budget-max">${fieldError('budget-max')}</div>
+            <div class="form-field"><label for="desired-completion-date">${escapeHtml(copy.fields.completionDate)}</label><input id="desired-completion-date" name="desired_completion_date" type="date" required aria-describedby="completion-date-hint error-desired-completion-date"><p class="field-hint" id="completion-date-hint">${escapeHtml(copy.fields.completionDateHint)}</p>${fieldError('desired-completion-date')}</div>
+            <div class="form-field"><label for="installation-access-constraints">${escapeHtml(copy.fields.access)}</label><textarea id="installation-access-constraints" name="installation_access_constraints" rows="4" maxlength="3000" required placeholder="${escapeHtml(copy.fields.accessPlaceholder)}" aria-describedby="error-installation-access-constraints"></textarea>${fieldError('installation-access-constraints')}</div>
+            <fieldset class="manufacturer-fieldset form-field--wide"><legend>${escapeHtml(copy.shortlistLegend)}</legend><p class="field-hint" id="manufacturer-choice-hint">${escapeHtml(copy.shortlistHint)}</p>${preselected ? `<p class="selection-notice" role="status"><strong>${escapeHtml(copy.selectedMaker(preselected.trading_name))}</strong></p>` : ''}${invalidPreselection ? `<p class="selection-notice" role="status">${escapeHtml(copy.invalidMaker)}</p>` : ''}<div class="manufacturer-picker"><div class="manufacturer-picker-toolbar"><div class="form-field"><label for="manufacturer-search">${escapeHtml(copy.searchLabel)}</label><input id="manufacturer-search" type="search" autocomplete="off" maxlength="120" placeholder="${escapeHtml(copy.searchPlaceholder)}"></div><p id="manufacturer-selection-count" aria-live="polite">${escapeHtml(preselected ? copy.selectionOne : copy.selectionNone)}</p></div><div class="manufacturer-choice-list" id="manufacturer-choice-list" aria-describedby="manufacturer-choice-hint">${choices}</div><p class="manufacturer-empty" id="manufacturer-empty" hidden>${escapeHtml(copy.noCandidates)}</p></div>${fieldError('preferred-shortlist')}</fieldset>
+            <div class="attachment-limit form-field--wide"><strong>${escapeHtml(copy.fileTitle)}</strong><p>${escapeHtml(copy.fileBody)}</p></div>
+            <p class="form-privacy-note form-field--wide">${escapeHtml(copy.privacy)} <a href="/privatumas">${escapeHtml(copy.privacyLink)}</a>.</p>
+            <div class="request-submit form-field--wide"><button class="primary-button" type="submit">${escapeHtml(copy.submit)}</button><p class="form-status" id="rfq-status" role="status" aria-live="polite" tabindex="-1"></p></div>
           </form>
         </section>
-
-        <aside class="request-guidance" aria-labelledby="request-guidance-title">
-          <h2 id="request-guidance-title">Prieš pateikiant</h2>
-          <ul>
-            <li>Atskirkite būtinus reikalavimus nuo pageidavimų.</li>
-            <li>Pažymėkite, kurie matmenys preliminarūs.</li>
-            <li>Biudžetą vertinkite kartu su PVM, medžiagomis ir montavimo apimtimi.</li>
-            <li>Nesitikėkite automatinio kontakto su pasirinktais kandidatais.</li>
-          </ul>
-          <a href="${COMPARISON_PATH}" data-internal-link="true">Kaip vėliau palyginti pasiūlymus →</a>
-          <a href="${CONTRACT_PATH}" data-internal-link="true">Atverti sutarties struktūros šabloną →</a>
-        </aside>
+        <aside class="request-guidance" aria-labelledby="request-guidance-title"><h2 id="request-guidance-title">${escapeHtml(copy.reviewTitle)}</h2><ul>${copy.reviewItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>${copy.reviewLinks.map((link) => `<a href="${link.path}">${escapeHtml(link.label)}</a>`).join('')}</aside>
       </div>
     </main>
     ${renderFooter()}
@@ -948,9 +1031,7 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
   if (prefill) {
     Object.entries(prefill).forEach(([name, value]) => {
       const field = form.elements.namedItem(name);
-      if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement) {
-        field.value = value;
-      }
+      if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement) field.value = value;
     });
   }
 
@@ -960,22 +1041,16 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
     if (selected.length > 8 && changed) {
       changed.checked = false;
       selected = shortlistChoices.filter((choice) => choice.checked);
-      setFieldError(root, 'preferred_shortlist', 'Galima pasirinkti ne daugiau kaip 8 gamintojų kandidatus.');
-    } else {
-      setFieldError(root, 'preferred_shortlist');
-    }
-    selectionCount.textContent = selected.length === 0
-      ? 'Kandidatų nepasirinkta'
-      : selected.length === 1
-        ? 'Pasirinktas 1 kandidatas iš 8'
-        : `Pasirinkta kandidatų: ${selected.length} iš 8`;
+      setFieldError(root, 'preferred_shortlist', copy.errors.shortlist);
+    } else setFieldError(root, 'preferred_shortlist');
+    selectionCount.textContent = selected.length === 0 ? copy.selectionNone : selected.length === 1 ? copy.selectionOne : copy.selectionMany(selected.length);
   };
   shortlistChoices.forEach((choice) => choice.addEventListener('change', () => updateSelection(choice)));
   search.addEventListener('input', () => {
-    const query = search.value.trim().toLocaleLowerCase('lt-LT');
+    const searchQuery = search.value.trim().toLocaleLowerCase(locale === 'en' ? 'en-GB' : 'lt-LT');
     let visible = 0;
     list.querySelectorAll<HTMLElement>('.manufacturer-choice').forEach((choice) => {
-      const matches = !query || (choice.textContent ?? '').toLocaleLowerCase('lt-LT').includes(query);
+      const matches = !searchQuery || (choice.textContent ?? '').toLocaleLowerCase(locale === 'en' ? 'en-GB' : 'lt-LT').includes(searchQuery);
       choice.hidden = !matches;
       if (matches) visible += 1;
     });
@@ -986,87 +1061,64 @@ export function renderRfqTool({ root, renderHeader, renderFooter, manufacturers 
     if (field.name === 'preferred_shortlist') return;
     field.setAttribute('aria-invalid', 'false');
     field.addEventListener('input', () => setFieldError(root, field.name));
-    field.addEventListener('blur', () => {
-      if (!field.validity.valid) setFieldError(root, field.name, field.validationMessage || 'Patikrinkite šį lauką.');
-    });
+    field.addEventListener('blur', () => { if (!field.validity.valid) setFieldError(root, field.name, copy.errors.invalidField); });
   });
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!validateRfqForm(root, form)) return;
-
+    if (!validateRfqForm(root, form, copy)) return;
     const formData = new FormData(form);
     const payload = {
-      full_name: String(formData.get('full_name') ?? '').trim(),
-      email: String(formData.get('email') ?? '').trim(),
-      phone: String(formData.get('phone') ?? '').trim(),
-      category: String(formData.get('category') ?? '').trim(),
-      municipality: String(formData.get('municipality') ?? '').trim(),
-      service_region: String(formData.get('service_region') ?? '').trim(),
-      project_stage: String(formData.get('project_stage') ?? '').trim(),
-      project_scope: String(formData.get('project_scope') ?? '').trim(),
-      dimensions_room_count: String(formData.get('dimensions_room_count') ?? '').trim(),
-      materials_requirements: String(formData.get('materials_requirements') ?? '').trim(),
-      budget_min: Number(formData.get('budget_min')),
-      budget_max: Number(formData.get('budget_max')),
-      desired_completion_date: String(formData.get('desired_completion_date') ?? ''),
-      installation_access_constraints: String(formData.get('installation_access_constraints') ?? '').trim(),
-      preferred_shortlist: shortlistChoices.filter((choice) => choice.checked).map((choice) => choice.value),
+      full_name: String(formData.get('full_name') ?? '').trim(), email: String(formData.get('email') ?? '').trim(), phone: String(formData.get('phone') ?? '').trim(), category: String(formData.get('category') ?? '').trim(), municipality: String(formData.get('municipality') ?? '').trim(), service_region: String(formData.get('service_region') ?? '').trim(), project_stage: String(formData.get('project_stage') ?? '').trim(), project_scope: String(formData.get('project_scope') ?? '').trim(), dimensions_room_count: String(formData.get('dimensions_room_count') ?? '').trim(), materials_requirements: String(formData.get('materials_requirements') ?? '').trim(), budget_min: Number(formData.get('budget_min')), budget_max: Number(formData.get('budget_max')), desired_completion_date: String(formData.get('desired_completion_date') ?? ''), installation_access_constraints: String(formData.get('installation_access_constraints') ?? '').trim(), preferred_shortlist: shortlistChoices.filter((choice) => choice.checked).map((choice) => choice.value),
     };
 
     submit.disabled = true;
     submit.setAttribute('aria-busy', 'true');
-    submit.textContent = 'Pateikiama…';
+    submit.textContent = copy.submitting;
     status.className = 'form-status';
-    status.textContent = 'Pasiūlymo užklausa kuriama operatoriaus peržiūrai. Gamintojai nekontaktuojami.';
+    status.setAttribute('role', 'status');
+    status.textContent = copy.submittingStatus;
 
     try {
-      const response = await fetch(`${apiBaseUrl.replace(/\/+$/, '')}/api/public/rfqs`, {
-        method: 'POST',
-        credentials: 'omit',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(`${apiBaseUrl.replace(/\/+$/, '')}/api/public/rfqs`, { method: 'POST', credentials: 'omit', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       const body = await response.json().catch(() => null) as { reference?: string; message?: string } | null;
       if (!response.ok) {
-        const mapped = mapApiErrors(root, body);
+        const mapped = mapApiErrors(root, body, copy);
         if (mapped) {
           const summary = root.querySelector<HTMLElement>('#rfq-error-summary');
           if (summary) {
             const messages = Array.from(root.querySelectorAll<HTMLElement>('.field-error')).map((error) => error.textContent).filter(Boolean);
             summary.hidden = false;
-            summary.innerHTML = `<strong>Serveris paprašė pataisyti:</strong><ul>${messages.map((message) => `<li>${escapeHtml(message ?? '')}</li>`).join('')}</ul>`;
+            summary.innerHTML = `<strong>${escapeHtml(copy.errors.apiSummary)}</strong><ul>${messages.map((message) => `<li>${escapeHtml(message ?? '')}</li>`).join('')}</ul>`;
             summary.focus();
           }
         }
-        throw new Error(body?.message || 'Pasiūlymo užklausos pateikti nepavyko.');
+        throw new Error(copy.errors.submitFailed);
       }
-      if (!body?.reference) throw new Error('Serveris negrąžino pasiūlymo užklausos numerio.');
+      if (!body?.reference) throw new Error(copy.errors.missingReference);
 
       const success = root.querySelector<HTMLElement>('#rfq-success');
       const reference = root.querySelector<HTMLElement>('#rfq-reference');
       if (reference) reference.textContent = body.reference;
-      if (success) {
-        success.hidden = false;
-        success.focus();
-      }
+      if (success) { success.hidden = false; success.focus(); }
       status.className = 'form-status form-status--success';
-      status.textContent = `Pasiūlymo užklausa ${body.reference} gauta operatoriaus peržiūrai. Gamintojai nebuvo kontaktuoti automatiškai.`;
-      submit.textContent = 'Pasiūlymo užklausa pateikta';
+      status.setAttribute('role', 'status');
+      status.textContent = copy.submittedStatus(body.reference);
+      submit.textContent = copy.submittedButton;
       submit.removeAttribute('aria-busy');
       form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>('input, textarea, select').forEach((field) => { field.disabled = true; });
       return;
     } catch (error) {
-      console.error('Nepavyko pateikti pasiūlymo užklausos.', error);
+      console.error(copy.errors.console, error);
       status.className = 'form-status form-status--error';
       status.setAttribute('role', 'alert');
-      status.textContent = 'Pasiūlymo užklausos pateikti nepavyko. Įvesti duomenys liko formoje. Patikrinkite pažymėtus laukus ir interneto ryšį, tada bandykite dar kartą.';
+      status.textContent = copy.errorStatus;
       status.focus();
     } finally {
-      if (!submit.disabled || submit.textContent !== 'Pasiūlymo užklausa pateikta') {
+      if (!submit.disabled || submit.textContent !== copy.submittedButton) {
         submit.disabled = false;
         submit.removeAttribute('aria-busy');
-        submit.textContent = 'Pateikti pasiūlymo užklausą operatoriaus peržiūrai';
+        submit.textContent = copy.submit;
       }
     }
   });

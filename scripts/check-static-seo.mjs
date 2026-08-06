@@ -18,6 +18,8 @@ const ENGLISH_MARKET_OVERVIEW_PATH = '/en/lithuanian-furniture-makers-data';
 const ENGLISH_MARKET_OVERVIEW_URL = `${SITE_URL}${ENGLISH_MARKET_OVERVIEW_PATH}/`;
 const ENGLISH_HUB_PATH = '/en';
 const ENGLISH_HUB_URL = `${SITE_URL}/en/`;
+const ENGLISH_QUOTE_REQUEST_PATH = '/en/quote-request';
+const ENGLISH_QUOTE_REQUEST_URL = `${SITE_URL}${ENGLISH_QUOTE_REQUEST_PATH}/`;
 const ENGLISH_CATEGORY_BASE_PATH = '/en/furniture-makers';
 const ENGLISH_CATEGORY_LABELS = new Map([
   ['virtuves-baldai', 'Custom kitchen furniture'],
@@ -429,7 +431,7 @@ async function checkGeneratedAssets() {
 
   try {
     const llms = await readFile(join(publicDir, 'llms.txt'), 'utf8');
-    for (const required of ['Baldininkai.org', OPEN_DATA_URL, MARKET_OVERVIEW_URL, ENGLISH_HUB_URL, ENGLISH_MARKET_OVERVIEW_URL, ENGLISH_SOURCING_GUIDE_URL, ...landingConfig.categories.map((category) => canonicalUrl(`${ENGLISH_CATEGORY_BASE_PATH}/${category.slug}`)), DATASET_JSON_URL, DATASET_CSV_URL, `${SITE_URL}/sitemap.xml`, 'English summary', 'English category pages', 'English region data cuts', 'English larger-city data cuts', 'English published-turnover data cuts', 'nepatvirtinti viešų šaltinių kandidatai', DATASET_LICENSE_NAME, 'CC BY 4.0', DATASET_LICENSE_URL, expectedAttribution]) {
+    for (const required of ['Baldininkai.org', OPEN_DATA_URL, MARKET_OVERVIEW_URL, ENGLISH_HUB_URL, ENGLISH_QUOTE_REQUEST_URL, ENGLISH_MARKET_OVERVIEW_URL, ENGLISH_SOURCING_GUIDE_URL, ...landingConfig.categories.map((category) => canonicalUrl(`${ENGLISH_CATEGORY_BASE_PATH}/${category.slug}`)), DATASET_JSON_URL, DATASET_CSV_URL, `${SITE_URL}/sitemap.xml`, 'English summary', 'English quote request', 'English category pages', 'English region data cuts', 'English larger-city data cuts', 'English published-turnover data cuts', 'nepatvirtinti viešų šaltinių kandidatai', DATASET_LICENSE_NAME, 'CC BY 4.0', DATASET_LICENSE_URL, expectedAttribution]) {
       if (!llms.includes(required)) addError('/llms.txt', `missing required content: ${required}`);
     }
   } catch (error) {
@@ -442,6 +444,7 @@ async function checkGeneratedAssets() {
     if (!sitemap.includes(`<loc>${MARKET_OVERVIEW_URL}</loc>`)) addError('/sitemap.xml', 'missing Lithuanian market-overview route');
     if (!sitemap.includes(`<loc>${ENGLISH_MARKET_OVERVIEW_URL}</loc>`)) addError('/sitemap.xml', 'missing English market-overview route');
     if (!sitemap.includes(`<loc>${ENGLISH_HUB_URL}</loc>`)) addError('/sitemap.xml', 'missing English sourcing hub');
+    if (!sitemap.includes(`<loc>${ENGLISH_QUOTE_REQUEST_URL}</loc>`)) addError('/sitemap.xml', 'missing English quote-request route');
     for (const category of landingConfig.categories) {
       const categoryUrl = canonicalUrl(`${ENGLISH_CATEGORY_BASE_PATH}/${category.slug}`);
       if (!sitemap.includes(`<loc>${categoryUrl}</loc>`)) addError('/sitemap.xml', `missing English category route ${categoryUrl}`);
@@ -583,6 +586,7 @@ const expectedEnglishListRoutes = new Map([
 const expectedEnglishHubRoutes = [
   ...expectedEnglishCategories.map((entry) => entry.route),
   ...expectedEnglishListRoutes.keys(),
+  ENGLISH_QUOTE_REQUEST_PATH,
   ENGLISH_SOURCING_GUIDE_PATH,
   ENGLISH_MARKET_OVERVIEW_PATH,
 ];
@@ -821,7 +825,7 @@ function validateEnglishMakerList(route, html, schemas, expected) {
   }
 }
 
-const counts = { breadcrumbs: 0, hubs: 0, cityIndexes: 0, profiles: 0, guideArticles: 0, faqPages: 0, marketOverviews: 0, landingSnapshots: 0, englishLists: 0, englishRegions: 0, englishCities: 0, englishTurnoverBands: 0, englishHubs: 0, englishCategories: 0, englishSourcingGuides: 0 };
+const counts = { breadcrumbs: 0, hubs: 0, cityIndexes: 0, profiles: 0, guideArticles: 0, faqPages: 0, marketOverviews: 0, landingSnapshots: 0, englishLists: 0, englishRegions: 0, englishCities: 0, englishTurnoverBands: 0, englishHubs: 0, englishCategories: 0, englishSourcingGuides: 0, englishQuoteRequests: 0 };
 const englishTitleOwners = new Map();
 const englishDescriptionOwners = new Map();
 
@@ -964,6 +968,9 @@ for (const file of files.sort()) {
     for (const href of ['/', '/atviri-duomenys/', DATASET_LICENSE_URL, ...expectedEnglishHubRoutes.map((expectedRoute) => `${expectedRoute}/`)]) {
       if (!html.includes(`href="${href}"`)) addError(route, `English hub is missing required link ${href}`);
     }
+    if (!html.includes('data-en-quote-request-cta') || !text.includes('Ready to describe a real project?') || !text.includes('submission is not an introduction guarantee') || !text.includes('makers are not contacted automatically')) {
+      addError(route, 'English hub must contain the visible, accurately scoped quote-request callout');
+    }
     const expectedCoverage = new Map([
       ['total', manufacturers.length],
       ['turnover', expectedTurnovers.length],
@@ -1004,6 +1011,37 @@ for (const file of files.sort()) {
     }
   }
 
+  if (route === ENGLISH_QUOTE_REQUEST_PATH) {
+    counts.englishQuoteRequests += 1;
+    const text = visibleText(html);
+    for (const required of [
+      'Prepare one comparable furniture quote request',
+      'unverified public-source candidates',
+      'submission does not guarantee an introduction',
+      'makers are not contacted automatically',
+      'Submitting the interactive form creates a private quote-request review record',
+      'JavaScript is preparing the quote-request form',
+      'enable JavaScript and reload the page',
+    ]) {
+      if (!text.includes(required)) addError(route, `missing English quote-request evidence: ${required}`);
+    }
+    if (!html.includes('data-en-quote-request-fallback')) addError(route, 'missing functional-page loading/fallback marker');
+    for (const href of ['/en/', '/en/quote-request/', '/en/sourcing-guide/', '/en/lithuanian-furniture-makers-data/', '/atviri-duomenys/']) {
+      if (!html.includes(`href="${href}"`)) addError(route, `English quote-request page is missing suite link ${href}`);
+    }
+    if ((html.match(/href="\/en\/quote-request\/"/g) ?? []).length < 3) addError(route, 'quote-request route must appear in the page navigation, tool navigation and footer');
+    const webPages = schemasOfType(schemas, 'WebPage');
+    if (webPages.length !== 1) addError(route, `expected exactly one WebPage schema, found ${webPages.length}`);
+    else {
+      const page = webPages[0];
+      const expectedKeys = ['@context', '@type', 'description', 'inLanguage', 'isPartOf', 'name', 'url'];
+      if (JSON.stringify(Object.keys(page).sort()) !== JSON.stringify(expectedKeys)) addError(route, 'quote-request WebPage schema contains missing or undocumented properties');
+      if (page['@context'] !== 'https://schema.org' || page['@type'] !== 'WebPage' || page.name !== 'Request furniture quotes in Lithuania' || page.description !== descriptions[0] || page.url !== ENGLISH_QUOTE_REQUEST_URL || page.inLanguage !== 'en') addError(route, 'quote-request WebPage schema does not match the visible canonical page');
+      if (JSON.stringify(page.isPartOf) !== JSON.stringify({ '@id': `${SITE_URL}/#website` })) addError(route, 'quote-request WebPage schema must reference the site WebSite identity');
+      if (hasEmptySchemaValue(page)) addError(route, 'quote-request WebPage schema must not contain empty properties');
+    }
+  }
+
   const expectedEnglishCategory = expectedEnglishCategoryByRoute.get(route);
   if (expectedEnglishCategory) {
     counts.englishCategories += 1;
@@ -1021,8 +1059,11 @@ for (const file of files.sort()) {
       if (!text.includes(required)) addError(route, `missing English category evidence: ${required}`);
     }
     const lithuanianPath = `/baldai-pagal-uzsakyma/${category.slug}/`;
-    for (const href of ['/en/', lithuanianPath, '/atviri-duomenys/', DATASET_LICENSE_URL]) {
+    for (const href of ['/en/', '/en/quote-request/', lithuanianPath, '/atviri-duomenys/', DATASET_LICENSE_URL]) {
       if (!html.includes(`href="${href}"`)) addError(route, `missing required English category link ${href}`);
+    }
+    if (!html.includes('data-en-quote-request-cta') || !text.includes('Turn this category search into a project brief') || !text.includes('does not contact the maker automatically')) {
+      addError(route, 'English category page must contain the visible quote-request callout with the automatic-contact boundary');
     }
     const makerRows = [...html.matchAll(/<tr data-en-category-maker="([^"]+)">([\s\S]*?)<\/tr>/g)];
     if (makerRows.length !== records.length) addError(route, `expected ${records.length} source-matched maker rows, found ${makerRows.length}`);
@@ -1031,6 +1072,7 @@ for (const file of files.sort()) {
       const rowText = visibleText(row);
       if (slug !== record.slug) addError(route, `maker row ${index + 1} must be ${record.slug}, found ${slug}`);
       if (!row.includes(`href="/gamintojas/${record.slug}/"`) || !rowText.includes(record.trading_name)) addError(route, `maker ${record.slug} must link to its existing Lithuanian profile`);
+      if (!row.includes(`data-en-maker-quote-link href="/en/quote-request/?maker=${encodeURIComponent(record.slug)}"`) || !rowText.includes('Include in quote request')) addError(route, `maker ${record.slug} must provide a selected-maker quote-request link`);
       if (!rowText.includes(record.city)) addError(route, `maker ${record.slug} must show city ${record.city}`);
       const expectedRegion = record.region_label?.trim() ? (ENGLISH_REGION_LABELS.get(record.region_label.trim())?.label ?? record.region_label.trim()) : 'Region not published';
       if (!rowText.includes(expectedRegion)) addError(route, `maker ${record.slug} must show its source region or explicit absence`);
@@ -1508,6 +1550,7 @@ if (counts.englishCategories !== expectedEnglishCategories.length) errors.push(`
 if (counts.marketOverviews !== 2) errors.push(`expected exactly two reciprocal-language market-overview routes, found ${counts.marketOverviews}`);
 if (counts.landingSnapshots !== expectedSnapshotRoutes.size) errors.push(`expected ${expectedSnapshotRoutes.size} city/category landing snapshots, found ${counts.landingSnapshots}`);
 if (counts.englishSourcingGuides !== 1) errors.push(`expected exactly one English sourcing guide, found ${counts.englishSourcingGuides}`);
+if (counts.englishQuoteRequests !== 1) errors.push(`expected exactly one English quote-request route, found ${counts.englishQuoteRequests}`);
 if (counts.englishRegions !== expectedEnglishRegionGroups.length) errors.push(`expected ${expectedEnglishRegionGroups.length} English region pages, found ${counts.englishRegions}`);
 if (counts.englishCities !== expectedEnglishCityGroups.length) errors.push(`expected ${expectedEnglishCityGroups.length} English larger-city pages, found ${counts.englishCities}`);
 if (counts.englishTurnoverBands !== 4 || expectedEnglishTurnoverBands.length !== 4) errors.push(`expected exactly four English turnover-band pages, found ${counts.englishTurnoverBands}`);
@@ -1540,4 +1583,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; ${counts.landingSnapshots} audited city/category maker snapshots; 1 English sourcing hub with ${counts.englishCategories} source-matched category tables, ${counts.englishRegions} region, ${counts.englishCities} larger-city and ${counts.englishTurnoverBands} turnover-band factual lists plus the English sourcing guide; open-data and ${counts.marketOverviews} reciprocal-language market-overview routes, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; CollectionPage + ItemList validated on all English sourcing routes; ItemList ${counts.hubs} Lithuanian hubs plus ${counts.cityIndexes} all-cities index; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles plus market overviews; FAQPage ${counts.faqPages} visible FAQ sections.`);
+console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; ${counts.landingSnapshots} audited city/category maker snapshots; 1 English sourcing hub with ${counts.englishCategories} source-matched category tables, ${counts.englishRegions} region, ${counts.englishCities} larger-city and ${counts.englishTurnoverBands} turnover-band factual lists, the English sourcing guide and ${counts.englishQuoteRequests} English quote-request route; open-data and ${counts.marketOverviews} reciprocal-language market-overview routes, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; CollectionPage + ItemList validated on English sourcing lists and WebPage on the quote request; ItemList ${counts.hubs} Lithuanian hubs plus ${counts.cityIndexes} all-cities index; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles plus market overviews; FAQPage ${counts.faqPages} visible FAQ sections.`);

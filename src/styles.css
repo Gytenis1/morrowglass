@@ -203,6 +203,19 @@
     display: none;
   }
 
+  .site-header--english .header-inner {
+    gap: 1.25rem;
+  }
+
+  .site-header--english .brand {
+    max-width: 19rem;
+  }
+
+  .site-header--english .primary-navigation {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
   .intro {
     color: var(--surface);
     background: var(--pine);
@@ -4279,6 +4292,17 @@
     display: grid;
     grid-template-columns: minmax(230px, 0.42fr) minmax(0, 1fr);
     gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .rfq-process > *,
+  .rfq-process li > * {
+    min-width: 0;
+  }
+
+  .rfq-process h2,
+  .rfq-process li strong,
+  .rfq-process li span {
+    overflow-wrap: anywhere;
   }
 
   .rfq-process ol {

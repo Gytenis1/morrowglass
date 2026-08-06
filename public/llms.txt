@@ -17,6 +17,7 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Projekto pasiūlymo užklausa: https://www.baldininkai.org/gauti-pasiulymus/
 - Baldų rinkos apžvalga: https://www.baldininkai.org/baldu-rinkos-apzvalga/
 - English sourcing hub: https://www.baldininkai.org/en/
+- English quote request: https://www.baldininkai.org/en/quote-request/
 - Lithuanian furniture makers data (English): https://www.baldininkai.org/en/lithuanian-furniture-makers-data/
 - English sourcing guide: https://www.baldininkai.org/en/sourcing-guide/
 - English region data cuts:
@@ -100,4 +101,4 @@ Duomenų rinkinys licencijuojamas pagal Creative Commons Attribution 4.0 Interna
 Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-06
 
 ## English summary
-Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, capacity, price, availability, timing, or service coverage. Start at the English sourcing hub https://www.baldininkai.org/en/, browse the English category pages, read the catalogue-data overview at https://www.baldininkai.org/en/lithuanian-furniture-makers-data/, use the sourcing guide at https://www.baldininkai.org/en/sourcing-guide/, browse region, larger-city and published-turnover data cuts linked from the hub, and use the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.
+Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, capacity, price, availability, timing, or service coverage. Start at the English sourcing hub https://www.baldininkai.org/en/, browse the English category pages, prepare a structured project request at https://www.baldininkai.org/en/quote-request/ with no automatic maker contact or introduction guarantee, read the catalogue-data overview at https://www.baldininkai.org/en/lithuanian-furniture-makers-data/, use the sourcing guide at https://www.baldininkai.org/en/sourcing-guide/, browse region, larger-city and published-turnover data cuts linked from the hub, and use the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.
