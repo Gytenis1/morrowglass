@@ -19,6 +19,14 @@ const synchronizedFields = [
   'public_details_source_urls',
   'source_collection_date',
 ];
+const publicTaxonomyFields = [
+  'category_codes',
+  'category_labels',
+  'scope_evidence',
+];
+// Scope evidence must retain the public URL it cites so the synchronized source
+// remains valid when a live category correction introduces a new citation.
+const publicEvidenceFields = ['source_urls'];
 const publicFactFields = [
   'founded_year',
   'employee_count_band',
@@ -40,6 +48,18 @@ const financialFields = [
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const verifiedDatePattern = /^\d{4}-\d{2}-\d{2}$/;
 const employeeBands = new Set(['0', '1-9', '10-49', '50-249', '250+']);
+const categoryLabels = new Map([
+  ['K', 'Virtuvės baldai'],
+  ['W', 'Spintos ir įmontuojami baldai'],
+  ['BB', 'Miegamojo ir vonios baldai'],
+  ['OC', 'Biuro ir komerciniai baldai'],
+  ['HR', 'HoReCa ir prekybos baldai'],
+  ['U', 'Minkšti baldai pagal užsakymą'],
+  ['SW', 'Medžio darbai ir medžio masyvo baldai'],
+  ['MM', 'Metalo ir mišrių medžiagų baldai'],
+  ['O', 'Kiti nestandartiniai baldai'],
+]);
+const historicalCategoryLabels = new Map([['MM', new Set([categoryLabels.get('MM'), 'Kiti baldai'])]]);
 
 function configuredBackendUrl(source) {
   const defaultUrl = /const defaultPocketBaseUrl\s*=\s*["']([^"']+)["']/.exec(source)?.[1];
@@ -63,7 +83,7 @@ async function fetchPublicManufacturers(baseUrl) {
     url.searchParams.set('page', String(page));
     url.searchParams.set('perPage', '200');
     url.searchParams.set('sort', 'slug');
-    url.searchParams.set('fields', ['slug', ...synchronizedFields, ...publicFactFields].join(','));
+    url.searchParams.set('fields', ['slug', ...synchronizedFields, ...publicTaxonomyFields, ...publicEvidenceFields, ...publicFactFields].join(','));
 
     const response = await fetch(url, { method: 'GET', headers: { accept: 'application/json' } });
     if (!response.ok) throw new Error(`Public manufacturer read failed on page ${page} (${response.status} ${response.statusText}).`);
@@ -86,14 +106,18 @@ function isValidVerifiedDate(value) {
   return !Number.isNaN(date.valueOf()) && date.toISOString().slice(0, 10) === value;
 }
 
-function isPublicHttpsUrl(value) {
+function isPublicHttpUrl(value) {
   if (typeof value !== 'string' || !value) return false;
   try {
     const url = new URL(value);
-    return url.protocol === 'https:' && !url.username && !url.password;
+    return ['http:', 'https:'].includes(url.protocol) && !url.username && !url.password;
   } catch {
     return false;
   }
+}
+
+function isPublicHttpsUrl(value) {
+  return isPublicHttpUrl(value) && new URL(value).protocol === 'https:';
 }
 
 function validRemoteYearOrDefault(value, field, slug) {
@@ -106,13 +130,37 @@ function validateRemoteRecord(record, index) {
   if (!record || typeof record !== 'object' || typeof record.slug !== 'string' || !slugPattern.test(record.slug)) {
     throw new Error(`Public manufacturer record ${index + 1} has an invalid slug.`);
   }
-  for (const field of [...synchronizedFields, ...publicFactFields]) {
+  for (const field of [...synchronizedFields, ...publicTaxonomyFields, ...publicEvidenceFields, ...publicFactFields]) {
     if (!(field in record)) throw new Error(`Public manufacturer ${record.slug} is missing synchronized field ${field}.`);
   }
   for (const field of ['city', 'location', 'region', 'region_label', 'street_address', 'postcode', 'company_code', 'website', 'public_phone', 'public_contact_url', 'public_contact_checked_date', 'source_collection_date']) {
     if (typeof record[field] !== 'string') throw new Error(`Public manufacturer ${record.slug} has a non-text ${field}.`);
   }
   if (typeof record.no_public_contact_route !== 'boolean') throw new Error(`Public manufacturer ${record.slug} has a non-boolean no_public_contact_route.`);
+  if (!Array.isArray(record.category_codes) || !record.category_codes.length || record.category_codes.some((code) => typeof code !== 'string' || !categoryLabels.has(code))) {
+    throw new Error(`Public manufacturer ${record.slug} has invalid category_codes.`);
+  }
+  if (new Set(record.category_codes).size !== record.category_codes.length) {
+    throw new Error(`Public manufacturer ${record.slug} has duplicate category_codes.`);
+  }
+  if (!Array.isArray(record.category_labels) || record.category_labels.length !== record.category_codes.length) {
+    throw new Error(`Public manufacturer ${record.slug} has misaligned category_labels.`);
+  }
+  record.category_codes.forEach((code, categoryIndex) => {
+    const allowedLabels = historicalCategoryLabels.get(code) ?? new Set([categoryLabels.get(code)]);
+    if (record.category_labels[categoryIndex] !== categoryLabels.get(code) && !allowedLabels.has(record.category_labels[categoryIndex])) {
+      throw new Error(`Public manufacturer ${record.slug} has an invalid label for category ${code}.`);
+    }
+  });
+  if (typeof record.scope_evidence !== 'string' || !record.scope_evidence.trim()) {
+    throw new Error(`Public manufacturer ${record.slug} has invalid scope_evidence.`);
+  }
+  if (!Array.isArray(record.source_urls) || !record.source_urls.length || record.source_urls.some((value) => !isPublicHttpUrl(value))) {
+    throw new Error(`Public manufacturer ${record.slug} has invalid source_urls.`);
+  }
+  if (!record.source_urls.some((url) => record.scope_evidence.includes(url))) {
+    throw new Error(`Public manufacturer ${record.slug} scope_evidence does not cite a public source URL.`);
+  }
   if (record.public_details_source_urls !== null && (!Array.isArray(record.public_details_source_urls) || record.public_details_source_urls.some((value) => typeof value !== 'string'))) {
     throw new Error(`Public manufacturer ${record.slug} has invalid public_details_source_urls.`);
   }
@@ -231,6 +279,14 @@ for (const local of synchronizedRecords) {
   };
 
   for (const field of synchronizedFields) synchronize(field, remote[field]);
+  // Official registry candidates deliberately retain their conservative O taxonomy
+  // in the versioned source. Do not replace that source-taxonomy decision with a
+  // public record classification during a static snapshot refresh.
+  const retainsConservativeTaxonomy = local.evidence_source_type === 'Lietuvos atvirų duomenų portalas (Registrų centras)';
+  if (!retainsConservativeTaxonomy) {
+    for (const field of publicEvidenceFields) synchronize(field, remote[field]);
+    for (const field of publicTaxonomyFields) synchronize(field, remote[field]);
+  }
   if (remote.founded_year >= 1800) synchronize('founded_year', remote.founded_year);
   if (employeeBands.has(remote.employee_count_band)) synchronize('employee_count_band', remote.employee_count_band);
 

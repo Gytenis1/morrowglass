@@ -175,7 +175,7 @@
       "public_phone": "+370 676 42229",
       "contact_route_status": "public_phone",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Spintos ir įmontuojami baldai"
       ],
       "public_source_urls": [
         "https://www.info.lt/imones/Evaldo-baldai-UAB/2335694",
@@ -197,7 +197,7 @@
       "public_phone": "+370 37 311143",
       "contact_route_status": "public_phone_and_contact_url",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://viruna.lt/pages/about",
@@ -1432,8 +1432,8 @@
       ],
       "public_source_urls": [
         "https://arta.lt/",
-        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
-        "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/"
+        "https://rekvizitai.vz.lt/en/company/arta_a_burgailos_imone/",
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
       ],
       "verification_date": "2026-07-28"
     },
@@ -1451,7 +1451,7 @@
       "public_phone": null,
       "contact_route_status": "public_contact_url",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Spintos ir įmontuojami baldai"
       ],
       "public_source_urls": [
         "https://www.tomers.lt/en",
@@ -1548,8 +1548,9 @@
         "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
-        "https://www.facebook.com/balduprofai/",
         "https://balduprofai.lt/",
+        "https://rekvizitai.vz.lt/en/company/baldu_profai_delvisa/",
+        "https://www.facebook.com/balduprofai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
         "https://rekvizitai.vz.lt/en/company/delvisa/"
       ],
@@ -1569,7 +1570,10 @@
       "public_phone": "+370 610 62893",
       "contact_route_status": "public_phone_and_contact_url",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai",
+        "Spintos ir įmontuojami baldai",
+        "Biuro ir komerciniai baldai",
+        "Medžio darbai ir medžio masyvo baldai"
       ],
       "public_source_urls": [
         "http://solobaldai.lt/",
@@ -1592,7 +1596,7 @@
       "public_phone": "+370 615 42206",
       "contact_route_status": "public_phone_and_contact_url",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Medžio darbai ir medžio masyvo baldai"
       ],
       "public_source_urls": [
         "http://www.venta.lt/",
@@ -2167,6 +2171,7 @@
         "Minkšti baldai pagal užsakymą"
       ],
       "public_source_urls": [
+        "https://rekvizitai.vz.lt/en/company/mbi_minkstu_baldu_ideja/",
         "https://www.1551.lt/mbi-minkstu-baldu-ideja-uab-nestandartiniu-minkstu-baldu-gamyba-klaipeda-klaipedos-rajonas-215565/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
         "https://rekvizitai.vz.lt/en/company/minkstu_baldu_ideja/"
@@ -2423,12 +2428,13 @@
       "public_phone": "+370 612 98192",
       "contact_route_status": "public_phone_and_contact_url",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai",
+        "Medžio darbai ir medžio masyvo baldai"
       ],
       "public_source_urls": [
         "https://www.bengita.lt/apie-mus/",
-        "https://rekvizitai.vz.lt/en/company/uab_bengita/",
-        "https://www.bengita.lt/produkto-kategorija/baldu-kojos-atramos/"
+        "https://www.bengita.lt/produkto-kategorija/baldu-kojos-atramos/",
+        "https://rekvizitai.vz.lt/en/company/uab_bengita/"
       ],
       "verification_date": "2026-07-28"
     },
@@ -2449,6 +2455,7 @@
         "Kiti nestandartiniai baldai"
       ],
       "public_source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_tvirtove_panevezys/",
         "https://www.info.lt/imones/Bald%C5%B3-tvirtov%C4%97-MB/2454979",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
         "https://rekvizitai.vz.lt/en/company/baldu_tvirtove/"
@@ -2472,6 +2479,7 @@
         "Medžio darbai ir medžio masyvo baldai"
       ],
       "public_source_urls": [
+        "https://rekvizitai.vz.lt/en/company/baldu_linija_panevezys/",
         "https://www.baldulinija.lt/en/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
         "https://rekvizitai.vz.lt/en/company/baldu_linija/"
@@ -2762,7 +2770,9 @@
       "public_phone": null,
       "contact_route_status": "public_contact_url",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai",
+        "Miegamojo ir vonios baldai",
+        "Biuro ir komerciniai baldai"
       ],
       "public_source_urls": [
         "https://baldmaris.lt/",
@@ -2875,7 +2885,8 @@
       "public_phone": "+370 5 2602687",
       "contact_route_status": "public_phone_and_contact_url",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Spintos ir įmontuojami baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Vilnius",
@@ -3696,6 +3707,7 @@
         "Kiti nestandartiniai baldai"
       ],
       "public_source_urls": [
+        "https://rekvizitai.vz.lt/en/company/minshape_m_jakucionio_ivv/",
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Kaunas",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
         "https://rekvizitai.vz.lt/en/company/mindaugo_jakucionio_individuali_veikla/"
@@ -4291,6 +4303,7 @@
         "Kiti nestandartiniai baldai"
       ],
       "public_source_urls": [
+        "https://rekvizitai.vz.lt/en/company/almyros_baldai_a_pakarnio_imone/",
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/%C5%A0iauliai",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
         "https://rekvizitai.vz.lt/en/company/a_pakarnio_ii/"
@@ -4513,9 +4526,9 @@
         "Kiti nestandartiniai baldai"
       ],
       "public_source_urls": [
+        "https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/",
         "https://www.info.lt/rubrika/Bald%C5%B3-gamyba/100419717/Panev%C4%97%C5%BEys",
-        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
-        "https://rekvizitai.vz.lt/en/company/gmdg_v_grinienes_ii/"
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
       ],
       "verification_date": "2026-07-28"
     },
@@ -5240,8 +5253,8 @@
         "Kiti baldai"
       ],
       "public_source_urls": [
-        "https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/02ede07d-8a49-48b9-b191-e2d484a2246e",
+        "https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/b8e47b06-b944-42db-a339-31a650ff697b",
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/43fd6298-aa13-4083-b8a2-6b801fd393a1",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
