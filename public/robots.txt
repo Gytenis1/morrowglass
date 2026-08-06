@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Allow: /llms.txt
 Allow: /atviri-duomenys/
+Allow: /baldu-rinkos-apzvalga/
 Allow: /baldininkai-org-gamintojai.json
 Allow: /baldininkai-org-gamintojai.csv
 

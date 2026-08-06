@@ -15,6 +15,7 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Virtuvės baldų kainų gidas: https://www.baldininkai.org/gidas/virtuves-baldu-kainos/
 - Kainos skaičiuoklė: https://www.baldininkai.org/baldu-kainos-skaiciuokle/
 - Projekto pasiūlymo užklausa: https://www.baldininkai.org/gauti-pasiulymus/
+- Baldų rinkos apžvalga: https://www.baldininkai.org/baldu-rinkos-apzvalga/
 - Atviri duomenys ir naudojimo sąlygos: https://www.baldininkai.org/atviri-duomenys/
 - JSON duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.json
 - CSV duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.csv

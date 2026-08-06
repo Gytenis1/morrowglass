@@ -511,6 +511,27 @@ function formatEuro(amount) {
   return new Intl.NumberFormat('lt-LT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(amount);
 }
 
+function formatPercent(count, total) {
+  return new Intl.NumberFormat('lt-LT', { style: 'percent', minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(total ? count / total : 0);
+}
+
+function median(values) {
+  if (!values.length) return null;
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
+}
+
+function countBy(records, valueFor) {
+  const counts = new Map();
+  for (const record of records) {
+    const value = valueFor(record);
+    if (!value) continue;
+    counts.set(value, (counts.get(value) ?? 0) + 1);
+  }
+  return [...counts].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0]), 'lt'));
+}
+
 function siteStructuredData(path) {
   const organization = { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: SITE_URL };
   if (path !== '/') return [organization];
@@ -632,12 +653,13 @@ function header(active = 'directory') {
     request: 'Projekto užklausa',
     guide: 'Pirkėjo gidas',
     policy: 'Informacija',
+    overview: 'Rinkos apžvalga',
   }[active] ?? 'Katalogas';
-  return `<header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="Baldai pagal užsakymą Lietuvoje – pradžia"><span class="brand-mark" aria-hidden="true"><img src="${logoAssetUrl}" alt="" width="44" height="44" /></span><span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span></a><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Atverti pagrindinį meniu. Dabartinis skyrius: ${activeLabel}"><span class="navigation-toggle-label">Meniu</span><span class="navigation-current">${activeLabel}</span><span class="navigation-toggle-icon" aria-hidden="true"></span></button><nav class="primary-navigation" id="primary-navigation" aria-label="Pagrindinė navigacija"><a href="/"${active === 'directory' ? ' aria-current="page"' : ''}>Katalogas</a><a href="/gauti-pasiulymus"${active === 'request' ? ' aria-current="page"' : ''}>Projekto užklausa</a><a href="/gidas"${active === 'guide' ? ' aria-current="page"' : ''}>Pirkėjo gidas</a><a href="/gidas#pirkejo-irankiai">Pirkėjo įrankiai</a></nav></div></header>`;
+  return `<header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="Baldai pagal užsakymą Lietuvoje – pradžia"><span class="brand-mark" aria-hidden="true"><img src="${logoAssetUrl}" alt="" width="44" height="44" /></span><span>Baldai pagal užsakymą <strong>Lietuvoje</strong></span></a><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Atverti pagrindinį meniu. Dabartinis skyrius: ${activeLabel}"><span class="navigation-toggle-label">Meniu</span><span class="navigation-current">${activeLabel}</span><span class="navigation-toggle-icon" aria-hidden="true"></span></button><nav class="primary-navigation" id="primary-navigation" aria-label="Pagrindinė navigacija"><a href="/"${active === 'directory' ? ' aria-current="page"' : ''}>Katalogas</a><a href="/baldu-rinkos-apzvalga"${active === 'overview' ? ' aria-current="page"' : ''}>Rinkos apžvalga</a><a href="/gauti-pasiulymus"${active === 'request' ? ' aria-current="page"' : ''}>Projekto užklausa</a><a href="/gidas"${active === 'guide' ? ' aria-current="page"' : ''}>Pirkėjo gidas</a><a href="/gidas#pirkejo-irankiai">Pirkėjo įrankiai</a></nav></div></header>`;
 }
 
 function footer() {
-  return '<footer><div class="footer-inner"><div class="footer-summary"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Poraštės navigacija"><a href="/baldai-pagal-uzsakyma/miestai/">Visi miestai</a><a href="/baldu-kainos-skaiciuokle">Kainos skaičiuoklė</a><a href="/gauti-pasiulymus">Projekto užklausa</a><a href="/gidas">Pirkėjo gidas</a><a href="/gidas/baldu-pirkimo-sutarties-sablonas">Sutarties šablonas</a><a href="/palyginti-pasiulymus">Pasiūlymų palyginimas</a><a href="/atviri-duomenys">Atviri duomenys</a><a href="/privatumas">Privatumas</a><a href="/naudojimosi-salygos">Naudojimosi sąlygos</a><a href="/slapukai">Slapukai</a><a href="/atsiliepimu-taisykles">Atsiliepimų taisyklės</a><a href="/irasyti-pataisyma">Įrašo pataisymas</a></nav></div></footer>';
+  return '<footer><div class="footer-inner"><div class="footer-summary"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Poraštės navigacija"><a href="/baldai-pagal-uzsakyma/miestai/">Visi miestai</a><a href="/baldu-rinkos-apzvalga">Rinkos apžvalga</a><a href="/baldu-kainos-skaiciuokle">Kainos skaičiuoklė</a><a href="/gauti-pasiulymus">Projekto užklausa</a><a href="/gidas">Pirkėjo gidas</a><a href="/gidas/baldu-pirkimo-sutarties-sablonas">Sutarties šablonas</a><a href="/palyginti-pasiulymus">Pasiūlymų palyginimas</a><a href="/atviri-duomenys">Atviri duomenys</a><a href="/privatumas">Privatumas</a><a href="/naudojimosi-salygos">Naudojimosi sąlygos</a><a href="/slapukai">Slapukai</a><a href="/atsiliepimu-taisykles">Atsiliepimų taisyklės</a><a href="/irasyti-pataisyma">Įrašo pataisymas</a></nav></div></footer>';
 }
 
 function manufacturerCard(record) {
@@ -954,13 +976,103 @@ const datasetSchema = {
     { '@type': 'DataDownload', contentUrl: `${SITE_URL}/${datasetCsvFilename}`, encodingFormat: 'text/csv' },
   ],
 };
-const openDataBody = `${header('policy')}<main class="policy-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="policy-document open-data-document"><header class="policy-header"><p class="kicker">Viešas katalogo duomenų rinkinys</p><h1>Atviri Baldininkai.org duomenys</h1><p class="lead">Atsisiųskite šiuo svetainės versijos kūrimu paskelbtus Lietuvos nestandartinių baldų gamintojų kandidatų įrašus JSON arba CSV formatu.</p></header><dl class="policy-operator" aria-label="Duomenų rinkinio suvestinė"><div><dt>Įrašų</dt><dd>${publicDataset.length}</dd></div><div><dt>Atnaujinta</dt><dd><time datetime="${buildDate}">${buildDate}</time></dd></div><div><dt>Formatai</dt><dd>JSON ir CSV</dd></div></dl><div class="policy-copy open-data-copy"><section aria-labelledby="open-data-download-title"><h2 id="open-data-download-title">Atsisiųsti duomenis</h2><p>Abu failai sugeneruoti iš to paties šaltinio rinkinio ir turi po vieną eilutę ar objektą kiekvienam šiuo metu kataloge skelbiamam įrašui.</p><ul class="open-data-downloads"><li><a href="/${datasetJsonFilename}" download><strong>JSON duomenų rinkinys</strong><span>Metaduomenys ir įrašų masyvas su kategorijų bei šaltinių masyvais</span><span aria-hidden="true">↓</span></a></li><li><a href="/${datasetCsvFilename}" download><strong>CSV duomenų rinkinys</strong><span>Metaduomenų komentarai ir stabili lentelė skaičiuoklėms</span><span aria-hidden="true">↓</span></a></li></ul></section><section><h2>Kas įtraukta</h2><p>Kiekviename įraše pateikiamas katalogo identifikatorius ir pilnas profilio adresas, viešas ar prekinis bei juridinis pavadinimas, įmonės kodas, miestas, gatvės adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių adresai ir turima patikros data.</p><p>Tušti laukai reiškia, kad atitinkama reikšmė šaltinio rinkinyje nepateikta. Būsena <code>no_public_contact_route</code> naudojama tik tada, kai šaltinio įraše aiškiai pažymėta, kad viešo kontaktinio kelio nerasta.</p></section><section><h2>Duomenų kilmė ir atnaujinimas</h2><p>Rinkinys sudarytas iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Prie kiekvieno įrašo pateikiamos šaltinių nuorodos, naudotos tapatybei, veiklos krypčiai ar viešiems įmonės duomenims pagrįsti.</p><p>Ši versija sugeneruota <time datetime="${buildDate}">${buildDate}</time> kartu su katalogo puslapiais. Failai atnaujinami iš to paties versijuoto šaltinių rinkinio kiekvieno svetainės kūrimo metu.</p></section><section><h2>Ribotumai</h2><p>Įrašai yra nepatvirtinti viešų šaltinių gamintojų kandidatai. Jų paskelbimas nėra Baldininkai.org rekomendacija, reitingas, kokybės įvertinimas ar tapatybės, informacijos tikslumo, kainos, terminų, užimtumo ir paslaugų prieinamumo garantija.</p><p>Vieši šaltiniai gali būti pasikeitę, neišsamūs ar netikslūs. Prieš priimdami sprendimą savarankiškai patikrinkite juridinius, kontaktinius ir pasiūlymo duomenis su pasirinktu gamintoju ar kitu tinkamu oficialiu šaltiniu.</p></section><section><h2>Licencija ir priskyrimas</h2><p>Duomenų rinkinys licencijuojamas pagal <a href="${DATASET_LICENSE_URL}" rel="license"><strong>${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION})</strong></a> licenciją, versija <strong>${DATASET_LICENSE_VERSION}</strong>.</p><p lang="en">This dataset is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).</p><p>Duomenis galite atsisiųsti, analizuoti ir pakartotinai naudoti, jei neiškreipiate jų prasmės, išlaikote aiškias ribotumų pastabas ir nenurodote, kad Baldininkai.org patvirtino ar rekomendavo įrašus.</p><p><strong>Priskyrimas:</strong> <q>${datasetAttribution}</q></p><p>Apie netikslumą ar reikalingą pataisymą praneškite per <a href="/irasyti-pataisyma">įrašo pataisymo tvarką</a>.</p></section></div></article></main>${footer()}`;
+const openDataBody = `${header('policy')}<main class="policy-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="policy-document open-data-document"><header class="policy-header"><p class="kicker">Viešas katalogo duomenų rinkinys</p><h1>Atviri Baldininkai.org duomenys</h1><p class="lead">Atsisiųskite šiuo svetainės versijos kūrimu paskelbtus Lietuvos nestandartinių baldų gamintojų kandidatų įrašus JSON arba CSV formatu.</p></header><dl class="policy-operator" aria-label="Duomenų rinkinio suvestinė"><div><dt>Įrašų</dt><dd>${publicDataset.length}</dd></div><div><dt>Atnaujinta</dt><dd><time datetime="${buildDate}">${buildDate}</time></dd></div><div><dt>Formatai</dt><dd>JSON ir CSV</dd></div></dl><div class="policy-copy open-data-copy"><section aria-labelledby="open-data-download-title"><h2 id="open-data-download-title">Atsisiųsti duomenis</h2><p>Abu failai sugeneruoti iš to paties šaltinio rinkinio ir turi po vieną eilutę ar objektą kiekvienam šiuo metu kataloge skelbiamam įrašui.</p><p>Šio katalogo įmonių dydžio, apyvartos, veiklos metų, geografijos ir kategorijų suvestines rasite <a href="/baldu-rinkos-apzvalga"><strong>baldų rinkos apžvalgoje</strong></a>.</p><ul class="open-data-downloads"><li><a href="/${datasetJsonFilename}" download><strong>JSON duomenų rinkinys</strong><span>Metaduomenys ir įrašų masyvas su kategorijų bei šaltinių masyvais</span><span aria-hidden="true">↓</span></a></li><li><a href="/${datasetCsvFilename}" download><strong>CSV duomenų rinkinys</strong><span>Metaduomenų komentarai ir stabili lentelė skaičiuoklėms</span><span aria-hidden="true">↓</span></a></li></ul></section><section><h2>Kas įtraukta</h2><p>Kiekviename įraše pateikiamas katalogo identifikatorius ir pilnas profilio adresas, viešas ar prekinis bei juridinis pavadinimas, įmonės kodas, miestas, gatvės adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių adresai ir turima patikros data.</p><p>Tušti laukai reiškia, kad atitinkama reikšmė šaltinio rinkinyje nepateikta. Būsena <code>no_public_contact_route</code> naudojama tik tada, kai šaltinio įraše aiškiai pažymėta, kad viešo kontaktinio kelio nerasta.</p></section><section><h2>Duomenų kilmė ir atnaujinimas</h2><p>Rinkinys sudarytas iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Prie kiekvieno įrašo pateikiamos šaltinių nuorodos, naudotos tapatybei, veiklos krypčiai ar viešiems įmonės duomenims pagrįsti.</p><p>Ši versija sugeneruota <time datetime="${buildDate}">${buildDate}</time> kartu su katalogo puslapiais. Failai atnaujinami iš to paties versijuoto šaltinių rinkinio kiekvieno svetainės kūrimo metu.</p></section><section><h2>Ribotumai</h2><p>Įrašai yra nepatvirtinti viešų šaltinių gamintojų kandidatai. Jų paskelbimas nėra Baldininkai.org rekomendacija, reitingas, kokybės įvertinimas ar tapatybės, informacijos tikslumo, kainos, terminų, užimtumo ir paslaugų prieinamumo garantija.</p><p>Vieši šaltiniai gali būti pasikeitę, neišsamūs ar netikslūs. Prieš priimdami sprendimą savarankiškai patikrinkite juridinius, kontaktinius ir pasiūlymo duomenis su pasirinktu gamintoju ar kitu tinkamu oficialiu šaltiniu.</p></section><section><h2>Licencija ir priskyrimas</h2><p>Duomenų rinkinys licencijuojamas pagal <a href="${DATASET_LICENSE_URL}" rel="license"><strong>${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION})</strong></a> licenciją, versija <strong>${DATASET_LICENSE_VERSION}</strong>.</p><p lang="en">This dataset is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).</p><p>Duomenis galite atsisiųsti, analizuoti ir pakartotinai naudoti, jei neiškreipiate jų prasmės, išlaikote aiškias ribotumų pastabas ir nenurodote, kad Baldininkai.org patvirtino ar rekomendavo įrašus.</p><p><strong>Priskyrimas:</strong> <q>${datasetAttribution}</q></p><p>Apie netikslumą ar reikalingą pataisymą praneškite per <a href="/irasyti-pataisyma">įrašo pataisymo tvarką</a>.</p></section></div></article></main>${footer()}`;
 await writeRoute(openDataPath, injectPage({
   title: 'Atviri baldų gamintojų katalogo duomenys | Baldininkai.org',
   description: `Atsisiųskite ${publicDataset.length} viešų šaltinių Lietuvos baldų gamintojų kandidatų įrašus JSON arba CSV formatu ir peržiūrėkite naudojimo ribotumus.`,
   path: openDataPath,
   body: openDataBody,
   structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Atviri duomenys', path: openDataPath }]), datasetSchema],
+}));
+
+const marketOverviewPath = '/baldu-rinkos-apzvalga';
+const marketOverviewUrl = canonicalUrl(marketOverviewPath);
+const employeeBandOrder = ['0', '1-9', '10-49', '50-249', '250+'];
+const employeeBandNames = new Map([
+  ['0', '0 darbuotojų'],
+  ['1-9', '1–9 darbuotojai'],
+  ['10-49', '10–49 darbuotojai'],
+  ['50-249', '50–249 darbuotojai'],
+  ['250+', '250 ir daugiau darbuotojų'],
+]);
+const marketTurnovers = manufacturers
+  .map((record) => ({ record, turnover: publishedTurnover(record) }))
+  .filter((entry) => entry.turnover)
+  .sort((a, b) => a.turnover.amount - b.turnover.amount);
+const turnoverValues = marketTurnovers.map((entry) => entry.turnover.amount);
+const lowerTurnoverHalf = turnoverValues.slice(0, Math.floor(turnoverValues.length / 2));
+const upperTurnoverHalf = turnoverValues.slice(Math.ceil(turnoverValues.length / 2));
+const turnoverTotal = turnoverValues.reduce((total, amount) => total + amount, 0);
+const turnoverMedian = median(turnoverValues);
+const turnoverQ1 = median(lowerTurnoverHalf);
+const turnoverQ3 = median(upperTurnoverHalf);
+const turnoverBands = [
+  { key: 'lt-100k', label: 'Mažiau nei €100 tūkst.', count: marketTurnovers.filter(({ turnover }) => turnover.amount < 100_000).length },
+  { key: '100k-500k', label: '€100 tūkst. – €500 tūkst.', count: marketTurnovers.filter(({ turnover }) => turnover.amount >= 100_000 && turnover.amount < 500_000).length },
+  { key: '500k-2m', label: '€500 tūkst. – €2 mln.', count: marketTurnovers.filter(({ turnover }) => turnover.amount >= 500_000 && turnover.amount <= 2_000_000).length },
+  { key: 'gt-2m', label: 'Daugiau nei €2 mln.', count: marketTurnovers.filter(({ turnover }) => turnover.amount > 2_000_000).length },
+];
+const fiscalYears = countBy(marketTurnovers, ({ turnover }) => String(turnover.year));
+const employeeRecords = manufacturers.filter((record) => employeeBandOrder.includes(record.employee_count_band));
+const employeeDistribution = employeeBandOrder.map((band) => ({
+  band,
+  label: employeeBandNames.get(band),
+  count: employeeRecords.filter((record) => record.employee_count_band === band).length,
+}));
+const latestValidFoundingYear = Number(buildDate.slice(0, 4));
+const foundingRecords = manufacturers.filter((record) => Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= latestValidFoundingYear);
+const foundingCohorts = [
+  { key: 'before-1990', label: 'Iki 1990 m.', includes: (year) => year < 1990 },
+  { key: '1990s', label: '1990–1999 m.', includes: (year) => year >= 1990 && year < 2000 },
+  { key: '2000s', label: '2000–2009 m.', includes: (year) => year >= 2000 && year < 2010 },
+  { key: '2010s', label: '2010–2019 m.', includes: (year) => year >= 2010 && year < 2020 },
+  { key: '2020s', label: '2020 m. ir vėliau', includes: (year) => year >= 2020 },
+].map((cohort) => ({ ...cohort, count: foundingRecords.filter((record) => cohort.includes(record.founded_year)).length }))
+  .filter((cohort) => cohort.count > 0);
+const oldestFoundingYear = foundingRecords.length ? Math.min(...foundingRecords.map((record) => record.founded_year)) : null;
+const newestFoundingYear = foundingRecords.length ? Math.max(...foundingRecords.map((record) => record.founded_year)) : null;
+const regionDistribution = countBy(manufacturers, (record) => record.region_label?.trim());
+const eligibleCityRoutes = new Map(landingCities.map((city) => [city.city, `/baldai-pagal-uzsakyma/${city.slug}`]));
+const leadingCities = countBy(manufacturers, (record) => record.city?.trim()).slice(0, 10);
+const categoryPageCountsByCode = new Map(countBy(landingConfig.categories, (category) => category.code));
+const categoryMix = landingConfig.categories.map((category) => {
+  const currentLabel = category.title.replace(/ pagal užsakymą$/, '');
+  const count = manufacturers.filter((record) => record.category_codes.some((code, index) => code === category.code
+    && (categoryPageCountsByCode.get(category.code) === 1 || record.category_labels[index] === currentLabel))).length;
+  return { code: category.code, title: category.title, slug: category.slug, count };
+}).sort((a, b) => b.count - a.count || a.title.localeCompare(b.title, 'lt'));
+const topTurnoverMakers = [...marketTurnovers].sort((a, b) => b.turnover.amount - a.turnover.amount).slice(0, 10);
+const distributionList = (items, total, metric) => `<ul class="market-distribution">${items.map((item) => `<li data-market-${metric}="${escapeHtml(item.key ?? item.band ?? item.label)}" data-count="${item.count}"><div><span>${escapeHtml(item.label)}</span><strong>${item.count} <small>(${formatPercent(item.count, total)})</small></strong></div><span class="market-bar" aria-hidden="true"><span style="--market-share: ${total ? (item.count / total) * 100 : 0}%"></span></span></li>`).join('')}</ul>`;
+
+const marketOverviewDescription = `Baldininkai.org katalogo ${manufacturers.length} gamintojų kandidatų apžvalga: apyvarta, darbuotojų grupės, įkūrimo metai, geografija ir kategorijos.`;
+const marketOverviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Lietuvos baldų gamintojų katalogo rinkos apžvalga',
+  description: marketOverviewDescription,
+  url: marketOverviewUrl,
+  mainEntityOfPage: marketOverviewUrl,
+  inLanguage: 'lt-LT',
+  datePublished: buildDate,
+  dateModified: buildDate,
+  author: { '@id': `${SITE_URL}/#organization` },
+  publisher: { '@id': `${SITE_URL}/#organization` },
+};
+const topTurnoverRows = topTurnoverMakers.map(({ record, turnover }) => `<tr data-market-top-turnover="${escapeHtml(record.slug)}"><th scope="row"><a href="/gamintojas/${escapeHtml(record.slug)}">${escapeHtml(record.trading_name)}</a></th><td>${escapeHtml(record.city)}</td><td class="market-number">${escapeHtml(formatEuro(turnover.amount))}</td><td class="market-number">${turnover.year}</td><td><a data-market-source href="${escapeHtml(turnover.sourceUrl)}" rel="noopener noreferrer">Viešas šaltinis ↗</a></td></tr>`).join('');
+const regionRows = regionDistribution.map(([label, count]) => `<tr data-market-region="${escapeHtml(label)}" data-count="${count}"><th scope="row">${escapeHtml(label)}</th><td class="market-number">${count}</td><td class="market-number">${formatPercent(count, manufacturers.length)}</td></tr>`).join('');
+const cityRows = leadingCities.map(([city, count]) => {
+  const route = eligibleCityRoutes.get(city);
+  return `<tr data-market-city="${escapeHtml(city)}" data-count="${count}"><th scope="row">${route ? `<a href="${route}">${escapeHtml(city)}</a>` : escapeHtml(city)}</th><td class="market-number">${count}</td><td class="market-number">${formatPercent(count, manufacturers.length)}</td></tr>`;
+}).join('');
+const categoryRows = categoryMix.map((category) => `<tr data-market-category="${escapeHtml(category.slug)}" data-code="${escapeHtml(category.code)}" data-count="${category.count}"><th scope="row"><a href="/baldai-pagal-uzsakyma/${escapeHtml(category.slug)}">${escapeHtml(category.title)}</a></th><td class="market-number">${category.count}</td><td class="market-number">${formatPercent(category.count, manufacturers.length)}</td></tr>`).join('');
+const marketOverviewBody = `${header('overview')}<main class="market-overview-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">Katalogo duomenų pjūvis</p><h1>Lietuvos baldų gamintojų katalogo rinkos apžvalga</h1><p class="lead">Faktinė ${manufacturers.length} šiame kataloge skelbiamų gamintojų kandidatų suvestinė pagal viešuose šaltiniuose turimus įmonių duomenis.</p></div><p class="market-overview-date">Duomenų versija <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section market-coverage-section" aria-labelledby="market-coverage-title"><div class="market-section-heading"><div><h2 id="market-coverage-title">Katalogo aprėptis</h2><p>Skaičiai rodo, kiek iš visų katalogo įrašų turi kiekvienai suvestinei tinkamą reikšmę.</p></div></div><dl class="market-coverage"><div data-market-coverage="total" data-count="${manufacturers.length}"><dt>Visi katalogo kandidatai</dt><dd>${manufacturers.length}</dd><small>100,0 %</small></div><div data-market-coverage="turnover" data-count="${marketTurnovers.length}"><dt>Galiojanti paskelbta apyvarta</dt><dd>${marketTurnovers.length}</dd><small>${formatPercent(marketTurnovers.length, manufacturers.length)}</small></div><div data-market-coverage="employees" data-count="${employeeRecords.length}"><dt>Darbuotojų skaičiaus grupė</dt><dd>${employeeRecords.length}</dd><small>${formatPercent(employeeRecords.length, manufacturers.length)}</small></div><div data-market-coverage="founded" data-count="${foundingRecords.length}"><dt>Galiojantys įkūrimo metai</dt><dd>${foundingRecords.length}</dd><small>${formatPercent(foundingRecords.length, manufacturers.length)}</small></div></dl></section><section class="market-section" aria-labelledby="market-turnover-title"><div class="market-section-heading"><div><h2 id="market-turnover-title">Paskelbta apyvarta</h2><p>Suvestinė apima tik ${marketTurnovers.length} įrašus, kurie atitinka kataloge jau taikomą paskelbtos apyvartos taisyklę: teigiama suma, finansiniai metai ir tiesioginė viešo šaltinio nuoroda.</p></div><p class="market-scope-note">Skirtingų finansinių metų reikšmės pateikiamos kartu.</p></div><dl class="market-headline-stats"><div data-market-turnover-stat="total"><dt>Bendra paskelbta apyvarta</dt><dd>${escapeHtml(formatEuro(turnoverTotal))}</dd></div><div data-market-turnover-stat="median"><dt>Mediana</dt><dd>${escapeHtml(formatEuro(turnoverMedian))}</dd></div><div data-market-turnover-stat="q1"><dt>Pirmasis kvartilis (Q1)</dt><dd>${escapeHtml(formatEuro(turnoverQ1))}</dd></div><div data-market-turnover-stat="q3"><dt>Trečiasis kvartilis (Q3)</dt><dd>${escapeHtml(formatEuro(turnoverQ3))}</dd></div></dl><div class="market-split"><div><h3>Apyvartos intervalai</h3>${distributionList(turnoverBands, marketTurnovers.length, 'turnover-band')}<p class="market-definition">Intervalai nepersidengia: €100 tūkst. įtraukiami į antrą, €500 tūkst. – į trečią intervalą.</p></div><div><h3>Finansinių metų pasiskirstymas</h3><ul class="market-year-list">${fiscalYears.map(([year, count]) => `<li data-market-fiscal-year="${year}" data-count="${count}"><span>${year} m.</span><strong>${count} <small>(${formatPercent(count, marketTurnovers.length)})</small></strong></li>`).join('')}</ul></div></div></section><section class="market-section" aria-labelledby="market-top-title"><div class="market-section-heading"><div><h2 id="market-top-title">Didžiausios paskelbtos apyvartos įrašai</h2><p>Dešimt didžiausių galiojančių reikšmių šiame kataloge. Lentelė yra faktinis duomenų pjūvis, ne įmonių reitingas ar rekomendacija.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="Didžiausios paskelbtos apyvartos įrašų lentelė"><table><thead><tr><th>Įmonė</th><th>Miestas</th><th>Apyvarta</th><th>Finansiniai metai</th><th>Šaltinis</th></tr></thead><tbody>${topTurnoverRows}</tbody></table></div></section><section class="market-section" aria-labelledby="market-employment-title"><div class="market-section-heading"><div><h2 id="market-employment-title">Darbuotojų grupės</h2><p>Pasiskirstymas skaičiuojamas tik iš ${employeeRecords.length} įrašų su faktine <code>employee_count_band</code> reikšme; tušti laukai nepriskiriami jokiai grupei.</p></div></div>${distributionList(employeeDistribution, employeeRecords.length, 'employee-band')}</section><section class="market-section" aria-labelledby="market-founded-title"><div class="market-section-heading"><div><h2 id="market-founded-title">Įkūrimo metų grupės</h2><p>Galiojantys metai žinomi ${foundingRecords.length} įrašams. Seniausi kataloge nurodyti metai – <strong data-market-founding-edge="oldest">${oldestFoundingYear}</strong>, naujausi – <strong data-market-founding-edge="newest">${newestFoundingYear}</strong>.</p></div></div>${distributionList(foundingCohorts, foundingRecords.length, 'founding-cohort')}</section><section class="market-section" aria-labelledby="market-geography-title"><div class="market-section-heading"><div><h2 id="market-geography-title">Geografija</h2><p>Regionai rodomi pagal dabartines katalogo <code>region_label</code> reikšmes. Miestas reiškia šaltinyje nurodytą registracijos, bazės ar kontakto vietą, ne garantuotą paslaugų teritoriją.</p></div></div><div class="market-split market-split--tables"><div><h3>Regionų žymos</h3><div class="market-table-wrap" tabindex="0" role="region" aria-label="Kandidatų pasiskirstymas pagal regiono žymą"><table><thead><tr><th>Regiono žyma</th><th>Įrašų</th><th>Katalogo dalis</th></tr></thead><tbody>${regionRows}</tbody></table></div></div><div><h3>Pirmaujantys miestai</h3><div class="market-table-wrap" tabindex="0" role="region" aria-label="Daugiausia katalogo įrašų turintys miestai"><table><thead><tr><th>Miestas</th><th>Įrašų</th><th>Katalogo dalis</th></tr></thead><tbody>${cityRows}</tbody></table></div></div></div></section><section class="market-section" aria-labelledby="market-category-title"><div class="market-section-heading"><div><h2 id="market-category-title">Kategorijų pjūvis</h2><p>Vienas kandidatas gali turėti kelias kategorijas, todėl eilučių skaičiai nesumuojami iki ${manufacturers.length}. Nuorodos veda į dabar skelbiamus kategorijų puslapius.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="Katalogo kandidatų pasiskirstymas pagal baldų kategoriją"><table><thead><tr><th>Kategorija</th><th>Įrašų</th><th>Katalogo dalis</th></tr></thead><tbody>${categoryRows}</tbody></table></div></section><section class="market-section market-methodology" aria-labelledby="market-method-title"><div class="market-section-heading"><div><h2 id="market-method-title">Metodika ir ribotumai</h2><p>Kaip sudarytos suvestinės ir ko iš jų negalima spręsti.</p></div></div><div class="market-method-grid"><div><h3>Šaltinis ir skaičiavimas</h3><p>Visi rodomi agregatai kūrimo metu apskaičiuoti tik iš versijuoto Baldininkai.org katalogo failo. Duomenų kilmė – vieši registrai ir vieši įmonių puslapiai. Kvartiliai skaičiuojami medianos padalytų pusių metodu.</p><p>Katalogo įrašai yra nepatvirtinti viešų šaltinių kandidatai. Tai šio katalogo aprėptis, o ne oficiali Lietuvos baldų rinkos ar nacionalinė statistika.</p></div><div><h3>Palyginimo ribos</h3><p>Apyvartos įrašų finansiniai metai yra mišrūs, todėl bendros sumos ir įmonių eilės negalima laikyti vieno laikotarpio rinkos rezultatu. Šis puslapis nėra reitingas ar rekomendacija ir nevertina kokybės, pajėgumo, užimtumo ar tinkamumo projektui.</p><p>Regionų bei miestų žymos perimamos iš katalogo ir gali neatitikti oficialaus administracinio skirstymo.</p></div></div><div class="market-data-links"><h3>Duomenys ir licencija</h3><p>Atverkite <a href="/atviri-duomenys/">atvirų duomenų aprašą</a> arba atsisiųskite <a href="/baldininkai-org-gamintojai.json">JSON</a> ir <a href="/baldininkai-org-gamintojai.csv">CSV</a> failus. Duomenų rinkinys skelbiamas pagal <a href="${DATASET_LICENSE_URL}" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.</p><p><strong>Priskyrimas:</strong> <q>${datasetAttribution}</q></p></div></section></article></main>${footer()}`;
+await writeRoute(marketOverviewPath, injectPage({
+  title: 'Baldų rinkos apžvalga | Baldininkai.org katalogo duomenys',
+  description: marketOverviewDescription,
+  path: marketOverviewPath,
+  type: 'article',
+  body: marketOverviewBody,
+  structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Baldų rinkos apžvalga', path: marketOverviewPath }]), marketOverviewSchema],
 }));
 
 for (const record of manufacturers) {
@@ -1222,6 +1334,7 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Virtuvės baldų kainų gidas: ${SITE_URL}/gidas/virtuves-baldu-kainos/
 - Kainos skaičiuoklė: ${SITE_URL}/baldu-kainos-skaiciuokle/
 - Projekto pasiūlymo užklausa: ${SITE_URL}/gauti-pasiulymus/
+- Baldų rinkos apžvalga: ${marketOverviewUrl}
 - Atviri duomenys ir naudojimo sąlygos: ${SITE_URL}/atviri-duomenys/
 - JSON duomenys: ${SITE_URL}/${datasetJsonFilename}
 - CSV duomenys: ${SITE_URL}/${datasetCsvFilename}
@@ -1247,6 +1360,7 @@ await writeFile(join(publicDir, 'llms.txt'), llmsText);
 const sitemapPaths = [
   '/',
   openDataPath,
+  marketOverviewPath,
   '/baldu-kainos-skaiciuokle',
   '/gauti-pasiulymus',
   '/palyginti-pasiulymus',
@@ -1263,7 +1377,7 @@ const sitemapPaths = [
 assertUniqueRoutePaths(sitemapPaths, 'sitemap');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(buildDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
-await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: ${marketOverviewPath}/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 await writeFile(join(publicDir, INDEXNOW_KEY_FILENAME), INDEXNOW_KEY);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 buyer request route, 1 comparison route, 1 open-data route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 buyer request route, 1 comparison route, 1 open-data route, 1 market-overview route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);

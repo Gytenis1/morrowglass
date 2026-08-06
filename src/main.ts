@@ -98,7 +98,7 @@ type PolicyPage = {
 };
 
 
-type HeaderSection = 'directory' | 'guide' | 'request' | 'policy';
+type HeaderSection = 'directory' | 'guide' | 'request' | 'policy' | 'overview';
 
 type ProfileLandingLink = {
   kind: 'Miestas' | 'Kategorija';
@@ -470,6 +470,10 @@ function isOpenDataPath(pathname = window.location.pathname): boolean {
   return normalizePathname(pathname) === '/atviri-duomenys';
 }
 
+function isMarketOverviewPath(pathname = window.location.pathname): boolean {
+  return normalizePathname(pathname) === '/baldu-rinkos-apzvalga';
+}
+
 async function fetchAllManufacturers(): Promise<Manufacturer[]> {
   const records: Manufacturer[] = [];
   let page = 1;
@@ -657,6 +661,7 @@ function renderHeader(active: HeaderSection): string {
     request: 'Projekto užklausa',
     guide: 'Pirkėjo gidas',
     policy: 'Informacija',
+    overview: 'Rinkos apžvalga',
   };
   return `
     <header class="site-header">
@@ -674,6 +679,7 @@ function renderHeader(active: HeaderSection): string {
         </button>
         <nav class="primary-navigation" id="primary-navigation" aria-label="Pagrindinė navigacija">
           <a href="/" data-internal-link="true"${active === 'directory' ? ' aria-current="page"' : ''}>Katalogas</a>
+          <a href="/baldu-rinkos-apzvalga"${active === 'overview' ? ' aria-current="page"' : ''}>Rinkos apžvalga</a>
           <a href="/gauti-pasiulymus" data-internal-link="true"${active === 'request' ? ' aria-current="page"' : ''}>Projekto užklausa</a>
           <a href="/gidas" data-internal-link="true"${active === 'guide' ? ' aria-current="page"' : ''}>Pirkėjo gidas</a>
           <a href="/gidas#pirkejo-irankiai">Pirkėjo įrankiai</a>
@@ -693,6 +699,7 @@ function renderFooter(): string {
         </div>
         <nav aria-label="Poraštės navigacija">
           <a href="/baldai-pagal-uzsakyma/miestai/">Visi miestai</a>
+          <a href="/baldu-rinkos-apzvalga">Rinkos apžvalga</a>
           <a href="/gauti-pasiulymus" data-internal-link="true">Projekto užklausa</a>
           <a href="/gidas" data-internal-link="true">Pirkėjo gidas</a>
           <a href="/baldu-kainos-skaiciuokle" data-internal-link="true">Kainos skaičiuoklė</a>
@@ -2938,7 +2945,7 @@ function setHomeMetadata(): void {
 }
 
 function route(): void {
-  if (isOpenDataPath()) return;
+  if (isOpenDataPath() || isMarketOverviewPath()) return;
 
   const policyPage = getPolicyPage();
   if (policyPage) {
@@ -3060,7 +3067,7 @@ async function loadDirectory(): Promise<void> {
 
 function navigateToCurrentRoute(): void {
   browseState = readBrowseState();
-  if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isComparisonPath() || isEstimatorPath()) {
+  if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isComparisonPath() || isEstimatorPath()) {
     route();
     return;
   }
@@ -3126,7 +3133,7 @@ document.addEventListener('click', (event) => {
 
 window.addEventListener('popstate', navigateToCurrentRoute);
 
-if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isComparisonPath() || isEstimatorPath()) {
+if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isComparisonPath() || isEstimatorPath()) {
   route();
 } else {
   void loadDirectory();
