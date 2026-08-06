@@ -906,7 +906,7 @@
       "street_address": null,
       "postcode": null,
       "region_label": "Vilnius, rytų ir pietų Lietuva",
-      "website": null,
+      "website": "https://www.xbaldai.lt/",
       "public_phone": null,
       "contact_route_status": "no_public_contact_route",
       "categories": [
@@ -1596,7 +1596,8 @@
       ],
       "public_source_urls": [
         "http://www.venta.lt/",
-        "https://rekvizitai.vz.lt/en/company/venta_lt/"
+        "https://rekvizitai.vz.lt/en/company/venta_lt/",
+        "https://www.venta.lt/baldu-prieziura"
       ],
       "verification_date": "2026-07-28"
     },
@@ -1681,7 +1682,7 @@
       "street_address": null,
       "postcode": null,
       "region_label": "Kaunas ir šiaurės Lietuva",
-      "website": null,
+      "website": "https://aurimobaldai.com/",
       "public_phone": null,
       "contact_route_status": "no_public_contact_route",
       "categories": [
@@ -2426,7 +2427,8 @@
       ],
       "public_source_urls": [
         "https://www.bengita.lt/apie-mus/",
-        "https://rekvizitai.vz.lt/en/company/uab_bengita/"
+        "https://rekvizitai.vz.lt/en/company/uab_bengita/",
+        "https://www.bengita.lt/produkto-kategorija/baldu-kojos-atramos/"
       ],
       "verification_date": "2026-07-28"
     },
@@ -2734,7 +2736,7 @@
       "street_address": "Geležinkelio g. 3, Marijampolė",
       "postcode": "LT-68127",
       "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-      "website": null,
+      "website": "https://www.furnmaster.com/global-presence/",
       "public_phone": "+370 683 60184",
       "contact_route_status": "public_phone",
       "categories": [
@@ -2763,7 +2765,8 @@
         "Kiti nestandartiniai baldai"
       ],
       "public_source_urls": [
-        "https://baldmaris.lt/"
+        "https://baldmaris.lt/",
+        "https://baldmaris.lt/apie-mus/"
       ],
       "verification_date": "2026-07-28"
     },
@@ -2846,7 +2849,7 @@
       "street_address": "J. Mažeikos g. 6, Tauragė",
       "postcode": null,
       "region_label": "Klaipėda, Panevėžys, vakarų ir centrinė Lietuva",
-      "website": null,
+      "website": "https://www.tvirte.com/",
       "public_phone": "+370 685 49307",
       "contact_route_status": "public_phone",
       "categories": [
@@ -4646,7 +4649,7 @@
         "https://rekvizitai.vz.lt/en/company/valdrena/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/8eff10dd-f2f7-44cd-886c-c8a8e9daa888"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "dronga-medienos-meistrai",
@@ -4734,7 +4737,7 @@
         "https://rekvizitai.vz.lt/en/company/baldijos_projektai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/90f0f5e9-bc7d-4a0e-a953-646d9af28c3f"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "anp-inovaciniai-sprendimai",
@@ -4756,7 +4759,7 @@
         "https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/34fda8d2-3fc6-488e-9bda-21b67be09b8f"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "pajurio-baldai",
@@ -4800,7 +4803,7 @@
         "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "minijos-baldai",
@@ -4844,7 +4847,7 @@
         "https://rekvizitai.vz.lt/en/company/sakuona/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "dovaina",
@@ -4954,7 +4957,7 @@
         "https://rekvizitai.vz.lt/en/company/baldu_aleja/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "tribus",
@@ -4976,7 +4979,7 @@
         "https://rekvizitai.vz.lt/en/company/tribus/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/0ee25618-44a3-4e25-968d-7bbe1c41204c"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mk-baldai",
@@ -5020,7 +5023,7 @@
         "https://rekvizitai.vz.lt/en/company/dazymo_studija/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/0aca7596-077d-46e0-abd1-d89a0275b755"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "baldu-studija-besta",
@@ -5042,7 +5045,7 @@
         "https://rekvizitai.vz.lt/en/company/baldu_studija_besta/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/72cd2a2f-e733-436c-91d2-d767559a0318"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "deccorus",
@@ -5086,7 +5089,7 @@
         "https://rekvizitai.vz.lt/en/company/egerta/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/55114a85-bd74-46e4-bdf6-237367620938"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "inoxi",
@@ -5174,7 +5177,7 @@
         "https://rekvizitai.vz.lt/en/company/baldociai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a81aae96-b721-4d9d-9a7a-b8470b0959d8"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "furneta",
@@ -5196,7 +5199,7 @@
         "https://rekvizitai.vz.lt/en/company/furneta/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a2a3759b-8d69-497d-8d1e-ebcc294efdc0"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "baldturas-a-laseviciaus-ivv",
@@ -5243,7 +5246,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/43fd6298-aa13-4083-b8a2-6b801fd393a1",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "baldukas",
@@ -5309,7 +5312,7 @@
         "https://rekvizitai.vz.lt/en/company/nestandart/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d02117b5-e8bd-4eb7-a25d-54746d817849"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "g-baldai",
@@ -5375,7 +5378,7 @@
         "https://rekvizitai.vz.lt/en/company/arpolis/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fc31eb0b-30ac-4407-9fdb-cde1288cd3e1"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "suduvos-baldai-morita",
@@ -5573,7 +5576,7 @@
         "https://rekvizitai.vz.lt/en/company/tipo_baldai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5438fe24-568a-49c1-8c3e-2d33be0fff33"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "furnistetika",
@@ -5639,7 +5642,7 @@
         "https://rekvizitai.vz.lt/en/company/r_meistrai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/00dce3e3-f2b7-4179-b480-43c73c394a08"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "baldu-sprendimai",
@@ -5661,7 +5664,7 @@
         "https://rekvizitai.vz.lt/en/company/baldu_sprendimai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9d0a5e66-19a6-454c-ae41-bfe97d112d38"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "kokybisku-baldu-dirbtuves",
@@ -5683,7 +5686,7 @@
         "https://rekvizitai.vz.lt/en/company/kokybisku_baldu_dirbtuves/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9fa25856-4794-4683-92d3-d91b53d85581"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "medynmetis",
@@ -5705,7 +5708,7 @@
         "https://rekvizitai.vz.lt/en/company/medynmetis/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/c1a37843-c2d5-4eda-8ff6-a24479929855"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "dalduva-ii",
@@ -5925,7 +5928,7 @@
         "https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "tomadeco",
@@ -5947,7 +5950,7 @@
         "https://rekvizitai.vz.lt/en/company/tomadeco/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3104f79f-8dbd-4754-ac89-6a38fa92c07b"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "darau-2",
@@ -5969,7 +5972,7 @@
         "https://rekvizitai.vz.lt/en/company/darau_2/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/8f632100-87b4-41be-94c4-81633d2f2e83"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "luxury-furniture",
@@ -6233,7 +6236,7 @@
         "https://rekvizitai.vz.lt/en/company/uzupio_baldai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e5360652-d630-4ea0-be7c-ea60a49338d7"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "sato-baldu-idejos",
@@ -6321,7 +6324,7 @@
         "https://rekvizitai.vz.lt/en/company/albero_baldai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/daaf1bef-2a15-4b38-b724-b8c0c57bc256"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "raimeta",
@@ -6409,7 +6412,7 @@
         "https://rekvizitai.vz.lt/en/company/balajano_slenio_baldai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/b3a583e2-863c-46c8-86b6-56b8fc358f29"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "vanago-miskas",
@@ -6607,7 +6610,7 @@
         "https://rekvizitai.vz.lt/en/company/zt_furni/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/928d7b61-cc79-458b-a067-fa9e50c00677"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "sandriaus-baldai",
@@ -6629,7 +6632,7 @@
         "https://rekvizitai.vz.lt/en/company/sandriaus_baldai/",
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/c999d75b-25ec-4f22-85fa-8da408d49ac9"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "augriva",
@@ -6939,7 +6942,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/evprojektas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-julsata-125751995",
@@ -6962,7 +6965,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/j_tamasausko_firma_julsata/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-visagino-linija-300032531",
@@ -6984,7 +6987,7 @@
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/00fec2f6-dcce-4a06-827e-aa52261719e2",
         "https://rekvizitai.vz.lt/en/company/visagino_linija/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-aikstis-304887143",
@@ -7007,7 +7010,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/aikstis/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-arredo-deko-projektai-305778798",
@@ -7031,7 +7034,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9c993d79-ebbe-421c-a058-e37772190a3c",
         "https://rekvizitai.vz.lt/en/company/arredo_deko_projektai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-kzk-studija-305679946",
@@ -7054,7 +7057,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/kzk_studija/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uzdaroji-akcine-bendrove-riardzis-224476650",
@@ -7077,7 +7080,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/riardzis/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-lead-time-zero-304978027",
@@ -7101,7 +7104,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c9a45c5c-dca1-4638-b699-c678ef618f1e",
         "https://rekvizitai.vz.lt/en/company/lead_time_zero/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-vintori-304945568",
@@ -7124,7 +7127,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
         "https://rekvizitai.vz.lt/en/company/vintori/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-baltasis-bizonas-304231694",
@@ -7148,7 +7151,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bcc50a71-b237-4c8f-9faa-d4c73e697f40",
         "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-piluka-304222065",
@@ -7172,7 +7175,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/2914e4fc-3a83-43fe-af5d-ed0c2f85dee6",
         "https://rekvizitai.vz.lt/en/company/piluka/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mazoji-bendrija-obrimus-305831539",
@@ -7196,7 +7199,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3c9d9038-794a-4bff-9fed-53e763a915ca",
         "https://rekvizitai.vz.lt/en/company/obrimus/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-baldu-gaminiai-304098482",
@@ -7220,7 +7223,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8346ec3d-637d-4a2f-bbe5-48ff7551d46a",
         "https://rekvizitai.vz.lt/en/company/baldu_gaminiai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-baldakas-306712160",
@@ -7244,7 +7247,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ea455ebe-197d-4e05-a3c0-c9f4fe60830e",
         "https://rekvizitai.vz.lt/en/company/baldakas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-baldaiska-306323928",
@@ -7313,7 +7316,7 @@
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03be44df-38bb-4168-a8d8-ecbb59823b7c",
         "https://rekvizitai.vz.lt/en/company/viva_style/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-fika-lt-302711050",
@@ -7335,7 +7338,7 @@
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03dfe5bb-f465-49f2-930b-9897792e9945",
         "https://rekvizitai.vz.lt/en/company/uab_pifka/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-milpra-303301150",
@@ -7359,7 +7362,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d26f2a7f-df7d-4622-a7f1-5a852511300a",
         "https://rekvizitai.vz.lt/en/company/milpra/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-anjaras-125510364",
@@ -7383,7 +7386,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/dce68bac-4e15-4b2f-9572-62879477b9e4",
         "https://rekvizitai.vz.lt/en/company/anjaras/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-space-idea-property-306391498",
@@ -7429,7 +7432,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/la_projects/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-sk-design-300104258",
@@ -7453,7 +7456,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e1c31477-3f70-4c2f-a864-69183a687320",
         "https://rekvizitai.vz.lt/en/company/sk_design/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-tryse-baldai-306879647",
@@ -7477,7 +7480,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/15b5d4f4-dedd-4d0b-8e5a-8e7a9d35ce22",
         "https://rekvizitai.vz.lt/en/company/tryse_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-freda-133386126",
@@ -7489,7 +7492,7 @@
       "street_address": "Piliakalnio g. 3",
       "postcode": "LT-46224",
       "region_label": "Kaunas ir šiaurės Lietuva",
-      "website": null,
+      "website": "https://www.freda.eu/apie-mus/",
       "public_phone": "+37037391212",
       "contact_route_status": "public_phone",
       "categories": [
@@ -7501,7 +7504,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/04fceef6-c85d-47d7-9e83-f97127375c40",
         "https://rekvizitai.vz.lt/en/company/freda/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-ba-dirbtuves-305679775",
@@ -7524,7 +7527,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
         "https://rekvizitai.vz.lt/en/company/ba_dirbtuves/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-abc-baldai-306653648",
@@ -7548,7 +7551,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/461a438b-e44f-4738-94b7-b35c53e6cda4",
         "https://rekvizitai.vz.lt/en/company/abc_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-labanoris-305390728",
@@ -7572,7 +7575,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3f372482-d576-4c4a-87bc-86bf99279aa7",
         "https://rekvizitai.vz.lt/en/company/labanoris/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "sigito-baciansko-individuali-imone-125773881",
@@ -7619,7 +7622,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/62e0330e-3b1e-468f-97fd-79095a65b54c",
         "https://rekvizitai.vz.lt/en/company/jurio_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uzdaroji-akcine-bendrove-saloza-234003980",
@@ -7643,7 +7646,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/daf27939-e08a-4f36-840d-75f1cbd0d9b1",
         "https://rekvizitai.vz.lt/en/company/saloza/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-kensa-302542006",
@@ -7667,7 +7670,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c0ee2055-2917-4557-b24b-5da6d605aa4e",
         "https://rekvizitai.vz.lt/en/company/kensa/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "vilmers-uab-300098524",
@@ -7690,7 +7693,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
         "https://rekvizitai.vz.lt/en/company/litsofa/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "ii-vysniu-baldai-304840040",
@@ -7736,7 +7739,7 @@
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/072cf424-b8e6-4465-b037-301878fb8127",
         "https://rekvizitai.vz.lt/en/company/aztrekas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-melamin-306146424",
@@ -7758,7 +7761,7 @@
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/07501f3b-4e30-477d-8cad-9e30241f52b3",
         "https://rekvizitai.vz.lt/en/company/melamin/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-furnipro-305699614",
@@ -7782,7 +7785,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cafb7f75-d1be-45d7-949c-69e367b86c21",
         "https://rekvizitai.vz.lt/en/company/furnipro/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-kanteka-307296512",
@@ -7805,7 +7808,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
         "https://rekvizitai.vz.lt/en/company/kanteka/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-korsara-302469437",
@@ -7851,7 +7854,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
         "https://rekvizitai.vz.lt/en/company/karaliaus_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-vagensas-255973180",
@@ -7874,7 +7877,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f8f8c4c8-ad7b-47e5-b786-e45a582163dc",
         "https://rekvizitai.vz.lt/en/company/baldai_vagensas_parduotuve/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-eega1-300004336",
@@ -7896,7 +7899,7 @@
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/08cb0e7f-b10c-4053-af43-1c90a59acc73",
         "https://rekvizitai.vz.lt/en/company/eega1/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-aistis-ir-rokas-304521861",
@@ -7942,7 +7945,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
         "https://rekvizitai.vz.lt/en/company/destructa/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "ii-a-gaizausko-imone-miltauja-179463167",
@@ -7990,7 +7993,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/4c080294-e878-40b6-aecf-8e621d2a5341",
         "https://rekvizitai.vz.lt/en/company/domingus/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-rupeja-305771184",
@@ -8013,7 +8016,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/45f1aea7-4027-4cb0-a9c5-e9296d05c391",
         "https://rekvizitai.vz.lt/en/company/rupeja/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "baldasta-mb-306997147",
@@ -8060,7 +8063,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1006dc27-1cc6-404d-b9c1-89a081b4bc3f",
         "https://rekvizitai.vz.lt/en/company/kadeira/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-versus-interior-304960125",
@@ -8084,7 +8087,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9db7c101-bf43-41f3-8c5b-a3dc794b5186",
         "https://rekvizitai.vz.lt/en/company/versus_interior/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-tabalda-307093825",
@@ -8108,7 +8111,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c789df2e-5f47-43bc-b0d4-7a38dd435f16",
         "https://rekvizitai.vz.lt/en/company/tabalda/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-magnum-reditus-303192562",
@@ -8132,7 +8135,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/25bb5495-6692-4d7e-aafd-a4cf4cd3bd30",
         "https://rekvizitai.vz.lt/en/company/magnum_reditus/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-mirandeka-302556080",
@@ -8155,7 +8158,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/mirandeka/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-grg-baldai-306635924",
@@ -8178,7 +8181,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/8fb3e00c-b30a-4535-ae9d-8455257a748c",
         "https://rekvizitai.vz.lt/en/company/grg_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-joniskio-baldai-157689644",
@@ -8201,7 +8204,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/6ed9cb33-1d83-404d-a56b-11cba9a6b1b0",
         "https://rekvizitai.vz.lt/en/company/uab_joniskio_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uzdaroji-akcine-bendrove-medrika-148051482",
@@ -8225,7 +8228,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1817961d-8016-4351-8adc-ee2e1ea91daf",
         "https://rekvizitai.vz.lt/en/company/medrika/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-alneka-304186306",
@@ -8248,7 +8251,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/alneka/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-s2s-301785585",
@@ -8271,7 +8274,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/uab_s2s/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-ctt-300132909",
@@ -8295,7 +8298,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/411bde2d-5967-4e50-8c00-b7eb9f280de8",
         "https://rekvizitai.vz.lt/en/company/ctt/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "egidijaus-kino-imone-179749033",
@@ -8342,7 +8345,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
         "https://rekvizitai.vz.lt/en/company/baldu_svaja/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-sonavita-301696898",
@@ -8388,7 +8391,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/uab_kitaip/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-rigresta-303242378",
@@ -8412,7 +8415,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/00007209-12f6-49f6-9720-af28a5fca67b",
         "https://rekvizitai.vz.lt/en/company/rigresta/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-pintora-304835958",
@@ -8435,7 +8438,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9c609953-2e4c-46cf-90d1-40ab676e6291",
         "https://rekvizitai.vz.lt/en/company/pintora/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-ternis-305217644",
@@ -8459,7 +8462,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/6697289e-1af6-4357-a720-07668f6daf17",
         "https://rekvizitai.vz.lt/en/company/ternis/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-furnidedes-305939301",
@@ -8482,7 +8485,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
         "https://rekvizitai.vz.lt/en/company/furnidedes/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-real-vision-302453276",
@@ -8505,7 +8508,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
         "https://rekvizitai.vz.lt/en/company/uab_real_vision/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-sprendimai-baldininkams-304990410",
@@ -8529,7 +8532,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/a66be85b-e659-4a9f-8f8f-9cccc918582e",
         "https://rekvizitai.vz.lt/en/company/sprendimai_baldininkams/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-stilforma-302761402",
@@ -8574,7 +8577,7 @@
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e60408b-1a3a-43c7-a2bb-6ad20896ee5f",
         "https://rekvizitai.vz.lt/en/company/sernosis/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-ms-baldai-302680509",
@@ -8598,7 +8601,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/7eb2b38c-15ca-4508-b149-59789efe93b8",
         "https://rekvizitai.vz.lt/en/company/ms_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-smv-projektai-302430459",
@@ -8645,7 +8648,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5a1995aa-257e-4556-b3a4-6440f62e3d02",
         "https://rekvizitai.vz.lt/en/company/baldukai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-interius-304291360",
@@ -8669,7 +8672,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9c2fe601-3524-4434-84a1-ebaf4b0651f2",
         "https://rekvizitai.vz.lt/en/company/interius/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uzdaroji-akcine-bendrove-medinedas-160289293",
@@ -8691,7 +8694,7 @@
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0f787dba-60c7-4281-b4df-ab66ddf80bf5",
         "https://rekvizitai.vz.lt/en/company/medinedas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-bhk-lietuva-300050141",
@@ -8715,7 +8718,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/411fb9e3-a3f3-437c-97b1-b882e2adb55b",
         "https://rekvizitai.vz.lt/en/company/bhk_lietuva/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-ofus-302532624",
@@ -8739,7 +8742,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/72224068-8dfc-4cd9-bc10-a23903b50532",
         "https://rekvizitai.vz.lt/en/company/ofus/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-borera-306723872",
@@ -8762,7 +8765,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/borera/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-blanko-baldai-306183629",
@@ -8809,7 +8812,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/624ddf4a-c4c0-41ab-9bbe-44f83fde5a63",
         "https://rekvizitai.vz.lt/en/company/artus_lt/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-algideja-304395996",
@@ -8833,7 +8836,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f9bbc76b-bd58-4386-b477-db24076d7cdb",
         "https://rekvizitai.vz.lt/en/company/algideja/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-baldu-sistemos-126273181",
@@ -8857,7 +8860,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/883dfe14-b6fd-4942-ad14-90d2cde5417a",
         "https://rekvizitai.vz.lt/en/company/baldu_sistemos/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-metalo-pulsas-306198588",
@@ -8878,9 +8881,10 @@
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/117c2562-7c6e-44f3-8765-4365e9d1409a",
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/42c53065-93ab-4e35-98e8-72eabc3c1d4f",
-        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/0cdafe21-5f6f-480d-87dd-3ae91f70a794"
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/0cdafe21-5f6f-480d-87dd-3ae91f70a794",
+        "https://rekvizitai.vz.lt/en/company/metalo_pulsas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-esd-baldai-301089656",
@@ -8905,7 +8909,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
         "https://rekvizitai.vz.lt/en/company/esd_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-geri-amatai-302568620",
@@ -8928,7 +8932,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
         "https://rekvizitai.vz.lt/en/company/geri_amatai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-nero-baldai-303245214",
@@ -8997,7 +9001,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/dominyko_projektai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-tovera-305844611",
@@ -9021,7 +9025,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8318c35b-c8e7-493e-b5e9-5de09723322d",
         "https://rekvizitai.vz.lt/en/company/tovera/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-minora-301537376",
@@ -9044,7 +9048,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
         "https://rekvizitai.vz.lt/en/company/uab_minora/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-oaky-oak-304940471",
@@ -9068,7 +9072,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/4eae005d-0c3e-4a8a-81a7-7ec59944af1a",
         "https://rekvizitai.vz.lt/en/company/oaky_oak/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-tigna-171703525",
@@ -9138,7 +9142,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9b1ff39c-5eda-4bc1-ba79-03255d2dd750",
         "https://rekvizitai.vz.lt/en/company/bebro_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-agla-164741529",
@@ -9161,7 +9165,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/e2d5722d-a0cf-4bce-be13-f6b2cbbf6f9c",
         "https://rekvizitai.vz.lt/en/company/agla/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "nerijaus-bucio-imone-258888760",
@@ -9206,7 +9210,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
         "https://rekvizitai.vz.lt/en/company/esteto_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-ego-verus-300003654",
@@ -9229,7 +9233,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/ego_verus/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-lurenos-baldai-305568967",
@@ -9252,7 +9256,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/0af923dd-067a-4863-b25d-287fb9ef808e",
         "https://rekvizitai.vz.lt/en/company/lurenos_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-re-baldai-306069853",
@@ -9275,7 +9279,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/re_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-milijonas-kampu-305236609",
@@ -9299,7 +9303,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/25c6773b-2593-48b5-8f40-bd9902a0ba76",
         "https://rekvizitai.vz.lt/en/company/milijonas_kampu/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-korela-303022154",
@@ -9322,7 +9326,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/8f3601da-4356-4fa8-9aaa-a1e3aba105c4",
         "https://rekvizitai.vz.lt/en/company/korela/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-tvm-furniture-307106831",
@@ -9345,7 +9349,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/248200e2-bdf4-414b-877d-3a151265eb80",
         "https://rekvizitai.vz.lt/en/company/tvm_furniture/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mazoji-bendrija-dili-baldai-307059068",
@@ -9369,7 +9373,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8a2f4bf2-8c3c-454a-9422-f23f8aa9dc75",
         "https://rekvizitai.vz.lt/en/company/dili_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-narbutas-international-300591314",
@@ -9393,7 +9397,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
         "https://rekvizitai.vz.lt/en/company/narbutas_international/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "ideju-aleja-uab-302495535",
@@ -9417,7 +9421,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ad173e15-5572-4065-8279-10e6eba6aa8a",
         "https://rekvizitai.vz.lt/en/company/ideju_aleja/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-emona-lt-305201921",
@@ -9441,7 +9445,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/9ba2a277-e69a-490a-8abf-8d6b1025acd9",
         "https://rekvizitai.vz.lt/en/company/emona_lt/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-arnitana-304171090",
@@ -9465,7 +9469,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e9f5cb85-30a2-402c-b86b-74b2e7ec7856",
         "https://rekvizitai.vz.lt/en/company/arnitana/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-forneris-300647357",
@@ -9512,7 +9516,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f1a284a8-81a7-47a0-ace7-fb08349f7f99",
         "https://rekvizitai.vz.lt/en/company/marijampoles_komprojektas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uzdaroji-akcine-bendrove-zbiga-123645712",
@@ -9558,7 +9562,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
         "https://rekvizitai.vz.lt/en/company/45_kampai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-timo-verslas-135053451",
@@ -9604,7 +9608,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/visokie_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-lacio-302539095",
@@ -9628,7 +9632,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/6c4cd700-a6d4-46f7-bc8f-cdac94a1f2aa",
         "https://rekvizitai.vz.lt/en/company/lacio/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mazoji-bendrija-valdo-projektai-305684562",
@@ -9652,7 +9656,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c62814f0-f80e-4b2a-87c1-ed46c985bd3a",
         "https://rekvizitai.vz.lt/en/company/valdo_projektai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-lukandra-135871110",
@@ -9676,7 +9680,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d09fa89d-2c34-4375-9fb8-8040d9f30833",
         "https://rekvizitai.vz.lt/en/company/lukandra/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-armiba-306365293",
@@ -9700,7 +9704,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5aef415b-c291-4d25-a0f3-48740d24f9bd",
         "https://rekvizitai.vz.lt/en/company/armiba/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-baldu-tonas-304048440",
@@ -9724,7 +9728,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ebe9d25e-4e27-43aa-beba-95e5f54886dd",
         "https://rekvizitai.vz.lt/en/company/baldu_tonas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-stilo-baldai-303056929",
@@ -9748,7 +9752,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5d589c9b-3fc4-4aa8-8103-17eb0cf88ceb",
         "https://rekvizitai.vz.lt/en/company/stilo_baldai/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uzdaroji-akcine-bendrove-balresta-123915741",
@@ -9772,7 +9776,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cca52401-fd89-4dda-ab9c-8672e73b52cb",
         "https://rekvizitai.vz.lt/en/company/balresta/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-vilgma-gi-302678383",
@@ -9818,7 +9822,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/klipas/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-cps-engineering-300085719",
@@ -9841,7 +9845,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/cps_engineering/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-ar-studio-300657700",
@@ -9864,7 +9868,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
         "https://rekvizitai.vz.lt/en/company/uab_ar_studio/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "mb-alfo-statybos-305393037",
@@ -9933,7 +9937,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/ecd017de-4285-4f24-974a-9d2eacfb5eab",
         "https://rekvizitai.vz.lt/en/company/virtnora/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-dimantra-304985961",
@@ -9957,7 +9961,7 @@
         "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d329dc9f-7645-4019-9059-6e8413fa29dd",
         "https://rekvizitai.vz.lt/en/company/dimantra/"
       ],
-      "verification_date": "2026-08-04"
+      "verification_date": "2026-08-06"
     },
     {
       "slug": "uab-eltino-302526443",

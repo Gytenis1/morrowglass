@@ -1367,19 +1367,20 @@
     "verification_status": "nepatvirtinta",
     "company_code": "302301724",
     "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_ramzo/",
-    "revenue_eur_latest": null,
-    "revenue_year": null,
+    "revenue_eur_latest": 34928,
+    "revenue_year": 2024,
     "owner_manager_name": null,
     "owner_signal": "nepaskelbta",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/uab_ramzo/",
       "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3c578148-a1ae-4026-b5fe-d3815e7b03b0"
     ],
-    "revenue_availability": "nepaskelbta",
+    "revenue_availability": "paskelbta",
     "financial_verification_status": "patikrinta",
     "verified_at": "2026-07-28",
     "street_address": "Gamyklos g. 10",
-    "postcode": "LT-13210"
+    "postcode": "LT-13210",
+    "founded_year": 2009
   },
   {
     "slug": "baldai-j-g",
@@ -1418,19 +1419,21 @@
     "verification_status": "nepatvirtinta",
     "company_code": "304248359",
     "financial_source_url": "https://rekvizitai.vz.lt/en/company/jono_ir_giedriaus_baldai/",
-    "revenue_eur_latest": null,
-    "revenue_year": null,
+    "revenue_eur_latest": 279772,
+    "revenue_year": 2025,
     "owner_manager_name": null,
     "owner_signal": "nepaskelbta",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/jono_ir_giedriaus_baldai/",
       "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cb94875a-1649-4ce7-8ae2-c003a6d10245"
     ],
-    "revenue_availability": "nepaskelbta",
+    "revenue_availability": "paskelbta",
     "financial_verification_status": "patikrinta",
     "verified_at": "2026-07-28",
     "street_address": "Kaimelio g. 9",
-    "postcode": "LT-21342"
+    "postcode": "LT-21342",
+    "founded_year": 2016,
+    "employee_count_band": "1-9"
   },
   {
     "slug": "sole-lt",
@@ -1960,7 +1963,7 @@
       "Medžio darbai ir medžio masyvo baldai"
     ],
     "audience": "abiem",
-    "website": null,
+    "website": "https://www.xbaldai.lt/",
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
@@ -3125,7 +3128,8 @@
     "verified_at": "2026-07-28",
     "street_address": "J. Basanavičiaus g. 129C",
     "postcode": "LT-76129",
-    "public_phone": "+37061730770"
+    "public_phone": "+37061730770",
+    "founded_year": 1991
   },
   {
     "slug": "tomer-s",
@@ -3166,7 +3170,8 @@
     "owner_manager_name": "Tomas Barauskas",
     "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
     "public_details_source_urls": [
-      "https://www.tomers.lt/en"
+      "https://www.tomers.lt/en",
+      "https://www.tomers.lt/en/about-us"
     ],
     "revenue_availability": "nepaskelbta",
     "financial_verification_status": "patikrinta",
@@ -3474,7 +3479,8 @@
     "founded_year": 2008,
     "employee_count_band": "50-249",
     "public_details_source_urls": [
-      "https://rekvizitai.vz.lt/en/company/venta_lt/"
+      "https://rekvizitai.vz.lt/en/company/venta_lt/",
+      "https://www.venta.lt/baldu-prieziura"
     ],
     "financial_source_url": "https://rekvizitai.vz.lt/en/company/venta_lt/",
     "revenue_eur_latest": 4516253,
@@ -3666,7 +3672,7 @@
       "Biuro ir komerciniai baldai"
     ],
     "audience": "buitiniai",
-    "website": null,
+    "website": "https://aurimobaldai.com/",
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "vidutinis",
@@ -3686,7 +3692,8 @@
     "owner_manager_name": null,
     "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
     "public_details_source_urls": [
-      "https://aurimobaldai.lt/"
+      "https://aurimobaldai.lt/",
+      "https://www.info.lt/imones/Aurimo-baldai/2413959"
     ],
     "revenue_availability": "nepaskelbta",
     "financial_verification_status": "patikrinta",
@@ -5302,7 +5309,8 @@
     "founded_year": 2010,
     "employee_count_band": "10-49",
     "public_details_source_urls": [
-      "https://rekvizitai.vz.lt/en/company/uab_bengita/"
+      "https://rekvizitai.vz.lt/en/company/uab_bengita/",
+      "https://www.bengita.lt/produkto-kategorija/baldu-kojos-atramos/"
     ],
     "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_bengita/",
     "revenue_eur_latest": 1810026,
@@ -5979,7 +5987,7 @@
       "Kiti nestandartiniai baldai"
     ],
     "audience": "abiem",
-    "website": null,
+    "website": "https://www.furnmaster.com/global-presence/",
     "public_contact_url": null,
     "portfolio_status": "yra",
     "confidence": "vidutinis",
@@ -5999,7 +6007,8 @@
     "founded_year": 2012,
     "employee_count_band": "50-249",
     "public_details_source_urls": [
-      "https://rekvizitai.vz.lt/en/company/furnmaster/"
+      "https://rekvizitai.vz.lt/en/company/furnmaster/",
+      "https://www.furnmaster.com/global-presence/"
     ],
     "financial_source_url": "https://rekvizitai.vz.lt/en/company/furnmaster/",
     "revenue_eur_latest": 23980277,
@@ -6048,7 +6057,8 @@
     "owner_manager_name": "Marius Budginas",
     "owner_signal": "individuali veikla; viešas juridinio asmens kodas nepaskelbtas",
     "public_details_source_urls": [
-      "https://baldmaris.lt/"
+      "https://baldmaris.lt/",
+      "https://baldmaris.lt/apie-mus/"
     ],
     "revenue_availability": "nepaskelbta",
     "financial_verification_status": "patikrinta",
@@ -6225,7 +6235,7 @@
       "Kiti nestandartiniai baldai"
     ],
     "audience": "abiem",
-    "website": null,
+    "website": "https://www.tvirte.com/",
     "public_contact_url": null,
     "portfolio_status": "nežinoma",
     "confidence": "vidutinis",
@@ -6244,7 +6254,8 @@
     "founded_year": 2014,
     "employee_count_band": "0",
     "public_details_source_urls": [
-      "https://rekvizitai.vz.lt/en/company/tvirte/"
+      "https://rekvizitai.vz.lt/en/company/tvirte/",
+      "https://www.tvirte.com/"
     ],
     "financial_source_url": "https://rekvizitai.vz.lt/en/company/tvirte/",
     "revenue_eur_latest": 11595,
@@ -6879,19 +6890,21 @@
     "verification_status": "nepatvirtinta",
     "company_code": "151204721",
     "financial_source_url": "https://rekvizitai.vz.lt/en/company/morita/",
-    "revenue_eur_latest": null,
-    "revenue_year": null,
+    "revenue_eur_latest": 5261383,
+    "revenue_year": 2025,
     "owner_manager_name": "Vygantas Subačius",
     "owner_signal": "vadovas viešai nurodytas",
     "public_details_source_urls": [
       "https://rekvizitai.vz.lt/en/company/morita/",
       "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/ff287656-828e-4826-8b21-d6ac37507c59"
     ],
-    "revenue_availability": "nepaskelbta",
+    "revenue_availability": "paskelbta",
     "financial_verification_status": "patikrinta",
     "verified_at": "2026-07-28",
     "street_address": "Gedimino g. 96",
-    "postcode": "LT-68118"
+    "postcode": "LT-68118",
+    "founded_year": 1993,
+    "employee_count_band": "10-49"
   },
   {
     "slug": "sedes-regia",
@@ -8503,7 +8516,8 @@
     "financial_verification_status": "patikrinta",
     "verified_at": "2026-07-28",
     "street_address": "Nemuno g. 3",
-    "postcode": "LT-46159"
+    "postcode": "LT-46159",
+    "founded_year": 2020
   },
   {
     "slug": "resize-design",
@@ -8642,14 +8656,15 @@
       "https://rekvizitai.vz.lt/en/company/sapelli_uab/"
     ],
     "financial_source_url": "https://rekvizitai.vz.lt/en/company/sapelli_uab/",
-    "revenue_eur_latest": null,
-    "revenue_year": null,
+    "revenue_eur_latest": 324554,
+    "revenue_year": 2025,
     "owner_manager_name": "Darius Stundys",
     "owner_signal": "vadovas viešai nurodytas",
-    "revenue_availability": "nepaskelbta",
+    "revenue_availability": "paskelbta",
     "financial_verification_status": "patikrinta",
     "verified_at": "2026-07-28",
-    "company_code": "305755098"
+    "company_code": "305755098",
+    "founded_year": 2021
   },
   {
     "slug": "madamedi",
@@ -9427,7 +9442,9 @@
     "financial_verification_status": "patikrinta",
     "verified_at": "2026-07-28",
     "street_address": "Dainų g. 46A",
-    "postcode": "LT-78284"
+    "postcode": "LT-78284",
+    "founded_year": 1995,
+    "employee_count_band": "1-9"
   },
   {
     "slug": "baldinta",
@@ -9514,18 +9531,18 @@
     "street_address": "Jono Puzino g. 21",
     "postcode": "LT-08300",
     "founded_year": 1997,
-    "employee_count_band": "",
+    "employee_count_band": "1-9",
     "public_details_source_urls": [
       "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1a197d41-7008-4e59-8881-28b9ef9ffc20",
       "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
       "https://rekvizitai.vz.lt/en/company/fenolita/"
     ],
     "financial_source_url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1a197d41-7008-4e59-8881-28b9ef9ffc20",
-    "revenue_eur_latest": null,
-    "revenue_year": null,
+    "revenue_eur_latest": 367242,
+    "revenue_year": 2025,
     "owner_manager_name": "",
     "owner_signal": "viešame šaltinyje nenurodyta",
-    "revenue_availability": "nepaskelbta",
+    "revenue_availability": "paskelbta",
     "financial_verification_status": "patikrinta",
     "verified_at": "2026-07-28",
     "public_contact_checked_date": "2026-08-04"
@@ -10192,7 +10209,14 @@
     ],
     "company_code": "306260303",
     "public_phone": "+37067964660",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023,
+    "revenue_eur_latest": 40130,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/valdrena/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "dronga-medienos-meistrai",
@@ -10341,7 +10365,15 @@
     ],
     "company_code": "304903252",
     "public_phone": "+37068877340",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 488675,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldijos_projektai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "anp-inovaciniai-sprendimai",
@@ -10380,7 +10412,14 @@
     ],
     "company_code": "305604331",
     "public_phone": "+37067347777",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 209322,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "pajurio-baldai",
@@ -10456,7 +10495,14 @@
     ],
     "company_code": "140656052",
     "public_phone": "+37069450451",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "employee_count_band": "250+",
+    "revenue_eur_latest": 100663000,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "minijos-baldai",
@@ -10534,7 +10580,14 @@
     ],
     "company_code": "163314524",
     "public_phone": "+37046440241",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "employee_count_band": "250+",
+    "revenue_eur_latest": 57305000,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sakuona/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "dovaina",
@@ -10723,7 +10776,15 @@
     ],
     "company_code": "145755086",
     "public_phone": "+37041523478",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2001,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 110515,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_aleja/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "tribus",
@@ -10762,7 +10823,14 @@
     ],
     "company_code": "302719951",
     "public_phone": "+37065617811",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2012,
+    "revenue_eur_latest": 29044,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tribus/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mk-baldai",
@@ -10837,7 +10905,14 @@
     ],
     "company_code": "307079747",
     "public_phone": "+37068536956",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025,
+    "revenue_eur_latest": 69469,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/dazymo_studija/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "baldu-studija-besta",
@@ -10876,7 +10951,15 @@
     ],
     "company_code": "306096035",
     "public_phone": "+37062630867",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 665363,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_studija_besta/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "deccorus",
@@ -10915,7 +10998,8 @@
     ],
     "company_code": "302542853",
     "public_phone": "+37031551384",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010
   },
   {
     "slug": "egerta",
@@ -10954,7 +11038,15 @@
     ],
     "company_code": "305356398",
     "public_phone": "+37068832216",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2019,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1070460,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/egerta/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "inoxi",
@@ -11106,7 +11198,15 @@
     ],
     "company_code": "304137444",
     "public_phone": "+37060158322",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2015,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 40788,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldociai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "furneta",
@@ -11145,7 +11245,15 @@
     ],
     "company_code": "304422048",
     "public_phone": "+37061134883",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2016,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 354884,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/furneta/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "baldturas-a-laseviciaus-ivv",
@@ -11223,7 +11331,14 @@
     ],
     "company_code": "305961874",
     "public_phone": "+37064514008",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "revenue_eur_latest": 22757,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/pasmeta_lt/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "baldukas",
@@ -11338,7 +11453,14 @@
     ],
     "company_code": "307132057",
     "public_phone": "+37062166563",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025,
+    "revenue_eur_latest": 49472,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/nestandart/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "g-baldai",
@@ -11377,7 +11499,8 @@
     ],
     "company_code": "307397002",
     "public_phone": "+37061149929",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025
   },
   {
     "slug": "mr-design",
@@ -11416,7 +11539,8 @@
     ],
     "company_code": "307569498",
     "public_phone": "+37068087004",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2026
   },
   {
     "slug": "arpolis",
@@ -11450,11 +11574,19 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fc31eb0b-30ac-4407-9fdb-cde1288cd3e1"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fc31eb0b-30ac-4407-9fdb-cde1288cd3e1",
+      "https://rekvizitai.vz.lt/en/company/arpolis/"
     ],
     "company_code": "300614040",
     "no_public_contact_route": true,
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 2676126,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/arpolis/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "suduvos-baldai-morita",
@@ -11530,7 +11662,8 @@
     ],
     "company_code": "304442524",
     "public_phone": "+37061836239",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2017
   },
   {
     "slug": "mood-furniture",
@@ -11791,7 +11924,14 @@
     ],
     "company_code": "306303263",
     "public_phone": "+37064782828",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023,
+    "revenue_eur_latest": 150,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tipo_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "furnistetika",
@@ -11868,7 +12008,8 @@
     ],
     "company_code": "307537931",
     "public_phone": "+37062215761",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2026
   },
   {
     "slug": "r-meistrai",
@@ -11907,7 +12048,14 @@
     ],
     "company_code": "305665875",
     "public_phone": "+37060140030",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2020,
+    "revenue_eur_latest": 5300,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/r_meistrai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "baldu-sprendimai",
@@ -11946,7 +12094,14 @@
     ],
     "company_code": "306629348",
     "public_phone": "+37062867701",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023,
+    "revenue_eur_latest": 30729,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_sprendimai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "kokybisku-baldu-dirbtuves",
@@ -11985,7 +12140,15 @@
     ],
     "company_code": "306650926",
     "public_phone": "+37061519379",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 158380,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kokybisku_baldu_dirbtuves/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "medynmetis",
@@ -12024,7 +12187,14 @@
     ],
     "company_code": "306730856",
     "public_phone": "+37061630841",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "revenue_eur_latest": 2950,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/medynmetis/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "dalduva-ii",
@@ -12394,7 +12564,14 @@
     ],
     "company_code": "161637614",
     "public_phone": "+37034756278",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2001,
+    "revenue_eur_latest": 5707,
+    "revenue_year": 2020,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/m_pralgausko_imone/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "tomadeco",
@@ -12433,7 +12610,14 @@
     ],
     "company_code": "305724455",
     "public_phone": "+37068581623",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "revenue_eur_latest": 21048,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tomadeco/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "darau-2",
@@ -12472,7 +12656,14 @@
     ],
     "company_code": "305876580",
     "public_phone": "+37060867215",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "revenue_eur_latest": 56852,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/darau_2/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "luxury-furniture",
@@ -12511,7 +12702,8 @@
     ],
     "company_code": "306021189",
     "public_phone": "+37060097642",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022
   },
   {
     "slug": "baldmaris-nestandartiniu-baldu-gamyba",
@@ -12586,7 +12778,8 @@
     ],
     "company_code": "306263705",
     "public_phone": "+37065552468",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023
   },
   {
     "slug": "tailida",
@@ -12625,7 +12818,8 @@
     ],
     "company_code": "307169696",
     "public_phone": "+37068137136",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025
   },
   {
     "slug": "silales-baldai",
@@ -12924,7 +13118,14 @@
     ],
     "company_code": "304607367",
     "public_phone": "+37063010032",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2017,
+    "revenue_eur_latest": 62662,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uzupio_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "sato-baldu-idejos",
@@ -12963,7 +13164,8 @@
     ],
     "company_code": "306077348",
     "public_phone": "+37067616253",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022
   },
   {
     "slug": "narbutas-edge",
@@ -13002,7 +13204,8 @@
     ],
     "company_code": "307021466",
     "public_phone": "+37069930061",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024
   },
   {
     "slug": "gdm-creative",
@@ -13041,7 +13244,9 @@
     ],
     "company_code": "307544445",
     "public_phone": "+37062062602",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2026,
+    "employee_count_band": "1-9"
   },
   {
     "slug": "albero-baldai",
@@ -13080,7 +13285,14 @@
     ],
     "company_code": "305439851",
     "public_phone": "+37067970084",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2020,
+    "revenue_eur_latest": 37138,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/albero_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "raimeta",
@@ -13232,7 +13444,14 @@
     ],
     "company_code": "307164852",
     "public_phone": "+37067042514",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025,
+    "revenue_eur_latest": 50300,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/balajano_slenio_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "vanago-miskas",
@@ -13565,7 +13784,14 @@
     ],
     "company_code": "305701321",
     "public_phone": "+37067823088",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "revenue_eur_latest": 37372,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/zt_furni/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "sandriaus-baldai",
@@ -13604,7 +13830,15 @@
     ],
     "company_code": "306673992",
     "public_phone": "+37061688549",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 193680,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sandriaus_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "augriva",
@@ -14088,7 +14322,9 @@
       "https://rekvizitai.vz.lt/en/company/ii_arominda/"
     ],
     "public_phone": "+37060184566",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2007,
+    "employee_count_band": "1-9"
   },
   {
     "slug": "uab-evprojektas-304885612",
@@ -14128,7 +14364,15 @@
       "https://rekvizitai.vz.lt/en/company/evprojektas/"
     ],
     "public_phone": "+37065645270",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 374994,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/evprojektas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-julsata-125751995",
@@ -14168,7 +14412,15 @@
       "https://rekvizitai.vz.lt/en/company/j_tamasausko_firma_julsata/"
     ],
     "public_phone": "+37065656336",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2001,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 85785,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/j_tamasausko_firma_julsata/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-visagino-linija-300032531",
@@ -14207,7 +14459,15 @@
       "https://rekvizitai.vz.lt/en/company/visagino_linija/"
     ],
     "public_phone": "+37061899300",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2005,
+    "employee_count_band": "250+",
+    "revenue_eur_latest": 73326000,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/visagino_linija/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-aikstis-304887143",
@@ -14247,7 +14507,15 @@
       "https://rekvizitai.vz.lt/en/company/aikstis/"
     ],
     "public_phone": "+37064533340",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 34165,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/aikstis/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-arredo-deko-projektai-305778798",
@@ -14288,7 +14556,15 @@
       "https://rekvizitai.vz.lt/en/company/arredo_deko_projektai/"
     ],
     "public_phone": "+37062330626",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1570218,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/arredo_deko_projektai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-kzk-studija-305679946",
@@ -14328,7 +14604,15 @@
       "https://rekvizitai.vz.lt/en/company/kzk_studija/"
     ],
     "public_phone": "+37034945395",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 152113,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kzk_studija/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uzdaroji-akcine-bendrove-riardzis-224476650",
@@ -14368,7 +14652,15 @@
       "https://rekvizitai.vz.lt/en/company/riardzis/"
     ],
     "public_phone": "+37069926350",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1998,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 270301,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/riardzis/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-lead-time-zero-304978027",
@@ -14409,7 +14701,15 @@
       "https://rekvizitai.vz.lt/en/company/lead_time_zero/"
     ],
     "public_phone": "+37067135502",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2019,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 4479289,
+    "revenue_year": 2024,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/lead_time_zero/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-vintori-304945568",
@@ -14449,7 +14749,15 @@
       "https://rekvizitai.vz.lt/en/company/vintori/"
     ],
     "public_phone": "+37060027746",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 38083,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/vintori/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-baltasis-bizonas-304231694",
@@ -14490,7 +14798,15 @@
       "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/"
     ],
     "public_phone": "+37063700070",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2016,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 5496,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baltasis_bizonas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-piluka-304222065",
@@ -14531,7 +14847,15 @@
       "https://rekvizitai.vz.lt/en/company/piluka/"
     ],
     "public_phone": "+37060370460",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2016,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 188741,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/piluka/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mazoji-bendrija-obrimus-305831539",
@@ -14572,7 +14896,15 @@
       "https://rekvizitai.vz.lt/en/company/obrimus/"
     ],
     "public_phone": "+37062589888",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 23631,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/obrimus/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-baldu-gaminiai-304098482",
@@ -14613,7 +14945,14 @@
       "https://rekvizitai.vz.lt/en/company/baldu_gaminiai/"
     ],
     "public_phone": "+37061010085",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2015,
+    "revenue_eur_latest": 32650,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_gaminiai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-baldakas-306712160",
@@ -14654,7 +14993,14 @@
       "https://rekvizitai.vz.lt/en/company/baldakas/"
     ],
     "public_phone": "+37063683874",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "revenue_eur_latest": 87125,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldakas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-baldaiska-306323928",
@@ -14695,7 +15041,8 @@
       "https://rekvizitai.vz.lt/en/company/baldaiska/"
     ],
     "public_phone": "+37065575871",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023
   },
   {
     "slug": "artrum-mb-305981318",
@@ -14774,7 +15121,15 @@
       "https://rekvizitai.vz.lt/en/company/viva_style/"
     ],
     "public_phone": "+37065177717",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 64701,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/viva_style/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-fika-lt-302711050",
@@ -14813,7 +15168,14 @@
       "https://rekvizitai.vz.lt/en/company/uab_pifka/"
     ],
     "public_phone": "+37037211979",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 2961273,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_pifka/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-milpra-303301150",
@@ -14854,7 +15216,14 @@
       "https://rekvizitai.vz.lt/en/company/milpra/"
     ],
     "public_phone": "+37060428238",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2014,
+    "revenue_eur_latest": 97903,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/milpra/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-anjaras-125510364",
@@ -14895,7 +15264,15 @@
       "https://rekvizitai.vz.lt/en/company/anjaras/"
     ],
     "public_phone": "+37052152372",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2001,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 589216,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/anjaras/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-space-idea-property-306391498",
@@ -14935,7 +15312,8 @@
       "https://rekvizitai.vz.lt/en/company/space_idea_property/"
     ],
     "public_phone": "+37060130365",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023
   },
   {
     "slug": "mb-la-projects-306708016",
@@ -14975,7 +15353,14 @@
       "https://rekvizitai.vz.lt/en/company/la_projects/"
     ],
     "no_public_contact_route": true,
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "revenue_eur_latest": 3586,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/la_projects/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-sk-design-300104258",
@@ -15016,7 +15401,15 @@
       "https://rekvizitai.vz.lt/en/company/sk_design/"
     ],
     "public_phone": "+37038731380",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2005,
+    "employee_count_band": "50-249",
+    "revenue_eur_latest": 2122242,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sk_design/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-tryse-baldai-306879647",
@@ -15057,7 +15450,14 @@
       "https://rekvizitai.vz.lt/en/company/tryse_baldai/"
     ],
     "public_phone": "+37069935753",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "revenue_eur_latest": 29228,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tryse_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-freda-133386126",
@@ -15098,7 +15498,16 @@
       "https://rekvizitai.vz.lt/en/company/freda/"
     ],
     "public_phone": "+37037391212",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "website": "https://www.freda.eu/apie-mus/",
+    "founded_year": 1992,
+    "employee_count_band": "250+",
+    "revenue_eur_latest": 307608524,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/freda/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-ba-dirbtuves-305679775",
@@ -15138,7 +15547,14 @@
       "https://rekvizitai.vz.lt/en/company/ba_dirbtuves/"
     ],
     "public_phone": "+37064123453",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "revenue_eur_latest": 18470,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ba_dirbtuves/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-abc-baldai-306653648",
@@ -15179,7 +15595,14 @@
       "https://rekvizitai.vz.lt/en/company/abc_baldai/"
     ],
     "public_phone": "+37067215153",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "revenue_eur_latest": 289225,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/abc_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-labanoris-305390728",
@@ -15220,7 +15643,14 @@
       "https://rekvizitai.vz.lt/en/company/labanoris/"
     ],
     "public_phone": "+37038388888",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2019,
+    "revenue_eur_latest": 43190,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/labanoris/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "sigito-baciansko-individuali-imone-125773881",
@@ -15260,7 +15690,8 @@
       "https://rekvizitai.vz.lt/en/company/sigito_baciansko_ii/"
     ],
     "public_phone": "+37052707104",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2001
   },
   {
     "slug": "mb-jurio-baldai-307020485",
@@ -15301,7 +15732,15 @@
       "https://rekvizitai.vz.lt/en/company/jurio_baldai/"
     ],
     "public_phone": "+37064040666",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 61558,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/jurio_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uzdaroji-akcine-bendrove-saloza-234003980",
@@ -15342,7 +15781,15 @@
       "https://rekvizitai.vz.lt/en/company/saloza/"
     ],
     "public_phone": "+37037341391",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1994,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1841575,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/saloza/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-kensa-302542006",
@@ -15383,7 +15830,15 @@
       "https://rekvizitai.vz.lt/en/company/kensa/"
     ],
     "public_phone": "+37066422322",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010,
+    "employee_count_band": "50-249",
+    "revenue_eur_latest": 17268965,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kensa/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "vilmers-uab-300098524",
@@ -15423,7 +15878,15 @@
       "https://rekvizitai.vz.lt/en/company/litsofa/"
     ],
     "public_phone": "+37041545134",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2005,
+    "employee_count_band": "250+",
+    "revenue_eur_latest": 30682532,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/litsofa/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "ii-vysniu-baldai-304840040",
@@ -15464,7 +15927,8 @@
       "https://rekvizitai.vz.lt/en/company/vysniu_baldai/"
     ],
     "public_phone": "+37062080250",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018
   },
   {
     "slug": "uab-aztrekas-135499959",
@@ -15503,7 +15967,15 @@
       "https://rekvizitai.vz.lt/en/company/aztrekas/"
     ],
     "public_phone": "+37037312506",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1999,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 354357,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/aztrekas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-melamin-306146424",
@@ -15542,7 +16014,15 @@
       "https://rekvizitai.vz.lt/en/company/melamin/"
     ],
     "public_phone": "+37064660603",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 290547,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/melamin/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-furnipro-305699614",
@@ -15583,7 +16063,15 @@
       "https://rekvizitai.vz.lt/en/company/furnipro/"
     ],
     "public_phone": "+37065029260",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 771076,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/furnipro/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-kanteka-307296512",
@@ -15623,7 +16111,15 @@
       "https://rekvizitai.vz.lt/en/company/kanteka/"
     ],
     "public_phone": "+37064582686",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 105790,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kanteka/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-korsara-302469437",
@@ -15703,7 +16199,14 @@
       "https://rekvizitai.vz.lt/en/company/karaliaus_baldai/"
     ],
     "public_phone": "+37066444262",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022,
+    "revenue_eur_latest": 65083,
+    "revenue_year": 2024,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/karaliaus_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-vagensas-255973180",
@@ -15743,7 +16246,15 @@
       "https://rekvizitai.vz.lt/en/company/baldai_vagensas_parduotuve/"
     ],
     "public_phone": "+37038670727",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2001,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 142847,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldai_vagensas_parduotuve/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-eega1-300004336",
@@ -15782,7 +16293,14 @@
       "https://rekvizitai.vz.lt/en/company/eega1/"
     ],
     "public_phone": "+37065030971",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 282798,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/eega1/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-aistis-ir-rokas-304521861",
@@ -15822,7 +16340,8 @@
       "https://rekvizitai.vz.lt/en/company/aistis_ir_rokas/"
     ],
     "public_phone": "+37068693390",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2017
   },
   {
     "slug": "uab-destructa-305913872",
@@ -15862,7 +16381,15 @@
       "https://rekvizitai.vz.lt/en/company/destructa/"
     ],
     "public_phone": "+37069411221",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 568202,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/destructa/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "ii-a-gaizausko-imone-miltauja-179463167",
@@ -15903,7 +16430,9 @@
       "https://rekvizitai.vz.lt/en/company/a_gaizausko_imone_miltauja/"
     ],
     "public_phone": "+37044670012",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1996,
+    "employee_count_band": "10-49"
   },
   {
     "slug": "uab-domingus-304459872",
@@ -15944,7 +16473,14 @@
       "https://rekvizitai.vz.lt/en/company/domingus/"
     ],
     "public_phone": "+37067834533",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2017,
+    "revenue_eur_latest": 7653,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/domingus/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-rupeja-305771184",
@@ -15984,7 +16520,15 @@
       "https://rekvizitai.vz.lt/en/company/rupeja/"
     ],
     "public_phone": "+37064342476",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 69300,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/rupeja/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "baldasta-mb-306997147",
@@ -16065,7 +16609,15 @@
       "https://rekvizitai.vz.lt/en/company/kadeira/"
     ],
     "public_phone": "+37060994028",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2015,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 283258,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/kadeira/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-versus-interior-304960125",
@@ -16106,7 +16658,14 @@
       "https://rekvizitai.vz.lt/en/company/versus_interior/"
     ],
     "public_phone": "+37067283262",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018,
+    "revenue_eur_latest": 44860,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/versus_interior/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-tabalda-307093825",
@@ -16147,7 +16706,14 @@
       "https://rekvizitai.vz.lt/en/company/tabalda/"
     ],
     "public_phone": "+37066571661",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025,
+    "revenue_eur_latest": 24920,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tabalda/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-magnum-reditus-303192562",
@@ -16188,7 +16754,15 @@
       "https://rekvizitai.vz.lt/en/company/magnum_reditus/"
     ],
     "public_phone": "+37067957939",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2013,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 241456,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/magnum_reditus/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-mirandeka-302556080",
@@ -16228,7 +16802,15 @@
       "https://rekvizitai.vz.lt/en/company/mirandeka/"
     ],
     "public_phone": "+37065656167",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 291270,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/mirandeka/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-grg-baldai-306635924",
@@ -16268,7 +16850,14 @@
       "https://rekvizitai.vz.lt/en/company/grg_baldai/"
     ],
     "public_phone": "+37063366870",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023,
+    "revenue_eur_latest": 46899,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/grg_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-joniskio-baldai-157689644",
@@ -16308,7 +16897,15 @@
       "https://rekvizitai.vz.lt/en/company/uab_joniskio_baldai/"
     ],
     "public_phone": "+37061118904",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2001,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 462892,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_joniskio_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uzdaroji-akcine-bendrove-medrika-148051482",
@@ -16349,7 +16946,14 @@
       "https://rekvizitai.vz.lt/en/company/medrika/"
     ],
     "public_phone": "+37045516373",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1019834,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/medrika/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-alneka-304186306",
@@ -16389,7 +16993,15 @@
       "https://rekvizitai.vz.lt/en/company/alneka/"
     ],
     "public_phone": "+37064118888",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2016,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 133455,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/alneka/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-s2s-301785585",
@@ -16429,7 +17041,15 @@
       "https://rekvizitai.vz.lt/en/company/uab_s2s/"
     ],
     "no_public_contact_route": true,
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2008,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 82909,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_s2s/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-ctt-300132909",
@@ -16470,7 +17090,14 @@
       "https://rekvizitai.vz.lt/en/company/ctt/"
     ],
     "public_phone": "+37067874277",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2005,
+    "revenue_eur_latest": 7154,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ctt/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "egidijaus-kino-imone-179749033",
@@ -16511,7 +17138,8 @@
       "https://rekvizitai.vz.lt/en/company/egidijaus_kino_imone/"
     ],
     "public_phone": "+37044661660",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1998
   },
   {
     "slug": "uab-baldu-svaja-303927859",
@@ -16551,7 +17179,14 @@
       "https://rekvizitai.vz.lt/en/company/baldu_svaja/"
     ],
     "public_phone": "+37060606924",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2015,
+    "revenue_eur_latest": 45357,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_svaja/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-sonavita-301696898",
@@ -16631,7 +17266,15 @@
       "https://rekvizitai.vz.lt/en/company/uab_kitaip/"
     ],
     "public_phone": "+37052656649",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2008,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 734772,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_kitaip/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-rigresta-303242378",
@@ -16672,7 +17315,15 @@
       "https://rekvizitai.vz.lt/en/company/rigresta/"
     ],
     "public_phone": "+37060022500",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2014,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 222910,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/rigresta/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-pintora-304835958",
@@ -16712,7 +17363,14 @@
       "https://rekvizitai.vz.lt/en/company/pintora/"
     ],
     "public_phone": "+37062077788",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018,
+    "revenue_eur_latest": 21110,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/pintora/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-ternis-305217644",
@@ -16753,7 +17411,15 @@
       "https://rekvizitai.vz.lt/en/company/ternis/"
     ],
     "public_phone": "+37068264005",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2019,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1089865,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ternis/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-furnidedes-305939301",
@@ -16793,7 +17459,14 @@
       "https://rekvizitai.vz.lt/en/company/furnidedes/"
     ],
     "public_phone": "+37061001023",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "revenue_eur_latest": 3930,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/furnidedes/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-real-vision-302453276",
@@ -16833,7 +17506,15 @@
       "https://rekvizitai.vz.lt/en/company/uab_real_vision/"
     ],
     "public_phone": "+37068948536",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2009,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 123334,
+    "revenue_year": 2024,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_real_vision/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-sprendimai-baldininkams-304990410",
@@ -16874,7 +17555,15 @@
       "https://rekvizitai.vz.lt/en/company/sprendimai_baldininkams/"
     ],
     "public_phone": "+37052329010",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2019,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 347012,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sprendimai_baldininkams/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-stilforma-302761402",
@@ -16953,7 +17642,14 @@
       "https://rekvizitai.vz.lt/en/company/sernosis/"
     ],
     "public_phone": "+37064674990",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "revenue_eur_latest": 8248,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/sernosis/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-ms-baldai-302680509",
@@ -16994,7 +17690,15 @@
       "https://rekvizitai.vz.lt/en/company/ms_baldai/"
     ],
     "public_phone": "+37067981195",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2011,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 424209,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ms_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-smv-projektai-302430459",
@@ -17075,7 +17779,14 @@
       "https://rekvizitai.vz.lt/en/company/baldukai/"
     ],
     "public_phone": "+37061115563",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "revenue_eur_latest": 61254,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldukai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-interius-304291360",
@@ -17116,7 +17827,14 @@
       "https://rekvizitai.vz.lt/en/company/interius/"
     ],
     "public_phone": "+37065532313",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2016,
+    "revenue_eur_latest": 57499,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/interius/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uzdaroji-akcine-bendrove-medinedas-160289293",
@@ -17155,7 +17873,15 @@
       "https://rekvizitai.vz.lt/en/company/medinedas/"
     ],
     "public_phone": "+37037563836",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2001,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 46690,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/medinedas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-bhk-lietuva-300050141",
@@ -17196,7 +17922,15 @@
       "https://rekvizitai.vz.lt/en/company/bhk_lietuva/"
     ],
     "public_phone": "+37038650045",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2004,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 13869752,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/bhk_lietuva/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-ofus-302532624",
@@ -17237,7 +17971,14 @@
       "https://rekvizitai.vz.lt/en/company/ofus/"
     ],
     "public_phone": "+37060196019",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010,
+    "revenue_eur_latest": 10178,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ofus/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-borera-306723872",
@@ -17277,7 +18018,14 @@
       "https://rekvizitai.vz.lt/en/company/borera/"
     ],
     "public_phone": "+37064860453",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2024,
+    "revenue_eur_latest": 48772,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/borera/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-blanko-baldai-306183629",
@@ -17317,7 +18065,8 @@
       "https://rekvizitai.vz.lt/en/company/blanko_baldai/"
     ],
     "public_phone": "+37061393385",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022
   },
   {
     "slug": "uab-artus-lt-303126904",
@@ -17358,7 +18107,15 @@
       "https://rekvizitai.vz.lt/en/company/artus_lt/"
     ],
     "public_phone": "+37061813838",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2013,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1395954,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/artus_lt/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-algideja-304395996",
@@ -17399,7 +18156,15 @@
       "https://rekvizitai.vz.lt/en/company/algideja/"
     ],
     "public_phone": "+37060766969",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2016,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 133690,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/algideja/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-baldu-sistemos-126273181",
@@ -17440,7 +18205,15 @@
       "https://rekvizitai.vz.lt/en/company/baldu_sistemos/"
     ],
     "public_phone": "+37064741220",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2003,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1141425,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_sistemos/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-metalo-pulsas-306198588",
@@ -17477,10 +18250,19 @@
     "public_details_source_urls": [
       "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/117c2562-7c6e-44f3-8765-4365e9d1409a",
       "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/42c53065-93ab-4e35-98e8-72eabc3c1d4f",
-      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/0cdafe21-5f6f-480d-87dd-3ae91f70a794"
+      "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/0cdafe21-5f6f-480d-87dd-3ae91f70a794",
+      "https://rekvizitai.vz.lt/en/company/metalo_pulsas/"
     ],
     "no_public_contact_route": true,
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 324410,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/metalo_pulsas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-esd-baldai-301089656",
@@ -17522,7 +18304,15 @@
       "https://rekvizitai.vz.lt/en/company/esd_baldai/"
     ],
     "public_phone": "+37068745141",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2007,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 431986,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/esd_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-geri-amatai-302568620",
@@ -17562,7 +18352,15 @@
       "https://rekvizitai.vz.lt/en/company/geri_amatai/"
     ],
     "public_phone": "+37067508704",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 32280,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/geri_amatai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-nero-baldai-303245214",
@@ -17602,7 +18400,8 @@
       "https://rekvizitai.vz.lt/en/company/nero_baldai/"
     ],
     "public_phone": "+37065018399",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2014
   },
   {
     "slug": "uzdaroji-akcine-bendrove-mantisa-302327402",
@@ -17642,7 +18441,8 @@
       "https://rekvizitai.vz.lt/en/company/uab_mantisa/"
     ],
     "public_phone": "+37068044024",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2009
   },
   {
     "slug": "uab-dominyko-projektai-304103246",
@@ -17682,7 +18482,15 @@
       "https://rekvizitai.vz.lt/en/company/dominyko_projektai/"
     ],
     "public_phone": "+37060424328",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2015,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 212817,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/dominyko_projektai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-tovera-305844611",
@@ -17723,7 +18531,14 @@
       "https://rekvizitai.vz.lt/en/company/tovera/"
     ],
     "public_phone": "+37066238600",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "revenue_eur_latest": 43504,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tovera/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-minora-301537376",
@@ -17763,7 +18578,15 @@
       "https://rekvizitai.vz.lt/en/company/uab_minora/"
     ],
     "public_phone": "+37062037871",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2008,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 155054,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_minora/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-oaky-oak-304940471",
@@ -17804,7 +18627,15 @@
       "https://rekvizitai.vz.lt/en/company/oaky_oak/"
     ],
     "public_phone": "+37064411155",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2018,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 503465,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/oaky_oak/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-tigna-171703525",
@@ -17885,7 +18716,8 @@
       "https://rekvizitai.vz.lt/en/company/litvaista/"
     ],
     "public_phone": "+37069839943",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1993
   },
   {
     "slug": "uab-robenas-302743411",
@@ -17925,7 +18757,15 @@
       "https://rekvizitai.vz.lt/en/company/bebro_baldai/"
     ],
     "public_phone": "+37067805778",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2012,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 260151,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/bebro_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-agla-164741529",
@@ -17965,7 +18805,15 @@
       "https://rekvizitai.vz.lt/en/company/agla/"
     ],
     "public_phone": "+37068622156",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1991,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 913815,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/agla/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "nerijaus-bucio-imone-258888760",
@@ -18004,7 +18852,8 @@
       "https://rekvizitai.vz.lt/en/company/n_bucio/"
     ],
     "public_phone": "+37069962778",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1993
   },
   {
     "slug": "mb-esteto-baldai-306167137",
@@ -18044,7 +18893,15 @@
       "https://rekvizitai.vz.lt/en/company/esteto_baldai/"
     ],
     "public_phone": "+37065184453",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 187400,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/esteto_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-ego-verus-300003654",
@@ -18084,7 +18941,14 @@
       "https://rekvizitai.vz.lt/en/company/ego_verus/"
     ],
     "public_phone": "+37060107071",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2004,
+    "revenue_eur_latest": 92750,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ego_verus/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-lurenos-baldai-305568967",
@@ -18124,7 +18988,14 @@
       "https://rekvizitai.vz.lt/en/company/lurenos_baldai/"
     ],
     "public_phone": "+37063177050",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2020,
+    "revenue_eur_latest": 38168,
+    "revenue_year": 2024,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/lurenos_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-re-baldai-306069853",
@@ -18164,7 +19035,15 @@
       "https://rekvizitai.vz.lt/en/company/re_baldai/"
     ],
     "public_phone": "+37060525612",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 232865,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/re_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-milijonas-kampu-305236609",
@@ -18205,7 +19084,14 @@
       "https://rekvizitai.vz.lt/en/company/milijonas_kampu/"
     ],
     "public_phone": "+37069229825",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2019,
+    "revenue_eur_latest": 217,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/milijonas_kampu/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-korela-303022154",
@@ -18245,7 +19131,15 @@
       "https://rekvizitai.vz.lt/en/company/korela/"
     ],
     "public_phone": "+37068694869",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2013,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 208352,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/korela/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-tvm-furniture-307106831",
@@ -18285,7 +19179,14 @@
       "https://rekvizitai.vz.lt/en/company/tvm_furniture/"
     ],
     "public_phone": "+37060391801",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025,
+    "revenue_eur_latest": 163128,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/tvm_furniture/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mazoji-bendrija-dili-baldai-307059068",
@@ -18326,7 +19227,14 @@
       "https://rekvizitai.vz.lt/en/company/dili_baldai/"
     ],
     "public_phone": "+37069965438",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025,
+    "revenue_eur_latest": 82123,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/dili_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-narbutas-international-300591314",
@@ -18367,7 +19275,14 @@
       "https://rekvizitai.vz.lt/en/company/narbutas_international/"
     ],
     "public_phone": "+37052107922",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "employee_count_band": "250+",
+    "revenue_eur_latest": 164514180,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/narbutas_international/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "ideju-aleja-uab-302495535",
@@ -18408,7 +19323,15 @@
       "https://rekvizitai.vz.lt/en/company/ideju_aleja/"
     ],
     "public_phone": "+37061554549",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1877684,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/ideju_aleja/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-emona-lt-305201921",
@@ -18449,7 +19372,14 @@
       "https://rekvizitai.vz.lt/en/company/emona_lt/"
     ],
     "public_phone": "+37067012813",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2019,
+    "revenue_eur_latest": 26905,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/emona_lt/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-arnitana-304171090",
@@ -18490,7 +19420,13 @@
       "https://rekvizitai.vz.lt/en/company/arnitana/"
     ],
     "public_phone": "+37061657237",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "revenue_eur_latest": 30299,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/arnitana/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-forneris-300647357",
@@ -18571,7 +19507,15 @@
       "https://rekvizitai.vz.lt/en/company/marijampoles_komprojektas/"
     ],
     "public_phone": "+37065233617",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1994,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 127346,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/marijampoles_komprojektas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uzdaroji-akcine-bendrove-zbiga-123645712",
@@ -18651,7 +19595,14 @@
       "https://rekvizitai.vz.lt/en/company/45_kampai/"
     ],
     "public_phone": "+37067995055",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2022,
+    "revenue_eur_latest": 55625,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/45_kampai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-timo-verslas-135053451",
@@ -18731,7 +19682,14 @@
       "https://rekvizitai.vz.lt/en/company/visokie_baldai/"
     ],
     "public_phone": "+37067563762",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2025,
+    "revenue_eur_latest": 3965,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/visokie_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-lacio-302539095",
@@ -18772,7 +19730,15 @@
       "https://rekvizitai.vz.lt/en/company/lacio/"
     ],
     "public_phone": "+37068262583",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 44886,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/lacio/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mazoji-bendrija-valdo-projektai-305684562",
@@ -18813,7 +19779,15 @@
       "https://rekvizitai.vz.lt/en/company/valdo_projektai/"
     ],
     "public_phone": "+37068711667",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2021,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 198475,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/valdo_projektai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-lukandra-135871110",
@@ -18854,7 +19828,14 @@
       "https://rekvizitai.vz.lt/en/company/lukandra/"
     ],
     "public_phone": "+37037563802",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2002,
+    "revenue_eur_latest": 2973,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/lukandra/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-armiba-306365293",
@@ -18895,7 +19876,14 @@
       "https://rekvizitai.vz.lt/en/company/armiba/"
     ],
     "public_phone": "+37068328165",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023,
+    "revenue_eur_latest": 15840,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/armiba/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-baldu-tonas-304048440",
@@ -18936,7 +19924,15 @@
       "https://rekvizitai.vz.lt/en/company/baldu_tonas/"
     ],
     "public_phone": "+37068304583",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2015,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 198673,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/baldu_tonas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-stilo-baldai-303056929",
@@ -18977,7 +19973,14 @@
       "https://rekvizitai.vz.lt/en/company/stilo_baldai/"
     ],
     "public_phone": "+37067753439",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2013,
+    "revenue_eur_latest": 59498,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/stilo_baldai/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uzdaroji-akcine-bendrove-balresta-123915741",
@@ -19018,7 +20021,15 @@
       "https://rekvizitai.vz.lt/en/company/balresta/"
     ],
     "public_phone": "+37052620773",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 1997,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 477842,
+    "revenue_year": 2024,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/balresta/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-vilgma-gi-302678383",
@@ -19098,7 +20109,14 @@
       "https://rekvizitai.vz.lt/en/company/klipas/"
     ],
     "public_phone": "+37061402748",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010,
+    "revenue_eur_latest": 119634,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/klipas/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-cps-engineering-300085719",
@@ -19138,7 +20156,15 @@
       "https://rekvizitai.vz.lt/en/company/cps_engineering/"
     ],
     "public_phone": "+37067054370",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2005,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 96045,
+    "revenue_year": 2024,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/cps_engineering/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-ar-studio-300657700",
@@ -19178,7 +20204,15 @@
       "https://rekvizitai.vz.lt/en/company/uab_ar_studio/"
     ],
     "public_phone": "+37061033663",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2007,
+    "employee_count_band": "10-49",
+    "revenue_eur_latest": 1159816,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/uab_ar_studio/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "mb-alfo-statybos-305393037",
@@ -19298,7 +20332,14 @@
       "https://rekvizitai.vz.lt/en/company/virtnora/"
     ],
     "public_phone": "+37060153277",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2023,
+    "revenue_eur_latest": 5214,
+    "revenue_year": 2024,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/virtnora/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-dimantra-304985961",
@@ -19339,7 +20380,15 @@
       "https://rekvizitai.vz.lt/en/company/dimantra/"
     ],
     "public_phone": "+37068630281",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2019,
+    "employee_count_band": "1-9",
+    "revenue_eur_latest": 111053,
+    "revenue_year": 2025,
+    "financial_source_url": "https://rekvizitai.vz.lt/en/company/dimantra/",
+    "revenue_availability": "paskelbta",
+    "financial_verification_status": "patikrinta",
+    "verified_at": "2026-08-06"
   },
   {
     "slug": "uab-eltino-302526443",
@@ -19379,7 +20428,8 @@
       "https://rekvizitai.vz.lt/en/company/uab_eltino/"
     ],
     "public_phone": "+37065506564",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2010
   },
   {
     "slug": "uab-skaisteriai-nt-304418854",
@@ -19420,6 +20470,7 @@
       "https://rekvizitai.vz.lt/en/company/skaisteriai_nt/"
     ],
     "public_phone": "+37068571762",
-    "public_contact_checked_date": "2026-08-04"
+    "public_contact_checked_date": "2026-08-04",
+    "founded_year": 2016
   }
 ]
