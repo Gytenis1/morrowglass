@@ -394,6 +394,66 @@ function publicUrl(value) {
   }
 }
 
+function validIsoDate(value) {
+  const iso = String(value ?? '').trim();
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!match) return '';
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day ? iso : '';
+}
+
+function recordVerificationDate(record) {
+  return validIsoDate(record.verified_at)
+    || validIsoDate(record.public_contact_checked_date)
+    || validIsoDate(record.source_collection_date);
+}
+
+function contactRouteStatus(record) {
+  const hasPhone = Boolean(String(record.public_phone ?? '').trim());
+  const hasContactUrl = Boolean(publicUrl(record.public_contact_url));
+  if (hasPhone && hasContactUrl) return 'public_phone_and_contact_url';
+  if (hasPhone) return 'public_phone';
+  if (hasContactUrl) return 'public_contact_url';
+  if (record.no_public_contact_route === true) return 'no_public_contact_route';
+  throw new Error(`Manufacturer ${record.slug} has no public contact route and is not explicitly marked no_public_contact_route.`);
+}
+
+function publicSourceUrls(record) {
+  return [...new Set([
+    ...(Array.isArray(record.source_urls) ? record.source_urls : []),
+    ...(Array.isArray(record.public_details_source_urls) ? record.public_details_source_urls : []),
+    record.financial_source_url,
+  ].map(publicUrl).filter(Boolean))];
+}
+
+function datasetRecord(record) {
+  return {
+    slug: record.slug,
+    profile_url: canonicalUrl(`/gamintojas/${record.slug}`),
+    trading_name: record.trading_name?.trim() || null,
+    legal_name: record.legal_name?.trim() || null,
+    company_code: record.company_code?.trim() || null,
+    city: record.city?.trim() || null,
+    street_address: record.street_address?.trim() || null,
+    postcode: record.postcode?.trim() || null,
+    region_label: record.region_label?.trim() || null,
+    website: publicUrl(record.website) || null,
+    public_phone: record.public_phone?.trim() || null,
+    contact_route_status: contactRouteStatus(record),
+    categories: [...record.category_labels],
+    public_source_urls: publicSourceUrls(record),
+    verification_date: recordVerificationDate(record) || null,
+  };
+}
+
+function csvCell(value) {
+  const text = Array.isArray(value) ? value.join(' | ') : value == null ? '' : String(value);
+  return `"${text.replace(/"/g, '""')}"`;
+}
+
 function slugifyLithuanian(value) {
   const replacements = { ą: 'a', č: 'c', ę: 'e', ė: 'e', į: 'i', š: 's', ų: 'u', ū: 'u', ž: 'z' };
   return value.toLocaleLowerCase('lt-LT')
@@ -416,14 +476,9 @@ function isRegistryChecked(record) {
 }
 
 function registryCheckedDate(value) {
-  const iso = String(value ?? '').trim();
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
-  if (!match) return null;
-  const year = Number(match[1]);
-  const month = Number(match[2]);
-  const day = Number(match[3]);
-  const date = new Date(Date.UTC(year, month - 1, day));
-  if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return null;
+  const iso = validIsoDate(value);
+  if (!iso) return null;
+  const date = new Date(`${iso}T00:00:00.000Z`);
   return {
     iso,
     label: new Intl.DateTimeFormat('lt-LT', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(date),
@@ -509,8 +564,11 @@ function manufacturerSchema(record) {
   };
   if (record.legal_name?.trim()) data.legalName = record.legal_name.trim();
   if (description) data.description = description;
-  if (publicUrl(record.website)) data.sameAs = [publicUrl(record.website)];
+  const websiteUrl = publicUrl(record.website);
+  if (websiteUrl) data.sameAs = [websiteUrl];
   if (record.public_phone?.trim()) data.telephone = record.public_phone.trim();
+  const dateModified = recordVerificationDate(record);
+  if (dateModified) data.dateModified = dateModified;
   const address = { '@type': 'PostalAddress' };
   if (record.street_address?.trim()) address.streetAddress = record.street_address.trim();
   if (record.city?.trim()) address.addressLocality = record.city.trim();
@@ -564,7 +622,7 @@ function header(active = 'directory') {
 }
 
 function footer() {
-  return '<footer><div class="footer-inner"><div class="footer-summary"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Poraštės navigacija"><a href="/baldu-kainos-skaiciuokle">Kainos skaičiuoklė</a><a href="/gauti-pasiulymus">Projekto užklausa</a><a href="/gidas">Pirkėjo gidas</a><a href="/gidas/baldu-pirkimo-sutarties-sablonas">Sutarties šablonas</a><a href="/palyginti-pasiulymus">Pasiūlymų palyginimas</a><a href="/privatumas">Privatumas</a><a href="/naudojimosi-salygos">Naudojimosi sąlygos</a><a href="/slapukai">Slapukai</a><a href="/atsiliepimu-taisykles">Atsiliepimų taisyklės</a><a href="/irasyti-pataisyma">Įrašo pataisymas</a></nav></div></footer>';
+  return '<footer><div class="footer-inner"><div class="footer-summary"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Poraštės navigacija"><a href="/baldu-kainos-skaiciuokle">Kainos skaičiuoklė</a><a href="/gauti-pasiulymus">Projekto užklausa</a><a href="/gidas">Pirkėjo gidas</a><a href="/gidas/baldu-pirkimo-sutarties-sablonas">Sutarties šablonas</a><a href="/palyginti-pasiulymus">Pasiūlymų palyginimas</a><a href="/atviri-duomenys">Atviri duomenys</a><a href="/privatumas">Privatumas</a><a href="/naudojimosi-salygos">Naudojimosi sąlygos</a><a href="/slapukai">Slapukai</a><a href="/atsiliepimu-taisykles">Atsiliepimų taisyklės</a><a href="/irasyti-pataisyma">Įrašo pataisymas</a></nav></div></footer>';
 }
 
 function manufacturerCard(record) {
@@ -770,6 +828,17 @@ for (const page of policyPages) {
   }));
 }
 
+const publicDataset = manufacturers.map(datasetRecord);
+const openDataPath = '/atviri-duomenys';
+const openDataBody = `${header('policy')}<main class="policy-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="policy-document open-data-document"><header class="policy-header"><p class="kicker">Viešas katalogo duomenų rinkinys</p><h1>Atviri Baldininkai.org duomenys</h1><p class="lead">Atsisiųskite šiuo svetainės versijos kūrimu paskelbtus Lietuvos nestandartinių baldų gamintojų kandidatų įrašus JSON arba CSV formatu.</p></header><dl class="policy-operator" aria-label="Duomenų rinkinio suvestinė"><div><dt>Įrašų</dt><dd>${publicDataset.length}</dd></div><div><dt>Atnaujinta</dt><dd><time datetime="${buildDate}">${buildDate}</time></dd></div><div><dt>Formatai</dt><dd>JSON ir CSV</dd></div></dl><div class="policy-copy open-data-copy"><section aria-labelledby="open-data-download-title"><h2 id="open-data-download-title">Atsisiųsti duomenis</h2><p>Abu failai sugeneruoti iš to paties šaltinio rinkinio ir turi po vieną eilutę ar objektą kiekvienam šiuo metu kataloge skelbiamam įrašui.</p><ul class="open-data-downloads"><li><a href="/baldininkai-org-gamintojai.json" download><strong>JSON duomenų rinkinys</strong><span>Struktūruoti objektai su kategorijų ir šaltinių masyvais</span><span aria-hidden="true">↓</span></a></li><li><a href="/baldininkai-org-gamintojai.csv" download><strong>CSV duomenų rinkinys</strong><span>Lentelė skaičiuoklėms ir duomenų analizės įrankiams</span><span aria-hidden="true">↓</span></a></li></ul></section><section><h2>Kas įtraukta</h2><p>Kiekviename įraše pateikiamas katalogo identifikatorius ir pilnas profilio adresas, viešas ar prekinis bei juridinis pavadinimas, įmonės kodas, miestas, gatvės adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių adresai ir turima patikros data.</p><p>Tušti laukai reiškia, kad atitinkama reikšmė šaltinio rinkinyje nepateikta. Būsena <code>no_public_contact_route</code> naudojama tik tada, kai šaltinio įraše aiškiai pažymėta, kad viešo kontaktinio kelio nerasta.</p></section><section><h2>Duomenų kilmė ir atnaujinimas</h2><p>Rinkinys sudarytas iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Prie kiekvieno įrašo pateikiamos šaltinių nuorodos, naudotos tapatybei, veiklos krypčiai ar viešiems įmonės duomenims pagrįsti.</p><p>Ši versija sugeneruota <time datetime="${buildDate}">${buildDate}</time> kartu su katalogo puslapiais. Failai atnaujinami iš to paties versijuoto šaltinių rinkinio kiekvieno svetainės kūrimo metu.</p></section><section><h2>Ribotumai</h2><p>Įrašai yra nepatvirtinti viešų šaltinių gamintojų kandidatai. Jų paskelbimas nėra Baldininkai.org rekomendacija, reitingas, kokybės įvertinimas ar tapatybės, informacijos tikslumo, kainos, terminų, užimtumo ir paslaugų prieinamumo garantija.</p><p>Vieši šaltiniai gali būti pasikeitę, neišsamūs ar netikslūs. Prieš priimdami sprendimą savarankiškai patikrinkite juridinius, kontaktinius ir pasiūlymo duomenis su pasirinktu gamintoju ar kitu tinkamu oficialiu šaltiniu.</p></section><section><h2>Naudojimas ir nuoroda į šaltinį</h2><p>Duomenis galite atsisiųsti, analizuoti ir pakartotinai naudoti, jei neiškreipiate jų prasmės, išlaikote aiškias ribotumų pastabas ir nenurodote, kad Baldininkai.org patvirtino ar rekomendavo įrašus.</p><p><strong>Priskyrimas:</strong> „Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, <a href="${canonicalUrl(openDataPath)}">${canonicalUrl(openDataPath)}</a>, versija ${buildDate}.“</p><p>Apie netikslumą ar reikalingą pataisymą praneškite per <a href="/irasyti-pataisyma">įrašo pataisymo tvarką</a>.</p></section></div></article></main>${footer()}`;
+await writeRoute(openDataPath, injectPage({
+  title: 'Atviri baldų gamintojų katalogo duomenys | Baldininkai.org',
+  description: `Atsisiųskite ${publicDataset.length} viešų šaltinių Lietuvos baldų gamintojų kandidatų įrašus JSON arba CSV formatu ir peržiūrėkite naudojimo ribotumus.`,
+  path: openDataPath,
+  body: openDataBody,
+  structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Atviri duomenys', path: openDataPath }])],
+}));
+
 for (const record of manufacturers) {
   const path = `/gamintojas/${record.slug}`;
   const sources = [...new Set([...(record.source_urls ?? []), record.source_artifact_url, ...(record.public_details_source_urls ?? [])].map(publicUrl).filter(Boolean))];
@@ -934,8 +1003,71 @@ for (const article of guideArticles) {
   await writeRoute(path, injectPage({ title: `${article.title} | Pirkėjo gidas`, description: article.metaDescription ?? article.summary, path, type: 'article', body, structuredData }));
 }
 
+const datasetJsonFilename = 'baldininkai-org-gamintojai.json';
+const datasetCsvFilename = 'baldininkai-org-gamintojai.csv';
+const datasetHeaders = [
+  'slug',
+  'profile_url',
+  'trading_name',
+  'legal_name',
+  'company_code',
+  'city',
+  'street_address',
+  'postcode',
+  'region_label',
+  'website',
+  'public_phone',
+  'contact_route_status',
+  'categories',
+  'public_source_urls',
+  'verification_date',
+];
+const datasetCsv = [
+  datasetHeaders.map(csvCell).join(','),
+  ...publicDataset.map((record) => datasetHeaders.map((headerName) => csvCell(record[headerName])).join(',')),
+].join('\n') + '\n';
+await writeFile(join(publicDir, datasetJsonFilename), `${JSON.stringify(publicDataset, null, 2)}\n`);
+await writeFile(join(publicDir, datasetCsvFilename), datasetCsv);
+
+const llmsText = `# Baldininkai.org
+
+## Apie katalogą
+Baldininkai.org yra viešais šaltiniais paremtas Lietuvos nestandartinių baldų gamintojų kandidatų katalogas. Jis padeda pirkėjams rasti ir savarankiškai palyginti kandidatus pagal baldų kategoriją, miestą ir viešai nurodytus įmonės duomenis.
+
+Katalogo įrašai yra nepatvirtinti viešų šaltinių kandidatai. Jie nėra Baldininkai.org rekomendacijos, reitingai ar darbų kokybės, tapatybės, informacijos tikslumo, kainos, terminų, užimtumo arba paslaugų prieinamumo garantijos.
+
+## Duomenų aprėptis ir kilmė
+Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas viešas ar prekinis ir juridinis pavadinimas, įmonės kodas, miestas, adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių nuorodos ir turima patikros data. Duomenys renkami iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Ši versija sugeneruota ${buildDate}; joje yra ${publicDataset.length} katalogo įrašai.
+
+## Pagrindinės nuorodos
+- Katalogas: ${SITE_URL}/
+- Pirkėjo gidas: ${SITE_URL}/gidas/
+- Baldų gamintojo pasirinkimo gidas: ${SITE_URL}/gidas/kaip-pasirinkti-baldu-gamintoja/
+- Virtuvės baldų kainų gidas: ${SITE_URL}/gidas/virtuves-baldu-kainos/
+- Kainos skaičiuoklė: ${SITE_URL}/baldu-kainos-skaiciuokle/
+- Projekto pasiūlymo užklausa: ${SITE_URL}/gauti-pasiulymus/
+- Atviri duomenys ir naudojimo sąlygos: ${SITE_URL}/atviri-duomenys/
+- JSON duomenys: ${SITE_URL}/${datasetJsonFilename}
+- CSV duomenys: ${SITE_URL}/${datasetCsvFilename}
+- Svetainės žemėlapis: ${SITE_URL}/sitemap.xml
+
+## Kategorijų puslapiai
+${landingConfig.categories.map((category) => `- ${category.title}: ${canonicalUrl(`/baldai-pagal-uzsakyma/${category.slug}`)}`).join('\n')}
+
+## Miestų puslapiai
+${landingCities.map((city) => `- ${city.city}: ${canonicalUrl(`/baldai-pagal-uzsakyma/${city.slug}`)}`).join('\n')}
+
+## Priskyrimas
+Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, ${SITE_URL}/atviri-duomenys/, versija ${buildDate}.
+
+## English summary
+Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Browse the catalogue at ${SITE_URL}/, buyer guides at ${SITE_URL}/gidas/, and the documented JSON/CSV downloads at ${SITE_URL}/atviri-duomenys/.
+`;
+await writeFile(join(publicDir, 'llms.txt'), llmsText);
+
 const sitemapPaths = [
   '/',
+  openDataPath,
   '/baldu-kainos-skaiciuokle',
   '/gauti-pasiulymus',
   '/palyginti-pasiulymus',
@@ -951,7 +1083,7 @@ const sitemapPaths = [
 assertUniqueRoutePaths(sitemapPaths, 'sitemap');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(buildDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
-await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 await writeFile(join(publicDir, INDEXNOW_KEY_FILENAME), INDEXNOW_KEY);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 buyer request route, 1 comparison route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 buyer request route, 1 comparison route, 1 open-data route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);

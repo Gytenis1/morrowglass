@@ -6,6 +6,25 @@ import { fileURLToPath } from 'node:url';
 const rootDir = fileURLToPath(new URL('..', import.meta.url));
 const publicDir = join(rootDir, 'public');
 const SITE_URL = 'https://www.baldininkai.org';
+const manufacturers = JSON.parse(await readFile(join(rootDir, 'data/manufacturers.json'), 'utf8'));
+const manufacturersBySlug = new Map(manufacturers.map((record) => [record.slug, record]));
+const datasetHeaders = [
+  'slug',
+  'profile_url',
+  'trading_name',
+  'legal_name',
+  'company_code',
+  'city',
+  'street_address',
+  'postcode',
+  'region_label',
+  'website',
+  'public_phone',
+  'contact_route_status',
+  'categories',
+  'public_source_urls',
+  'verification_date',
+];
 const errors = [];
 const titleRoutes = new Map();
 const descriptionRoutes = new Map();
@@ -113,6 +132,174 @@ function addError(route, message) {
   errors.push(`${route}: ${message}`);
 }
 
+function publicUrl(value) {
+  if (!value) return '';
+  try {
+    const url = new URL(value);
+    return url.protocol === 'https:' || url.protocol === 'http:' ? url.href : '';
+  } catch {
+    return '';
+  }
+}
+
+function validIsoDate(value) {
+  const iso = String(value ?? '').trim();
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!match) return '';
+  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+  return date.getUTCFullYear() === Number(match[1]) && date.getUTCMonth() === Number(match[2]) - 1 && date.getUTCDate() === Number(match[3]) ? iso : '';
+}
+
+function recordVerificationDate(record) {
+  return validIsoDate(record.verified_at)
+    || validIsoDate(record.public_contact_checked_date)
+    || validIsoDate(record.source_collection_date);
+}
+
+function expectedContactStatus(record) {
+  const hasPhone = Boolean(String(record.public_phone ?? '').trim());
+  const hasContactUrl = Boolean(publicUrl(record.public_contact_url));
+  if (hasPhone && hasContactUrl) return 'public_phone_and_contact_url';
+  if (hasPhone) return 'public_phone';
+  if (hasContactUrl) return 'public_contact_url';
+  if (record.no_public_contact_route === true) return 'no_public_contact_route';
+  return '';
+}
+
+function publicSourceUrls(record) {
+  return [...new Set([
+    ...(Array.isArray(record.source_urls) ? record.source_urls : []),
+    ...(Array.isArray(record.public_details_source_urls) ? record.public_details_source_urls : []),
+    record.financial_source_url,
+  ].map(publicUrl).filter(Boolean))];
+}
+
+function expectedDatasetRecord(record) {
+  return {
+    slug: record.slug,
+    profile_url: `${SITE_URL}/gamintojas/${record.slug}/`,
+    trading_name: record.trading_name?.trim() || null,
+    legal_name: record.legal_name?.trim() || null,
+    company_code: record.company_code?.trim() || null,
+    city: record.city?.trim() || null,
+    street_address: record.street_address?.trim() || null,
+    postcode: record.postcode?.trim() || null,
+    region_label: record.region_label?.trim() || null,
+    website: publicUrl(record.website) || null,
+    public_phone: record.public_phone?.trim() || null,
+    contact_route_status: expectedContactStatus(record),
+    categories: [...record.category_labels],
+    public_source_urls: publicSourceUrls(record),
+    verification_date: recordVerificationDate(record) || null,
+  };
+}
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = '';
+  let quoted = false;
+  for (let index = 0; index < text.length; index += 1) {
+    const character = text[index];
+    if (quoted) {
+      if (character === '"' && text[index + 1] === '"') {
+        field += '"';
+        index += 1;
+      } else if (character === '"') quoted = false;
+      else field += character;
+    } else if (character === '"') quoted = true;
+    else if (character === ',') {
+      row.push(field);
+      field = '';
+    } else if (character === '\n') {
+      row.push(field.replace(/\r$/, ''));
+      rows.push(row);
+      row = [];
+      field = '';
+    } else field += character;
+  }
+  if (quoted) throw new Error('unterminated quoted CSV field');
+  if (field || row.length) {
+    row.push(field.replace(/\r$/, ''));
+    rows.push(row);
+  }
+  return rows;
+}
+
+async function checkGeneratedAssets() {
+  const jsonPath = join(publicDir, 'baldininkai-org-gamintojai.json');
+  const csvPath = join(publicDir, 'baldininkai-org-gamintojai.csv');
+  let dataset = [];
+  try {
+    dataset = JSON.parse(await readFile(jsonPath, 'utf8'));
+  } catch (error) {
+    addError('/baldininkai-org-gamintojai.json', `missing or invalid JSON (${error.message})`);
+  }
+  if (!Array.isArray(dataset)) addError('/baldininkai-org-gamintojai.json', 'dataset must be a JSON array');
+  else {
+    if (dataset.length !== manufacturers.length) addError('/baldininkai-org-gamintojai.json', `expected ${manufacturers.length} objects, found ${dataset.length}`);
+    const sourceSlugs = new Set(manufacturers.map((record) => record.slug));
+    const datasetSlugs = new Set(dataset.map((record) => record?.slug));
+    if (datasetSlugs.size !== dataset.length) addError('/baldininkai-org-gamintojai.json', 'dataset slugs must be unique');
+    for (const slug of sourceSlugs) if (!datasetSlugs.has(slug)) addError('/baldininkai-org-gamintojai.json', `missing source record ${slug}`);
+    for (const record of dataset) {
+      const source = manufacturersBySlug.get(record?.slug);
+      if (!source) {
+        addError('/baldininkai-org-gamintojai.json', `unexpected record ${String(record?.slug)}`);
+        continue;
+      }
+      const expected = expectedDatasetRecord(source);
+      if (JSON.stringify(record) !== JSON.stringify(expected)) addError('/baldininkai-org-gamintojai.json', `record ${source.slug} does not match source-derived fields`);
+      if (!record.contact_route_status) addError('/baldininkai-org-gamintojai.json', `record ${source.slug} has no contact_route_status`);
+      if (!Array.isArray(record.categories) || !Array.isArray(record.public_source_urls)) addError('/baldininkai-org-gamintojai.json', `record ${source.slug} must keep categories and public_source_urls as arrays`);
+    }
+  }
+
+  try {
+    const rows = parseCsv(await readFile(csvPath, 'utf8'));
+    const [headers, ...dataRows] = rows;
+    if (JSON.stringify(headers) !== JSON.stringify(datasetHeaders)) addError('/baldininkai-org-gamintojai.csv', 'headers do not match the stable dataset header order');
+    if (dataRows.length !== manufacturers.length) addError('/baldininkai-org-gamintojai.csv', `expected ${manufacturers.length} data rows, found ${dataRows.length}`);
+    dataRows.forEach((row, index) => {
+      if (row.length !== datasetHeaders.length) addError('/baldininkai-org-gamintojai.csv', `row ${index + 2} has ${row.length} fields; expected ${datasetHeaders.length}`);
+      const jsonRecord = dataset[index];
+      if (!jsonRecord) return;
+      const expectedRow = datasetHeaders.map((header) => Array.isArray(jsonRecord[header]) ? jsonRecord[header].join(' | ') : jsonRecord[header] == null ? '' : String(jsonRecord[header]));
+      if (JSON.stringify(row) !== JSON.stringify(expectedRow)) addError('/baldininkai-org-gamintojai.csv', `row ${index + 2} does not match JSON record ${jsonRecord.slug}`);
+    });
+  } catch (error) {
+    addError('/baldininkai-org-gamintojai.csv', `missing or invalid CSV (${error.message})`);
+  }
+
+  try {
+    const llms = await readFile(join(publicDir, 'llms.txt'), 'utf8');
+    for (const required of ['Baldininkai.org', `${SITE_URL}/atviri-duomenys/`, `${SITE_URL}/baldininkai-org-gamintojai.json`, `${SITE_URL}/baldininkai-org-gamintojai.csv`, `${SITE_URL}/sitemap.xml`, 'English summary', 'nepatvirtinti viešų šaltinių kandidatai']) {
+      if (!llms.includes(required)) addError('/llms.txt', `missing required content: ${required}`);
+    }
+  } catch (error) {
+    addError('/llms.txt', `missing or unreadable (${error.message})`);
+  }
+
+  try {
+    const sitemap = await readFile(join(publicDir, 'sitemap.xml'), 'utf8');
+    if (!sitemap.includes(`<loc>${SITE_URL}/atviri-duomenys/</loc>`)) addError('/sitemap.xml', 'missing open-data route');
+  } catch (error) {
+    addError('/sitemap.xml', `missing or unreadable (${error.message})`);
+  }
+
+  try {
+    const robots = await readFile(join(publicDir, 'robots.txt'), 'utf8');
+    if (/^\s*Disallow\s*:/im.test(robots)) addError('/robots.txt', 'must not disallow any crawler path');
+    for (const required of ['User-agent: *', 'Allow: /', 'Allow: /llms.txt', 'Allow: /atviri-duomenys/', 'Allow: /baldininkai-org-gamintojai.json', 'Allow: /baldininkai-org-gamintojai.csv', `Sitemap: ${SITE_URL}/sitemap.xml`]) {
+      if (!robots.includes(required)) addError('/robots.txt', `missing directive: ${required}`);
+    }
+  } catch (error) {
+    addError('/robots.txt', `missing or unreadable (${error.message})`);
+  }
+}
+
+await checkGeneratedAssets();
+
 const files = await htmlFiles(publicDir);
 if (!files.length) {
   console.error('SEO audit failed: no public/**/index.html files found. Run npm run build first.');
@@ -206,13 +393,41 @@ for (const file of files.sort()) {
   const isProfile = route.startsWith('/gamintojas/');
   if (isProfile) {
     counts.profiles += 1;
-    const hasProfileEntity = schemas.some((schema) => {
+    const profileEntity = schemas.find((schema) => {
       const schemaTypes = Array.isArray(schema['@type']) ? schema['@type'] : [schema['@type']];
       return schema['@id'] === `${expectedCanonical}#entity`
         && (schemaTypes.includes('Organization') || schemaTypes.includes('LocalBusiness'));
     });
-    if (!hasProfileEntity) addError(route, 'manufacturer profile is missing its Organization or LocalBusiness schema');
+    if (!profileEntity) addError(route, 'manufacturer profile is missing its Organization or LocalBusiness schema');
+    else {
+      const slug = route.split('/').filter(Boolean)[1];
+      const source = manufacturersBySlug.get(slug);
+      if (!source) addError(route, 'profile route has no matching source record');
+      else {
+        if (profileEntity.url !== expectedCanonical) addError(route, 'profile schema url must be the non-empty canonical profile URL');
+        const expectedWebsite = publicUrl(source.website);
+        const sameAs = Array.isArray(profileEntity.sameAs) ? profileEntity.sameAs : [];
+        if (expectedWebsite && !sameAs.includes(expectedWebsite)) addError(route, 'profile schema must include the valid source website in sameAs');
+        if (!expectedWebsite && ('sameAs' in profileEntity || sameAs.some((value) => !String(value).trim()))) addError(route, 'profile schema must omit sameAs when no valid website exists');
+        const expectedPhone = source.public_phone?.trim() || '';
+        if (expectedPhone && profileEntity.telephone !== expectedPhone) addError(route, 'profile schema telephone must match public_phone');
+        if (!expectedPhone && 'telephone' in profileEntity) addError(route, 'profile schema must omit telephone when public_phone is empty');
+        const expectedDate = recordVerificationDate(source);
+        if (expectedDate && profileEntity.dateModified !== expectedDate) addError(route, 'profile schema dateModified must use an actual source record date');
+        if (!expectedDate && 'dateModified' in profileEntity) addError(route, 'profile schema must omit dateModified when no valid source record date exists');
+      }
+    }
   }
+
+  if (route === '/atviri-duomenys') {
+    const text = visibleText(html);
+    for (const required of ['Atviri Baldininkai.org duomenys', 'JSON duomenų rinkinys', 'CSV duomenų rinkinys', 'no_public_contact_route', 'Priskyrimas']) {
+      if (!text.includes(required)) addError(route, `missing open-data content: ${required}`);
+    }
+    if (!html.includes('href="/baldininkai-org-gamintojai.json"') || !html.includes('href="/baldininkai-org-gamintojai.csv"')) addError(route, 'missing dataset download links');
+  }
+
+  if (!html.includes('href="/atviri-duomenys"')) addError(route, 'footer is missing the open-data link');
 
   const isGuideArticle = /<article\b[^>]*\bclass=(["'])[^"']*\bguide-article\b[^"']*\1/i.test(html);
   if (isGuideArticle) {
@@ -243,4 +458,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; WebSite+SearchAction home-only; ItemList ${counts.hubs} hubs; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles; FAQPage ${counts.faqPages} visible FAQ sections.`);
+console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; open-data route, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; ItemList ${counts.hubs} hubs; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles; FAQPage ${counts.faqPages} visible FAQ sections.`);

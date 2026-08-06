@@ -43,6 +43,8 @@ export type SeoManufacturer = {
   employee_count_band?: string | null;
   public_details_source_urls?: string[];
   source_collection_date?: string;
+  public_contact_checked_date?: string | null;
+  verified_at?: string | null;
 };
 
 export const CATEGORY_LANDINGS = landingConfig.categories as CategoryLanding[];
@@ -54,6 +56,27 @@ function canonicalPath(path: string): string {
 
 function canonicalUrl(path: string): string {
   return `${SITE_URL}${canonicalPath(path)}`;
+}
+
+function publicHttpUrl(value: unknown): string {
+  if (typeof value !== 'string' || !value.trim()) return '';
+  try {
+    const url = new URL(value.trim());
+    return url.protocol === 'https:' || url.protocol === 'http:' ? url.href : '';
+  } catch {
+    return '';
+  }
+}
+
+function validIsoDate(value: unknown): string {
+  if (typeof value !== 'string') return '';
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value.trim());
+  if (!match) return '';
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day ? value.trim() : '';
 }
 
 export type PageMetadata = {
@@ -210,8 +233,13 @@ export function manufacturerStructuredData(record: SeoManufacturer): Record<stri
   };
   if (record.legal_name?.trim()) data.legalName = record.legal_name.trim();
   if (description) data.description = description;
-  if (record.website?.trim()) data.sameAs = [record.website.trim()];
+  const websiteUrl = publicHttpUrl(record.website);
+  if (websiteUrl) data.sameAs = [websiteUrl];
   if (record.public_phone?.trim()) data.telephone = record.public_phone.trim();
+  const dateModified = validIsoDate(record.verified_at)
+    || validIsoDate(record.public_contact_checked_date)
+    || validIsoDate(record.source_collection_date);
+  if (dateModified) data.dateModified = dateModified;
   const address: Record<string, string> = { '@type': 'PostalAddress' };
   if (record.street_address?.trim()) address.streetAddress = record.street_address.trim();
   if (record.city?.trim()) address.addressLocality = record.city.trim();

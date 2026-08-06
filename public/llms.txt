@@ -1,0 +1,58 @@
+# Baldininkai.org
+
+## Apie katalogą
+Baldininkai.org yra viešais šaltiniais paremtas Lietuvos nestandartinių baldų gamintojų kandidatų katalogas. Jis padeda pirkėjams rasti ir savarankiškai palyginti kandidatus pagal baldų kategoriją, miestą ir viešai nurodytus įmonės duomenis.
+
+Katalogo įrašai yra nepatvirtinti viešų šaltinių kandidatai. Jie nėra Baldininkai.org rekomendacijos, reitingai ar darbų kokybės, tapatybės, informacijos tikslumo, kainos, terminų, užimtumo arba paslaugų prieinamumo garantijos.
+
+## Duomenų aprėptis ir kilmė
+Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas viešas ar prekinis ir juridinis pavadinimas, įmonės kodas, miestas, adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių nuorodos ir turima patikros data. Duomenys renkami iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Ši versija sugeneruota 2026-08-06; joje yra 437 katalogo įrašai.
+
+## Pagrindinės nuorodos
+- Katalogas: https://www.baldininkai.org/
+- Pirkėjo gidas: https://www.baldininkai.org/gidas/
+- Baldų gamintojo pasirinkimo gidas: https://www.baldininkai.org/gidas/kaip-pasirinkti-baldu-gamintoja/
+- Virtuvės baldų kainų gidas: https://www.baldininkai.org/gidas/virtuves-baldu-kainos/
+- Kainos skaičiuoklė: https://www.baldininkai.org/baldu-kainos-skaiciuokle/
+- Projekto pasiūlymo užklausa: https://www.baldininkai.org/gauti-pasiulymus/
+- Atviri duomenys ir naudojimo sąlygos: https://www.baldininkai.org/atviri-duomenys/
+- JSON duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.json
+- CSV duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.csv
+- Svetainės žemėlapis: https://www.baldininkai.org/sitemap.xml
+
+## Kategorijų puslapiai
+- Virtuvės baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/virtuves-baldai/
+- Spintos ir įmontuojami baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/spintos-ir-imontuojami-baldai/
+- Miegamojo ir vonios baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/miegamojo-ir-vonios-baldai/
+- Biuro ir komerciniai baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/biuro-ir-komerciniai-baldai/
+- HoReCa ir prekybos baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/horeca-ir-prekybos-baldai/
+- Minkšti baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/minksti-baldai/
+- Medžio darbai ir medžio masyvo baldai: https://www.baldininkai.org/baldai-pagal-uzsakyma/medzio-darbai-ir-masyvo-baldai/
+- Metalo ir mišrių medžiagų baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/metalo-ir-misriu-medziagu-baldai/
+- Kiti nestandartiniai baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/kiti-nestandartiniai-baldai/
+- Kiti baldai pagal užsakymą: https://www.baldininkai.org/baldai-pagal-uzsakyma/kiti-baldai/
+
+## Miestų puslapiai
+- Alytus: https://www.baldininkai.org/baldai-pagal-uzsakyma/alytus/
+- Jonava: https://www.baldininkai.org/baldai-pagal-uzsakyma/jonava/
+- Kaunas: https://www.baldininkai.org/baldai-pagal-uzsakyma/kaunas/
+- Kėdainiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/kedainiai/
+- Klaipėda: https://www.baldininkai.org/baldai-pagal-uzsakyma/klaipeda/
+- Lietuva: https://www.baldininkai.org/baldai-pagal-uzsakyma/lietuva/
+- Marijampolė: https://www.baldininkai.org/baldai-pagal-uzsakyma/marijampole/
+- Mažeikiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/mazeikiai/
+- Panevėžys: https://www.baldininkai.org/baldai-pagal-uzsakyma/panevezys/
+- Raseiniai: https://www.baldininkai.org/baldai-pagal-uzsakyma/raseiniai/
+- Riešė: https://www.baldininkai.org/baldai-pagal-uzsakyma/riese/
+- Šiauliai: https://www.baldininkai.org/baldai-pagal-uzsakyma/siauliai/
+- Tauragė: https://www.baldininkai.org/baldai-pagal-uzsakyma/taurage/
+- Telšiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/telsiai/
+- Ukmergė: https://www.baldininkai.org/baldai-pagal-uzsakyma/ukmerge/
+- Utena: https://www.baldininkai.org/baldai-pagal-uzsakyma/utena/
+- Vilnius: https://www.baldininkai.org/baldai-pagal-uzsakyma/vilnius/
+
+## Priskyrimas
+Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-06.
+
+## English summary
+Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Browse the catalogue at https://www.baldininkai.org/, buyer guides at https://www.baldininkai.org/gidas/, and the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.

@@ -44,6 +44,7 @@ type Manufacturer = RecordModel & {
   source_urls: string[];
   source_artifact_url: string;
   source_collection_date: string;
+  public_contact_checked_date: string | null;
   verification_status: string;
   financial_verification_status: string | null;
   verified_at: string | null;
@@ -460,6 +461,10 @@ function isPolicyPath(pathname = window.location.pathname): boolean {
   return Boolean(getPolicyPage(pathname));
 }
 
+function isOpenDataPath(pathname = window.location.pathname): boolean {
+  return normalizePathname(pathname) === '/atviri-duomenys';
+}
+
 async function fetchAllManufacturers(): Promise<Manufacturer[]> {
   const records: Manufacturer[] = [];
   let page = 1;
@@ -687,6 +692,7 @@ function renderFooter(): string {
           <a href="/baldu-kainos-skaiciuokle" data-internal-link="true">Kainos skaičiuoklė</a>
           <a href="/gidas/baldu-pirkimo-sutarties-sablonas" data-internal-link="true">Sutarties šablonas</a>
           <a href="/palyginti-pasiulymus" data-internal-link="true">Pasiūlymų palyginimas</a>
+          <a href="/atviri-duomenys">Atviri duomenys</a>
           <a href="/privatumas" data-internal-link="true">Privatumas</a>
           <a href="/naudojimosi-salygos" data-internal-link="true">Naudojimosi sąlygos</a>
           <a href="/slapukai" data-internal-link="true">Slapukai</a>
@@ -2812,6 +2818,8 @@ function setHomeMetadata(): void {
 }
 
 function route(): void {
+  if (isOpenDataPath()) return;
+
   const policyPage = getPolicyPage();
   if (policyPage) {
     renderPolicyPage(policyPage);
@@ -2928,7 +2936,7 @@ async function loadDirectory(): Promise<void> {
 
 function navigateToCurrentRoute(): void {
   browseState = readBrowseState();
-  if (isGuidePath() || isPolicyPath() || isComparisonPath() || isEstimatorPath()) {
+  if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isComparisonPath() || isEstimatorPath()) {
     route();
     return;
   }
@@ -2994,7 +3002,7 @@ document.addEventListener('click', (event) => {
 
 window.addEventListener('popstate', navigateToCurrentRoute);
 
-if (isGuidePath() || isPolicyPath() || isComparisonPath() || isEstimatorPath()) {
+if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isComparisonPath() || isEstimatorPath()) {
   route();
 } else {
   void loadDirectory();
