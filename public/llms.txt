@@ -18,6 +18,29 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Baldų rinkos apžvalga: https://www.baldininkai.org/baldu-rinkos-apzvalga/
 - English sourcing hub: https://www.baldininkai.org/en/
 - Lithuanian furniture makers data (English): https://www.baldininkai.org/en/lithuanian-furniture-makers-data/
+- English sourcing guide: https://www.baldininkai.org/en/sourcing-guide/
+- English region data cuts:
+  - Vilnius, eastern and southern Lithuania: https://www.baldininkai.org/en/regions/vilnius-east-south-lithuania/
+  - Kaunas and northern Lithuania: https://www.baldininkai.org/en/regions/kaunas-north-lithuania/
+  - Klaipėda, Panevėžys, western and central Lithuania: https://www.baldininkai.org/en/regions/klaipeda-panevezys-west-central-lithuania/
+  - Klaipėda, Panevėžys, western and mid-Lithuania: https://www.baldininkai.org/en/regions/klaipeda-panevezys-west-mid-lithuania/
+  - All Lithuania (no city stated in the official source): https://www.baldininkai.org/en/regions/all-lithuania-city-not-stated/
+- English larger-city data cuts:
+  - Alytus: https://www.baldininkai.org/en/cities/alytus/
+  - Kaunas: https://www.baldininkai.org/en/cities/kaunas/
+  - Klaipėda: https://www.baldininkai.org/en/cities/klaipeda/
+  - Marijampolė: https://www.baldininkai.org/en/cities/marijampole/
+  - Panevėžys: https://www.baldininkai.org/en/cities/panevezys/
+  - Šiauliai: https://www.baldininkai.org/en/cities/siauliai/
+  - Tauragė: https://www.baldininkai.org/en/cities/taurage/
+  - Telšiai: https://www.baldininkai.org/en/cities/telsiai/
+  - Utena: https://www.baldininkai.org/en/cities/utena/
+  - Vilnius: https://www.baldininkai.org/en/cities/vilnius/
+- English published-turnover data cuts:
+  - Under €100,000: https://www.baldininkai.org/en/turnover/under-eur-100k/
+  - €100,000 to under €500,000: https://www.baldininkai.org/en/turnover/eur-100k-to-500k/
+  - €500,000 to €2 million: https://www.baldininkai.org/en/turnover/eur-500k-to-2m/
+  - Over €2 million: https://www.baldininkai.org/en/turnover/over-eur-2m/
 - Atviri duomenys ir naudojimo sąlygos: https://www.baldininkai.org/atviri-duomenys/
 - JSON duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.json
 - CSV duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.csv
@@ -77,4 +100,4 @@ Duomenų rinkinys licencijuojamas pagal Creative Commons Attribution 4.0 Interna
 Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-06
 
 ## English summary
-Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Browse the English sourcing hub at https://www.baldininkai.org/en/, read the English catalogue-data overview at https://www.baldininkai.org/en/lithuanian-furniture-makers-data/, browse the Lithuanian catalogue at https://www.baldininkai.org/, and use the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.
+Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, capacity, price, availability, timing, or service coverage. Start at the English sourcing hub https://www.baldininkai.org/en/, browse the English category pages, read the catalogue-data overview at https://www.baldininkai.org/en/lithuanian-furniture-makers-data/, use the sourcing guide at https://www.baldininkai.org/en/sourcing-guide/, browse region, larger-city and published-turnover data cuts linked from the hub, and use the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.

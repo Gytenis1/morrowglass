@@ -477,7 +477,12 @@ function isMarketOverviewPath(pathname = window.location.pathname): boolean {
 
 function isEnglishSourcingPath(pathname = window.location.pathname): boolean {
   const path = normalizePathname(pathname);
-  return path === '/en' || path.startsWith('/en/furniture-makers/');
+  return path === '/en'
+    || path === '/en/sourcing-guide'
+    || path.startsWith('/en/furniture-makers/')
+    || path.startsWith('/en/regions/')
+    || path.startsWith('/en/cities/')
+    || path.startsWith('/en/turnover/');
 }
 
 async function fetchAllManufacturers(): Promise<Manufacturer[]> {
@@ -3139,7 +3144,7 @@ document.addEventListener('click', (event) => {
 
 window.addEventListener('popstate', navigateToCurrentRoute);
 
-if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isComparisonPath() || isEstimatorPath()) {
+if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isEnglishSourcingPath() || isComparisonPath() || isEstimatorPath()) {
   route();
 } else {
   void loadDirectory();
