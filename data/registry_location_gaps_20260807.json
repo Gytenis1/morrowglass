@@ -1,0 +1,2773 @@
+{
+  "manifest_version": 1,
+  "checked_date": "2026-08-07",
+  "input": {
+    "universe_path": "data/registry_universe_20260807.json",
+    "universe_sha256": "b524fb421c9deb81897aa79ec9cb73ee50e938bccd3922e057878afc97d8927f",
+    "address_enrichment_path": "data/registry_address_enrichment_20260807.json",
+    "address_enrichment_sha256": "2d4eaf7756cb3d1de0375ceb7d788d237429616d6b750bd96f44cc17593cccd3",
+    "identity_key": [
+      "company_code",
+      "slug"
+    ],
+    "candidate_selection_rule": "Only original imported identities whose address-enrichment result has unresolved_reason=no_buveine_address_relation_published are included. Legal names are never join keys.",
+    "expected_gap_candidate_count": 44
+  },
+  "official_sources": {
+    "api_base": "https://get.data.gov.lt",
+    "jar_data_portal_url": "https://data.gov.lt/datasets/1484/",
+    "address_data_portal_url": "https://data.gov.lt/datasets/1342/",
+    "models": [
+      "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "datasets/gov/rc/jar/buveines/Buveine",
+      "datasets/gov/rc/ar/adresai/Adresas",
+      "datasets/gov/rc/ar/pastatas/Pastatas",
+      "datasets/gov/rc/ar/patalpa/Patalpa",
+      "datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove",
+      "datasets/gov/rc/ar/gatve/Gatve"
+    ]
+  },
+  "research_method": "For each selected identity, the official JAR JuridinisAsmuo record is independently confirmed through an exact entity UUID query and an exact numeric ja_kodas company-code query. The only location-bearing JAR fields checked are pilnas_adresas and adresas. Every JAR Buveine related by the exact juridinis_asmuo._id UUID is checked for its exact Adresas relation. When present, an Adresas relation may be traversed only through the documented exact UUID Address Register routes to a building/premises and locality/street. Uncached calls are serially throttled, retried with backoff, and cached in gitignored /tmp. Failed or ambiguous requests stop the run; they are never treated as absent evidence.",
+  "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code.",
+  "validation_rules": [
+    "Exactly 44 results exist, with no duplicate (company_code, slug) identity.",
+    "Every result belongs to the immutable original no_buveine_address_relation_published identity set.",
+    "Every result has exact official JAR UUID and company-code confirmation plus all checked official relationship paths.",
+    "Every result is either source-backed resolved or source-cited location_not_published."
+  ],
+  "accounting": {
+    "gap_candidates": 44,
+    "resolved": 0,
+    "location_not_published": 44
+  },
+  "results": [
+    {
+      "company_code": "110846971",
+      "slug": "uab-paina-ir-ko-110846971",
+      "identity_key": {
+        "company_code": "110846971",
+        "slug": "uab-paina-ir-ko-110846971"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "684dcad8-c5ad-4ba7-8483-f772a9663e0e",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"684dcad8-c5ad-4ba7-8483-f772a9663e0e\"&limit(2)",
+          "record_id": "684dcad8-c5ad-4ba7-8483-f772a9663e0e"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "110846971"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"684dcad8-c5ad-4ba7-8483-f772a9663e0e\"&limit(2)",
+            "exact_predicate": "_id=\"684dcad8-c5ad-4ba7-8483-f772a9663e0e\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=110846971&limit(2)",
+            "exact_predicate": "ja_kodas=110846971"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "684dcad8-c5ad-4ba7-8483-f772a9663e0e"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"684dcad8-c5ad-4ba7-8483-f772a9663e0e\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"684dcad8-c5ad-4ba7-8483-f772a9663e0e\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "08861178-a3f9-4e6b-b4e0-1e69ef7095a5",
+              "adresas_id": null,
+              "adresas_nuo": "2002-08-30"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "111687536",
+      "slug": "litbed-bedding-company-uab-111687536",
+      "identity_key": {
+        "company_code": "111687536",
+        "slug": "litbed-bedding-company-uab-111687536"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "298e7f82-1773-4850-8b0a-b1b7172a0e4f",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"298e7f82-1773-4850-8b0a-b1b7172a0e4f\"&limit(2)",
+          "record_id": "298e7f82-1773-4850-8b0a-b1b7172a0e4f"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "111687536"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"298e7f82-1773-4850-8b0a-b1b7172a0e4f\"&limit(2)",
+            "exact_predicate": "_id=\"298e7f82-1773-4850-8b0a-b1b7172a0e4f\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=111687536&limit(2)",
+            "exact_predicate": "ja_kodas=111687536"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "298e7f82-1773-4850-8b0a-b1b7172a0e4f"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"298e7f82-1773-4850-8b0a-b1b7172a0e4f\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"298e7f82-1773-4850-8b0a-b1b7172a0e4f\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "3a3b4a25-897f-490e-8376-8fdc197cb62a",
+              "adresas_id": null,
+              "adresas_nuo": "2000-01-05"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "121781425",
+      "slug": "uab-elrina-121781425",
+      "identity_key": {
+        "company_code": "121781425",
+        "slug": "uab-elrina-121781425"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "3860772b-223a-4dc6-926a-e15906f0f554",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"3860772b-223a-4dc6-926a-e15906f0f554\"&limit(2)",
+          "record_id": "3860772b-223a-4dc6-926a-e15906f0f554"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "121781425"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"3860772b-223a-4dc6-926a-e15906f0f554\"&limit(2)",
+            "exact_predicate": "_id=\"3860772b-223a-4dc6-926a-e15906f0f554\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=121781425&limit(2)",
+            "exact_predicate": "ja_kodas=121781425"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "3860772b-223a-4dc6-926a-e15906f0f554"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"3860772b-223a-4dc6-926a-e15906f0f554\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"3860772b-223a-4dc6-926a-e15906f0f554\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "4f8e9d9b-732f-40a5-b2aa-bd90c5ee5f83",
+              "adresas_id": null,
+              "adresas_nuo": "2025-06-09"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "122051895",
+      "slug": "uzdaroji-akcine-bendrove-naba-122051895",
+      "identity_key": {
+        "company_code": "122051895",
+        "slug": "uzdaroji-akcine-bendrove-naba-122051895"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "1d1a1c4e-aac3-4954-a0c2-7c579caf13f1",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1d1a1c4e-aac3-4954-a0c2-7c579caf13f1\"&limit(2)",
+          "record_id": "1d1a1c4e-aac3-4954-a0c2-7c579caf13f1"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "122051895"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1d1a1c4e-aac3-4954-a0c2-7c579caf13f1\"&limit(2)",
+            "exact_predicate": "_id=\"1d1a1c4e-aac3-4954-a0c2-7c579caf13f1\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=122051895&limit(2)",
+            "exact_predicate": "ja_kodas=122051895"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "1d1a1c4e-aac3-4954-a0c2-7c579caf13f1"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"1d1a1c4e-aac3-4954-a0c2-7c579caf13f1\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"1d1a1c4e-aac3-4954-a0c2-7c579caf13f1\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "c7c121ad-c64c-4597-94bd-b5b957800c65",
+              "adresas_id": null,
+              "adresas_nuo": "1995-07-04"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "123467284",
+      "slug": "uzdaroji-akcine-bendrove-padvaiskas-ir-ko-123467284",
+      "identity_key": {
+        "company_code": "123467284",
+        "slug": "uzdaroji-akcine-bendrove-padvaiskas-ir-ko-123467284"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "e2ef0097-a271-4063-942d-41847f1c3252",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"e2ef0097-a271-4063-942d-41847f1c3252\"&limit(2)",
+          "record_id": "e2ef0097-a271-4063-942d-41847f1c3252"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "123467284"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"e2ef0097-a271-4063-942d-41847f1c3252\"&limit(2)",
+            "exact_predicate": "_id=\"e2ef0097-a271-4063-942d-41847f1c3252\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=123467284&limit(2)",
+            "exact_predicate": "ja_kodas=123467284"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "e2ef0097-a271-4063-942d-41847f1c3252"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"e2ef0097-a271-4063-942d-41847f1c3252\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"e2ef0097-a271-4063-942d-41847f1c3252\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "82ad9c0a-fb9e-4c11-94c7-5f8fbd00f18d",
+              "adresas_id": null,
+              "adresas_nuo": "2000-08-12"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "132103276",
+      "slug": "a-stelmoko-imone-timora-132103276",
+      "identity_key": {
+        "company_code": "132103276",
+        "slug": "a-stelmoko-imone-timora-132103276"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "129f6c4c-df6a-43f6-bdb5-bef2711418a9",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"129f6c4c-df6a-43f6-bdb5-bef2711418a9\"&limit(2)",
+          "record_id": "129f6c4c-df6a-43f6-bdb5-bef2711418a9"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "132103276"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"129f6c4c-df6a-43f6-bdb5-bef2711418a9\"&limit(2)",
+            "exact_predicate": "_id=\"129f6c4c-df6a-43f6-bdb5-bef2711418a9\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=132103276&limit(2)",
+            "exact_predicate": "ja_kodas=132103276"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "129f6c4c-df6a-43f6-bdb5-bef2711418a9"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"129f6c4c-df6a-43f6-bdb5-bef2711418a9\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"129f6c4c-df6a-43f6-bdb5-bef2711418a9\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "8654e30c-9c79-4afe-bac2-fe4d63c2fb66",
+              "adresas_id": null,
+              "adresas_nuo": "1990-11-27"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "132567981",
+      "slug": "uab-ardi-lt-132567981",
+      "identity_key": {
+        "company_code": "132567981",
+        "slug": "uab-ardi-lt-132567981"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "51874532-2a52-447e-8dc7-6541e56b697b",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"51874532-2a52-447e-8dc7-6541e56b697b\"&limit(2)",
+          "record_id": "51874532-2a52-447e-8dc7-6541e56b697b"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "132567981"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"51874532-2a52-447e-8dc7-6541e56b697b\"&limit(2)",
+            "exact_predicate": "_id=\"51874532-2a52-447e-8dc7-6541e56b697b\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=132567981&limit(2)",
+            "exact_predicate": "ja_kodas=132567981"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "51874532-2a52-447e-8dc7-6541e56b697b"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"51874532-2a52-447e-8dc7-6541e56b697b\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"51874532-2a52-447e-8dc7-6541e56b697b\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "d3685dbc-849b-4b00-a900-7db9a444a202",
+              "adresas_id": null,
+              "adresas_nuo": "2013-02-08"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "134372275",
+      "slug": "uab-a-preisegolaviciaus-imone-134372275",
+      "identity_key": {
+        "company_code": "134372275",
+        "slug": "uab-a-preisegolaviciaus-imone-134372275"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "1f4228f5-79a4-4979-9bea-7a42b7478429",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1f4228f5-79a4-4979-9bea-7a42b7478429\"&limit(2)",
+          "record_id": "1f4228f5-79a4-4979-9bea-7a42b7478429"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "134372275"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1f4228f5-79a4-4979-9bea-7a42b7478429\"&limit(2)",
+            "exact_predicate": "_id=\"1f4228f5-79a4-4979-9bea-7a42b7478429\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=134372275&limit(2)",
+            "exact_predicate": "ja_kodas=134372275"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "1f4228f5-79a4-4979-9bea-7a42b7478429"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"1f4228f5-79a4-4979-9bea-7a42b7478429\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"1f4228f5-79a4-4979-9bea-7a42b7478429\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "fb91329f-d724-4550-a195-78a3d0ceff89",
+              "adresas_id": null,
+              "adresas_nuo": "2005-01-12"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "135275772",
+      "slug": "uab-ltp-texdan-135275772",
+      "identity_key": {
+        "company_code": "135275772",
+        "slug": "uab-ltp-texdan-135275772"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "2e6e3776-8b0c-4b55-a78c-457786f3c98c",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"2e6e3776-8b0c-4b55-a78c-457786f3c98c\"&limit(2)",
+          "record_id": "2e6e3776-8b0c-4b55-a78c-457786f3c98c"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "135275772"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"2e6e3776-8b0c-4b55-a78c-457786f3c98c\"&limit(2)",
+            "exact_predicate": "_id=\"2e6e3776-8b0c-4b55-a78c-457786f3c98c\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=135275772&limit(2)",
+            "exact_predicate": "ja_kodas=135275772"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "2e6e3776-8b0c-4b55-a78c-457786f3c98c"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"2e6e3776-8b0c-4b55-a78c-457786f3c98c\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"2e6e3776-8b0c-4b55-a78c-457786f3c98c\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "d001a322-ec0b-4a0f-987c-da1ceacb5af4",
+              "adresas_id": null,
+              "adresas_nuo": "2004-11-02"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "135575111",
+      "slug": "uzdaroji-akcine-bendrove-markista-135575111",
+      "identity_key": {
+        "company_code": "135575111",
+        "slug": "uzdaroji-akcine-bendrove-markista-135575111"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "1812ff84-4f7c-4d96-9597-82c34c5f2178",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1812ff84-4f7c-4d96-9597-82c34c5f2178\"&limit(2)",
+          "record_id": "1812ff84-4f7c-4d96-9597-82c34c5f2178"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "135575111"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1812ff84-4f7c-4d96-9597-82c34c5f2178\"&limit(2)",
+            "exact_predicate": "_id=\"1812ff84-4f7c-4d96-9597-82c34c5f2178\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=135575111&limit(2)",
+            "exact_predicate": "ja_kodas=135575111"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "1812ff84-4f7c-4d96-9597-82c34c5f2178"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"1812ff84-4f7c-4d96-9597-82c34c5f2178\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"1812ff84-4f7c-4d96-9597-82c34c5f2178\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "7c6b9564-5fea-41ae-88f6-68d407d6418a",
+              "adresas_id": null,
+              "adresas_nuo": "2000-01-06"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "135699283",
+      "slug": "uab-epinera-135699283",
+      "identity_key": {
+        "company_code": "135699283",
+        "slug": "uab-epinera-135699283"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "fda27d27-6f60-4638-9bf0-0c059a1e194e",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"fda27d27-6f60-4638-9bf0-0c059a1e194e\"&limit(2)",
+          "record_id": "fda27d27-6f60-4638-9bf0-0c059a1e194e"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "135699283"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"fda27d27-6f60-4638-9bf0-0c059a1e194e\"&limit(2)",
+            "exact_predicate": "_id=\"fda27d27-6f60-4638-9bf0-0c059a1e194e\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=135699283&limit(2)",
+            "exact_predicate": "ja_kodas=135699283"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "fda27d27-6f60-4638-9bf0-0c059a1e194e"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"fda27d27-6f60-4638-9bf0-0c059a1e194e\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"fda27d27-6f60-4638-9bf0-0c059a1e194e\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "f8079517-9ac4-406f-a90c-af3d17d9a492",
+              "adresas_id": null,
+              "adresas_nuo": "2015-07-17"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "141805150",
+      "slug": "car-sales-company-uab-141805150",
+      "identity_key": {
+        "company_code": "141805150",
+        "slug": "car-sales-company-uab-141805150"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "654dc22c-09c5-4e24-a376-15e9a5a6099c",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"654dc22c-09c5-4e24-a376-15e9a5a6099c\"&limit(2)",
+          "record_id": "654dc22c-09c5-4e24-a376-15e9a5a6099c"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "141805150"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"654dc22c-09c5-4e24-a376-15e9a5a6099c\"&limit(2)",
+            "exact_predicate": "_id=\"654dc22c-09c5-4e24-a376-15e9a5a6099c\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=141805150&limit(2)",
+            "exact_predicate": "ja_kodas=141805150"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "654dc22c-09c5-4e24-a376-15e9a5a6099c"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"654dc22c-09c5-4e24-a376-15e9a5a6099c\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"654dc22c-09c5-4e24-a376-15e9a5a6099c\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "75985866-f2d2-448c-a4c1-9f36f13a6b9a",
+              "adresas_id": null,
+              "adresas_nuo": "2025-07-31"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "156667584",
+      "slug": "uzdaroji-akcine-bendrove-baldai-jums-156667584",
+      "identity_key": {
+        "company_code": "156667584",
+        "slug": "uzdaroji-akcine-bendrove-baldai-jums-156667584"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "d1baddda-7c64-469c-862a-dc68304f50ef",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"d1baddda-7c64-469c-862a-dc68304f50ef\"&limit(2)",
+          "record_id": "d1baddda-7c64-469c-862a-dc68304f50ef"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "156667584"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"d1baddda-7c64-469c-862a-dc68304f50ef\"&limit(2)",
+            "exact_predicate": "_id=\"d1baddda-7c64-469c-862a-dc68304f50ef\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=156667584&limit(2)",
+            "exact_predicate": "ja_kodas=156667584"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "d1baddda-7c64-469c-862a-dc68304f50ef"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"d1baddda-7c64-469c-862a-dc68304f50ef\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"d1baddda-7c64-469c-862a-dc68304f50ef\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "e6cb13c9-fcc1-4396-8fe2-9a1d2f7034f5",
+              "adresas_id": null,
+              "adresas_nuo": "1994-07-07"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "158959128",
+      "slug": "uab-clemence-richard-158959128",
+      "identity_key": {
+        "company_code": "158959128",
+        "slug": "uab-clemence-richard-158959128"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "109f96ba-59d5-4ca3-857d-c7da9828c6d7",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"109f96ba-59d5-4ca3-857d-c7da9828c6d7\"&limit(2)",
+          "record_id": "109f96ba-59d5-4ca3-857d-c7da9828c6d7"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "158959128"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"109f96ba-59d5-4ca3-857d-c7da9828c6d7\"&limit(2)",
+            "exact_predicate": "_id=\"109f96ba-59d5-4ca3-857d-c7da9828c6d7\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=158959128&limit(2)",
+            "exact_predicate": "ja_kodas=158959128"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "109f96ba-59d5-4ca3-857d-c7da9828c6d7"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"109f96ba-59d5-4ca3-857d-c7da9828c6d7\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"109f96ba-59d5-4ca3-857d-c7da9828c6d7\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "b11db2cd-acfc-454c-8d59-e857b771ac44",
+              "adresas_id": null,
+              "adresas_nuo": "1997-07-01"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "159983178",
+      "slug": "uzdaroji-akcine-bendrove-kalibruote-159983178",
+      "identity_key": {
+        "company_code": "159983178",
+        "slug": "uzdaroji-akcine-bendrove-kalibruote-159983178"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "783f792b-4aa2-4d32-b72c-36b97cb16c4d",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"783f792b-4aa2-4d32-b72c-36b97cb16c4d\"&limit(2)",
+          "record_id": "783f792b-4aa2-4d32-b72c-36b97cb16c4d"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "159983178"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"783f792b-4aa2-4d32-b72c-36b97cb16c4d\"&limit(2)",
+            "exact_predicate": "_id=\"783f792b-4aa2-4d32-b72c-36b97cb16c4d\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=159983178&limit(2)",
+            "exact_predicate": "ja_kodas=159983178"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "783f792b-4aa2-4d32-b72c-36b97cb16c4d"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"783f792b-4aa2-4d32-b72c-36b97cb16c4d\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"783f792b-4aa2-4d32-b72c-36b97cb16c4d\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "4da25d56-fc91-4496-9781-c70ef31e656b",
+              "adresas_id": null,
+              "adresas_nuo": "1999-09-10"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "163683158",
+      "slug": "uzdaroji-akcine-bendrove-baldija-163683158",
+      "identity_key": {
+        "company_code": "163683158",
+        "slug": "uzdaroji-akcine-bendrove-baldija-163683158"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9\"&limit(2)",
+          "record_id": "7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "163683158"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9\"&limit(2)",
+            "exact_predicate": "_id=\"7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=163683158&limit(2)",
+            "exact_predicate": "ja_kodas=163683158"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "79b9ba57-3a87-4b16-9c1c-e96e22beaac2",
+              "adresas_id": null,
+              "adresas_nuo": "1999-06-01"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "168667916",
+      "slug": "uzdaroji-akcine-bendrove-piniavos-berzelis-168667916",
+      "identity_key": {
+        "company_code": "168667916",
+        "slug": "uzdaroji-akcine-bendrove-piniavos-berzelis-168667916"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "4fdfdb93-2e71-491d-8f39-17b48dbcb56b",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"4fdfdb93-2e71-491d-8f39-17b48dbcb56b\"&limit(2)",
+          "record_id": "4fdfdb93-2e71-491d-8f39-17b48dbcb56b"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "168667916"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"4fdfdb93-2e71-491d-8f39-17b48dbcb56b\"&limit(2)",
+            "exact_predicate": "_id=\"4fdfdb93-2e71-491d-8f39-17b48dbcb56b\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=168667916&limit(2)",
+            "exact_predicate": "ja_kodas=168667916"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "4fdfdb93-2e71-491d-8f39-17b48dbcb56b"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"4fdfdb93-2e71-491d-8f39-17b48dbcb56b\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"4fdfdb93-2e71-491d-8f39-17b48dbcb56b\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "1273438e-3022-4b87-88b0-46c31558ce6e",
+              "adresas_id": null,
+              "adresas_nuo": "1996-03-29"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "170027962",
+      "slug": "uzdaroji-akcine-bendrove-augriva-170027962",
+      "identity_key": {
+        "company_code": "170027962",
+        "slug": "uzdaroji-akcine-bendrove-augriva-170027962"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "5b1fff78-859b-4463-8303-c5c1b0affc75",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"5b1fff78-859b-4463-8303-c5c1b0affc75\"&limit(2)",
+          "record_id": "5b1fff78-859b-4463-8303-c5c1b0affc75"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "170027962"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"5b1fff78-859b-4463-8303-c5c1b0affc75\"&limit(2)",
+            "exact_predicate": "_id=\"5b1fff78-859b-4463-8303-c5c1b0affc75\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=170027962&limit(2)",
+            "exact_predicate": "ja_kodas=170027962"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "5b1fff78-859b-4463-8303-c5c1b0affc75"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"5b1fff78-859b-4463-8303-c5c1b0affc75\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"5b1fff78-859b-4463-8303-c5c1b0affc75\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "a4d5dceb-d56a-4763-93c8-060000cae9a9",
+              "adresas_id": null,
+              "adresas_nuo": "1995-10-26"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "172292945",
+      "slug": "uab-rivaka-172292945",
+      "identity_key": {
+        "company_code": "172292945",
+        "slug": "uab-rivaka-172292945"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "b6d50571-ba0a-4992-9e8c-36e22526edcf",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"b6d50571-ba0a-4992-9e8c-36e22526edcf\"&limit(2)",
+          "record_id": "b6d50571-ba0a-4992-9e8c-36e22526edcf"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "172292945"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"b6d50571-ba0a-4992-9e8c-36e22526edcf\"&limit(2)",
+            "exact_predicate": "_id=\"b6d50571-ba0a-4992-9e8c-36e22526edcf\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=172292945&limit(2)",
+            "exact_predicate": "ja_kodas=172292945"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "b6d50571-ba0a-4992-9e8c-36e22526edcf"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"b6d50571-ba0a-4992-9e8c-36e22526edcf\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"b6d50571-ba0a-4992-9e8c-36e22526edcf\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "2645e4c9-a21e-4660-80a2-e545ffef32e7",
+              "adresas_id": null,
+              "adresas_nuo": "1992-12-11"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "174392079",
+      "slug": "uzdaroji-akcine-bendrove-lauksva-174392079",
+      "identity_key": {
+        "company_code": "174392079",
+        "slug": "uzdaroji-akcine-bendrove-lauksva-174392079"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "c4e43230-3bee-44ff-a3bb-e12af16ce29e",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"c4e43230-3bee-44ff-a3bb-e12af16ce29e\"&limit(2)",
+          "record_id": "c4e43230-3bee-44ff-a3bb-e12af16ce29e"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "174392079"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"c4e43230-3bee-44ff-a3bb-e12af16ce29e\"&limit(2)",
+            "exact_predicate": "_id=\"c4e43230-3bee-44ff-a3bb-e12af16ce29e\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=174392079&limit(2)",
+            "exact_predicate": "ja_kodas=174392079"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "c4e43230-3bee-44ff-a3bb-e12af16ce29e"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"c4e43230-3bee-44ff-a3bb-e12af16ce29e\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"c4e43230-3bee-44ff-a3bb-e12af16ce29e\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "33a9042b-873d-4b1b-983b-555b334048a4",
+              "adresas_id": null,
+              "adresas_nuo": "1995-12-28"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "176606489",
+      "slug": "uab-danrima-176606489",
+      "identity_key": {
+        "company_code": "176606489",
+        "slug": "uab-danrima-176606489"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "20af1a53-e09b-4abd-ab16-4c1de9acf371",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"20af1a53-e09b-4abd-ab16-4c1de9acf371\"&limit(2)",
+          "record_id": "20af1a53-e09b-4abd-ab16-4c1de9acf371"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "176606489"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"20af1a53-e09b-4abd-ab16-4c1de9acf371\"&limit(2)",
+            "exact_predicate": "_id=\"20af1a53-e09b-4abd-ab16-4c1de9acf371\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=176606489&limit(2)",
+            "exact_predicate": "ja_kodas=176606489"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "20af1a53-e09b-4abd-ab16-4c1de9acf371"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"20af1a53-e09b-4abd-ab16-4c1de9acf371\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"20af1a53-e09b-4abd-ab16-4c1de9acf371\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "62a70ced-fc0a-4092-bf1b-15b2d4d36a91",
+              "adresas_id": null,
+              "adresas_nuo": "2004-07-07"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "179336732",
+      "slug": "uzdaroji-akcine-bendrove-benera-179336732",
+      "identity_key": {
+        "company_code": "179336732",
+        "slug": "uzdaroji-akcine-bendrove-benera-179336732"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "d31db33c-9c3d-487d-ab8e-f894cb46afad",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"d31db33c-9c3d-487d-ab8e-f894cb46afad\"&limit(2)",
+          "record_id": "d31db33c-9c3d-487d-ab8e-f894cb46afad"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "179336732"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"d31db33c-9c3d-487d-ab8e-f894cb46afad\"&limit(2)",
+            "exact_predicate": "_id=\"d31db33c-9c3d-487d-ab8e-f894cb46afad\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=179336732&limit(2)",
+            "exact_predicate": "ja_kodas=179336732"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "d31db33c-9c3d-487d-ab8e-f894cb46afad"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"d31db33c-9c3d-487d-ab8e-f894cb46afad\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"d31db33c-9c3d-487d-ab8e-f894cb46afad\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "4ec5df7f-3875-4315-9953-dc7b0049c132",
+              "adresas_id": null,
+              "adresas_nuo": "1993-01-29"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "263156160",
+      "slug": "uzdaroji-akcine-bendrove-akai-263156160",
+      "identity_key": {
+        "company_code": "263156160",
+        "slug": "uzdaroji-akcine-bendrove-akai-263156160"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "6af03aba-93ca-4e38-8f2f-00c3f92f91d0",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"6af03aba-93ca-4e38-8f2f-00c3f92f91d0\"&limit(2)",
+          "record_id": "6af03aba-93ca-4e38-8f2f-00c3f92f91d0"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "263156160"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"6af03aba-93ca-4e38-8f2f-00c3f92f91d0\"&limit(2)",
+            "exact_predicate": "_id=\"6af03aba-93ca-4e38-8f2f-00c3f92f91d0\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=263156160&limit(2)",
+            "exact_predicate": "ja_kodas=263156160"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "6af03aba-93ca-4e38-8f2f-00c3f92f91d0"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"6af03aba-93ca-4e38-8f2f-00c3f92f91d0\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"6af03aba-93ca-4e38-8f2f-00c3f92f91d0\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "6f47fba9-51ba-4806-be0b-fe5318875337",
+              "adresas_id": null,
+              "adresas_nuo": "2003-06-30"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "300018930",
+      "slug": "uab-ziliukai-300018930",
+      "identity_key": {
+        "company_code": "300018930",
+        "slug": "uab-ziliukai-300018930"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "5f81ab30-17c1-4e01-970d-90ebc5616110",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"5f81ab30-17c1-4e01-970d-90ebc5616110\"&limit(2)",
+          "record_id": "5f81ab30-17c1-4e01-970d-90ebc5616110"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "300018930"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"5f81ab30-17c1-4e01-970d-90ebc5616110\"&limit(2)",
+            "exact_predicate": "_id=\"5f81ab30-17c1-4e01-970d-90ebc5616110\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=300018930&limit(2)",
+            "exact_predicate": "ja_kodas=300018930"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "5f81ab30-17c1-4e01-970d-90ebc5616110"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"5f81ab30-17c1-4e01-970d-90ebc5616110\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"5f81ab30-17c1-4e01-970d-90ebc5616110\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "3fc97a22-8e0b-4789-a736-75decc62dd96",
+              "adresas_id": null,
+              "adresas_nuo": "2004-04-19"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "300032232",
+      "slug": "viesoji-istaiga-kaliniu-socialines-integracijos-centras-300032232",
+      "identity_key": {
+        "company_code": "300032232",
+        "slug": "viesoji-istaiga-kaliniu-socialines-integracijos-centras-300032232"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "1abe2a50-ce7e-4d80-bf84-0a21b258e72b",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1abe2a50-ce7e-4d80-bf84-0a21b258e72b\"&limit(2)",
+          "record_id": "1abe2a50-ce7e-4d80-bf84-0a21b258e72b"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "300032232"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1abe2a50-ce7e-4d80-bf84-0a21b258e72b\"&limit(2)",
+            "exact_predicate": "_id=\"1abe2a50-ce7e-4d80-bf84-0a21b258e72b\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=300032232&limit(2)",
+            "exact_predicate": "ja_kodas=300032232"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "1abe2a50-ce7e-4d80-bf84-0a21b258e72b"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"1abe2a50-ce7e-4d80-bf84-0a21b258e72b\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"1abe2a50-ce7e-4d80-bf84-0a21b258e72b\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "2da4b6df-6382-49ed-81f1-401aaeb84af0",
+              "adresas_id": null,
+              "adresas_nuo": "2024-07-11"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "300080661",
+      "slug": "uab-jonavos-eksportas-300080661",
+      "identity_key": {
+        "company_code": "300080661",
+        "slug": "uab-jonavos-eksportas-300080661"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "9f101172-b169-4bfc-adc5-fa10a307330b",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"9f101172-b169-4bfc-adc5-fa10a307330b\"&limit(2)",
+          "record_id": "9f101172-b169-4bfc-adc5-fa10a307330b"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "300080661"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"9f101172-b169-4bfc-adc5-fa10a307330b\"&limit(2)",
+            "exact_predicate": "_id=\"9f101172-b169-4bfc-adc5-fa10a307330b\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=300080661&limit(2)",
+            "exact_predicate": "ja_kodas=300080661"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "9f101172-b169-4bfc-adc5-fa10a307330b"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"9f101172-b169-4bfc-adc5-fa10a307330b\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"9f101172-b169-4bfc-adc5-fa10a307330b\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "136a6eac-caea-49ba-9fa5-f19a2c34fff7",
+              "adresas_id": null,
+              "adresas_nuo": "2015-12-02"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "300149812",
+      "slug": "uab-ambinga-300149812",
+      "identity_key": {
+        "company_code": "300149812",
+        "slug": "uab-ambinga-300149812"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "a6ed98d1-9030-4d78-906e-78758d039da3",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"a6ed98d1-9030-4d78-906e-78758d039da3\"&limit(2)",
+          "record_id": "a6ed98d1-9030-4d78-906e-78758d039da3"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "300149812"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"a6ed98d1-9030-4d78-906e-78758d039da3\"&limit(2)",
+            "exact_predicate": "_id=\"a6ed98d1-9030-4d78-906e-78758d039da3\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=300149812&limit(2)",
+            "exact_predicate": "ja_kodas=300149812"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "a6ed98d1-9030-4d78-906e-78758d039da3"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"a6ed98d1-9030-4d78-906e-78758d039da3\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"a6ed98d1-9030-4d78-906e-78758d039da3\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "025d17be-591a-4f57-979a-657dc0549118",
+              "adresas_id": null,
+              "adresas_nuo": "2005-10-06"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "300573736",
+      "slug": "uab-megta-300573736",
+      "identity_key": {
+        "company_code": "300573736",
+        "slug": "uab-megta-300573736"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "e6c4e6a9-e6ba-4128-97d0-7c0f61356b82",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"e6c4e6a9-e6ba-4128-97d0-7c0f61356b82\"&limit(2)",
+          "record_id": "e6c4e6a9-e6ba-4128-97d0-7c0f61356b82"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "300573736"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"e6c4e6a9-e6ba-4128-97d0-7c0f61356b82\"&limit(2)",
+            "exact_predicate": "_id=\"e6c4e6a9-e6ba-4128-97d0-7c0f61356b82\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=300573736&limit(2)",
+            "exact_predicate": "ja_kodas=300573736"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "e6c4e6a9-e6ba-4128-97d0-7c0f61356b82"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"e6c4e6a9-e6ba-4128-97d0-7c0f61356b82\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"e6c4e6a9-e6ba-4128-97d0-7c0f61356b82\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "8da0e76b-450a-4ddf-b093-70046c86344d",
+              "adresas_id": null,
+              "adresas_nuo": "2024-04-10"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "300869831",
+      "slug": "uab-interjero-elementai-300869831",
+      "identity_key": {
+        "company_code": "300869831",
+        "slug": "uab-interjero-elementai-300869831"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "857d0352-6e8a-46dc-b512-1120000fbe75",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"857d0352-6e8a-46dc-b512-1120000fbe75\"&limit(2)",
+          "record_id": "857d0352-6e8a-46dc-b512-1120000fbe75"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "300869831"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"857d0352-6e8a-46dc-b512-1120000fbe75\"&limit(2)",
+            "exact_predicate": "_id=\"857d0352-6e8a-46dc-b512-1120000fbe75\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=300869831&limit(2)",
+            "exact_predicate": "ja_kodas=300869831"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "857d0352-6e8a-46dc-b512-1120000fbe75"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"857d0352-6e8a-46dc-b512-1120000fbe75\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"857d0352-6e8a-46dc-b512-1120000fbe75\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "4cac2c7f-3b5f-4654-87c2-3c758e894007",
+              "adresas_id": null,
+              "adresas_nuo": "2010-06-01"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "300945535",
+      "slug": "uzdaroji-akcine-bendrove-alternatyvus-baldu-sprendimai-300945535",
+      "identity_key": {
+        "company_code": "300945535",
+        "slug": "uzdaroji-akcine-bendrove-alternatyvus-baldu-sprendimai-300945535"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "0b160fd9-d0b1-4e5f-bc00-e2fcba02b440",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"0b160fd9-d0b1-4e5f-bc00-e2fcba02b440\"&limit(2)",
+          "record_id": "0b160fd9-d0b1-4e5f-bc00-e2fcba02b440"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "300945535"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"0b160fd9-d0b1-4e5f-bc00-e2fcba02b440\"&limit(2)",
+            "exact_predicate": "_id=\"0b160fd9-d0b1-4e5f-bc00-e2fcba02b440\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=300945535&limit(2)",
+            "exact_predicate": "ja_kodas=300945535"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "0b160fd9-d0b1-4e5f-bc00-e2fcba02b440"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"0b160fd9-d0b1-4e5f-bc00-e2fcba02b440\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"0b160fd9-d0b1-4e5f-bc00-e2fcba02b440\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "26062b1c-7c1d-48fc-a2b2-3337a8d4699e",
+              "adresas_id": null,
+              "adresas_nuo": "2015-02-10"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "303305405",
+      "slug": "uab-denitus-303305405",
+      "identity_key": {
+        "company_code": "303305405",
+        "slug": "uab-denitus-303305405"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "d0b782c1-b2dc-4313-8b15-f7e65f4aa8da",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"d0b782c1-b2dc-4313-8b15-f7e65f4aa8da\"&limit(2)",
+          "record_id": "d0b782c1-b2dc-4313-8b15-f7e65f4aa8da"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "303305405"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"d0b782c1-b2dc-4313-8b15-f7e65f4aa8da\"&limit(2)",
+            "exact_predicate": "_id=\"d0b782c1-b2dc-4313-8b15-f7e65f4aa8da\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=303305405&limit(2)",
+            "exact_predicate": "ja_kodas=303305405"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "d0b782c1-b2dc-4313-8b15-f7e65f4aa8da"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"d0b782c1-b2dc-4313-8b15-f7e65f4aa8da\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"d0b782c1-b2dc-4313-8b15-f7e65f4aa8da\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "bccacbcf-2c0e-4b0f-9438-1e83cf4e4098",
+              "adresas_id": null,
+              "adresas_nuo": "2024-04-10"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "304458304",
+      "slug": "uab-freda-ii-304458304",
+      "identity_key": {
+        "company_code": "304458304",
+        "slug": "uab-freda-ii-304458304"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "331b8044-8895-4b10-b3c8-a57a016a3427",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"331b8044-8895-4b10-b3c8-a57a016a3427\"&limit(2)",
+          "record_id": "331b8044-8895-4b10-b3c8-a57a016a3427"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "304458304"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"331b8044-8895-4b10-b3c8-a57a016a3427\"&limit(2)",
+            "exact_predicate": "_id=\"331b8044-8895-4b10-b3c8-a57a016a3427\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=304458304&limit(2)",
+            "exact_predicate": "ja_kodas=304458304"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "331b8044-8895-4b10-b3c8-a57a016a3427"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"331b8044-8895-4b10-b3c8-a57a016a3427\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"331b8044-8895-4b10-b3c8-a57a016a3427\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "4ce85721-e2bd-4a0f-94a7-c01efb474de0",
+              "adresas_id": null,
+              "adresas_nuo": "2021-01-06"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "304479782",
+      "slug": "mb-pasvalio-baldai-304479782",
+      "identity_key": {
+        "company_code": "304479782",
+        "slug": "mb-pasvalio-baldai-304479782"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "d8fa0f25-e533-4ed3-a781-f93a66b063ea",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"d8fa0f25-e533-4ed3-a781-f93a66b063ea\"&limit(2)",
+          "record_id": "d8fa0f25-e533-4ed3-a781-f93a66b063ea"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "304479782"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"d8fa0f25-e533-4ed3-a781-f93a66b063ea\"&limit(2)",
+            "exact_predicate": "_id=\"d8fa0f25-e533-4ed3-a781-f93a66b063ea\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=304479782&limit(2)",
+            "exact_predicate": "ja_kodas=304479782"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "d8fa0f25-e533-4ed3-a781-f93a66b063ea"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"d8fa0f25-e533-4ed3-a781-f93a66b063ea\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"d8fa0f25-e533-4ed3-a781-f93a66b063ea\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "f28d29ec-67e6-40fd-ab0c-6e7dba0eb7ae",
+              "adresas_id": null,
+              "adresas_nuo": "2017-03-15"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "304657427",
+      "slug": "ciuziniai-uab-304657427",
+      "identity_key": {
+        "company_code": "304657427",
+        "slug": "ciuziniai-uab-304657427"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "bce5ce28-a1a7-4fc3-b890-7668230d6be5",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"bce5ce28-a1a7-4fc3-b890-7668230d6be5\"&limit(2)",
+          "record_id": "bce5ce28-a1a7-4fc3-b890-7668230d6be5"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "304657427"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"bce5ce28-a1a7-4fc3-b890-7668230d6be5\"&limit(2)",
+            "exact_predicate": "_id=\"bce5ce28-a1a7-4fc3-b890-7668230d6be5\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=304657427&limit(2)",
+            "exact_predicate": "ja_kodas=304657427"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "bce5ce28-a1a7-4fc3-b890-7668230d6be5"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"bce5ce28-a1a7-4fc3-b890-7668230d6be5\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"bce5ce28-a1a7-4fc3-b890-7668230d6be5\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "032d197c-4547-4c01-a4e9-04cc01383c22",
+              "adresas_id": null,
+              "adresas_nuo": "2025-05-28"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "304696444",
+      "slug": "mb-vimora-304696444",
+      "identity_key": {
+        "company_code": "304696444",
+        "slug": "mb-vimora-304696444"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "e081467f-fd5d-43bc-a0b2-1bf6b99f7d21",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"e081467f-fd5d-43bc-a0b2-1bf6b99f7d21\"&limit(2)",
+          "record_id": "e081467f-fd5d-43bc-a0b2-1bf6b99f7d21"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "304696444"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"e081467f-fd5d-43bc-a0b2-1bf6b99f7d21\"&limit(2)",
+            "exact_predicate": "_id=\"e081467f-fd5d-43bc-a0b2-1bf6b99f7d21\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=304696444&limit(2)",
+            "exact_predicate": "ja_kodas=304696444"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "e081467f-fd5d-43bc-a0b2-1bf6b99f7d21"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"e081467f-fd5d-43bc-a0b2-1bf6b99f7d21\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"e081467f-fd5d-43bc-a0b2-1bf6b99f7d21\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "e45d832b-678c-48c5-ac75-b770e738d3a7",
+              "adresas_id": null,
+              "adresas_nuo": "2025-08-06"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "304844544",
+      "slug": "uab-taelus-304844544",
+      "identity_key": {
+        "company_code": "304844544",
+        "slug": "uab-taelus-304844544"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "2d271434-398e-4fde-b687-d965f7bd38ad",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"2d271434-398e-4fde-b687-d965f7bd38ad\"&limit(2)",
+          "record_id": "2d271434-398e-4fde-b687-d965f7bd38ad"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "304844544"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"2d271434-398e-4fde-b687-d965f7bd38ad\"&limit(2)",
+            "exact_predicate": "_id=\"2d271434-398e-4fde-b687-d965f7bd38ad\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=304844544&limit(2)",
+            "exact_predicate": "ja_kodas=304844544"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "2d271434-398e-4fde-b687-d965f7bd38ad"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"2d271434-398e-4fde-b687-d965f7bd38ad\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"2d271434-398e-4fde-b687-d965f7bd38ad\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "347b3ce5-fc33-4b37-9eb4-541faa99e904",
+              "adresas_id": null,
+              "adresas_nuo": "2025-08-25"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "305399606",
+      "slug": "uab-dariaus-baldai-305399606",
+      "identity_key": {
+        "company_code": "305399606",
+        "slug": "uab-dariaus-baldai-305399606"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "5c7a98d3-c609-4afd-aadc-4a161f36bf23",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"5c7a98d3-c609-4afd-aadc-4a161f36bf23\"&limit(2)",
+          "record_id": "5c7a98d3-c609-4afd-aadc-4a161f36bf23"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "305399606"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"5c7a98d3-c609-4afd-aadc-4a161f36bf23\"&limit(2)",
+            "exact_predicate": "_id=\"5c7a98d3-c609-4afd-aadc-4a161f36bf23\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=305399606&limit(2)",
+            "exact_predicate": "ja_kodas=305399606"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "5c7a98d3-c609-4afd-aadc-4a161f36bf23"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"5c7a98d3-c609-4afd-aadc-4a161f36bf23\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"5c7a98d3-c609-4afd-aadc-4a161f36bf23\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "39952b55-cd0b-464c-b2e3-636263c4e362",
+              "adresas_id": null,
+              "adresas_nuo": "2019-12-19"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "305402415",
+      "slug": "solidsofa-uab-305402415",
+      "identity_key": {
+        "company_code": "305402415",
+        "slug": "solidsofa-uab-305402415"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "f9717ae0-ea6c-469f-982a-e0e02281ec9d",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"f9717ae0-ea6c-469f-982a-e0e02281ec9d\"&limit(2)",
+          "record_id": "f9717ae0-ea6c-469f-982a-e0e02281ec9d"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "305402415"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"f9717ae0-ea6c-469f-982a-e0e02281ec9d\"&limit(2)",
+            "exact_predicate": "_id=\"f9717ae0-ea6c-469f-982a-e0e02281ec9d\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=305402415&limit(2)",
+            "exact_predicate": "ja_kodas=305402415"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "f9717ae0-ea6c-469f-982a-e0e02281ec9d"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"f9717ae0-ea6c-469f-982a-e0e02281ec9d\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"f9717ae0-ea6c-469f-982a-e0e02281ec9d\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "82e1372d-19e7-4332-9af0-3a289d04d7b5",
+              "adresas_id": null,
+              "adresas_nuo": "2019-12-19"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "305416169",
+      "slug": "mb-brovita-305416169",
+      "identity_key": {
+        "company_code": "305416169",
+        "slug": "mb-brovita-305416169"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "e1256882-a33b-4aad-bddc-b8b75b12246a",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"e1256882-a33b-4aad-bddc-b8b75b12246a\"&limit(2)",
+          "record_id": "e1256882-a33b-4aad-bddc-b8b75b12246a"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "305416169"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"e1256882-a33b-4aad-bddc-b8b75b12246a\"&limit(2)",
+            "exact_predicate": "_id=\"e1256882-a33b-4aad-bddc-b8b75b12246a\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=305416169&limit(2)",
+            "exact_predicate": "ja_kodas=305416169"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "e1256882-a33b-4aad-bddc-b8b75b12246a"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"e1256882-a33b-4aad-bddc-b8b75b12246a\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"e1256882-a33b-4aad-bddc-b8b75b12246a\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "75b68042-c0e7-4e63-b9ed-09c323888016",
+              "adresas_id": null,
+              "adresas_nuo": "2024-12-02"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "305615000",
+      "slug": "mb-men-do-studio-305615000",
+      "identity_key": {
+        "company_code": "305615000",
+        "slug": "mb-men-do-studio-305615000"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "3011b453-075e-4713-b3ba-7699ddfd9a44",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"3011b453-075e-4713-b3ba-7699ddfd9a44\"&limit(2)",
+          "record_id": "3011b453-075e-4713-b3ba-7699ddfd9a44"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "305615000"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"3011b453-075e-4713-b3ba-7699ddfd9a44\"&limit(2)",
+            "exact_predicate": "_id=\"3011b453-075e-4713-b3ba-7699ddfd9a44\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=305615000&limit(2)",
+            "exact_predicate": "ja_kodas=305615000"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "3011b453-075e-4713-b3ba-7699ddfd9a44"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"3011b453-075e-4713-b3ba-7699ddfd9a44\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"3011b453-075e-4713-b3ba-7699ddfd9a44\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "12bdaa72-d426-4063-8001-54c7dfef7705",
+              "adresas_id": null,
+              "adresas_nuo": "2024-12-11"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "305677468",
+      "slug": "mb-joinery-305677468",
+      "identity_key": {
+        "company_code": "305677468",
+        "slug": "mb-joinery-305677468"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "64ebb274-a9db-421b-a2db-c3525e0bb8d7",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"64ebb274-a9db-421b-a2db-c3525e0bb8d7\"&limit(2)",
+          "record_id": "64ebb274-a9db-421b-a2db-c3525e0bb8d7"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "305677468"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"64ebb274-a9db-421b-a2db-c3525e0bb8d7\"&limit(2)",
+            "exact_predicate": "_id=\"64ebb274-a9db-421b-a2db-c3525e0bb8d7\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=305677468&limit(2)",
+            "exact_predicate": "ja_kodas=305677468"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "64ebb274-a9db-421b-a2db-c3525e0bb8d7"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"64ebb274-a9db-421b-a2db-c3525e0bb8d7\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"64ebb274-a9db-421b-a2db-c3525e0bb8d7\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "0eb114e2-5990-4953-bc3b-95292c99386b",
+              "adresas_id": null,
+              "adresas_nuo": "2021-01-06"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "305959656",
+      "slug": "mb-mapa-baldai-305959656",
+      "identity_key": {
+        "company_code": "305959656",
+        "slug": "mb-mapa-baldai-305959656"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f\"&limit(2)",
+          "record_id": "1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "305959656"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f\"&limit(2)",
+            "exact_predicate": "_id=\"1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=305959656&limit(2)",
+            "exact_predicate": "ja_kodas=305959656"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "af0682e6-80e5-4ad4-902a-d13409dfec6c",
+              "adresas_id": null,
+              "adresas_nuo": "2025-06-10"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "306571585",
+      "slug": "mb-strumilo-baldai-306571585",
+      "identity_key": {
+        "company_code": "306571585",
+        "slug": "mb-strumilo-baldai-306571585"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "26e6bdc5-57f1-4650-9de3-a71c75041a45",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"26e6bdc5-57f1-4650-9de3-a71c75041a45\"&limit(2)",
+          "record_id": "26e6bdc5-57f1-4650-9de3-a71c75041a45"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "306571585"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"26e6bdc5-57f1-4650-9de3-a71c75041a45\"&limit(2)",
+            "exact_predicate": "_id=\"26e6bdc5-57f1-4650-9de3-a71c75041a45\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=306571585&limit(2)",
+            "exact_predicate": "ja_kodas=306571585"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "26e6bdc5-57f1-4650-9de3-a71c75041a45"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"26e6bdc5-57f1-4650-9de3-a71c75041a45\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"26e6bdc5-57f1-4650-9de3-a71c75041a45\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "dd169150-ac95-48a2-a855-42e59263739e",
+              "adresas_id": null,
+              "adresas_nuo": "2023-10-17"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    },
+    {
+      "company_code": "306992246",
+      "slug": "mb-grumisva-306992246",
+      "identity_key": {
+        "company_code": "306992246",
+        "slug": "mb-grumisva-306992246"
+      },
+      "check_date": "2026-08-07",
+      "official_jar_identity": {
+        "jar_entity_id": "a9dbfeb4-b8a9-4a98-9620-322cb500d478",
+        "jar_entity_source": {
+          "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "official_record_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"a9dbfeb4-b8a9-4a98-9620-322cb500d478\"&limit(2)",
+          "record_id": "a9dbfeb4-b8a9-4a98-9620-322cb500d478"
+        },
+        "company_code_field": "ja_kodas",
+        "company_code_value": "306992246"
+      },
+      "checked_paths": [
+        {
+          "path": "JAR JuridinisAsmuo exact UUID",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?_id=\"a9dbfeb4-b8a9-4a98-9620-322cb500d478\"&limit(2)",
+            "exact_predicate": "_id=\"a9dbfeb4-b8a9-4a98-9620-322cb500d478\""
+          },
+          "matching_rows": 1,
+          "published_fields": {
+            "pilnas_adresas": null,
+            "adresas": null
+          }
+        },
+        {
+          "path": "JAR JuridinisAsmuo exact company code",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo?ja_kodas=306992246&limit(2)",
+            "exact_predicate": "ja_kodas=306992246"
+          },
+          "matching_rows": 1,
+          "confirmed_jar_entity_id": "a9dbfeb4-b8a9-4a98-9620-322cb500d478"
+        },
+        {
+          "path": "JAR Buveine.juridinis_asmuo._id exact relationship",
+          "source": {
+            "api_model_path": "datasets/gov/rc/jar/buveines/Buveine",
+            "official_query_url": "https://get.data.gov.lt/datasets/gov/rc/jar/buveines/Buveine?juridinis_asmuo._id=\"a9dbfeb4-b8a9-4a98-9620-322cb500d478\"&limit(1000)",
+            "exact_predicate": "juridinis_asmuo._id=\"a9dbfeb4-b8a9-4a98-9620-322cb500d478\""
+          },
+          "matching_rows": 1,
+          "published_relations": [
+            {
+              "buveine_id": "416a5595-6d23-4ec7-82ba-5947ebe76095",
+              "adresas_id": null,
+              "adresas_nuo": "2024-09-17"
+            }
+          ]
+        }
+      ],
+      "status": "location_not_published",
+      "no_inference_rule": "A location is recorded only when an exact official JAR entity field or exact JAR-to-Address-Register relationship directly publishes it. Legal names are never joins and no location is guessed, parsed from an unrelated source, or inferred from a company code."
+    }
+  ]
+}
