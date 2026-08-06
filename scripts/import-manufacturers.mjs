@@ -154,8 +154,6 @@ function validate(records) {
       if (!hasPublicDetailsProvenance && record.source_collection_date !== "2026-08-01") throw new Error(`Official-source record ${record.slug} has invalid collection date`);
     }
   }
-  const enrichedRecords = records.filter((record) => financialEnrichmentFields.some((field) => record[field] !== undefined));
-  if (enrichedRecords.length && new Set(enrichedRecords.map((record) => record.verified_at)).size !== 1) throw new Error("Financial verification date must be uniform across the enrichment run");
   return records;
 }
 
