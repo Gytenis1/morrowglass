@@ -2996,6 +2996,28 @@
     min-width: 520px;
   }
 
+  .market-table-wrap .en-hub-category-table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .en-hub-category-table th:first-child {
+    width: 62%;
+  }
+
+  .en-hub-category-table th:nth-child(2) {
+    width: 16%;
+  }
+
+  .en-hub-category-table th:nth-child(3) {
+    width: 22%;
+  }
+
+  .en-hub-category-table tbody th {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
   .market-table-wrap th,
   .market-table-wrap td {
     padding: 0.7rem 0.8rem;

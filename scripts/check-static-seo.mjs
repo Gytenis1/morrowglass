@@ -946,6 +946,8 @@ for (const file of files.sort()) {
     for (const required of [
       'Lithuanian furniture makers by category',
       'Source Lithuanian furniture makers from published catalogue data',
+      'Browse by furniture category',
+      'Open any category to view its English catalogue page',
       `${manufacturers.length} candidate makers`,
       'existing region labels',
       `at least ${ENGLISH_CITY_MINIMUM} catalogue entries`,
@@ -972,11 +974,14 @@ for (const file of files.sort()) {
       if (!html.includes(`data-en-hub-coverage="${metric}" data-count="${count}"`)) addError(route, `English hub coverage ${metric} must equal ${count}`);
       if (!text.includes(formatPercent(count, manufacturers.length, 'en-GB').replace(/\s+/g, ' '))) addError(route, `English hub coverage ${metric} is missing share ${formatPercent(count, manufacturers.length, 'en-GB')}`);
     }
-    const categoryRows = [...html.matchAll(/<tr data-en-hub-category="([^"]+)" data-count="(\d+)">([\s\S]*?)<\/tr>/g)];
-    if (categoryRows.length !== expectedEnglishCategories.length) addError(route, `expected ${expectedEnglishCategories.length} English category links, found ${categoryRows.length}`);
+    const categorySection = /<section\b[^>]*id="categories"[^>]*>([\s\S]*?)<\/section>/i.exec(html)?.[1] ?? '';
+    if (!categorySection) addError(route, 'missing visible Browse by furniture category section');
+    const categoryRows = [...categorySection.matchAll(/<tr data-en-hub-category="([^"]+)" data-count="(\d+)">([\s\S]*?)<\/tr>/g)];
+    if (categoryRows.length !== expectedEnglishCategories.length) addError(route, `expected ${expectedEnglishCategories.length} English category links in the category section, found ${categoryRows.length}`);
     else categoryRows.forEach(([, slug, count, row], index) => {
       const expected = expectedEnglishCategories[index];
-      if (slug !== expected.category.slug || Number(count) !== expected.records.length) addError(route, `English hub category row ${index + 1} does not match ${expected.category.slug}`);
+      const visibleCount = Number(/<td\b[^>]*class="[^"]*\bmarket-number\b[^"]*"[^>]*>\s*(\d+)\s*<\/td>/i.exec(row)?.[1]);
+      if (slug !== expected.category.slug || Number(count) !== expected.records.length || visibleCount !== expected.records.length) addError(route, `English hub category row ${index + 1} does not match ${expected.category.slug} count ${expected.records.length}`);
       if (!row.includes(`href="${expected.route}/"`) || !visibleText(row).includes(expected.label)) addError(route, `English hub category ${expected.category.slug} must link to ${expected.route}/ with its English label`);
     });
 
