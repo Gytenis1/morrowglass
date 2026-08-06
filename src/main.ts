@@ -41,6 +41,10 @@ type Manufacturer = RecordModel & {
   postcode: string | null;
   founded_year: number | null;
   employee_count_band: string | null;
+  revenue_eur_latest: number | null;
+  revenue_year: number | null;
+  financial_source_url: string | null;
+  revenue_availability: 'paskelbta' | 'nepaskelbta' | null;
   public_details_source_urls: string[];
   source_urls: string[];
   source_artifact_url: string;
@@ -1288,6 +1292,58 @@ function createOptionalFactRow(
   return row;
 }
 
+function getPublishedTurnover(record: Manufacturer): { amount: number; year: number; sourceUrl: string } | null {
+  const amount = record.revenue_eur_latest;
+  const year = record.revenue_year;
+  const sourceValue = record.financial_source_url?.trim();
+  let sourceUrl = '';
+
+  if (sourceValue) {
+    try {
+      const url = new URL(sourceValue);
+      if (url.protocol === 'https:' || url.protocol === 'http:') sourceUrl = url.href;
+    } catch {
+      sourceUrl = '';
+    }
+  }
+
+  if (
+    record.revenue_availability !== 'paskelbta'
+    || !Number.isFinite(amount)
+    || Number(amount) <= 0
+    || !Number.isInteger(year)
+    || record.financial_verification_status !== 'patikrinta'
+    || !getRegistryCheckedDate(record.verified_at)
+    || !sourceUrl
+  ) return null;
+
+  return { amount: Number(amount), year: Number(year), sourceUrl };
+}
+
+function createTurnoverFactRow(amount: number, year: number, sourceUrl: string): HTMLDivElement {
+  const wrapper = document.createElement('div');
+  const dt = document.createElement('dt');
+  dt.textContent = `Apyvarta (${year} m.)`;
+  const dd = document.createElement('dd');
+  const value = document.createElement('strong');
+  value.textContent = new Intl.NumberFormat('lt-LT', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  }).format(amount);
+  const explanation = document.createElement('p');
+  explanation.className = 'fact-explanation';
+  explanation.textContent = 'Tai viešame įmonės įraše paskelbta apyvarta už nurodytus finansinius metus. Ji nepatvirtina gamintojo kokybės, dabartinio užimtumo ar galimybės priimti jūsų projektą.';
+  const sourceLink = document.createElement('a');
+  sourceLink.href = sourceUrl;
+  sourceLink.target = '_blank';
+  sourceLink.rel = 'noopener noreferrer';
+  sourceLink.textContent = 'Atverti apyvartos šaltinį';
+  dd.append(value, explanation, sourceLink);
+  wrapper.append(dt, dd);
+  return wrapper;
+}
+
 function createEmployeeSizeFactRow(record: Manufacturer, employeeCountBand: string): HTMLDivElement {
   const wrapper = document.createElement('div');
   const dt = document.createElement('dt');
@@ -1362,11 +1418,13 @@ function createPublicDetailsSection(record: Manufacturer): HTMLElement | null {
   const streetAddress = record.street_address?.trim();
   const postcode = record.postcode?.trim();
   const employeeCountBand = record.employee_count_band?.trim();
+  const turnover = getPublishedTurnover(record);
 
   if (companyCode) rows.push(createFactRow('Įmonės kodas', companyCode));
   if (streetAddress) rows.push(createFactRow('Registracijos adresas', streetAddress));
   if (postcode) rows.push(createFactRow('Pašto kodas', postcode));
   if (Number.isInteger(record.founded_year) && Number(record.founded_year) > 0) rows.push(createFactRow('Įkurta', String(record.founded_year)));
+  if (turnover) rows.push(createTurnoverFactRow(turnover.amount, turnover.year, turnover.sourceUrl));
   if (employeeCountBand) rows.push(createEmployeeSizeFactRow(record, employeeCountBand));
   if (publicPhone) rows.push(createTelephoneFactRow('Viešas telefono numeris', publicPhone));
   if (!rows.length) return null;
