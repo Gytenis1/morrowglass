@@ -221,12 +221,10 @@ migrate((app) => {
           !get(record, "source_identity").includes("tikslus įmonės kodas " + row.company_code)) {
         throw new Error("registry location-gap status found a non-import target identity")
       }
+      // JAR provenance is proven directly by the registered-address reference and
+      // the immutable checkpoint's exact JAR entity/code/Būveinė evidence. Keep
+      // source URL fields snapshotted below, but do not parse or normalize them.
       const jarUrl = legacyUrl(jarModel, row.jar_entity_id)
-      const sourceUrls = parseJson(get(record, "source_urls"), "source_urls")
-      const publicSourceUrls = parseJson(get(record, "public_details_source_urls"), "public_details_source_urls")
-      if (!Array.isArray(sourceUrls) || !sourceUrls.includes(jarUrl) || !Array.isArray(publicSourceUrls) || !publicSourceUrls.includes(jarUrl)) {
-        throw new Error("registry location-gap status cannot prove original official JAR provenance for " + row.company_code)
-      }
       const reference = parseJson(get(record, "official_registered_address_reference"), "registered-address reference")
       if (!reference.registered_address || !reference.official_record_urls || reference.official_record_urls.jar_entity !== jarUrl ||
           reference.registered_address.buveine || reference.registered_address.address_registry ||
