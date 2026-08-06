@@ -136,17 +136,17 @@ export function getEligibleCityCategoryLandings(records: SeoManufacturer[]): Cit
   return combinations.sort((a, b) => a.category.title.localeCompare(b.category.title, 'lt') || a.city.localeCompare(b.city, 'lt'));
 }
 
-export function getEligibleCities(records: SeoManufacturer[]): { city: string; slug: string; count: number }[] {
+export function getAllCities(records: SeoManufacturer[]): { city: string; slug: string; count: number }[] {
   return Array.from(getCityCounts(records), ([city, count]) => ({ city, slug: slugifyLithuanian(city), count }))
-    .filter((entry) => entry.count >= CITY_LANDING_THRESHOLD)
     .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
 }
 
+export function getEligibleCities(records: SeoManufacturer[]): { city: string; slug: string; count: number }[] {
+  return getAllCities(records).filter((entry) => entry.count >= CITY_LANDING_THRESHOLD);
+}
+
 export function getLandingCities(records: SeoManufacturer[]): { city: string; slug: string; count: number }[] {
-  const combinationCities = new Set(getEligibleCityCategoryLandings(records).map((entry) => entry.city));
-  return Array.from(getCityCounts(records), ([city, count]) => ({ city, slug: slugifyLithuanian(city), count }))
-    .filter((entry) => entry.count >= CITY_LANDING_THRESHOLD || combinationCities.has(entry.city))
-    .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
+  return getEligibleCities(records);
 }
 
 function ensureMeta(selector: string, create: () => HTMLMetaElement | HTMLLinkElement): HTMLMetaElement | HTMLLinkElement {

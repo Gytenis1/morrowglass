@@ -9,6 +9,7 @@ import {
   SITE_URL,
   breadcrumbStructuredData,
   faqStructuredData,
+  getAllCities,
   getEligibleCityCategoryLandings,
   getLandingCities,
   itemListStructuredData,
@@ -687,6 +688,7 @@ function renderFooter(): string {
           <p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p>
         </div>
         <nav aria-label="Poraštės navigacija">
+          <a href="/baldai-pagal-uzsakyma/miestai/">Visi miestai</a>
           <a href="/gauti-pasiulymus" data-internal-link="true">Projekto užklausa</a>
           <a href="/gidas" data-internal-link="true">Pirkėjo gidas</a>
           <a href="/baldu-kainos-skaiciuokle" data-internal-link="true">Kainos skaičiuoklė</a>
@@ -771,7 +773,7 @@ function renderLandingDirectory(): string {
       <div class="section-heading">
         <p class="kicker">Parengti paieškos puslapiai</p>
         <h2 id="landing-directory-title">Naršykite pagal baldų rūšį arba miestą</h2>
-        <p>Šiuose puslapiuose rodomi tik versijuotame šaltinių rinkinyje atitinkamą žymą ar miestą turintys nepatvirtinti kandidatai.</p>
+        <p>Šiuose puslapiuose rodomi tik versijuotame šaltinių rinkinyje atitinkamą žymą ar miestą turintys nepatvirtinti kandidatai. <a href="/baldai-pagal-uzsakyma/miestai/">Atverkite visų katalogo vietovių rodyklę</a>.</p>
       </div>
       <div class="landing-link-groups">
         <div>
@@ -2194,6 +2196,66 @@ function initializeLandingFilters(records: Manufacturer[], updateMetadata: () =>
   renderCards();
 }
 
+function renderCitiesIndexPage(): void {
+  if (!root || root.querySelector('.city-index-main')) return;
+  const cities = getAllCities(manufacturers);
+  const groups = new Map<string, typeof cities>();
+  cities.forEach((city) => {
+    const letter = city.city[0].toLocaleUpperCase('lt-LT');
+    groups.set(letter, [...(groups.get(letter) ?? []), city]);
+  });
+  const cityHref = (city: (typeof cities)[number]): string => {
+    if (city.count >= 2) return `/baldai-pagal-uzsakyma/${city.slug}/`;
+    const record = manufacturers.find((candidate) => candidate.city === city.city);
+    return record ? `/gamintojas/${record.slug}/` : '/';
+  };
+  setPageMetadata({
+    title: 'Baldų gamintojai pagal miestą ir vietovę | Katalogo rodyklė',
+    description: `Visų ${cities.length} katalogo vietovių rodyklė su gamintojų kandidatų skaičiumi ir veikiančiomis nuorodomis.`,
+    path: '/baldai-pagal-uzsakyma/miestai',
+    structuredData: [
+      breadcrumbStructuredData([
+        { name: 'Gamintojų katalogas', path: '/' },
+        { name: 'Miestai ir vietovės', path: '/baldai-pagal-uzsakyma/miestai' },
+      ]),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        numberOfItems: cities.length,
+        itemListElement: cities.map((city, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: city.city,
+          url: `${SITE_URL}${cityHref(city)}`,
+        })),
+      },
+    ],
+  });
+  const directory = [...groups].map(([letter, entries], groupIndex) => `
+    <section class="city-index-group" aria-labelledby="city-index-letter-${groupIndex}">
+      <h2 id="city-index-letter-${groupIndex}">${escapeHtml(letter)}</h2>
+      <ul>${entries.map((city) => {
+        const singleRecord = city.count === 1 ? manufacturers.find((record) => record.city === city.city) : undefined;
+        const destination = city.count >= 2 ? 'Atverti vietovės kandidatų sąrašą' : `Atverti vienintelį įrašą: ${singleRecord?.trading_name ?? ''}`;
+        return `<li class="city-index-item" data-city-count="${city.count}"><a href="${cityHref(city)}"><span><strong>${escapeHtml(city.city)}</strong><small>${escapeHtml(destination)}</small></span><span class="city-index-count">${city.count}</span></a></li>`;
+      }).join('')}</ul>
+    </section>
+  `).join('');
+  root.innerHTML = `
+    ${renderHeader('directory')}
+    <main class="city-index-main">
+      <a class="back-link" href="/" data-internal-link="true">← Grįžti į gamintojų katalogą</a>
+      <header class="city-index-hero">
+        <div><p class="kicker">Vietovių rodyklė</p><h1>Gamintojų kandidatai pagal vietovę</h1></div>
+        <div class="city-index-intro"><p>Rodyklėje pateikiamos visos ${cities.length} vietovės, kurios šiuo metu nurodytos viešų šaltinių katalogo įrašuose.</p><p>Bent du įrašus turinti vietovė veda į kandidatų puslapį, o vieną – tiesiai į vienintelį profilį. Vietovė negarantuoja paslaugų teritorijos.</p></div>
+      </header>
+      <section class="city-index-directory" aria-label="Visos katalogo vietovės">${directory}</section>
+      <aside class="city-index-disclaimer"><h2>Kaip skaityti šią rodyklę</h2><p>Įrašai sudaryti iš viešų šaltinių, nėra patvirtinti, reitinguojami ar rekomenduojami. Juridinius ir kontaktinius duomenis, aktualią veiklą bei aptarnavimo adresą patikrinkite savarankiškai.</p></aside>
+    </main>
+    ${renderFooter()}
+  `;
+}
+
 function renderLandingPage(slug: string, citySlug?: string): void {
   if (!root) return;
   const landingCities = getLandingCities(manufacturers);
@@ -2863,6 +2925,10 @@ function route(): void {
   }
 
   if (isLandingPath()) {
+    if (normalizePathname() === '/baldai-pagal-uzsakyma/miestai') {
+      renderCitiesIndexPage();
+      return;
+    }
     const segments = normalizePathname().split('/').filter(Boolean).map((segment) => decodeURIComponent(segment));
     const categoryOrCitySlug = segments[1] ?? '';
     const combinationCitySlug = segments.length === 4 && segments[2] === 'miestas' ? segments[3] : undefined;

@@ -34,7 +34,10 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 
 ## Miestų puslapiai
 - Alytus: https://www.baldininkai.org/baldai-pagal-uzsakyma/alytus/
+- Dovilai, Klaipėda r.: https://www.baldininkai.org/baldai-pagal-uzsakyma/dovilai-klaipeda-r/
+- Gargždai: https://www.baldininkai.org/baldai-pagal-uzsakyma/gargzdai/
 - Jonava: https://www.baldininkai.org/baldai-pagal-uzsakyma/jonava/
+- Karmėlava: https://www.baldininkai.org/baldai-pagal-uzsakyma/karmelava/
 - Kaunas: https://www.baldininkai.org/baldai-pagal-uzsakyma/kaunas/
 - Kėdainiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/kedainiai/
 - Klaipėda: https://www.baldininkai.org/baldai-pagal-uzsakyma/klaipeda/
@@ -42,6 +45,7 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Marijampolė: https://www.baldininkai.org/baldai-pagal-uzsakyma/marijampole/
 - Mažeikiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/mazeikiai/
 - Panevėžys: https://www.baldininkai.org/baldai-pagal-uzsakyma/panevezys/
+- Plungė: https://www.baldininkai.org/baldai-pagal-uzsakyma/plunge/
 - Raseiniai: https://www.baldininkai.org/baldai-pagal-uzsakyma/raseiniai/
 - Riešė: https://www.baldininkai.org/baldai-pagal-uzsakyma/riese/
 - Šiauliai: https://www.baldininkai.org/baldai-pagal-uzsakyma/siauliai/

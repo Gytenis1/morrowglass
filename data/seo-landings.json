@@ -391,7 +391,7 @@
       ]
     }
   ],
-  "cityThreshold": 5,
+  "cityThreshold": 2,
   "cityCategoryThreshold": 3,
   "guidance": {
     "priceReference": "300–800 €/m",

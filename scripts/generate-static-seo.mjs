@@ -622,7 +622,7 @@ function header(active = 'directory') {
 }
 
 function footer() {
-  return '<footer><div class="footer-inner"><div class="footer-summary"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Poraštės navigacija"><a href="/baldu-kainos-skaiciuokle">Kainos skaičiuoklė</a><a href="/gauti-pasiulymus">Projekto užklausa</a><a href="/gidas">Pirkėjo gidas</a><a href="/gidas/baldu-pirkimo-sutarties-sablonas">Sutarties šablonas</a><a href="/palyginti-pasiulymus">Pasiūlymų palyginimas</a><a href="/atviri-duomenys">Atviri duomenys</a><a href="/privatumas">Privatumas</a><a href="/naudojimosi-salygos">Naudojimosi sąlygos</a><a href="/slapukai">Slapukai</a><a href="/atsiliepimu-taisykles">Atsiliepimų taisyklės</a><a href="/irasyti-pataisyma">Įrašo pataisymas</a></nav></div></footer>';
+  return '<footer><div class="footer-inner"><div class="footer-summary"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Poraštės navigacija"><a href="/baldai-pagal-uzsakyma/miestai/">Visi miestai</a><a href="/baldu-kainos-skaiciuokle">Kainos skaičiuoklė</a><a href="/gauti-pasiulymus">Projekto užklausa</a><a href="/gidas">Pirkėjo gidas</a><a href="/gidas/baldu-pirkimo-sutarties-sablonas">Sutarties šablonas</a><a href="/palyginti-pasiulymus">Pasiūlymų palyginimas</a><a href="/atviri-duomenys">Atviri duomenys</a><a href="/privatumas">Privatumas</a><a href="/naudojimosi-salygos">Naudojimosi sąlygos</a><a href="/slapukai">Slapukai</a><a href="/atsiliepimu-taisykles">Atsiliepimų taisyklės</a><a href="/irasyti-pataisyma">Įrašo pataisymas</a></nav></div></footer>';
 }
 
 function manufacturerCard(record) {
@@ -642,49 +642,61 @@ function guidanceHtml(sections) {
   return `<section class="landing-guidance" aria-labelledby="landing-guidance-title"><div class="landing-guidance-heading"><p class="kicker">Pirkėjo atmintinė</p><h2 id="landing-guidance-title">Kaip pasiruošti užsakymui ir palyginti pasiūlymus</h2><p>Praktinės gairės padeda vienodai aprašyti projektą, kainos apimtį, medžiagas, vietos sąlygas ir montavimą.</p></div><div class="landing-guidance-copy">${sections.map((section) => `<section><h3>${escapeHtml(section.heading)}</h3>${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}</section>`).join('')}</div></section>`;
 }
 
+function validateSections(sections, label) {
+  if (!Array.isArray(sections) || !sections.length) throw new Error(`${label} must define guidance sections.`);
+  for (const section of sections) {
+    if (!section?.heading?.trim() || !Array.isArray(section.paragraphs) || !section.paragraphs.length || !section.paragraphs.every((paragraph) => typeof paragraph === 'string' && paragraph.trim())) {
+      throw new Error(`${label} has an invalid guidance section.`);
+    }
+  }
+}
+
+function validateFaq(faq, label) {
+  if (!Array.isArray(faq) || faq.length < 3 || faq.length > 5 || !faq.every((item) => item?.question?.trim() && item?.answer?.trim())) {
+    throw new Error(`${label} must define 3–5 complete FAQ entries.`);
+  }
+}
+
+function validateCityContent(content, label) {
+  if (!content || typeof content !== 'object') throw new Error(`${label} must be an object.`);
+  validateSections(content.guidanceSections, label);
+  validateFaq(content.faq, label);
+  if (!content.intro?.trim() || !content.buyer_note?.trim()) throw new Error(`${label} must define intro and buyer_note.`);
+}
+
 function validateLandingContentModel() {
+  if (landingConfig.cityThreshold !== 2) throw new Error('SEO city landing threshold must remain 2 so every locality with several makers gets a page.');
   const shared = landingConfig.guidance?.sharedSections;
   if (!Array.isArray(shared) || shared.length < 3) throw new Error('SEO landing guidance must define at least three shared sections.');
-  const validateSections = (sections, label) => {
-    if (!Array.isArray(sections) || !sections.length) throw new Error(`${label} must define guidance sections.`);
-    for (const section of sections) {
-      if (!section?.heading?.trim() || !Array.isArray(section.paragraphs) || !section.paragraphs.every((paragraph) => paragraph?.trim())) {
-        throw new Error(`${label} has an invalid guidance section.`);
-      }
-    }
-  };
-  const validateFaq = (faq, label) => {
-    if (!Array.isArray(faq) || faq.length < 3 || faq.length > 5 || !faq.every((item) => item?.question?.trim() && item?.answer?.trim())) {
-      throw new Error(`${label} must define 3–5 complete FAQ entries.`);
-    }
-  };
   validateSections(shared, 'Shared SEO landing content');
   for (const category of landingConfig.categories) {
     validateSections(category.guidanceSections, `Category ${category.slug}`);
     validateFaq(category.faq, `Category ${category.slug}`);
   }
-  if (!landingConfig.cities || typeof landingConfig.cities !== 'object') throw new Error('SEO landing content must define city guidance.');
-  for (const [city, content] of Object.entries(landingConfig.cities)) {
-    validateSections(content.guidanceSections, `City ${city}`);
-    validateFaq(content.faq, `City ${city}`);
-    if (!content.intro?.trim() || !content.buyer_note?.trim()) throw new Error(`City ${city} must define intro and buyer_note.`);
+  if (!landingConfig.cities || typeof landingConfig.cities !== 'object' || Array.isArray(landingConfig.cities)) {
+    throw new Error('SEO landing content must define author-supplied city guidance as an object.');
   }
+  for (const [city, content] of Object.entries(landingConfig.cities)) validateCityContent(content, `Author-supplied city ${city}`);
 }
 
 validateLandingContentModel();
 
-const cityCounts = new Map();
+const recordsByCity = new Map();
 for (const record of manufacturers) {
   const city = record.city?.trim();
-  if (city) cityCounts.set(city, (cityCounts.get(city) ?? 0) + 1);
+  if (!city) continue;
+  const records = recordsByCity.get(city) ?? [];
+  records.push(record);
+  recordsByCity.set(city, records);
 }
+const allCities = Array.from(recordsByCity, ([city, records]) => ({ city, records, count: records.length, slug: slugifyLithuanian(city) }))
+  .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
+const cityCounts = new Map(allCities.map((entry) => [entry.city, entry.count]));
 const cityCategoryLandings = landingConfig.categories.flatMap((category) => {
   const counts = new Map();
   for (const record of manufacturers) {
     const city = record.city?.trim();
-    if (city && (record.category_codes ?? []).includes(category.code)) {
-      counts.set(city, (counts.get(city) ?? 0) + 1);
-    }
+    if (city && (record.category_codes ?? []).includes(category.code)) counts.set(city, (counts.get(city) ?? 0) + 1);
   }
   return Array.from(counts, ([city, count]) => ({
     category,
@@ -694,16 +706,89 @@ const cityCategoryLandings = landingConfig.categories.flatMap((category) => {
     path: `/baldai-pagal-uzsakyma/${category.slug}/miestas/${slugifyLithuanian(city)}`,
   })).filter((entry) => entry.count >= landingConfig.cityCategoryThreshold);
 }).sort((a, b) => a.category.title.localeCompare(b.category.title, 'lt') || a.city.localeCompare(b.city, 'lt'));
-const cityCategoryNames = new Set(cityCategoryLandings.map((entry) => entry.city));
-const landingCities = Array.from(cityCounts, ([city, count]) => ({ city, count, slug: slugifyLithuanian(city) }))
-  .filter((entry) => entry.count >= landingConfig.cityThreshold || cityCategoryNames.has(entry.city))
-  .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
+const landingCities = allCities.filter((entry) => entry.count >= landingConfig.cityThreshold);
+
+function cityCategoryMix(records) {
+  const counts = new Map();
+  for (const record of records) {
+    for (const [index, code] of (record.category_codes ?? []).entries()) {
+      const label = record.category_labels?.[index] ?? landingConfig.categories.find((category) => category.code === code)?.title ?? code;
+      const current = counts.get(code) ?? { label, count: 0 };
+      current.count += 1;
+      counts.set(code, current);
+    }
+  }
+  return [...counts.values()].sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'lt'));
+}
+
+function cityFacts(records, city) {
+  const mix = cityCategoryMix(records);
+  const mixText = mix.map((item) => `${item.label} – ${item.count}`).join('; ');
+  const registryCount = records.filter(isRegistryChecked).length;
+  const addressCount = records.filter((record) => record.street_address?.trim()).length;
+  const phoneCount = records.filter((record) => record.public_phone?.trim()).length;
+  const contactLinkCount = records.filter((record) => publicUrl(record.website) || publicUrl(record.public_contact_url)).length;
+  return {
+    mixText,
+    leadingCategory: mix[0]?.label ?? 'baldų gamyba pagal užsakymą',
+    registryCount,
+    addressCount,
+    phoneCount,
+    contactLinkCount,
+    guidance: {
+      heading: `Ką katalogo duomenys rodo apie vietovę „${city}“`,
+      paragraphs: [
+        `${records.length} šios vietovės kandidatų kategorijų žymų pasiskirstymas: ${mixText}. Vienas įrašas gali turėti kelias kategorijų žymas, todėl jų skaičių suma gali būti didesnė už kandidatų skaičių.`,
+        registryCount
+          ? `${registryCount} iš ${records.length} įrašų turi pažymėtą registro duomenų patikrą. Ši būsena apima tik registro duomenų peržiūrą ir nėra darbų kokybės, užimtumo ar rekomendacijos patvirtinimas.`
+          : `Nė vienas iš ${records.length} šios vietovės įrašų šiuo metu neturi pažymėtos registro duomenų patikros. Tai neparodo veiklos kokybės ar teisėtumo; juridinius duomenis prieš susitarimą reikia tikrinti savarankiškai.`,
+        `Viešuose įrašuose rasta: gatvės adresas – ${addressCount}, telefono numeris – ${phoneCount}, svetainės arba kita viešo kontakto nuoroda – ${contactLinkCount}. Kontaktai rodomi tik konkrečiame kandidato įraše ir tik tada, kai jie yra šaltinių rinkinyje.`,
+        `Žyma „${city}“ šiame kataloge reiškia šaltinyje nurodytą registracijos, bazės ar kontakto vietovę. Ji savaime nepatvirtina, kad kandidatas aptarnauja visą miestą, rajoną ar jūsų objekto adresą.`,
+      ],
+    },
+  };
+}
+
+function generatedCityContent(city, records) {
+  const facts = cityFacts(records, city);
+  return {
+    intro: `Vietovėje „${city}“ katalogo šaltiniuose rasti ${records.length} nepatvirtinti baldų gamintojų kandidatai. Dažniausia užfiksuota kryptis – „${facts.leadingCategory}“, o visas kategorijų pasiskirstymas pateiktas žemiau.`,
+    buyer_note: `„${city}“ yra šaltinyje nurodyta registracijos, bazės ar kontakto vietovė, o ne patvirtinta paslaugų teritorija. Katalogas kandidatų nereitinguoja ir nerekomenduoja.`,
+    guidanceSections: [
+      {
+        heading: `Kaip lyginti ${city} kandidatų pateikiamą informaciją`,
+        paragraphs: [
+          `Pirmiausia atverkite abiejų ar daugiau ${city} įrašų šaltinius ir patikrinkite juridinį pavadinimą, aktualią veiklą bei tas kategorijas, kurios svarbios jūsų projektui. Kategorijos žyma parodo tik tai, kas užfiksuota katalogo rinkinyje; ji nepatvirtina dabartinės pasiūlos ar patirties konkrečiam darbui.`,
+          `Visiems pasirinktiems kandidatams pateikite tą patį objekto adresą, baldų apimtį ir klausimus apie matavimą, pristatymą, užnešimą bei montavimą. Atsakymą apie išvyką į jūsų vietą gaukite tiesiogiai – jo negalima numanyti vien iš žymos „${city}“.`,
+        ],
+      },
+    ],
+    faq: [
+      { question: `Kiek kandidatų šiuo metu yra vietovės „${city}“ sąraše?`, answer: `Šiame versijuotame rinkinyje yra ${records.length}. Skaičius gaunamas tik iš įrašų, kurių vietovės lauke nurodyta „${city}“; tai nėra visų veikiančių gamintojų registras.` },
+      { question: `Kokia baldų kryptis dažniausia tarp ${city} įrašų?`, answer: `Pagal šaltinių kategorijų žymas dažniausia kryptis yra „${facts.leadingCategory}“. Žyma nėra pažadas, kad kandidatas šiuo metu priima tokį projektą.` },
+      { question: `Ar ${city} vietovės žyma garantuoja atvykimą į mano objektą?`, answer: `Ne. Ji nurodo šaltinyje rastą registracijos, bazės ar kontakto vietovę. Aptarnavimo adresą, kelionės kainą, matavimą ir montavimą patvirtinkite tiesiogiai.` },
+      { question: `Ar katalogas rekomenduoja šiame ${city} sąraše esančius kandidatus?`, answer: `Ne. Tai viešų šaltinių kandidatai, kurie nėra reitinguojami ar rekomenduojami. Patikrinkite tapatybę, pasiūlymą, sutartį, mokėjimo gavėją ir aktualius kontaktus.` },
+    ],
+  };
+}
+
+const cityContentByName = new Map();
+for (const entry of landingCities) {
+  const content = landingConfig.cities[entry.city] ?? generatedCityContent(entry.city, entry.records);
+  validateCityContent(content, `Resolved city ${entry.city}`);
+  cityContentByName.set(entry.city, content);
+}
+const normalizeContent = (value) => value.toLocaleLowerCase('lt-LT').replace(/\s+/g, ' ').trim();
+assertUnique([...cityContentByName.values()].map((content) => normalizeContent(content.intro)), 'city landing intro');
+assertUnique([...cityContentByName.values()].map((content) => normalizeContent(content.guidanceSections.map((section) => `${section.heading} ${section.paragraphs.join(' ')}`).join(' '))), 'city-specific guidance');
+assertUnique([...cityContentByName.values()].map((content) => normalizeContent(content.faq.map((item) => `${item.question} ${item.answer}`).join(' '))), 'city FAQ');
 
 assertUnique(landingConfig.categories.map((category) => category.slug), 'category slug');
-assertUnique(landingCities.map((city) => city.slug), 'city slug');
+assertUnique(allCities.map((city) => city.slug), 'city slug');
 assertUniqueRoutePaths([
   ...landingConfig.categories.map((category) => `/baldai-pagal-uzsakyma/${category.slug}`),
   ...landingCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
+  '/baldai-pagal-uzsakyma/miestai',
   ...cityCategoryLandings.map((entry) => entry.path),
 ], 'catalogue landing');
 
@@ -920,8 +1005,8 @@ async function writeCityCategoryLanding(combination) {
   if (!cityLanding || records.length < landingConfig.cityCategoryThreshold) {
     throw new Error(`City/category landing prerequisites missing: ${category.slug}/${combination.citySlug}`);
   }
-  const cityContent = landingConfig.cities[city];
-  if (!cityContent) throw new Error(`Missing city landing content for ${city}.`);
+  const cityContent = cityContentByName.get(city);
+  if (!cityContent) throw new Error(`Missing resolved city landing content for ${city}.`);
   const title = `${category.title} – ${city}`;
   const intro = `Šiame puslapyje pateikiami ${records.length} nepatvirtinti kandidatų įrašai, kurių viešuose šaltiniuose nurodyta baldų rūšis „${category.title}“ ir bazės miestas ar vietovė „${city}“.`;
   const buyerNote = `Kategorijos ir vietovės „${city}“ sutapimas nepatvirtina darbų kokybės, užimtumo ar paslaugų teritorijos. Matavimo, pristatymo ir montavimo sąlygas tikrinkite tiesiogiai.`;
@@ -961,14 +1046,46 @@ for (const category of landingConfig.categories) {
   await writeLanding({ slug: category.slug, title: category.title, intro: category.intro, buyerNote: category.buyer_note, records, related, faq: category.faq, guidance: [...landingConfig.guidance.sharedSections, ...category.guidanceSections], kind: 'category' });
 }
 
+const cityIndexPath = '/baldai-pagal-uzsakyma/miestai';
+const cityIndexGroups = new Map();
+for (const entry of allCities) {
+  const letter = entry.city[0].toLocaleUpperCase('lt-LT');
+  cityIndexGroups.set(letter, [...(cityIndexGroups.get(letter) ?? []), entry]);
+}
+const cityIndexList = [...cityIndexGroups].map(([letter, entries], groupIndex) => `<section class="city-index-group" aria-labelledby="city-index-letter-${groupIndex}"><h2 id="city-index-letter-${groupIndex}">${escapeHtml(letter)}</h2><ul>${entries.map((entry) => {
+  const href = entry.count >= 2 ? `/baldai-pagal-uzsakyma/${entry.slug}/` : `/gamintojas/${entry.records[0].slug}/`;
+  const destination = entry.count >= 2 ? 'Atverti vietovės kandidatų sąrašą' : `Atverti vienintelį įrašą: ${entry.records[0].trading_name}`;
+  return `<li class="city-index-item" data-city-count="${entry.count}"><a href="${href}"><span><strong>${escapeHtml(entry.city)}</strong><small>${escapeHtml(destination)}</small></span><span class="city-index-count">${entry.count}</span></a></li>`;
+}).join('')}</ul></section>`).join('');
+const cityIndexItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  numberOfItems: allCities.length,
+  itemListElement: allCities.map((entry, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: entry.city,
+    url: canonicalUrl(entry.count >= 2 ? `/baldai-pagal-uzsakyma/${entry.slug}` : `/gamintojas/${entry.records[0].slug}`),
+  })),
+};
+const cityIndexBody = `${header()}<main class="city-index-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><header class="city-index-hero"><div><p class="kicker">Vietovių rodyklė</p><h1>Gamintojų kandidatai pagal vietovę</h1></div><div class="city-index-intro"><p>Rodyklėje pateikiamos visos ${allCities.length} vietovės, kurios šiuo metu nurodytos viešų šaltinių katalogo įrašuose. Skaičius prie pavadinimo rodo kandidatų kiekį versijuotame rinkinyje.</p><p>Vietovė, turinti bent du įrašus, veda į atskirą kandidatų puslapį. Kai įrašas vienas, nuoroda atveria jo profilį. Vietovės žyma nusako registracijos, bazės ar kontakto vietą ir negarantuoja paslaugų teritorijos.</p></div></header><section class="city-index-directory" aria-label="Visos katalogo vietovės">${cityIndexList}</section><aside class="city-index-disclaimer"><h2>Kaip skaityti šią rodyklę</h2><p>Įrašai sudaryti iš viešų šaltinių, nėra katalogo patvirtinti, reitinguojami ar rekomenduojami. Prieš susitarimą savarankiškai patikrinkite juridinius ir kontaktinius duomenis, aktualią veiklą, pasiūlymo apimtį bei tai, ar kandidatas aptarnauja jūsų objekto adresą.</p></aside></main>${footer()}`;
+await writeRoute(cityIndexPath, injectPage({
+  title: 'Baldų gamintojai pagal miestą ir vietovę | Katalogo rodyklė',
+  description: `Visų ${allCities.length} katalogo vietovių rodyklė su gamintojų kandidatų skaičiumi ir nuoroda į vietovės sąrašą arba vienintelį gamintojo įrašą.`,
+  path: cityIndexPath,
+  body: cityIndexBody,
+  structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Miestai ir vietovės', path: cityIndexPath }]), cityIndexItemList],
+}));
+
 for (const city of landingCities) {
-  const records = manufacturers.filter((record) => record.city === city.city).sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'lt'));
+  const records = [...city.records].sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'lt'));
   const related = cityCategoryLandings
     .filter((entry) => entry.city === city.city)
     .map((entry) => ({ path: entry.path, label: entry.category.title, count: entry.count }));
-  const cityContent = landingConfig.cities[city.city];
-  if (!cityContent) throw new Error(`Missing city landing content for ${city.city}.`);
-  await writeLanding({ slug: city.slug, title: `Baldų gamintojų kandidatai: ${city.city}`, intro: cityContent.intro, buyerNote: cityContent.buyer_note, records, related, faq: cityContent.faq, guidance: [...landingConfig.guidance.sharedSections, ...cityContent.guidanceSections], kind: 'city' });
+  const cityContent = cityContentByName.get(city.city);
+  if (!cityContent) throw new Error(`Missing resolved city landing content for ${city.city}.`);
+  const facts = cityFacts(records, city.city);
+  await writeLanding({ slug: city.slug, title: `Baldų gamintojų kandidatai: ${city.city}`, intro: cityContent.intro, buyerNote: cityContent.buyer_note, records, related, faq: cityContent.faq, guidance: [...landingConfig.guidance.sharedSections, facts.guidance, ...cityContent.guidanceSections], kind: 'city' });
 }
 
 for (const combination of cityCategoryLandings) {
@@ -1077,6 +1194,7 @@ const sitemapPaths = [
   ...guideArticles.map((article) => `/gidas/${article.slug}`),
   ...manufacturers.map((record) => `/gamintojas/${record.slug}`),
   ...landingConfig.categories.map((category) => `/baldai-pagal-uzsakyma/${category.slug}`),
+  cityIndexPath,
   ...landingCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
   ...cityCategoryLandings.map((entry) => entry.path),
 ];
@@ -1086,4 +1204,4 @@ await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 await writeFile(join(publicDir, INDEXNOW_KEY_FILENAME), INDEXNOW_KEY);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 buyer request route, 1 comparison route, 1 open-data route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 buyer request route, 1 comparison route, 1 open-data route, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);

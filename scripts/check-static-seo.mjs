@@ -29,6 +29,8 @@ const errors = [];
 const titleRoutes = new Map();
 const descriptionRoutes = new Map();
 const hubGuidanceRoutes = new Map();
+const cityIntroRoutes = new Map();
+const cityFaqRoutes = new Map();
 
 async function htmlFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -110,6 +112,22 @@ function hubGuidance(html) {
 
 function lithuanianWordCount(text) {
   return text.match(/[\p{L}\p{M}]+(?:[’'-][\p{L}\p{M}]+)*/gu)?.length ?? 0;
+}
+
+function slugifyLithuanian(value) {
+  const replacements = { ą: 'a', č: 'c', ę: 'e', ė: 'e', į: 'i', š: 's', ų: 'u', ū: 'u', ž: 'z' };
+  return value.toLocaleLowerCase('lt-LT')
+    .replace(/[ąčęėįšųūž]/g, (character) => replacements[character] ?? character)
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function addNormalizedRoute(map, text, route) {
+  const normalized = text.toLocaleLowerCase('lt-LT').replace(/\s+/g, ' ').trim();
+  if (!normalized) return;
+  const routes = map.get(normalized) ?? [];
+  routes.push(route);
+  map.set(normalized, routes);
 }
 
 function validFaqPage(schemas, expectedEntries) {
@@ -305,8 +323,21 @@ if (!files.length) {
   console.error('SEO audit failed: no public/**/index.html files found. Run npm run build first.');
   process.exit(1);
 }
+const recordsByCity = new Map();
+for (const record of manufacturers) {
+  const city = record.city?.trim();
+  if (!city) continue;
+  const records = recordsByCity.get(city) ?? [];
+  records.push(record);
+  recordsByCity.set(city, records);
+}
+const expectedCities = [...recordsByCity].map(([city, records]) => ({ city, records, count: records.length, slug: slugifyLithuanian(city) }))
+  .sort((a, b) => a.city.localeCompare(b.city, 'lt'));
+const expectedLandingCities = expectedCities.filter((entry) => entry.count >= 2);
+const cityRouteSet = new Set(expectedLandingCities.map((entry) => `/baldai-pagal-uzsakyma/${entry.slug}`));
+const cityIndexRoute = '/baldai-pagal-uzsakyma/miestai';
 
-const counts = { breadcrumbs: 0, hubs: 0, profiles: 0, guideArticles: 0, faqPages: 0 };
+const counts = { breadcrumbs: 0, hubs: 0, cityIndexes: 0, profiles: 0, guideArticles: 0, faqPages: 0 };
 
 for (const file of files.sort()) {
   const route = routeFor(file);
@@ -364,7 +395,27 @@ for (const file of files.sort()) {
     addError(route, 'WebSite and SearchAction schema are allowed only on the home page');
   }
 
-  const isHub = route.startsWith('/baldai-pagal-uzsakyma/');
+  const isCityIndex = route === cityIndexRoute;
+  const isHub = route.startsWith('/baldai-pagal-uzsakyma/') && !isCityIndex;
+  if (isCityIndex) {
+    counts.cityIndexes += 1;
+    if (!hasType('ItemList')) addError(route, 'all-cities index is missing ItemList schema');
+    const entries = [...html.matchAll(/<li class="city-index-item" data-city-count="(\d+)"><a href="([^"]+)">/g)]
+      .map((match) => ({ count: Number(match[1]), href: match[2] }));
+    if (entries.length !== expectedCities.length) {
+      addError(route, `expected ${expectedCities.length} city index entries, found ${entries.length}`);
+    } else {
+      entries.forEach((entry, index) => {
+        const expected = expectedCities[index];
+        const expectedHref = expected.count >= 2
+          ? `/baldai-pagal-uzsakyma/${expected.slug}/`
+          : `/gamintojas/${expected.records[0].slug}/`;
+        if (entry.count !== expected.count || entry.href !== expectedHref) {
+          addError(route, `entry ${index + 1} for ${expected.city} must have count ${expected.count} and href ${expectedHref}`);
+        }
+      });
+    }
+  }
   if (isHub) {
     counts.hubs += 1;
     if (!hasType('ItemList')) addError(route, 'category/city hub is missing ItemList schema');
@@ -387,6 +438,13 @@ for (const file of files.sort()) {
     if (faqEntries < 3 || faqEntries > 5) addError(route, `visible FAQ must contain 3–5 complete Q&A entries; found ${faqEntries}`);
     if (faqEntries >= 3 && faqEntries <= 5 && !validFaqPage(schemas, faqEntries)) {
       addError(route, 'FAQPage schema must contain the same number of complete Question/Answer entries as the visible FAQ');
+    }
+
+    if (cityRouteSet.has(route)) {
+      const intro = /<section\b[^>]*class=(['"])[^'"]*\blanding-hero\b[^'"]*\1[^>]*>[\s\S]*?<p\b[^>]*class=(['"])[^'"]*\blead\b[^'"]*\2[^>]*>([\s\S]*?)<\/p>/i.exec(html)?.[3] ?? '';
+      const faq = /<section\b[^>]*class=(['"])[^'"]*\blanding-faq\b[^'"]*\1[^>]*>([\s\S]*?)<\/section>/i.exec(html)?.[2] ?? '';
+      addNormalizedRoute(cityIntroRoutes, visibleText(intro), route);
+      addNormalizedRoute(cityFaqRoutes, visibleText(faq), route);
     }
   }
 
@@ -450,6 +508,23 @@ for (const [description, routes] of descriptionRoutes) {
 for (const [guidance, routes] of hubGuidanceRoutes) {
   if (routes.length > 1) errors.push(`identical hub guidance on ${routes.join(', ')} (starts "${guidance.slice(0, 90)}…")`);
 }
+for (const [intro, routes] of cityIntroRoutes) {
+  if (routes.length > 1) errors.push(`identical city intro on ${routes.join(', ')} (starts "${intro.slice(0, 90)}…")`);
+}
+for (const [faq, routes] of cityFaqRoutes) {
+  if (routes.length > 1) errors.push(`identical city FAQ on ${routes.join(', ')} (starts "${faq.slice(0, 90)}…")`);
+}
+if (cityIntroRoutes.size !== expectedLandingCities.length) {
+  errors.push(`expected ${expectedLandingCities.length} distinct generated city landing intros, found ${cityIntroRoutes.size}`);
+}
+if (counts.cityIndexes !== 1) errors.push(`expected exactly one all-cities index, found ${counts.cityIndexes}`);
+const sitemap = await readFile(join(publicDir, 'sitemap.xml'), 'utf8');
+const cityIndexCanonical = canonicalUrl(cityIndexRoute);
+if (!sitemap.includes(`<loc>${cityIndexCanonical}</loc>`)) errors.push(`sitemap is missing all-cities index ${cityIndexCanonical}`);
+for (const city of expectedLandingCities) {
+  const canonical = canonicalUrl(`/baldai-pagal-uzsakyma/${city.slug}`);
+  if (!sitemap.includes(`<loc>${canonical}</loc>`)) errors.push(`sitemap is missing city landing ${canonical}`);
+}
 
 if (errors.length) {
   console.error(`SEO audit failed: ${errors.length} issue${errors.length === 1 ? '' : 's'} across ${files.length} pages.`);
@@ -458,4 +533,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; open-data route, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; ItemList ${counts.hubs} hubs; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles; FAQPage ${counts.faqPages} visible FAQ sections.`);
+console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; open-data route, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; ItemList ${counts.hubs} hubs plus ${counts.cityIndexes} all-cities index; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles; FAQPage ${counts.faqPages} visible FAQ sections.`);
