@@ -281,10 +281,16 @@ def research(record):
     for page in pages[1:] + pages[:1]:
         if page["source_type"] != "official_website":
             continue
-        for hit in classify(page["text"]):
+        # An enriched profile has one chosen evidence page. Keeping all category
+        # excerpts on that page makes the row's scope, source URL, and provenance
+        # refer to the same exact crawled resource.
+        page_evidence = classify(page["text"])
+        if not page_evidence:
+            continue
+        for hit in page_evidence:
             hit["source_url"] = page["url"]
-            if not any(previous["code"] == hit["code"] for previous in evidence):
-                evidence.append(hit)
+        evidence = page_evidence
+        break
 
     if not evidence:
         source = pages[0]["url"] if pages else (checked_urls[0] if checked_urls else "")
@@ -355,6 +361,11 @@ def validate_manifest(manifest):
             raise RuntimeError("short evidence description: %s" % row["slug"])
         if len(row["category_codes"]) != len(row["product_service_evidence"]):
             raise RuntimeError("unsupported category count: %s" % row["slug"])
+        if not row["scope_evidence"].endswith(row["source_url"]):
+            raise RuntimeError("scope evidence must end with the chosen source URL: %s" % row["slug"])
+        if (row["provenance_updates"]["source_urls"] != [row["source_url"]] or
+                row["provenance_updates"]["public_details_source_urls"] != [row["source_url"]]):
+            raise RuntimeError("evidence provenance must contain only the chosen source URL: %s" % row["slug"])
         for url in row["provenance_updates"]["source_urls"]:
             if url not in row["checked_source_urls"]:
                 raise RuntimeError("provenance URL was not crawled: %s" % row["slug"])
