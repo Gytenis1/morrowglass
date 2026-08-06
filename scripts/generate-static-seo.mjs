@@ -660,8 +660,15 @@ ${[...siteStructuredData(path), ...structuredData].map((data) => `    <script ty
 
 function header(active = 'directory', lang = 'lt') {
   if (lang === 'en') {
-    const activeLabel = active === 'overview' ? 'Sector data' : 'Catalogue';
-    return `<header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="Baldininkai.org catalogue home"><span class="brand-mark" aria-hidden="true"><img src="${logoAssetUrl}" alt="" width="44" height="44" /></span><span>Custom furniture makers <strong>in Lithuania</strong></span></a><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open the main menu. Current section: ${activeLabel}"><span class="navigation-toggle-label">Menu</span><span class="navigation-current">${activeLabel}</span><span class="navigation-toggle-icon" aria-hidden="true"></span></button><nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation"><a href="/">Catalogue</a><a href="/en/lithuanian-furniture-makers-data/"${active === 'overview' ? ' aria-current="page"' : ''}>Sector data</a><a href="/atviri-duomenys/">Open data</a><a href="/baldu-rinkos-apzvalga/">Lietuvių kalba</a></nav></div></header>`;
+    const activeLabel = {
+      hub: 'Sourcing hub',
+      overview: 'Data overview',
+      guide: 'Sourcing guide',
+      region: 'Region list',
+      city: 'City list',
+      turnover: 'Turnover data cut',
+    }[active] ?? 'Sourcing hub';
+    return `<header class="site-header"><div class="header-inner"><a class="brand" href="/en/" aria-label="Baldininkai.org English sourcing hub"><span class="brand-mark" aria-hidden="true"><img src="${logoAssetUrl}" alt="" width="44" height="44" /></span><span>Custom furniture makers <strong>in Lithuania</strong></span></a><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open the main menu. Current section: ${activeLabel}"><span class="navigation-toggle-label">Menu</span><span class="navigation-current">${activeLabel}</span><span class="navigation-toggle-icon" aria-hidden="true"></span></button><nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation"><a href="/en/"${active === 'hub' ? ' aria-current="page"' : ''}>Sourcing hub</a><a href="/en/sourcing-guide/"${active === 'guide' ? ' aria-current="page"' : ''}>Sourcing guide</a><a href="/en/lithuanian-furniture-makers-data/"${active === 'overview' ? ' aria-current="page"' : ''}>Data overview</a><a href="/atviri-duomenys/">Open data</a><a href="/" lang="lt">Lietuvių</a></nav></div></header>`;
   }
   const activeLabel = {
     directory: 'Katalogas',
@@ -675,7 +682,7 @@ function header(active = 'directory', lang = 'lt') {
 
 function footer(lang = 'lt') {
   if (lang === 'en') {
-    return '<footer><div class="footer-inner"><div class="footer-summary"><p>A public-source catalogue for independent research. Listings are unverified candidates and are not endorsements, rankings or guarantees.</p><p>Operator: GG Ventures UAB, company code 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Footer navigation"><a href="/">Catalogue</a><a href="/en/lithuanian-furniture-makers-data/">Sector data</a><a href="/baldu-rinkos-apzvalga/">Lithuanian overview</a><a href="/atviri-duomenys/">Open data</a><a href="/baldininkai-org-gamintojai.json">JSON</a><a href="/baldininkai-org-gamintojai.csv">CSV</a></nav></div></footer>';
+    return '<footer><div class="footer-inner"><div class="footer-summary"><p>A public-source catalogue for independent research. Listings are unverified candidates and are not endorsements, rankings or guarantees.</p><p>Operator: GG Ventures UAB, company code 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Footer navigation"><a href="/en/">Sourcing hub</a><a href="/en/sourcing-guide/">Sourcing guide</a><a href="/en/lithuanian-furniture-makers-data/">Data overview</a><a href="/atviri-duomenys/">Open data</a><a href="/baldininkai-org-gamintojai.json">JSON</a><a href="/baldininkai-org-gamintojai.csv">CSV</a><a href="/baldu-rinkos-apzvalga/" lang="lt">Lithuanian overview</a><a href="/" lang="lt">Lithuanian catalogue</a></nav></div></footer>';
   }
   return '<footer><div class="footer-inner"><div class="footer-summary"><p>Viešų šaltinių katalogas savarankiškai gamintojų paieškai. Įrašai nepatvirtinti ir nėra kokybės ar prieinamumo garantija.</p><p>Valdytojas: GG Ventures UAB, įmonės kodas 305442420 · <a href="mailto:info@baldininkai.org">info@baldininkai.org</a></p></div><nav aria-label="Poraštės navigacija"><a href="/baldai-pagal-uzsakyma/miestai/">Visi miestai</a><a href="/baldu-rinkos-apzvalga">Rinkos apžvalga</a><a href="/baldu-kainos-skaiciuokle">Kainos skaičiuoklė</a><a href="/gauti-pasiulymus">Projekto užklausa</a><a href="/gidas">Pirkėjo gidas</a><a href="/gidas/baldu-pirkimo-sutarties-sablonas">Sutarties šablonas</a><a href="/palyginti-pasiulymus">Pasiūlymų palyginimas</a><a href="/atviri-duomenys">Atviri duomenys</a><a href="/privatumas">Privatumas</a><a href="/naudojimosi-salygos">Naudojimosi sąlygos</a><a href="/slapukai">Slapukai</a><a href="/atsiliepimu-taisykles">Atsiliepimų taisyklės</a><a href="/irasyti-pataisyma">Įrašo pataisymas</a></nav></div></footer>';
 }
@@ -1085,6 +1092,7 @@ await writeRoute(marketOverviewPath, injectPage({
   alternates: [
     { hreflang: 'lt', href: marketOverviewUrl },
     { hreflang: 'en', href: canonicalUrl('/en/lithuanian-furniture-makers-data') },
+    { hreflang: 'x-default', href: canonicalUrl('/en/lithuanian-furniture-makers-data') },
   ],
   structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: 'Baldų rinkos apžvalga', path: marketOverviewPath }]), marketOverviewSchema],
 }));
@@ -1116,7 +1124,7 @@ const englishRegionLabels = new Map([
   ['Vilnius, rytų ir pietų Lietuva', 'Vilnius, eastern and southern Lithuania'],
   ['Kaunas ir šiaurės Lietuva', 'Kaunas and northern Lithuania'],
   ['Klaipėda, Panevėžys, vakarų ir centrinė Lietuva', 'Klaipėda, Panevėžys, western and central Lithuania'],
-  ['Klaipėda, Panevėžys, vakarų ir vidurio Lietuva', 'Klaipėda, Panevėžys, western and central Lithuania'],
+  ['Klaipėda, Panevėžys, vakarų ir vidurio Lietuva', 'Klaipėda, Panevėžys, western and mid-Lithuania'],
   ['Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)', 'All Lithuania (no city stated in the official source)'],
 ]);
 const englishCategoryLabels = new Map([
@@ -1131,11 +1139,290 @@ const englishCategoryLabels = new Map([
   ['kiti-nestandartiniai-baldai', 'Other custom furniture'],
   ['kiti-baldai', 'Other furniture'],
 ]);
+const englishHubPath = '/en';
+const englishSourcingGuidePath = '/en/sourcing-guide';
+const englishCityMinimum = 10;
+const notPublishedEnglish = 'Not published in this catalogue';
+const englishRegionSlugs = new Map([
+  ['Vilnius, rytų ir pietų Lietuva', 'vilnius-east-south-lithuania'],
+  ['Kaunas ir šiaurės Lietuva', 'kaunas-north-lithuania'],
+  ['Klaipėda, Panevėžys, vakarų ir centrinė Lietuva', 'klaipeda-panevezys-west-central-lithuania'],
+  ['Klaipėda, Panevėžys, vakarų ir vidurio Lietuva', 'klaipeda-panevezys-west-mid-lithuania'],
+  ['Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)', 'all-lithuania-city-not-stated'],
+]);
+const englishRegionGroups = regionDistribution.map(([sourceLabel, count]) => {
+  const slug = englishRegionSlugs.get(sourceLabel);
+  const label = englishRegionLabels.get(sourceLabel);
+  if (!slug || !label) throw new Error(`Missing English route metadata for region_label: ${sourceLabel}`);
+  return {
+    sourceLabel,
+    label,
+    slug,
+    count,
+    path: `/en/regions/${slug}`,
+    records: manufacturers.filter((record) => record.region_label?.trim() === sourceLabel),
+  };
+});
+const englishCityGroups = allCities
+  .filter((entry) => entry.count >= englishCityMinimum)
+  .map((entry) => ({ ...entry, path: `/en/cities/${entry.slug}` }));
+const englishTurnoverBands = [
+  {
+    key: 'lt-100k',
+    slug: 'under-eur-100k',
+    label: 'Under €100,000',
+    title: 'Furniture makers with published turnover under €100,000',
+    boundary: 'Published turnover is below €100,000.',
+    includes: (amount) => amount < 100_000,
+  },
+  {
+    key: '100k-500k',
+    slug: 'eur-100k-to-500k',
+    label: '€100,000 to under €500,000',
+    title: 'Furniture makers with published turnover from €100,000 to under €500,000',
+    boundary: 'Published turnover is at least €100,000 and below €500,000.',
+    includes: (amount) => amount >= 100_000 && amount < 500_000,
+  },
+  {
+    key: '500k-2m',
+    slug: 'eur-500k-to-2m',
+    label: '€500,000 to €2 million',
+    title: 'Furniture makers with published turnover from €500,000 to €2 million',
+    boundary: 'Published turnover is at least €500,000 and at most €2 million.',
+    includes: (amount) => amount >= 500_000 && amount <= 2_000_000,
+  },
+  {
+    key: 'gt-2m',
+    slug: 'over-eur-2m',
+    label: 'Over €2 million',
+    title: 'Furniture makers with published turnover over €2 million',
+    boundary: 'Published turnover is above €2 million.',
+    includes: (amount) => amount > 2_000_000,
+  },
+].map((band) => ({
+  ...band,
+  path: `/en/turnover/${band.slug}`,
+  records: marketTurnovers.filter(({ turnover }) => band.includes(turnover.amount)).map(({ record }) => record),
+}));
+
+function englishEmployeeBand(record) {
+  return englishEmployeeBandLabels.get(record.employee_count_band) ?? '';
+}
+
+function englishFoundingYear(record) {
+  return Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= latestValidFoundingYear
+    ? record.founded_year
+    : null;
+}
+
+function englishMakerRows(records) {
+  return [...records]
+    .sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'en'))
+    .map((record) => {
+      const employeeBand = englishEmployeeBand(record);
+      const turnover = publishedTurnover(record);
+      const foundingYear = englishFoundingYear(record);
+      const employeeCell = employeeBand
+        ? `<span data-en-employee="published" data-band="${escapeHtml(record.employee_count_band)}">${escapeHtml(employeeBand)}</span>`
+        : `<span data-en-employee="not-published">${notPublishedEnglish}</span>`;
+      const turnoverCell = turnover
+        ? `<span data-en-turnover="published" data-amount="${turnover.amount}" data-year="${turnover.year}"><strong>${escapeHtml(formatEuro(turnover.amount, 'en-GB'))}</strong> (${turnover.year} fiscal year)<br><a data-en-financial-source href="${escapeHtml(turnover.sourceUrl)}" rel="noopener noreferrer">Direct financial source ↗</a></span>`
+        : `<span data-en-turnover="not-published">${notPublishedEnglish}</span>`;
+      const foundingCell = foundingYear
+        ? `<span data-en-founded="published">${foundingYear}</span>`
+        : `<span data-en-founded="not-published">${notPublishedEnglish}</span>`;
+      return `<tr data-en-maker-row="${escapeHtml(record.slug)}"><th scope="row"><a data-en-profile-link href="/gamintojas/${escapeHtml(record.slug)}/">${escapeHtml(record.trading_name)}</a></th><td data-en-city>${escapeHtml(record.city)}</td><td>${employeeCell}</td><td>${turnoverCell}</td><td>${foundingCell}</td></tr>`;
+    }).join('');
+}
+
+function englishMakerItemList(records, path) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${canonicalUrl(path)}#makers`,
+    numberOfItems: records.length,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    itemListElement: [...records]
+      .sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'en'))
+      .map((record, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: record.trading_name,
+        url: canonicalUrl(`/gamintojas/${record.slug}`),
+      })),
+  };
+}
+
+function englishCollectionPage(title, description, path, itemListId = `${canonicalUrl(path)}#makers`) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: title,
+    description,
+    url: canonicalUrl(path),
+    inLanguage: 'en',
+    mainEntity: { '@id': itemListId },
+  };
+}
+
+function englishRouteItemList(items, path) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${canonicalUrl(path)}#sections`,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      url: canonicalUrl(item.path),
+    })),
+  };
+}
+
+function englishSelfAlternates(path) {
+  const url = canonicalUrl(path);
+  return [
+    { hreflang: 'en', href: url },
+    { hreflang: 'x-default', href: url },
+  ];
+}
+
+function englishSuiteLinks(currentPath) {
+  const links = [
+    { path: englishHubPath, label: 'English sourcing hub' },
+    { path: englishSourcingGuidePath, label: 'Sourcing guide' },
+    { path: englishMarketOverviewPath, label: 'Catalogue data overview' },
+  ];
+  return `<nav class="article-next" aria-label="English sourcing pages">${links.map((link) => `<a href="${link.path}/"${link.path === currentPath ? ' aria-current="page"' : ''}>${escapeHtml(link.label)}</a>`).join('')}</nav>`;
+}
+
+async function writeEnglishMakerListPage({ path, title, description, heading, summary, records, kind, context, alternates = englishSelfAlternates(path) }) {
+  const rows = englishMakerRows(records);
+  const body = `${header(kind, 'en')}<main class="market-overview-main"><div class="market-top-links"><a class="back-link" href="/en/">← English sourcing hub</a></div><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">Catalogue data cut</p><h1>${escapeHtml(heading)}</h1><p class="lead">${escapeHtml(summary)}</p></div><p class="market-overview-date">Data version <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section" aria-labelledby="en-list-context-title"><div class="market-section-heading"><div><h2 id="en-list-context-title">How to read this list</h2><p>${escapeHtml(context)}</p><p>This is a factual data cut from the current catalogue, not a ranking, endorsement or recommendation. Listings are unverified public-source candidates and do not establish quality, capacity, price, lead time, availability or service coverage.</p></div><p class="market-scope-note">${records.length} catalogue entr${records.length === 1 ? 'y' : 'ies'}.</p></div></section><section class="market-section" aria-labelledby="en-maker-table-title"><div class="market-section-heading"><div><h2 id="en-maker-table-title">Makers in this data cut</h2><p>Rows are alphabetical by maker name. “${notPublishedEnglish}” means the current versioned catalogue has no value that passes the display rule for that field.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="${escapeHtml(heading)} factual table"><table><thead><tr><th>Maker</th><th>City</th><th>Employee band</th><th>Published turnover</th><th>Founding year</th></tr></thead><tbody>${rows}</tbody></table></div></section><section class="market-section market-methodology" aria-labelledby="en-list-method-title"><div class="market-section-heading"><div><h2 id="en-list-method-title">Data rules and next steps</h2><p>Turnover appears only when a positive amount, fiscal year and direct financial source link are all present. Employee bands and founding years are shown only when the catalogue contains a usable value.</p></div></div><div class="market-data-links"><p>Use the <a href="/en/sourcing-guide/">English sourcing guide</a> to interpret the fields and prepare questions. Review the <a href="/en/lithuanian-furniture-makers-data/">catalogue data overview</a> for scope and mixed-year limitations, or the <a href="/atviri-duomenys/">open-data documentation</a> for downloads and licence terms.</p></div></section>${englishSuiteLinks(path)}</article></main>${footer('en')}`;
+  await writeRoute(path, injectPage({
+    title,
+    description,
+    path,
+    lang: 'en',
+    locale: 'en_GB',
+    alternates,
+    body,
+    structuredData: [
+      breadcrumb([{ name: 'English sourcing hub', path: englishHubPath }, { name: heading, path }]),
+      englishCollectionPage(heading, description, path),
+      englishMakerItemList(records, path),
+    ],
+  }));
+}
+
+const englishHubDescription = `English sourcing routes for ${manufacturers.length} Lithuanian furniture-maker candidates, grouped by catalogue region, larger city groups and published-turnover bands.`;
+const englishHubItems = [
+  ...englishRegionGroups.map((group) => ({ name: `Region: ${group.label}`, path: group.path })),
+  ...englishCityGroups.map((group) => ({ name: `City: ${group.city}`, path: group.path })),
+  ...englishTurnoverBands.map((band) => ({ name: `Turnover: ${band.label}`, path: band.path })),
+  { name: 'English sourcing guide', path: englishSourcingGuidePath },
+  { name: 'Catalogue data overview', path: englishMarketOverviewPath },
+];
+const englishHubBody = `${header('hub', 'en')}<main class="market-overview-main"><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">English sourcing directory</p><h1>Source Lithuanian furniture makers from published catalogue data</h1><p class="lead">Browse ${manufacturers.length} public-source candidate records by the catalogue’s existing region labels, larger city groups and four non-overlapping published-turnover bands.</p></div><p class="market-overview-date">Data version <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section" aria-labelledby="en-hub-scope-title"><div class="market-section-heading"><div><h2 id="en-hub-scope-title">A shortlist starting point, not a supplier verdict</h2><p>These pages organise the current versioned catalogue without creating English maker-profile copies. Maker names lead to the existing Lithuanian catalogue profiles and factual source links remain attached to published turnover.</p><p>Listings are unverified public-source candidates. The catalogue does not guarantee identity, accuracy, quality, capacity, price, lead time, availability, service coverage or suitability for a project.</p></div></div></section><section class="market-section" id="browse" aria-labelledby="en-regions-title"><div class="market-section-heading"><div><h2 id="en-regions-title">Browse by catalogue region</h2><p>Region pages follow the existing <code>region_label</code> groupings exactly; the labels are catalogue groupings rather than official administrative classifications.</p></div></div><ul class="city-index-list">${englishRegionGroups.map((group) => `<li class="city-index-item"><a href="${group.path}/"><span><strong>${escapeHtml(group.label)}</strong><small>Existing region_label grouping</small></span><span class="city-index-count">${group.count}</span></a></li>`).join('')}</ul></section><section class="market-section" aria-labelledby="en-cities-title"><div class="market-section-heading"><div><h2 id="en-cities-title">Browse larger city groups</h2><p>English city pages are limited to existing city groups with at least ${englishCityMinimum} catalogue entries. Smaller groups remain available through the Lithuanian catalogue without creating an English clone for every maker.</p></div></div><ul class="city-index-list">${englishCityGroups.map((group) => `<li class="city-index-item"><a href="${group.path}/"><span><strong>${escapeHtml(group.city)}</strong><small>Source-stated registration, base or contact location</small></span><span class="city-index-count">${group.count}</span></a></li>`).join('')}</ul></section><section class="market-section" id="turnover-bands" aria-labelledby="en-turnover-bands-title"><div class="market-section-heading"><div><h2 id="en-turnover-bands-title">Browse four published-turnover data cuts</h2><p>The four bands use the same non-overlapping boundaries as the catalogue data overview. Only entries with a positive amount, fiscal year and direct financial source link are included; fiscal years are mixed.</p></div></div><ul class="city-index-list">${englishTurnoverBands.map((band) => `<li class="city-index-item"><a href="${band.path}/"><span><strong>${escapeHtml(band.label)}</strong><small>Published-turnover rule satisfied</small></span><span class="city-index-count">${band.records.length}</span></a></li>`).join('')}</ul></section><section class="market-section market-methodology" aria-labelledby="en-hub-guide-title"><div class="market-section-heading"><div><h2 id="en-hub-guide-title">Interpret the fields before contacting a maker</h2><p>The <a href="/en/sourcing-guide/">English sourcing guide</a> explains catalogue scope, mixed fiscal years, Sodra-derived employee bands, founding year, shortlist checks and CC BY 4.0 reuse.</p></div></div><div class="market-data-links"><p>For aggregate context, open the <a href="/en/lithuanian-furniture-makers-data/">English catalogue data overview</a>. For the versioned downloads, licence and exact attribution, use the <a href="/atviri-duomenys/">open-data page</a>.</p></div></section></article></main>${footer('en')}`;
+await writeRoute(englishHubPath, injectPage({
+  title: 'Lithuanian furniture maker sourcing hub | Baldininkai.org',
+  description: englishHubDescription,
+  path: englishHubPath,
+  lang: 'en',
+  locale: 'en_GB',
+  alternates: englishSelfAlternates(englishHubPath),
+  body: englishHubBody,
+  structuredData: [
+    breadcrumb([{ name: 'English sourcing hub', path: englishHubPath }]),
+    englishCollectionPage('Lithuanian furniture maker sourcing hub', englishHubDescription, englishHubPath, `${canonicalUrl(englishHubPath)}#sections`),
+    englishRouteItemList(englishHubItems, englishHubPath),
+  ],
+}));
+
+for (const group of englishRegionGroups) {
+  await writeEnglishMakerListPage({
+    path: group.path,
+    title: `${group.label} furniture makers | Catalogue data cut`,
+    description: `${group.count} Lithuanian furniture-maker candidates in the existing “${group.label}” catalogue region grouping, with factual company fields and source-linked turnover.`,
+    heading: `Furniture makers: ${group.label}`,
+    summary: `${group.count} candidate records grouped by the source-derived catalogue region label “${group.label}”.`,
+    records: group.records,
+    kind: 'region',
+    context: `Membership follows the exact source-derived region_label value “${group.sourceLabel}”. The grouping may not match an official administrative region and does not establish service coverage.`,
+  });
+}
+
+for (const group of englishCityGroups) {
+  const ltPath = `/baldai-pagal-uzsakyma/${group.slug}`;
+  await writeEnglishMakerListPage({
+    path: group.path,
+    title: `Furniture makers in ${group.city} | Catalogue data cut`,
+    description: `${group.count} furniture-maker candidates with ${group.city} stated as their city, base or contact location, with employee, turnover and founding-year fields.`,
+    heading: `Furniture makers in ${group.city}`,
+    summary: `${group.count} candidate records whose current catalogue city field is ${group.city}.`,
+    records: group.records,
+    kind: 'city',
+    context: `The city field records a registration, base or contact location stated in a source. It is not a promise that a maker serves every project in ${group.city} or outside it.`,
+    alternates: [
+      { hreflang: 'en', href: canonicalUrl(group.path) },
+      { hreflang: 'lt', href: canonicalUrl(ltPath) },
+      { hreflang: 'x-default', href: canonicalUrl(group.path) },
+    ],
+  });
+}
+
+for (const band of englishTurnoverBands) {
+  await writeEnglishMakerListPage({
+    path: band.path,
+    title: `${band.title} | Catalogue data cut`,
+    description: `${band.records.length} furniture-maker candidates in the ${band.label} published-turnover data cut, using positive amounts with fiscal years and direct sources.`,
+    heading: band.title,
+    summary: `${band.records.length} catalogue entries satisfy this published-turnover band. ${band.boundary}`,
+    records: band.records,
+    kind: 'turnover',
+    context: `${band.boundary} Only records with a positive amount, fiscal year and direct financial source link are included. This is a data cut, not a ranking. Fiscal years are mixed, so rows are not a single-period comparison.`,
+  });
+}
+
+const englishSourcingGuideDescription = 'How to interpret the Baldininkai.org catalogue fields, build a furniture-maker shortlist, ask comparable questions and reuse the open data under CC BY 4.0.';
+const englishSourcingGuideSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How to source Lithuanian furniture makers using the catalogue',
+  description: englishSourcingGuideDescription,
+  url: canonicalUrl(englishSourcingGuidePath),
+  mainEntityOfPage: canonicalUrl(englishSourcingGuidePath),
+  inLanguage: 'en',
+  datePublished: buildDate,
+  dateModified: buildDate,
+  author: { '@id': `${SITE_URL}/#organization` },
+  publisher: { '@id': `${SITE_URL}/#organization` },
+};
+const englishSourcingGuideBody = `${header('guide', 'en')}<main class="article-main"><a class="back-link" href="/en/">← English sourcing hub</a><article class="guide-article"><header class="article-header"><p class="kicker">Catalogue sourcing guide</p><h1>How to source Lithuanian furniture makers using the catalogue</h1><p>${englishSourcingGuideDescription}</p></header><div class="guide-copy"><section><h2>Catalogue scope and limits</h2><p>Baldininkai.org is a versioned catalogue of candidate Lithuanian furniture makers assembled from public registers and public business pages. A listing is a research lead, not a verified supplier, endorsement, ranking or recommendation.</p><p>The catalogue does not guarantee identity, current accuracy, product quality, production capacity, price, lead time, availability, service coverage or suitability for a project. Confirm current legal, commercial and technical details directly before relying on them. The <a href="/en/lithuanian-furniture-makers-data/">catalogue data overview</a> explains coverage and aggregate limitations; the <a href="/atviri-duomenys/">open-data page</a> documents the downloadable version.</p></section><section><h2>What the factual fields mean</h2><h3>Published turnover and fiscal year</h3><p>A turnover figure appears in the English lists only when the catalogue has a positive amount, a fiscal year and a direct financial source link. The fiscal year is part of the fact: values from different years are not a like-for-like single-period comparison. Turnover is not evidence of quality, capacity available for your project, price or delivery speed.</p><h3>Sodra-derived employee bands</h3><p>The employee field is a band derived from publicly reported Sodra employment data and stored in the versioned catalogue. It is a broad company-size signal, not a current headcount promise and not proof of production capacity, skills, quality, availability or who would perform your work.</p><h3>Founding year</h3><p>Founding year records the usable year attached to the company entry when one is available. It does not prove continuous operation under the same team, ownership, scope or trading name, and it is not a quality score.</p><p>When a usable value is absent, the English tables state “${notPublishedEnglish}” rather than infer or fill a value.</p></section><section><h2>Build a shortlist without treating the catalogue as a ranking</h2><ol><li>Choose the relevant region or larger city data cut, while remembering that a source-stated location is not a service-area guarantee.</li><li>Use a turnover band only as a transparent data filter. Keep the fiscal year beside every amount and do not compare mixed years as one market period.</li><li>Open each linked Lithuanian catalogue profile and review its public-source links, identity details, categories and verification dates.</li><li>Create a short list based on project fit that you will verify directly, not on catalogue order or one company-size field.</li><li>Send the same project brief and the same questions to every candidate so responses can be compared on equal terms.</li></ol></section><section><h2>Questions to ask a maker</h2><ul><li>Which legal entity will quote, contract, invoice and receive payment?</li><li>Do you currently accept this furniture type, project location and approximate scope?</li><li>Which parts will you measure, design, manufacture, deliver, install or subcontract?</li><li>What exact materials, finishes, hardware models and drawings are included?</li><li>What is excluded from the price, and which assumptions could change it?</li><li>Which milestones define the schedule, and what customer decisions are required before each one?</li><li>Can you provide relevant references and explain your precise role in those projects?</li><li>What written warranty, acceptance and defect-correction terms will form part of the agreement?</li></ul><p>Answers should be confirmed in a written quotation, specification and contract. The catalogue itself does not make these commitments for a maker.</p></section><section><h2>Reuse under CC BY 4.0</h2><p>The downloadable catalogue dataset is licensed under <a href="${DATASET_LICENSE_URL}" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. Follow the scope and limitations on the <a href="/atviri-duomenys/">open-data page</a> and retain this exact attribution line:</p><p><strong>Attribution:</strong> <q>${datasetAttribution}</q></p></section></div>${englishSuiteLinks(englishSourcingGuidePath)}</article></main>${footer('en')}`;
+await writeRoute(englishSourcingGuidePath, injectPage({
+  title: 'How to source Lithuanian furniture makers | English guide',
+  description: englishSourcingGuideDescription,
+  path: englishSourcingGuidePath,
+  type: 'article',
+  lang: 'en',
+  locale: 'en_GB',
+  alternates: englishSelfAlternates(englishSourcingGuidePath),
+  body: englishSourcingGuideBody,
+  structuredData: [
+    breadcrumb([{ name: 'English sourcing hub', path: englishHubPath }, { name: 'Sourcing guide', path: englishSourcingGuidePath }]),
+    englishSourcingGuideSchema,
+  ],
+}));
+
 const topTurnoverRowsEnglish = topTurnoverMakers.map(({ record, turnover }) => `<tr data-market-top-turnover="${escapeHtml(record.slug)}"><th scope="row"><a href="/gamintojas/${escapeHtml(record.slug)}">${escapeHtml(record.trading_name)}</a></th><td>${escapeHtml(record.city)}</td><td class="market-number">${escapeHtml(formatEuro(turnover.amount, 'en-GB'))}</td><td class="market-number">${turnover.year}</td><td><a data-market-source href="${escapeHtml(turnover.sourceUrl)}" rel="noopener noreferrer">Published source ↗</a></td></tr>`).join('');
-const regionRowsEnglish = regionDistribution.map(([label, count]) => `<tr data-market-region="${escapeHtml(label)}" data-count="${count}"><th scope="row">${escapeHtml(englishRegionLabels.get(label) ?? label)}</th><td class="market-number">${count}</td><td class="market-number">${formatPercent(count, manufacturers.length, 'en-GB')}</td></tr>`).join('');
+const regionRowsEnglish = regionDistribution.map(([label, count]) => {
+  const group = englishRegionGroups.find((entry) => entry.sourceLabel === label);
+  return `<tr data-market-region="${escapeHtml(label)}" data-count="${count}"><th scope="row"><a href="${group.path}/">${escapeHtml(group.label)}</a></th><td class="market-number">${count}</td><td class="market-number">${formatPercent(count, manufacturers.length, 'en-GB')}</td></tr>`;
+}).join('');
 const cityRowsEnglish = leadingCities.map(([city, count]) => {
-  const route = eligibleCityRoutes.get(city);
-  return `<tr data-market-city="${escapeHtml(city)}" data-count="${count}"><th scope="row">${route ? `<a href="${route}">${escapeHtml(city)}</a>` : escapeHtml(city)}</th><td class="market-number">${count}</td><td class="market-number">${formatPercent(count, manufacturers.length, 'en-GB')}</td></tr>`;
+  const group = englishCityGroups.find((entry) => entry.city === city);
+  return `<tr data-market-city="${escapeHtml(city)}" data-count="${count}"><th scope="row">${group ? `<a href="${group.path}/">${escapeHtml(city)}</a>` : escapeHtml(city)}</th><td class="market-number">${count}</td><td class="market-number">${formatPercent(count, manufacturers.length, 'en-GB')}</td></tr>`;
 }).join('');
 const categoryRowsEnglish = categoryMix.map((category) => `<tr data-market-category="${escapeHtml(category.slug)}" data-code="${escapeHtml(category.code)}" data-count="${category.count}"><th scope="row"><a href="/baldai-pagal-uzsakyma/${escapeHtml(category.slug)}">${escapeHtml(englishCategoryLabels.get(category.slug) ?? category.title)}</a></th><td class="market-number">${category.count}</td><td class="market-number">${formatPercent(category.count, manufacturers.length, 'en-GB')}</td></tr>`).join('');
 const englishMarketOverviewSchema = {
@@ -1151,7 +1438,7 @@ const englishMarketOverviewSchema = {
   author: { '@id': `${SITE_URL}/#organization` },
   publisher: { '@id': `${SITE_URL}/#organization` },
 };
-const englishMarketOverviewBody = `${header('overview', 'en')}<main class="market-overview-main"><div class="market-top-links"><a class="back-link" href="/">← Browse the catalogue</a><nav class="language-links" aria-label="Language selection"><a href="/baldu-rinkos-apzvalga/" lang="lt">Lietuvių</a><a href="/en/lithuanian-furniture-makers-data/" lang="en" aria-current="page">English</a></nav></div><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">Catalogue data, clearly scoped</p><h1>Lithuanian furniture makers: catalogue data overview</h1><p class="lead">A factual summary of ${manufacturers.length} candidate furniture makers currently published in the Baldininkai.org catalogue, using company information available from public sources.</p></div><p class="market-overview-date">Data version <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section market-coverage-section" aria-labelledby="market-coverage-title"><div class="market-section-heading"><div><h2 id="market-coverage-title">Catalogue coverage</h2><p>The catalogue is constructed from public registers and public business pages. These figures show how many catalogue entries contain a usable value for each measure.</p></div></div><dl class="market-coverage"><div data-market-coverage="total" data-count="${manufacturers.length}"><dt>All catalogue candidates</dt><dd>${manufacturers.length}</dd><small>100.0%</small></div><div data-market-coverage="turnover" data-count="${marketTurnovers.length}"><dt>Valid published turnover</dt><dd>${marketTurnovers.length}</dd><small>${formatPercent(marketTurnovers.length, manufacturers.length, 'en-GB')}</small></div><div data-market-coverage="employees" data-count="${employeeRecords.length}"><dt>Employee count band</dt><dd>${employeeRecords.length}</dd><small>${formatPercent(employeeRecords.length, manufacturers.length, 'en-GB')}</small></div><div data-market-coverage="founded" data-count="${foundingRecords.length}"><dt>Valid founding year</dt><dd>${foundingRecords.length}</dd><small>${formatPercent(foundingRecords.length, manufacturers.length, 'en-GB')}</small></div></dl></section><section class="market-section" aria-labelledby="market-turnover-title"><div class="market-section-heading"><div><h2 id="market-turnover-title">Published turnover</h2><p>This summary includes only the ${marketTurnovers.length} entries that satisfy the catalogue’s existing published-turnover rule: a positive amount, a fiscal year and a direct public source link.</p></div><p class="market-scope-note">The figures combine different fiscal years.</p></div><dl class="market-headline-stats"><div data-market-turnover-stat="total"><dt>Combined published turnover</dt><dd>${escapeHtml(formatEuro(turnoverTotal, 'en-GB'))}</dd></div><div data-market-turnover-stat="median"><dt>Median</dt><dd>${escapeHtml(formatEuro(turnoverMedian, 'en-GB'))}</dd></div><div data-market-turnover-stat="q1"><dt>First quartile (Q1)</dt><dd>${escapeHtml(formatEuro(turnoverQ1, 'en-GB'))}</dd></div><div data-market-turnover-stat="q3"><dt>Third quartile (Q3)</dt><dd>${escapeHtml(formatEuro(turnoverQ3, 'en-GB'))}</dd></div></dl><div class="market-split"><div><h3>Turnover size bands</h3>${distributionList(turnoverBands, marketTurnovers.length, 'turnover-band', { locale: 'en-GB', labelFor: (item) => englishTurnoverBandLabels.get(item.key) ?? item.label })}<p class="market-definition">Bands do not overlap: €100,000 enters the second band and €500,000 enters the third.</p></div><div><h3>Fiscal-year mix</h3><ul class="market-year-list">${fiscalYears.map(([year, count]) => `<li data-market-fiscal-year="${year}" data-count="${count}"><span>${year}</span><strong>${count} <small>(${formatPercent(count, marketTurnovers.length, 'en-GB')})</small></strong></li>`).join('')}</ul></div></div></section><section class="market-section" aria-labelledby="market-top-title"><div class="market-section-heading"><div><h2 id="market-top-title">Top makers by published turnover</h2><p>The ten largest valid values in this catalogue are shown as a factual table with their fiscal year and direct published source. This is not a company ranking or recommendation.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="Top makers by published turnover"><table><thead><tr><th>Maker</th><th>City</th><th>Published turnover</th><th>Fiscal year</th><th>Source</th></tr></thead><tbody>${topTurnoverRowsEnglish}</tbody></table></div></section><section class="market-section" aria-labelledby="market-employment-title"><div class="market-section-heading"><div><h2 id="market-employment-title">Employee distribution</h2><p>The distribution uses only the ${employeeRecords.length} entries with an actual <code>employee_count_band</code> value. Empty fields are not assigned to a band.</p></div></div>${distributionList(employeeDistribution, employeeRecords.length, 'employee-band', { locale: 'en-GB', labelFor: (item) => englishEmployeeBandLabels.get(item.band) ?? item.label })}</section><section class="market-section" aria-labelledby="market-founded-title"><div class="market-section-heading"><div><h2 id="market-founded-title">Founding-year distribution</h2><p>Valid founding years are available for ${foundingRecords.length} entries. The oldest year in the catalogue is <strong data-market-founding-edge="oldest">${oldestFoundingYear}</strong> and the newest is <strong data-market-founding-edge="newest">${newestFoundingYear}</strong>.</p></div></div>${distributionList(foundingCohorts, foundingRecords.length, 'founding-cohort', { locale: 'en-GB', labelFor: (item) => englishFoundingCohortLabels.get(item.key) ?? item.label })}</section><section class="market-section" aria-labelledby="market-geography-title"><div class="market-section-heading"><div><h2 id="market-geography-title">Regional split</h2><p>Regions use the catalogue’s current <code>region_label</code> values. City means a registration, base or contact location stated in a source, not a guaranteed service area.</p></div></div><div class="market-split market-split--tables"><div><h3>Region labels</h3><div class="market-table-wrap" tabindex="0" role="region" aria-label="Catalogue candidates by region label"><table><thead><tr><th>Region label</th><th>Entries</th><th>Catalogue share</th></tr></thead><tbody>${regionRowsEnglish}</tbody></table></div></div><div><h3>Leading cities</h3><div class="market-table-wrap" tabindex="0" role="region" aria-label="Cities with the most catalogue entries"><table><thead><tr><th>City</th><th>Entries</th><th>Catalogue share</th></tr></thead><tbody>${cityRowsEnglish}</tbody></table></div></div></div></section><section class="market-section" aria-labelledby="market-category-title"><div class="market-section-heading"><div><h2 id="market-category-title">Category split</h2><p>A candidate can appear in several categories, so the rows do not sum to ${manufacturers.length}. Links open the currently published catalogue category pages.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="Catalogue candidates by furniture category"><table><thead><tr><th>Category</th><th>Entries</th><th>Catalogue share</th></tr></thead><tbody>${categoryRowsEnglish}</tbody></table></div></section><section class="market-section market-methodology" aria-labelledby="market-method-title"><div class="market-section-heading"><div><h2 id="market-method-title">Method and limitations</h2><p>How the aggregates are constructed and what they do not establish.</p></div></div><div class="market-method-grid"><div><h3>Sources and calculation</h3><p>Every aggregate is computed at build time from the same versioned Baldininkai.org catalogue file used by the Lithuanian overview. The catalogue is constructed from public registers and public business pages. Quartiles use the median-of-halves method.</p><p><strong>This is catalogue coverage, not official Lithuanian national or furniture-market statistics.</strong></p></div><div><h3>Limits on interpretation</h3><p>Listings are unverified public-source candidates. Publication is not an endorsement, ranking or guarantee of identity, accuracy, quality, capacity, price, timing, availability, service coverage or suitability for a project.</p><p>Turnover values cover a mix of fiscal years, so the combined total and table order are not a single-period market result. Region and city labels may not match official administrative classifications.</p></div></div><div class="market-data-links"><h3>Data, licence and related pages</h3><p>Read the <a href="/atviri-duomenys/">open-data documentation</a>, download the <a href="/baldininkai-org-gamintojai.json">JSON dataset</a> or <a href="/baldininkai-org-gamintojai.csv">CSV dataset</a>, or open the <a href="/baldu-rinkos-apzvalga/" lang="lt">Lithuanian market overview</a>.</p><p>The dataset is published under the <a href="${DATASET_LICENSE_URL}" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a> licence.</p><p><strong>Attribution:</strong> <q>${datasetAttribution}</q></p></div></section></article></main>${footer('en')}`;
+const englishMarketOverviewBody = `${header('overview', 'en')}<main class="market-overview-main"><div class="market-top-links"><a class="back-link" href="/en/">← English sourcing hub</a><nav class="language-links" aria-label="Language selection"><a href="/baldu-rinkos-apzvalga/" lang="lt">Lietuvių</a><a href="/en/lithuanian-furniture-makers-data/" lang="en" aria-current="page">English</a></nav></div><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">Catalogue data, clearly scoped</p><h1>Lithuanian furniture makers: catalogue data overview</h1><p class="lead">A factual summary of ${manufacturers.length} candidate furniture makers currently published in the Baldininkai.org catalogue, using company information available from public sources.</p></div><p class="market-overview-date">Data version <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section" aria-labelledby="english-sourcing-routes-title"><div class="market-section-heading"><div><h2 id="english-sourcing-routes-title">Browse the English sourcing pages</h2><p>Open the <a href="/en/">English sourcing hub</a> for factual region pages, larger-city pages and all four published-turnover data cuts, or use the <a href="/en/sourcing-guide/">sourcing guide</a> to interpret the fields before building a shortlist.</p></div></div></section><section class="market-section market-coverage-section" aria-labelledby="market-coverage-title"><div class="market-section-heading"><div><h2 id="market-coverage-title">Catalogue coverage</h2><p>The catalogue is constructed from public registers and public business pages. These figures show how many catalogue entries contain a usable value for each measure.</p></div></div><dl class="market-coverage"><div data-market-coverage="total" data-count="${manufacturers.length}"><dt>All catalogue candidates</dt><dd>${manufacturers.length}</dd><small>100.0%</small></div><div data-market-coverage="turnover" data-count="${marketTurnovers.length}"><dt>Valid published turnover</dt><dd>${marketTurnovers.length}</dd><small>${formatPercent(marketTurnovers.length, manufacturers.length, 'en-GB')}</small></div><div data-market-coverage="employees" data-count="${employeeRecords.length}"><dt>Employee count band</dt><dd>${employeeRecords.length}</dd><small>${formatPercent(employeeRecords.length, manufacturers.length, 'en-GB')}</small></div><div data-market-coverage="founded" data-count="${foundingRecords.length}"><dt>Valid founding year</dt><dd>${foundingRecords.length}</dd><small>${formatPercent(foundingRecords.length, manufacturers.length, 'en-GB')}</small></div></dl></section><section class="market-section" aria-labelledby="market-turnover-title"><div class="market-section-heading"><div><h2 id="market-turnover-title">Published turnover</h2><p>This summary includes only the ${marketTurnovers.length} entries that satisfy the catalogue’s existing published-turnover rule: a positive amount, a fiscal year and a direct public source link.</p></div><p class="market-scope-note">The figures combine different fiscal years.</p></div><dl class="market-headline-stats"><div data-market-turnover-stat="total"><dt>Combined published turnover</dt><dd>${escapeHtml(formatEuro(turnoverTotal, 'en-GB'))}</dd></div><div data-market-turnover-stat="median"><dt>Median</dt><dd>${escapeHtml(formatEuro(turnoverMedian, 'en-GB'))}</dd></div><div data-market-turnover-stat="q1"><dt>First quartile (Q1)</dt><dd>${escapeHtml(formatEuro(turnoverQ1, 'en-GB'))}</dd></div><div data-market-turnover-stat="q3"><dt>Third quartile (Q3)</dt><dd>${escapeHtml(formatEuro(turnoverQ3, 'en-GB'))}</dd></div></dl><div class="market-split"><div><h3>Turnover size bands</h3>${distributionList(turnoverBands, marketTurnovers.length, 'turnover-band', { locale: 'en-GB', labelFor: (item) => englishTurnoverBandLabels.get(item.key) ?? item.label })}<p class="market-definition">Bands do not overlap: €100,000 enters the second band and €500,000 enters the third.</p></div><div><h3>Fiscal-year mix</h3><ul class="market-year-list">${fiscalYears.map(([year, count]) => `<li data-market-fiscal-year="${year}" data-count="${count}"><span>${year}</span><strong>${count} <small>(${formatPercent(count, marketTurnovers.length, 'en-GB')})</small></strong></li>`).join('')}</ul></div></div></section><section class="market-section" aria-labelledby="market-top-title"><div class="market-section-heading"><div><h2 id="market-top-title">Top makers by published turnover</h2><p>The ten largest valid values in this catalogue are shown as a factual table with their fiscal year and direct published source. This is not a company ranking or recommendation.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="Top makers by published turnover"><table><thead><tr><th>Maker</th><th>City</th><th>Published turnover</th><th>Fiscal year</th><th>Source</th></tr></thead><tbody>${topTurnoverRowsEnglish}</tbody></table></div></section><section class="market-section" aria-labelledby="market-employment-title"><div class="market-section-heading"><div><h2 id="market-employment-title">Employee distribution</h2><p>The distribution uses only the ${employeeRecords.length} entries with an actual <code>employee_count_band</code> value. Empty fields are not assigned to a band.</p></div></div>${distributionList(employeeDistribution, employeeRecords.length, 'employee-band', { locale: 'en-GB', labelFor: (item) => englishEmployeeBandLabels.get(item.band) ?? item.label })}</section><section class="market-section" aria-labelledby="market-founded-title"><div class="market-section-heading"><div><h2 id="market-founded-title">Founding-year distribution</h2><p>Valid founding years are available for ${foundingRecords.length} entries. The oldest year in the catalogue is <strong data-market-founding-edge="oldest">${oldestFoundingYear}</strong> and the newest is <strong data-market-founding-edge="newest">${newestFoundingYear}</strong>.</p></div></div>${distributionList(foundingCohorts, foundingRecords.length, 'founding-cohort', { locale: 'en-GB', labelFor: (item) => englishFoundingCohortLabels.get(item.key) ?? item.label })}</section><section class="market-section" aria-labelledby="market-geography-title"><div class="market-section-heading"><div><h2 id="market-geography-title">Regional split</h2><p>Regions use the catalogue’s current <code>region_label</code> values. City means a registration, base or contact location stated in a source, not a guaranteed service area.</p></div></div><div class="market-split market-split--tables"><div><h3>Region labels</h3><div class="market-table-wrap" tabindex="0" role="region" aria-label="Catalogue candidates by region label"><table><thead><tr><th>Region label</th><th>Entries</th><th>Catalogue share</th></tr></thead><tbody>${regionRowsEnglish}</tbody></table></div></div><div><h3>Leading cities</h3><div class="market-table-wrap" tabindex="0" role="region" aria-label="Cities with the most catalogue entries"><table><thead><tr><th>City</th><th>Entries</th><th>Catalogue share</th></tr></thead><tbody>${cityRowsEnglish}</tbody></table></div></div></div></section><section class="market-section" aria-labelledby="market-category-title"><div class="market-section-heading"><div><h2 id="market-category-title">Category split</h2><p>A candidate can appear in several categories, so the rows do not sum to ${manufacturers.length}. Links open the currently published catalogue category pages.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="Catalogue candidates by furniture category"><table><thead><tr><th>Category</th><th>Entries</th><th>Catalogue share</th></tr></thead><tbody>${categoryRowsEnglish}</tbody></table></div></section><section class="market-section market-methodology" aria-labelledby="market-method-title"><div class="market-section-heading"><div><h2 id="market-method-title">Method and limitations</h2><p>How the aggregates are constructed and what they do not establish.</p></div></div><div class="market-method-grid"><div><h3>Sources and calculation</h3><p>Every aggregate is computed at build time from the same versioned Baldininkai.org catalogue file used by the Lithuanian overview. The catalogue is constructed from public registers and public business pages. Quartiles use the median-of-halves method.</p><p><strong>This is catalogue coverage, not official Lithuanian national or furniture-market statistics.</strong></p></div><div><h3>Limits on interpretation</h3><p>Listings are unverified public-source candidates. Publication is not an endorsement, ranking or guarantee of identity, accuracy, quality, capacity, price, timing, availability, service coverage or suitability for a project.</p><p>Turnover values cover a mix of fiscal years, so the combined total and table order are not a single-period market result. Region and city labels may not match official administrative classifications.</p></div></div><div class="market-data-links"><h3>Data, licence and related pages</h3><p>Read the <a href="/atviri-duomenys/">open-data documentation</a>, download the <a href="/baldininkai-org-gamintojai.json">JSON dataset</a> or <a href="/baldininkai-org-gamintojai.csv">CSV dataset</a>, or open the <a href="/baldu-rinkos-apzvalga/" lang="lt">Lithuanian market overview</a>.</p><p>The dataset is published under the <a href="${DATASET_LICENSE_URL}" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a> licence.</p><p><strong>Attribution:</strong> <q>${datasetAttribution}</q></p></div></section></article></main>${footer('en')}`;
 await writeRoute(englishMarketOverviewPath, injectPage({
   title: 'Lithuanian furniture makers data | Baldininkai.org',
   description: englishMarketOverviewDescription,
@@ -1162,6 +1449,7 @@ await writeRoute(englishMarketOverviewPath, injectPage({
   alternates: [
     { hreflang: 'en', href: englishMarketOverviewUrl },
     { hreflang: 'lt', href: marketOverviewUrl },
+    { hreflang: 'x-default', href: englishMarketOverviewUrl },
   ],
   body: englishMarketOverviewBody,
   structuredData: [breadcrumb([{ name: 'Furniture makers catalogue', path: '/' }, { name: 'Lithuanian furniture makers data', path: englishMarketOverviewPath }]), englishMarketOverviewSchema],
@@ -1274,6 +1562,7 @@ function landingItemList(records) {
 
 async function writeLanding({ slug, title, intro, buyerNote, records, related, faq, guidance, kind }) {
   const path = `/baldai-pagal-uzsakyma/${slug}`;
+  const englishCityCounterpart = kind === 'city' ? englishCityGroups.find((group) => group.slug === slug) : null;
   const description = kind === 'category'
     ? `${title}: ${records.length} viešais šaltiniais paremti nepatvirtinti Lietuvos gamintojų kandidatai, miestai ir atrankos gairės.`
     : `${title.replace('Baldų gamintojų kandidatai: ', '')}: ${records.length} viešuose šaltiniuose šiame mieste registruoti baldų gamintojų kandidatai. Sąrašas nėra paslaugų teritorijos ar kokybės garantija.`;
@@ -1282,7 +1571,18 @@ async function writeLanding({ slug, title, intro, buyerNote, records, related, f
     ? `<section class="landing-related"><div class="section-heading"><h2>${relatedTitle}</h2><p>Nuorodos rodomos tik toms baldų rūšies ir miesto sankirtoms, kuriose yra bent trys katalogo įrašai.</p></div><ul class="landing-related-links">${related.map((item) => `<li><a href="${item.path}">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}</ul></section>`
     : '';
   const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">${kind === 'category' ? 'Baldų kategorija' : 'Šaltinyje nurodyta vietovė'}</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section>${landingMakerSnapshot(records, kind)}${guidanceHtml(guidance)}${relatedSection}<section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="landing-filter-controls" id="landing-filter-controls"></div><div class="manufacturer-list" id="landing-manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
-  await writeRoute(path, injectPage({ title: `${title} | Gamintojų katalogas`, description, path, body, structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }]), faqSchema(faq), landingItemList(records)] }));
+  await writeRoute(path, injectPage({
+    title: `${title} | Gamintojų katalogas`,
+    description,
+    path,
+    body,
+    alternates: englishCityCounterpart ? [
+      { hreflang: 'lt', href: canonicalUrl(path) },
+      { hreflang: 'en', href: canonicalUrl(englishCityCounterpart.path) },
+      { hreflang: 'x-default', href: canonicalUrl(englishCityCounterpart.path) },
+    ] : [],
+    structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }]), faqSchema(faq), landingItemList(records)],
+  }));
 }
 
 async function writeCityCategoryLanding(combination) {
@@ -1469,7 +1769,15 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Kainos skaičiuoklė: ${SITE_URL}/baldu-kainos-skaiciuokle/
 - Projekto pasiūlymo užklausa: ${SITE_URL}/gauti-pasiulymus/
 - Baldų rinkos apžvalga: ${marketOverviewUrl}
+- English sourcing hub: ${canonicalUrl(englishHubPath)}
 - Lithuanian furniture makers data (English): ${englishMarketOverviewUrl}
+- English sourcing guide: ${canonicalUrl(englishSourcingGuidePath)}
+- English region data cuts:
+${englishRegionGroups.map((group) => `  - ${group.label}: ${canonicalUrl(group.path)}`).join('\n')}
+- English larger-city data cuts:
+${englishCityGroups.map((group) => `  - ${group.city}: ${canonicalUrl(group.path)}`).join('\n')}
+- English published-turnover data cuts:
+${englishTurnoverBands.map((band) => `  - ${band.label}: ${canonicalUrl(band.path)}`).join('\n')}
 - Atviri duomenys ir naudojimo sąlygos: ${SITE_URL}/atviri-duomenys/
 - JSON duomenys: ${SITE_URL}/${datasetJsonFilename}
 - CSV duomenys: ${SITE_URL}/${datasetCsvFilename}
@@ -1488,7 +1796,7 @@ Duomenų rinkinys licencijuojamas pagal Creative Commons Attribution 4.0 Interna
 ${datasetAttribution}
 
 ## English summary
-Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, price, availability, timing, or service coverage. Read the English catalogue-data overview at ${englishMarketOverviewUrl}, browse the catalogue at ${SITE_URL}/, and use the documented JSON/CSV downloads at ${SITE_URL}/atviri-duomenys/.
+Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, capacity, price, availability, timing, or service coverage. Start at the English sourcing hub ${canonicalUrl(englishHubPath)}, read the catalogue-data overview at ${englishMarketOverviewUrl}, use the sourcing guide at ${canonicalUrl(englishSourcingGuidePath)}, browse region, larger-city and published-turnover data cuts linked from the hub, and use the documented JSON/CSV downloads at ${SITE_URL}/atviri-duomenys/.
 `;
 await writeFile(join(publicDir, 'llms.txt'), llmsText);
 
@@ -1496,7 +1804,12 @@ const sitemapPaths = [
   '/',
   openDataPath,
   marketOverviewPath,
+  englishHubPath,
   englishMarketOverviewPath,
+  englishSourcingGuidePath,
+  ...englishRegionGroups.map((group) => group.path),
+  ...englishCityGroups.map((group) => group.path),
+  ...englishTurnoverBands.map((band) => band.path),
   '/baldu-kainos-skaiciuokle',
   '/gauti-pasiulymus',
   '/palyginti-pasiulymus',
@@ -1513,7 +1826,7 @@ const sitemapPaths = [
 assertUniqueRoutePaths(sitemapPaths, 'sitemap');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(buildDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
-await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: ${marketOverviewPath}/\nAllow: ${englishMarketOverviewPath}/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: ${marketOverviewPath}/\nAllow: /en/\nAllow: ${englishMarketOverviewPath}/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 await writeFile(join(publicDir, INDEXNOW_KEY_FILENAME), INDEXNOW_KEY);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 buyer request route, 1 comparison route, 1 open-data route, 2 market-overview routes, ${policyPages.length} policy routes, ${guideArticles.length + 2} guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 buyer request route, 1 comparison route, 1 open-data route, 2 market-overview routes, ${englishRegionGroups.length} English region routes, ${englishCityGroups.length} English larger-city routes, ${englishTurnoverBands.length} English turnover routes, 1 English sourcing hub, 1 English sourcing guide, ${policyPages.length} policy routes, ${guideArticles.length + 2} Lithuanian guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);
