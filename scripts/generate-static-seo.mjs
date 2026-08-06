@@ -499,6 +499,18 @@ function employeeBandLabel(value) {
   return labels[value] ?? `${value} darbuotojų (viešo šaltinio grupė)`;
 }
 
+function publishedTurnover(record) {
+  const amount = record.revenue_eur_latest;
+  const year = record.revenue_year;
+  const sourceUrl = publicUrl(record.financial_source_url);
+  if (record.revenue_availability !== 'paskelbta' || !Number.isFinite(amount) || amount <= 0 || !Number.isInteger(year) || !sourceUrl) return null;
+  return { amount, year, sourceUrl };
+}
+
+function formatEuro(amount) {
+  return new Intl.NumberFormat('lt-LT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(amount);
+}
+
 function siteStructuredData(path) {
   const organization = { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: SITE_URL };
   if (path !== '/') return [organization];
@@ -975,6 +987,10 @@ for (const record of manufacturers) {
     ['Pašto kodas', record.postcode?.trim()],
     ['Įkurta', Number.isInteger(record.founded_year) ? String(record.founded_year) : ''],
   ].filter(([, value]) => value);
+  const turnover = publishedTurnover(record);
+  const turnoverFact = turnover
+    ? `<div><dt>Apyvarta (${turnover.year} m.)</dt><dd><strong>${escapeHtml(formatEuro(turnover.amount))}</strong><p class="fact-explanation">Tai viešame įmonės įraše paskelbta apyvarta už nurodytus finansinius metus. Ji nepatvirtina gamintojo kokybės, dabartinio užimtumo ar galimybės priimti jūsų projektą.</p><a href="${escapeHtml(turnover.sourceUrl)}" rel="noopener noreferrer">Atverti apyvartos šaltinį</a></dd></div>`
+    : '';
   const employeeCountBand = record.employee_count_band?.trim();
   const employeeSourceLinks = (record.public_details_source_urls ?? []).map(publicUrl).filter((url) => url?.includes('rekvizitai.vz.lt'));
   const employeeSizeFact = employeeCountBand
@@ -987,8 +1003,8 @@ for (const record of manufacturers) {
   const noPublicContactFact = noPublicContactRoute
     ? `<div><dt>Viešas kontaktas</dt><dd>Viešo kontaktinio kelio nerasta${contactCheckedDate ? ` per <time datetime="${contactCheckedDate.iso}">${escapeHtml(contactCheckedDate.label)}</time> atliktą viešų šaltinių patikrą` : ' per viešų šaltinių patikrą'}.</dd></div>`
     : '';
-  const publicDetails = publicFacts.length || employeeCountBand || publicPhone || noPublicContactRoute
-    ? `<section class="profile-details profile-public-details" aria-labelledby="profile-public-details-title"><div class="section-heading"><p class="kicker">Viešuose šaltiniuose patikrinti faktai</p><h2 id="profile-public-details-title">Vieši įmonės duomenys</h2><p>Rodomi tik tie įmonės duomenys, kuriems katalogo rinkinyje yra nurodytas viešas šaltinis. Darbuotojų skaičiaus grupė yra orientacinis viešo įrašo signalas, o ne gamintojo kokybės ar prieinamumo įvertinimas.</p></div><dl class="profile-facts">${publicFacts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${employeeSizeFact}${publicPhone ? `<div><dt>Viešas telefono numeris</dt><dd><a href="${escapeHtml(telephoneHref)}">${escapeHtml(publicPhone)}</a></dd></div>` : ''}${noPublicContactFact}</dl></section>`
+  const publicDetails = publicFacts.length || turnover || employeeCountBand || publicPhone || noPublicContactRoute
+    ? `<section class="profile-details profile-public-details" aria-labelledby="profile-public-details-title"><div class="section-heading"><p class="kicker">Viešuose šaltiniuose patikrinti faktai</p><h2 id="profile-public-details-title">Vieši įmonės duomenys</h2><p>Rodomi tik tie įmonės duomenys, kuriems katalogo rinkinyje yra nurodytas viešas šaltinis. Darbuotojų skaičiaus grupė yra orientacinis viešo įrašo signalas, o ne gamintojo kokybės ar prieinamumo įvertinimas.</p></div><dl class="profile-facts">${publicFacts.map(([term, detail]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(detail)}</dd></div>`).join('')}${turnoverFact}${employeeSizeFact}${publicPhone ? `<div><dt>Viešas telefono numeris</dt><dd><a href="${escapeHtml(telephoneHref)}">${escapeHtml(publicPhone)}</a></dd></div>` : ''}${noPublicContactFact}</dl></section>`
     : '';
   const staticReviews = `<section class="profile-reviews profile-reviews--static" aria-labelledby="profile-reviews-title"><div class="section-heading"><p class="kicker">Pirkėjų patirtys</p><h2 id="profile-reviews-title">Atsiliepimai apie šį gamintoją</h2><p>Skelbiami tik moderavimo metu patvirtinti atsiliepimai. Jie nėra katalogo patvirtinimas, kokybės sertifikatas ar rekomendacija. Atsiliepimų sąrašas ir pateikimo forma įkeliami įjungus JavaScript; suvestinė rodoma tik tada, kai yra bent vienas patvirtintas atsiliepimas.</p></div><noscript><p class="review-empty">Norėdami peržiūrėti patvirtintus atsiliepimus arba pateikti naują atsiliepimą moderavimui, įjunkite JavaScript.</p></noscript></section>`;
   const checkedDate = registryCheckedDate(record.verified_at);

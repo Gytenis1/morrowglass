@@ -179,6 +179,18 @@ function publicUrl(value) {
   }
 }
 
+function publishedTurnover(record) {
+  const amount = record.revenue_eur_latest;
+  const year = record.revenue_year;
+  const sourceUrl = publicUrl(record.financial_source_url);
+  if (record.revenue_availability !== 'paskelbta' || !Number.isFinite(amount) || amount <= 0 || !Number.isInteger(year) || !sourceUrl) return null;
+  return { amount, year, sourceUrl };
+}
+
+function formatEuro(amount) {
+  return new Intl.NumberFormat('lt-LT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(amount);
+}
+
 function validIsoDate(value) {
   const iso = String(value ?? '').trim();
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
@@ -532,6 +544,22 @@ for (const file of files.sort()) {
         const expectedDate = recordVerificationDate(source);
         if (expectedDate && profileEntity.dateModified !== expectedDate) addError(route, 'profile schema dateModified must use an actual source record date');
         if (!expectedDate && 'dateModified' in profileEntity) addError(route, 'profile schema must omit dateModified when no valid source record date exists');
+
+        const turnover = publishedTurnover(source);
+        const turnoverRows = [...html.matchAll(/<dt>Apyvarta \((\d{4}) m\.\)<\/dt><dd>([\s\S]*?)<\/dd><\/div>/g)];
+        if (!turnover) {
+          if (turnoverRows.length) addError(route, 'profile must not render turnover without published positive revenue, a fiscal year, and a public financial source URL');
+        } else {
+          if (turnoverRows.length !== 1 || Number(turnoverRows[0]?.[1]) !== turnover.year) {
+            addError(route, `profile must render exactly one Apyvarta (${turnover.year} m.) row for published turnover`);
+          } else {
+            const turnoverHtml = turnoverRows[0][2];
+            if (!turnoverHtml.includes(formatEuro(turnover.amount))) addError(route, 'profile turnover row must show the formatted published euro amount');
+            if (!turnoverHtml.includes(`href="${turnover.sourceUrl}"`) || !/Atverti apyvartos šaltinį/.test(turnoverHtml)) {
+              addError(route, 'profile turnover row must link its public financial source with the source label');
+            }
+          }
+        }
       }
     }
   }
