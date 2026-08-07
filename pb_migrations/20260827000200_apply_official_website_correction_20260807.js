@@ -64,21 +64,21 @@ migrate((app) => {
   }
 
   const rows = [
-    ('akcine-bendrove-klaipedos-mediena-240616710', 'https://vmg.eu/', 'https://vmg.eu/en/contacts/company-details/', '2026-08-07'),
-    ('rol-lithuania-uab-300503175', 'https://rollithuania.lt/', 'https://rollithuania.lt/contacts/', '2026-08-07'),
-    ('uab-balticsofa-121504969', 'https://www.balticsofa.com/', 'https://www.balticsofa.com/privacy-policy/', '2026-08-07'),
-    ('uab-pelly-baltic-300513963', 'https://www.pelly.se/', 'https://www.pelly.se/en/about-pelly/', '2026-08-07'),
-    ('uab-svenheim-301152003', 'https://svenheim.no/', 'https://svenheim.no/en/about-us/', '2026-08-07'),
-    ('itab-lithuania-ab-233393310', 'https://itab.com/', 'https://itab.com/sintek', '2026-08-07'),
-    ('uzdaroji-akcine-bendrove-vmg-akmenes-baldai-305610964', 'https://vmg.eu/', 'https://vmg.eu/en/our-history/', '2026-08-07'),
-    ('kame-uab-303051031', 'https://kame.lt/', 'https://kame.lt/en/terms-and-conditions/', '2026-08-07'),
-    ('uab-erelita-furniture-302556194', 'https://erelita.lt/', 'https://erelita.lt/privacy-policy/', '2026-08-07'),
-    ('uzdaroji-akcine-bendrove-vildeta-120213448', 'https://vildeta.lt/lt/', 'https://vildeta.lt/en/contact-us', '2026-08-07'),
-    ('uab-pats-sau-baldzius-300632782', 'https://www.baldzius.lt/', 'https://www.baldzius.lt/', '2026-08-07'),
-    ('uab-pod-furniture-305671084', 'https://www.podfurniture.lt/', 'https://www.podfurniture.lt/', '2026-08-07'),
-    ('uab-superlon-baltic-148441361', 'https://www.superlon.lt/', 'https://www.superlon.lt/', '2026-08-07'),
-    ('uab-rieses-baldai-302658982', 'https://riesesbaldai.lt/', 'https://riesesbaldai.lt/kontaktai', '2026-08-07'),
-    ('uab-siguldos-baldai-302316701', 'https://www.siguldosbaldai.lt/', 'https://www.siguldosbaldai.lt/apie-mus/', '2026-08-07')
+    "('akcine-bendrove-klaipedos-mediena-240616710', 'https://vmg.eu/', 'https://vmg.eu/en/contacts/company-details/', '2026-08-07')",
+    "('rol-lithuania-uab-300503175', 'https://rollithuania.lt/', 'https://rollithuania.lt/contacts/', '2026-08-07')",
+    "('uab-balticsofa-121504969', 'https://www.balticsofa.com/', 'https://www.balticsofa.com/privacy-policy/', '2026-08-07')",
+    "('uab-pelly-baltic-300513963', 'https://www.pelly.se/', 'https://www.pelly.se/en/about-pelly/', '2026-08-07')",
+    "('uab-svenheim-301152003', 'https://svenheim.no/', 'https://svenheim.no/en/about-us/', '2026-08-07')",
+    "('itab-lithuania-ab-233393310', 'https://itab.com/', 'https://itab.com/sintek', '2026-08-07')",
+    "('uzdaroji-akcine-bendrove-vmg-akmenes-baldai-305610964', 'https://vmg.eu/', 'https://vmg.eu/en/our-history/', '2026-08-07')",
+    "('kame-uab-303051031', 'https://kame.lt/', 'https://kame.lt/en/terms-and-conditions/', '2026-08-07')",
+    "('uab-erelita-furniture-302556194', 'https://erelita.lt/', 'https://erelita.lt/privacy-policy/', '2026-08-07')",
+    "('uzdaroji-akcine-bendrove-vildeta-120213448', 'https://vildeta.lt/lt/', 'https://vildeta.lt/en/contact-us', '2026-08-07')",
+    "('uab-pats-sau-baldzius-300632782', 'https://www.baldzius.lt/', 'https://www.baldzius.lt/', '2026-08-07')",
+    "('uab-pod-furniture-305671084', 'https://www.podfurniture.lt/', 'https://www.podfurniture.lt/', '2026-08-07')",
+    "('uab-superlon-baltic-148441361', 'https://www.superlon.lt/', 'https://www.superlon.lt/', '2026-08-07')",
+    "('uab-rieses-baldai-302658982', 'https://riesesbaldai.lt/', 'https://riesesbaldai.lt/kontaktai', '2026-08-07')",
+    "('uab-siguldos-baldai-302316701', 'https://www.siguldosbaldai.lt/', 'https://www.siguldosbaldai.lt/apie-mus/', '2026-08-07')"
   ].join(",\n    ")
   const source = (column) => "(SELECT `" + column + "` FROM `source` WHERE `source`.`slug` = `manufacturers`.`slug` LIMIT 1)"
   const blankWebsite = "(`website` IS NULL OR trim(`website`) = '')"
