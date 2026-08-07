@@ -14,6 +14,7 @@ const OFFICIAL_FINANCIAL_SOURCE_URL = 'https://data.gov.lt/datasets/1484/';
 const OFFICIAL_FINANCIAL_API_MODEL_PATH = 'datasets/gov/rc/jar/pelno_ataskaitos/PelnoAtaskaita';
 const DATASET_JSON_URL = `${SITE_URL}/baldininkai-org-gamintojai.json`;
 const DATASET_CSV_URL = `${SITE_URL}/baldininkai-org-gamintojai.csv`;
+const FINANCIAL_DATASET_CSV_URL = `${SITE_URL}/baldininkai-org-gamintoju-finansai.csv`;
 const OPEN_DATA_URL = `${SITE_URL}/atviri-duomenys/`;
 const MARKET_OVERVIEW_PATH = '/baldu-rinkos-apzvalga';
 const MARKET_OVERVIEW_URL = `${SITE_URL}${MARKET_OVERVIEW_PATH}/`;
@@ -54,6 +55,7 @@ const ENGLISH_EMPLOYEE_BAND_LABELS = new Map([
   ['50-249', '50–249 employees'],
   ['250+', '250 or more employees'],
 ]);
+const employeeBands = new Set(ENGLISH_EMPLOYEE_BAND_LABELS.keys());
 const manufacturers = JSON.parse(await readFile(join(rootDir, 'data/manufacturers.json'), 'utf8'));
 const landingConfig = JSON.parse(await readFile(join(rootDir, 'data/seo-landings.json'), 'utf8'));
 const manufacturersBySlug = new Map(manufacturers.map((record) => [record.slug, record]));
@@ -85,6 +87,35 @@ const datasetHeaders = [
   'categories',
   'public_source_urls',
   'verification_date',
+  'revenue_eur_latest',
+  'revenue_year',
+  'financial_source_url',
+  'revenue_availability',
+  'founded_year',
+  'employee_count_band',
+];
+const financialDatasetHeaders = [
+  'slug',
+  'profile_url',
+  'trading_name',
+  'legal_name',
+  'company_code',
+  'fiscal_period_start',
+  'fiscal_period_end',
+  'filing_registration_date',
+  'revenue_eur',
+  'profit_before_tax_eur',
+  'financial_source_url',
+  'financial_api_model_path',
+  'jar_entity_id',
+  'revenue_api_record_id',
+  'revenue_line_name',
+  'revenue_evidence_registration_date',
+  'profit_before_tax_api_record_id',
+  'profit_before_tax_line_name',
+  'profit_before_tax_evidence_registration_date',
+  'standard_names',
+  'template_names',
 ];
 const errors = [];
 let generatedDatasetMetadata = null;
@@ -297,7 +328,18 @@ function validFiledMetric(entry, valueKey, evidenceKey, lineName) {
     || !validUuid(evidence.api_record_id)
     || evidence.line_name !== lineName
     || validIsoDate(evidence.registration_date) !== filingDate) return null;
-  return { amount, apiRecordId: evidence.api_record_id.trim() };
+  return {
+    amount,
+    apiRecordId: evidence.api_record_id.trim(),
+    lineName: evidence.line_name,
+    registrationDate: filingDate,
+  };
+}
+
+function validTextArray(value) {
+  return Array.isArray(value) && value.length && value.every((item) => typeof item === 'string' && item.trim())
+    ? [...value]
+    : null;
 }
 
 function validFiledFinancialEntry(entry) {
@@ -320,6 +362,8 @@ function validFiledFinancialEntry(entry) {
     sourceUrl,
     apiModelPath: entry.source.api_model_path,
     jarEntityId: entry.source.jar_entity_id.trim(),
+    standardNames: validTextArray(entry.standard_names),
+    templateNames: validTextArray(entry.template_names),
     revenue,
     profitBeforeTax,
   };
@@ -360,6 +404,61 @@ function publicSourceUrls(record) {
   ].map(publicUrl).filter(Boolean))];
 }
 
+function expectedFiledFinancialHistory(record) {
+  return filedFinancialHistory(record).map((entry) => ({
+    fiscal_period_start: entry.periodStart,
+    fiscal_period_end: entry.periodEnd,
+    filing_registration_date: entry.filingDate,
+    ...(entry.revenue && {
+      revenue_eur: entry.revenue.amount,
+      revenue_evidence: {
+        api_record_id: entry.revenue.apiRecordId,
+        line_name: entry.revenue.lineName,
+        registration_date: entry.revenue.registrationDate,
+      },
+    }),
+    ...(entry.profitBeforeTax && {
+      profit_before_tax_eur: entry.profitBeforeTax.amount,
+      profit_before_tax_evidence: {
+        api_record_id: entry.profitBeforeTax.apiRecordId,
+        line_name: entry.profitBeforeTax.lineName,
+        registration_date: entry.profitBeforeTax.registrationDate,
+      },
+    }),
+    source: {
+      data_portal_url: entry.sourceUrl,
+      api_model_path: entry.apiModelPath,
+      jar_entity_id: entry.jarEntityId,
+    },
+    ...(entry.standardNames && { standard_names: entry.standardNames }),
+    ...(entry.templateNames && { template_names: entry.templateNames }),
+  }));
+}
+
+function expectedDatasetFinancialFields(record) {
+  const turnover = publishedTurnover(record);
+  const verifiedUnpublished = record.revenue_availability === 'nepaskelbta'
+    && record.financial_verification_status === 'patikrinta'
+    && validIsoDate(record.verified_at)
+    && publicUrl(record.financial_source_url);
+  const financialHistory = expectedFiledFinancialHistory(record);
+  return {
+    ...(turnover && {
+      revenue_eur_latest: turnover.amount,
+      revenue_year: turnover.year,
+      financial_source_url: turnover.sourceUrl,
+      revenue_availability: 'paskelbta',
+    }),
+    ...(!turnover && verifiedUnpublished && {
+      financial_source_url: publicUrl(record.financial_source_url),
+      revenue_availability: 'nepaskelbta',
+    }),
+    ...(publishedFoundingYear(record.founded_year) && { founded_year: record.founded_year }),
+    ...(employeeBands.has(record.employee_count_band) && { employee_count_band: record.employee_count_band }),
+    ...(financialHistory.length && { filed_financial_history: financialHistory }),
+  };
+}
+
 function expectedDatasetRecord(record) {
   return {
     slug: record.slug,
@@ -377,7 +476,34 @@ function expectedDatasetRecord(record) {
     categories: [...record.category_labels],
     public_source_urls: publicSourceUrls(record),
     verification_date: recordVerificationDate(record) || null,
+    ...expectedDatasetFinancialFields(record),
   };
+}
+
+function expectedFinancialDatasetRows() {
+  return manufacturers.flatMap((record) => expectedFiledFinancialHistory(record).map((period) => ({
+    slug: record.slug,
+    profile_url: `${SITE_URL}/gamintojas/${record.slug}/`,
+    trading_name: record.trading_name?.trim() || null,
+    legal_name: record.legal_name?.trim() || null,
+    company_code: record.company_code?.trim() || null,
+    fiscal_period_start: period.fiscal_period_start,
+    fiscal_period_end: period.fiscal_period_end,
+    filing_registration_date: period.filing_registration_date,
+    revenue_eur: period.revenue_eur,
+    profit_before_tax_eur: period.profit_before_tax_eur,
+    financial_source_url: period.source.data_portal_url,
+    financial_api_model_path: period.source.api_model_path,
+    jar_entity_id: period.source.jar_entity_id,
+    revenue_api_record_id: period.revenue_evidence?.api_record_id,
+    revenue_line_name: period.revenue_evidence?.line_name,
+    revenue_evidence_registration_date: period.revenue_evidence?.registration_date,
+    profit_before_tax_api_record_id: period.profit_before_tax_evidence?.api_record_id,
+    profit_before_tax_line_name: period.profit_before_tax_evidence?.line_name,
+    profit_before_tax_evidence_registration_date: period.profit_before_tax_evidence?.registration_date,
+    standard_names: period.standard_names,
+    template_names: period.template_names,
+  })));
 }
 
 function parseCsv(text) {
@@ -502,9 +628,43 @@ async function checkGeneratedAssets() {
     addError('/baldininkai-org-gamintojai.csv', `missing or invalid CSV (${error.message})`);
   }
 
+  const expectedFinancialRows = expectedFinancialDatasetRows();
+  try {
+    const csv = await readFile(join(publicDir, 'baldininkai-org-gamintoju-finansai.csv'), 'utf8');
+    const lines = csv.split(/\r?\n/);
+    const metadataLines = [];
+    while (lines[0]?.startsWith('#')) metadataLines.push(lines.shift());
+    const expectedMetadataLines = [
+      `# Licence: ${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION}) - ${DATASET_LICENSE_URL}`,
+      `# Attribution: ${expectedAttribution}`,
+      `# Generated: ${generatedDate}`,
+      `# Version: ${generatedDate}`,
+      `# Source: Baldininkai.org - ${SITE_URL} - open data: ${OPEN_DATA_URL}`,
+      `# Records: ${manufacturers.length}`,
+      `# Official source: ${OFFICIAL_FINANCIAL_SOURCE_NAME} - ${OFFICIAL_FINANCIAL_SOURCE_URL} - API model: ${OFFICIAL_FINANCIAL_API_MODEL_PATH}`,
+      `# Financial periods: ${expectedFinancialRows.length}`,
+    ];
+    if (JSON.stringify(metadataLines) !== JSON.stringify(expectedMetadataLines)) addError('/baldininkai-org-gamintoju-finansai.csv', 'comment metadata must contain the exact licence, attribution, date/version, source and financial-period lines before the header');
+    const rows = parseCsv(lines.join('\n'));
+    const [headers, ...dataRows] = rows;
+    if (JSON.stringify(headers) !== JSON.stringify(financialDatasetHeaders)) addError('/baldininkai-org-gamintoju-finansai.csv', 'headers do not match the normalized financial-period header order');
+    if (dataRows.length !== expectedFinancialRows.length) addError('/baldininkai-org-gamintoju-finansai.csv', `expected ${expectedFinancialRows.length} data rows, found ${dataRows.length}`);
+    dataRows.forEach((row, index) => {
+      const fileLine = metadataLines.length + index + 2;
+      if (row.length !== financialDatasetHeaders.length) addError('/baldininkai-org-gamintoju-finansai.csv', `row ${fileLine} has ${row.length} fields; expected ${financialDatasetHeaders.length}`);
+      const expected = expectedFinancialRows[index];
+      if (!expected) return;
+      const expectedRow = financialDatasetHeaders.map((header) => Array.isArray(expected[header]) ? expected[header].join(' | ') : expected[header] == null ? '' : String(expected[header]));
+      if (JSON.stringify(row) !== JSON.stringify(expectedRow)) addError('/baldininkai-org-gamintoju-finansai.csv', `row ${fileLine} does not match source-derived period ${expected.slug} ${expected.fiscal_period_end}`);
+      for (const cell of row) if (/^[{[]/.test(cell.trim())) addError('/baldininkai-org-gamintoju-finansai.csv', `row ${fileLine} contains a JSON blob instead of normalized cells`);
+    });
+  } catch (error) {
+    addError('/baldininkai-org-gamintoju-finansai.csv', `missing or invalid CSV (${error.message})`);
+  }
+
   try {
     const llms = await readFile(join(publicDir, 'llms.txt'), 'utf8');
-    for (const required of ['Baldininkai.org', OPEN_DATA_URL, MARKET_OVERVIEW_URL, ENGLISH_HUB_URL, ENGLISH_QUOTE_REQUEST_URL, ENGLISH_MARKET_OVERVIEW_URL, ENGLISH_SOURCING_GUIDE_URL, ...landingConfig.categories.map((category) => canonicalUrl(`${ENGLISH_CATEGORY_BASE_PATH}/${category.slug}`)), DATASET_JSON_URL, DATASET_CSV_URL, `${SITE_URL}/sitemap.xml`, 'English summary', 'English quote request', 'English category pages', 'English region data cuts', 'English larger-city data cuts', 'English published-turnover data cuts', 'nepatvirtinti viešų šaltinių kandidatai', `tiksliai ${manufacturers.length} katalogo įrašų`, OFFICIAL_FINANCIAL_SOURCE_NAME, OFFICIAL_FINANCIAL_SOURCE_URL, DATASET_LICENSE_NAME, 'CC BY 4.0', DATASET_LICENSE_URL, expectedAttribution]) {
+    for (const required of ['Baldininkai.org', OPEN_DATA_URL, MARKET_OVERVIEW_URL, ENGLISH_HUB_URL, ENGLISH_QUOTE_REQUEST_URL, ENGLISH_MARKET_OVERVIEW_URL, ENGLISH_SOURCING_GUIDE_URL, ...landingConfig.categories.map((category) => canonicalUrl(`${ENGLISH_CATEGORY_BASE_PATH}/${category.slug}`)), DATASET_JSON_URL, DATASET_CSV_URL, FINANCIAL_DATASET_CSV_URL, `${SITE_URL}/sitemap.xml`, 'English summary', 'English quote request', 'English category pages', 'English region data cuts', 'English larger-city data cuts', 'English published-turnover data cuts', 'nepatvirtinti viešų šaltinių kandidatai', `tiksliai ${manufacturers.length} katalogo įrašų`, 'registrui pateiktų finansinių laikotarpių', 'API įrodymą', OFFICIAL_FINANCIAL_SOURCE_NAME, OFFICIAL_FINANCIAL_SOURCE_URL, DATASET_LICENSE_NAME, 'CC BY 4.0', DATASET_LICENSE_URL, expectedAttribution]) {
       if (!llms.includes(required)) addError('/llms.txt', `missing required content: ${required}`);
     }
   } catch (error) {
@@ -1396,10 +1556,10 @@ for (const file of files.sort()) {
 
   if (route === '/atviri-duomenys') {
     const text = visibleText(html);
-    for (const required of ['Atviri Baldininkai.org duomenys', 'JSON duomenų rinkinys', 'CSV duomenų rinkinys', `visus ${manufacturers.length}`, `kiekvienam iš ${manufacturers.length}`, OFFICIAL_FINANCIAL_SOURCE_NAME, 'not_published', 'no_public_contact_route', 'Ribotumai', 'Licencija ir priskyrimas', DATASET_LICENSE_NAME, 'CC BY 4.0', 'versija 4.0', 'This dataset is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).', generatedDatasetMetadata?.attribution]) {
+    for (const required of ['Atviri Baldininkai.org duomenys', 'JSON duomenų rinkinys', 'Katalogo CSV duomenų rinkinys', 'Pateiktų finansinių laikotarpių CSV', 'viena eilutė vienam galiojančiam įmonės fiskaliniam laikotarpiui', 'Registrui pateikti finansiniai rodikliai', 'konkreti pateikta eilutė turi API įrodymą', `visus ${manufacturers.length}`, `kiekvienam iš ${manufacturers.length}`, OFFICIAL_FINANCIAL_SOURCE_NAME, 'not_published', 'no_public_contact_route', 'Ribotumai', 'Licencija ir priskyrimas', DATASET_LICENSE_NAME, 'CC BY 4.0', 'versija 4.0', 'This dataset is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).', generatedDatasetMetadata?.attribution]) {
       if (!required || !text.includes(required)) addError(route, `missing open-data content: ${String(required)}`);
     }
-    if (!html.includes('href="/baldininkai-org-gamintojai.json"') || !html.includes('href="/baldininkai-org-gamintojai.csv"')) addError(route, 'missing dataset download links');
+    if (!html.includes('href="/baldininkai-org-gamintojai.json"') || !html.includes('href="/baldininkai-org-gamintojai.csv"') || !html.includes('href="/baldininkai-org-gamintoju-finansai.csv"')) addError(route, 'missing dataset download links');
     if (!html.includes('href="/baldu-rinkos-apzvalga"')) addError(route, 'missing market-overview link');
     if (!html.includes('href="/en/lithuanian-furniture-makers-data/"')) addError(route, 'missing English sector-data link');
     if (!html.includes(`href="${DATASET_LICENSE_URL}"`)) addError(route, 'missing direct CC BY 4.0 licence link');
@@ -1413,7 +1573,7 @@ for (const file of files.sort()) {
       if (JSON.stringify(Object.keys(datasetSchema).sort()) !== JSON.stringify(expectedKeys)) addError(route, 'Dataset schema contains missing or undocumented properties');
       if (datasetSchema['@context'] !== 'https://schema.org' || datasetSchema['@type'] !== 'Dataset') addError(route, 'Dataset schema context/type must be schema.org Dataset');
       if (datasetSchema.name !== 'Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas') addError(route, 'Dataset schema name is missing or inaccurate');
-      if (typeof datasetSchema.description !== 'string' || !datasetSchema.description.trim()) addError(route, 'Dataset schema description must be non-empty');
+      if (typeof datasetSchema.description !== 'string' || !datasetSchema.description.includes('finansinių rodiklių') || !datasetSchema.description.includes('pateiktų finansinių laikotarpių')) addError(route, 'Dataset schema description must cover source-backed latest and filed financial data');
       if (datasetSchema.url !== OPEN_DATA_URL) addError(route, `Dataset schema url must be ${OPEN_DATA_URL}`);
       if (datasetSchema.license !== DATASET_LICENSE_URL) addError(route, 'Dataset schema license must be the direct CC BY 4.0 URL');
       for (const role of ['creator', 'publisher']) {
@@ -1422,14 +1582,15 @@ for (const file of files.sort()) {
       }
       if (datasetSchema.inLanguage !== 'lt') addError(route, 'Dataset schema inLanguage must be lt');
       if (datasetSchema.spatialCoverage !== 'Lithuania') addError(route, 'Dataset schema spatialCoverage must be Lithuania');
-      if (!Array.isArray(datasetSchema.keywords) || datasetSchema.keywords.length < 3 || datasetSchema.keywords.some((keyword) => typeof keyword !== 'string' || !keyword.trim())) addError(route, 'Dataset schema keywords must be a non-empty list of suitable terms');
+      if (!Array.isArray(datasetSchema.keywords) || datasetSchema.keywords.length < 5 || !datasetSchema.keywords.includes('pateiktos finansinės ataskaitos') || datasetSchema.keywords.some((keyword) => typeof keyword !== 'string' || !keyword.trim())) addError(route, 'Dataset schema keywords must include filed-financial coverage and suitable terms');
       if (!validIsoDate(datasetSchema.dateModified) || datasetSchema.dateModified !== generatedDatasetMetadata?.generated_date) addError(route, 'Dataset schema dateModified must match the generated build date');
       if (!validIsoDate(datasetSchema.datePublished) || datasetSchema.datePublished !== generatedDatasetMetadata?.generated_date) addError(route, 'Dataset schema datePublished must match the generated build date');
-      if (!Array.isArray(datasetSchema.distribution) || datasetSchema.distribution.length !== 2) addError(route, 'Dataset schema must contain exactly two DataDownload distributions');
+      if (!Array.isArray(datasetSchema.distribution) || datasetSchema.distribution.length !== 3) addError(route, 'Dataset schema must contain exactly three DataDownload distributions');
       else {
         const expectedDistributions = new Map([
           [DATASET_JSON_URL, 'application/json'],
           [DATASET_CSV_URL, 'text/csv'],
+          [FINANCIAL_DATASET_CSV_URL, 'text/csv'],
         ]);
         for (const distribution of datasetSchema.distribution) {
           if (JSON.stringify(Object.keys(distribution).sort()) !== JSON.stringify(['@type', 'contentUrl', 'encodingFormat'])) addError(route, 'DataDownload distribution contains missing or undocumented properties');

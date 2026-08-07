@@ -7,5 +7,6 @@ Allow: /baldu-rinkos-apzvalga/
 Allow: /en/lithuanian-furniture-makers-data/
 Allow: /baldininkai-org-gamintojai.json
 Allow: /baldininkai-org-gamintojai.csv
+Allow: /baldininkai-org-gamintoju-finansai.csv
 
 Sitemap: https://www.baldininkai.org/sitemap.xml

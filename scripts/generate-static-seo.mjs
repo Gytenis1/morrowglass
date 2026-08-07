@@ -453,6 +453,61 @@ function publicSourceUrls(record) {
   ].map(publicUrl).filter(Boolean))];
 }
 
+function exportedFiledFinancialHistory(record) {
+  return filedFinancialHistory(record).map((entry) => ({
+    fiscal_period_start: entry.periodStart,
+    fiscal_period_end: entry.periodEnd,
+    filing_registration_date: entry.filingDate,
+    ...(entry.revenue && {
+      revenue_eur: entry.revenue.amount,
+      revenue_evidence: {
+        api_record_id: entry.revenue.apiRecordId,
+        line_name: entry.revenue.lineName,
+        registration_date: entry.revenue.registrationDate,
+      },
+    }),
+    ...(entry.profitBeforeTax && {
+      profit_before_tax_eur: entry.profitBeforeTax.amount,
+      profit_before_tax_evidence: {
+        api_record_id: entry.profitBeforeTax.apiRecordId,
+        line_name: entry.profitBeforeTax.lineName,
+        registration_date: entry.profitBeforeTax.registrationDate,
+      },
+    }),
+    source: {
+      data_portal_url: entry.sourceUrl,
+      api_model_path: entry.apiModelPath,
+      jar_entity_id: entry.jarEntityId,
+    },
+    ...(entry.standardNames && { standard_names: entry.standardNames }),
+    ...(entry.templateNames && { template_names: entry.templateNames }),
+  }));
+}
+
+function datasetFinancialFields(record) {
+  const turnover = publishedTurnover(record);
+  const verifiedUnpublished = record.revenue_availability === 'nepaskelbta'
+    && record.financial_verification_status === 'patikrinta'
+    && validIsoDate(record.verified_at)
+    && publicUrl(record.financial_source_url);
+  const financialHistory = exportedFiledFinancialHistory(record);
+  return {
+    ...(turnover && {
+      revenue_eur_latest: turnover.amount,
+      revenue_year: turnover.year,
+      financial_source_url: turnover.sourceUrl,
+      revenue_availability: 'paskelbta',
+    }),
+    ...(!turnover && verifiedUnpublished && {
+      financial_source_url: publicUrl(record.financial_source_url),
+      revenue_availability: 'nepaskelbta',
+    }),
+    ...(publishedFoundingYear(record.founded_year) && { founded_year: record.founded_year }),
+    ...(employeeBandNames.has(record.employee_count_band) && { employee_count_band: record.employee_count_band }),
+    ...(financialHistory.length && { filed_financial_history: financialHistory }),
+  };
+}
+
 function datasetRecord(record) {
   return {
     slug: record.slug,
@@ -470,6 +525,7 @@ function datasetRecord(record) {
     categories: [...record.category_labels],
     public_source_urls: publicSourceUrls(record),
     verification_date: recordVerificationDate(record) || null,
+    ...datasetFinancialFields(record),
   };
 }
 
@@ -551,7 +607,18 @@ function validFiledMetric(entry, valueKey, evidenceKey, lineName) {
     || !validUuid(evidence.api_record_id)
     || evidence.line_name !== lineName
     || validIsoDate(evidence.registration_date) !== filingDate) return null;
-  return { amount, apiRecordId: evidence.api_record_id.trim() };
+  return {
+    amount,
+    apiRecordId: evidence.api_record_id.trim(),
+    lineName: evidence.line_name,
+    registrationDate: filingDate,
+  };
+}
+
+function validTextArray(value) {
+  return Array.isArray(value) && value.length && value.every((item) => typeof item === 'string' && item.trim())
+    ? [...value]
+    : null;
 }
 
 function validFiledFinancialEntry(entry) {
@@ -574,6 +641,8 @@ function validFiledFinancialEntry(entry) {
     sourceUrl,
     apiModelPath: entry.source.api_model_path,
     jarEntityId: entry.source.jar_entity_id.trim(),
+    standardNames: validTextArray(entry.standard_names),
+    templateNames: validTextArray(entry.template_names),
     revenue,
     profitBeforeTax,
   };
@@ -1088,9 +1157,10 @@ const publicDataset = manufacturers.map(datasetRecord);
 const openDataPath = '/atviri-duomenys';
 const datasetJsonFilename = 'baldininkai-org-gamintojai.json';
 const datasetCsvFilename = 'baldininkai-org-gamintojai.csv';
+const financialDatasetCsvFilename = 'baldininkai-org-gamintoju-finansai.csv';
 const openDataUrl = canonicalUrl(openDataPath);
 const datasetAttribution = `Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, ${openDataUrl}, versija ${buildDate}`;
-const datasetDescription = `Viešų šaltinių Lietuvos nestandartinių baldų gamintojų kandidatų katalogas su ${publicDataset.length} profilio, įmonės, vietos, kategorijų, kontaktinio kelio ir šaltinių įrašų.`;
+const datasetDescription = `Viešų šaltinių Lietuvos nestandartinių baldų gamintojų kandidatų katalogas su ${publicDataset.length} profilio, įmonės, vietos, kategorijų, kontaktinio kelio, naujausių finansinių rodiklių ir šaltiniais pagrįstų pateiktų finansinių laikotarpių įrašų.`;
 const datasetSchema = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
@@ -1102,15 +1172,16 @@ const datasetSchema = {
   publisher: { '@type': 'Organization', name: 'Baldininkai.org', url: SITE_URL },
   inLanguage: 'lt',
   spatialCoverage: 'Lithuania',
-  keywords: ['Lietuvos baldų gamintojai', 'nestandartiniai baldai', 'vieši duomenys', 'gamintojų katalogas'],
+  keywords: ['Lietuvos baldų gamintojai', 'nestandartiniai baldai', 'vieši duomenys', 'gamintojų katalogas', 'pateiktos finansinės ataskaitos'],
   dateModified: buildDate,
   datePublished: buildDate,
   distribution: [
     { '@type': 'DataDownload', contentUrl: `${SITE_URL}/${datasetJsonFilename}`, encodingFormat: 'application/json' },
     { '@type': 'DataDownload', contentUrl: `${SITE_URL}/${datasetCsvFilename}`, encodingFormat: 'text/csv' },
+    { '@type': 'DataDownload', contentUrl: `${SITE_URL}/${financialDatasetCsvFilename}`, encodingFormat: 'text/csv' },
   ],
 };
-const openDataBody = `${header('policy')}<main class="policy-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="policy-document open-data-document"><header class="policy-header"><p class="kicker">Viešas katalogo duomenų rinkinys</p><h1>Atviri Baldininkai.org duomenys</h1><p class="lead">Atsisiųskite visus <strong>${publicDataset.length}</strong> šiuo svetainės versijos kūrimu paskelbtus Lietuvos nestandartinių baldų gamintojų kandidatų įrašus JSON arba CSV formatu.</p></header><dl class="policy-operator" aria-label="Duomenų rinkinio suvestinė"><div><dt>Įrašų</dt><dd>${publicDataset.length}</dd></div><div><dt>Atnaujinta</dt><dd><time datetime="${buildDate}">${buildDate}</time></dd></div><div><dt>Formatai</dt><dd>JSON ir CSV</dd></div></dl><div class="policy-copy open-data-copy"><section aria-labelledby="open-data-download-title"><h2 id="open-data-download-title">Atsisiųsti duomenis</h2><p>Abu failai sugeneruoti iš to paties šaltinio rinkinio ir turi po vieną eilutę ar objektą kiekvienam iš ${publicDataset.length} šiuo metu kataloge skelbiamų įrašų.</p><p>Šio katalogo įmonių dydžio, apyvartos, veiklos metų, geografijos ir kategorijų suvestines rasite <a href="/baldu-rinkos-apzvalga"><strong>baldų rinkos apžvalgoje</strong></a>. English readers can use the <a href="/en/lithuanian-furniture-makers-data/"><strong>Lithuanian furniture makers data overview</strong></a>.</p><ul class="open-data-downloads"><li><a href="/${datasetJsonFilename}" download><strong>JSON duomenų rinkinys</strong><span>Metaduomenys ir įrašų masyvas su kategorijų bei šaltinių masyvais</span><span aria-hidden="true">↓</span></a></li><li><a href="/${datasetCsvFilename}" download><strong>CSV duomenų rinkinys</strong><span>Metaduomenų komentarai ir stabili lentelė skaičiuoklėms</span><span aria-hidden="true">↓</span></a></li></ul></section><section><h2>Kas įtraukta</h2><p>Kiekviename įraše pateikiamas katalogo identifikatorius ir pilnas profilio adresas, viešas ar prekinis bei juridinis pavadinimas, įmonės kodas, miestas, gatvės adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių adresai ir turima patikros data.</p><p>Tušti laukai reiškia, kad atitinkama reikšmė šaltinio rinkinyje nepateikta. Būsena <code>not_published</code> reiškia, kad dabartiniame įraše viešas kontaktinis kelias nepaskelbtas, o <code>no_public_contact_route</code> naudojama tik tada, kai šaltinio įraše aiškiai pažymėta, kad viešo kontaktinio kelio nerasta.</p></section><section><h2>Duomenų kilmė ir atnaujinimas</h2><p>Rinkinys sudarytas iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Tarp oficialių šaltinių yra <a href="${OFFICIAL_FINANCIAL_SOURCE_URL}" rel="noopener noreferrer"><strong>${OFFICIAL_FINANCIAL_SOURCE_NAME}</strong></a>. Prie kiekvieno katalogo įrašo pateikiamos šaltinių nuorodos, naudotos tapatybei, veiklos krypčiai ar viešiems įmonės duomenims pagrįsti.</p><p>Ši versija sugeneruota <time datetime="${buildDate}">${buildDate}</time> kartu su katalogo puslapiais. Failai atnaujinami iš to paties versijuoto šaltinių rinkinio kiekvieno svetainės kūrimo metu.</p></section><section><h2>Ribotumai</h2><p>Įrašai yra nepatvirtinti viešų šaltinių gamintojų kandidatai. Jų paskelbimas nėra Baldininkai.org rekomendacija, reitingas, kokybės įvertinimas ar tapatybės, informacijos tikslumo, kainos, terminų, užimtumo ir paslaugų prieinamumo garantija.</p><p>Vieši šaltiniai gali būti pasikeitę, neišsamūs ar netikslūs. Prieš priimdami sprendimą savarankiškai patikrinkite juridinius, kontaktinius ir pasiūlymo duomenis su pasirinktu gamintoju ar kitu tinkamu oficialiu šaltiniu.</p></section><section><h2>Licencija ir priskyrimas</h2><p>Duomenų rinkinys licencijuojamas pagal <a href="${DATASET_LICENSE_URL}" rel="license"><strong>${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION})</strong></a> licenciją, versija <strong>${DATASET_LICENSE_VERSION}</strong>.</p><p lang="en">This dataset is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).</p><p>Duomenis galite atsisiųsti, analizuoti ir pakartotinai naudoti, jei neiškreipiate jų prasmės, išlaikote aiškias ribotumų pastabas ir nenurodote, kad Baldininkai.org patvirtino ar rekomendavo įrašus.</p><p><strong>Priskyrimas:</strong> <q>${datasetAttribution}</q></p><p>Apie netikslumą ar reikalingą pataisymą praneškite per <a href="/irasyti-pataisyma">įrašo pataisymo tvarką</a>.</p></section></div></article></main>${footer()}`;
+const openDataBody = `${header('policy')}<main class="policy-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><article class="policy-document open-data-document"><header class="policy-header"><p class="kicker">Viešas katalogo duomenų rinkinys</p><h1>Atviri Baldininkai.org duomenys</h1><p class="lead">Atsisiųskite visus <strong>${publicDataset.length}</strong> šiuo svetainės versijos kūrimu paskelbtus Lietuvos nestandartinių baldų gamintojų kandidatų įrašus JSON ir dviem CSV formatais.</p></header><dl class="policy-operator" aria-label="Duomenų rinkinio suvestinė"><div><dt>Įrašų</dt><dd>${publicDataset.length}</dd></div><div><dt>Atnaujinta</dt><dd><time datetime="${buildDate}">${buildDate}</time></dd></div><div><dt>Formatai</dt><dd>JSON ir du CSV</dd></div></dl><div class="policy-copy open-data-copy"><section aria-labelledby="open-data-download-title"><h2 id="open-data-download-title">Atsisiųsti duomenis</h2><p>Katalogo JSON ir CSV failai sugeneruoti iš to paties šaltinio rinkinio ir turi po vieną objektą ar eilutę kiekvienam iš ${publicDataset.length} šiuo metu kataloge skelbiamų įrašų. Atskiras finansų CSV turi po vieną eilutę kiekvienam galiojančiam pateiktam finansiniam laikotarpiui.</p><p>Šio katalogo įmonių dydžio, apyvartos, veiklos metų, geografijos ir kategorijų suvestines rasite <a href="/baldu-rinkos-apzvalga"><strong>baldų rinkos apžvalgoje</strong></a>. English readers can use the <a href="/en/lithuanian-furniture-makers-data/"><strong>Lithuanian furniture makers data overview</strong></a>.</p><ul class="open-data-downloads"><li><a href="/${datasetJsonFilename}" download><strong>JSON duomenų rinkinys</strong><span>Metaduomenys ir įrašų masyvas su kategorijų bei šaltinių masyvais</span><span aria-hidden="true">↓</span></a></li><li><a href="/${datasetCsvFilename}" download><strong>Katalogo CSV duomenų rinkinys</strong><span>Metaduomenų komentarai ir stabili lentelė skaičiuoklėms su naujausiais patvirtintais finansiniais laukais</span><span aria-hidden="true">↓</span></a></li><li><a href="/${financialDatasetCsvFilename}" download><strong>Pateiktų finansinių laikotarpių CSV</strong><span>Normalizuota lentelė: viena eilutė vienam galiojančiam įmonės fiskaliniam laikotarpiui</span><span aria-hidden="true">↓</span></a></li></ul></section><section><h2>Kas įtraukta</h2><p>Kiekviename JSON ir katalogo CSV įraše pateikiamas katalogo identifikatorius ir pilnas profilio adresas, viešas ar prekinis bei juridinis pavadinimas, įmonės kodas, miestas, gatvės adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių adresai ir turima patikros data. Kai juos pagrindžia šaltinis, pridedami naujausių pajamų metai ir suma, finansinis šaltinis bei prieinamumo būsena, įkūrimo metai, darbuotojų grupė ir pateiktų finansinių laikotarpių istorija. Finansų CSV kiekvieną šį laikotarpį išskleidžia į atskirą eilutę su fiskalinėmis datomis, pateikimo registravimo data, pajamomis ar pelnu prieš apmokestinimą tik kai jie pateikti, ir šaltinio bei įrodymų identifikatoriais.</p><p>Tušti laukai reiškia, kad atitinkama reikšmė šaltinio rinkinyje nepateikta. Būsena <code>not_published</code> reiškia, kad dabartiniame įraše viešas kontaktinis kelias nepaskelbtas, o <code>no_public_contact_route</code> naudojama tik tada, kai šaltinio įraše aiškiai pažymėta, kad viešo kontaktinio kelio nerasta.</p></section><section><h2>Duomenų kilmė ir atnaujinimas</h2><p>Rinkinys sudarytas iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Tarp oficialių šaltinių yra <a href="${OFFICIAL_FINANCIAL_SOURCE_URL}" rel="noopener noreferrer"><strong>${OFFICIAL_FINANCIAL_SOURCE_NAME}</strong></a>. Registrui pateikti finansiniai rodikliai iš Lietuvos atvirų duomenų portalo įtraukiami tik tada, kai konkreti pateikta eilutė turi API įrodymą; nepagrįstos sumos ar nuliniai pakaitiniai dydžiai neeksportuojami. Prie kiekvieno katalogo įrašo pateikiamos šaltinių nuorodos, naudotos tapatybei, veiklos krypčiai ar viešiems įmonės duomenims pagrįsti.</p><p>Ši versija sugeneruota <time datetime="${buildDate}">${buildDate}</time> kartu su katalogo puslapiais. Failai atnaujinami iš to paties versijuoto šaltinių rinkinio kiekvieno svetainės kūrimo metu.</p></section><section><h2>Ribotumai</h2><p>Įrašai yra nepatvirtinti viešų šaltinių gamintojų kandidatai. Jų paskelbimas nėra Baldininkai.org rekomendacija, reitingas, kokybės įvertinimas ar tapatybės, informacijos tikslumo, kainos, terminų, užimtumo ir paslaugų prieinamumo garantija.</p><p>Vieši šaltiniai gali būti pasikeitę, neišsamūs ar netikslūs. Prieš priimdami sprendimą savarankiškai patikrinkite juridinius, kontaktinius ir pasiūlymo duomenis su pasirinktu gamintoju ar kitu tinkamu oficialiu šaltiniu.</p></section><section><h2>Licencija ir priskyrimas</h2><p>Duomenų rinkinys licencijuojamas pagal <a href="${DATASET_LICENSE_URL}" rel="license"><strong>${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION})</strong></a> licenciją, versija <strong>${DATASET_LICENSE_VERSION}</strong>.</p><p lang="en">This dataset is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).</p><p>Duomenis galite atsisiųsti, analizuoti ir pakartotinai naudoti, jei neiškreipiate jų prasmės, išlaikote aiškias ribotumų pastabas ir nenurodote, kad Baldininkai.org patvirtino ar rekomendavo įrašus.</p><p><strong>Priskyrimas:</strong> <q>${datasetAttribution}</q></p><p>Apie netikslumą ar reikalingą pataisymą praneškite per <a href="/irasyti-pataisyma">įrašo pataisymo tvarką</a>.</p></section></div></article></main>${footer()}`;
 await writeRoute(openDataPath, injectPage({
   title: 'Atviri baldų gamintojų katalogo duomenys | Baldininkai.org',
   description: `Atsisiųskite ${publicDataset.length} viešų šaltinių Lietuvos baldų gamintojų kandidatų įrašus JSON arba CSV formatu ir peržiūrėkite naudojimo ribotumus.`,
@@ -1971,7 +2042,59 @@ const datasetHeaders = [
   'categories',
   'public_source_urls',
   'verification_date',
+  'revenue_eur_latest',
+  'revenue_year',
+  'financial_source_url',
+  'revenue_availability',
+  'founded_year',
+  'employee_count_band',
 ];
+const financialDatasetHeaders = [
+  'slug',
+  'profile_url',
+  'trading_name',
+  'legal_name',
+  'company_code',
+  'fiscal_period_start',
+  'fiscal_period_end',
+  'filing_registration_date',
+  'revenue_eur',
+  'profit_before_tax_eur',
+  'financial_source_url',
+  'financial_api_model_path',
+  'jar_entity_id',
+  'revenue_api_record_id',
+  'revenue_line_name',
+  'revenue_evidence_registration_date',
+  'profit_before_tax_api_record_id',
+  'profit_before_tax_line_name',
+  'profit_before_tax_evidence_registration_date',
+  'standard_names',
+  'template_names',
+];
+const financialDatasetRows = manufacturers.flatMap((record) => exportedFiledFinancialHistory(record).map((period) => ({
+  slug: record.slug,
+  profile_url: canonicalUrl(`/gamintojas/${record.slug}`),
+  trading_name: record.trading_name?.trim() || null,
+  legal_name: record.legal_name?.trim() || null,
+  company_code: record.company_code?.trim() || null,
+  fiscal_period_start: period.fiscal_period_start,
+  fiscal_period_end: period.fiscal_period_end,
+  filing_registration_date: period.filing_registration_date,
+  revenue_eur: period.revenue_eur,
+  profit_before_tax_eur: period.profit_before_tax_eur,
+  financial_source_url: period.source.data_portal_url,
+  financial_api_model_path: period.source.api_model_path,
+  jar_entity_id: period.source.jar_entity_id,
+  revenue_api_record_id: period.revenue_evidence?.api_record_id,
+  revenue_line_name: period.revenue_evidence?.line_name,
+  revenue_evidence_registration_date: period.revenue_evidence?.registration_date,
+  profit_before_tax_api_record_id: period.profit_before_tax_evidence?.api_record_id,
+  profit_before_tax_line_name: period.profit_before_tax_evidence?.line_name,
+  profit_before_tax_evidence_registration_date: period.profit_before_tax_evidence?.registration_date,
+  standard_names: period.standard_names,
+  template_names: period.template_names,
+})));
 const datasetMetadata = {
   license: {
     name: DATASET_LICENSE_NAME,
@@ -1993,7 +2116,7 @@ const datasetMetadata = {
     },
   ],
 };
-const datasetCsv = [
+const datasetCsvMetadata = [
   `# Licence: ${DATASET_LICENSE_NAME} (CC BY ${DATASET_LICENSE_VERSION}) - ${DATASET_LICENSE_URL}`,
   `# Attribution: ${datasetAttribution}`,
   `# Generated: ${buildDate}`,
@@ -2001,11 +2124,21 @@ const datasetCsv = [
   `# Source: Baldininkai.org - ${SITE_URL} - open data: ${openDataUrl}`,
   `# Records: ${publicDataset.length}`,
   `# Official source: ${OFFICIAL_FINANCIAL_SOURCE_NAME} - ${OFFICIAL_FINANCIAL_SOURCE_URL} - API model: ${OFFICIAL_FINANCIAL_API_MODEL_PATH}`,
+];
+const datasetCsv = [
+  ...datasetCsvMetadata,
   datasetHeaders.map(csvCell).join(','),
   ...publicDataset.map((record) => datasetHeaders.map((headerName) => csvCell(record[headerName])).join(',')),
 ].join('\n') + '\n';
+const financialDatasetCsv = [
+  ...datasetCsvMetadata,
+  `# Financial periods: ${financialDatasetRows.length}`,
+  financialDatasetHeaders.map(csvCell).join(','),
+  ...financialDatasetRows.map((record) => financialDatasetHeaders.map((headerName) => csvCell(record[headerName])).join(',')),
+].join('\n') + '\n';
 await writeFile(join(publicDir, datasetJsonFilename), `${JSON.stringify({ metadata: datasetMetadata, records: publicDataset }, null, 2)}\n`);
 await writeFile(join(publicDir, datasetCsvFilename), datasetCsv);
+await writeFile(join(publicDir, financialDatasetCsvFilename), financialDatasetCsv);
 
 const llmsText = `# Baldininkai.org
 
@@ -2015,7 +2148,7 @@ Baldininkai.org yra viešais šaltiniais paremtas Lietuvos nestandartinių bald�
 Katalogo įrašai yra nepatvirtinti viešų šaltinių kandidatai. Jie nėra Baldininkai.org rekomendacijos, reitingai ar darbų kokybės, tapatybės, informacijos tikslumo, kainos, terminų, užimtumo arba paslaugų prieinamumo garantijos.
 
 ## Duomenų aprėptis ir kilmė
-Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas viešas ar prekinis ir juridinis pavadinimas, įmonės kodas, miestas, adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių nuorodos ir turima patikros data. Duomenys renkami iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Oficialus finansinių ataskaitų šaltinis: ${OFFICIAL_FINANCIAL_SOURCE_NAME} (${OFFICIAL_FINANCIAL_SOURCE_URL}). Ši versija sugeneruota ${buildDate}; joje yra tiksliai ${publicDataset.length} katalogo įrašų.
+Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas viešas ar prekinis ir juridinis pavadinimas, įmonės kodas, miestas, adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių nuorodos ir turima patikros data. Kai šaltinis tai pagrindžia, JSON bei katalogo CSV papildomi naujausių pajamų, įkūrimo metų, darbuotojų grupės ir registrui pateiktų finansinių laikotarpių duomenimis; atskiras finansų CSV pateikia vieną eilutę vienam galiojančiam laikotarpiui. Finansinės sumos pateikiamos tik tada, kai konkreti pateikta eilutė turi API įrodymą. Duomenys renkami iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Oficialus finansinių ataskaitų šaltinis: ${OFFICIAL_FINANCIAL_SOURCE_NAME} (${OFFICIAL_FINANCIAL_SOURCE_URL}). Ši versija sugeneruota ${buildDate}; joje yra tiksliai ${publicDataset.length} katalogo įrašų ir ${financialDatasetRows.length} galiojantys pateikti finansiniai laikotarpiai.
 
 ## Pagrindinės nuorodos
 - Katalogas: ${SITE_URL}/
@@ -2037,7 +2170,8 @@ ${englishCityGroups.map((group) => `  - ${group.city}: ${canonicalUrl(group.path
 ${englishTurnoverBands.map((band) => `  - ${band.label}: ${canonicalUrl(band.path)}`).join('\n')}
 - Atviri duomenys ir naudojimo sąlygos: ${SITE_URL}/atviri-duomenys/
 - JSON duomenys: ${SITE_URL}/${datasetJsonFilename}
-- CSV duomenys: ${SITE_URL}/${datasetCsvFilename}
+- Katalogo CSV duomenys: ${SITE_URL}/${datasetCsvFilename}
+- Pateiktų finansinių laikotarpių CSV: ${SITE_URL}/${financialDatasetCsvFilename}
 - Svetainės žemėlapis: ${SITE_URL}/sitemap.xml
 
 ## Kategorijų puslapiai
@@ -2088,7 +2222,7 @@ const sitemapPaths = [
 assertUniqueRoutePaths(sitemapPaths, 'sitemap');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(buildDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
-await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /en/\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: ${marketOverviewPath}/\nAllow: ${englishMarketOverviewPath}/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /en/\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: ${marketOverviewPath}/\nAllow: ${englishMarketOverviewPath}/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\nAllow: /${financialDatasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 await writeFile(join(publicDir, INDEXNOW_KEY_FILENAME), INDEXNOW_KEY);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} Lithuanian category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 Lithuanian buyer request route, 1 English quote-request route, 1 comparison route, 1 open-data route, 2 market-overview routes, 1 English sourcing hub, ${englishCategoryEntries.length} English category routes, ${englishRegionGroups.length} English region routes, ${englishCityGroups.length} English larger-city routes, ${englishTurnoverBands.length} English turnover routes, 1 English sourcing guide, ${policyPages.length} policy routes, ${guideArticles.length + 2} Lithuanian guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} Lithuanian category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 Lithuanian buyer request route, 1 English quote-request route, 1 comparison route, 1 open-data route, 2 market-overview routes, 1 English sourcing hub, ${englishCategoryEntries.length} English category routes, ${englishRegionGroups.length} English region routes, ${englishCityGroups.length} English larger-city routes, ${englishTurnoverBands.length} English turnover routes, 1 English sourcing guide, ${policyPages.length} policy routes, ${guideArticles.length + 2} Lithuanian guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, ${financialDatasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);

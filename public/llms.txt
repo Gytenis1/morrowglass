@@ -6,7 +6,7 @@ Baldininkai.org yra viešais šaltiniais paremtas Lietuvos nestandartinių bald�
 Katalogo įrašai yra nepatvirtinti viešų šaltinių kandidatai. Jie nėra Baldininkai.org rekomendacijos, reitingai ar darbų kokybės, tapatybės, informacijos tikslumo, kainos, terminų, užimtumo arba paslaugų prieinamumo garantijos.
 
 ## Duomenų aprėptis ir kilmė
-Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas viešas ar prekinis ir juridinis pavadinimas, įmonės kodas, miestas, adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių nuorodos ir turima patikros data. Duomenys renkami iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Oficialus finansinių ataskaitų šaltinis: Juridinių asmenų registro (Registrų centro) finansinių ataskaitų duomenys Lietuvos atvirų duomenų portale (https://data.gov.lt/datasets/1484/). Ši versija sugeneruota 2026-08-07; joje yra tiksliai 1420 katalogo įrašų.
+Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas viešas ar prekinis ir juridinis pavadinimas, įmonės kodas, miestas, adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių nuorodos ir turima patikros data. Kai šaltinis tai pagrindžia, JSON bei katalogo CSV papildomi naujausių pajamų, įkūrimo metų, darbuotojų grupės ir registrui pateiktų finansinių laikotarpių duomenimis; atskiras finansų CSV pateikia vieną eilutę vienam galiojančiam laikotarpiui. Finansinės sumos pateikiamos tik tada, kai konkreti pateikta eilutė turi API įrodymą. Duomenys renkami iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Oficialus finansinių ataskaitų šaltinis: Juridinių asmenų registro (Registrų centro) finansinių ataskaitų duomenys Lietuvos atvirų duomenų portale (https://data.gov.lt/datasets/1484/). Ši versija sugeneruota 2026-08-07; joje yra tiksliai 1420 katalogo įrašų ir 4652 galiojantys pateikti finansiniai laikotarpiai.
 
 ## Pagrindinės nuorodos
 - Katalogas: https://www.baldininkai.org/
@@ -49,7 +49,8 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
   - Over €2 million: https://www.baldininkai.org/en/turnover/over-eur-2m/
 - Atviri duomenys ir naudojimo sąlygos: https://www.baldininkai.org/atviri-duomenys/
 - JSON duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.json
-- CSV duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.csv
+- Katalogo CSV duomenys: https://www.baldininkai.org/baldininkai-org-gamintojai.csv
+- Pateiktų finansinių laikotarpių CSV: https://www.baldininkai.org/baldininkai-org-gamintoju-finansai.csv
 - Svetainės žemėlapis: https://www.baldininkai.org/sitemap.xml
 
 ## Kategorijų puslapiai
