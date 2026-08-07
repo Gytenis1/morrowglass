@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readdir, readFile } from 'node:fs/promises';
+import { readdir, readFile, stat } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -44,6 +44,7 @@ const ENGLISH_CATEGORY_LABELS = new Map([
 const ENGLISH_SOURCING_GUIDE_PATH = '/en/sourcing-guide';
 const ENGLISH_SOURCING_GUIDE_URL = `${SITE_URL}${ENGLISH_SOURCING_GUIDE_PATH}/`;
 const ENGLISH_CITY_MINIMUM = 10;
+const CATALOGUE_PAGE_SIZE = 24;
 const NOT_PUBLISHED_ENGLISH = 'Not published in this catalogue';
 const ENGLISH_REGION_LABELS = new Map([
   ['Vilnius, rytų ir pietų Lietuva', { label: 'Vilnius, eastern and southern Lithuania', slug: 'vilnius-east-south-lithuania' }],
@@ -859,7 +860,23 @@ const expectedEnglishCategories = landingConfig.categories.map((category) => ({
     .filter((record) => manufacturerMatchesPublishedCategory(record, category))
     .sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'en')),
 }));
-const expectedEnglishCategoryByRoute = new Map(expectedEnglishCategories.map((entry) => [entry.route, entry]));
+const expectedEnglishCategoryPages = expectedEnglishCategories.flatMap((entry) => {
+  const totalPages = Math.max(1, Math.ceil(entry.records.length / CATALOGUE_PAGE_SIZE));
+  return Array.from({ length: totalPages }, (_, index) => {
+    const page = index + 1;
+    const route = page === 1 ? entry.route : `${entry.route}/page/${page}`;
+    return {
+      ...entry,
+      route,
+      baseRoute: entry.route,
+      page,
+      totalPages,
+      totalRecords: entry.records,
+      records: entry.records.slice(index * CATALOGUE_PAGE_SIZE, (index + 1) * CATALOGUE_PAGE_SIZE),
+    };
+  });
+});
+const expectedEnglishCategoryByRoute = new Map(expectedEnglishCategoryPages.map((entry) => [entry.route, entry]));
 const expectedEnglishCategoryByLithuanianRoute = new Map(expectedEnglishCategories.map((entry) => [`/baldai-pagal-uzsakyma/${entry.category.slug}`, entry]));
 const expectedCategoryMix = expectedEnglishCategories.map((entry) => ({
   code: entry.category.code,
@@ -903,20 +920,45 @@ const expectedEnglishTurnoverBands = [
   ...band,
   records: expectedTurnovers.filter(({ turnover }) => band.includes(turnover.amount)).map(({ record }) => record),
 }));
-const expectedEnglishListRoutes = new Map([
-  ...expectedEnglishRegionGroups.map((group) => [group.path, { kind: 'region', records: group.records, group }]),
-  ...expectedEnglishCityGroups.map((group) => [group.path, { kind: 'city', records: group.records, group }]),
-  ...expectedEnglishTurnoverBands.map((group) => [group.path, { kind: 'turnover', records: group.records, group }]),
-]);
+const expectedEnglishBaseListGroups = [
+  ...expectedEnglishRegionGroups.map((group) => ({ kind: 'region', group })),
+  ...expectedEnglishCityGroups.map((group) => ({ kind: 'city', group })),
+  ...expectedEnglishTurnoverBands.map((group) => ({ kind: 'turnover', group })),
+];
+const expectedEnglishListRoutes = new Map(expectedEnglishBaseListGroups.flatMap(({ kind, group }) => {
+  const sorted = [...group.records].sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'en'));
+  const totalPages = Math.max(1, Math.ceil(sorted.length / CATALOGUE_PAGE_SIZE));
+  return Array.from({ length: totalPages }, (_, index) => {
+    const page = index + 1;
+    const route = page === 1 ? group.path : `${group.path}/page/${page}`;
+    return [route, {
+      kind,
+      group,
+      page,
+      totalPages,
+      totalRecords: sorted,
+      records: sorted.slice(index * CATALOGUE_PAGE_SIZE, (index + 1) * CATALOGUE_PAGE_SIZE),
+    }];
+  });
+}));
 const expectedEnglishHubRoutes = [
   ...expectedEnglishCategories.map((entry) => entry.route),
-  ...expectedEnglishListRoutes.keys(),
+  ...expectedEnglishBaseListGroups.map(({ group }) => group.path),
   ENGLISH_QUOTE_REQUEST_PATH,
   ENGLISH_SOURCING_GUIDE_PATH,
   ENGLISH_MARKET_OVERVIEW_PATH,
   ENGLISH_FILED_FINANCE_PATH,
 ];
 const expectedEnglishSuiteRoutes = [ENGLISH_HUB_PATH, ...expectedEnglishHubRoutes];
+const expectedEnglishGeneratedRoutes = [
+  ENGLISH_HUB_PATH,
+  ...expectedEnglishCategoryPages.map((entry) => entry.route),
+  ...expectedEnglishListRoutes.keys(),
+  ENGLISH_QUOTE_REQUEST_PATH,
+  ENGLISH_SOURCING_GUIDE_PATH,
+  ENGLISH_MARKET_OVERVIEW_PATH,
+  ENGLISH_FILED_FINANCE_PATH,
+];
 const [generatedLlms, generatedSitemap] = await Promise.all([
   readFile(join(publicDir, 'llms.txt'), 'utf8'),
   readFile(join(publicDir, 'sitemap.xml'), 'utf8'),
@@ -1145,7 +1187,7 @@ function validateEnglishMakerList(route, html, schemas, expected) {
     if (!Array.isArray(itemList.itemListElement) || itemList.itemListElement.length !== expectedRecords.length) addError(route, 'ItemList elements must match the factual table count');
     else itemList.itemListElement.forEach((item, index) => {
       const record = expectedRecords[index];
-      const expectedItem = { '@type': 'ListItem', position: index + 1, name: record.trading_name, url: canonicalUrl(`/gamintojas/${record.slug}`) };
+      const expectedItem = { '@type': 'ListItem', position: (expected.page - 1) * CATALOGUE_PAGE_SIZE + index + 1, name: record.trading_name, url: canonicalUrl(`/gamintojas/${record.slug}`) };
       if (JSON.stringify(item) !== JSON.stringify(expectedItem)) addError(route, `ItemList entry ${index + 1} must match ${record.slug}`);
     });
     if (hasEmptySchemaValue(itemList)) addError(route, 'ItemList schema must not contain empty properties');
@@ -1153,6 +1195,10 @@ function validateEnglishMakerList(route, html, schemas, expected) {
 }
 
 const counts = { breadcrumbs: 0, hubs: 0, cityIndexes: 0, profiles: 0, financialHistories: 0, financialHistoryPeriods: 0, guideArticles: 0, faqPages: 0, marketOverviews: 0, filedFinancePages: 0, englishFiledFinancePages: 0, landingSnapshots: 0, englishLists: 0, englishRegions: 0, englishCities: 0, englishTurnoverBands: 0, englishHubs: 0, englishCategories: 0, englishSourcingGuides: 0, englishQuoteRequests: 0 };
+const profileLinksFromListings = new Set();
+const internallyLinkedRoutes = new Set();
+const boundedListingRoutes = new Set();
+const continuationRoutes = new Set();
 const englishTitleOwners = new Map();
 const englishDescriptionOwners = new Map();
 
@@ -1160,6 +1206,23 @@ for (const file of files.sort()) {
   const route = routeFor(file);
   const expectedCanonical = canonicalUrl(route);
   const html = await readFile(file, 'utf8');
+  for (const match of html.matchAll(/<a\b[^>]*\bhref=(['"])(\/[^'"#?]*)\1/gi)) {
+    internallyLinkedRoutes.add(match[2].replace(/\/+$/, '') || '/');
+  }
+  const isBoundedListing = route === '/'
+    || /^\/katalogas\/puslapis\/\d+$/.test(route)
+    || route.startsWith('/baldai-pagal-uzsakyma/') && route !== cityIndexRoute
+    || expectedEnglishCategoryByRoute.has(route)
+    || expectedEnglishListRoutes.has(route);
+  if (isBoundedListing) {
+    boundedListingRoutes.add(route);
+    const cardCount = (html.match(/<article class="manufacturer-card">/g) ?? []).length;
+    const englishRowCount = (html.match(/<tr data-en-(?:maker-row|category-maker)=/g) ?? []).length;
+    if (cardCount > CATALOGUE_PAGE_SIZE) addError(route, `contains ${cardCount} maker cards; listing pages are capped at ${CATALOGUE_PAGE_SIZE}`);
+    if (englishRowCount > CATALOGUE_PAGE_SIZE) addError(route, `contains ${englishRowCount} English maker rows; listing pages are capped at ${CATALOGUE_PAGE_SIZE}`);
+    for (const match of html.matchAll(/<a\b[^>]*href="\/gamintojas\/([^"/]+)\/?"/g)) profileLinksFromListings.add(match[1]);
+  }
+  if (/\/(?:puslapis|page)\/\d+$/.test(route)) continuationRoutes.add(route);
 
   const titles = [...html.matchAll(/<title\b[^>]*>([\s\S]*?)<\/title>/gi)].map((match) => match[1].trim());
   if (titles.length !== 1 || !titles[0]) addError(route, `expected one non-empty title, found ${titles.length}`);
@@ -1207,9 +1270,11 @@ for (const file of files.sort()) {
     expectedAlternates = new Map([['lt', MARKET_OVERVIEW_URL], ['en', ENGLISH_MARKET_OVERVIEW_URL], ['x-default', ENGLISH_MARKET_OVERVIEW_URL]]);
   } else if (route === '/' || route === ENGLISH_HUB_PATH) {
     expectedAlternates = new Map([['lt', canonicalUrl('/')], ['en', ENGLISH_HUB_URL], ['x-default', canonicalUrl('/')]]);
-  } else if (englishCategory) {
+  } else if (englishCategory?.page === 1) {
     const lithuanianUrl = canonicalUrl(`/baldai-pagal-uzsakyma/${englishCategory.category.slug}`);
     expectedAlternates = new Map([['en', expectedCanonical], ['lt', lithuanianUrl], ['x-default', lithuanianUrl]]);
+  } else if (englishCategory) {
+    expectedAlternates = new Map([['en', expectedCanonical], ['x-default', expectedCanonical]]);
   } else if (lithuanianCategory) {
     expectedAlternates = new Map([['lt', expectedCanonical], ['en', canonicalUrl(lithuanianCategory.route)], ['x-default', expectedCanonical]]);
   } else if (englishCity) {
@@ -1266,10 +1331,12 @@ for (const file of files.sort()) {
 
   const expectedEnglishList = expectedEnglishListRoutes.get(route);
   if (expectedEnglishList) {
-    counts.englishLists += 1;
-    if (expectedEnglishList.kind === 'region') counts.englishRegions += 1;
-    if (expectedEnglishList.kind === 'city') counts.englishCities += 1;
-    if (expectedEnglishList.kind === 'turnover') counts.englishTurnoverBands += 1;
+    if (expectedEnglishList.page === 1) {
+      counts.englishLists += 1;
+      if (expectedEnglishList.kind === 'region') counts.englishRegions += 1;
+      if (expectedEnglishList.kind === 'city') counts.englishCities += 1;
+      if (expectedEnglishList.kind === 'turnover') counts.englishTurnoverBands += 1;
+    }
     validateEnglishMakerList(route, html, schemas, expectedEnglishList);
   }
 
@@ -1373,12 +1440,12 @@ for (const file of files.sort()) {
 
   const expectedEnglishCategory = expectedEnglishCategoryByRoute.get(route);
   if (expectedEnglishCategory) {
-    counts.englishCategories += 1;
-    const { category, label, records } = expectedEnglishCategory;
+    if (expectedEnglishCategory.page === 1) counts.englishCategories += 1;
+    const { category, label, records, totalRecords, page } = expectedEnglishCategory;
     const text = visibleText(html);
     for (const required of [
       `${label} makers in Lithuania`,
-      `${records.length} candidate makers`,
+      `${totalRecords.length} candidate makers`,
       'Not published',
       'Alphabetical by company name; not ranked.',
       'Listings are unverified public-source candidates.',
@@ -1436,13 +1503,15 @@ for (const file of files.sort()) {
     const collection = collectionPages[0];
     const itemList = itemLists[0];
     const itemListId = `${expectedCanonical}#makers`;
-    if (collection && (collection.name !== `${label} makers in Lithuania` || collection.description !== descriptions[0] || collection.url !== expectedCanonical || collection.inLanguage !== 'en' || collection.mainEntity?.['@id'] !== itemListId)) addError(route, 'English category CollectionPage schema does not match the visible canonical collection');
+    const expectedCollectionName = `${label} makers in Lithuania${page > 1 ? ` — page ${page}` : ''}`;
+    if (collection && (collection.name !== expectedCollectionName || collection.description !== descriptions[0] || collection.url !== expectedCanonical || collection.inLanguage !== 'en' || collection.mainEntity?.['@id'] !== itemListId)) addError(route, 'English category CollectionPage schema does not match the visible canonical collection');
     if (collection && Object.values(collection).some((value) => value === '' || value == null)) addError(route, 'English category CollectionPage schema contains an empty property');
     if (itemList) {
       if (itemList['@id'] !== itemListId || itemList.numberOfItems !== records.length || !Array.isArray(itemList.itemListElement) || itemList.itemListElement.length !== records.length) addError(route, 'English category ItemList count or identity is inaccurate');
       else itemList.itemListElement.forEach((item, index) => {
         const record = records[index];
-        if (item?.['@type'] !== 'ListItem' || item.position !== index + 1 || item.name !== record.trading_name || item.url !== canonicalUrl(`/gamintojas/${record.slug}`)) addError(route, `English category ItemList entry ${index + 1} does not match ${record.slug}`);
+        const expectedPosition = (page - 1) * CATALOGUE_PAGE_SIZE + index + 1;
+        if (item?.['@type'] !== 'ListItem' || item.position !== expectedPosition || item.name !== record.trading_name || item.url !== canonicalUrl(`/gamintojas/${record.slug}`)) addError(route, `English category ItemList entry ${index + 1} does not match ${record.slug}`);
       });
     }
   }
@@ -1482,7 +1551,7 @@ for (const file of files.sort()) {
   }
 
   const isCityIndex = route === cityIndexRoute;
-  const isHub = route.startsWith('/baldai-pagal-uzsakyma/') && !isCityIndex;
+  const isHub = route.startsWith('/baldai-pagal-uzsakyma/') && !isCityIndex && !/\/puslapis\/\d+$/.test(route);
   if (isCityIndex) {
     counts.cityIndexes += 1;
     if (!hasType('ItemList')) addError(route, 'all-cities index is missing ItemList schema');
@@ -2120,12 +2189,12 @@ if (counts.englishCities !== expectedEnglishCityGroups.length) errors.push(`expe
 if (counts.englishTurnoverBands !== 4 || expectedEnglishTurnoverBands.length !== 4) errors.push(`expected exactly four English turnover-band pages, found ${counts.englishTurnoverBands}`);
 if (counts.financialHistories !== expectedFinancialHistoryProfiles) errors.push(`expected ${expectedFinancialHistoryProfiles} profiles with valid filed financial history, found ${counts.financialHistories}`);
 if (counts.financialHistoryPeriods !== expectedFinancialHistoryPeriods) errors.push(`expected ${expectedFinancialHistoryPeriods} displayed filed financial periods, found ${counts.financialHistoryPeriods}`);
-if (counts.englishLists !== expectedEnglishListRoutes.size) errors.push(`expected ${expectedEnglishListRoutes.size} English factual list pages, found ${counts.englishLists}`);
+if (counts.englishLists !== expectedEnglishBaseListGroups.length) errors.push(`expected ${expectedEnglishBaseListGroups.length} English factual list roots, found ${counts.englishLists}`);
 const turnoverBandSlugs = expectedEnglishTurnoverBands.flatMap((band) => band.records.map((record) => record.slug));
 if (turnoverBandSlugs.length !== expectedTurnovers.length || new Set(turnoverBandSlugs).size !== turnoverBandSlugs.length || expectedTurnovers.some(({ record }) => !turnoverBandSlugs.includes(record.slug))) {
   errors.push('English turnover bands must be exhaustive and non-overlapping across all records satisfying the published-turnover rule');
 }
-const expectedEnglishRouteSet = new Set(expectedEnglishSuiteRoutes);
+const expectedEnglishRouteSet = new Set(expectedEnglishGeneratedRoutes);
 const actualEnglishRoutes = files.map(routeFor).filter((route) => route === ENGLISH_HUB_PATH || route.startsWith('/en/'));
 for (const route of actualEnglishRoutes) if (!expectedEnglishRouteSet.has(route)) errors.push(`unexpected English route ${route}; do not create English maker-profile clones or parallel suites`);
 for (const route of expectedEnglishRouteSet) if (!actualEnglishRoutes.includes(route)) errors.push(`missing expected English route ${route}`);
@@ -2142,6 +2211,35 @@ for (const entry of expectedEnglishCategories) {
   if (!sitemap.includes(`<loc>${canonical}</loc>`)) errors.push(`sitemap is missing English category ${canonical}`);
 }
 
+const sizeLimitBytes = 400 * 1024;
+const largestCity = [...expectedLandingCities].sort((a, b) => b.count - a.count)[0];
+const largestCityRoute = `/baldai-pagal-uzsakyma/${largestCity.slug}`;
+const homeBytes = (await stat(join(publicDir, 'index.html'))).size;
+const largestCityBytes = (await stat(join(publicDir, largestCityRoute.replace(/^\//, ''), 'index.html'))).size;
+if (homeBytes >= sizeLimitBytes) errors.push(`home page is ${homeBytes} bytes; expected less than ${sizeLimitBytes}`);
+if (largestCityBytes >= sizeLimitBytes) errors.push(`${largestCityRoute} is ${largestCityBytes} bytes; expected less than ${sizeLimitBytes}`);
+if (!boundedListingRoutes.has('/') || !boundedListingRoutes.has(largestCityRoute)) errors.push('home or largest-city route was not audited as a bounded catalogue listing');
+if (!continuationRoutes.size) errors.push('no catalogue continuation routes were generated');
+for (const route of continuationRoutes) {
+  const canonical = canonicalUrl(route);
+  if (!sitemap.includes(`<loc>${canonical}</loc>`)) errors.push(`sitemap is missing continuation route ${canonical}`);
+  if (!internallyLinkedRoutes.has(route)) errors.push(`continuation route ${route} has no visible internal anchor pointing to it`);
+}
+for (const record of manufacturers) {
+  if (!profileLinksFromListings.has(record.slug)) errors.push(`profile ${record.slug} is not linked from any bounded generated listing page`);
+  const canonical = canonicalUrl(`/gamintojas/${record.slug}`);
+  if (!sitemap.includes(`<loc>${canonical}</loc>`)) errors.push(`sitemap is missing manufacturer profile ${canonical}`);
+}
+try {
+  const filterOptions = JSON.parse(await readFile(join(publicDir, 'catalogue-filter-options.json'), 'utf8'));
+  if (filterOptions.total !== manufacturers.length) errors.push(`catalogue-filter-options.json total must be ${manufacturers.length}`);
+  if (!Array.isArray(filterOptions.categories) || filterOptions.categories.length !== landingConfig.categories.length) errors.push('catalogue-filter-options.json category options do not match the landing taxonomy');
+  if (!Array.isArray(filterOptions.cities) || filterOptions.cities.length !== expectedCities.length) errors.push('catalogue-filter-options.json city options do not cover every published locality');
+  if (!Array.isArray(filterOptions.regions) || !filterOptions.regions.length) errors.push('catalogue-filter-options.json has no region options');
+} catch (error) {
+  errors.push(`catalogue-filter-options.json is missing or invalid (${error.message})`);
+}
+
 if (errors.length) {
   console.error(`SEO audit failed: ${errors.length} issue${errors.length === 1 ? '' : 's'} across ${files.length} pages.`);
   for (const error of errors.slice(0, 50)) console.error(`- ${error}`);
@@ -2149,4 +2247,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`SEO audit passed: ${files.length} pages; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; ${counts.financialHistories} profiles expose ${counts.financialHistoryPeriods} latest official filed-financial periods; ${counts.landingSnapshots} audited city/category maker snapshots; 1 English sourcing hub with ${counts.englishCategories} source-matched category tables, ${counts.englishRegions} region, ${counts.englishCities} larger-city and ${counts.englishTurnoverBands} turnover-band factual lists, the English sourcing guide and ${counts.englishQuoteRequests} English quote-request route; open-data, ${counts.marketOverviews} reciprocal-language market-overview routes and ${counts.filedFinancePages + counts.englishFiledFinancePages} reciprocal-language filed-finance routes, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed; WebSite+SearchAction home-only; CollectionPage + ItemList validated on English sourcing lists and WebPage on the quote request; ItemList ${counts.hubs} Lithuanian hubs plus ${counts.cityIndexes} all-cities index; Organization/LocalBusiness ${counts.profiles} profiles; Article ${counts.guideArticles} guide articles plus market overviews; FAQPage ${counts.faqPages} visible FAQ sections.`);
+console.log(`SEO audit passed: ${files.length} pages; ${boundedListingRoutes.size} bounded catalogue pages and ${continuationRoutes.size} internally linked pagination routes capped at ${CATALOGUE_PAGE_SIZE} records; home ${homeBytes} bytes and largest city ${largestCityBytes} bytes; all ${manufacturers.length} profiles linked from generated listings and present in sitemap; metadata/lang/canonical/Open Graph/JSON-LD/breadcrumbs passed; ${counts.financialHistories} profiles expose ${counts.financialHistoryPeriods} latest official filed-financial periods; ${counts.landingSnapshots} audited city/category maker snapshots; 1 English sourcing hub with ${counts.englishCategories} source-matched category tables, ${counts.englishRegions} region, ${counts.englishCities} larger-city and ${counts.englishTurnoverBands} turnover-band factual lists, the English sourcing guide and ${counts.englishQuoteRequests} English quote-request route; open-data, ${counts.marketOverviews} reciprocal-language market-overview routes and ${counts.filedFinancePages + counts.englishFiledFinancePages} reciprocal-language filed-finance routes, llms.txt, JSON/CSV ${manufacturers.length} rows, sitemap and robots passed.`);

@@ -15,6 +15,8 @@ const OFFICIAL_FINANCIAL_SOURCE_NAME = 'Juridinių asmenų registro (Registrų c
 const OFFICIAL_FINANCIAL_SOURCE_URL = 'https://data.gov.lt/datasets/1484/';
 const OFFICIAL_FINANCIAL_API_MODEL_PATH = 'datasets/gov/rc/jar/pelno_ataskaitos/PelnoAtaskaita';
 const buildDate = new Date().toISOString().slice(0, 10);
+const CATALOGUE_PAGE_SIZE = 24;
+const listingPaginationPaths = [];
 
 const [manufacturers, landingConfig, baseHtml] = await Promise.all([
   readFile(join(rootDir, 'data/manufacturers.json'), 'utf8').then(JSON.parse),
@@ -755,6 +757,41 @@ function breadcrumb(items) {
   };
 }
 
+function pageCount(records, pageSize = CATALOGUE_PAGE_SIZE) {
+  return Math.max(1, Math.ceil(records.length / pageSize));
+}
+
+function pageRecords(records, page, pageSize = CATALOGUE_PAGE_SIZE) {
+  const start = (page - 1) * pageSize;
+  return records.slice(start, start + pageSize);
+}
+
+function paginatedPath(basePath, page, segment = 'puslapis') {
+  if (page === 1) return basePath === '/katalogas' ? '/' : basePath;
+  return `${basePath}/${segment}/${page}`;
+}
+
+function paginationNav({ basePath, currentPage, totalPages, lang = 'lt', segment = 'puslapis' }) {
+  if (totalPages <= 1) return '';
+  const label = lang === 'en' ? 'List pages' : 'Sąrašo puslapiai';
+  const previousLabel = lang === 'en' ? 'Previous' : 'Ankstesnis';
+  const nextLabel = lang === 'en' ? 'Next' : 'Kitas';
+  const pageLabel = lang === 'en' ? 'Page' : 'Puslapis';
+  const visiblePages = new Set([1, totalPages]);
+  for (let page = Math.max(1, currentPage - 2); page <= Math.min(totalPages, currentPage + 2); page += 1) visiblePages.add(page);
+  const ordered = [...visiblePages].sort((a, b) => a - b);
+  let previous = 0;
+  const pages = ordered.map((page) => {
+    const gap = previous && page - previous > 1 ? '<span class="pagination-gap" aria-hidden="true">…</span>' : '';
+    previous = page;
+    const href = `${paginatedPath(basePath, page, segment)}/`;
+    return `${gap}<a href="${href}"${page === currentPage ? ' aria-current="page"' : ''} aria-label="${pageLabel} ${page}">${page}</a>`;
+  }).join('');
+  const previousLink = currentPage > 1 ? `<a class="pagination-direction" href="${paginatedPath(basePath, currentPage - 1, segment)}/" rel="prev">← ${previousLabel}</a>` : '<span></span>';
+  const nextLink = currentPage < totalPages ? `<a class="pagination-direction" href="${paginatedPath(basePath, currentPage + 1, segment)}/" rel="next">${nextLabel} →</a>` : '<span></span>';
+  return `<nav class="catalogue-pagination" aria-label="${label}" data-pagination-current="${currentPage}" data-pagination-total="${totalPages}"><div class="pagination-direction-row">${previousLink}<span>${pageLabel} ${currentPage} / ${totalPages}</span>${nextLink}</div><div class="pagination-pages">${pages}</div></nav>`;
+}
+
 function collectionPageSchema({ name, description, path, itemListId }) {
   return {
     '@context': 'https://schema.org',
@@ -894,6 +931,37 @@ function manufacturerCard(record) {
   return `<article class="manufacturer-card"><div class="card-heading"><h3>${escapeHtml(record.trading_name)}</h3>${record.legal_name ? `<p class="legal-name">${escapeHtml(record.legal_name)}</p>` : ''}</div>${registryStatus}<p class="location-line">${locationLine}</p><p class="description${record.description_lt?.trim() ? '' : ' description--fallback'}">${escapeHtml(description)}</p><ul class="category-list" aria-label="Gaminamų baldų kategorijos">${record.category_labels.map((label) => `<li>${escapeHtml(label)}</li>`).join('')}</ul><a class="profile-link" href="/gamintojas/${record.slug}">Peržiūrėti katalogo įrašą <span aria-hidden="true">→</span></a></article>`;
 }
 
+function makerItemList(records, path, offset = 0) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${canonicalUrl(path)}#makers`,
+    numberOfItems: records.length,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    itemListElement: records.map((record, index) => ({
+      '@type': 'ListItem',
+      position: offset + index + 1,
+      url: canonicalUrl(`/gamintojas/${record.slug}`),
+      name: record.trading_name,
+    })),
+  };
+}
+
+function staticCatalogueResults({ records, total, basePath, currentPage, totalPages, scope = {} }) {
+  const attributes = [
+    'data-catalogue-listing',
+    `data-listing-base-path="${escapeHtml(basePath)}"`,
+    `data-listing-current-page="${currentPage}"`,
+    `data-listing-total-pages="${totalPages}"`,
+    `data-listing-total-records="${total}"`,
+    scope.categoryCode ? `data-listing-category-code="${escapeHtml(scope.categoryCode)}"` : '',
+    scope.city ? `data-listing-city="${escapeHtml(scope.city)}"` : '',
+  ].filter(Boolean).join(' ');
+  const start = (currentPage - 1) * CATALOGUE_PAGE_SIZE + 1;
+  const end = start + records.length - 1;
+  return `<div class="results-area" ${attributes}><div class="result-header"><p class="result-count">Rodoma ${start}–${end} iš ${total} katalogo įrašų.</p></div><div class="manufacturer-list" id="landing-manufacturer-list">${records.map(manufacturerCard).join('')}</div>${paginationNav({ basePath, currentPage, totalPages })}</div>`;
+}
+
 function faqHtml(items) {
   return `<section class="landing-faq" aria-labelledby="landing-faq-title"><div class="section-heading"><h2 id="landing-faq-title">Dažniausi klausimai</h2></div><dl>${items.map((item) => `<div><dt>${escapeHtml(item.question)}</dt><dd>${escapeHtml(item.answer)}</dd></div>`).join('')}</dl></section>`;
 }
@@ -967,6 +1035,16 @@ const cityCategoryLandings = landingConfig.categories.flatMap((category) => {
   })).filter((entry) => entry.count >= landingConfig.cityCategoryThreshold);
 }).sort((a, b) => a.category.title.localeCompare(b.category.title, 'lt') || a.city.localeCompare(b.city, 'lt'));
 const landingCities = allCities.filter((entry) => entry.count >= landingConfig.cityThreshold);
+const catalogueFilterOptions = {
+  total: manufacturers.length,
+  categories: landingConfig.categories.map((category) => ({ value: category.code, label: category.title, slug: category.slug })),
+  cities: allCities.map((entry) => ({ value: entry.city, label: entry.city, slug: entry.slug })),
+  regions: Array.from(new Map(manufacturers
+    .filter((record) => record.region?.trim() && record.region_label?.trim())
+    .map((record) => [record.region.trim(), record.region_label.trim()])), ([value, label]) => ({ value, label }))
+    .sort((a, b) => a.label.localeCompare(b.label, 'lt')),
+};
+await writeFile(join(publicDir, 'catalogue-filter-options.json'), `${JSON.stringify(catalogueFilterOptions)}\n`);
 
 function cityCategoryMix(records) {
   const counts = new Map();
@@ -1105,10 +1183,13 @@ async function writeRoute(path, html) {
   await writeFile(output, html);
 }
 
-const homeBody = `${header()}<main><section class="intro" aria-labelledby="page-title"><div class="intro-copy"><p class="kicker">Viešas paieškos katalogas</p><h1 id="page-title">Raskite baldų gamintojus pagal poreikį ir vietą</h1><p class="lead">Pradėkite nuo baldų rūšies ir miesto. Rezultatus galėsite tikslinti pagal pavadinimą, įmonės duomenis ir kitus katalogo kriterijus.</p><div class="intro-actions"><a class="primary-button primary-button--light" href="/baldu-kainos-skaiciuokle">Apskaičiuoti preliminarią kainą</a><a class="intro-secondary-link" href="/gauti-pasiulymus">Jau turite projekto aprašymą? Pateikti užklausą →</a><a class="intro-guide-link" href="/gidas">Kaip atrinkti ir palyginti gamintojus →</a></div></div><div class="home-search-panel" aria-labelledby="home-search-title"><div class="home-search-heading"><h2 id="home-search-title">Ko ieškote?</h2><p>Pasirinkite poreikį ir vietą — katalogas atsinaujins iškart.</p></div><div class="request-static-loading" role="status"><p>Paieška ir filtrai parengiami įkėlus katalogą.</p></div><aside id="apie-kataloga"><details class="directory-note"><summary>Ką svarbu žinoti apie katalogą</summary><p>Tai iš viešų šaltinių sudarytas, nepatvirtintų kandidatų katalogas. Įrašai nėra kokybės, užimtumo ar meistrystės garantija, todėl informaciją ir pasiūlymus įvertinkite savarankiškai.</p></details></aside></div></section><section class="browse-section" id="gamintojai" aria-labelledby="browse-results-title"><h2 class="visually-hidden" id="browse-results-title">Gamintojų katalogo rezultatai</h2><div class="results-area"><div class="result-header"><p class="result-count">Kataloge – ${formatCount(manufacturers.length)}.</p></div><div class="manufacturer-list">${manufacturers.map(manufacturerCard).join('')}</div></div></section><section class="landing-directory"><div class="section-heading"><h2>Naršykite pagal baldų rūšį arba miestą</h2></div><div class="landing-link-groups"><div><h3>Pagal baldų rūšį</h3><ul>${landingConfig.categories.map((category) => `<li><a href="/baldai-pagal-uzsakyma/${category.slug}">${escapeHtml(category.title)}</a></li>`).join('')}</ul></div><div><h3>Pagal šaltinyje nurodytą miestą</h3><ul>${landingCities.map((city) => `<li><a href="/baldai-pagal-uzsakyma/${city.slug}">Baldų gamintojų kandidatai: ${escapeHtml(city.city)} (${city.count})</a></li>`).join('')}</ul></div></div></section></main>${footer()}`;
+const homeTotalPages = pageCount(manufacturers);
+const homeFirstPage = pageRecords(manufacturers, 1);
+const homeDescription = 'Viešais šaltiniais paremtas nepatvirtintų Lietuvos nestandartinių baldų gamintojų kandidatų katalogas su paieška pagal kategoriją ir vietą.';
+const homeBody = `${header()}<main><section class="intro" aria-labelledby="page-title"><div class="intro-copy"><p class="kicker">Viešas paieškos katalogas</p><h1 id="page-title">Raskite baldų gamintojus pagal poreikį ir vietą</h1><p class="lead">Pradėkite nuo baldų rūšies ir miesto. Rezultatus galėsite tikslinti pagal pavadinimą, įmonės duomenis ir kitus katalogo kriterijus.</p><div class="intro-actions"><a class="primary-button primary-button--light" href="/baldu-kainos-skaiciuokle">Apskaičiuoti preliminarią kainą</a><a class="intro-secondary-link" href="/gauti-pasiulymus">Jau turite projekto aprašymą? Pateikti užklausą →</a><a class="intro-guide-link" href="/gidas">Kaip atrinkti ir palyginti gamintojus →</a></div></div><div class="home-search-panel" aria-labelledby="home-search-title"><div class="home-search-heading"><h2 id="home-search-title">Ko ieškote?</h2><p>Pasirinkite poreikį ir vietą — katalogas atsinaujins iškart.</p></div><div id="home-filter-controls"><div class="request-static-loading" role="status"><p>Paieška ir filtrai parengiami įkėlus katalogą.</p></div></div><aside id="apie-kataloga"><details class="directory-note"><summary>Ką svarbu žinoti apie katalogą</summary><p>Tai iš viešų šaltinių sudarytas, nepatvirtintų kandidatų katalogas. Įrašai nėra kokybės, užimtumo ar meistrystės garantija, todėl informaciją ir pasiūlymus įvertinkite savarankiškai.</p></details></aside></div></section><section class="browse-section" id="gamintojai" aria-labelledby="browse-results-title"><h2 class="visually-hidden" id="browse-results-title">Gamintojų katalogo rezultatai</h2><div id="browse-content">${staticCatalogueResults({ records: homeFirstPage, total: manufacturers.length, basePath: '/katalogas', currentPage: 1, totalPages: homeTotalPages })}</div></section><section class="landing-directory"><div class="section-heading"><h2>Naršykite pagal baldų rūšį arba miestą</h2></div><div class="landing-link-groups"><div><h3>Pagal baldų rūšį</h3><ul>${landingConfig.categories.map((category) => `<li><a href="/baldai-pagal-uzsakyma/${category.slug}">${escapeHtml(category.title)}</a></li>`).join('')}</ul></div><div><h3>Pagal šaltinyje nurodytą miestą</h3><ul>${landingCities.map((city) => `<li><a href="/baldai-pagal-uzsakyma/${city.slug}">Baldų gamintojų kandidatai: ${escapeHtml(city.city)} (${city.count})</a></li>`).join('')}</ul></div></div></section></main>${footer()}`;
 await writeRoute('/', injectPage({
   title: 'Baldai pagal užsakymą Lietuvoje | Gamintojų katalogas',
-  description: 'Viešais šaltiniais paremtas nepatvirtintų Lietuvos nestandartinių baldų gamintojų kandidatų katalogas su paieška pagal kategoriją ir vietą.',
+  description: homeDescription,
   path: '/',
   alternates: [
     { hreflang: 'lt', href: canonicalUrl('/') },
@@ -1118,6 +1199,23 @@ await writeRoute('/', injectPage({
   body: homeBody,
   structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }])],
 }));
+
+for (let page = 2; page <= homeTotalPages; page += 1) {
+  const path = paginatedPath('/katalogas', page);
+  const records = pageRecords(manufacturers, page);
+  listingPaginationPaths.push(path);
+  const body = `${header()}<main class="landing-main catalogue-page-main"><a class="back-link" href="/">← Grįžti į paiešką ir filtrus</a><section class="landing-hero"><div><p class="kicker">Visas katalogas</p><h1>Gamintojų katalogas — ${page} puslapis</h1><p class="lead">Abėcėlinio katalogo tęsinys. Paiešką pagal poreikį, vietą ir įmonės duomenis rasite pagrindiniame puslapyje.</p></div><aside class="landing-summary"><strong>${formatCount(manufacturers.length)}</strong><p>Šiame puslapyje rodoma ne daugiau kaip ${CATALOGUE_PAGE_SIZE} įrašai, kad katalogas greitai atsidarytų telefone.</p></aside></section><section class="landing-results"><div class="section-heading"><h2>Katalogo įrašai</h2><p>Įrašai pateikiami abėcėlės tvarka ir nėra reitinguojami ar rekomenduojami.</p></div>${staticCatalogueResults({ records, total: manufacturers.length, basePath: '/katalogas', currentPage: page, totalPages: homeTotalPages })}</section></main>${footer()}`;
+  await writeRoute(path, injectPage({
+    title: `Gamintojų katalogas – ${page} puslapis | Baldininkai.org`,
+    description: `Abėcėlinio Baldininkai.org gamintojų katalogo ${page} puslapis iš ${homeTotalPages}, su ne daugiau kaip ${CATALOGUE_PAGE_SIZE} viešų šaltinių kandidatų.`,
+    path,
+    body,
+    structuredData: [
+      breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: `${page} puslapis`, path }]),
+      makerItemList(records, path, (page - 1) * CATALOGUE_PAGE_SIZE),
+    ],
+  }));
+}
 
 const estimatorPath = '/baldu-kainos-skaiciuokle';
 const estimatorDescription = 'Orientacinė nestandartinių baldų kainos skaičiuoklė pagal baldų tipą, apimtį, fasadų lygį, stalviršį ir miestą, paremta Baldininkai.org gidais.';
@@ -1593,7 +1691,7 @@ function englishMakerRows(records) {
     }).join('');
 }
 
-function englishMakerItemList(records, path) {
+function englishMakerItemList(records, path, offset = 0) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -1604,7 +1702,7 @@ function englishMakerItemList(records, path) {
       .sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'en'))
       .map((record, index) => ({
         '@type': 'ListItem',
-        position: index + 1,
+        position: offset + index + 1,
         name: record.trading_name,
         url: canonicalUrl(`/gamintojas/${record.slug}`),
       })),
@@ -1658,22 +1756,32 @@ function englishSuiteLinks(currentPath) {
 }
 
 async function writeEnglishMakerListPage({ path, title, description, heading, summary, records, kind, context, alternates = englishSelfAlternates(path) }) {
-  const rows = englishMakerRows(records);
-  const body = `${header(kind, 'en')}<main class="market-overview-main"><div class="market-top-links"><a class="back-link" href="/en/">← English sourcing hub</a></div><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">Catalogue data cut</p><h1>${escapeHtml(heading)}</h1><p class="lead">${escapeHtml(summary)}</p></div><p class="market-overview-date">Data version <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section" aria-labelledby="en-list-context-title"><div class="market-section-heading"><div><h2 id="en-list-context-title">How to read this list</h2><p>${escapeHtml(context)}</p><p>This is a factual data cut from the current catalogue, not a ranking, endorsement or recommendation. Listings are unverified public-source candidates and do not establish quality, capacity, price, lead time, availability or service coverage.</p></div><p class="market-scope-note">${records.length} catalogue entr${records.length === 1 ? 'y' : 'ies'}.</p></div></section><section class="market-section" aria-labelledby="en-maker-table-title"><div class="market-section-heading"><div><h2 id="en-maker-table-title">Makers in this data cut</h2><p>Rows are alphabetical by maker name. “${notPublishedEnglish}” means the current versioned catalogue has no value that passes the display rule for that field.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="${escapeHtml(heading)} factual table"><table><thead><tr><th>Maker</th><th>City</th><th>Employee band</th><th>Published turnover</th><th>Founding year</th></tr></thead><tbody>${rows}</tbody></table></div></section><section class="market-section market-methodology" aria-labelledby="en-list-method-title"><div class="market-section-heading"><div><h2 id="en-list-method-title">Data rules and next steps</h2><p>Turnover appears only when a positive amount, fiscal year and direct financial source link are all present. Employee bands and founding years are shown only when the catalogue contains a usable value.</p></div></div><div class="market-data-links"><p>Use the <a href="/en/sourcing-guide/">English sourcing guide</a> to interpret the fields and prepare questions. Review the <a href="/en/lithuanian-furniture-makers-data/">catalogue data overview</a> for scope and mixed-year limitations, or the <a href="/atviri-duomenys/">open-data documentation</a> for downloads and licence terms.</p></div></section>${englishSuiteLinks(path)}</article></main>${footer('en')}`;
-  await writeRoute(path, injectPage({
-    title,
-    description,
-    path,
-    lang: 'en',
-    locale: 'en_GB',
-    alternates,
-    body,
-    structuredData: [
-      breadcrumb([{ name: 'English sourcing hub', path: englishHubPath }, { name: heading, path }]),
-      englishCollectionPage(heading, description, path),
-      englishMakerItemList(records, path),
-    ],
-  }));
+  const sortedRecords = [...records].sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'en'));
+  const totalPages = pageCount(sortedRecords);
+  for (let page = 1; page <= totalPages; page += 1) {
+    const pagePath = paginatedPath(path, page, 'page');
+    const visibleRecords = pageRecords(sortedRecords, page);
+    const pageTitle = page === 1 ? title : `${heading} — page ${page} | Baldininkai.org`;
+    const pageDescription = page === 1 ? description : `${description} Page ${page} of ${totalPages}, with at most ${CATALOGUE_PAGE_SIZE} factual maker rows.`;
+    const pageHeading = page === 1 ? heading : `${heading} — page ${page}`;
+    if (page > 1) listingPaginationPaths.push(pagePath);
+    const rows = englishMakerRows(visibleRecords);
+    const body = `${header(kind, 'en')}<main class="market-overview-main"><div class="market-top-links"><a class="back-link" href="/en/">← English sourcing hub</a></div><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">Catalogue data cut</p><h1>${escapeHtml(pageHeading)}</h1><p class="lead">${escapeHtml(summary)}</p></div><p class="market-overview-date">Data version <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section" aria-labelledby="en-list-context-title"><div class="market-section-heading"><div><h2 id="en-list-context-title">How to read this list</h2><p>${escapeHtml(context)}</p><p>This is a factual data cut from the current catalogue, not a ranking, endorsement or recommendation. Listings are unverified public-source candidates and do not establish quality, capacity, price, lead time, availability or service coverage.</p></div><p class="market-scope-note">${records.length} catalogue entr${records.length === 1 ? 'y' : 'ies'}; page ${page} of ${totalPages}.</p></div></section><section class="market-section" aria-labelledby="en-maker-table-title"><div class="market-section-heading"><div><h2 id="en-maker-table-title">Makers in this data cut</h2><p>Rows are alphabetical by maker name. “${notPublishedEnglish}” means the current versioned catalogue has no value that passes the display rule for that field.</p></div></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="${escapeHtml(pageHeading)} factual table"><table><thead><tr><th>Maker</th><th>City</th><th>Employee band</th><th>Published turnover</th><th>Founding year</th></tr></thead><tbody>${rows}</tbody></table></div>${paginationNav({ basePath: path, currentPage: page, totalPages, lang: 'en', segment: 'page' })}</section><section class="market-section market-methodology" aria-labelledby="en-list-method-title"><div class="market-section-heading"><div><h2 id="en-list-method-title">Data rules and next steps</h2><p>Turnover appears only when a positive amount, fiscal year and direct financial source link are all present. Employee bands and founding years are shown only when the catalogue contains a usable value.</p></div></div><div class="market-data-links"><p>Use the <a href="/en/sourcing-guide/">English sourcing guide</a> to interpret the fields and prepare questions. Review the <a href="/en/lithuanian-furniture-makers-data/">catalogue data overview</a> for scope and mixed-year limitations, or the <a href="/atviri-duomenys/">open-data documentation</a> for downloads and licence terms.</p><p>The published dataset is licensed under <a href="${DATASET_LICENSE_URL}" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.</p></div></section>${englishSuiteLinks(pagePath)}</article></main>${footer('en')}`;
+    await writeRoute(pagePath, injectPage({
+      title: pageTitle,
+      description: pageDescription,
+      path: pagePath,
+      lang: 'en',
+      locale: 'en_GB',
+      alternates: page === 1 ? alternates : englishSelfAlternates(pagePath),
+      body,
+      structuredData: [
+        breadcrumb([{ name: 'English sourcing hub', path: englishHubPath }, { name: heading, path }, ...(page > 1 ? [{ name: `Page ${page}`, path: pagePath }] : [])]),
+        englishCollectionPage(pageHeading, pageDescription, pagePath),
+        englishMakerItemList(visibleRecords, pagePath, (page - 1) * CATALOGUE_PAGE_SIZE),
+      ],
+    }));
+  }
 }
 
 const englishHubDescription = `Source ${manufacturers.length} candidate Lithuanian furniture makers by published furniture category, catalogue region, larger city group and published-turnover band, with clear verification limits.`;
@@ -1872,39 +1980,35 @@ for (const entry of englishCategoryEntries) {
   const { category, label, path, records } = entry;
   const lithuanianPath = `/baldai-pagal-uzsakyma/${category.slug}`;
   const description = `${label} in Lithuania: ${records.length} public-source candidate makers with city or region, employee band, published turnover sources and founding year where available.`;
-  const itemListId = `${canonicalUrl(path)}#makers`;
-  const itemList = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    '@id': itemListId,
-    numberOfItems: records.length,
-    itemListElement: records.map((record, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: record.trading_name,
-      url: canonicalUrl(`/gamintojas/${record.slug}`),
-    })),
-  };
-  const rows = records.map(englishCategoryMakerRow).join('');
-  const body = `${header('category', 'en')}<main class="market-overview-main"><div class="market-top-links"><a class="back-link" href="/en/">← All furniture categories</a><nav class="language-links" aria-label="Language selection"><a href="${lithuanianPath}/" lang="lt">Lietuvių</a><a href="${path}/" lang="en" aria-current="page">English</a></nav></div><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">Furniture maker category</p><h1>${escapeHtml(label)} makers in Lithuania</h1><p class="lead">${records.length} candidate makers whose current public-source catalogue records match this published furniture category.</p></div><p class="market-overview-date">Data version <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section" aria-labelledby="en-category-makers-title"><div class="market-section-heading"><div><h2 id="en-category-makers-title">Published candidate makers</h2><p>Company names open the existing Lithuanian catalogue profile. “Not published” means the current source record has no usable value for that field.</p></div><p class="market-scope-note">Alphabetical by company name; not ranked.</p></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="${escapeHtml(label)} candidate makers"><table><thead><tr><th>Company</th><th>City / region</th><th>Employee band</th><th>Published turnover</th><th>Founded</th></tr></thead><tbody>${rows}</tbody></table></div></section><section class="market-section landing-guide-callout" data-en-quote-request-cta aria-labelledby="en-category-quote-title"><div><h2 id="en-category-quote-title">Turn this category search into a project brief</h2><p>Use the same structured request fields for scope, dimensions, materials, budget, timing and installation access. Selecting a catalogue candidate is a review preference only and does not contact the maker automatically.</p></div><a class="primary-button" href="/en/quote-request/">Prepare a quote request</a></section><section class="market-section market-methodology" aria-labelledby="en-category-limits-title"><div class="market-section-heading"><div><h2 id="en-category-limits-title">How to use this list</h2><p>This page is a factual public-source category view, not supplier verification.</p></div></div><div class="market-method-grid"><div><h3>What is shown</h3><p>Turnover appears only when the catalogue’s existing published-turnover rule returns a positive amount, fiscal year and direct public source link. Employee band and founding year are shown only when valid values exist in the current record.</p><p>View the <a href="${lithuanianPath}/" lang="lt">matching Lithuanian category page</a> or return to the <a href="/en/">English sourcing hub</a>.</p></div><div><h3>Limitations</h3><p>Listings are unverified public-source candidates. Inclusion is not an endorsement or ranking and does not guarantee identity, accuracy, quality, capacity, price, timing, availability, service coverage or suitability.</p><p>Verify every candidate independently before making a commercial decision.</p></div></div><div class="market-data-links"><h3>Data and licence</h3><p>Read the <a href="/atviri-duomenys/">open-data documentation</a>. The published dataset is licensed under <a href="${DATASET_LICENSE_URL}" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.</p></div></section></article></main>${footer('en')}`;
-  await writeRoute(path, injectPage({
-    title: `${label} makers in Lithuania | Baldininkai.org`,
-    description,
-    path,
-    lang: 'en',
-    locale: 'en_GB',
-    alternates: [
-      { hreflang: 'en', href: canonicalUrl(path) },
-      { hreflang: 'lt', href: canonicalUrl(lithuanianPath) },
-      { hreflang: 'x-default', href: canonicalUrl(lithuanianPath) },
-    ],
-    body,
-    structuredData: [
-      breadcrumb([{ name: 'Lithuanian furniture makers', path: englishHubPath }, { name: label, path }]),
-      collectionPageSchema({ name: `${label} makers in Lithuania`, description, path, itemListId }),
-      itemList,
-    ],
-  }));
+  const totalPages = pageCount(records);
+  for (let page = 1; page <= totalPages; page += 1) {
+    const pagePath = paginatedPath(path, page, 'page');
+    const visibleRecords = pageRecords(records, page);
+    const pageHeading = `${label} makers in Lithuania${page > 1 ? ` — page ${page}` : ''}`;
+    const pageTitle = page === 1 ? `${label} makers in Lithuania | Baldininkai.org` : `${pageHeading} | Baldininkai.org`;
+    const pageDescription = page === 1 ? description : `${description} Page ${page} of ${totalPages}, with at most ${CATALOGUE_PAGE_SIZE} factual maker rows.`;
+    if (page > 1) listingPaginationPaths.push(pagePath);
+    const rows = visibleRecords.map(englishCategoryMakerRow).join('');
+    const body = `${header('category', 'en')}<main class="market-overview-main"><div class="market-top-links"><a class="back-link" href="/en/">← All furniture categories</a><nav class="language-links" aria-label="Language selection"><a href="${lithuanianPath}/" lang="lt">Lietuvių</a><a href="${pagePath}/" lang="en" aria-current="page">English</a></nav></div><article class="market-overview-article"><header class="market-overview-hero"><div><p class="kicker">Furniture maker category</p><h1>${escapeHtml(pageHeading)}</h1><p class="lead">${records.length} candidate makers whose current public-source catalogue records match this published furniture category.</p></div><p class="market-overview-date">Data version <time datetime="${buildDate}">${buildDate}</time></p></header><section class="market-section" aria-labelledby="en-category-makers-title"><div class="market-section-heading"><div><h2 id="en-category-makers-title">Published candidate makers</h2><p>Company names open the existing Lithuanian catalogue profile. “Not published” means the current source record has no usable value for that field.</p></div><p class="market-scope-note">Alphabetical by company name; not ranked. Page ${page} of ${totalPages}.</p></div><div class="market-table-wrap" tabindex="0" role="region" aria-label="${escapeHtml(pageHeading)} candidate makers"><table><thead><tr><th>Company</th><th>City / region</th><th>Employee band</th><th>Published turnover</th><th>Founded</th></tr></thead><tbody>${rows}</tbody></table></div>${paginationNav({ basePath: path, currentPage: page, totalPages, lang: 'en', segment: 'page' })}</section><section class="market-section landing-guide-callout" data-en-quote-request-cta aria-labelledby="en-category-quote-title"><div><h2 id="en-category-quote-title">Turn this category search into a project brief</h2><p>Use the same structured request fields for scope, dimensions, materials, budget, timing and installation access. Selecting a catalogue candidate is a review preference only and does not contact the maker automatically.</p></div><a class="primary-button" href="/en/quote-request/">Prepare a quote request</a></section><section class="market-section market-methodology" aria-labelledby="en-category-limits-title"><div class="market-section-heading"><div><h2 id="en-category-limits-title">How to use this list</h2><p>This page is a factual public-source category view, not supplier verification.</p></div></div><div class="market-method-grid"><div><h3>What is shown</h3><p>Turnover appears only when the catalogue’s existing published-turnover rule returns a positive amount, fiscal year and direct public source link. Employee band and founding year are shown only when valid values exist in the current record.</p><p>View the <a href="${lithuanianPath}/" lang="lt">matching Lithuanian category page</a> or return to the <a href="/en/">English sourcing hub</a>.</p></div><div><h3>Limitations</h3><p>Listings are unverified public-source candidates. Inclusion is not an endorsement or ranking and does not guarantee identity, accuracy, quality, capacity, price, timing, availability, service coverage or suitability.</p><p>Verify every candidate independently before making a commercial decision.</p></div></div><div class="market-data-links"><h3>Data and licence</h3><p>Read the <a href="/atviri-duomenys/">open-data documentation</a>. The published dataset is licensed under <a href="${DATASET_LICENSE_URL}" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.</p></div></section></article></main>${footer('en')}`;
+    await writeRoute(pagePath, injectPage({
+      title: pageTitle,
+      description: pageDescription,
+      path: pagePath,
+      lang: 'en',
+      locale: 'en_GB',
+      alternates: page === 1 ? [
+        { hreflang: 'en', href: canonicalUrl(path) },
+        { hreflang: 'lt', href: canonicalUrl(lithuanianPath) },
+        { hreflang: 'x-default', href: canonicalUrl(lithuanianPath) },
+      ] : englishSelfAlternates(pagePath),
+      body,
+      structuredData: [
+        breadcrumb([{ name: 'Lithuanian furniture makers', path: englishHubPath }, { name: label, path }, ...(page > 1 ? [{ name: `Page ${page}`, path: pagePath }] : [])]),
+        collectionPageSchema({ name: pageHeading, description: pageDescription, path: pagePath, itemListId: `${canonicalUrl(pagePath)}#makers` }),
+        englishMakerItemList(visibleRecords, pagePath, (page - 1) * CATALOGUE_PAGE_SIZE),
+      ],
+    }));
+  }
 }
 
 for (const record of manufacturers) {
@@ -2009,8 +2113,28 @@ function landingMakerSnapshot(records, kind) {
   return `<section class="landing-snapshot" data-maker-snapshot data-snapshot-scope="${kind}" data-record-count="${total}" aria-labelledby="maker-snapshot-title"><div class="snapshot-heading"><div><p class="kicker">Šio sąrašo duomenys</p><h2 id="maker-snapshot-title">Gamintojų duomenų pjūvis</h2><p>Rodoma tik tai, ką galima apskaičiuoti iš šiame puslapyje pateiktų katalogo įrašų.</p></div><p class="snapshot-version">Duomenų versija <time datetime="${buildDate}">${buildDate}</time></p></div><dl class="snapshot-coverage"><div data-snapshot-coverage="total" data-count="${total}" data-total="${total}"><dt>Gamintojų kandidatų</dt><dd>${total}</dd><small>100,0 %</small></div><div data-snapshot-coverage="turnover" data-count="${turnoverRecords.length}" data-total="${total}"><dt>Su paskelbta apyvarta</dt><dd>${turnoverRecords.length}</dd><small>${formatPercent(turnoverRecords.length, total)}</small></div><div data-snapshot-coverage="employees" data-count="${employeeRecords.length}" data-total="${total}"><dt>Su darbuotojų grupe</dt><dd>${employeeRecords.length}</dd><small>${formatPercent(employeeRecords.length, total)}</small></div><div data-snapshot-coverage="founded" data-count="${foundingRecords.length}" data-total="${total}"><dt>Su įkūrimo metais</dt><dd>${foundingRecords.length}</dd><small>${formatPercent(foundingRecords.length, total)}</small></div></dl><div class="snapshot-detail-grid"><section aria-labelledby="snapshot-turnover-title"><div class="snapshot-subheading"><h3 id="snapshot-turnover-title">Paskelbta apyvarta</h3><p>Galioja tik teigiama suma su finansiniais metais ir tiesioginiu viešu šaltiniu.</p></div>${turnoverStats}<h4>Finansinių metų mišinys</h4>${fiscalYears}</section><section aria-labelledby="snapshot-company-title"><div class="snapshot-subheading"><h3 id="snapshot-company-title">Darbuotojai ir įkūrimo metai</h3><p>Tušti ar negaliojantys laukai į pasiskirstymą ir intervalą neįtraukiami.</p></div><h4>Darbuotojų grupės</h4>${employeeBands}${foundingRange}</section></div>${topMaker}<p class="snapshot-note">${landingSnapshotNote} Metodiką rasite <a href="/baldu-rinkos-apzvalga/">baldų rinkos apžvalgoje</a>, o šaltinių rinkinį – <a href="/atviri-duomenys/">atvirų duomenų puslapyje</a>.</p></section>`;
 }
 
-function landingItemList(records) {
-  return { '@context': 'https://schema.org', '@type': 'ItemList', numberOfItems: records.length, itemListElement: records.map((record, index) => ({ '@type': 'ListItem', position: index + 1, url: canonicalUrl(`/gamintojas/${record.slug}`), name: record.trading_name })) };
+function landingItemList(records, path, offset = 0) {
+  return makerItemList(records, path, offset);
+}
+
+async function writeLithuanianLandingPagination({ basePath, title, description, records, scope, breadcrumbItems }) {
+  const totalPages = pageCount(records);
+  for (let page = 2; page <= totalPages; page += 1) {
+    const path = paginatedPath(basePath, page);
+    const visibleRecords = pageRecords(records, page);
+    listingPaginationPaths.push(path);
+    const body = `${header()}<main class="landing-main catalogue-page-main"><a class="back-link" href="${basePath}/">← Grįžti į pirmą sąrašo puslapį</a><section class="landing-hero"><div><p class="kicker">Katalogo sąrašo tęsinys</p><h1>${escapeHtml(title)} — ${page} puslapis</h1><p class="lead">Abėcėlinis šio katalogo pjūvio tęsinys. Interaktyvūs filtrai veikia ir šiame puslapyje.</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>Viename puslapyje rodoma ne daugiau kaip ${CATALOGUE_PAGE_SIZE} įrašai, kad sąrašas greitai atsidarytų telefone.</p></aside></section><section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal pavadinimą, įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="landing-filter-controls" id="landing-filter-controls"><div class="request-static-loading" role="status"><p>Šio sąrašo filtrai parengiami įkėlus puslapį.</p></div></div>${staticCatalogueResults({ records: visibleRecords, total: records.length, basePath, currentPage: page, totalPages, scope })}</section><section class="landing-guide-callout"><div><h2>Patikrinkite kandidatus vienodai</h2><p>Šis sąrašas yra viešų šaltinių pradžios taškas, ne reitingas ar rekomendacija. Tapatybę, darbų apimtį, kainą ir prieinamumą tikrinkite tiesiogiai.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
+    await writeRoute(path, injectPage({
+      title: `${title} – ${page} puslapis | Gamintojų katalogas`,
+      description: `${description} Tai ${page} puslapis iš ${totalPages}; jame rodoma ne daugiau kaip ${CATALOGUE_PAGE_SIZE} įrašai.`,
+      path,
+      body,
+      structuredData: [
+        breadcrumb([...breadcrumbItems, { name: `${page} puslapis`, path }]),
+        landingItemList(visibleRecords, path, (page - 1) * CATALOGUE_PAGE_SIZE),
+      ],
+    }));
+  }
 }
 
 async function writeLanding({ slug, title, intro, buyerNote, records, related, faq, guidance, kind }) {
@@ -2041,15 +2165,26 @@ async function writeLanding({ slug, title, intro, buyerNote, records, related, f
       { hreflang: 'x-default', href: canonicalUrl(englishCityCounterpart.path) },
     ];
   }
-  const body = `${header()}<main class="landing-main">${topLinks}<section class="landing-hero"><div><p class="kicker">${kind === 'category' ? 'Baldų kategorija' : 'Šaltinyje nurodyta vietovė'}</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section>${landingMakerSnapshot(records, kind)}${guidanceHtml(guidance)}${relatedSection}<section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="landing-filter-controls" id="landing-filter-controls"></div><div class="manufacturer-list" id="landing-manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
+  const totalPages = pageCount(records);
+  const visibleRecords = pageRecords(records, 1);
+  const scope = kind === 'category' ? { categoryCode: landingConfig.categories.find((category) => category.slug === slug)?.code } : { city: title.replace('Baldų gamintojų kandidatai: ', '') };
+  const body = `${header()}<main class="landing-main">${topLinks}<section class="landing-hero"><div><p class="kicker">${kind === 'category' ? 'Baldų kategorija' : 'Šaltinyje nurodyta vietovė'}</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section>${landingMakerSnapshot(records, kind)}${guidanceHtml(guidance)}${relatedSection}<section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal pavadinimą, įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="landing-filter-controls" id="landing-filter-controls"><div class="request-static-loading" role="status"><p>Šio sąrašo filtrai parengiami įkėlus puslapį.</p></div></div>${staticCatalogueResults({ records: visibleRecords, total: records.length, basePath: path, currentPage: 1, totalPages, scope })}</section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
   await writeRoute(path, injectPage({
     title: `${title} | Gamintojų katalogas`,
     description,
     path,
     body,
     alternates,
-    structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }]), faqSchema(faq), landingItemList(records)],
+    structuredData: [breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }]), faqSchema(faq), landingItemList(visibleRecords, path)],
   }));
+  await writeLithuanianLandingPagination({
+    basePath: path,
+    title,
+    description,
+    records,
+    scope,
+    breadcrumbItems: [{ name: 'Gamintojų katalogas', path: '/' }, { name: title, path }],
+  });
 }
 
 async function writeCityCategoryLanding(combination) {
@@ -2079,7 +2214,10 @@ async function writeCityCategoryLanding(combination) {
     { path: `/baldai-pagal-uzsakyma/${category.slug}`, label: category.title, count: categoryCount },
     { path: `/baldai-pagal-uzsakyma/${cityLanding.slug}`, label: `Baldų gamintojų kandidatai: ${city}`, count: cityLanding.count },
   ];
-  const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">Baldų rūšis ir vietovė</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section>${guidanceHtml(guidance)}<section class="landing-related"><div class="section-heading"><h2>Naršykite platesnius sąrašus</h2><p>Grįžkite į visos baldų rūšies arba visos vietovės kandidatų sąrašą.</p></div><ul class="landing-related-links">${related.map((item) => `<li><a href="${item.path}">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}</ul></section><section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="landing-filter-controls" id="landing-filter-controls"></div><div class="manufacturer-list" id="landing-manufacturer-list">${records.map(manufacturerCard).join('')}</div></section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
+  const totalPages = pageCount(records);
+  const visibleRecords = pageRecords(records, 1);
+  const scope = { categoryCode: category.code, city };
+  const body = `${header()}<main class="landing-main"><a class="back-link" href="/">← Grįžti į gamintojų katalogą</a><section class="landing-hero"><div><p class="kicker">Baldų rūšis ir vietovė</p><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(intro)}</p></div><aside class="landing-summary"><strong>${formatCount(records.length)}</strong><p>${escapeHtml(buyerNote)}</p></aside></section>${guidanceHtml(guidance)}<section class="landing-related"><div class="section-heading"><h2>Naršykite platesnius sąrašus</h2><p>Grįžkite į visos baldų rūšies arba visos vietovės kandidatų sąrašą.</p></div><ul class="landing-related-links">${related.map((item) => `<li><a href="${item.path}">${escapeHtml(item.label)} <span>(${item.count})</span></a></li>`).join('')}</ul></section><section class="landing-results"><div class="section-heading"><h2>Kandidatai iš versijuoto šaltinių rinkinio</h2><p>Įrašai pateikiami abėcėlės tvarka. Sąrašą galite siaurinti pagal pavadinimą, įmonės dydį, įkūrimo laikotarpį ir patikrintų registro duomenų būseną.</p></div><div class="landing-filter-controls" id="landing-filter-controls"><div class="request-static-loading" role="status"><p>Šio sąrašo filtrai parengiami įkėlus puslapį.</p></div></div>${staticCatalogueResults({ records: visibleRecords, total: records.length, basePath: path, currentPage: 1, totalPages, scope })}</section>${faqHtml(faq)}<section class="landing-guide-callout"><div><h2>Atranką tęskite vienoda užklausa</h2><p>Pirkėjo gide rasite klausimus trumpajam sąrašui, pasiūlymų apimčiai ir realistiškam grafikui palyginti.</p></div><a class="primary-button" href="/gidas">Atverti pirkėjo gidą</a></section></main>${footer()}`;
   await writeRoute(path, injectPage({
     title: `${title} | Gamintojų katalogas`,
     description,
@@ -2088,9 +2226,17 @@ async function writeCityCategoryLanding(combination) {
     structuredData: [
       breadcrumb([{ name: 'Gamintojų katalogas', path: '/' }, { name: category.title, path: `/baldai-pagal-uzsakyma/${category.slug}` }, { name: title, path }]),
       faqSchema(faq),
-      landingItemList(records),
+      landingItemList(visibleRecords, path),
     ],
   }));
+  await writeLithuanianLandingPagination({
+    basePath: path,
+    title,
+    description,
+    records,
+    scope,
+    breadcrumbItems: [{ name: 'Gamintojų katalogas', path: '/' }, { name: category.title, path: `/baldai-pagal-uzsakyma/${category.slug}` }, { name: title, path }],
+  });
 }
 
 for (const category of landingConfig.categories) {
@@ -2372,6 +2518,7 @@ const sitemapPaths = [
   cityIndexPath,
   ...landingCities.map((city) => `/baldai-pagal-uzsakyma/${city.slug}`),
   ...cityCategoryLandings.map((entry) => entry.path),
+  ...listingPaginationPaths,
 ];
 assertUniqueRoutePaths(sitemapPaths, 'sitemap');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>${escapeXml(canonicalUrl(path))}</loc><lastmod>${escapeXml(buildDate)}</lastmod></url>`).join('\n')}\n</urlset>\n`;
@@ -2379,4 +2526,4 @@ await writeFile(join(publicDir, 'sitemap.xml'), sitemap);
 await writeFile(join(publicDir, 'robots.txt'), `User-agent: *\nAllow: /\nAllow: /en/\nAllow: /llms.txt\nAllow: /atviri-duomenys/\nAllow: ${marketOverviewPath}/\nAllow: ${filedFinancePath}/\nAllow: ${englishMarketOverviewPath}/\nAllow: ${englishFiledFinancePath}/\nAllow: /${datasetJsonFilename}\nAllow: /${datasetCsvFilename}\nAllow: /${financialDatasetCsvFilename}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 await writeFile(join(publicDir, INDEXNOW_KEY_FILENAME), INDEXNOW_KEY);
 
-console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} Lithuanian category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, 1 price estimator route, 1 Lithuanian buyer request route, 1 English quote-request route, 1 comparison route, 1 open-data route, 2 market-overview routes, 2 reciprocal-language filed-finance routes, 1 English sourcing hub, ${englishCategoryEntries.length} English category routes, ${englishRegionGroups.length} English region routes, ${englishCityGroups.length} English larger-city routes, ${englishTurnoverBands.length} English turnover routes, 1 English sourcing guide, ${policyPages.length} policy routes, ${guideArticles.length + 2} Lithuanian guide routes, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, ${financialDatasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);
+console.log(`Generated ${manufacturers.length} profile routes, ${landingConfig.categories.length} Lithuanian category routes, ${landingCities.length} city routes, 1 all-cities index (${allCities.length} localities), ${cityCategoryLandings.length} city/category routes, ${listingPaginationPaths.length} bounded listing continuation routes, 1 price estimator route, 1 Lithuanian buyer request route, 1 English quote-request route, 1 comparison route, 1 open-data route, 2 market-overview routes, 2 reciprocal-language filed-finance routes, 1 English sourcing hub, ${englishCategoryEntries.length} English category routes, ${englishRegionGroups.length} English region routes, ${englishCityGroups.length} English larger-city routes, ${englishTurnoverBands.length} English turnover routes, 1 English sourcing guide, ${policyPages.length} policy routes, ${guideArticles.length + 2} Lithuanian guide routes, catalogue-filter-options.json, llms.txt, ${datasetJsonFilename}, ${datasetCsvFilename}, ${financialDatasetCsvFilename}, sitemap.xml, robots.txt and ${INDEXNOW_KEY_FILENAME}.`);

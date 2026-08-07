@@ -77,6 +77,26 @@ type BrowseState = {
 type FilterOption = {
   value: string;
   label: string;
+  slug?: string;
+};
+
+type CatalogueFilterOptions = {
+  total: number;
+  categories: FilterOption[];
+  cities: FilterOption[];
+  regions: FilterOption[];
+};
+
+type CatalogueScope = {
+  categoryCode?: string;
+  city?: string;
+};
+
+type CataloguePageResult = {
+  items: Manufacturer[];
+  page: number;
+  totalItems: number;
+  totalPages: number;
 };
 
 type GuideArticle = {
@@ -109,7 +129,8 @@ type ProfileLandingLink = {
 };
 
 
-const PAGE_SIZE = 50;
+const API_PAGE_SIZE = 50;
+const CATALOGUE_PAGE_SIZE = 24;
 const EMPLOYEE_BAND_OPTIONS: FilterOption[] = [
   { value: '0', label: '0 darbuotojų' },
   { value: '1-9', label: '1–9 darbuotojai' },
@@ -314,6 +335,9 @@ let manufacturers: Manufacturer[] = [];
 let browseState = readBrowseState();
 let isLoading = false;
 let directoryLoaded = false;
+let catalogueFilterOptions: CatalogueFilterOptions | null = null;
+let currentCataloguePage = 1;
+let catalogueRequestSequence = 0;
 
 function normalize(value: string): string {
   return value.trim().toLocaleLowerCase('lt-LT');
@@ -447,6 +471,24 @@ function isLandingPath(pathname = window.location.pathname): boolean {
   return normalizePathname(pathname).startsWith('/baldai-pagal-uzsakyma/');
 }
 
+function isCatalogueContinuationPath(pathname = window.location.pathname): boolean {
+  const path = normalizePathname(pathname);
+  return /^\/katalogas\/puslapis\/\d+$/.test(path) || /\/puslapis\/\d+$/.test(path) && path.startsWith('/baldai-pagal-uzsakyma/');
+}
+
+function isInteractiveCataloguePath(pathname = window.location.pathname): boolean {
+  const path = normalizePathname(pathname);
+  return path === '/' || isCatalogueContinuationPath(path) || (isLandingPath(path) && path !== '/baldai-pagal-uzsakyma/miestai');
+}
+
+function staticCataloguePage(): number {
+  const listing = document.querySelector<HTMLElement>('[data-catalogue-listing]');
+  const fromMarkup = Number(listing?.dataset.listingCurrentPage);
+  if (Number.isInteger(fromMarkup) && fromMarkup > 0) return fromMarkup;
+  const fromPath = Number(/\/(?:puslapis|page)\/(\d+)$/.exec(normalizePathname())?.[1]);
+  return Number.isInteger(fromPath) && fromPath > 0 ? fromPath : 1;
+}
+
 function isRequestPath(pathname = window.location.pathname): boolean {
   const path = normalizePathname(pathname);
   return path === '/gauti-pasiulymus' || path === ENGLISH_RFQ_PATH;
@@ -505,7 +547,7 @@ async function fetchAllManufacturers(): Promise<Manufacturer[]> {
   let totalPages = 1;
 
   do {
-    const response = await pb.collection<Manufacturer>('manufacturers').getList(page, PAGE_SIZE, {
+    const response = await pb.collection<Manufacturer>('manufacturers').getList(page, API_PAGE_SIZE, {
       sort: 'trading_name',
       requestKey: `manufacturers-page-${page}`,
     });
@@ -515,6 +557,53 @@ async function fetchAllManufacturers(): Promise<Manufacturer[]> {
   } while (page <= totalPages);
 
   return records.sort((a, b) => collator.compare(a.trading_name, b.trading_name));
+}
+
+async function loadCatalogueFilterOptions(): Promise<CatalogueFilterOptions> {
+  if (catalogueFilterOptions) return catalogueFilterOptions;
+  const response = await fetch('/catalogue-filter-options.json', { headers: { accept: 'application/json' } });
+  if (!response.ok) throw new Error(`Catalogue filter options returned ${response.status}.`);
+  const data = await response.json() as CatalogueFilterOptions;
+  if (!Number.isInteger(data.total) || !Array.isArray(data.categories) || !Array.isArray(data.cities) || !Array.isArray(data.regions)) {
+    throw new Error('Catalogue filter options are malformed.');
+  }
+  catalogueFilterOptions = data;
+  return data;
+}
+
+function catalogueFilter(scope: CatalogueScope, includeDirectoryFilters: boolean): string {
+  const clauses: string[] = [];
+  const query = browseState.query.trim();
+  if (query) {
+    clauses.push(pb.filter('(trading_name ~ {:query} || legal_name ~ {:query} || source_identity ~ {:query} || description_lt ~ {:query} || category_labels ~ {:query} || category_codes ~ {:query})', { query }));
+  }
+  const category = scope.categoryCode || (includeDirectoryFilters ? browseState.category : '');
+  const city = scope.city || (includeDirectoryFilters ? browseState.city : '');
+  if (category) clauses.push(pb.filter('category_codes ~ {:category}', { category }));
+  if (city) clauses.push(pb.filter('city = {:city}', { city }));
+  if (includeDirectoryFilters && browseState.region) clauses.push(pb.filter('region = {:region}', { region: browseState.region }));
+  if (browseState.employeeBand) clauses.push(pb.filter('employee_count_band = {:employeeBand}', { employeeBand: browseState.employeeBand }));
+  if (browseState.foundedPeriod === 'iki-1999') clauses.push('founded_year >= 1900 && founded_year <= 1999');
+  if (browseState.foundedPeriod === '2000-2009') clauses.push('founded_year >= 2000 && founded_year <= 2009');
+  if (browseState.foundedPeriod === '2010-2019') clauses.push('founded_year >= 2010 && founded_year <= 2019');
+  if (browseState.foundedPeriod === 'nuo-2020') clauses.push('founded_year >= 2020');
+  if (browseState.registryCheckedOnly) clauses.push('financial_verification_status = "patikrinta"');
+  return clauses.join(' && ');
+}
+
+async function fetchCataloguePage(page: number, scope: CatalogueScope = {}, includeDirectoryFilters = true): Promise<CataloguePageResult> {
+  const response = await pb.collection<Manufacturer>('manufacturers').getList(page, CATALOGUE_PAGE_SIZE, {
+    sort: 'trading_name',
+    filter: catalogueFilter(scope, includeDirectoryFilters),
+    fields: 'id,collectionId,collectionName,slug,trading_name,legal_name,source_identity,description_lt,city,region,region_label,category_codes,category_labels,founded_year,employee_count_band,financial_verification_status,verified_at',
+    requestKey: 'catalogue-listing',
+  });
+  return {
+    items: response.items,
+    page: response.page,
+    totalItems: response.totalItems,
+    totalPages: response.totalPages,
+  };
 }
 
 function getCategoryOptions(records: Manufacturer[]): FilterOption[] {
@@ -646,11 +735,12 @@ function formatManufacturerCount(count: number): string {
 function getActiveBrowseFilterLabels(): string[] {
   const findLabel = (options: FilterOption[], value: string): string =>
     options.find((option) => option.value === value)?.label ?? value;
+  const options = catalogueFilterOptions;
   const labels: string[] = [];
   if (browseState.query) labels.push(`Paieška: „${browseState.query}“`);
-  if (browseState.category) labels.push(`Kategorija: ${findLabel(getCategoryOptions(manufacturers), browseState.category)}`);
-  if (browseState.city) labels.push(`Miestas: ${findLabel(getOptions(manufacturers, 'city', 'city'), browseState.city)}`);
-  if (browseState.region) labels.push(`Regiono grupė: ${findLabel(getOptions(manufacturers, 'region', 'region_label'), browseState.region)}`);
+  if (browseState.category) labels.push(`Kategorija: ${findLabel(options?.categories ?? [], browseState.category)}`);
+  if (browseState.city) labels.push(`Miestas: ${findLabel(options?.cities ?? [], browseState.city)}`);
+  if (browseState.region) labels.push(`Regiono grupė: ${findLabel(options?.regions ?? [], browseState.region)}`);
   if (browseState.employeeBand) labels.push(`Įmonės dydis: ${findLabel(EMPLOYEE_BAND_OPTIONS, browseState.employeeBand)}`);
   if (browseState.foundedPeriod) labels.push(`Įkurta: ${findLabel(FOUNDED_PERIOD_OPTIONS, browseState.foundedPeriod)}`);
   if (browseState.registryCheckedOnly) labels.push('Registro duomenys patikrinti');
@@ -1056,6 +1146,57 @@ function createManufacturerCard(record: Manufacturer): HTMLElement {
   return article;
 }
 
+function createCataloguePagination(totalPages: number, currentPage: number, onSelect: (page: number) => void): HTMLElement | null {
+  if (totalPages <= 1) return null;
+  const nav = document.createElement('nav');
+  nav.className = 'catalogue-pagination catalogue-pagination--interactive';
+  nav.setAttribute('aria-label', 'Rezultatų puslapiai');
+
+  const directionRow = document.createElement('div');
+  directionRow.className = 'pagination-direction-row';
+  const previous = document.createElement('button');
+  previous.className = 'pagination-direction';
+  previous.type = 'button';
+  previous.textContent = '← Ankstesnis';
+  previous.disabled = currentPage <= 1;
+  previous.addEventListener('click', () => onSelect(currentPage - 1));
+  const status = document.createElement('span');
+  status.textContent = `Puslapis ${currentPage} / ${totalPages}`;
+  const next = document.createElement('button');
+  next.className = 'pagination-direction';
+  next.type = 'button';
+  next.textContent = 'Kitas →';
+  next.disabled = currentPage >= totalPages;
+  next.addEventListener('click', () => onSelect(currentPage + 1));
+  directionRow.append(previous, status, next);
+
+  const pageRow = document.createElement('div');
+  pageRow.className = 'pagination-pages';
+  const visiblePages = new Set<number>([1, totalPages]);
+  for (let page = Math.max(1, currentPage - 2); page <= Math.min(totalPages, currentPage + 2); page += 1) visiblePages.add(page);
+  let previousPage = 0;
+  [...visiblePages].sort((a, b) => a - b).forEach((page) => {
+    if (previousPage && page - previousPage > 1) {
+      const gap = document.createElement('span');
+      gap.className = 'pagination-gap';
+      gap.setAttribute('aria-hidden', 'true');
+      gap.textContent = '…';
+      pageRow.append(gap);
+    }
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = String(page);
+    button.setAttribute('aria-label', `Puslapis ${page}`);
+    if (page === currentPage) button.setAttribute('aria-current', 'page');
+    button.addEventListener('click', () => onSelect(page));
+    pageRow.append(button);
+    previousPage = page;
+  });
+
+  nav.append(directionRow, pageRow);
+  return nav;
+}
+
 function renderShell(): void {
   if (!root) return;
   root.innerHTML = `
@@ -1139,11 +1280,12 @@ function renderDirectoryError(): void {
 function renderBrowse(): void {
   const controlsHost = document.querySelector<HTMLElement>('#home-filter-controls');
   const container = document.querySelector<HTMLElement>('#browse-content');
-  if (!controlsHost || !container) return;
+  const options = catalogueFilterOptions;
+  if (!controlsHost || !container || !options) return;
 
-  const categoryOptions = getCategoryOptions(manufacturers);
-  const cityOptions = getOptions(manufacturers, 'city', 'city');
-  const regionOptions = getOptions(manufacturers, 'region', 'region_label');
+  const categoryOptions = options.categories;
+  const cityOptions = options.cities;
+  const regionOptions = options.regions;
   validateBrowseState(categoryOptions, cityOptions, regionOptions);
 
   controlsHost.replaceChildren();
@@ -1216,6 +1358,7 @@ function renderBrowse(): void {
   const results = document.createElement('div');
   results.className = 'results-area';
   results.id = 'results-area';
+  results.setAttribute('aria-busy', 'true');
 
   controlsHost.append(controls);
   container.append(results);
@@ -1227,132 +1370,161 @@ function renderBrowse(): void {
   };
   updateAdvancedSummary();
 
+  const refreshFromFirstPage = (mode: 'push' | 'replace' = 'push'): void => {
+    currentCataloguePage = 1;
+    syncBrowseState(mode);
+    void renderResults(1);
+  };
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const resultCount = document.querySelector<HTMLElement>('.result-count');
     document.querySelector<HTMLElement>('#gamintojai')?.scrollIntoView({
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
       block: 'start',
     });
-    resultCount?.focus({ preventScroll: true });
+    document.querySelector<HTMLElement>('.result-count')?.focus({ preventScroll: true });
   });
 
   searchInput.addEventListener('input', () => {
     browseState.query = searchInput.value.trimStart();
-    syncBrowseState('replace');
-    renderResults();
+    refreshFromFirstPage('replace');
   });
-
   document.querySelector<HTMLSelectElement>('#category-filter')?.addEventListener('change', (event) => {
     browseState.category = (event.currentTarget as HTMLSelectElement).value;
-    syncBrowseState('push');
-    renderResults();
+    refreshFromFirstPage();
   });
   document.querySelector<HTMLSelectElement>('#city-filter')?.addEventListener('change', (event) => {
     browseState.city = (event.currentTarget as HTMLSelectElement).value;
-    syncBrowseState('push');
-    renderResults();
+    refreshFromFirstPage();
   });
   document.querySelector<HTMLSelectElement>('#region-filter')?.addEventListener('change', (event) => {
     browseState.region = (event.currentTarget as HTMLSelectElement).value;
-    syncBrowseState('push');
     updateAdvancedSummary();
-    renderResults();
+    refreshFromFirstPage();
   });
   advancedControls.employeeBandSelect.addEventListener('change', () => {
     browseState.employeeBand = advancedControls.employeeBandSelect.value;
-    syncBrowseState('push');
     updateAdvancedSummary();
-    renderResults();
+    refreshFromFirstPage();
   });
   advancedControls.foundedPeriodSelect.addEventListener('change', () => {
     browseState.foundedPeriod = advancedControls.foundedPeriodSelect.value;
-    syncBrowseState('push');
     updateAdvancedSummary();
-    renderResults();
+    refreshFromFirstPage();
   });
   advancedControls.registryToggle.addEventListener('change', () => {
     browseState.registryCheckedOnly = advancedControls.registryToggle.checked;
-    syncBrowseState('push');
     updateAdvancedSummary();
-    renderResults();
+    refreshFromFirstPage();
   });
   clearButton.addEventListener('click', () => {
     resetBrowseState();
+    currentCataloguePage = 1;
     syncBrowseState('push');
     renderBrowse();
     document.querySelector<HTMLInputElement>('#directory-search')?.focus();
   });
 
-  renderResults();
+  void renderResults(currentCataloguePage);
 }
 
-function renderResults(): void {
+async function renderResults(page = currentCataloguePage): Promise<void> {
   const results = document.querySelector<HTMLElement>('#results-area');
   if (!results) return;
 
   if (window.location.pathname === '/') setHomeMetadata();
-  const filtered = getFilteredManufacturers(manufacturers);
-  const hasFilters = Boolean(
-    browseState.query || browseState.category || browseState.city || browseState.region || hasAdvancedFilters(),
-  );
+  const requestSequence = ++catalogueRequestSequence;
+  results.setAttribute('aria-busy', 'true');
+  try {
+    const response = await fetchCataloguePage(page);
+    if (requestSequence !== catalogueRequestSequence) return;
+    currentCataloguePage = response.page || 1;
+    const hasFilters = Boolean(
+      browseState.query || browseState.category || browseState.city || browseState.region || hasAdvancedFilters(),
+    );
+    results.replaceChildren();
 
-  results.replaceChildren();
+    const resultHeader = document.createElement('div');
+    resultHeader.className = 'result-header';
+    const count = document.createElement('p');
+    count.className = 'result-count';
+    count.tabIndex = -1;
+    count.setAttribute('role', 'status');
+    count.setAttribute('aria-live', 'polite');
+    const start = response.totalItems ? (response.page - 1) * CATALOGUE_PAGE_SIZE + 1 : 0;
+    const end = response.totalItems ? start + response.items.length - 1 : 0;
+    count.textContent = hasFilters
+      ? `Rasta įrašų: ${response.totalItems}. Rodoma ${start}–${end}. Iš viso kataloge: ${catalogueFilterOptions?.total ?? response.totalItems}.`
+      : `Kataloge – ${formatManufacturerCount(response.totalItems)}. Rodoma ${start}–${end}.`;
+    resultHeader.append(count);
 
-  const resultHeader = document.createElement('div');
-  resultHeader.className = 'result-header';
-  const count = document.createElement('p');
-  count.className = 'result-count';
-  count.tabIndex = -1;
-  count.setAttribute('role', 'status');
-  count.setAttribute('aria-live', 'polite');
-  count.textContent = hasFilters
-    ? `Rodoma įrašų: ${filtered.length}. Iš viso kataloge: ${manufacturers.length}.`
-    : `Kataloge – ${formatManufacturerCount(manufacturers.length)}.`;
-  resultHeader.append(count);
+    if (hasFilters) {
+      const active = document.createElement('ul');
+      active.className = 'active-filters';
+      active.setAttribute('aria-label', 'Aktyvūs paieškos kriterijai');
+      getActiveBrowseFilterLabels().forEach((label) => {
+        const item = document.createElement('li');
+        item.textContent = label;
+        active.append(item);
+      });
+      resultHeader.append(active);
+    }
+    results.append(resultHeader);
 
-  if (hasFilters) {
-    const active = document.createElement('ul');
-    active.className = 'active-filters';
-    active.setAttribute('aria-label', 'Aktyvūs paieškos kriterijai');
-    getActiveBrowseFilterLabels().forEach((label) => {
-      const item = document.createElement('li');
-      item.textContent = label;
-      active.append(item);
+    if (!response.items.length) {
+      const empty = document.createElement('div');
+      empty.className = 'message-state';
+      const label = document.createElement('p');
+      label.className = 'state-label';
+      label.textContent = 'Rezultatų nėra';
+      const heading = document.createElement('h3');
+      heading.textContent = 'Pagal šiuos kriterijus įrašų nerasta';
+      const copy = document.createElement('p');
+      copy.textContent = 'Pakeiskite paieškos žodį, pasirinkite platesnę vietovę arba išvalykite filtrus.';
+      const button = document.createElement('button');
+      button.className = 'primary-button';
+      button.type = 'button';
+      button.textContent = 'Išvalyti visus kriterijus';
+      button.addEventListener('click', () => {
+        resetBrowseState();
+        currentCataloguePage = 1;
+        syncBrowseState('push');
+        renderBrowse();
+      });
+      empty.append(label, heading, copy, button);
+      results.append(empty);
+      return;
+    }
+
+    const list = document.createElement('div');
+    list.className = 'manufacturer-list';
+    response.items.forEach((record) => list.append(createManufacturerCard(record)));
+    results.append(list);
+    const pagination = createCataloguePagination(response.totalPages, response.page, (selectedPage) => {
+      if (selectedPage < 1 || selectedPage > response.totalPages || selectedPage === currentCataloguePage) return;
+      void renderResults(selectedPage).then(() => {
+        results.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+      });
     });
-    resultHeader.append(active);
+    if (pagination) results.append(pagination);
+  } catch (error) {
+    if (requestSequence !== catalogueRequestSequence) return;
+    console.error('Nepavyko atnaujinti katalogo rezultatų.', error);
+    results.replaceChildren();
+    const message = document.createElement('div');
+    message.className = 'message-state message-state--error';
+    message.setAttribute('role', 'alert');
+    message.innerHTML = '<h3>Rezultatų atnaujinti nepavyko</h3><p>Patikrinkite interneto ryšį ir bandykite dar kartą. Statiniai katalogo puslapiai bei gamintojų profiliai lieka pasiekiami.</p>';
+    const retry = document.createElement('button');
+    retry.className = 'primary-button';
+    retry.type = 'button';
+    retry.textContent = 'Bandyti dar kartą';
+    retry.addEventListener('click', () => void renderResults(currentCataloguePage));
+    message.append(retry);
+    results.append(message);
+  } finally {
+    if (requestSequence === catalogueRequestSequence) results.removeAttribute('aria-busy');
   }
-
-  results.append(resultHeader);
-
-  if (filtered.length === 0) {
-    const empty = document.createElement('div');
-    empty.className = 'message-state';
-    const label = document.createElement('p');
-    label.className = 'state-label';
-    label.textContent = 'Rezultatų nėra';
-    const heading = document.createElement('h3');
-    heading.textContent = 'Pagal šiuos kriterijus įrašų nerasta';
-    const copy = document.createElement('p');
-    copy.textContent = 'Pakeiskite paieškos žodį, pasirinkite platesnę vietovę arba išvalykite filtrus.';
-    const button = document.createElement('button');
-    button.className = 'primary-button';
-    button.type = 'button';
-    button.textContent = 'Išvalyti visus kriterijus';
-    button.addEventListener('click', () => {
-      resetBrowseState();
-      syncBrowseState('push');
-      renderBrowse();
-    });
-    empty.append(label, heading, copy, button);
-    results.append(empty);
-    return;
-  }
-
-  const list = document.createElement('div');
-  list.className = 'manufacturer-list';
-  filtered.forEach((record) => list.append(createManufacturerCard(record)));
-  results.append(list);
 }
 
 function createFactRow(term: string, detail: string): HTMLDivElement {
@@ -2230,11 +2402,17 @@ function renderFaq(items: { question: string; answer: string }[]): string {
   `;
 }
 
-function initializeLandingFilters(records: Manufacturer[], updateMetadata: () => void): void {
+function initializeLandingFilters(updateMetadata: () => void): void {
   const controlsHost = document.querySelector<HTMLElement>('#landing-filter-controls');
-  const list = document.querySelector<HTMLElement>('#landing-manufacturer-list');
-  if (!controlsHost || !list) return;
+  const listing = document.querySelector<HTMLElement>('[data-catalogue-listing]');
+  const list = listing?.querySelector<HTMLElement>('#landing-manufacturer-list');
+  if (!controlsHost || !listing || !list) return;
 
+  const scope: CatalogueScope = {
+    categoryCode: listing.dataset.listingCategoryCode || undefined,
+    city: listing.dataset.listingCity || undefined,
+  };
+  currentCataloguePage = staticCataloguePage();
   validateBrowseState([], [], [], false);
   controlsHost.replaceChildren();
 
@@ -2278,64 +2456,91 @@ function initializeLandingFilters(records: Manufacturer[], updateMetadata: () =>
 
   const clearFilters = (): void => {
     resetBrowseState();
+    currentCataloguePage = 1;
     syncBrowseState('push');
     searchInput.value = '';
     advancedControls.employeeBandSelect.value = '';
     advancedControls.foundedPeriodSelect.value = '';
     advancedControls.registryToggle.checked = false;
-    renderCards();
+    void renderCards(1);
     searchInput.focus();
   };
 
-  const renderCards = (): void => {
+  const renderCards = async (page = currentCataloguePage): Promise<void> => {
     updateMetadata();
-    const filtered = getFilteredManufacturers(records, false);
-    const hasFilters = Boolean(browseState.query || hasAdvancedFilters());
-    resultCount.textContent = hasFilters
-      ? `Rodoma įrašų: ${filtered.length}. Iš viso šiame sąraše: ${records.length}.`
-      : `Šiame sąraše – ${formatManufacturerCount(records.length)}.`;
-    list.replaceChildren();
-    if (!filtered.length) {
-      const empty = document.createElement('div');
-      empty.className = 'message-state landing-empty-state';
-      const heading = document.createElement('h3');
-      heading.textContent = 'Pagal šiuos kriterijus įrašų nerasta';
-      const copy = document.createElement('p');
-      copy.textContent = 'Pasirinkite platesnį įmonės dydį ar įkūrimo laikotarpį, pakeiskite paiešką arba išvalykite filtrus.';
-      const button = document.createElement('button');
-      button.className = 'primary-button';
-      button.type = 'button';
-      button.textContent = 'Išvalyti šio sąrašo filtrus';
-      button.addEventListener('click', clearFilters);
-      empty.append(heading, copy, button);
-      list.append(empty);
-      return;
+    const requestSequence = ++catalogueRequestSequence;
+    listing.setAttribute('aria-busy', 'true');
+    try {
+      const response = await fetchCataloguePage(page, scope, false);
+      if (requestSequence !== catalogueRequestSequence) return;
+      currentCataloguePage = response.page || 1;
+      const hasFilters = Boolean(browseState.query || hasAdvancedFilters());
+      const start = response.totalItems ? (response.page - 1) * CATALOGUE_PAGE_SIZE + 1 : 0;
+      const end = response.totalItems ? start + response.items.length - 1 : 0;
+      const countText = hasFilters
+        ? `Rasta įrašų: ${response.totalItems}. Rodoma ${start}–${end}.`
+        : `Šiame sąraše – ${formatManufacturerCount(response.totalItems)}. Rodoma ${start}–${end}.`;
+      resultCount.textContent = countText;
+      const listingCount = listing.querySelector<HTMLElement>('.result-count');
+      if (listingCount) listingCount.textContent = countText;
+      list.replaceChildren();
+      listing.querySelector('.catalogue-pagination')?.remove();
+      if (!response.items.length) {
+        const empty = document.createElement('div');
+        empty.className = 'message-state landing-empty-state';
+        const heading = document.createElement('h3');
+        heading.textContent = 'Pagal šiuos kriterijus įrašų nerasta';
+        const copy = document.createElement('p');
+        copy.textContent = 'Pasirinkite platesnį įmonės dydį ar įkūrimo laikotarpį, pakeiskite paiešką arba išvalykite filtrus.';
+        const button = document.createElement('button');
+        button.className = 'primary-button';
+        button.type = 'button';
+        button.textContent = 'Išvalyti šio sąrašo filtrus';
+        button.addEventListener('click', clearFilters);
+        empty.append(heading, copy, button);
+        list.append(empty);
+        return;
+      }
+      response.items.forEach((record) => list.append(createManufacturerCard(record)));
+      const pagination = createCataloguePagination(response.totalPages, response.page, (selectedPage) => {
+        if (selectedPage < 1 || selectedPage > response.totalPages || selectedPage === currentCataloguePage) return;
+        void renderCards(selectedPage).then(() => {
+          listing.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+        });
+      });
+      if (pagination) listing.append(pagination);
+    } catch (error) {
+      if (requestSequence !== catalogueRequestSequence) return;
+      console.error('Nepavyko atnaujinti šio katalogo sąrašo.', error);
+      resultCount.textContent = 'Filtrų rezultatų atnaujinti nepavyko. Žemiau paliktas statinis katalogo puslapis.';
+    } finally {
+      if (requestSequence === catalogueRequestSequence) listing.removeAttribute('aria-busy');
     }
-    filtered.forEach((record) => list.append(createManufacturerCard(record)));
   };
 
+  const refreshFromFirstPage = (mode: 'push' | 'replace' = 'push'): void => {
+    currentCataloguePage = 1;
+    syncBrowseState(mode);
+    void renderCards(1);
+  };
   searchInput.addEventListener('input', () => {
     browseState.query = searchInput.value.trimStart();
-    syncBrowseState('replace');
-    renderCards();
+    refreshFromFirstPage('replace');
   });
   advancedControls.employeeBandSelect.addEventListener('change', () => {
     browseState.employeeBand = advancedControls.employeeBandSelect.value;
-    syncBrowseState('push');
-    renderCards();
+    refreshFromFirstPage();
   });
   advancedControls.foundedPeriodSelect.addEventListener('change', () => {
     browseState.foundedPeriod = advancedControls.foundedPeriodSelect.value;
-    syncBrowseState('push');
-    renderCards();
+    refreshFromFirstPage();
   });
   advancedControls.registryToggle.addEventListener('change', () => {
     browseState.registryCheckedOnly = advancedControls.registryToggle.checked;
-    syncBrowseState('push');
-    renderCards();
+    refreshFromFirstPage();
   });
   clearButton.addEventListener('click', clearFilters);
-  renderCards();
+  void renderCards(currentCataloguePage);
 }
 
 function renderCitiesIndexPage(): void {
@@ -2434,7 +2639,7 @@ function renderLandingPage(slug: string, citySlug?: string): void {
     const robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
     if (robots) robots.content = window.location.search ? 'noindex, follow' : 'index, follow';
   };
-  initializeLandingFilters(records, updateIndexing);
+  initializeLandingFilters(updateIndexing);
 }
 
 function renderRequestPage(): void {
@@ -3026,7 +3231,7 @@ function setHomeMetadata(): void {
 }
 
 function route(): void {
-  if (isOpenDataPath() || isMarketOverviewPath() || isStaticEnglishSourcingPath()) return;
+  if (isOpenDataPath() || isMarketOverviewPath() || isStaticEnglishSourcingPath() || isCatalogueContinuationPath()) return;
 
   const policyPage = getPolicyPage();
   if (policyPage) {
@@ -3096,6 +3301,29 @@ function route(): void {
   renderBrowse();
 }
 
+async function initializeCatalogueBrowseRoute(): Promise<void> {
+  browseState = readBrowseState();
+  currentCataloguePage = staticCataloguePage();
+  if (normalizePathname() === '/') {
+    try {
+      await loadCatalogueFilterOptions();
+      if (!document.querySelector('#home-filter-controls') || !document.querySelector('#browse-content')) renderShell();
+      renderBrowse();
+    } catch (error) {
+      console.error('Nepavyko parengti katalogo filtrų.', error);
+      const host = document.querySelector<HTMLElement>('#home-filter-controls');
+      if (host) host.innerHTML = '<p class="form-status form-status--error" role="alert">Interaktyvių filtrų parengti nepavyko. Žemiau galite naršyti statinius katalogo puslapius.</p>';
+    }
+    return;
+  }
+  if (isLandingPath() && normalizePathname() !== '/baldai-pagal-uzsakyma/miestai') {
+    initializeLandingFilters(() => {
+      const robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+      if (robots) robots.content = window.location.search ? 'noindex, follow' : 'index, follow';
+    });
+  }
+}
+
 async function loadDirectory(): Promise<void> {
   if (isLoading) return;
   isLoading = true;
@@ -3149,6 +3377,10 @@ async function loadDirectory(): Promise<void> {
 
 function navigateToCurrentRoute(): void {
   browseState = readBrowseState();
+  if (isInteractiveCataloguePath()) {
+    void initializeCatalogueBrowseRoute();
+    return;
+  }
   if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isStaticEnglishSourcingPath() || isComparisonPath() || isEstimatorPath()) {
     route();
     return;
@@ -3215,7 +3447,9 @@ document.addEventListener('click', (event) => {
 
 window.addEventListener('popstate', navigateToCurrentRoute);
 
-if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isStaticEnglishSourcingPath() || isComparisonPath() || isEstimatorPath()) {
+if (isInteractiveCataloguePath()) {
+  void initializeCatalogueBrowseRoute();
+} else if (isGuidePath() || isPolicyPath() || isOpenDataPath() || isMarketOverviewPath() || isStaticEnglishSourcingPath() || isComparisonPath() || isEstimatorPath()) {
   route();
 } else {
   void loadDirectory();
