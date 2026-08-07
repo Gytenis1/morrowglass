@@ -2,6 +2,7 @@
 import { readFile, rename, writeFile } from 'node:fs/promises';
 
 const sourceUrl = new URL('../data/manufacturers.json', import.meta.url);
+const susrCorrectionManifestUrl = new URL('../data/category_evrk_20260807.json', import.meta.url);
 const pocketBaseSourceUrl = new URL('../src/pocketbase.ts', import.meta.url);
 
 // This is the complete public record shape needed by the static source validator.
@@ -99,6 +100,15 @@ function isOfficialDataPortalUrl(value) {
   const url = new URL(value);
   return (url.hostname === 'data.gov.lt' && url.pathname.startsWith('/datasets/'))
     || (url.hostname === 'get.data.gov.lt' && url.pathname.startsWith('/datasets/gov/rc/'));
+}
+function isOfficialSusrActivityUrl(value) {
+  if (!isPublicHttpsUrl(value)) return false;
+  const url = new URL(value);
+  return url.hostname === 'get.data.gov.lt'
+    && /^\/datasets\/gov\/lsd\/cl\/ja_asmenys\/JuridinisAsmuo\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(url.pathname);
+}
+function isVerifiedRekvizitaiUrl(value) {
+  return isPublicHttpsUrl(value) && new URL(value).hostname === 'rekvizitai.vz.lt';
 }
 function isOfficialRegisterSource(source) {
   return source && typeof source === 'object'
@@ -213,9 +223,44 @@ function mergeFiledFinancialHistory(localHistory, remoteHistory) {
   for (const item of remoteHistory) byPeriod.set(`${item.fiscal_period_start}|${item.fiscal_period_end}`, item);
   return [...byPeriod.values()].sort((left, right) => right.fiscal_period_end.localeCompare(left.fiscal_period_end));
 }
+function sameJson(left, right) { return JSON.stringify(left) === JSON.stringify(right); }
 
-const [localRecords, pocketBaseSource] = await Promise.all([readFile(sourceUrl, 'utf8').then(JSON.parse), readFile(pocketBaseSourceUrl, 'utf8')]);
+const [localRecords, susrCorrectionManifest, pocketBaseSource] = await Promise.all([
+  readFile(sourceUrl, 'utf8').then(JSON.parse),
+  readFile(susrCorrectionManifestUrl, 'utf8').then(JSON.parse),
+  readFile(pocketBaseSourceUrl, 'utf8'),
+]);
 if (!Array.isArray(localRecords)) throw new Error('data/manufacturers.json must contain an array.');
+if (!Array.isArray(susrCorrectionManifest?.results)) throw new Error('SŪSR correction manifest must contain results.');
+const susrActivityCorrections = new Map();
+for (const correction of susrCorrectionManifest.results) {
+  if (!correction || typeof correction.slug !== 'string' || !slugPattern.test(correction.slug)
+    || !Array.isArray(correction.prior_category_codes) || !Array.isArray(correction.prior_category_labels)
+    || !Array.isArray(correction.target_category_codes) || !Array.isArray(correction.target_category_labels)
+    || !isOfficialSusrActivityUrl(correction.official_susr_record_url)) {
+    throw new Error('SŪSR correction manifest contains an invalid result.');
+  }
+  if (susrActivityCorrections.has(correction.slug)) throw new Error(`SŪSR correction manifest contains duplicate slug ${correction.slug}.`);
+  susrActivityCorrections.set(correction.slug, correction);
+}
+function isCurrentSusrActivityCorrection(local, remote) {
+  const correction = susrActivityCorrections.get(local.slug);
+  return correction
+    && local.evidence_source_type === 'Lietuvos atvirų duomenų portalas (SŪSR ir Registrų centras)'
+    && remote.evidence_source_type === local.evidence_source_type
+    && sameJson(local.category_codes, correction.prior_category_codes)
+    && sameJson(local.category_labels, correction.prior_category_labels)
+    && sameJson(remote.category_codes, correction.target_category_codes)
+    && sameJson(remote.category_labels, correction.target_category_labels)
+    && remote.scope_evidence.includes(correction.official_susr_record_url)
+    && remote.source_urls.includes(correction.official_susr_record_url);
+}
+function hasDirectSourceBackedRemoteTaxonomy(local, remote) {
+  return sameJson(local.category_codes, ['O'])
+    && sameJson(local.category_labels, [categoryLabels.get('O')])
+    && remote.evidence_source_type === 'Rekvizitai, registracijos kodu patikrintas viešas puslapis'
+    && remote.source_urls.some((url) => isVerifiedRekvizitaiUrl(url) && remote.scope_evidence.includes(url));
+}
 const backendUrl = configuredBackendUrl(pocketBaseSource);
 const publicRecords = await fetchPublicManufacturers(backendUrl);
 const publicBySlug = new Map();
@@ -256,13 +301,17 @@ for (const local of synchronizedRecords) {
     if (!['slug', 'city', 'founded_year', ...publicTaxonomyFields, ...publicEvidenceFields, ...financialFields, ...officialReferenceFields, 'filed_financial_history', 'registry_financials_checked_date'].includes(field)) synchronize(field, remote[field]);
   }
   const retainsConservativeTaxonomy = local.evidence_source_type === 'Lietuvos atvirų duomenų portalas (Registrų centras)' || local.evidence_source_type === 'Lietuvos atvirų duomenų portalas (SŪSR ir Registrų centras)';
-  if (!retainsConservativeTaxonomy) {
+  const appliesCurrentSusrActivityCorrection = isCurrentSusrActivityCorrection(local, remote);
+  const appliesDirectSourceBackedTaxonomy = hasDirectSourceBackedRemoteTaxonomy(local, remote);
+  const appliesApprovedRemoteTaxonomy = appliesCurrentSusrActivityCorrection || appliesDirectSourceBackedTaxonomy;
+  if (!retainsConservativeTaxonomy || appliesApprovedRemoteTaxonomy) {
     for (const field of publicEvidenceFields) {
       const merged = uniqueUrls([...(Array.isArray(local[field]) ? local[field] : []), ...remote[field]]);
       synchronize(field, merged, merged.length > (local[field]?.length ?? 0));
     }
-    for (const field of publicTaxonomyFields) synchronize(field, remote[field]);
+    for (const field of publicTaxonomyFields) synchronize(field, remote[field], appliesApprovedRemoteTaxonomy);
   }
+  if (appliesDirectSourceBackedTaxonomy) synchronize('evidence_source_type', remote.evidence_source_type, true);
   // 0/empty/out-of-range years and bare-country city labels are storage
   // placeholders, not versioned catalogue facts. A source-backed remote fill wins;
   // otherwise preserve explicit absence as null/empty for static rendering.

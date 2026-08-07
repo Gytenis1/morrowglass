@@ -29345,7 +29345,7 @@
       "public_phone": "+37061899300",
       "contact_route_status": "public_phone",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Medžio darbai ir medžio masyvo baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/00fec2f6-dcce-4a06-827e-aa52261719e2",
@@ -31167,7 +31167,7 @@
       "public_phone": "+37037211979",
       "contact_route_status": "public_phone",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03dfe5bb-f465-49f2-930b-9897792e9945",
@@ -40847,13 +40847,13 @@
       "public_phone": "+37052107922",
       "contact_route_status": "public_phone",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1610ed41-120b-4f20-80ad-91da6a0a483a",
+        "https://rekvizitai.vz.lt/en/company/narbutas_international/",
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
-        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
-        "https://rekvizitai.vz.lt/en/company/narbutas_international/"
+        "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
       ],
       "verification_date": "2026-08-06",
       "revenue_eur_latest": 164514180,
@@ -41253,13 +41253,13 @@
       "public_phone": "+37061657237",
       "contact_route_status": "public_phone",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1664bf69-7747-4ca1-83a3-64ccde4e666e",
+        "https://rekvizitai.vz.lt/en/company/arnitana/",
         "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7fcc067a-2f75-4bb3-9a61-3a066b8490d6",
-        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e9f5cb85-30a2-402c-b86b-74b2e7ec7856",
-        "https://rekvizitai.vz.lt/en/company/arnitana/"
+        "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e9f5cb85-30a2-402c-b86b-74b2e7ec7856"
       ],
       "verification_date": "2026-08-06",
       "revenue_eur_latest": 30299,
@@ -43947,7 +43947,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/cc34ce09-7cd3-46a4-bbcc-3b376a51e714",
@@ -44067,7 +44067,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/fd004993-e8fa-4794-a580-34586443c5ba",
@@ -44263,7 +44263,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/3b402895-5d60-436c-9575-e921d7e38afe",
@@ -45307,7 +45307,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/3b84f9bd-d627-4c65-8973-bd03524987bf",
@@ -45817,7 +45817,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5344f645-603d-42a5-8549-fa15bfb05568",
@@ -46101,7 +46102,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/cb57cbee-4fb0-4bf8-9914-49347541703a",
@@ -46245,7 +46247,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1c842aa7-3415-4027-bf2d-fa529a21cf39",
@@ -46997,7 +46999,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b2ee2696-ba47-4203-b7d7-40e2d00abd89",
@@ -47663,7 +47665,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8ccbc142-8d20-474b-a66a-8fa44f9673cb",
@@ -48481,7 +48483,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/27427088-90e4-4cb9-94ba-00db7dc3dd41",
@@ -49865,7 +49867,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a97bfb92-00ef-4b8c-9c33-147ec922fbcd",
@@ -50189,7 +50191,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7e1b6b37-5ad3-4c36-8b3a-84f3a1488772",
@@ -50775,7 +50777,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8444af64-803a-4c0f-97d1-4c3b422374a6",
@@ -50905,7 +50908,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/bebb4a88-4a60-4da0-b83c-09e4bd464c75",
@@ -51469,7 +51473,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4aefcf25-8e9a-4c0c-aa47-368620cd7a75",
@@ -51589,7 +51594,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d8cfa9ae-7977-4740-ac38-25e635b43f7b",
@@ -51829,7 +51834,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ded88241-c66d-41d1-8cb8-5c995c6a17a5",
@@ -52283,7 +52288,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7495a996-f9d9-4394-b6a5-15fb55e6aac5",
@@ -53383,7 +53389,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e265a0de-9dc0-4fcf-a22d-899307885712",
@@ -53487,7 +53494,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b79897fc-2068-4fec-ab5e-59da85326481",
@@ -53733,7 +53740,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8c95c999-8c7d-4b98-8ed8-cc48d69cd3c4",
@@ -53935,7 +53942,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/de113391-bee9-486d-ab64-8c9eb5425ab9",
@@ -54333,7 +54341,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/abbe30e0-e20d-4b79-afda-338d41530c13",
@@ -54977,7 +54985,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/61d46d47-9416-4cd8-a8fa-f09d9638979b",
@@ -55261,7 +55269,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6113c692-22de-4268-a678-5aeb1e045332",
@@ -55567,7 +55575,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/631808bf-c6ef-432b-849a-128eddd200c9",
@@ -55693,7 +55701,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/59270de6-012b-4959-9306-a30534f8fc06",
@@ -56411,7 +56420,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/3b292722-e2a4-4872-9896-bf981116d72c",
@@ -56635,7 +56644,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f4ad9985-b6f9-4745-b52b-2cd4b53c7564",
@@ -57349,7 +57358,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5367a2b8-585f-4054-bb17-ba169e9cc7af",
@@ -57469,7 +57479,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1fe8bd45-7fc8-4aa7-a230-bf5dc0b7c36f",
@@ -57791,7 +57801,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/9d4037fa-35ec-492f-8cb8-90696059ab16",
@@ -58039,7 +58050,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d5ba6715-c027-45f1-818d-5bdd41fe5690",
@@ -58291,7 +58302,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/739c8e48-c982-4c99-aef3-6b06fc7e1505",
@@ -58729,7 +58740,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/db2a6800-6ca7-456b-8da5-421ec0ef1491",
@@ -59375,7 +59386,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/876fcd42-1428-46e9-be1f-185c12a27279",
@@ -59473,7 +59485,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5e5c956d-3ffe-4e1b-904c-f3b8260d926c",
@@ -59801,7 +59813,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8dc26d03-ece6-4690-a359-c0bde8d62b61",
@@ -59889,7 +59902,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7b6e881b-82b8-43b1-a3b7-28486569dece",
@@ -59965,7 +59979,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/3a6e9118-2369-4d87-a354-0d573427e5f6",
@@ -60249,7 +60263,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/71dead5b-5ee8-4d73-acfb-32d0ff4eacbd",
@@ -60325,7 +60340,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/2b19d8b4-ffba-4b4d-bc78-4a920989d806",
@@ -60663,7 +60679,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a1a763a3-c28d-45d3-8692-ae61e5b8de0e",
@@ -60717,7 +60734,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/23115c80-29c8-47fa-933e-c1951d17279f",
@@ -61339,7 +61356,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b4351b1e-2ab2-4ec5-9627-df2b4b3b5155",
@@ -61393,7 +61411,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7cd283c0-bebe-4268-bf8e-57d1624d36fb",
@@ -61901,7 +61919,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/325c6e43-ef16-4360-a7d8-87ee3bf38b38",
@@ -62081,7 +62100,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1cf50b85-3e69-4a31-b294-f2e11c2b9b66",
@@ -62479,7 +62498,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/51ebdb67-2dfd-4926-8f8f-d0342392b7ca",
@@ -63241,7 +63261,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c2438cbb-fd0d-4771-b66b-cd63592ab785",
@@ -63377,7 +63397,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/cb059af0-4817-4afe-a566-0d6e9598f025",
@@ -64023,7 +64044,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4e003aa5-d959-4619-9101-fa83597c2900",
@@ -65263,7 +65284,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5470f4df-d0b4-4c12-bc1c-5289c1e9642e",
@@ -65949,7 +65971,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/60ade588-4ad3-4d96-a252-ccdcb1e7114e",
@@ -66427,7 +66450,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/49a42432-468a-451d-a9b8-5aae23f59607",
@@ -66667,7 +66691,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ec6f142e-ff51-4c17-af4e-2b860957f9c3",
@@ -67089,7 +67113,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/303e4f7e-1e03-4d87-a889-57625fc089b8",
@@ -67415,7 +67440,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c1e4ed67-103d-4c9a-bc87-476f5438f85b",
@@ -67545,7 +67570,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/431924cb-1e79-448d-bf4d-49cffc6efa8c",
@@ -68367,7 +68392,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/44d7aea6-becc-48d8-86a0-cf9760abb365",
@@ -68619,7 +68644,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/62b5ae01-9ee0-402b-89d5-a5f01e5bc9ca",
@@ -68695,7 +68721,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b2039e4b-584b-4516-a37f-49a07be8b7eb",
@@ -68783,7 +68809,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/690a68ae-2f86-400d-b4d1-2bc167d5a978",
@@ -69171,7 +69197,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/9eba011c-648d-4283-8fca-8136c5866659",
@@ -69225,7 +69251,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6024183a-e067-4bc0-b10d-02e8cf4a9c2b",
@@ -69279,7 +69306,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5f731ad9-7568-49a0-ba90-6f7a306dfa11",
@@ -69355,7 +69382,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1ebc1868-3da4-458f-b414-ba38064d3c7b",
@@ -69867,7 +69894,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d1ac57e0-1f09-4853-bd31-d213f1da155b",
@@ -70239,7 +70266,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ad7eb013-6746-4590-9e6c-07ebd25d3da3",
@@ -70419,7 +70446,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6f281a2a-2734-422a-a369-7f10bcc787ce",
@@ -71093,7 +71121,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6bb03294-73d6-413c-bcfb-5200414dbac0",
@@ -71611,7 +71639,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d33e4479-cf58-400a-b2c5-6da8cda5b1c9",
@@ -72103,7 +72132,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/9a3aa632-65af-475e-aa78-8926c9edf7c3",
@@ -72459,7 +72488,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/853a4d90-8859-4a1d-b96b-eb8e89a91a16",
@@ -72485,7 +72514,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b234d1dd-5a95-4d52-8ffd-4072a9be8c20",
@@ -72987,7 +73017,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/9261d348-cf8a-4732-ae2f-1caad0167da1",
@@ -73161,7 +73191,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/242fd9b6-0e9b-4ad5-8420-206786b8f555",
@@ -73363,7 +73393,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/27257b1a-673d-4eb9-a83f-44026221f097",
@@ -73559,7 +73589,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/57d9f399-2409-4e93-bd2d-efc744370cc2",
@@ -74265,7 +74295,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1e027728-5905-4cc0-82fd-f4c51d63f999",
@@ -74697,7 +74727,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e15977ce-07bc-4214-b680-cba608b30e36",
@@ -75149,7 +75180,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/90588a5d-2386-4b87-91dc-023456800622",
@@ -75611,7 +75643,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/78d039d7-e8ea-434a-bb09-1ec035d30299",
@@ -76015,7 +76048,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/9b76b337-473a-4d5f-8b7b-e6f05c6d699b",
@@ -76069,7 +76102,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d99f31aa-4a1b-44e3-a5bf-a6c95833763f",
@@ -77123,7 +77156,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6a1a4334-09d6-416d-be47-86b36ec3471c",
@@ -77665,7 +77698,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f76864f9-b0c8-44e6-a508-15a02bf1b438",
@@ -77957,7 +77991,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/33f1c1c3-0a1e-4e61-ad15-52349d4f2bd4",
@@ -78133,7 +78167,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/30e5c242-5c7c-4795-b5d0-df1b448ff9a5",
@@ -78379,7 +78413,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/98423c85-d2eb-4223-94d6-ef15ece83aa6",
@@ -78455,7 +78490,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/2276200b-f38c-4e3d-9996-62b3edecb7df",
@@ -78777,7 +78813,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5ef8767d-459d-4173-a05c-ad10428ee039",
@@ -78897,7 +78933,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c0bb7ca9-6044-474b-a13a-63149999565e",
@@ -79155,7 +79191,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a054259c-2262-4475-975c-0bf853c6ae35",
@@ -79645,7 +79681,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4c13c2a3-8e29-4f4e-aa18-159c5343e5da",
@@ -80347,7 +80383,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/9888f0f6-0891-4d18-b57d-5264f4025e60",
@@ -80683,7 +80719,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8acabff6-41fa-4875-8fc6-151b198f2986",
@@ -80803,7 +80839,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/48976c3c-897f-4758-a354-cac7700f051e",
@@ -80879,7 +80915,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b19f72b4-5771-4b76-951d-ff0bcc1880e2",
@@ -80999,7 +81035,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/969a433d-d69e-4d8a-87e6-dcab4d58de6f",
@@ -81025,7 +81062,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d432ba94-0bc7-4b1c-af6d-262b49b6fe44",
@@ -81265,7 +81303,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1fe68f6f-421a-4659-bf68-e4405ef09f5a",
@@ -81341,7 +81380,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f9cec78b-0876-4b6a-9cda-bfa4a64a041a",
@@ -82109,7 +82149,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f5d70489-ca58-4e39-be0f-ad8765b6b3c8",
@@ -82251,7 +82291,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6f78be2d-ac39-4848-8bb1-f34d54bb8588",
@@ -82857,7 +82898,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b9df71a5-9de4-4992-946e-f28c76cfe9c9",
@@ -82977,7 +83018,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c3194c9d-04ae-4e87-9bb2-24f706472d0b",
@@ -83813,7 +83855,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/96e070f7-6c99-49c3-913d-a2f606434c99",
@@ -84279,7 +84322,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d1e57699-253c-4920-adea-5cfb5a446f5e",
@@ -84549,7 +84593,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8ffb763e-d01b-4e2e-b649-18750cebba9b",
@@ -84693,7 +84738,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b32460b0-b6ea-46a3-a5e9-8f8f5a4207cb",
@@ -84807,7 +84853,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1e6e452d-90e3-497e-aee8-693247db370a",
@@ -85561,7 +85608,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/71d779b9-30f7-4734-9db7-069217fb6458",
@@ -85975,7 +86023,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/325702d6-1149-4b19-8e43-072503895203",
@@ -86649,7 +86698,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6cc940b8-09f2-4447-ab13-32a3016414e1",
@@ -87891,7 +87941,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f14fd0c6-4f26-4b06-ad1b-e8c38770a903",
@@ -88283,7 +88333,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ea0f88a9-1d98-4f29-82a1-d2f305953c61",
@@ -88953,7 +89004,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c54edd6c-cc80-462d-b968-89a6ce168d5d",
@@ -89097,7 +89149,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/baeb1990-65cc-4857-8d95-a795dd5de9c3",
@@ -89467,7 +89520,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b89b2392-2975-48b3-95fd-253751a87ec1",
@@ -89729,7 +89783,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/85a76a03-84b6-48f7-a63e-07e7b3898e22",
@@ -90707,7 +90761,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4c715078-8c98-4289-b40b-2d39d40df274",
@@ -91565,7 +91620,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/2be61a53-0689-4d6a-b191-679a5748e3f9",
@@ -91805,7 +91861,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8a2ae3ed-b8aa-4034-b500-916d1758e9a7",
@@ -91893,7 +91949,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/78fe8775-13e0-4efc-88f7-fb8f72b4b934",
@@ -92283,7 +92340,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/9604dcc6-3ef1-47cf-b7f5-7eeb0f7477ad",
@@ -92427,7 +92484,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/73842586-aa2d-4b37-9f8e-1ef2a6ef7348",
@@ -92853,7 +92910,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/fc6892e9-36b0-4c9d-b978-7fd74f38e1d5",
@@ -93371,7 +93428,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c19cc3b6-7417-4047-b7da-484b9b8134a6",
@@ -95139,7 +95197,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7f16772c-4d6c-4efb-a8e9-a250de7a5d13",
@@ -95667,7 +95725,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b4c210fb-91db-4eaf-9f32-c34fa24fcb87",
@@ -96645,7 +96703,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/316b0003-a712-45b2-b1a1-530cdf57845d",
@@ -96789,7 +96847,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7cba99e6-3a88-4916-a5b1-4e309d369835",
@@ -97317,7 +97376,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/bb028768-ff2b-4f0e-8d7e-91c754fd502b",
@@ -97367,7 +97426,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e658a360-4765-417f-9e00-f5180560128e",
@@ -98063,7 +98122,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4e113324-bade-452c-9137-983a04078edf",
@@ -98323,7 +98382,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a4036eb6-bb7b-447d-b93d-2acfc96b1486",
@@ -99043,7 +99103,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/71b27109-c103-4eea-92a8-a4bf07fd3ae9",
@@ -99413,7 +99473,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/87f2e004-4a3a-4475-9b31-6e7c5c25416f",
@@ -99677,7 +99737,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/753f58e4-c45d-43ac-9c0f-a489e9d865f8",
@@ -99821,7 +99882,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c7cae4a4-3d08-453f-ae6a-4915a9e1e830",
@@ -101573,7 +101634,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8291f22c-3d7c-4956-a6a0-12fb64bbd9ef",
@@ -103001,7 +103063,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e3b575ee-a487-4c2e-a2bb-f785ba1e3073",
@@ -103265,7 +103327,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4fe75167-9b67-4aa2-a2e2-5d4e4c05267a",
@@ -104087,7 +104149,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/66cfde2a-2356-46d7-8b2c-267272ab668c",
@@ -104231,7 +104293,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e8ef819c-2a7c-468b-9781-121aacb51f33",
@@ -104977,7 +105039,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f514cb7c-4f29-4251-80cd-439e58fa4a75",
@@ -106027,7 +106090,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f20ba9c6-acee-4c92-b7c3-f20c7cd1072c",
@@ -106589,7 +106653,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8b216731-d3a0-4660-80d4-ecfaf0778843",
@@ -106977,7 +107041,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/3ddef928-1321-4a29-a480-eb2caa53b4fd",
@@ -107265,7 +107330,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/51c63196-fb3d-4f78-8649-9001e342cc93",
@@ -107391,7 +107456,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4ae64c0f-e569-402b-a9fc-2dd31520d42d",
@@ -107523,7 +107589,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/643b1801-cff9-499d-89e8-cc517a2b64dd",
@@ -108375,7 +108441,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/df9902fc-0a4f-4a76-a1d2-e73e7b24a0d3",
@@ -108573,7 +108639,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/49106c07-979a-4ce6-be3d-6403ddd62eb1",
@@ -110263,7 +110329,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/733605cc-9476-49b7-a2b1-1fc8f98d3bb4",
@@ -110467,7 +110533,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/be7599a8-7794-4f84-89c1-6ee724bffd05",
@@ -110611,7 +110677,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ce3329bb-77b8-4e54-bb12-99c4c46f1eaa",
@@ -110699,7 +110766,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/96c1dd0f-43d4-4a7c-a6ff-70c66272bedb",
@@ -111055,7 +111123,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d64ec752-ed72-461b-a2c4-92d6204f48b7",
@@ -111585,7 +111654,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/29c4facb-5c6c-4b77-b09d-36c0ecdf0347",
@@ -111873,7 +111942,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/85e835c4-e50a-418a-b1b9-acf8bc5d89ac",
@@ -112017,7 +112086,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/59242787-3526-42d9-ae6d-49585f4da5a2",
@@ -112569,7 +112639,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5f3a4feb-e301-48cd-853a-d860f1f4f701",
@@ -112833,7 +112903,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e536bd88-206f-422a-a5bc-f271a0393011",
@@ -113191,7 +113262,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e4a19eef-b948-4056-9868-bca44a5a65f4",
@@ -113929,7 +114001,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5f023e4e-835e-40b2-ad5f-384a0f656143",
@@ -116373,7 +116445,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/420dbb99-c24b-415a-aad0-a4d654d158e1",
@@ -116977,7 +117049,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5cdb331b-1a91-43d6-9e97-1c0fbe60bd0e",
@@ -117553,7 +117625,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/70b4bf63-5a86-44a7-ba38-f8f9ce4c78f8",
@@ -117673,7 +117746,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4854a04b-b808-4427-a43b-a467b314369d",
@@ -117959,7 +118033,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/92ec449e-94a1-4b0e-a8c2-63f3a3e5b870",
@@ -118535,7 +118610,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e9b70222-f188-485f-99f5-a327610d6ecf",
@@ -118679,7 +118755,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b48e10ce-fc50-4fa5-9d0f-e20fe867e960",
@@ -119621,7 +119698,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/70e32bd8-e939-4ca1-9d84-77fcd804afbb",
@@ -120035,7 +120112,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4cd697e9-7505-4087-94e4-60752a6a1e50",
@@ -120323,7 +120400,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6b5a40a0-26e3-43bf-a54a-720fa47cd4df",
@@ -120853,7 +120930,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/53f36141-a97b-44a3-b298-0813a08f1484",
@@ -121387,7 +121465,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/bf3e961d-5572-4182-acda-e4628cf840c9",
@@ -121795,7 +121873,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/579da185-0002-4800-9f02-6faa708aab32",
@@ -122609,7 +122688,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f73fc2a1-c8ee-4d1b-94bf-8aa134a8e8e6",
@@ -123173,7 +123252,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/704f1523-750a-4362-803a-74324f823230",
@@ -123591,7 +123671,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/59184436-eeba-447b-8ba4-754e7f60848e",
@@ -123717,7 +123798,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/805b1c16-df29-41cd-94eb-d9566eb623a4",
@@ -124101,7 +124182,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/afdcd3be-4519-46e1-9564-5fb68cd89521",
@@ -124305,7 +124387,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ed4b92bb-44b9-42e1-8668-26ffecd9cb7f",
@@ -124447,7 +124530,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/63352e89-e6ad-47b5-9a1e-6a389fb23496",
@@ -124735,7 +124818,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/9df2e43e-ce45-492b-9a30-d804c9ff1e3e",
@@ -125023,7 +125106,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d1533076-5e9d-47af-a722-513bdd7a6b68",
@@ -125311,7 +125394,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a650f6cc-8d74-4373-95ca-0b1ad3530c92",
@@ -125455,7 +125539,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/fa546bab-5b3e-458d-8ad0-1c367e0f4d35",
@@ -127559,7 +127644,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d9711681-6b85-4467-9394-fdcf0766a2de",
@@ -127823,7 +127909,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/345d903b-acd8-4e59-95db-e9be6279e9dd",
@@ -127967,7 +128054,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1cf2842c-cbc1-439a-a5c3-03cf13a3f6a3",
@@ -129077,7 +129165,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/fc5da6c5-497e-492a-925e-273df59711c2",
@@ -130537,7 +130625,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/bc327260-9e56-4358-9478-26b8a2b47a69",
@@ -132487,7 +132575,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4837a4f7-783b-4b2a-921c-06bb4ac64bc8",
@@ -133187,7 +133276,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7b654eed-36d2-4668-bd08-113b7d1b6790",
@@ -134159,7 +134248,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/27293c4e-9a0a-4372-8b89-5587130ac221",
@@ -135485,7 +135575,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6212dc02-0a8e-4a43-944f-b2c3e1f3e91b",
@@ -135595,7 +135686,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ff0600dc-e4a6-4adf-936f-dbc7e5bcfeed",
@@ -135975,7 +136067,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/861afdcf-8332-42a7-8f0f-dccdb4f37fa6",
@@ -137019,7 +137111,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e40ff841-c992-4209-9686-9173d597a1d6",
@@ -137479,7 +137571,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/eb46f53b-059a-44ca-8617-8650daf0f89c",
@@ -137599,7 +137691,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/21f8f5dc-86c3-450a-9d0d-4d3224a80f2f",
@@ -137803,7 +137895,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/982c67b1-5ee5-46f3-9e3f-9402163a23b3",
@@ -138505,7 +138598,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/93d9060d-0b90-46eb-b1d9-a8dd3ae1809c",
@@ -139379,7 +139472,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8502a82b-cdcd-4f1f-b359-edf793f55f87",
@@ -139643,7 +139737,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ad5ee8c8-0eb8-4168-a9ff-e91df9bd52a1",
@@ -139895,7 +139989,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7098c423-fac1-49bd-ab9f-37f3a059652b",
@@ -140657,7 +140751,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/28582558-1bd5-4427-a146-0a75c41e336f",
@@ -140801,7 +140895,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/635cb78f-437d-4cd9-98ba-d0f07357c952",
@@ -141643,7 +141738,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/243f47c8-d11f-4580-88b2-7bbeb47ab61c",
@@ -141931,7 +142027,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6b7f06e1-f82f-4b36-8da7-dd525b124007",
@@ -143173,7 +143269,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f2875f6b-f637-4bcc-b665-acf945d6079d",
@@ -143731,7 +143828,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e52aa454-96cc-4054-ada0-1cedb9f4194d",
@@ -144593,7 +144690,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/be643aa8-b6a3-4e42-ae66-163dc6fa3c9e",
@@ -144737,7 +144834,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/50f2f720-9125-41f7-94ad-ce422cfdbc24",
@@ -146163,7 +146260,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/caf91d1d-2628-4257-9b9c-f98c2e03c29d",
@@ -146307,7 +146405,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c9f952f8-0570-43f2-a188-17199fce9b46",
@@ -147465,7 +147563,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/2082e7a7-288f-4a2b-80d9-2461fca81209",
@@ -147685,7 +147783,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/99f49565-18f6-4566-8dfe-d784d1fa82dd",
@@ -148357,7 +148455,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/957a1edb-0463-4d76-8a76-4dfc5a74e3db",
@@ -148627,7 +148725,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/cf701e48-daba-46d6-9ada-2fb170e88951",
@@ -150717,7 +150816,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/41e29d19-af62-43d3-aedf-be085cf8e921",
@@ -150861,7 +150960,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e25d6bf3-8691-46dd-aede-540f59b44ca3",
@@ -151575,7 +151674,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/25079327-f1d6-4632-87ec-2a7aa3c01769",
@@ -151695,7 +151794,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d9040b33-3983-49df-bf4e-f587c2319884",
@@ -151983,7 +152083,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e40e9abe-f965-4920-bb3e-b651c3e7af44",
@@ -152121,7 +152221,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/38df8713-e87f-43cb-9dbf-5448c65efcec",
@@ -152385,7 +152486,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a88e7acb-bbd2-448c-aaed-afa3281d0e1a",
@@ -153075,7 +153176,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/df38ed99-c156-42fa-91ed-65a315f4a131",
@@ -153217,7 +153318,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d20de289-2011-4a3a-9b29-c3ab7bac28f9",
@@ -153789,7 +153890,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/2857fe69-bf30-4988-8511-46909184e34a",
@@ -155431,7 +155532,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4425ddaf-ec64-4f44-acc3-11fcea2ca394",
@@ -157083,7 +157185,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7d046bd9-0a0e-4883-ad2e-6b66cee1d5c7",
@@ -158473,7 +158575,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Miegamojo ir vonios baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/91fd0d1b-e454-4479-94b8-f34384e59ff4",
@@ -159021,7 +159123,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/83dd5096-1392-4f80-9fdc-d791a21968e7",
@@ -159165,7 +159268,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8c99f1da-6e1c-4bf3-a596-794b43de51be",
@@ -159429,7 +159533,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/589bc8eb-6d00-4e3b-8f9e-49f72f51115d",
@@ -159981,7 +160086,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/fd4f0ea4-f7ad-4f8a-8ef5-cb32e32e0c8d",
@@ -161085,7 +161191,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6189ba41-818e-4b45-89f0-5475b4a6682a",
@@ -161229,7 +161336,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/68596d9c-5021-4ae8-b2c6-c9511f3ec889",
@@ -161373,7 +161480,8 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Biuro ir komerciniai baldai",
+        "HoReCa ir prekybos baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/aaccff83-f352-4526-be5f-cac107d75794",
@@ -161661,7 +161769,7 @@
       "public_phone": null,
       "contact_route_status": "not_published",
       "categories": [
-        "Kiti nestandartiniai baldai"
+        "Virtuvės baldai"
       ],
       "public_source_urls": [
         "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ec34467f-1220-4036-823e-cef25af2692c",

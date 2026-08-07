@@ -15,6 +15,7 @@ records whose slugs are no longer in the versioned file. --validate only checks
 the local source file and does not require credentials or make network requests.`;
 
 const sourceUrl = new URL("../data/manufacturers.json", import.meta.url);
+const susrCorrectionManifestUrl = new URL("../data/category_evrk_20260807.json", import.meta.url);
 const requiredFields = [
   "slug", "trading_name", "source_identity", "description_lt", "location", "region", "region_label",
   "category_codes", "category_labels", "audience", "portfolio_status", "confidence",
@@ -82,6 +83,20 @@ function isOfficialRegisterSource(source) {
 }
 function hasOfficialReference(record) {
   return [record.source_artifact_url, ...(record.source_urls || []), ...(record.public_details_source_urls || [])].some(isOfficialDataPortalUrl);
+}
+function sameJson(left, right) { return JSON.stringify(left) === JSON.stringify(right); }
+function isCurrentSusrActivityCorrection(record, corrections) {
+  const correction = corrections.get(record.slug);
+  return correction
+    && record.evidence_source_type === "Lietuvos atvirų duomenų portalas (SŪSR ir Registrų centras)"
+    && sameJson(record.category_codes, correction.target_category_codes)
+    && sameJson(record.category_labels, correction.target_category_labels)
+    && record.scope_evidence.includes(correction.official_susr_record_url)
+    && record.source_urls.includes(correction.official_susr_record_url);
+}
+function hasDirectSourceBackedTaxonomy(record) {
+  return record.evidence_source_type === "Rekvizitai, registracijos kodu patikrintas viešas puslapis"
+    && record.source_urls.some((url) => isHttpsUrl(url) && new URL(url).hostname === "rekvizitai.vz.lt" && record.scope_evidence.includes(url));
 }
 function validateFiledFinancialHistory(history, slug) {
   if (!Array.isArray(history)) throw new Error(`Invalid filed_financial_history for ${slug}`);
@@ -209,8 +224,9 @@ function validate(records) {
         && (regionLabels.get(record.region)?.has(record.region_label)
           || (record.region === "national" && record.region_label === record.city));
       if (!retainsNationalMapping && !omitsNationalPlaceholder && !hasSourceBackedLocation) throw new Error(`Official-source record ${record.slug} has an unsupported location mapping`);
-      if (record.category_codes.length !== 1 || record.category_codes[0] !== "O" || record.category_labels[0] !== categoryLabels.get("O") || record.audience !== "nežinoma" || record.portfolio_status !== "nežinoma" || record.confidence !== "vidutinis") throw new Error(`Official-source record ${record.slug} must retain its conservative catalogue classification`);
-      if (!["Lietuvos atvirų duomenų portalas (Registrų centras)", "Lietuvos atvirų duomenų portalas (SŪSR ir Registrų centras)"].includes(record.evidence_source_type)) throw new Error(`Official-source record ${record.slug} has invalid provenance type`);
+      const retainsConservativeClassification = record.category_codes.length === 1 && record.category_codes[0] === "O" && record.category_labels[0] === categoryLabels.get("O");
+      if ((!retainsConservativeClassification && !isCurrentSusrActivityCorrection(record, susrActivityCorrections) && !hasDirectSourceBackedTaxonomy(record)) || record.audience !== "nežinoma" || record.portfolio_status !== "nežinoma" || record.confidence !== "vidutinis") throw new Error(`Official-source record ${record.slug} has an unsupported catalogue classification`);
+      if (!["Lietuvos atvirų duomenų portalas (Registrų centras)", "Lietuvos atvirų duomenų portalas (SŪSR ir Registrų centras)"].includes(record.evidence_source_type) && !hasDirectSourceBackedTaxonomy(record)) throw new Error(`Official-source record ${record.slug} has invalid provenance type`);
       if (!hasPublicDetailsProvenance && record.source_collection_date !== "2026-08-01") throw new Error(`Official-source record ${record.slug} has invalid collection date`);
     }
   }
@@ -230,6 +246,17 @@ async function request(url, options = {}) {
 }
 
 if (process.argv.includes("--help") || process.argv.includes("-h")) { console.log(HELP); process.exit(0); }
+const susrCorrectionManifest = JSON.parse(await readFile(susrCorrectionManifestUrl, "utf8"));
+if (!Array.isArray(susrCorrectionManifest?.results)) throw new Error("SŪSR correction manifest must contain results.");
+const susrActivityCorrections = new Map();
+for (const correction of susrCorrectionManifest.results) {
+  if (!correction || typeof correction.slug !== "string" || !Array.isArray(correction.target_category_codes)
+    || !Array.isArray(correction.target_category_labels) || !isHttpsUrl(correction.official_susr_record_url)) {
+    throw new Error("SŪSR correction manifest contains an invalid result.");
+  }
+  if (susrActivityCorrections.has(correction.slug)) throw new Error(`SŪSR correction manifest contains duplicate slug ${correction.slug}`);
+  susrActivityCorrections.set(correction.slug, correction);
+}
 const records = validate(JSON.parse(await readFile(sourceUrl, "utf8")));
 const populatedDescriptions = records.filter((record) => record.description_lt.trim()).length;
 const categorizedRecords = records.filter((record) => record.category_codes.length > 0).length;
