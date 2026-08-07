@@ -6,7 +6,7 @@ Baldininkai.org yra viešais šaltiniais paremtas Lietuvos nestandartinių bald�
 Katalogo įrašai yra nepatvirtinti viešų šaltinių kandidatai. Jie nėra Baldininkai.org rekomendacijos, reitingai ar darbų kokybės, tapatybės, informacijos tikslumo, kainos, terminų, užimtumo arba paslaugų prieinamumo garantijos.
 
 ## Duomenų aprėptis ir kilmė
-Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas viešas ar prekinis ir juridinis pavadinimas, įmonės kodas, miestas, adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių nuorodos ir turima patikros data. Duomenys renkami iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Ši versija sugeneruota 2026-08-06; joje yra 437 katalogo įrašai.
+Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas viešas ar prekinis ir juridinis pavadinimas, įmonės kodas, miestas, adresas, pašto kodas, regiono žyma, svetainė, viešas telefono numeris, viešo kontaktinio kelio būsena, baldų kategorijos, viešų šaltinių nuorodos ir turima patikros data. Duomenys renkami iš viešai prieinamų gamintojų svetainių, įmonių ir kitų viešų informacijos šaltinių. Oficialus finansinių ataskaitų šaltinis: Juridinių asmenų registro (Registrų centro) finansinių ataskaitų duomenys Lietuvos atvirų duomenų portale (https://data.gov.lt/datasets/1484/). Ši versija sugeneruota 2026-08-07; joje yra tiksliai 1420 katalogo įrašų.
 
 ## Pagrindinės nuorodos
 - Katalogas: https://www.baldininkai.org/
@@ -24,17 +24,23 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
   - Vilnius, eastern and southern Lithuania: https://www.baldininkai.org/en/regions/vilnius-east-south-lithuania/
   - Kaunas and northern Lithuania: https://www.baldininkai.org/en/regions/kaunas-north-lithuania/
   - Klaipėda, Panevėžys, western and central Lithuania: https://www.baldininkai.org/en/regions/klaipeda-panevezys-west-central-lithuania/
-  - Klaipėda, Panevėžys, western and mid-Lithuania: https://www.baldininkai.org/en/regions/klaipeda-panevezys-west-mid-lithuania/
   - All Lithuania (no city stated in the official source): https://www.baldininkai.org/en/regions/all-lithuania-city-not-stated/
+  - Klaipėda, Panevėžys, western and mid-Lithuania: https://www.baldininkai.org/en/regions/klaipeda-panevezys-west-mid-lithuania/
+  - Official-source locations without a catalogue region group: https://www.baldininkai.org/en/regions/official-source-locations-unassigned-region/
 - English larger-city data cuts:
   - Alytus: https://www.baldininkai.org/en/cities/alytus/
+  - Jonava: https://www.baldininkai.org/en/cities/jonava/
   - Kaunas: https://www.baldininkai.org/en/cities/kaunas/
   - Klaipėda: https://www.baldininkai.org/en/cities/klaipeda/
+  - Lietuva: https://www.baldininkai.org/en/cities/lietuva/
   - Marijampolė: https://www.baldininkai.org/en/cities/marijampole/
+  - Mažeikiai: https://www.baldininkai.org/en/cities/mazeikiai/
   - Panevėžys: https://www.baldininkai.org/en/cities/panevezys/
+  - Plungė: https://www.baldininkai.org/en/cities/plunge/
   - Šiauliai: https://www.baldininkai.org/en/cities/siauliai/
   - Tauragė: https://www.baldininkai.org/en/cities/taurage/
   - Telšiai: https://www.baldininkai.org/en/cities/telsiai/
+  - Ukmergė: https://www.baldininkai.org/en/cities/ukmerge/
   - Utena: https://www.baldininkai.org/en/cities/utena/
   - Vilnius: https://www.baldininkai.org/en/cities/vilnius/
 - English published-turnover data cuts:
@@ -73,32 +79,101 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 
 ## Miestų puslapiai
 - Alytus: https://www.baldininkai.org/baldai-pagal-uzsakyma/alytus/
+- Anykščiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/anyksciai/
+- Aukštelkė: https://www.baldininkai.org/baldai-pagal-uzsakyma/aukstelke/
+- Avižieniai: https://www.baldininkai.org/baldai-pagal-uzsakyma/avizieniai/
+- Bajorai: https://www.baldininkai.org/baldai-pagal-uzsakyma/bajorai/
+- Bendoriai: https://www.baldininkai.org/baldai-pagal-uzsakyma/bendoriai/
+- Biruliškės: https://www.baldininkai.org/baldai-pagal-uzsakyma/biruliskes/
+- Biržai: https://www.baldininkai.org/baldai-pagal-uzsakyma/birzai/
+- Dainos: https://www.baldininkai.org/baldai-pagal-uzsakyma/dainos/
+- Didžiasalis: https://www.baldininkai.org/baldai-pagal-uzsakyma/didziasalis/
+- Domeikava: https://www.baldininkai.org/baldai-pagal-uzsakyma/domeikava/
 - Dovilai, Klaipėda r.: https://www.baldininkai.org/baldai-pagal-uzsakyma/dovilai-klaipeda-r/
+- Druskininkai: https://www.baldininkai.org/baldai-pagal-uzsakyma/druskininkai/
+- Elektrėnai: https://www.baldininkai.org/baldai-pagal-uzsakyma/elektrenai/
 - Gargždai: https://www.baldininkai.org/baldai-pagal-uzsakyma/gargzdai/
+- Garliava: https://www.baldininkai.org/baldai-pagal-uzsakyma/garliava/
+- Ginduliai: https://www.baldininkai.org/baldai-pagal-uzsakyma/ginduliai/
+- Ginkūnai: https://www.baldininkai.org/baldai-pagal-uzsakyma/ginkunai/
+- Giraitė: https://www.baldininkai.org/baldai-pagal-uzsakyma/giraite/
+- Ignalina: https://www.baldininkai.org/baldai-pagal-uzsakyma/ignalina/
+- Jakai: https://www.baldininkai.org/baldai-pagal-uzsakyma/jakai/
 - Jonava: https://www.baldininkai.org/baldai-pagal-uzsakyma/jonava/
+- Kairiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/kairiai/
+- Kaišiadorys: https://www.baldininkai.org/baldai-pagal-uzsakyma/kaisiadorys/
+- Kalinas: https://www.baldininkai.org/baldai-pagal-uzsakyma/kalinas/
 - Karmėlava: https://www.baldininkai.org/baldai-pagal-uzsakyma/karmelava/
 - Kaunas: https://www.baldininkai.org/baldai-pagal-uzsakyma/kaunas/
+- Kazlų Rūda: https://www.baldininkai.org/baldai-pagal-uzsakyma/kazlu-ruda/
+- Keblonys: https://www.baldininkai.org/baldai-pagal-uzsakyma/keblonys/
 - Kėdainiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/kedainiai/
 - Klaipėda: https://www.baldininkai.org/baldai-pagal-uzsakyma/klaipeda/
+- Klemiškė II: https://www.baldininkai.org/baldai-pagal-uzsakyma/klemiske-ii/
+- Kretinga: https://www.baldininkai.org/baldai-pagal-uzsakyma/kretinga/
+- Kretingalė: https://www.baldininkai.org/baldai-pagal-uzsakyma/kretingale/
+- Kurmaičiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/kurmaiciai/
+- Lapės: https://www.baldininkai.org/baldai-pagal-uzsakyma/lapes/
+- Lentvaris: https://www.baldininkai.org/baldai-pagal-uzsakyma/lentvaris/
 - Lietuva: https://www.baldininkai.org/baldai-pagal-uzsakyma/lietuva/
+- Maišiagala: https://www.baldininkai.org/baldai-pagal-uzsakyma/maisiagala/
 - Marijampolė: https://www.baldininkai.org/baldai-pagal-uzsakyma/marijampole/
 - Mažeikiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/mazeikiai/
+- Medukšta: https://www.baldininkai.org/baldai-pagal-uzsakyma/meduksta/
+- Molėtai: https://www.baldininkai.org/baldai-pagal-uzsakyma/moletai/
+- Narsiečiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/narsieciai/
+- Nemenčinė: https://www.baldininkai.org/baldai-pagal-uzsakyma/nemencine/
+- Noreikiškės: https://www.baldininkai.org/baldai-pagal-uzsakyma/noreikiskes/
+- Norkaičiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/norkaiciai/
+- Pagiriai: https://www.baldininkai.org/baldai-pagal-uzsakyma/pagiriai/
+- Pakapė: https://www.baldininkai.org/baldai-pagal-uzsakyma/pakape/
+- Pakruojis: https://www.baldininkai.org/baldai-pagal-uzsakyma/pakruojis/
+- Palanga: https://www.baldininkai.org/baldai-pagal-uzsakyma/palanga/
 - Panevėžys: https://www.baldininkai.org/baldai-pagal-uzsakyma/panevezys/
+- Pašiliai: https://www.baldininkai.org/baldai-pagal-uzsakyma/pasiliai/
+- Pikutiškės: https://www.baldininkai.org/baldai-pagal-uzsakyma/pikutiskes/
 - Plungė: https://www.baldininkai.org/baldai-pagal-uzsakyma/plunge/
+- Priekulė II: https://www.baldininkai.org/baldai-pagal-uzsakyma/priekule-ii/
+- Pumpučiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/pumpuciai/
+- Radviliškis: https://www.baldininkai.org/baldai-pagal-uzsakyma/radviliskis/
+- Ramygala: https://www.baldininkai.org/baldai-pagal-uzsakyma/ramygala/
+- Ramučiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/ramuciai/
 - Raseiniai: https://www.baldininkai.org/baldai-pagal-uzsakyma/raseiniai/
+- Rastinėnai: https://www.baldininkai.org/baldai-pagal-uzsakyma/rastinenai/
 - Riešė: https://www.baldininkai.org/baldai-pagal-uzsakyma/riese/
+- Ringaudai: https://www.baldininkai.org/baldai-pagal-uzsakyma/ringaudai/
+- Rokiškis: https://www.baldininkai.org/baldai-pagal-uzsakyma/rokiskis/
+- Rumšiškės: https://www.baldininkai.org/baldai-pagal-uzsakyma/rumsiskes/
+- Saldenė: https://www.baldininkai.org/baldai-pagal-uzsakyma/saldene/
+- Skaidiškės: https://www.baldininkai.org/baldai-pagal-uzsakyma/skaidiskes/
+- Šakiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/sakiai/
+- Šatijai: https://www.baldininkai.org/baldai-pagal-uzsakyma/satijai/
 - Šiauliai: https://www.baldininkai.org/baldai-pagal-uzsakyma/siauliai/
+- Šilagalys: https://www.baldininkai.org/baldai-pagal-uzsakyma/silagalys/
+- Šilutė: https://www.baldininkai.org/baldai-pagal-uzsakyma/silute/
+- Širvintos: https://www.baldininkai.org/baldai-pagal-uzsakyma/sirvintos/
+- Šlapšilė: https://www.baldininkai.org/baldai-pagal-uzsakyma/slapsile/
+- Švenčionys: https://www.baldininkai.org/baldai-pagal-uzsakyma/svencionys/
 - Tauragė: https://www.baldininkai.org/baldai-pagal-uzsakyma/taurage/
+- Taurai: https://www.baldininkai.org/baldai-pagal-uzsakyma/taurai/
 - Telšiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/telsiai/
+- Trušeliai: https://www.baldininkai.org/baldai-pagal-uzsakyma/truseliai/
 - Ukmergė: https://www.baldininkai.org/baldai-pagal-uzsakyma/ukmerge/
 - Utena: https://www.baldininkai.org/baldai-pagal-uzsakyma/utena/
+- Vaidotai: https://www.baldininkai.org/baldai-pagal-uzsakyma/vaidotai/
+- Vanaginė: https://www.baldininkai.org/baldai-pagal-uzsakyma/vanagine/
+- Vydmantai: https://www.baldininkai.org/baldai-pagal-uzsakyma/vydmantai/
+- Vievis: https://www.baldininkai.org/baldai-pagal-uzsakyma/vievis/
+- Vilkaviškis: https://www.baldininkai.org/baldai-pagal-uzsakyma/vilkaviskis/
 - Vilnius: https://www.baldininkai.org/baldai-pagal-uzsakyma/vilnius/
+- Visaginas: https://www.baldininkai.org/baldai-pagal-uzsakyma/visaginas/
+- Voveriškiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/voveriskiai/
 
 ## Licencija
 Duomenų rinkinys licencijuojamas pagal Creative Commons Attribution 4.0 International (CC BY 4.0), versija 4.0: https://creativecommons.org/licenses/by/4.0/
 
 ## Priskyrimas
-Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-06
+Šaltinis: Baldininkai.org viešų šaltinių Lietuvos baldų gamintojų kandidatų katalogas, https://www.baldininkai.org/atviri-duomenys/, versija 2026-08-07
 
 ## English summary
 Baldininkai.org is a public-source directory of candidate Lithuanian custom-furniture makers. Listings are unverified public-source candidates, not endorsements, rankings, or guarantees of identity, accuracy, quality, capacity, price, availability, timing, or service coverage. Start at the English sourcing hub https://www.baldininkai.org/en/, browse the English category pages, prepare a structured project request at https://www.baldininkai.org/en/quote-request/ with no automatic maker contact or introduction guarantee, read the catalogue-data overview at https://www.baldininkai.org/en/lithuanian-furniture-makers-data/, use the sourcing guide at https://www.baldininkai.org/en/sourcing-guide/, browse region, larger-city and published-turnover data cuts linked from the hub, and use the documented JSON/CSV downloads at https://www.baldininkai.org/atviri-duomenys/.
