@@ -16,6 +16,7 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Kainos skaičiuoklė: https://www.baldininkai.org/baldu-kainos-skaiciuokle/
 - Projekto pasiūlymo užklausa: https://www.baldininkai.org/gauti-pasiulymus/
 - Baldų rinkos apžvalga: https://www.baldininkai.org/baldu-rinkos-apzvalga/
+- Registrui pateiktų finansų metinė suvestinė: https://www.baldininkai.org/baldu-sektoriaus-finansai/
 - English sourcing hub: https://www.baldininkai.org/en/
 - English quote request: https://www.baldininkai.org/en/quote-request/
 - Lithuanian furniture makers data (English): https://www.baldininkai.org/en/lithuanian-furniture-makers-data/
