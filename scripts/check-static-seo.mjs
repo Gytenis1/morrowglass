@@ -57,6 +57,18 @@ const ENGLISH_EMPLOYEE_BAND_LABELS = new Map([
 const manufacturers = JSON.parse(await readFile(join(rootDir, 'data/manufacturers.json'), 'utf8'));
 const landingConfig = JSON.parse(await readFile(join(rootDir, 'data/seo-landings.json'), 'utf8'));
 const manufacturersBySlug = new Map(manufacturers.map((record) => [record.slug, record]));
+const BARE_COUNTRY_LABELS = new Set(['lietuva', 'lithuania', 'latvija', 'latvia', 'estija', 'estonia', 'lenkija', 'poland', 'europe', 'europa']);
+const buildYear = Number(new Date().toISOString().slice(0, 4));
+function isBareCountry(value) {
+  return typeof value === 'string' && BARE_COUNTRY_LABELS.has(value.trim().toLocaleLowerCase('lt-LT'));
+}
+function publishedLocality(record) {
+  const city = record.city?.trim();
+  return city && !isBareCountry(city) ? city : null;
+}
+function publishedFoundingYear(value) {
+  return Number.isInteger(value) && value >= 1900 && value <= buildYear ? value : null;
+}
 const datasetHeaders = [
   'slug',
   'profile_url',
@@ -355,7 +367,7 @@ function expectedDatasetRecord(record) {
     trading_name: record.trading_name?.trim() || null,
     legal_name: record.legal_name?.trim() || null,
     company_code: record.company_code?.trim() || null,
-    city: record.city?.trim() || null,
+    city: publishedLocality(record),
     street_address: record.street_address?.trim() || null,
     postcode: record.postcode?.trim() || null,
     region_label: record.region_label?.trim() || null,
@@ -534,7 +546,7 @@ if (!files.length) {
 }
 const recordsByCity = new Map();
 for (const record of manufacturers) {
-  const city = record.city?.trim();
+  const city = publishedLocality(record);
   if (!city) continue;
   const records = recordsByCity.get(city) ?? [];
   records.push(record);
@@ -583,7 +595,7 @@ const expectedFiscalYears = new Map(countBy(expectedTurnovers, ({ turnover }) =>
 const expectedEmployeeRecords = manufacturers.filter((record) => expectedEmployeeBands.includes(record.employee_count_band));
 const expectedEmployeeDistribution = new Map(expectedEmployeeBands.map((band) => [band, expectedEmployeeRecords.filter((record) => record.employee_count_band === band).length]));
 const overviewYear = Number(generatedDatasetMetadata?.generated_date?.slice(0, 4));
-const expectedFoundingRecords = manufacturers.filter((record) => Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= overviewYear);
+const expectedFoundingRecords = manufacturers.filter((record) => Number.isInteger(record.founded_year) && record.founded_year >= 1900 && record.founded_year <= overviewYear);
 const expectedFoundingCohorts = new Map([
   ['before-1990', expectedFoundingRecords.filter((record) => record.founded_year < 1990).length],
   ['1990s', expectedFoundingRecords.filter((record) => record.founded_year >= 1990 && record.founded_year < 2000).length],
@@ -594,7 +606,7 @@ const expectedFoundingCohorts = new Map([
 const expectedOldestFoundingYear = Math.min(...expectedFoundingRecords.map((record) => record.founded_year));
 const expectedNewestFoundingYear = Math.max(...expectedFoundingRecords.map((record) => record.founded_year));
 const expectedRegions = new Map(countBy(manufacturers, (record) => record.region_label?.trim()));
-const expectedLeadingCities = countBy(manufacturers, (record) => record.city?.trim()).slice(0, 10);
+const expectedLeadingCities = countBy(manufacturers, (record) => publishedLocality(record)).slice(0, 10);
 const categoryPageCountsByCode = new Map(countBy(landingConfig.categories, (category) => category.code));
 function manufacturerMatchesPublishedCategory(record, category) {
   const currentLabel = category.title.replace(/ pagal užsakymą$/, '');
@@ -705,7 +717,7 @@ function validateLandingSnapshot(route, html, records, kind) {
 
   const turnoverRecords = records.map((record) => ({ record, turnover: publishedTurnover(record) })).filter((entry) => entry.turnover);
   const employeeRecords = records.filter((record) => expectedEmployeeBands.includes(record.employee_count_band));
-  const foundingRecords = records.filter((record) => Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= overviewYear);
+  const foundingRecords = records.filter((record) => Number.isInteger(record.founded_year) && record.founded_year >= 1900 && record.founded_year <= overviewYear);
   const coverage = new Map([
     ['total', total],
     ['turnover', turnoverRecords.length],
@@ -823,7 +835,8 @@ function validateEnglishMakerList(route, html, schemas, expected) {
       const record = expectedRecords[index];
       if (slug !== record.slug) addError(route, `row ${index + 1} must be ${record.slug}, found ${slug}`);
       if (!row.includes(`data-en-profile-link href="/gamintojas/${record.slug}/"`)) addError(route, `row ${record.slug} must link to its existing Lithuanian profile`);
-      if (!row.includes(`<td data-en-city>${escapedAttribute(record.city)}</td>`)) addError(route, `row ${record.slug} must show its exact source city`);
+      const locality = publishedLocality(record) ?? NOT_PUBLISHED_ENGLISH;
+      if (!row.includes(`<td data-en-city>${escapedAttribute(locality)}</td>`)) addError(route, `row ${record.slug} must show its published locality or absence`);
 
       const employeeLabel = ENGLISH_EMPLOYEE_BAND_LABELS.get(record.employee_count_band);
       if (employeeLabel) {
@@ -848,7 +861,7 @@ function validateEnglishMakerList(route, html, schemas, expected) {
         if (/data-en-turnover="published"|data-en-financial-source/.test(row)) addError(route, `row ${record.slug} must not invent turnover or a financial source`);
       }
 
-      const foundingYear = Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= overviewYear
+      const foundingYear = Number.isInteger(record.founded_year) && record.founded_year >= 1900 && record.founded_year <= overviewYear
         ? record.founded_year
         : null;
       if (foundingYear) {
@@ -1148,7 +1161,8 @@ for (const file of files.sort()) {
       if (slug !== record.slug) addError(route, `maker row ${index + 1} must be ${record.slug}, found ${slug}`);
       if (!row.includes(`href="/gamintojas/${record.slug}/"`) || !rowText.includes(record.trading_name)) addError(route, `maker ${record.slug} must link to its existing Lithuanian profile`);
       if (!row.includes(`data-en-maker-quote-link href="/en/quote-request/?maker=${encodeURIComponent(record.slug)}"`) || !rowText.includes('Include in quote request')) addError(route, `maker ${record.slug} must provide a selected-maker quote-request link`);
-      if (!rowText.includes(record.city)) addError(route, `maker ${record.slug} must show city ${record.city}`);
+      const locality = publishedLocality(record);
+      if (locality ? !rowText.includes(locality) : rowText.includes('Lietuva')) addError(route, `maker ${record.slug} must show its locality or omit a bare-country placeholder`);
       const expectedRegion = record.region_label?.trim() ? (ENGLISH_REGION_LABELS.get(record.region_label.trim())?.label ?? record.region_label.trim()) : 'Region not published';
       if (!rowText.includes(expectedRegion)) addError(route, `maker ${record.slug} must show its source region or explicit absence`);
 
@@ -1166,7 +1180,7 @@ for (const file of files.sort()) {
         addError(route, `maker ${record.slug} must explicitly mark turnover not published`);
       }
 
-      const foundingYear = Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= overviewYear ? record.founded_year : null;
+      const foundingYear = Number.isInteger(record.founded_year) && record.founded_year >= 1900 && record.founded_year <= overviewYear ? record.founded_year : null;
       if (foundingYear) {
         if (!row.includes(`data-en-founding-status="published" data-year="${foundingYear}"`) || !rowText.includes(String(foundingYear))) addError(route, `maker ${record.slug} must show founding year ${foundingYear}`);
       } else if (!row.includes('data-en-founding-status="not-published"') || !rowText.includes('Not published')) {

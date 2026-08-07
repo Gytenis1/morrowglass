@@ -24,6 +24,21 @@ const [manufacturers, landingConfig, baseHtml] = await Promise.all([
 
 const profileSlugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const generatedRoutes = new Set();
+const BARE_COUNTRY_LABELS = new Set(['lietuva', 'lithuania', 'latvija', 'latvia', 'estija', 'estonia', 'lenkija', 'poland', 'europe', 'europa']);
+const currentBuildYear = Number(buildDate.slice(0, 4));
+function isBareCountry(value) {
+  return typeof value === 'string' && BARE_COUNTRY_LABELS.has(value.trim().toLocaleLowerCase('lt-LT'));
+}
+function publishedLocality(record) {
+  const city = record.city?.trim();
+  return city && !isBareCountry(city) ? city : null;
+}
+function publishedLocation(value) {
+  return typeof value === 'string' && value.trim() && !isBareCountry(value) ? value.trim() : null;
+}
+function publishedFoundingYear(value) {
+  return Number.isInteger(value) && value >= 1900 && value <= currentBuildYear ? value : null;
+}
 
 function assertUnique(values, label) {
   const seen = new Set();
@@ -42,7 +57,8 @@ function validateManufacturers(records) {
       throw new Error(`${descriptor} has an invalid or unpublishable profile slug: ${String(record.slug)}.`);
     }
     if (typeof record.trading_name !== 'string' || !record.trading_name.trim()) throw new Error(`${descriptor} (${record.slug}) has no publishable trading name.`);
-    if (typeof record.city !== 'string' || !record.city.trim()) throw new Error(`${descriptor} (${record.slug}) has no publishable city.`);
+    // A country-only city remains valid source data but has no publishable locality.
+    if (typeof record.city !== 'string') throw new Error(`${descriptor} (${record.slug}) has an invalid city value.`);
     if (!Array.isArray(record.category_codes) || !record.category_codes.length || !Array.isArray(record.category_labels) || record.category_codes.length !== record.category_labels.length) {
       throw new Error(`${descriptor} (${record.slug}) has invalid category route inputs.`);
     }
@@ -444,7 +460,7 @@ function datasetRecord(record) {
     trading_name: record.trading_name?.trim() || null,
     legal_name: record.legal_name?.trim() || null,
     company_code: record.company_code?.trim() || null,
-    city: record.city?.trim() || null,
+    city: publishedLocality(record),
     street_address: record.street_address?.trim() || null,
     postcode: record.postcode?.trim() || null,
     region_label: record.region_label?.trim() || null,
@@ -682,7 +698,7 @@ function articleSchema(article, path) {
 
 function manufacturerSchema(record) {
   const description = record.description_lt?.trim() || record.scope_evidence?.trim();
-  const hasLocalBusinessFacts = Boolean(record.legal_entity_known && record.city?.trim() && (record.website?.trim() || record.public_contact_url?.trim()));
+  const hasLocalBusinessFacts = Boolean(record.legal_entity_known && publishedLocality(record) && (record.website?.trim() || record.public_contact_url?.trim()));
   const profileUrl = canonicalUrl(`/gamintojas/${record.slug}`);
   const data = {
     '@context': 'https://schema.org',
@@ -700,13 +716,13 @@ function manufacturerSchema(record) {
   if (dateModified) data.dateModified = dateModified;
   const address = { '@type': 'PostalAddress' };
   if (record.street_address?.trim()) address.streetAddress = record.street_address.trim();
-  if (record.city?.trim()) address.addressLocality = record.city.trim();
+  if (publishedLocality(record)) address.addressLocality = publishedLocality(record);
   if (record.postcode?.trim()) address.postalCode = record.postcode.trim();
   if (address.streetAddress || address.addressLocality || address.postalCode) {
     address.addressCountry = 'LT';
     data.address = address;
   }
-  if (Number.isInteger(record.founded_year)) data.foundingDate = String(record.founded_year);
+  if (publishedFoundingYear(record.founded_year)) data.foundingDate = String(publishedFoundingYear(record.founded_year));
   if (record.company_code?.trim()) {
     data.identifier = {
       '@type': 'PropertyValue',
@@ -779,7 +795,9 @@ function manufacturerCard(record) {
   const registryStatus = isRegistryChecked(record)
     ? `<p class="registry-card-status"><span class="registry-check-mark" aria-hidden="true"></span><strong>Registro duomenys patikrinti</strong>${checkedDate ? ` · <time datetime="${checkedDate.iso}">${escapeHtml(checkedDate.label)}</time>` : ''}</p>`
     : '';
-  return `<article class="manufacturer-card"><div class="card-heading"><h3>${escapeHtml(record.trading_name)}</h3>${record.legal_name ? `<p class="legal-name">${escapeHtml(record.legal_name)}</p>` : ''}</div>${registryStatus}<p class="location-line"><strong>${escapeHtml(record.city || record.location)}</strong> <span aria-hidden="true"> · </span><span>Regiono grupė: ${escapeHtml(record.region_label)}</span></p><p class="description${record.description_lt?.trim() ? '' : ' description--fallback'}">${escapeHtml(description)}</p><ul class="category-list" aria-label="Gaminamų baldų kategorijos">${record.category_labels.map((label) => `<li>${escapeHtml(label)}</li>`).join('')}</ul><a class="profile-link" href="/gamintojas/${record.slug}">Peržiūrėti katalogo įrašą <span aria-hidden="true">→</span></a></article>`;
+  const locality = publishedLocality(record) ?? publishedLocation(record.location);
+  const locationLine = locality ? `<strong>${escapeHtml(locality)}</strong> <span aria-hidden="true"> · </span><span>Regiono grupė: ${escapeHtml(record.region_label)}</span>` : `<span>Regiono grupė: ${escapeHtml(record.region_label)}</span>`;
+  return `<article class="manufacturer-card"><div class="card-heading"><h3>${escapeHtml(record.trading_name)}</h3>${record.legal_name ? `<p class="legal-name">${escapeHtml(record.legal_name)}</p>` : ''}</div>${registryStatus}<p class="location-line">${locationLine}</p><p class="description${record.description_lt?.trim() ? '' : ' description--fallback'}">${escapeHtml(description)}</p><ul class="category-list" aria-label="Gaminamų baldų kategorijos">${record.category_labels.map((label) => `<li>${escapeHtml(label)}</li>`).join('')}</ul><a class="profile-link" href="/gamintojas/${record.slug}">Peržiūrėti katalogo įrašą <span aria-hidden="true">→</span></a></article>`;
 }
 
 function faqHtml(items) {
@@ -831,7 +849,7 @@ validateLandingContentModel();
 
 const recordsByCity = new Map();
 for (const record of manufacturers) {
-  const city = record.city?.trim();
+  const city = publishedLocality(record);
   if (!city) continue;
   const records = recordsByCity.get(city) ?? [];
   records.push(record);
@@ -843,7 +861,7 @@ const cityCounts = new Map(allCities.map((entry) => [entry.city, entry.count]));
 const cityCategoryLandings = landingConfig.categories.flatMap((category) => {
   const counts = new Map();
   for (const record of manufacturers) {
-    const city = record.city?.trim();
+    const city = publishedLocality(record);
     if (city && (record.category_codes ?? []).includes(category.code)) counts.set(city, (counts.get(city) ?? 0) + 1);
   }
   return Array.from(counts, ([city, count]) => ({
@@ -961,7 +979,7 @@ function contextualGuide(record) {
 
 function profileLandingSection(record) {
   const links = [];
-  const city = record.city?.trim();
+  const city = publishedLocality(record);
   const eligibleCity = city ? landingCities.find((entry) => entry.city === city) : undefined;
   if (eligibleCity) {
     links.push({ kind: 'Miestas', slug: eligibleCity.slug, label: `Baldų gamintojų kandidatai: ${eligibleCity.city}` });
@@ -1128,7 +1146,7 @@ const employeeDistribution = employeeBandOrder.map((band) => ({
   count: employeeRecords.filter((record) => record.employee_count_band === band).length,
 }));
 const latestValidFoundingYear = Number(buildDate.slice(0, 4));
-const foundingRecords = manufacturers.filter((record) => Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= latestValidFoundingYear);
+const foundingRecords = manufacturers.filter((record) => publishedFoundingYear(record.founded_year) !== null);
 const foundingCohorts = [
   { key: 'before-1990', label: 'Iki 1990 m.', includes: (year) => year < 1990 },
   { key: '1990s', label: '1990–1999 m.', includes: (year) => year >= 1990 && year < 2000 },
@@ -1141,7 +1159,7 @@ const oldestFoundingYear = foundingRecords.length ? Math.min(...foundingRecords.
 const newestFoundingYear = foundingRecords.length ? Math.max(...foundingRecords.map((record) => record.founded_year)) : null;
 const regionDistribution = countBy(manufacturers, (record) => record.region_label?.trim());
 const eligibleCityRoutes = new Map(landingCities.map((city) => [city.city, `/baldai-pagal-uzsakyma/${city.slug}`]));
-const leadingCities = countBy(manufacturers, (record) => record.city?.trim()).slice(0, 10);
+const leadingCities = countBy(manufacturers, (record) => publishedLocality(record)).slice(0, 10);
 const categoryPageCountsByCode = new Map(countBy(landingConfig.categories, (category) => category.code));
 function manufacturerMatchesPublishedCategory(record, category) {
   const currentLabel = category.title.replace(/ pagal užsakymą$/, '');
@@ -1176,7 +1194,7 @@ const marketOverviewSchema = {
   author: { '@id': `${SITE_URL}/#organization` },
   publisher: { '@id': `${SITE_URL}/#organization` },
 };
-const topTurnoverRows = topTurnoverMakers.map(({ record, turnover }) => `<tr data-market-top-turnover="${escapeHtml(record.slug)}"><th scope="row"><a href="/gamintojas/${escapeHtml(record.slug)}">${escapeHtml(record.trading_name)}</a></th><td>${escapeHtml(record.city)}</td><td class="market-number">${escapeHtml(formatEuro(turnover.amount))}</td><td class="market-number">${turnover.year}</td><td><a data-market-source href="${escapeHtml(turnover.sourceUrl)}" rel="noopener noreferrer">Viešas šaltinis ↗</a></td></tr>`).join('');
+const topTurnoverRows = topTurnoverMakers.map(({ record, turnover }) => `<tr data-market-top-turnover="${escapeHtml(record.slug)}"><th scope="row"><a href="/gamintojas/${escapeHtml(record.slug)}">${escapeHtml(record.trading_name)}</a></th><td>${escapeHtml(publishedLocality(record) ?? '—')}</td><td class="market-number">${escapeHtml(formatEuro(turnover.amount))}</td><td class="market-number">${turnover.year}</td><td><a data-market-source href="${escapeHtml(turnover.sourceUrl)}" rel="noopener noreferrer">Viešas šaltinis ↗</a></td></tr>`).join('');
 const regionRows = regionDistribution.map(([label, count]) => `<tr data-market-region="${escapeHtml(label)}" data-count="${count}"><th scope="row">${escapeHtml(label)}</th><td class="market-number">${count}</td><td class="market-number">${formatPercent(count, manufacturers.length)}</td></tr>`).join('');
 const cityRows = leadingCities.map(([city, count]) => {
   const route = eligibleCityRoutes.get(city);
@@ -1333,9 +1351,7 @@ function englishEmployeeBand(record) {
 }
 
 function englishFoundingYear(record) {
-  return Number.isInteger(record.founded_year) && record.founded_year >= 1800 && record.founded_year <= latestValidFoundingYear
-    ? record.founded_year
-    : null;
+  return publishedFoundingYear(record.founded_year);
 }
 
 function englishMakerRows(records) {
@@ -1354,7 +1370,7 @@ function englishMakerRows(records) {
       const foundingCell = foundingYear
         ? `<span data-en-founded="published">${foundingYear}</span>`
         : `<span data-en-founded="not-published">${notPublishedEnglish}</span>`;
-      return `<tr data-en-maker-row="${escapeHtml(record.slug)}"><th scope="row"><a data-en-profile-link href="/gamintojas/${escapeHtml(record.slug)}/">${escapeHtml(record.trading_name)}</a></th><td data-en-city>${escapeHtml(record.city)}</td><td>${employeeCell}</td><td>${turnoverCell}</td><td>${foundingCell}</td></tr>`;
+      return `<tr data-en-maker-row="${escapeHtml(record.slug)}"><th scope="row"><a data-en-profile-link href="/gamintojas/${escapeHtml(record.slug)}/">${escapeHtml(record.trading_name)}</a></th><td data-en-city>${escapeHtml(publishedLocality(record) ?? notPublishedEnglish)}</td><td>${employeeCell}</td><td>${turnoverCell}</td><td>${foundingCell}</td></tr>`;
     }).join('');
 }
 
@@ -1570,7 +1586,7 @@ await writeRoute(englishSourcingGuidePath, injectPage({
   ],
 }));
 
-const topTurnoverRowsEnglish = topTurnoverMakers.map(({ record, turnover }) => `<tr data-market-top-turnover="${escapeHtml(record.slug)}"><th scope="row"><a href="/gamintojas/${escapeHtml(record.slug)}">${escapeHtml(record.trading_name)}</a></th><td>${escapeHtml(record.city)}</td><td class="market-number">${escapeHtml(formatEuro(turnover.amount, 'en-GB'))}</td><td class="market-number">${turnover.year}</td><td><a data-market-source href="${escapeHtml(turnover.sourceUrl)}" rel="noopener noreferrer">Published source ↗</a></td></tr>`).join('');
+const topTurnoverRowsEnglish = topTurnoverMakers.map(({ record, turnover }) => `<tr data-market-top-turnover="${escapeHtml(record.slug)}"><th scope="row"><a href="/gamintojas/${escapeHtml(record.slug)}">${escapeHtml(record.trading_name)}</a></th><td>${escapeHtml(publishedLocality(record) ?? notPublishedEnglish)}</td><td class="market-number">${escapeHtml(formatEuro(turnover.amount, 'en-GB'))}</td><td class="market-number">${turnover.year}</td><td><a data-market-source href="${escapeHtml(turnover.sourceUrl)}" rel="noopener noreferrer">Published source ↗</a></td></tr>`).join('');
 const fallbackEnglishRegionGroup = englishRegionGroups.find((entry) => entry.path === '/en/regions/official-source-locations-unassigned-region');
 const regionRowsEnglish = regionDistribution.map(([label, count]) => {
   const group = englishRegionGroups.find((entry) => entry.sourceLabel === label) ?? fallbackEnglishRegionGroup;
@@ -1617,7 +1633,8 @@ function englishCategoryMakerRow(record) {
   const employeeBand = englishEmployeeBand(record);
   const foundingYear = englishFoundingYear(record);
   const region = record.region_label?.trim();
-  const location = `<strong>${escapeHtml(record.city)}</strong><br /><span>${region ? escapeHtml(englishRegionLabels.get(region) ?? region) : 'Region not published'}</span>`;
+  const locality = publishedLocality(record);
+  const location = `${locality ? `<strong>${escapeHtml(locality)}</strong><br />` : ''}<span>${region ? escapeHtml(englishRegionLabels.get(region) ?? region) : 'Region not published'}</span>`;
   const employees = employeeBand
     ? `<span data-en-employee-status="published" data-band="${escapeHtml(record.employee_count_band)}">${escapeHtml(employeeBand)}</span>`
     : '<span data-en-employee-status="not-published">Not published</span>';
@@ -1676,8 +1693,8 @@ for (const record of manufacturers) {
     ['Viešas / prekinis pavadinimas', record.trading_name],
     ['Juridinis pavadinimas', record.legal_name || 'Viešame šaltinyje juridinis pavadinimas nenurodytas.'],
     ['Šaltinyje pateikta tapatybė', record.source_identity],
-    ['Vietovė šaltinyje', record.location],
-    ['Miestas ar vietovė', record.city],
+    ['Vietovė šaltinyje', publishedLocation(record.location)],
+    ['Miestas ar vietovė', publishedLocality(record)],
     ['Šaltinio regiono grupė', record.region_label],
     ['Kategorijos', record.category_labels.join(', ')],
     ['Aprašymas', record.description_lt?.trim() || 'Trumpas aprašymas šaltiniuose nepateiktas.'],
@@ -1691,7 +1708,7 @@ for (const record of manufacturers) {
     ['Įmonės kodas', record.company_code?.trim()],
     ['Registracijos adresas', record.street_address?.trim()],
     ['Pašto kodas', record.postcode?.trim()],
-    ['Įkurta', Number.isInteger(record.founded_year) ? String(record.founded_year) : ''],
+    ['Įkurta', publishedFoundingYear(record.founded_year) ? String(publishedFoundingYear(record.founded_year)) : ''],
   ].filter(([, value]) => value);
   const financialHistory = filedFinancialHistory(record);
   const financialHistoryHtml = filedFinancialHistoryBlock(financialHistory);
@@ -1744,8 +1761,7 @@ function landingMakerSnapshot(records, kind) {
   const employeeDistribution = employeeBandOrder
     .map((band) => ({ band, label: employeeBandNames.get(band), count: employeeRecords.filter((record) => record.employee_count_band === band).length }))
     .filter(({ count }) => count > 0);
-  const foundingRecords = records.filter((record) => Number.isInteger(record.founded_year)
-    && record.founded_year >= 1800 && record.founded_year <= latestValidFoundingYear);
+  const foundingRecords = records.filter((record) => publishedFoundingYear(record.founded_year) !== null);
   const oldestFoundingYear = foundingRecords.length ? Math.min(...foundingRecords.map((record) => record.founded_year)) : null;
   const newestFoundingYear = foundingRecords.length ? Math.max(...foundingRecords.map((record) => record.founded_year)) : null;
   const enoughTurnover = turnoverRecords.length >= landingSnapshotTurnoverMinimum;
@@ -1818,7 +1834,7 @@ async function writeLanding({ slug, title, intro, buyerNote, records, related, f
 async function writeCityCategoryLanding(combination) {
   const { category, city, path } = combination;
   const records = manufacturers
-    .filter((record) => record.city === city && (record.category_codes ?? []).includes(category.code))
+    .filter((record) => publishedLocality(record) === city && (record.category_codes ?? []).includes(category.code))
     .sort((a, b) => a.trading_name.localeCompare(b.trading_name, 'lt'));
   const cityLanding = landingCities.find((entry) => entry.city === city);
   if (!cityLanding || records.length < landingConfig.cityCategoryThreshold) {
