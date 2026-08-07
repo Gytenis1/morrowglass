@@ -108,14 +108,16 @@ migrate((app) => {
   const mergedUrls = appendUrl(afterYearUrl, sourceUrl("city_url"))
 
   // A single bounded statement changes exactly the manifest slugs. Source-backed
-  // values fill only a zero/empty year or a bare-country city. Unsupported years
-  // and cities become SQL NULL/empty respectively, preserving the accurate
-  // absence rather than publishing a placeholder or an invented locality.
+  // values fill only a zero/empty year or a bare-country city. The deployed Number
+  // field is NOT NULL, so no-evidence years deliberately retain its storage default
+  // of 0; the static renderer treats every such invalid year as absent. Bare-country
+  // cities can safely become empty text, preserving accurate absence without an
+  // invented locality.
   app.db().newQuery(
     "WITH `source` (`slug`, `year_target`, `city_target`, `year_value`, `city_value`, `year_url`, `city_url`, `status`) AS (VALUES " + values + ") " +
     "UPDATE `manufacturers` SET " +
       "`founded_year` = CASE WHEN " + source("year_target") + " = 1 AND " + source("year_value") + " BETWEEN 1900 AND " + currentYear + " AND (`founded_year` IS NULL OR `founded_year` = 0) THEN " + source("year_value") +
-        " WHEN " + source("year_target") + " = 1 AND `founded_year` = 0 THEN NULL ELSE `founded_year` END, " +
+        " ELSE `founded_year` END, " +
       "`city` = CASE WHEN " + source("city_target") + " = 1 AND lower(trim(`city`)) IN ('lietuva', 'lithuania') THEN coalesce(" + source("city_value") + ", '') ELSE `city` END, " +
       "`public_details_source_urls` = " + mergedUrls + ", " +
       "`placeholder_fill_status` = " + source("status") + ", " +
