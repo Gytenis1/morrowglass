@@ -1,0 +1,5177 @@
+{
+  "manifest_version": 1,
+  "checked_date": "2026-08-07",
+  "baseline": {
+    "founded_year_zero_count": 96,
+    "city_lietuva_count": 53,
+    "source": "LIVE PocketBase manufacturers collection",
+    "target_filters": [
+      "founded_year=0",
+      "city='Lietuva'"
+    ]
+  },
+  "research_method": "The live target cohorts are fetched from the public manufacturers API. For each record, only its already-stored source_urls, public_details_source_urls, and source_artifact_url values are checked. Raw HTTP responses are cached outside git under /tmp with polite per-host spacing. Years are accepted only from an actual JAR JuridinisAsmuo registration date or a visible existing Rekvizitai profile; localities only from a direct Address Register GyvenamojiVietove.pavadinimas record or a visible existing Rekvizitai registered-address value. Financial filing dates and street-name inferences are explicitly excluded. Every target has an accepted source-backed fill or an explicit not_found_unfilled result.",
+  "counts": {
+    "targeted_unique_slugs": 147,
+    "founded_year_targeted": 96,
+    "city_targeted": 53,
+    "founded_year_filled": 29,
+    "founded_year_unfilled": 67,
+    "city_filled": 7,
+    "city_unfilled": 46
+  },
+  "results": {
+    "a-stelmoko-imone-timora-132103276": {
+      "slug": "a-stelmoko-imone-timora-132103276",
+      "name": "A. Štelmoko įmonė \"Timora\"",
+      "company_code": "132103276",
+      "original": {
+        "founded_year": 1990,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/fd004993-e8fa-4794-a580-34586443c5ba",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/129f6c4c-df6a-43f6-bdb5-bef2711418a9",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/129f6c4c-df6a-43f6-bdb5-bef2711418a9",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "a-z-statyba": {
+      "slug": "a-z-statyba",
+      "name": "A-Z Statyba",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Marijampolė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/a_z_statyba/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/a_z_statyba/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "ajala": {
+      "slug": "ajala",
+      "name": "Ajala",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/ajala/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/ajala/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "alantas-baldu-salonas": {
+      "slug": "alantas-baldu-salonas",
+      "name": "Alantas, baldų salonas",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Kaunas"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/alantas_baldu_salonas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/alantas_baldu_salonas/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "anp-inovaciniai-sprendimai": {
+      "slug": "anp-inovaciniai-sprendimai",
+      "name": "ANP inovaciniai sprendimai",
+      "company_code": "305604331",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/anp_inovaciniai_sprendimai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Klaipėda"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/34fda8d2-3fc6-488e-9bda-21b67be09b8f",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/34fda8d2-3fc6-488e-9bda-21b67be09b8f",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "arpolis": {
+      "slug": "arpolis",
+      "name": "Arpolis",
+      "company_code": "300614040",
+      "original": {
+        "founded_year": 0,
+        "city": "Alytus"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/arpolis/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/arpolis/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Alytaus r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fc31eb0b-30ac-4407-9fdb-cde1288cd3e1",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fc31eb0b-30ac-4407-9fdb-cde1288cd3e1",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "artrum-mb-305981318": {
+      "slug": "artrum-mb-305981318",
+      "name": "Artrum, MB",
+      "company_code": "305981318",
+      "original": {
+        "founded_year": 0,
+        "city": "Rumšiškės"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03a2c26c-9731-4bac-846b-a3b48c09c344",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7e73708d-b0d6-4e25-b901-dc7b0b28d14d",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7e73708d-b0d6-4e25-b901-dc7b0b28d14d",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/47ff0e81-1523-40ad-9cb3-b4e4625e3668",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "augriva": {
+      "slug": "augriva",
+      "name": "Augriva",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/augriva/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/augriva/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 1995,
+          "published_locality": "Plungės r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 1995,
+          "source_url": "https://rekvizitai.vz.lt/en/company/augriva/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "aurimo-baldai": {
+      "slug": "aurimo-baldai",
+      "name": "Aurimo baldai",
+      "company_code": "2413959",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "aurimo-korpusiniu-baldu-gamyba": {
+      "slug": "aurimo-korpusiniu-baldu-gamyba",
+      "name": "Aurimo korpusinių baldų gamyba",
+      "company_code": "001081836",
+      "original": {
+        "founded_year": 0,
+        "city": "Norkaičiai, Tauragė r."
+      },
+      "checked_source_urls": [],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "balda": {
+      "slug": "balda",
+      "name": "Balda",
+      "company_code": "304473249",
+      "original": {
+        "founded_year": 0,
+        "city": "Jonava"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/balda/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/balda/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9410d1ef-23d7-40d2-9690-537ef1067e36",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9410d1ef-23d7-40d2-9690-537ef1067e36",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "baldaila": {
+      "slug": "baldaila",
+      "name": "Baldaila",
+      "company_code": "305726050",
+      "original": {
+        "founded_year": 0,
+        "city": "Vilnius"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/2770b398-57c4-49aa-876b-d257bd9b095a",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "baldasta-mb-306997147": {
+      "slug": "baldasta-mb-306997147",
+      "name": "Baldasta, MB",
+      "company_code": "306997147",
+      "original": {
+        "founded_year": 0,
+        "city": "Alytus"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0b180bd2-0d2f-4b10-a848-81c05f6ce38b",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/21bbe639-b485-490c-8ab4-e58494826b8c",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/21bbe639-b485-490c-8ab4-e58494826b8c",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/5f5fca63-26d8-482e-be75-2721d19640f7",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "baldmaris": {
+      "slug": "baldmaris",
+      "name": "Baldmaris",
+      "company_code": "000977017",
+      "original": {
+        "founded_year": 0,
+        "city": "Tauragė"
+      },
+      "checked_source_urls": [],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "baldmaris-nestandartiniu-baldu-gamyba": {
+      "slug": "baldmaris-nestandartiniu-baldu-gamyba",
+      "name": "Baldmaris - nestandartinių baldų gamyba",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Tauragė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/baldmaris_nestandartiniu_baldu_gamyba/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/baldmaris_nestandartiniu_baldu_gamyba/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "baldturas-a-laseviciaus-ivv": {
+      "slug": "baldturas-a-laseviciaus-ivv",
+      "name": "Baldturas, A. Lasevičiaus IVV",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Alytus"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/baldturas_a_laseviciaus_ivv/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/baldturas_a_laseviciaus_ivv/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "baldukas": {
+      "slug": "baldukas",
+      "name": "Baldukas",
+      "company_code": "306069344",
+      "original": {
+        "founded_year": 0,
+        "city": "Alytus"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/baldukas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/baldukas/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/2a5f677e-62ec-4c34-bae9-9a2a52002be9",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/2a5f677e-62ec-4c34-bae9-9a2a52002be9",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "balduma-k-grigaitienes-firma": {
+      "slug": "balduma-k-grigaitienes-firma",
+      "name": "Balduma, K. Grigaitienės firma",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Marijampolė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/balduma_k_grigaitienes_firma/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/balduma_k_grigaitienes_firma/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "balduzis": {
+      "slug": "balduzis",
+      "name": "Baldužis",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/balduzis/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/balduzis/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2020,
+          "published_locality": "Mažeikių r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2020,
+          "source_url": "https://rekvizitai.vz.lt/en/company/balduzis/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "baltfur": {
+      "slug": "baltfur",
+      "name": "Baltfur",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Marijampolė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/baltfur/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/baltfur/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Vilkaviškio r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "bd-furniture": {
+      "slug": "bd-furniture",
+      "name": "BD Furniture",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Šiauliai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/bd_furniture/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/bd_furniture/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "benfok": {
+      "slug": "benfok",
+      "name": "Benfok",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/benfok/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/benfok/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2022,
+          "published_locality": "Mažeikiai"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2022,
+          "source_url": "https://rekvizitai.vz.lt/en/company/benfok/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "car-sales-company-uab-141805150": {
+      "slug": "car-sales-company-uab-141805150",
+      "name": "\"CAR SALES COMPANY\" UAB",
+      "company_code": "141805150",
+      "original": {
+        "founded_year": 1999,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ca290d35-bd72-4865-823e-fd5470017b71",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/654dc22c-09c5-4e24-a376-15e9a5a6099c",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/654dc22c-09c5-4e24-a376-15e9a5a6099c",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "ciuziniai-uab-304657427": {
+      "slug": "ciuziniai-uab-304657427",
+      "name": "\"Čiužiniai\", UAB",
+      "company_code": "304657427",
+      "original": {
+        "founded_year": 2017,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b1e56f71-2566-4dda-a9f0-3b368691653c",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bce5ce28-a1a7-4fc3-b890-7668230d6be5",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bce5ce28-a1a7-4fc3-b890-7668230d6be5",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "dalduva-ii": {
+      "slug": "dalduva-ii",
+      "name": "Dalduva, IĮ",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/dalduva_ii/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/dalduva_ii/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "dazoma": {
+      "slug": "dazoma",
+      "name": "Dažoma",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/dazoma/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/dazoma/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2012
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2012,
+          "source_url": "https://rekvizitai.vz.lt/en/company/dazoma/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "digio": {
+      "slug": "digio",
+      "name": "Digio",
+      "company_code": "306162439",
+      "original": {
+        "founded_year": 0,
+        "city": "Kėdainiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/digio/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/digio/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3a7f3bb3-62bf-43f4-97b9-67c09feaaa0f",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3a7f3bb3-62bf-43f4-97b9-67c09feaaa0f",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "doko-sofa": {
+      "slug": "doko-sofa",
+      "name": "Doko sofa",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/doko_sofa/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/doko_sofa/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2013,
+          "published_locality": "Mažeikiai"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2013,
+          "source_url": "https://rekvizitai.vz.lt/en/company/doko_sofa/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "dovaina": {
+      "slug": "dovaina",
+      "name": "Dovaina",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/dovaina/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/dovaina/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 1992,
+          "published_locality": "Kaišiadorių r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 1992,
+          "source_url": "https://rekvizitai.vz.lt/en/company/dovaina/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "drilius": {
+      "slug": "drilius",
+      "name": "Drilius",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/drilius/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/drilius/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2020
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2020,
+          "source_url": "https://rekvizitai.vz.lt/en/company/drilius/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "dronga-medienos-meistrai": {
+      "slug": "dronga-medienos-meistrai",
+      "name": "Dronga, medienos meistrai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/dronga_medienos_meistrai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/dronga_medienos_meistrai/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "dzukijos-baldu-fabrikas": {
+      "slug": "dzukijos-baldu-fabrikas",
+      "name": "Dzūkijos baldų fabrikas",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Marijampolė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/dzukijos_baldu_fabrikas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/dzukijos_baldu_fabrikas/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Alytaus r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "egidijaus-baldai": {
+      "slug": "egidijaus-baldai",
+      "name": "Egidijaus baldai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/egidijaus_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/egidijaus_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2017,
+          "published_locality": "Rokiškio r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2017,
+          "source_url": "https://rekvizitai.vz.lt/en/company/egidijaus_baldai/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "furnistetika": {
+      "slug": "furnistetika",
+      "name": "Furnistetika",
+      "company_code": "306308755",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/furnistetika/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/furnistetika/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/073d3670-6262-4481-80c2-054a093b9cc0",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/073d3670-6262-4481-80c2-054a093b9cc0",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "gieva-s-trapikienes-firma": {
+      "slug": "gieva-s-trapikienes-firma",
+      "name": "Gieva, S. Trapikienės firma",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/gieva_s_trapikienes_firma/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/gieva_s_trapikienes_firma/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 1999,
+          "published_locality": "Švenčionys"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 1999,
+          "source_url": "https://rekvizitai.vz.lt/en/company/gieva_s_trapikienes_firma/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "inoxi": {
+      "slug": "inoxi",
+      "name": "Inoxi",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Alytus"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/inoxi/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/inoxi/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2020
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2020,
+          "source_url": "https://rekvizitai.vz.lt/en/company/inoxi/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "inscoco": {
+      "slug": "inscoco",
+      "name": "Inscoco",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Raseiniai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/inscoco/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/inscoco/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "k-viktoraviciaus-ivv": {
+      "slug": "k-viktoraviciaus-ivv",
+      "name": "K. Viktoravičiaus IVV",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/k_viktoraviciaus_ivv/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/k_viktoraviciaus_ivv/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "kampu": {
+      "slug": "kampu",
+      "name": "Kampu",
+      "company_code": "305908188",
+      "original": {
+        "founded_year": 0,
+        "city": "Alytus"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/kampu/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/kampu/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/87b321f9-36bf-4b16-a813-d2191b3ed60d",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/87b321f9-36bf-4b16-a813-d2191b3ed60d",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "kazbaro-baldai": {
+      "slug": "kazbaro-baldai",
+      "name": "Kazbaro baldai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/kazbaro_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/kazbaro_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2022,
+          "published_locality": "Mažeikių r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2022,
+          "source_url": "https://rekvizitai.vz.lt/en/company/kazbaro_baldai/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "kesna": {
+      "slug": "kesna",
+      "name": "Kesna",
+      "company_code": "303332085",
+      "original": {
+        "founded_year": 0,
+        "city": "Šiauliai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/kesna/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/kesna/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "klaipedos-baldai": {
+      "slug": "klaipedos-baldai",
+      "name": "Klaipėdos baldai",
+      "company_code": "140656052",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/klaipedos_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "kneita": {
+      "slug": "kneita",
+      "name": "Kneita",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/kneita/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/kneita/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2022,
+          "published_locality": "Mažeikiai"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2022,
+          "source_url": "https://rekvizitai.vz.lt/en/company/kneita/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "krivijas": {
+      "slug": "krivijas",
+      "name": "Krivijas",
+      "company_code": "151262991",
+      "original": {
+        "founded_year": 0,
+        "city": "Marijampolė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/krivijas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/krivijas/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/de56f622-ce87-4d2a-ac19-f137146802ad",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/de56f622-ce87-4d2a-ac19-f137146802ad",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "laterus": {
+      "slug": "laterus",
+      "name": "Laterus",
+      "company_code": "182728266",
+      "original": {
+        "founded_year": 0,
+        "city": "Ukmergė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/laterus/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/laterus/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/86c1e5c2-4064-4651-94e0-210222bff959",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/86c1e5c2-4064-4651-94e0-210222bff959",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "laumes-baldu-gamyba": {
+      "slug": "laumes-baldu-gamyba",
+      "name": "Laumės baldų gamyba",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/laumes_baldu_gamyba/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/laumes_baldu_gamyba/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2006
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2006,
+          "source_url": "https://rekvizitai.vz.lt/en/company/laumes_baldu_gamyba/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "litbed-bedding-company-uab-111687536": {
+      "slug": "litbed-bedding-company-uab-111687536",
+      "name": "\"LITBED BEDDING COMPANY\" UAB",
+      "company_code": "111687536",
+      "original": {
+        "founded_year": 2000,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/41179966-f45c-44b0-b561-7bd3c698c12e",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/298e7f82-1773-4850-8b0a-b1b7172a0e4f",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/298e7f82-1773-4850-8b0a-b1b7172a0e4f",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mariaus-baldu-studija": {
+      "slug": "mariaus-baldu-studija",
+      "name": "Mariaus baldų studija",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/mariaus_baldu_studija/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/mariaus_baldu_studija/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2022,
+          "published_locality": "Anykščių r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2022,
+          "source_url": "https://rekvizitai.vz.lt/en/company/mariaus_baldu_studija/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "mazoji-bendrija-sernosis-305935228": {
+      "slug": "mazoji-bendrija-sernosis-305935228",
+      "name": "Mažoji bendrija \"Šernosis\"",
+      "company_code": "305935228",
+      "original": {
+        "founded_year": 2021,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e60408b-1a3a-43c7-a2bb-6ad20896ee5f",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/sernosis/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/sernosis/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2021
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-alfo-statybos-305393037": {
+      "slug": "mb-alfo-statybos-305393037",
+      "name": "MB \"Alfo statybos\"",
+      "company_code": "305393037",
+      "original": {
+        "founded_year": 0,
+        "city": "Aunuvėnai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/192b7ce8-4f84-4d34-965b-6038e7f83f06",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/039b004d-53b4-4635-a9cb-1b121c129bc8",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/039b004d-53b4-4635-a9cb-1b121c129bc8",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1626272a-c9f4-418d-87df-62e6ec821829",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "mb-brovita-305416169": {
+      "slug": "mb-brovita-305416169",
+      "name": "MB \"Brovita\"",
+      "company_code": "305416169",
+      "original": {
+        "founded_year": 2020,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b210ded9-2402-4a46-8899-6a8275940dfc",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e1256882-a33b-4aad-bddc-b8b75b12246a",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e1256882-a33b-4aad-bddc-b8b75b12246a",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-grumisva-306992246": {
+      "slug": "mb-grumisva-306992246",
+      "name": "MB \"Grumisva\"",
+      "company_code": "306992246",
+      "original": {
+        "founded_year": 2024,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b39b9b4c-0a3b-4e9e-985e-3e89be0d4d7d",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a9dbfeb4-b8a9-4a98-9620-322cb500d478",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a9dbfeb4-b8a9-4a98-9620-322cb500d478",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-joinery-305677468": {
+      "slug": "mb-joinery-305677468",
+      "name": "MB Joinery",
+      "company_code": "305677468",
+      "original": {
+        "founded_year": 2021,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/25ed76ab-0f40-4dad-91f0-64a199547369",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/64ebb274-a9db-421b-a2db-c3525e0bb8d7",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/64ebb274-a9db-421b-a2db-c3525e0bb8d7",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-mapa-baldai-305959656": {
+      "slug": "mb-mapa-baldai-305959656",
+      "name": "MB \"Mapa baldai\"",
+      "company_code": "305959656",
+      "original": {
+        "founded_year": 2021,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1ebc1868-3da4-458f-b414-ba38064d3c7b",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1d27a4eb-e1e0-4bb0-acfd-9c64cf7ff20f",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-melamin-306146424": {
+      "slug": "mb-melamin-306146424",
+      "name": "MB \"Melamin\"",
+      "company_code": "306146424",
+      "original": {
+        "founded_year": 2022,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/07501f3b-4e30-477d-8cad-9e30241f52b3",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/melamin/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/melamin/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2022
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-men-do-studio-305615000": {
+      "slug": "mb-men-do-studio-305615000",
+      "name": "MB Men-do studio",
+      "company_code": "305615000",
+      "original": {
+        "founded_year": 2020,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d76818b9-a814-478a-82d5-adadad1c7c9e",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3011b453-075e-4713-b3ba-7699ddfd9a44",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3011b453-075e-4713-b3ba-7699ddfd9a44",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-pasvalio-baldai-304479782": {
+      "slug": "mb-pasvalio-baldai-304479782",
+      "name": "MB \"Pasvalio baldai\"",
+      "company_code": "304479782",
+      "original": {
+        "founded_year": 2017,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c3f7ebf9-9b51-40cc-b2f7-9eaa2fe22536",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d8fa0f25-e533-4ed3-a781-f93a66b063ea",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d8fa0f25-e533-4ed3-a781-f93a66b063ea",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-strumilo-baldai-306571585": {
+      "slug": "mb-strumilo-baldai-306571585",
+      "name": "MB Strumilo baldai",
+      "company_code": "306571585",
+      "original": {
+        "founded_year": 2023,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/225e72a2-a30a-4288-83f2-7e36bb55be19",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/26e6bdc5-57f1-4650-9de3-a71c75041a45",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/26e6bdc5-57f1-4650-9de3-a71c75041a45",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mb-vimora-304696444": {
+      "slug": "mb-vimora-304696444",
+      "name": "MB \"Vimora\"",
+      "company_code": "304696444",
+      "original": {
+        "founded_year": 2017,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/5b9d533c-7bf4-4ea1-9ab8-64f4481118fb",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e081467f-fd5d-43bc-a0b2-1bf6b99f7d21",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e081467f-fd5d-43bc-a0b2-1bf6b99f7d21",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "mdaspect": {
+      "slug": "mdaspect",
+      "name": "MDAspect",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Tauragė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/mdaspect/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/mdaspect/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2021,
+          "published_locality": "Pagėgiai"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2021,
+          "source_url": "https://rekvizitai.vz.lt/en/company/mdaspect/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "medgamas": {
+      "slug": "medgamas",
+      "name": "Medgamas",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Raseiniai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/medgamas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/medgamas/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2017,
+          "published_locality": "Kelmės r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2017,
+          "source_url": "https://rekvizitai.vz.lt/en/company/medgamas/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "medideja": {
+      "slug": "medideja",
+      "name": "Medidėja",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/medideja/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/medideja/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "metalo-kalve": {
+      "slug": "metalo-kalve",
+      "name": "Metalo kalvė",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/metalo_kalve/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/metalo_kalve/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "mingridas": {
+      "slug": "mingridas",
+      "name": "Mingridas",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Jonava"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/mingridas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/mingridas/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "minijos-baldai": {
+      "slug": "minijos-baldai",
+      "name": "Minijos baldai",
+      "company_code": "140258454",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/minijos_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/minijos_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "minshape": {
+      "slug": "minshape",
+      "name": "Minshape",
+      "company_code": "2396383",
+      "original": {
+        "founded_year": 0,
+        "city": "Lapės"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/minshape_m_jakucionio_ivv/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/minshape_m_jakucionio_ivv/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/mindaugo_jakucionio_individuali_veikla/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/mindaugo_jakucionio_individuali_veikla/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Kauno r"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "mk-baldai": {
+      "slug": "mk-baldai",
+      "name": "MK Baldai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Panevėžys"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/mk_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/mk_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2026,
+          "published_locality": "Kaunas"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2026,
+          "source_url": "https://rekvizitai.vz.lt/en/company/mk_baldai/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "mood-furniture": {
+      "slug": "mood-furniture",
+      "name": "Mood Furniture",
+      "company_code": "300108178",
+      "original": {
+        "founded_year": 0,
+        "city": "Marijampolė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/mood_furniture/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/mood_furniture/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/69b41ff8-29bb-465e-9f38-138ca4e8b2fb",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/69b41ff8-29bb-465e-9f38-138ca4e8b2fb",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "nerijaus-bucio-imone-258888760": {
+      "slug": "nerijaus-bucio-imone-258888760",
+      "name": "Nerijaus Bučio įmonė",
+      "company_code": "258888760",
+      "original": {
+        "founded_year": 1993,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/138b38ce-dbe2-41f1-8313-af3f2c5e28db",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/n_bucio/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/n_bucio/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 1993,
+          "published_locality": "Kaišiadorys"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": "Kaišiadorys",
+          "source_url": "https://rekvizitai.vz.lt/en/company/n_bucio/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai registered-address locality"
+        }
+      }
+    },
+    "pajurio-baldai": {
+      "slug": "pajurio-baldai",
+      "name": "Pajūrio baldai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/pajurio_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/pajurio_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "pickwood-lt": {
+      "slug": "pickwood-lt",
+      "name": "Pickwood LT",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/pickwood_lt/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/pickwood_lt/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2025,
+          "published_locality": "Anykščių r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2025,
+          "source_url": "https://rekvizitai.vz.lt/en/company/pickwood_lt/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "plunges-baldai": {
+      "slug": "plunges-baldai",
+      "name": "Plungės baldai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/plunges_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/plunges_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2002
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2002,
+          "source_url": "https://rekvizitai.vz.lt/en/company/plunges_baldai/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "raimeta": {
+      "slug": "raimeta",
+      "name": "Raimeta",
+      "company_code": "305633571",
+      "original": {
+        "founded_year": 0,
+        "city": "Jonava"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/raimeta/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/raimeta/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bc78b9ce-a556-415b-872d-292a097f26b7",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/bc78b9ce-a556-415b-872d-292a097f26b7",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "ratuoti-sapnai": {
+      "slug": "ratuoti-sapnai",
+      "name": "Ratuoti sapnai",
+      "company_code": "307003404",
+      "original": {
+        "founded_year": 0,
+        "city": "Alytus"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/ratuoti_sapnai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/ratuoti_sapnai/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d439ce06-0e4e-4aea-ad72-b1eaf37997c4",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d439ce06-0e4e-4aea-ad72-b1eaf37997c4",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "ravera": {
+      "slug": "ravera",
+      "name": "Ravera",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Raseiniai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/ravera/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/ravera/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2025,
+          "published_locality": "Jurbarko r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2025,
+          "source_url": "https://rekvizitai.vz.lt/en/company/ravera/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "rebilda": {
+      "slug": "rebilda",
+      "name": "Rebilda",
+      "company_code": "302885752",
+      "original": {
+        "founded_year": 0,
+        "city": "Ukmergė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/rebilda/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/rebilda/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/7424199c-8de0-46de-92a3-4bb800a73e96",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/7424199c-8de0-46de-92a3-4bb800a73e96",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "rejben-baldai": {
+      "slug": "rejben-baldai",
+      "name": "Rejben baldai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Šiauliai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/rejben_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/rejben_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "remigijaus-baldai": {
+      "slug": "remigijaus-baldai",
+      "name": "Remigijaus baldai",
+      "company_code": "2444496",
+      "original": {
+        "founded_year": 0,
+        "city": "Šiauliai"
+      },
+      "checked_source_urls": [],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "roberto-laiptai": {
+      "slug": "roberto-laiptai",
+      "name": "Roberto laiptai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/roberto_laiptai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/roberto_laiptai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2017
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2017,
+          "source_url": "https://rekvizitai.vz.lt/en/company/roberto_laiptai/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "rokiskio-baldai": {
+      "slug": "rokiskio-baldai",
+      "name": "Rokiškio baldai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Utena"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/rokiskio_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/rokiskio_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2020,
+          "published_locality": "Rokiškis"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2020,
+          "source_url": "https://rekvizitai.vz.lt/en/company/rokiskio_baldai/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "romanta": {
+      "slug": "romanta",
+      "name": "Romanta",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/romanta/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/romanta/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2017,
+          "published_locality": "Šilalės r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2017,
+          "source_url": "https://rekvizitai.vz.lt/en/company/romanta/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "ryno": {
+      "slug": "ryno",
+      "name": "Ryno",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/ryno/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/ryno/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "sakuona": {
+      "slug": "sakuona",
+      "name": "Sakuona",
+      "company_code": "163314524",
+      "original": {
+        "founded_year": 0,
+        "city": "Klaipėda"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/sakuona/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/sakuona/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Klaipėdos r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "sanitarina": {
+      "slug": "sanitarina",
+      "name": "Sanitarina",
+      "company_code": "306265161",
+      "original": {
+        "founded_year": 0,
+        "city": "Alytus"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/sanitarina/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/sanitarina/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a55a9a04-8adb-485a-b16b-2e3352e3565b",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a55a9a04-8adb-485a-b16b-2e3352e3565b",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "silales-baldai": {
+      "slug": "silales-baldai",
+      "name": "Šilalės baldai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Tauragė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/silales_baldai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/silales_baldai/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "solidsofa-uab-305402415": {
+      "slug": "solidsofa-uab-305402415",
+      "name": "\"Solidsofa\", UAB",
+      "company_code": "305402415",
+      "original": {
+        "founded_year": 2019,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/879e817b-bfc4-483f-9d0e-c93d12fb0cd0",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/f9717ae0-ea6c-469f-982a-e0e02281ec9d",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/f9717ae0-ea6c-469f-982a-e0e02281ec9d",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "suduvos-baldai-morita": {
+      "slug": "suduvos-baldai-morita",
+      "name": "Sūduvos baldai Morita",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Marijampolė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/suduvos_baldai_morita/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/suduvos_baldai_morita/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "tomer-s": {
+      "slug": "tomer-s",
+      "name": "Tomer's",
+      "company_code": "100013055819",
+      "original": {
+        "founded_year": 0,
+        "city": "Gruzdžiai, Šiauliai d."
+      },
+      "checked_source_urls": [],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-a-preisegolaviciaus-imone-134372275": {
+      "slug": "uab-a-preisegolaviciaus-imone-134372275",
+      "name": "UAB \"A. Preišegolavičiaus įmonė\"",
+      "company_code": "134372275",
+      "original": {
+        "founded_year": 1995,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e3e1449c-e769-4b91-97bb-b5188c80456e",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1f4228f5-79a4-4979-9bea-7a42b7478429",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1f4228f5-79a4-4979-9bea-7a42b7478429",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-ambinga-300149812": {
+      "slug": "uab-ambinga-300149812",
+      "name": "UAB \"Ambinga\"",
+      "company_code": "300149812",
+      "original": {
+        "founded_year": 2005,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ea0f88a9-1d98-4f29-82a1-d2f305953c61",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a6ed98d1-9030-4d78-906e-78758d039da3",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/a6ed98d1-9030-4d78-906e-78758d039da3",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-ardi-lt-132567981": {
+      "slug": "uab-ardi-lt-132567981",
+      "name": "UAB \"Ardi LT\"",
+      "company_code": "132567981",
+      "original": {
+        "founded_year": 1991,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b89b2392-2975-48b3-95fd-253751a87ec1",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/51874532-2a52-447e-8dc7-6541e56b697b",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/51874532-2a52-447e-8dc7-6541e56b697b",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-arnitana-304171090": {
+      "slug": "uab-arnitana-304171090",
+      "name": "UAB \"Arnitana\"",
+      "company_code": "304171090",
+      "original": {
+        "founded_year": 0,
+        "city": "Gailiūnai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1664bf69-7747-4ca1-83a3-64ccde4e666e",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/arnitana/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/arnitana/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Druskininkai"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7fcc067a-2f75-4bb3-9a61-3a066b8490d6",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7fcc067a-2f75-4bb3-9a61-3a066b8490d6",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/e9f5cb85-30a2-402c-b86b-74b2e7ec7856",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-aztrekas-135499959": {
+      "slug": "uab-aztrekas-135499959",
+      "name": "UAB \"Aztrekas\"",
+      "company_code": "135499959",
+      "original": {
+        "founded_year": 1999,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/072cf424-b8e6-4465-b037-301878fb8127",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/aztrekas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/aztrekas/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 1999,
+          "published_locality": "Kaunas"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": "Kaunas",
+          "source_url": "https://rekvizitai.vz.lt/en/company/aztrekas/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai registered-address locality"
+        }
+      }
+    },
+    "uab-clemence-richard-158959128": {
+      "slug": "uab-clemence-richard-158959128",
+      "name": "UAB \"Clemence Richard\"",
+      "company_code": "158959128",
+      "original": {
+        "founded_year": 1997,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c824f5b2-5088-4543-a19d-4b0a4141e553",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/109f96ba-59d5-4ca3-857d-c7da9828c6d7",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/109f96ba-59d5-4ca3-857d-c7da9828c6d7",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-danrima-176606489": {
+      "slug": "uab-danrima-176606489",
+      "name": "UAB \"DANRIMA\"",
+      "company_code": "176606489",
+      "original": {
+        "founded_year": 1995,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c68c0fd8-8189-446b-86a7-2416611f6d42",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/20af1a53-e09b-4abd-ab16-4c1de9acf371",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/20af1a53-e09b-4abd-ab16-4c1de9acf371",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-dariaus-baldai-305399606": {
+      "slug": "uab-dariaus-baldai-305399606",
+      "name": "UAB \"Dariaus baldai\"",
+      "company_code": "305399606",
+      "original": {
+        "founded_year": 2019,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7e262f6d-59b9-40d8-9e12-1d3bdeaeb4c9",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5c7a98d3-c609-4afd-aadc-4a161f36bf23",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5c7a98d3-c609-4afd-aadc-4a161f36bf23",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-denitus-303305405": {
+      "slug": "uab-denitus-303305405",
+      "name": "UAB \"Denitus\"",
+      "company_code": "303305405",
+      "original": {
+        "founded_year": 2014,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/8fc1571f-ee34-4635-8b01-37f5de3bb96d",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d0b782c1-b2dc-4313-8b15-f7e65f4aa8da",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d0b782c1-b2dc-4313-8b15-f7e65f4aa8da",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-eega1-300004336": {
+      "slug": "uab-eega1-300004336",
+      "name": "UAB \"EEGA1\"",
+      "company_code": "300004336",
+      "original": {
+        "founded_year": 0,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/08cb0e7f-b10c-4053-af43-1c90a59acc73",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/eega1/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/eega1/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Šilalės r"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": "Šilalės r",
+          "source_url": "https://rekvizitai.vz.lt/en/company/eega1/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai registered-address locality"
+        }
+      }
+    },
+    "uab-elrina-121781425": {
+      "slug": "uab-elrina-121781425",
+      "name": "UAB \"ELRINA\"",
+      "company_code": "121781425",
+      "original": {
+        "founded_year": 1993,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/32e59134-1f24-428f-9838-c6b1874858d4",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3860772b-223a-4dc6-926a-e15906f0f554",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/3860772b-223a-4dc6-926a-e15906f0f554",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-epinera-135699283": {
+      "slug": "uab-epinera-135699283",
+      "name": "UAB \"Epinera\"",
+      "company_code": "135699283",
+      "original": {
+        "founded_year": 2000,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/c2328fa6-2ba5-40c2-abda-784521d0f37a",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fda27d27-6f60-4638-9bf0-0c059a1e194e",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/fda27d27-6f60-4638-9bf0-0c059a1e194e",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-fika-lt-302711050": {
+      "slug": "uab-fika-lt-302711050",
+      "name": "UAB FIKA LT",
+      "company_code": "302711050",
+      "original": {
+        "founded_year": 0,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03dfe5bb-f465-49f2-930b-9897792e9945",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/uab_pifka/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/uab_pifka/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Kaunas"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": "Kaunas",
+          "source_url": "https://rekvizitai.vz.lt/en/company/uab_pifka/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai registered-address locality"
+        }
+      }
+    },
+    "uab-forneris-300647357": {
+      "slug": "uab-forneris-300647357",
+      "name": "UAB \"Forneris\"",
+      "company_code": "300647357",
+      "original": {
+        "founded_year": 0,
+        "city": "Kaunas"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/16ce77d7-8726-49f3-94d0-6f77dd95fbe4",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cfe20525-fca5-40e7-89e1-efb79bd28f5c",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-freda-ii-304458304": {
+      "slug": "uab-freda-ii-304458304",
+      "name": "UAB FREDA II",
+      "company_code": "304458304",
+      "original": {
+        "founded_year": 2017,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/f11c3762-d39e-4419-a6be-97f776962387",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/331b8044-8895-4b10-b3c8-a57a016a3427",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/331b8044-8895-4b10-b3c8-a57a016a3427",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-inovacijos-ir-sprendimai-300832459": {
+      "slug": "uab-inovacijos-ir-sprendimai-300832459",
+      "name": "UAB \"Inovacijos ir sprendimai\"",
+      "company_code": "300832459",
+      "original": {
+        "founded_year": 0,
+        "city": "Vilnius"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/192e486f-6782-4dcc-9576-b39cb3188fa3",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/599a7fce-637a-48fa-851a-9b871d69e7a4",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-interjero-elementai-300869831": {
+      "slug": "uab-interjero-elementai-300869831",
+      "name": "UAB \"Interjero elementai\"",
+      "company_code": "300869831",
+      "original": {
+        "founded_year": 2007,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/2e2d9f52-0508-4275-b526-98918598c6bc",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/857d0352-6e8a-46dc-b512-1120000fbe75",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/857d0352-6e8a-46dc-b512-1120000fbe75",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-jonavos-eksportas-300080661": {
+      "slug": "uab-jonavos-eksportas-300080661",
+      "name": "UAB \"JONAVOS EKSPORTAS\"",
+      "company_code": "300080661",
+      "original": {
+        "founded_year": 2005,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4854a04b-b808-4427-a43b-a467b314369d",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9f101172-b169-4bfc-adc5-fa10a307330b",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/9f101172-b169-4bfc-adc5-fa10a307330b",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-korsara-302469437": {
+      "slug": "uab-korsara-302469437",
+      "name": "UAB \"Korsara\"",
+      "company_code": "302469437",
+      "original": {
+        "founded_year": 0,
+        "city": "Kretingalė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0796fc00-b7f4-4ce8-a075-5befc01da1af",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7dbe0b72-0678-4455-815b-1b4a2ee487d4",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/7dbe0b72-0678-4455-815b-1b4a2ee487d4",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/3e98d0e3-c19f-44f3-b22e-9c3a1550c380",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-ltp-texdan-135275772": {
+      "slug": "uab-ltp-texdan-135275772",
+      "name": "UAB \"LTP TEXDAN\"",
+      "company_code": "135275772",
+      "original": {
+        "founded_year": 1998,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/ed4b92bb-44b9-42e1-8668-26ffecd9cb7f",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/2e6e3776-8b0c-4b55-a78c-457786f3c98c",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/2e6e3776-8b0c-4b55-a78c-457786f3c98c",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-megta-300573736": {
+      "slug": "uab-megta-300573736",
+      "name": "UAB \"MEGTA\"",
+      "company_code": "300573736",
+      "original": {
+        "founded_year": 2006,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/63aff8e8-33b9-4751-854b-088aaf0559e3",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e6c4e6a9-e6ba-4128-97d0-7c0f61356b82",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e6c4e6a9-e6ba-4128-97d0-7c0f61356b82",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-narbutas-international-300591314": {
+      "slug": "uab-narbutas-international-300591314",
+      "name": "UAB \"Narbutas International\"",
+      "company_code": "300591314",
+      "original": {
+        "founded_year": 0,
+        "city": "Vilnius"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1610ed41-120b-4f20-80ad-91da6a0a483a",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/narbutas_international/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/narbutas_international/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Vilnius"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/2646f0bc-39a9-4770-88bd-0a53b1c9b9bf",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-paina-ir-ko-110846971": {
+      "slug": "uab-paina-ir-ko-110846971",
+      "name": "UAB PAINA IR KO",
+      "company_code": "110846971",
+      "original": {
+        "founded_year": 2000,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/6395f456-3991-459a-b9e7-f693915745cf",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/684dcad8-c5ad-4ba7-8483-f772a9663e0e",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/684dcad8-c5ad-4ba7-8483-f772a9663e0e",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-rivaka-172292945": {
+      "slug": "uab-rivaka-172292945",
+      "name": "UAB \"Rivaka\"",
+      "company_code": "172292945",
+      "original": {
+        "founded_year": 1992,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/87607c80-6468-4bfa-ba12-1452c3de1fac",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/b6d50571-ba0a-4992-9e8c-36e22526edcf",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/b6d50571-ba0a-4992-9e8c-36e22526edcf",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-smv-projektai-302430459": {
+      "slug": "uab-smv-projektai-302430459",
+      "name": "UAB \"SMV projektai\"",
+      "company_code": "302430459",
+      "original": {
+        "founded_year": 0,
+        "city": "Laibgaliai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e761547-b70b-4fe5-9b17-506308fe7797",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/4665db2a-001a-465c-9a8f-87a274c8059c",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/4665db2a-001a-465c-9a8f-87a274c8059c",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/c30f68b5-de40-455b-a6a2-da1b87783bc0",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-sonavita-301696898": {
+      "slug": "uab-sonavita-301696898",
+      "name": "UAB \"SONAVITA\"",
+      "company_code": "301696898",
+      "original": {
+        "founded_year": 0,
+        "city": "Kaunas"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0d10e959-f5b0-49a5-a4f3-0898b0b3fdfa",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/d3dad691-475f-4e04-85e2-ea97d74f24f1",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-stilforma-302761402": {
+      "slug": "uab-stilforma-302761402",
+      "name": "UAB \"Stilforma\"",
+      "company_code": "302761402",
+      "original": {
+        "founded_year": 0,
+        "city": "Kaunas"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0e5ed18a-f1ea-488c-8e7a-fde2aa5a50c7",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58437361-d62a-4714-9b74-f07ae0b9d66b",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/cf1d8f14-ba8f-4cc6-ab38-c92d661363d8",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-taelus-304844544": {
+      "slug": "uab-taelus-304844544",
+      "name": "UAB \"Taelus\"",
+      "company_code": "304844544",
+      "original": {
+        "founded_year": 2018,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/b4484cf0-f09c-4b8d-9b4b-0ca0d61d29eb",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/2d271434-398e-4fde-b687-d965f7bd38ad",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/2d271434-398e-4fde-b687-d965f7bd38ad",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uab-tigna-171703525": {
+      "slug": "uab-tigna-171703525",
+      "name": "UAB \"Tigna\"",
+      "company_code": "171703525",
+      "original": {
+        "founded_year": 0,
+        "city": "Plungė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/13020d93-c953-4c3c-9c8d-984176711632",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9c609953-2e4c-46cf-90d1-40ab676e6291",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9c609953-2e4c-46cf-90d1-40ab676e6291",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/feda7c84-2ff1-4278-9f7e-49e4cf81aaac",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-timo-verslas-135053451": {
+      "slug": "uab-timo-verslas-135053451",
+      "name": "UAB \"Timo verslas\"",
+      "company_code": "135053451",
+      "original": {
+        "founded_year": 0,
+        "city": "Lipliūnai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1731e9e2-f18b-422e-8e6a-ad74d36b1da4",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58ff770c-cd40-4cd3-aa7b-6cfd23b5d980",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/58ff770c-cd40-4cd3-aa7b-6cfd23b5d980",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/f1f42667-a0b0-46bb-9ba6-c441651e498a",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-vilgma-gi-302678383": {
+      "slug": "uab-vilgma-gi-302678383",
+      "name": "UAB VILGMA GI",
+      "company_code": "302678383",
+      "original": {
+        "founded_year": 0,
+        "city": "Šiauduva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/18507f13-0a6b-4926-aa83-fc92401878bc",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f71cd4af-d473-4bc8-a8f7-2c135c01bded",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/f71cd4af-d473-4bc8-a8f7-2c135c01bded",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/29882d38-1f9a-4a87-a83f-f9c9cd8f115c",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uab-visagino-linija-300032531": {
+      "slug": "uab-visagino-linija-300032531",
+      "name": "UAB \"Visagino linija\"",
+      "company_code": "300032531",
+      "original": {
+        "founded_year": 2005,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/00fec2f6-dcce-4a06-827e-aa52261719e2",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/visagino_linija/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/visagino_linija/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2005,
+          "published_locality": "Visaginas"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": "Visaginas",
+          "source_url": "https://rekvizitai.vz.lt/en/company/visagino_linija/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai registered-address locality"
+        }
+      }
+    },
+    "uab-viva-style-304926429": {
+      "slug": "uab-viva-style-304926429",
+      "name": "UAB \"Viva style\"",
+      "company_code": "304926429",
+      "original": {
+        "founded_year": 2018,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/03be44df-38bb-4168-a8d8-ecbb59823b7c",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/viva_style/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/viva_style/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2018,
+          "published_locality": "Klaipėda"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": "Klaipėda",
+          "source_url": "https://rekvizitai.vz.lt/en/company/viva_style/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai registered-address locality"
+        }
+      }
+    },
+    "uab-ziliukai-300018930": {
+      "slug": "uab-ziliukai-300018930",
+      "name": "UAB \"Žiliukai\"",
+      "company_code": "300018930",
+      "original": {
+        "founded_year": 2004,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a88e7acb-bbd2-448c-aaed-afa3281d0e1a",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5f81ab30-17c1-4e01-970d-90ebc5616110",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5f81ab30-17c1-4e01-970d-90ebc5616110",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "ukas": {
+      "slug": "ukas",
+      "name": "Ūkas",
+      "company_code": "302335947",
+      "original": {
+        "founded_year": 0,
+        "city": "Vilnius"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/uko_baldai_uab/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/uko_baldai_uab/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "urtbalda": {
+      "slug": "urtbalda",
+      "name": "Urtbalda",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Tauragė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/urtbalda/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/urtbalda/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2022,
+          "published_locality": "Šilalės r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2022,
+          "source_url": "https://rekvizitai.vz.lt/en/company/urtbalda/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-akai-263156160": {
+      "slug": "uzdaroji-akcine-bendrove-akai-263156160",
+      "name": "Uždaroji akcinė bendrovė \"AKAI\"",
+      "company_code": "263156160",
+      "original": {
+        "founded_year": 1991,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e44b2c94-88be-43dd-b668-826d44eac3b4",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/6af03aba-93ca-4e38-8f2f-00c3f92f91d0",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/6af03aba-93ca-4e38-8f2f-00c3f92f91d0",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-alternatyvus-baldu-sprendimai-300945535": {
+      "slug": "uzdaroji-akcine-bendrove-alternatyvus-baldu-sprendimai-300945535",
+      "name": "Uždaroji akcinė bendrovė \"ALTERNATYVŪS BALDŲ SPRENDIMAI\"",
+      "company_code": "300945535",
+      "original": {
+        "founded_year": 2007,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/e8eaa345-fbe2-4653-b89e-1083cf01b308",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/0b160fd9-d0b1-4e5f-bc00-e2fcba02b440",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/0b160fd9-d0b1-4e5f-bc00-e2fcba02b440",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-augriva-170027962": {
+      "slug": "uzdaroji-akcine-bendrove-augriva-170027962",
+      "name": "Uždaroji akcinė bendrovė \"Augriva\"",
+      "company_code": "170027962",
+      "original": {
+        "founded_year": 1995,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/df38ed99-c156-42fa-91ed-65a315f4a131",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5b1fff78-859b-4463-8303-c5c1b0affc75",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/5b1fff78-859b-4463-8303-c5c1b0affc75",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-baldai-jums-156667584": {
+      "slug": "uzdaroji-akcine-bendrove-baldai-jums-156667584",
+      "name": "Uždaroji akcinė bendrovė \"Baldai jums\"",
+      "company_code": "156667584",
+      "original": {
+        "founded_year": 1994,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a8e5e4d0-4b2a-488c-8304-92686b5c0f9b",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d1baddda-7c64-469c-862a-dc68304f50ef",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d1baddda-7c64-469c-862a-dc68304f50ef",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-baldija-163683158": {
+      "slug": "uzdaroji-akcine-bendrove-baldija-163683158",
+      "name": "Uždaroji akcinė bendrovė \"Baldija\"",
+      "company_code": "163683158",
+      "original": {
+        "founded_year": 1999,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/7e3513c8-462c-4b70-a689-d315084d9e35",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/7b8b0dfb-e3f0-4287-a2ac-9e6f30f66db9",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-benera-179336732": {
+      "slug": "uzdaroji-akcine-bendrove-benera-179336732",
+      "name": "Uždaroji akcinė bendrovė \"Benera\"",
+      "company_code": "179336732",
+      "original": {
+        "founded_year": 1993,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1d2d36b6-ed26-4048-9d5d-f911fa7da8a9",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d31db33c-9c3d-487d-ab8e-f894cb46afad",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/d31db33c-9c3d-487d-ab8e-f894cb46afad",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-kalibruote-159983178": {
+      "slug": "uzdaroji-akcine-bendrove-kalibruote-159983178",
+      "name": "Uždaroji akcinė bendrovė \"Kalibruotė\"",
+      "company_code": "159983178",
+      "original": {
+        "founded_year": 1999,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/a9e0be71-7c06-4845-8d2e-51d95bc7840b",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/783f792b-4aa2-4d32-b72c-36b97cb16c4d",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/783f792b-4aa2-4d32-b72c-36b97cb16c4d",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-lauksva-174392079": {
+      "slug": "uzdaroji-akcine-bendrove-lauksva-174392079",
+      "name": "Uždaroji akcinė bendrovė \"Lauksva\"",
+      "company_code": "174392079",
+      "original": {
+        "founded_year": 1995,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/79bb74ad-7813-46ce-a92d-5c1c3031a907",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/c4e43230-3bee-44ff-a3bb-e12af16ce29e",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/c4e43230-3bee-44ff-a3bb-e12af16ce29e",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-markista-135575111": {
+      "slug": "uzdaroji-akcine-bendrove-markista-135575111",
+      "name": "Uždaroji akcinė bendrovė \"Markista\"",
+      "company_code": "135575111",
+      "original": {
+        "founded_year": 2000,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/4c2c0c02-a677-48bc-9b76-c5ca235655e6",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1812ff84-4f7c-4d96-9597-82c34c5f2178",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1812ff84-4f7c-4d96-9597-82c34c5f2178",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-medinedas-160289293": {
+      "slug": "uzdaroji-akcine-bendrove-medinedas-160289293",
+      "name": "Uždaroji akcinė bendrovė \"Medinedas\"",
+      "company_code": "160289293",
+      "original": {
+        "founded_year": 2001,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0f787dba-60c7-4281-b4df-ab66ddf80bf5",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/medinedas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/medinedas/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2001,
+          "published_locality": "Kauno r"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": "Kauno r",
+          "source_url": "https://rekvizitai.vz.lt/en/company/medinedas/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai registered-address locality"
+        }
+      }
+    },
+    "uzdaroji-akcine-bendrove-medrika-148051482": {
+      "slug": "uzdaroji-akcine-bendrove-medrika-148051482",
+      "name": "Uždaroji akcinė bendrovė \"MEDRIKA\"",
+      "company_code": "148051482",
+      "original": {
+        "founded_year": 0,
+        "city": "Panevėžys"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/0c048428-8544-4628-bbea-bca816dafe25",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9a5836b5-825f-472b-9223-bf095ee30b97",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/9a5836b5-825f-472b-9223-bf095ee30b97",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/1817961d-8016-4351-8adc-ee2e1ea91daf",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/medrika/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/medrika/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_locality": "Panevėžys"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-naba-122051895": {
+      "slug": "uzdaroji-akcine-bendrove-naba-122051895",
+      "name": "Uždaroji akcinė bendrovė \"NABA\"",
+      "company_code": "122051895",
+      "original": {
+        "founded_year": 1993,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/d7b8478c-5bac-403f-b97f-cd57c704f0b5",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1d1a1c4e-aac3-4954-a0c2-7c579caf13f1",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1d1a1c4e-aac3-4954-a0c2-7c579caf13f1",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-padvaiskas-ir-ko-123467284": {
+      "slug": "uzdaroji-akcine-bendrove-padvaiskas-ir-ko-123467284",
+      "name": "Uždaroji akcinė bendrovė \"PADVAISKAS IR KO\"",
+      "company_code": "123467284",
+      "original": {
+        "founded_year": 1996,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/91fd0d1b-e454-4479-94b8-f34384e59ff4",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e2ef0097-a271-4063-942d-41847f1c3252",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/e2ef0097-a271-4063-942d-41847f1c3252",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-piniavos-berzelis-168667916": {
+      "slug": "uzdaroji-akcine-bendrove-piniavos-berzelis-168667916",
+      "name": "Uždaroji akcinė bendrovė \"Piniavos berželis\"",
+      "company_code": "168667916",
+      "original": {
+        "founded_year": 1996,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/2d7f96b5-82fd-4373-8ebb-bb0dd5fd8e62",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/4fdfdb93-2e71-491d-8f39-17b48dbcb56b",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/4fdfdb93-2e71-491d-8f39-17b48dbcb56b",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "uzdaroji-akcine-bendrove-zbiga-123645712": {
+      "slug": "uzdaroji-akcine-bendrove-zbiga-123645712",
+      "name": "Uždaroji akcinė bendrovė \"ZBIGA\"",
+      "company_code": "123645712",
+      "original": {
+        "founded_year": 0,
+        "city": "Riešė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/1714d119-b4c2-4e15-88e5-b6f4d494134b",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/3abe4440-0301-4f48-b2c3-f8e20957bded",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/ar/gyvenamojivietove/GyvenamojiVietove/3abe4440-0301-4f48-b2c3-f8e20957bded",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/ar/adresai/Adresas/8ec5a590-1894-49f5-9d29-e4f49d0655c7",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "uzuolas": {
+      "slug": "uzuolas",
+      "name": "Ūžuolas",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Raseiniai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/uzuolas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/uzuolas/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2021,
+          "published_locality": "Tauragė"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2021,
+          "source_url": "https://rekvizitai.vz.lt/en/company/uzuolas/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "vanago-miskas": {
+      "slug": "vanago-miskas",
+      "name": "Vanago miškas",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Raseiniai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/vanago_miskas/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/vanago_miskas/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2025,
+          "published_locality": "Kelmės r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2025,
+          "source_url": "https://rekvizitai.vz.lt/en/company/vanago_miskas/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "vavap": {
+      "slug": "vavap",
+      "name": "Vavap",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Raseiniai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/vavap/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/vavap/",
+          "checked_date": "2026-08-07",
+          "http_status": null,
+          "outcome": "checked"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "velmera": {
+      "slug": "velmera",
+      "name": "Velmera",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Telšiai"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/velmera/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/velmera/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2023,
+          "published_locality": "Mažeikių r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2023,
+          "source_url": "https://rekvizitai.vz.lt/en/company/velmera/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "viesoji-istaiga-kaliniu-socialines-integracijos-centras-300032232": {
+      "slug": "viesoji-istaiga-kaliniu-socialines-integracijos-centras-300032232",
+      "name": "Viešoji įstaiga \"Kalinių socialinės integracijos centras\"",
+      "company_code": "300032232",
+      "original": {
+        "founded_year": 2004,
+        "city": "Lietuva"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/lsd/cl/ja_asmenys/JuridinisAsmuo/618921c4-52ca-42dd-a907-24f43ba9d6c9",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1abe2a50-ce7e-4d80-bf84-0a21b258e72b",
+          "effective_url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo/1abe2a50-ce7e-4d80-bf84-0a21b258e72b",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked"
+        }
+      ],
+      "founded_year": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      }
+    },
+    "vilgma": {
+      "slug": "vilgma",
+      "name": "Vilgma",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Tauragė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/vilgma/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/vilgma/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2020,
+          "published_locality": "Šilalės r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2020,
+          "source_url": "https://rekvizitai.vz.lt/en/company/vilgma/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "x-baldai": {
+      "slug": "x-baldai",
+      "name": "X Baldai",
+      "company_code": "100016141710",
+      "original": {
+        "founded_year": 0,
+        "city": "Anykščių r."
+      },
+      "checked_source_urls": [],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "not_found_unfilled",
+        "proposed_fill": null
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    },
+    "ziliukai": {
+      "slug": "ziliukai",
+      "name": "Žiliukai",
+      "company_code": "",
+      "original": {
+        "founded_year": 0,
+        "city": "Tauragė"
+      },
+      "checked_source_urls": [
+        {
+          "url": "https://rekvizitai.vz.lt/en/company/ziliukai/",
+          "effective_url": "https://rekvizitai.vz.lt/en/company/ziliukai/",
+          "checked_date": "2026-08-07",
+          "http_status": 200,
+          "outcome": "checked",
+          "published_founded_year": 2004,
+          "published_locality": "Šilalės r"
+        },
+        {
+          "url": "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+          "checked_date": "2026-08-07",
+          "outcome": "not_an_allowed_fact_source"
+        }
+      ],
+      "founded_year": {
+        "targeted": true,
+        "outcome": "accepted",
+        "proposed_fill": {
+          "value": 2004,
+          "source_url": "https://rekvizitai.vz.lt/en/company/ziliukai/",
+          "checked_date": "2026-08-07",
+          "source_kind": "visible Rekvizitai company profile"
+        }
+      },
+      "city": {
+        "targeted": false,
+        "outcome": "not_targeted",
+        "proposed_fill": null
+      }
+    }
+  }
+}
