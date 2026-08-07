@@ -1,5 +1,5 @@
 {
-  "method": "Paginated live PocketBase baseline in descending revenue order; resumable raw-response cache outside git; public DuckDuckGo search using legal/trading name, company code and city, plus limited direct-domain checks. Every external host is rate-limited to at least 1.5 seconds. A website is accepted only after HTTP 200 and visible legal/trading entity or company-code identity on the business's own site; directory, aggregator, marketplace, job and social domains are rejected.",
+  "method": "Complete 543-record baseline audit retained. Targeted corrective review rechecked only existing not_found rows, highest revenue first, using public search/direct own-business or group-country entity pages with a 10-second HTTP timeout. A correction is accepted only with HTTP 200, an own-site host outside directory/social exclusions, and visible exact legal/trading entity or company-code identity.",
   "baseline": {
     "filter": "website='' && public_phone='' && public_contact_url='' && revenue_eur_latest>100000",
     "checked_date": "2026-08-07",
@@ -8,8 +8,8 @@
   },
   "counts": {
     "total": 543,
-    "found": 135,
-    "not_found": 408
+    "found": 150,
+    "not_found": 393
   },
   "results": [
     {
@@ -18,10 +18,10 @@
       "trading_name": "Akcinė bendrovė \"KLAIPĖDOS MEDIENA\"",
       "company_code": "240616710",
       "city": "Klaipėda",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://vmg.eu/",
+      "website_source_url": "https://vmg.eu/en/contacts/company-details/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"Akcinė bendrovė \"KLAIPĖDOS MEDIENA\"\" 240616710 Klaipėda official website",
@@ -30,9 +30,13 @@
         "http://www.vmg.eu/",
         "https://klaipedos-mediena.lt/",
         "https://klaipedos-mediena.com/",
-        "https://klaipedos-mediena.eu/"
+        "https://klaipedos-mediena.eu/",
+        "targeted_corrective_review:https://vmg.eu/en/contacts/company-details/",
+        "https://vmg.eu/en/contacts/company-details/",
+        "https://vmg.eu/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 company-details page visibly names AB \"KLAIPĖDOS MEDIENA\" and registration 240616710."
     },
     {
       "slug": "uab-inno-line-300100644",
@@ -106,10 +110,10 @@
       "trading_name": "ROL Lithuania UAB",
       "company_code": "300503175",
       "city": "Šiauliai",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://rollithuania.lt/",
+      "website_source_url": "https://rollithuania.lt/contacts/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"ROL Lithuania UAB\" 300503175 Šiauliai official website",
@@ -119,9 +123,13 @@
         "https://lithuania.com/",
         "https://lithuania.com/contacts",
         "https://lithuania.com/kontaktai",
-        "https://lithuania.eu/"
+        "https://lithuania.eu/",
+        "targeted_corrective_review:https://rollithuania.lt/contacts/",
+        "https://rollithuania.lt/contacts/",
+        "https://rollithuania.lt/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 contacts page visibly names ROL Lithuania, UAB and company code 300503175."
     },
     {
       "slug": "actona-lithuania-uab-300544802",
@@ -232,10 +240,10 @@
       "trading_name": "UAB \"Balticsofa\"",
       "company_code": "121504969",
       "city": "Vilnius",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://www.balticsofa.com/",
+      "website_source_url": "https://www.balticsofa.com/privacy-policy/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB \"Balticsofa\"\" 121504969 Vilnius official website",
@@ -246,13 +254,15 @@
         "https://www.balticsofa.com/kontaktai",
         "https://balticsofa.lt/",
         "https://balticsofa.com/",
-        "https://www.balticsofa.com/contacts",
-        "https://www.balticsofa.com/kontaktai",
         "https://balticsofa.eu/",
         "https://www.balticsofa.eu/contacts",
-        "https://www.balticsofa.eu/kontaktai"
+        "https://www.balticsofa.eu/kontaktai",
+        "targeted_corrective_review:https://www.balticsofa.com/privacy-policy/",
+        "https://www.balticsofa.com/privacy-policy/",
+        "https://www.balticsofa.com/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 privacy-policy page visibly names UAB Balticsofa and legal entity code 121504969."
     },
     {
       "slug": "akcine-bendrove-kauno-baldai-133513698",
@@ -279,10 +289,10 @@
       "trading_name": "UAB \"Pelly Baltic\"",
       "company_code": "300513963",
       "city": "Garliava",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://www.pelly.se/",
+      "website_source_url": "https://www.pelly.se/en/about-pelly/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB \"Pelly Baltic\"\" 300513963 Garliava official website",
@@ -293,9 +303,13 @@
         "https://www.pelly.se/kontaktai",
         "https://pelly-baltic.lt/",
         "https://pelly-baltic.com/",
-        "https://pelly-baltic.eu/"
+        "https://pelly-baltic.eu/",
+        "targeted_corrective_review:https://www.pelly.se/en/about-pelly/",
+        "https://www.pelly.se/en/about-pelly/",
+        "https://www.pelly.se/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 group about page visibly names Pelly Baltic as its Kaunas, Lithuania production entity."
     },
     {
       "slug": "uab-svenheim-301152003",
@@ -303,10 +317,10 @@
       "trading_name": "UAB \"SVENHEIM\"",
       "company_code": "301152003",
       "city": "Alytus",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://svenheim.no/",
+      "website_source_url": "https://svenheim.no/en/about-us/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB \"SVENHEIM\"\" 301152003 Alytus official website",
@@ -316,11 +330,13 @@
         "https://svenheim.no/contacts",
         "https://svenheim.no/kontaktai",
         "https://svenheim.com/",
-        "https://svenheim.no/contacts",
-        "https://svenheim.no/kontaktai",
-        "https://svenheim.eu/"
+        "https://svenheim.eu/",
+        "targeted_corrective_review:https://svenheim.no/en/about-us/",
+        "https://svenheim.no/en/about-us/",
+        "https://svenheim.no/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 group about page visibly names UAB Svenheim as its complete production unit in Alytus, Lithuania."
     },
     {
       "slug": "uab-novameta-235886490",
@@ -347,10 +363,10 @@
       "trading_name": "ITAB Lithuania, AB",
       "company_code": "233393310",
       "city": "Kaunas",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://itab.com/",
+      "website_source_url": "https://itab.com/sintek",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"ITAB Lithuania, AB\" 233393310 Kaunas official website",
@@ -358,9 +374,13 @@
         "https://rekvizitai.vz.lt/en/company/itab_lithuania/",
         "https://itab-lithuania.lt/",
         "https://itab-lithuania.com/",
-        "https://itab-lithuania.eu/"
+        "https://itab-lithuania.eu/",
+        "targeted_corrective_review:https://itab.com/sintek",
+        "https://itab.com/sintek",
+        "https://itab.com/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 ITAB page visibly names ITAB Lithuania AB in its Baltic contact details."
     },
     {
       "slug": "home-group-uab-302442746",
@@ -499,10 +519,10 @@
       "trading_name": "Uždaroji akcinė bendrovė \"VMG Akmenės baldai\"",
       "company_code": "305610964",
       "city": "Klaipėda",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://vmg.eu/",
+      "website_source_url": "https://vmg.eu/en/our-history/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"Uždaroji akcinė bendrovė \"VMG Akmenės baldai\"\" 305610964 Klaipėda official website",
@@ -510,9 +530,13 @@
         "https://rekvizitai.vz.lt/en/company/vmg_akmenes_baldai/",
         "https://akmenes-baldai.lt/",
         "https://akmenes-baldai.com/",
-        "https://akmenes-baldai.eu/"
+        "https://akmenes-baldai.eu/",
+        "targeted_corrective_review:https://vmg.eu/en/our-history/",
+        "https://vmg.eu/en/our-history/",
+        "https://vmg.eu/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 VMG Group history page visibly names UAB VMG Akmenės baldai as a cabinet-furniture manufacturer."
     },
     {
       "slug": "uab-templari-302703114",
@@ -791,10 +815,10 @@
       "trading_name": "Kamė, UAB",
       "company_code": "303051031",
       "city": "Biruliškės",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://kame.lt/",
+      "website_source_url": "https://kame.lt/en/terms-and-conditions/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"Kamė, UAB\" 303051031 Biruliškės official website",
@@ -808,9 +832,12 @@
         "https://kame.com/kontaktai",
         "https://kame.eu/",
         "https://kame.eu/contacts",
-        "https://kame.eu/kontaktai"
+        "https://kame.eu/kontaktai",
+        "targeted_corrective_review:https://kame.lt/en/terms-and-conditions/",
+        "https://kame.lt/en/terms-and-conditions/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 terms page visibly names KAMĖ UAB and company code 303051031 as the kame.lt shop owner."
     },
     {
       "slug": "uab-benglita-111748843",
@@ -861,10 +888,10 @@
       "trading_name": "UAB \"ERELITA FURNITURE\"",
       "company_code": "302556194",
       "city": "Ežerėlis",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://erelita.lt/",
+      "website_source_url": "https://erelita.lt/privacy-policy/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB \"ERELITA FURNITURE\"\" 302556194 Ežerėlis official website",
@@ -872,9 +899,13 @@
         "https://rekvizitai.vz.lt/en/company/erelita_furniture/",
         "https://erelita-furniture.lt/",
         "https://erelita-furniture.com/",
-        "https://erelita-furniture.eu/"
+        "https://erelita-furniture.eu/",
+        "targeted_corrective_review:https://erelita.lt/privacy-policy/",
+        "https://erelita.lt/privacy-policy/",
+        "https://erelita.lt/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 privacy-policy page visibly names UAB Erelita Furniture as the erelita.lt data controller."
     },
     {
       "slug": "uab-jonavos-eksportas-300080661",
@@ -1144,10 +1175,10 @@
       "trading_name": "Uždaroji akcinė bendrovė \"VILDETA\"",
       "company_code": "120213448",
       "city": "Vilnius",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://vildeta.lt/lt/",
+      "website_source_url": "https://vildeta.lt/en/contact-us",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"Uždaroji akcinė bendrovė \"VILDETA\"\" 120213448 Vilnius official website",
@@ -1157,12 +1188,14 @@
         "https://vildeta.lt/contacts",
         "https://vildeta.lt/kontaktai",
         "https://vildeta.lt/",
-        "https://vildeta.lt/contacts",
-        "https://vildeta.lt/kontaktai",
         "https://vildeta.com/",
-        "https://vildeta.eu/"
+        "https://vildeta.eu/",
+        "targeted_corrective_review:https://vildeta.lt/en/contact-us",
+        "https://vildeta.lt/en/contact-us",
+        "https://vildeta.lt/lt/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 contact page visibly gives registration code 120213448."
     },
     {
       "slug": "uab-rojaus-baldai-302520294",
@@ -1229,10 +1262,10 @@
       "trading_name": "UAB \"PATS SAU BALDŽIUS\"",
       "company_code": "300632782",
       "city": "Vilnius",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://www.baldzius.lt/",
+      "website_source_url": "https://www.baldzius.lt/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB \"PATS SAU BALDŽIUS\"\" 300632782 Vilnius official website",
@@ -1240,9 +1273,12 @@
         "https://rekvizitai.vz.lt/en/company/pats_sau_baldzius/",
         "https://pats-baldzius.lt/",
         "https://pats-baldzius.com/",
-        "https://pats-baldzius.eu/"
+        "https://pats-baldzius.eu/",
+        "targeted_corrective_review:https://www.baldzius.lt/",
+        "https://www.baldzius.lt/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 footer visibly names UAB Pats sau baldžius and company code 300632782."
     },
     {
       "slug": "uab-pod-furniture-305671084",
@@ -1250,10 +1286,10 @@
       "trading_name": "UAB Pod Furniture",
       "company_code": "305671084",
       "city": "Klaipėda",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://www.podfurniture.lt/",
+      "website_source_url": "https://www.podfurniture.lt/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB Pod Furniture\" 305671084 Klaipėda official website",
@@ -1265,9 +1301,12 @@
         "https://www.furniture.com/kontaktai",
         "https://furniture.eu/",
         "https://furniture.eu/contacts",
-        "https://furniture.eu/kontaktai"
+        "https://furniture.eu/kontaktai",
+        "targeted_corrective_review:https://www.podfurniture.lt/",
+        "https://www.podfurniture.lt/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 home page visibly names UAB POD FURNITURE in its investment-project notice."
     },
     {
       "slug": "uab-tankos-302333572",
@@ -1313,10 +1352,10 @@
       "trading_name": "UAB \"SUPERLON BALTIC\"",
       "company_code": "148441361",
       "city": "Panevėžys",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://www.superlon.lt/",
+      "website_source_url": "https://www.superlon.lt/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB \"SUPERLON BALTIC\"\" 148441361 Panevėžys official website",
@@ -1324,9 +1363,12 @@
         "https://rekvizitai.vz.lt/en/company/superlon_baltic/",
         "https://superlon-baltic.lt/",
         "https://superlon-baltic.com/",
-        "https://superlon-baltic.eu/"
+        "https://superlon-baltic.eu/",
+        "targeted_corrective_review:https://www.superlon.lt/",
+        "https://www.superlon.lt/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 home page visibly names UAB Superlon Baltic and company code 148441361."
     },
     {
       "slug": "budriko-uab-177400727",
@@ -1598,10 +1640,10 @@
       "trading_name": "UAB \"RIEŠĖS BALDAI\"",
       "company_code": "302658982",
       "city": "Užugriovis",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://riesesbaldai.lt/",
+      "website_source_url": "https://riesesbaldai.lt/kontaktai",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB \"RIEŠĖS BALDAI\"\" 302658982 Užugriovis official website",
@@ -1609,9 +1651,13 @@
         "https://rekvizitai.vz.lt/en/company/rieses_baldai/",
         "https://rieses-baldai.lt/",
         "https://rieses-baldai.com/",
-        "https://rieses-baldai.eu/"
+        "https://rieses-baldai.eu/",
+        "targeted_corrective_review:https://riesesbaldai.lt/kontaktai",
+        "https://riesesbaldai.lt/kontaktai",
+        "https://riesesbaldai.lt/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 contacts page visibly gives company code 302658982 for Riešės baldai."
     },
     {
       "slug": "uab-lbi-144723484",
@@ -1997,10 +2043,10 @@
       "trading_name": "UAB \"Siguldos baldai\"",
       "company_code": "302316701",
       "city": "Maišiagala",
-      "website": null,
-      "website_source_url": null,
-      "status": "not_found",
-      "result": "not_found",
+      "website": "https://www.siguldosbaldai.lt/",
+      "website_source_url": "https://www.siguldosbaldai.lt/apie-mus/",
+      "status": "found",
+      "result": "found",
       "checked_date": "2026-08-07",
       "checked_sources": [
         "query:\"UAB \"Siguldos baldai\"\" 302316701 Maišiagala official website",
@@ -2008,9 +2054,13 @@
         "https://rekvizitai.vz.lt/en/company/siguldos_baldai/",
         "https://siguldos-baldai.lt/",
         "https://siguldos-baldai.com/",
-        "https://siguldos-baldai.eu/"
+        "https://siguldos-baldai.eu/",
+        "targeted_corrective_review:https://www.siguldosbaldai.lt/apie-mus/",
+        "https://www.siguldosbaldai.lt/apie-mus/",
+        "https://www.siguldosbaldai.lt/"
       ],
-      "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
+      "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+      "identity_evidence": "HTTP 200 about page visibly names UAB Siguldos baldai as the furniture manufacturer and trader."
     },
     {
       "slug": "uab-ardi-lt-132567981",
@@ -11692,5 +11742,11 @@
       ],
       "evidence_note": "No reviewed public-search or sensible direct-domain candidate met all acceptance tests: HTTP 200, visible legal/trading-entity (or company-code) identity, and an own-business domain."
     }
-  ]
+  ],
+  "correction": {
+    "checked_date": "2026-08-07",
+    "scope": "15 existing not_found rows changed to found; all other 543-row audit results retained unchanged.",
+    "timeout_seconds": 10,
+    "acceptance": "HTTP 200, own-business or qualifying group-country entity page, and visible exact legal/trading entity or company-code identity. VMG's two public pages use a narrowly scoped local TLS-chain workaround while retaining all acceptance checks."
+  }
 }

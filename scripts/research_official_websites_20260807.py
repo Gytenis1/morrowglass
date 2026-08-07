@@ -5,6 +5,7 @@ Raw API/search/site responses are deliberately cached outside git.  The checked-
 manifest contains only the identity, public query/source URLs and the reviewed
 outcome needed by the corresponding PocketBase migration.
 """
+import argparse
 import hashlib
 import html
 import json
@@ -13,6 +14,7 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import re
+import ssl
 import sys
 import time
 import unicodedata
@@ -28,6 +30,74 @@ CACHE.mkdir(parents=True, exist_ok=True)
 OUT = Path("data/official_websites_20260807.json")
 USER_AGENT = "Morrowglass public official-website research/1.0 (+https://morrowglass.lt)"
 HOST_DELAY_SECONDS = 1.5
+# The first full sweep used one second and exhausted only its direct guesses. The
+# narrow correction mode below retries a reviewed list of pre-existing not-found
+# rows with a practical public-site timeout without touching the 543-row audit.
+CORRECTIVE_TIMEOUT_SECONDS = 10
+CORRECTIVE_TARGETS = {
+    "akcine-bendrove-klaipedos-mediena-240616710": {
+        "website": "https://vmg.eu/", "evidence_url": "https://vmg.eu/en/contacts/company-details/",
+        "identity_evidence": "HTTP 200 company-details page visibly names AB \"KLAIPĖDOS MEDIENA\" and registration 240616710.",
+        "allow_insecure_tls": True,
+    },
+    "rol-lithuania-uab-300503175": {
+        "website": "https://rollithuania.lt/", "evidence_url": "https://rollithuania.lt/contacts/",
+        "identity_evidence": "HTTP 200 contacts page visibly names ROL Lithuania, UAB and company code 300503175.",
+    },
+    "uab-balticsofa-121504969": {
+        "website": "https://www.balticsofa.com/", "evidence_url": "https://www.balticsofa.com/privacy-policy/",
+        "identity_evidence": "HTTP 200 privacy-policy page visibly names UAB Balticsofa and legal entity code 121504969.",
+    },
+    "uab-pelly-baltic-300513963": {
+        "website": "https://www.pelly.se/", "evidence_url": "https://www.pelly.se/en/about-pelly/",
+        "identity_evidence": "HTTP 200 group about page visibly names Pelly Baltic as its Kaunas, Lithuania production entity.",
+    },
+    "uab-svenheim-301152003": {
+        "website": "https://svenheim.no/", "evidence_url": "https://svenheim.no/en/about-us/",
+        "identity_evidence": "HTTP 200 group about page visibly names UAB Svenheim as its complete production unit in Alytus, Lithuania.",
+    },
+    "itab-lithuania-ab-233393310": {
+        "website": "https://itab.com/", "evidence_url": "https://itab.com/sintek",
+        "identity_evidence": "HTTP 200 ITAB page visibly names ITAB Lithuania AB in its Baltic contact details.",
+    },
+    "uzdaroji-akcine-bendrove-vmg-akmenes-baldai-305610964": {
+        "website": "https://vmg.eu/", "evidence_url": "https://vmg.eu/en/our-history/",
+        "identity_evidence": "HTTP 200 VMG Group history page visibly names UAB VMG Akmenės baldai as a cabinet-furniture manufacturer.",
+        "allow_insecure_tls": True,
+    },
+    "kame-uab-303051031": {
+        "website": "https://kame.lt/", "evidence_url": "https://kame.lt/en/terms-and-conditions/",
+        "identity_evidence": "HTTP 200 terms page visibly names KAMĖ UAB and company code 303051031 as the kame.lt shop owner.",
+    },
+    "uab-erelita-furniture-302556194": {
+        "website": "https://erelita.lt/", "evidence_url": "https://erelita.lt/privacy-policy/",
+        "identity_evidence": "HTTP 200 privacy-policy page visibly names UAB Erelita Furniture as the erelita.lt data controller.",
+    },
+    "uzdaroji-akcine-bendrove-vildeta-120213448": {
+        "website": "https://vildeta.lt/", "evidence_url": "https://vildeta.lt/en/contact-us",
+        "identity_evidence": "HTTP 200 contact page visibly gives registration code 120213448.",
+    },
+    "uab-pats-sau-baldzius-300632782": {
+        "website": "https://www.baldzius.lt/", "evidence_url": "https://www.baldzius.lt/",
+        "identity_evidence": "HTTP 200 footer visibly names UAB Pats sau baldžius and company code 300632782.",
+    },
+    "uab-pod-furniture-305671084": {
+        "website": "https://www.podfurniture.lt/", "evidence_url": "https://www.podfurniture.lt/",
+        "identity_evidence": "HTTP 200 home page visibly names UAB POD FURNITURE in its investment-project notice.",
+    },
+    "uab-superlon-baltic-148441361": {
+        "website": "https://www.superlon.lt/", "evidence_url": "https://www.superlon.lt/",
+        "identity_evidence": "HTTP 200 home page visibly names UAB Superlon Baltic and company code 148441361.",
+    },
+    "uab-rieses-baldai-302658982": {
+        "website": "https://riesesbaldai.lt/", "evidence_url": "https://riesesbaldai.lt/kontaktai",
+        "identity_evidence": "HTTP 200 contacts page visibly gives company code 302658982 for Riešės baldai.",
+    },
+    "uab-siguldos-baldai-302316701": {
+        "website": "https://www.siguldosbaldai.lt/", "evidence_url": "https://www.siguldosbaldai.lt/apie-mus/",
+        "identity_evidence": "HTTP 200 about page visibly names UAB Siguldos baldai as the furniture manufacturer and trader.",
+    },
+}
 last_request_at = {}
 host_locks = defaultdict(threading.Lock)
 
@@ -50,8 +120,13 @@ def cache_name(prefix, value):
     return "%s-%s.txt" % (prefix, hashlib.sha256(value.encode("utf-8")).hexdigest())
 
 
-def fetch(url, prefix, timeout=1):
-    """Fetch once per URL, obeying a minimum 1.5s gap for every external host."""
+def fetch(url, prefix, timeout=1, allow_insecure_tls=False):
+    """Fetch once per URL, obeying a minimum 1.5s gap for every external host.
+
+    ``allow_insecure_tls`` is deliberately opt-in for two VMG pages whose public
+    server currently omits an intermediate certificate in this sandbox. It does
+    not change the HTTP-200, own-host, or visible-identity acceptance tests.
+    """
     path = CACHE / cache_name(prefix, url)
     if path.exists():
         return path.read_text(errors="replace")
@@ -66,7 +141,8 @@ def fetch(url, prefix, timeout=1):
             time.sleep(remaining)
         request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept-Language": "lt,en;q=0.8"})
         try:
-            with urllib.request.urlopen(request, timeout=timeout) as response:
+            context = ssl._create_unverified_context() if allow_insecure_tls else None
+            with urllib.request.urlopen(request, timeout=timeout, context=context) as response:
                 status = response.status
                 final_url = response.url
                 content_type = response.headers.get("Content-Type", "")
@@ -285,6 +361,82 @@ def result_for(record):
     }
 
 
+def corrective_result(row, target):
+    """Re-check one previously audited not-found row against a reviewed own-site URL."""
+    if row.get("status") != "not_found":
+        raise RuntimeError("corrective target is not an existing not_found row: %s" % row.get("slug"))
+    # VMG's public server omits an intermediate certificate for this runner; its
+    # two narrowly enumerated pages are still independently checked for HTTP 200
+    # and visible entity identity, not accepted on TLS failure alone.
+    insecure_tls = target.get("allow_insecure_tls", False)
+    cache_prefix = "correction-site-insecure" if insecure_tls else "correction-site"
+    evidence_response = fetch(target["evidence_url"], cache_prefix, timeout=CORRECTIVE_TIMEOUT_SECONDS, allow_insecure_tls=insecure_tls)
+    evidence_status, evidence_final, evidence_body = status_and_body(evidence_response)
+    website_response = fetch(target["website"], cache_prefix, timeout=CORRECTIVE_TIMEOUT_SECONDS, allow_insecure_tls=insecure_tls)
+    website_status, website_final, _ = status_and_body(website_response)
+    evidence_url = canonical(evidence_final or target["evidence_url"])
+    website = canonical(website_final or target["website"])
+    if (evidence_status != 200 or website_status != 200 or not evidence_url or not website or
+            host_rejected(evidence_url) or host_rejected(website) or
+            not page_proves_identity(evidence_body, row)):
+        raise RuntimeError("corrective candidate failed HTTP-200, own-site, or visible-identity checks: %s" % row["slug"])
+    updated = dict(row)
+    updated.update({
+        "website": website,
+        "website_source_url": evidence_url,
+        "status": "found",
+        "result": "found",
+        "checked_date": CHECKED_DATE,
+        "identity_evidence": target["identity_evidence"],
+        "evidence_note": "Targeted corrective review after the complete 543-row audit: a longer-timeout HTTP 200 own-site check visibly identifies the exact legal/trading entity or company code; directory, marketplace, job and social domains remain excluded.",
+    })
+    updated["checked_sources"] = list(row.get("checked_sources", [])) + [
+        "targeted_corrective_review:" + target["evidence_url"],
+        evidence_url,
+        website,
+    ]
+    # Preserve order while making the second run byte-for-byte stable.
+    updated["checked_sources"] = list(dict.fromkeys(updated["checked_sources"]))
+    return updated
+
+
+def run_corrective():
+    if not OUT.exists():
+        raise RuntimeError("corrective mode requires the complete existing manifest")
+    payload = json.loads(OUT.read_text())
+    results = payload.get("results")
+    if not isinstance(results, list) or len(results) != 543:
+        raise RuntimeError("corrective mode requires the complete 543-row manifest")
+    by_slug = {row.get("slug"): row for row in results}
+    if len(by_slug) != len(results) or set(CORRECTIVE_TARGETS) - set(by_slug):
+        raise RuntimeError("corrective targets do not match the existing audit")
+    changed = []
+    for slug, target in CORRECTIVE_TARGETS.items():
+        row = by_slug[slug]
+        if row.get("status") == "found" and row.get("identity_evidence") == target["identity_evidence"]:
+            continue
+        by_slug[slug] = corrective_result(row, target)
+        changed.append(slug)
+    results = [by_slug[row["slug"]] for row in results]
+    found = sum(row.get("status") == "found" for row in results)
+    payload["method"] = (
+        "Complete 543-record baseline audit retained. Targeted corrective review rechecked only existing "
+        "not_found rows, highest revenue first, using public search/direct own-business or group-country "
+        "entity pages with a 10-second HTTP timeout. A correction is accepted only with HTTP 200, an "
+        "own-site host outside directory/social exclusions, and visible exact legal/trading entity or company-code identity."
+    )
+    payload["correction"] = {
+        "checked_date": CHECKED_DATE,
+        "scope": "15 existing not_found rows changed to found; all other 543-row audit results retained unchanged.",
+        "timeout_seconds": CORRECTIVE_TIMEOUT_SECONDS,
+        "acceptance": "HTTP 200, own-business or qualifying group-country entity page, and visible exact legal/trading entity or company-code identity. VMG's two public pages use a narrowly scoped local TLS-chain workaround while retaining all acceptance checks.",
+    }
+    payload["counts"] = {"total": len(results), "found": found, "not_found": len(results) - found}
+    payload["results"] = results
+    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+    print(json.dumps({"manifest": str(OUT), "corrected": len(changed), "found": found, "slugs": changed}, indent=2))
+
+
 def write_manifest(records, results):
     # A partial checkpoint is deliberately valid JSON and is used only to resume.
     # The migration rejects it because total/results must equal target_count.
@@ -299,6 +451,12 @@ def write_manifest(records, results):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--corrective", action="store_true", help="recheck only the reviewed existing not-found correction targets")
+    args = parser.parse_args()
+    if args.corrective:
+        run_corrective()
+        return
     records = load_records()
     results = prior_results()
     # Preserve only results still in the exact baseline. Re-running safely continues
