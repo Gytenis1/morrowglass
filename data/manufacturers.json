@@ -2134,7 +2134,7 @@
     "public_phone": "",
     "no_public_contact_route": false,
     "public_contact_checked_date": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -5981,7 +5981,7 @@
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
     "public_phone": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -9469,7 +9469,7 @@
     "public_phone": "",
     "no_public_contact_route": false,
     "public_contact_checked_date": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -10913,7 +10913,7 @@
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
     "public_phone": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -17681,7 +17681,7 @@
     "public_phone": "",
     "no_public_contact_route": false,
     "public_contact_checked_date": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -17739,7 +17739,7 @@
     "public_phone": "",
     "no_public_contact_route": false,
     "public_contact_checked_date": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -19478,7 +19478,7 @@
     "public_phone": "",
     "no_public_contact_route": false,
     "public_contact_checked_date": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -23393,7 +23393,7 @@
     "public_phone": "",
     "no_public_contact_route": false,
     "public_contact_checked_date": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -26621,7 +26621,7 @@
     "public_phone": "",
     "no_public_contact_route": false,
     "public_contact_checked_date": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -28491,7 +28491,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -28643,7 +28643,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -28678,7 +28678,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/romanta/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -28686,7 +28687,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2017,
     "employee_count_band": ""
   },
   {
@@ -28721,7 +28722,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/laumes_baldu_gamyba/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -28729,7 +28731,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2006,
     "employee_count_band": ""
   },
   {
@@ -28945,7 +28947,7 @@
     "website": "",
     "public_contact_url": "",
     "no_public_contact_route": false,
-    "founded_year": 0,
+    "founded_year": null,
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
       {
@@ -29102,7 +29104,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -29153,7 +29155,7 @@
     "website": "",
     "public_contact_url": "",
     "no_public_contact_route": false,
-    "founded_year": 0,
+    "founded_year": null,
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
       {
@@ -29311,7 +29313,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -29449,7 +29451,7 @@
     "website": "",
     "public_contact_url": "",
     "no_public_contact_route": false,
-    "founded_year": 0,
+    "founded_year": null,
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
       {
@@ -29598,7 +29600,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/dovaina/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -29606,7 +29609,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 1992,
     "employee_count_band": ""
   },
   {
@@ -29649,7 +29652,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -29692,7 +29695,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -29736,7 +29739,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -30173,7 +30176,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/mk_baldai/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -30182,7 +30186,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2026,
     "employee_count_band": ""
   },
   {
@@ -30705,7 +30709,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/inoxi/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -30713,7 +30718,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2020,
     "employee_count_band": ""
   },
   {
@@ -30756,7 +30761,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -30878,7 +30883,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -31274,7 +31279,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -31426,7 +31431,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -31538,7 +31543,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -31755,7 +31760,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
       {
@@ -31912,7 +31917,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -32096,7 +32101,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -32254,7 +32259,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -32297,7 +32302,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -32431,7 +32436,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -32474,7 +32479,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -32517,7 +32522,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -32663,7 +32668,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -33174,7 +33179,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -33209,7 +33214,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/roberto_laiptai/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -33217,7 +33223,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2017,
     "employee_count_band": ""
   },
   {
@@ -33251,7 +33257,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/gieva_s_trapikienes_firma/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -33260,7 +33267,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 1999,
     "employee_count_band": ""
   },
   {
@@ -33295,7 +33302,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/egidijaus_baldai/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -33303,7 +33311,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2017,
     "employee_count_band": ""
   },
   {
@@ -33338,7 +33346,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/rokiskio_baldai/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -33346,7 +33355,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2020,
     "employee_count_band": ""
   },
   {
@@ -33381,7 +33390,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/drilius/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -33389,7 +33399,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2020,
     "employee_count_band": ""
   },
   {
@@ -33424,7 +33434,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/mariaus_baldu_studija/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -33432,7 +33443,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2022,
     "employee_count_band": ""
   },
   {
@@ -33467,7 +33478,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/pickwood_lt/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -33475,7 +33487,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2025,
     "employee_count_band": ""
   },
   {
@@ -33518,7 +33530,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -33974,7 +33986,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -34131,7 +34143,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -34166,7 +34178,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/ziliukai/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -34174,7 +34187,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2004,
     "employee_count_band": ""
   },
   {
@@ -34209,7 +34222,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/vilgma/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -34217,7 +34231,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2020,
     "employee_count_band": ""
   },
   {
@@ -34252,7 +34266,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/mdaspect/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -34260,7 +34275,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2021,
     "employee_count_band": ""
   },
   {
@@ -34295,7 +34310,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/urtbalda/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -34303,7 +34319,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2022,
     "employee_count_band": ""
   },
   {
@@ -34346,7 +34362,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -34504,7 +34520,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -35159,7 +35175,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -35293,7 +35309,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -35336,7 +35352,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -35537,7 +35553,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/vanago_miskas/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -35545,7 +35562,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2025,
     "employee_count_band": ""
   },
   {
@@ -35580,7 +35597,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/medgamas/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -35588,7 +35606,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2017,
     "employee_count_band": ""
   },
   {
@@ -35631,7 +35649,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -35666,7 +35684,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/ravera/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -35674,7 +35693,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2025,
     "employee_count_band": ""
   },
   {
@@ -35709,7 +35728,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/uzuolas/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -35717,7 +35737,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2021,
     "employee_count_band": ""
   },
   {
@@ -35760,7 +35780,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -35803,7 +35823,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -35846,7 +35866,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -36103,7 +36123,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/augriva/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36111,7 +36132,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 1995,
     "employee_count_band": ""
   },
   {
@@ -36154,7 +36175,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -36189,7 +36210,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/dazoma/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36197,7 +36219,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2012,
     "employee_count_band": ""
   },
   {
@@ -36240,7 +36262,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -36283,7 +36305,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": ""
   },
   {
@@ -36318,7 +36340,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/doko_sofa/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36326,7 +36349,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2013,
     "employee_count_band": ""
   },
   {
@@ -36361,7 +36384,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/balduzis/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36369,7 +36393,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2020,
     "employee_count_band": ""
   },
   {
@@ -36404,7 +36428,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/kazbaro_baldai/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36412,7 +36437,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2022,
     "employee_count_band": ""
   },
   {
@@ -36447,7 +36472,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/kneita/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36455,7 +36481,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2022,
     "employee_count_band": ""
   },
   {
@@ -36490,7 +36516,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/benfok/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36498,7 +36525,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2022,
     "employee_count_band": ""
   },
   {
@@ -36533,7 +36560,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/velmera/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36541,7 +36569,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2023,
     "employee_count_band": ""
   },
   {
@@ -36576,7 +36604,8 @@
     "street_address": "",
     "postcode": "",
     "public_details_source_urls": [
-      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo"
+      "https://get.data.gov.lt/datasets/gov/rc/jar/iregistruoti/JuridinisAsmuo",
+      "https://rekvizitai.vz.lt/en/company/plunges_baldai/"
     ],
     "no_public_contact_route": true,
     "public_contact_checked_date": "2026-08-04",
@@ -36584,7 +36613,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": 2002,
     "employee_count_band": ""
   },
   {
@@ -36949,7 +36978,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „UAB \"Visagino linija\"“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "Visaginas",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -38854,7 +38883,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -38952,7 +38981,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „UAB \"Viva style\"“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "Klaipėda",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -39117,7 +39146,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „UAB FIKA LT“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "Kaunas",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -39157,7 +39186,7 @@
     "website": "",
     "public_contact_url": "",
     "no_public_contact_route": false,
-    "founded_year": 0,
+    "founded_year": null,
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
       {
@@ -41199,7 +41228,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „UAB \"Aztrekas\"“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "Kaunas",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -41364,7 +41393,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „MB \"Melamin\"“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -41718,7 +41747,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -42130,7 +42159,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „UAB \"EEGA1\"“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "Šilalės r",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -42170,7 +42199,7 @@
     "website": "",
     "public_contact_url": "",
     "no_public_contact_route": false,
-    "founded_year": 0,
+    "founded_year": null,
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
       {
@@ -42963,7 +42992,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -43953,7 +43982,7 @@
     "website": "",
     "public_contact_url": "",
     "no_public_contact_route": false,
-    "founded_year": 0,
+    "founded_year": null,
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
       {
@@ -44776,7 +44805,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -45975,7 +46004,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -46101,7 +46130,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „Mažoji bendrija \"Šernosis\"“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -46443,7 +46472,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -46771,7 +46800,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „Uždaroji akcinė bendrovė \"Medinedas\"“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "Kauno r",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -49298,7 +49327,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -49893,7 +49922,7 @@
     "legal_entity_known": true,
     "description_lt": "Oficialiame Lietuvos atvirų duomenų portalo įraše „Nerijaus Bučio įmonė“ nurodytas kaip veikiantis juridinis asmuo, kurio EVRK 2.1 veikla yra „Baldų gamyba“.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "Kaišiadorys",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "category_codes": [
@@ -50930,7 +50959,7 @@
     "website": "",
     "public_contact_url": "",
     "no_public_contact_route": false,
-    "founded_year": 0,
+    "founded_year": null,
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
       {
@@ -51406,7 +51435,7 @@
     "website": "",
     "public_contact_url": "",
     "no_public_contact_route": false,
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -51548,7 +51577,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07"
   },
@@ -51761,7 +51790,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -52041,7 +52070,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -53288,7 +53317,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -53898,7 +53927,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -54046,7 +54075,7 @@
     "website": "",
     "public_phone": "",
     "public_contact_url": "",
-    "founded_year": 0,
+    "founded_year": null,
     "employee_count_band": "",
     "registry_financials_checked_date": "2026-08-07",
     "filed_financial_history": [
@@ -54776,7 +54805,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.02 – Virtuvės baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -57661,7 +57690,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -57805,7 +57834,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -61771,7 +61800,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -73146,7 +73175,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -80684,7 +80713,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -82930,7 +82959,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -86995,7 +87024,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.02 – Virtuvės baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -88885,7 +88914,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -92756,7 +92785,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -97932,7 +97961,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -101326,7 +101355,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -105833,7 +105862,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -106929,7 +106958,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -110879,7 +110908,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.01 – Įstaigos ir prekybos įmonių (parduotuvių) baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -112313,7 +112342,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.01 – Įstaigos ir prekybos įmonių (parduotuvių) baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -125153,7 +125182,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -126459,7 +126488,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -126799,7 +126828,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -127827,7 +127856,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -132523,7 +132552,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -133177,7 +133206,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -136723,7 +136752,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -145054,7 +145083,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -146550,7 +146579,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.01 – Įstaigos ir prekybos įmonių (parduotuvių) baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -154588,7 +154617,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.01 – Įstaigos ir prekybos įmonių (parduotuvių) baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -158240,7 +158269,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -164984,7 +165013,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -171926,7 +171955,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -180698,7 +180727,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -188546,7 +188575,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.02 – Virtuvės baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -189052,7 +189081,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -189220,7 +189249,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -189370,7 +189399,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.02 – Virtuvės baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -189710,7 +189739,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -190050,7 +190079,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -190716,7 +190745,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -192532,7 +192561,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -193536,7 +193565,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -193876,7 +193905,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -194708,7 +194737,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -195860,7 +195889,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.03 – Čiužinių gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -196028,7 +196057,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",
@@ -200328,7 +200357,7 @@
     "legal_entity_known": true,
     "description_lt": "SŪSR registre nurodyta pagrindinė veikla: 31.09 – Kitų baldų gamyba.",
     "location": "Lietuva",
-    "city": "Lietuva",
+    "city": "",
     "region": "national",
     "region_label": "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)",
     "street_address": "",

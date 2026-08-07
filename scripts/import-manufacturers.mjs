@@ -16,7 +16,7 @@ the local source file and does not require credentials or make network requests.
 
 const sourceUrl = new URL("../data/manufacturers.json", import.meta.url);
 const requiredFields = [
-  "slug", "trading_name", "source_identity", "description_lt", "location", "city", "region", "region_label",
+  "slug", "trading_name", "source_identity", "description_lt", "location", "region", "region_label",
   "category_codes", "category_labels", "audience", "portfolio_status", "confidence",
   "confidence_evidence", "scope_evidence", "evidence_source_type", "source_urls",
   "source_artifact_url", "source_collection_date", "verification_status",
@@ -122,6 +122,8 @@ function validate(records) {
     for (const field of requiredFields) {
       if (record[field] === undefined || record[field] === null || record[field] === "") throw new Error(`Record ${index + 1} (${record.slug || "no slug"}) is missing ${field}`);
     }
+    // Empty city is an explicit absence after a bare-country placeholder is removed.
+    if (typeof record.city !== "string") throw new Error(`Invalid city for ${record.slug}`);
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.slug)) throw new Error(`Invalid slug: ${record.slug}`);
     if (slugs.has(record.slug)) throw new Error(`Duplicate slug: ${record.slug}`);
     slugs.add(record.slug);
@@ -188,20 +190,25 @@ function validate(records) {
       if (record.official_location_status && (!isValidDate(record.official_location_checked_date) || !hasOfficialReference(record))) throw new Error(`Official location status requires dated official provenance for ${record.slug}`);
       if (record.official_location_status === "location_not_published") {
         const nationalMapping = record.location === "Lietuva" && record.city === "Lietuva" && record.region === "national" && record.region_label === "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)";
-        if (!nationalMapping) throw new Error(`location_not_published must retain the national no-guessing mapping for ${record.slug}`);
+        // A later source audit may intentionally clear the display-only country
+        // placeholder while retaining the official national grouping and its date.
+        const omittedNationalLocality = record.location === "Lietuva" && record.city === "" && record.region === "national" && record.region_label === "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)";
+        if (!nationalMapping && !omittedNationalLocality) throw new Error(`location_not_published must retain a no-guessing national mapping for ${record.slug}`);
       }
     }
     if (index >= legacyRecordCount) {
       if (typeof record.legal_name !== "string" || !record.legal_name.trim() || record.legal_entity_known !== true || !hasCompanyCode) throw new Error(`Official-source record ${record.slug} must retain its legal identity and company code`);
       const retainsNationalMapping = record.location === "Lietuva" && record.city === "Lietuva" && record.region === "national" && record.region_label === "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)";
+      const omitsNationalPlaceholder = record.location === "Lietuva" && record.city === "" && record.region === "national" && record.region_label === "Visa Lietuva (miestas nenurodytas oficialiame šaltinyje)";
       // The register import preserves its recorded city even where the catalogue
       // deliberately retained the national grouping; do not guess a regional
       // reassignment from that city. A published city is still accepted only with
       // the linked official provenance.
-      const hasSourceBackedLocation = hasPublicDetailsProvenance && record.location === record.city
+      const hasSourceBackedLocation = hasPublicDetailsProvenance && record.city.trim()
+        && (record.location === record.city || record.location === "Lietuva")
         && (regionLabels.get(record.region)?.has(record.region_label)
           || (record.region === "national" && record.region_label === record.city));
-      if (!retainsNationalMapping && !hasSourceBackedLocation) throw new Error(`Official-source record ${record.slug} has an unsupported location mapping`);
+      if (!retainsNationalMapping && !omitsNationalPlaceholder && !hasSourceBackedLocation) throw new Error(`Official-source record ${record.slug} has an unsupported location mapping`);
       if (record.category_codes.length !== 1 || record.category_codes[0] !== "O" || record.category_labels[0] !== categoryLabels.get("O") || record.audience !== "nežinoma" || record.portfolio_status !== "nežinoma" || record.confidence !== "vidutinis") throw new Error(`Official-source record ${record.slug} must retain its conservative catalogue classification`);
       if (!["Lietuvos atvirų duomenų portalas (Registrų centras)", "Lietuvos atvirų duomenų portalas (SŪSR ir Registrų centras)"].includes(record.evidence_source_type)) throw new Error(`Official-source record ${record.slug} has invalid provenance type`);
       if (!hasPublicDetailsProvenance && record.source_collection_date !== "2026-08-01") throw new Error(`Official-source record ${record.slug} has invalid collection date`);

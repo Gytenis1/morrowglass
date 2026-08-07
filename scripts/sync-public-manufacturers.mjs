@@ -34,6 +34,10 @@ const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const verifiedDatePattern = /^\d{4}-\d{2}-\d{2}$/;
 const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const employeeBands = new Set(['0', '1-9', '10-49', '50-249', '250+']);
+const bareCountryLabels = new Set(['lietuva', 'lithuania', 'latvija', 'latvia', 'estija', 'estonia', 'lenkija', 'poland', 'europe', 'europa']);
+const currentBuildYear = Number(new Date().toISOString().slice(0, 4));
+const isBareCountry = (value) => typeof value === 'string' && bareCountryLabels.has(value.trim().toLocaleLowerCase('lt-LT'));
+const validFoundingYear = (value) => Number.isInteger(value) && value >= 1900 && value <= currentBuildYear;
 const categoryLabels = new Map([
   ['K', 'Virtuvės baldai'], ['W', 'Spintos ir įmontuojami baldai'],
   ['BB', 'Miegamojo ir vonios baldai'], ['OC', 'Biuro ir komerciniai baldai'],
@@ -249,7 +253,7 @@ for (const local of synchronizedRecords) {
   // Existing versioned facts are stronger than an unqualified remote value. Fill
   // only blanks; authoritative fields below have explicit evidence requirements.
   for (const field of staticRecordFields) {
-    if (!['slug', ...publicTaxonomyFields, ...publicEvidenceFields, ...financialFields, ...officialReferenceFields, 'filed_financial_history', 'registry_financials_checked_date'].includes(field)) synchronize(field, remote[field]);
+    if (!['slug', 'city', 'founded_year', ...publicTaxonomyFields, ...publicEvidenceFields, ...financialFields, ...officialReferenceFields, 'filed_financial_history', 'registry_financials_checked_date'].includes(field)) synchronize(field, remote[field]);
   }
   const retainsConservativeTaxonomy = local.evidence_source_type === 'Lietuvos atvirų duomenų portalas (Registrų centras)' || local.evidence_source_type === 'Lietuvos atvirų duomenų portalas (SŪSR ir Registrų centras)';
   if (!retainsConservativeTaxonomy) {
@@ -259,7 +263,11 @@ for (const local of synchronizedRecords) {
     }
     for (const field of publicTaxonomyFields) synchronize(field, remote[field]);
   }
-  if (remote.founded_year >= 1800) synchronize('founded_year', remote.founded_year);
+  // 0/empty/out-of-range years and bare-country city labels are storage
+  // placeholders, not versioned catalogue facts. A source-backed remote fill wins;
+  // otherwise preserve explicit absence as null/empty for static rendering.
+  if (!validFoundingYear(local.founded_year)) synchronize('founded_year', validFoundingYear(remote.founded_year) ? remote.founded_year : null, true);
+  if (isBareCountry(local.city) && !isBareCountry(remote.city)) synchronize('city', remote.city, true);
   if (employeeBands.has(remote.employee_count_band)) synchronize('employee_count_band', remote.employee_count_band);
   for (const field of ['public_details_source_urls']) {
     const merged = uniqueUrls([...(Array.isArray(local[field]) ? local[field] : []), ...(remote[field] ?? [])]);

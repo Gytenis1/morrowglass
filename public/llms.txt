@@ -32,7 +32,6 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
   - Jonava: https://www.baldininkai.org/en/cities/jonava/
   - Kaunas: https://www.baldininkai.org/en/cities/kaunas/
   - Klaipėda: https://www.baldininkai.org/en/cities/klaipeda/
-  - Lietuva: https://www.baldininkai.org/en/cities/lietuva/
   - Marijampolė: https://www.baldininkai.org/en/cities/marijampole/
   - Mažeikiai: https://www.baldininkai.org/en/cities/mazeikiai/
   - Panevėžys: https://www.baldininkai.org/en/cities/panevezys/
@@ -115,7 +114,6 @@ Kiekviename įraše, kai šaltinyje yra atitinkama reikšmė, pateikiamas vieša
 - Kurmaičiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/kurmaiciai/
 - Lapės: https://www.baldininkai.org/baldai-pagal-uzsakyma/lapes/
 - Lentvaris: https://www.baldininkai.org/baldai-pagal-uzsakyma/lentvaris/
-- Lietuva: https://www.baldininkai.org/baldai-pagal-uzsakyma/lietuva/
 - Maišiagala: https://www.baldininkai.org/baldai-pagal-uzsakyma/maisiagala/
 - Marijampolė: https://www.baldininkai.org/baldai-pagal-uzsakyma/marijampole/
 - Mažeikiai: https://www.baldininkai.org/baldai-pagal-uzsakyma/mazeikiai/
