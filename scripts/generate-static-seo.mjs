@@ -1699,7 +1699,7 @@ for (const record of manufacturers) {
     ['Kategorijos', record.category_labels.join(', ')],
     ['Aprašymas', record.description_lt?.trim() || 'Trumpas aprašymas šaltiniuose nepateiktas.'],
     ['Šaltinyje aprašyta veiklos apimtis', record.scope_evidence?.trim() || 'Papildomas veiklos apimties aprašymas šaltinyje nepateiktas.'],
-  ];
+  ].filter(([, value]) => value);
   const linkFacts = [
     ['Svetainė', publicUrl(record.website)],
     ['Viešai nurodytas kontaktinis adresas', publicUrl(record.public_contact_url)],
