@@ -479,7 +479,10 @@ function isOpenDataPath(pathname = window.location.pathname): boolean {
 
 function isMarketOverviewPath(pathname = window.location.pathname): boolean {
   const path = normalizePathname(pathname);
-  return path === '/baldu-rinkos-apzvalga' || path === '/en/lithuanian-furniture-makers-data';
+  return path === '/baldu-rinkos-apzvalga'
+    || path === '/baldu-sektoriaus-finansai'
+    || path === '/en/lithuanian-furniture-makers-data'
+    || path === '/en/lithuanian-furniture-makers-financial-history';
 }
 
 function isEnglishSourcingPath(pathname = window.location.pathname): boolean {
@@ -728,6 +731,7 @@ function renderEnglishHeader(): string {
           <a href="${ENGLISH_RFQ_PATH}/" aria-current="page">Quote request</a>
           <a href="/en/sourcing-guide/">Sourcing guide</a>
           <a href="/en/lithuanian-furniture-makers-data/">Data overview</a>
+          <a href="/en/lithuanian-furniture-makers-financial-history/">Financial history</a>
           <a href="/atviri-duomenys/">Open data</a>
           <a href="/" lang="lt">Lietuvių</a>
         </nav>
@@ -750,6 +754,7 @@ function renderEnglishFooter(): string {
           <a href="${ENGLISH_RFQ_PATH}/">Quote request</a>
           <a href="/en/sourcing-guide/">Sourcing guide</a>
           <a href="/en/lithuanian-furniture-makers-data/">Data overview</a>
+          <a href="/en/lithuanian-furniture-makers-financial-history/">Financial history</a>
           <a href="/atviri-duomenys/">Open data</a>
           <a href="/baldininkai-org-gamintojai.json">JSON</a>
           <a href="/baldininkai-org-gamintojai.csv">CSV</a>

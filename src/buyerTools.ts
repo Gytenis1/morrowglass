@@ -670,6 +670,7 @@ function getRfqCopy(locale: RfqLocale) {
         { path: '/en/quote-request/', label: 'Quote request', current: true },
         { path: '/en/sourcing-guide/', label: 'Sourcing guide' },
         { path: '/en/lithuanian-furniture-makers-data/', label: 'Data overview' },
+        { path: '/en/lithuanian-furniture-makers-financial-history/', label: 'Financial history' },
       ],
       kicker: 'Structured project request',
       heading: 'Prepare one comparable furniture quote request',
